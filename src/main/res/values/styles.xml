@@ -1,0 +1,174 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorAccent">@color/overscroll_color</item>
+        <item name="dividerColor">@color/dark_divider_color</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:colorBackground">@color/dark_bg_color</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:colorAccent">@color/overscroll_color</item>
+        <item name="android:colorPrimary">@color/theme_primary</item>
+        <item name="customColorPrimary">@color/theme_primary</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="customToolbarStyle">@style/ToolbarTheme</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorEdgeEffect">@color/overscroll_color</item>
+        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="customColorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="android:colorControlActivated">@color/overscroll_color</item>
+        <item name="android:textColorSecondary">@color/dark_info_text_color</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_ab_back_material</item>
+        <item name="android:textColorSecondaryInverse">@color/info_text_color</item>
+        <item name="android:textColorPrimary">@color/dark_info_title_text_color</item>
+        <item name="android:textColorPrimaryInverse">@color/info_title_text_color</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/drawer_list_selector</item>
+        <item name="android:colorControlHighlight">@color/overscroll_color</item>
+        <item name="cardViewBackground">@color/dark_card_background_color</item>
+        <item name="arrowSelector">@drawable/dark_down_arrow_selector</item>
+        <item name="android:actionModeBackground">@color/theme_primary</item>
+        <item name="customWindowBG">@color/dark_bg_color</item>
+        <item name="settingsStyle">@style/AppTheme.Settings</item>
+    </style>
+
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="dividerColor">@color/divider_color</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:colorAccent">@color/overscroll_color</item>
+        <item name="android:colorPrimary">@color/theme_primary</item>
+        <item name="customColorPrimary">@color/theme_primary</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="customToolbarStyle">@style/ToolbarTheme</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorEdgeEffect">@color/overscroll_color</item>
+        <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="customColorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="android:colorControlActivated">@color/overscroll_color</item>
+        <item name="android:textColorSecondary">@color/info_text_color</item>
+        <item name="android:colorControlHighlight">@color/overscroll_color</item>
+        <item name="android:textColorPrimary">@color/info_title_text_color</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_ab_back_material</item>
+        <item name="android:textColorSecondaryInverse">@color/dark_info_text_color</item>
+        <item name="android:textColorPrimaryInverse">@color/dark_info_title_text_color</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/drawer_list_selector</item>
+        <item name="cardViewBackground">@color/light_card_background_color</item>
+        <item name="arrowSelector">@drawable/light_down_arrow_selector</item>
+        <item name="colorAccent">@color/overscroll_color</item>
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="android:colorBackground">@color/light_bg_color</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeBackground">@color/theme_primary</item>
+        <item name="customWindowBG">@color/light_bg_color</item>
+        <item name="settingsStyle">@style/AppTheme.Light.Settings</item>
+    </style>
+
+    <style name="AppTheme.Black" parent="AppTheme.Black.Color">
+        <item name="dividerColor">@color/black</item>
+        <item name="android:colorPrimary">@color/black</item>
+        <item name="customColorPrimary">@color/black</item>
+        <item name="android:colorPrimaryDark">@color/black</item>
+        <item name="customColorPrimaryDark">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="customToolbarStyle">@style/ToolbarTheme.Black</item>
+        <item name="settingsStyle">@style/AppTheme.Black.Settings</item>
+    </style>
+
+    <style name="AppTheme.Black.Color" parent="AppTheme">
+        <item name="cardViewBackground">@color/black</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:textColorSecondary">@color/dark_info_text_color</item>
+        <item name="android:textColorPrimary">@color/dark_info_title_text_color</item>
+        <item name="customWindowBG">@color/black</item>
+        <item name="settingsStyle">@style/AppTheme.Black.Color.Settings</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="actionMenuTextColor">@color/abc_primary_text_material_dark</item>
+    </style>
+
+    <style name="ToolbarTheme.Black" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="colorPrimary">@color/black</item>
+        <item name="actionMenuTextColor">@color/abc_primary_text_material_dark</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+        <item name="spinBars">true</item>
+    </style>
+
+    <style name="Toolbar" parent="Theme.AppCompat">
+        <item name="colorPrimary">?customColorPrimary</item>
+        <item name="colorPrimaryDark">?customColorPrimaryDark</item>
+        <item name="colorAccent">?android:colorAccent</item>
+        <item name="android:background">?android:colorPrimary</item>
+        <item name="background">?android:colorPrimary</item>
+    </style>
+
+    <style name="LayoutMargins">
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="TextMargins">
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="CollapsingBar" parent="Widget.Design.CollapsingToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="titleEnabled">false</item>
+        <item name="contentScrim">?customColorPrimary</item>
+        <item name="statusBarScrim">?customColorPrimaryDark</item>
+        <item name="layout_scrollFlags">scroll|exitUntilCollapsed</item>
+    </style>
+
+    <style name="CardViewStyle" parent="CardView">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="cardBackgroundColor">?cardViewBackground</item>
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="elevation">2dp</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="ImageStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="android:src">@drawable/style</item>
+        <item name="android:background">?customColorPrimary</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="layout_collapseMode">parallax</item>
+    </style>
+
+    <style name="AppTheme.Settings">
+        <item name="android:windowBackground">?customWindowBG</item>
+    </style>
+
+    <style name="AppTheme.Light.Settings">
+        <item name="android:windowBackground">?customWindowBG</item>
+    </style>
+
+    <style name="AppTheme.Black.Settings">
+        <item name="android:windowBackground">?customWindowBG</item>
+    </style>
+
+    <style name="AppTheme.Black.Color.Settings">
+        <item name="android:windowBackground">?customWindowBG</item>
+    </style>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListPreference
+        android:defaultValue="@string/pref_theme_value_dark"
+        android:entries="@array/pref_theme_options"
+        android:entryValues="@array/pref_theme_values"
+        android:key="@string/pref_theme"
+        android:title="@string/pref_theme_title"/>
+
+    <ListPreference
+        android:defaultValue="@string/title_advancedtech"
+        android:entries="@array/pref_default_options"
+        android:entryValues="@array/pref_default_values"
+        android:key="@string/pref_default"
+        android:title="@string/pref_default_title"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="@string/pref_ads"
+        android:title="@string/pref_ads_title"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="@string/pref_exit"
+        android:title="@string/pref_exit_title"/>
+
+</PreferenceScreen>

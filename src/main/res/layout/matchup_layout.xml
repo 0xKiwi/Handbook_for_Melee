@@ -1,0 +1,122 @@
+<FrameLayout
+    style="@style/LayoutMargins"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <Spinner
+        android:id="@+id/spinnerLeft"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="220dp"
+        android:spinnerMode="dialog"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16pt"/>
+
+    <View
+        android:id="@+id/viewleft"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="220dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerRight"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="220dp"
+        android:spinnerMode="dialog"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="16pt"/>
+
+    <View
+        android:id="@+id/viewright"
+        android:layout_width="150dp"
+        android:layout_gravity="end"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="220dp"/>
+
+    <TextView
+        android:id="@+id/vsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="270dp"
+        android:padding="10dp"
+        android:text="VS."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="?android:textColorPrimary"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/muTextLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="280dp"
+        android:width="90dp"
+        android:text="Mirror"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="?android:textColorPrimary"/>
+
+    <TextView
+        android:id="@+id/muTextRight"
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="280dp"
+        android:width="100dp"
+        android:text="Mirror"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="?android:textColorPrimary"/>
+
+    <ImageButton
+        android:id="@+id/muImgLeft"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="75dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bowser"/>
+
+    <ImageButton
+        android:id="@+id/muImgRight"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="75dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bowser"/>
+
+    <Button
+        android:id="@+id/shineTextBottom"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="190dp"
+        android:text="20XX"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/shineTextTop"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="80dp"
+        android:text="20XX"
+        android:visibility="gone"/>
+</FrameLayout>
+

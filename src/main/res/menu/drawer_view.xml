@@ -1,0 +1,48 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/numberone"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/advancedtech"
+            android:icon="@drawable/advanced"
+            android:title="@string/title_advancedtech"/>
+        <item
+            android:id="@+id/characters"
+            android:icon="@drawable/characters"
+            android:title="@string/title_characters" />
+        <item
+            android:id="@+id/fundamentals"
+            android:icon="@drawable/fundamentals"
+            android:title="@string/title_fundamentals" />
+        <item
+            android:id="@+id/mu"
+            android:icon="@drawable/matchups"
+            android:title="@string/title_matchups" />
+        <item
+            android:id="@+id/stages"
+            android:icon="@drawable/stages"
+            android:title="@string/title_stages" />
+        <item
+            android:id="@+id/term"
+            android:icon="@drawable/terms"
+            android:title="@string/title_term" />
+        <item
+            android:id="@+id/uniquetech"
+            android:icon="@drawable/unique"
+            android:title="@string/title_uniquetech" />
+        <item
+            android:id="@+id/healthy"
+            android:icon="@drawable/health"
+            android:title="@string/action_healthy" />
+    </group>
+    <group android:id="@+id/numbertwo"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings"
+            android:title="@string/action_settings" />
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/about"
+            android:title="@string/action_about" />
+    </group>
+</menu>

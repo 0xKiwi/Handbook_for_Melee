@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="matchup_array">
+        <item>Bowser</item>
+        <item>Captain Falcon</item>
+        <item>Donkey Kong</item>
+        <item>Dr. Mario</item>
+        <item>Falco</item>
+        <item>Fox</item>
+        <item>Ganondorf</item>
+        <item>Ice Climbers</item>
+        <item>Jigglypuff</item>
+        <item>Kirby</item>
+        <item>Link</item>
+        <item>Luigi</item>
+        <item>Mario</item>
+        <item>Marth</item>
+        <item>Mewtwo</item>
+        <item>Mr. Game &amp; Watch</item>
+        <item>Ness</item>
+        <item>Pichu</item>
+        <item>Pikachu</item>
+        <item>Princess Peach</item>
+        <item>Princess Zelda</item>
+        <item>Roy</item>
+        <item>Samus Aran</item>
+        <item>Sheik</item>
+        <item>Yoshi</item>
+        <item>Young Link</item>
+    </string-array>
+
+    <!-- Theme -->
+    <string-array name="pref_theme_options">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>Black</item>
+        <item>Black with colored action bar</item>
+    </string-array>
+
+    <string-array name="pref_theme_values">
+        <item>@string/pref_theme_value_light</item>
+        <item>@string/pref_theme_value_dark</item>
+        <item>@string/pref_theme_value_black</item>
+        <item>@string/pref_theme_value_blackactionbar</item>
+    </string-array>
+
+    <string-array name="pref_default_options">
+        <item>@string/title_advancedtech</item>
+        <item>@string/title_characters</item>
+        <item>@string/title_fundamentals</item>
+        <item>@string/title_matchups</item>
+        <item>@string/title_stages</item>
+        <item>@string/title_term</item>
+        <item>@string/title_uniquetech</item>
+        <item>@string/title_healthy</item>
+    </string-array>
+
+    <string-array name="pref_default_values">
+        <item>@string/title_advancedtech</item>
+        <item>@string/title_characters</item>
+        <item>@string/title_fundamentals</item>
+        <item>@string/title_matchups</item>
+        <item>@string/title_stages</item>
+        <item>@string/title_term</item>
+        <item>@string/title_uniquetech</item>
+        <item>@string/title_healthy</item>
+    </string-array>
+
+    <string-array name="filter_options">
+        <item>@string/title_advancedtech</item>
+        <item>@string/title_characters</item>
+        <item>@string/title_fundamentals</item>
+        <item>@string/title_stages</item>
+        <item>@string/title_term</item>
+        <item>@string/title_uniquetech</item>
+    </string-array>
+</resources>

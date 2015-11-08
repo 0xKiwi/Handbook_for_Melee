@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="overscroll_color">#fdd835</color>
+    <color name="theme_primary">#303F9f</color>
+    <color name="theme_primary_dark">#ff1A237E</color>
+    <color name="theme_accent">#fdd835</color>
+    <color name="dark_card_background_color">#ff303030</color>
+    <color name="light_card_background_color">#ffffffff</color>
+    <color name="dark_info_title_text_color">#ffffffff</color>
+    <color name="info_title_text_color">#ff212D2D</color>
+    <color name="dark_info_text_color">#eeffffff</color>
+    <color name="info_text_color">#ff2E3E45</color>
+    <color name="menu_background">#0D113F</color>
+    <color name="pressed_color">#95D4AE61</color>
+    <color name="activated_color">#95FEC90B</color>
+    <color name="selected_color">#ffFEC90B</color>
+    <color name="dark_bg_color">#ff212121</color>
+    <color name="light_bg_color">#ffECEFF1</color>
+    <color name="divider_color">#12212121</color>
+    <color name="dark_divider_color">#12ffffff</color>
+    <color name="dark_drawer_bg">#cc212121</color>
+    <color name="drawer_bg">#ccffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="fade_tint">#99000000</color>
+</resources>
