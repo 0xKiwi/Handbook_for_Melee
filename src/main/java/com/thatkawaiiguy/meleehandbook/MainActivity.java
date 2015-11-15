@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
     SearchView searchView;
 
+
+    Menu mMenu;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Preferences.applySettingsTheme(this);
@@ -291,8 +294,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
-
-        final Menu men = menu;
+        mMenu = menu;
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         searchView = (SearchView)
                 MenuItemCompat.getActionView(menu.findItem(R.id.search));
@@ -304,11 +306,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFocusChange(View view, boolean queryTextFocused) {
                 if(!queryTextFocused) {
-                    searchView.onActionViewCollapsed();
-                    searchView.setQuery("", false);
-                    onBackPressed();
+                    searchView.clearFocus();
+                    searchView.setIconified(true);
 
-
+                    if(mMenu != null)
+                        (mMenu.findItem(R.id.search)).collapseActionView();
                 }
             }
         });
