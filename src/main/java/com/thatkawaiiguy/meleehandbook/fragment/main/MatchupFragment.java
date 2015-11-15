@@ -31,6 +31,9 @@ public class MatchupFragment extends Fragment {
     private TextView infoLeft;
     private TextView infoRight;
 
+    private TextView muInfoLeft;
+    private TextView muInfoRight;
+
     private ImageButton muImgLeft;
     private ImageButton muImgRight;
 
@@ -61,7 +64,9 @@ public class MatchupFragment extends Fragment {
         leftView = view.findViewById(R.id.viewleft);
         rightView = view.findViewById(R.id.viewright);
         infoLeft = (TextView) view.findViewById(R.id.muTextLeft);
+        muInfoLeft = (TextView) view.findViewById(R.id.muInfoLeft);
         infoRight = (TextView) view.findViewById(R.id.muTextRight);
+        muInfoRight = (TextView) view.findViewById(R.id.muInfoRight);
         spinnerLeft = (Spinner) view.findViewById(R.id.spinnerLeft);
         spinnerRight = (Spinner) view.findViewById(R.id.spinnerRight);
         muImgRight = (ImageButton) view.findViewById(R.id.muImgRight);
@@ -124,7 +129,6 @@ public class MatchupFragment extends Fragment {
         );
 
         setMatchupsView();
-
         return view;
     }
 
@@ -143,53 +147,53 @@ public class MatchupFragment extends Fragment {
                     case "Falco":
                         return "50";
                     case "Sheik":
-                        return "50";
+                        return "60";
                     case "Marth":
                         return "50";
                     case "Princess Peach":
                         return "60";
                     case "Captain Falcon":
-                        return "60";
-                    case "Ice Climbers":
                         return "70";
-                    case "Samus Aran":
+                    case "Ice Climbers":
                         return "60";
+                    case "Samus Aran":
+                        return "50";
                     case "Dr. Mario":
                         return "60";
                     case "Jigglypuff":
-                        return "70";
+                        return "60";
                     case "Mario":
                         return "60";
                     case "Ganondorf":
                         return "60";
                     case "Link":
-                        return "70";
+                        return "80";
                     case "Luigi":
                         return "70";
                     case "Donkey Kong":
                         return "70";
                     case "Roy":
-                        return "90";
+                        return "70";
                     case "Young Link":
-                        return "80";
+                        return "70";
                     case "Pikachu":
                         return "70";
                     case "Yoshi":
-                        return "80";
+                        return "70";
                     case "Princess Zelda":
-                        return "90";
+                        return "80";
                     case "Mr. Game & Watch":
                         return "80";
                     case "Ness":
-                        return "90";
+                        return "80";
                     case "Bowser":
-                        return "90";
+                        return "80";
                     case "Kirby":
-                        return "90";
+                        return "80";
                     case "Pichu":
-                        return "90";
+                        return "80";
                     case "Mewtwo":
-                        return "90";
+                        return "80";
                 }
             }
             break;
@@ -334,7 +338,7 @@ public class MatchupFragment extends Fragment {
                     case "Dr. Mario":
                         return "70";
                     case "Jigglypuff":
-                        return "60";
+                        return "45";
                     case "Mario":
                         return "70";
                     case "Ganondorf":
@@ -350,7 +354,7 @@ public class MatchupFragment extends Fragment {
                     case "Young Link":
                         return "60";
                     case "Pikachu":
-                        return "90";
+                        return "35";
                     case "Yoshi":
                         return "70";
                     case "Princess Zelda":
@@ -1947,6 +1951,338 @@ public class MatchupFragment extends Fragment {
         return "uhh";
     }
 
+    public String getInfo(String left, String right) {
+        switch(left) {
+            case "Fox": {
+                switch(right) {
+                    case "Falco":
+                        return "Better recovery";
+                    case "Sheik":
+                        return "Strong attacks, speed";
+                    case "Marth":
+                        return "Combo ability, strong attacks";
+                    case "Princess Peach":
+                        return "Strong attacks";
+                    case "Captain Falcon":
+                        return "Combo and gimping ability";
+                    case "Ice Climbers":
+                        return "Combo and gimping ability";
+                    case "Samus Aran":
+                        return "Strong attacks";
+                    case "Dr. Mario":
+                        return "Strong attacks, easy ledge guard";
+                    case "Jigglypuff":
+                        return "Strong attacks";
+                    case "Ganondorf":
+                        return "Easy to combo and gimp";
+                    case "Pikachu":
+                        return "Strong attacks";
+                }
+            }
+            break;
+            case "Falco": {
+                switch(right) {
+                    case "Fox":
+                        return "Stopping power, but poor recovery";
+                    case "Sheik":
+                        return "Long tech roll";
+                    case "Marth":
+                        return "Stopping power, but poor recovery";
+                    case "Princess Peach":
+                        return "Strong attacks, but poor recovery";
+                    case "Captain Falcon":
+                        return "Stopping power, dair priority";
+                    case "Ice Climbers":
+                        return "Easily chaingrabbed";
+                    case "Samus Aran":
+                        return "Stopping power";
+                    case "Dr. Mario":
+                        return "Strong attacks, easy ledge guard";
+                    case "Jigglypuff":
+                        return "Strong attacks, but easily rested";
+                    case "Ganondorf":
+                        return "Easy to combo";
+                    case "Pikachu":
+                        return "Strong attacks";
+                }
+            }
+            break;
+            case "Sheik": {
+                switch(right) {
+                    case "Fox":
+                        return "Lightweight";
+                    case "Falco":
+                        return "Better recovery";
+                    case "Sheik":
+                        return "Good punish, needles";
+                    case "Marth":
+                        return "Lightweight";
+                    case "Princess Peach":
+                        return "Stopping power";
+                    case "Captain Falcon":
+                        return "Gimping ability";
+                    case "Ice Climbers":
+                        return "Trouble separating, hard to camp";
+                    case "Samus Aran":
+                        return "Floaty";
+                    case "Dr. Mario":
+                        return "Strong attacks, easy ledge guard";
+                    case "Jigglypuff":
+                        return "Lightweight";
+                    case "Ganondorf":
+                        return "Easy to combo and gimp";
+                    case "Pikachu":
+                        return "Can tech chase";
+                }
+            }
+            break;
+            case "Marth": {
+                switch(right) {
+                    case "Fox":
+                        return "Can gimp";
+                    case "Falco":
+                        return "Can gimp";
+                    case "Sheik":
+                        return "Strong attacks";
+                    case "Princess Peach":
+                        return "Priority";
+                    case "Captain Falcon":
+                        return "Priority";
+                    case "Ice Climbers":
+                        return "Strong attacks";
+                    case "Samus Aran":
+                        return "Priority, edge guard";
+                    case "Dr. Mario":
+                        return "Strong attacks, easy ledge guard";
+                    case "Jigglypuff":
+                        return "Can space well";
+                    case "Ganondorf":
+                        return "Priority";
+                    case "Pikachu":
+                        return "Hard to edgeguard";
+                }
+            }
+            break;
+            case "Princess Peach": {
+                switch(right) {
+                    case "Fox":
+                        return "Can be gimped";
+                    case "Falco":
+                        return "Easily gimps";
+                    case "Sheik":
+                        return "Easily comboed";
+                    case "Marth":
+                        return "Outranged";
+                    case "Captain Falcon":
+                        return "Lightweight";
+                    case "Ice Climbers":
+                        return "Can edgeguard";
+                    case "Samus Aran":
+                        return "Can gimp";
+                    case "Dr. Mario":
+                        return "Can gimp";
+                    case "Jigglypuff":
+                        return "Lightweight";
+                    case "Ganondorf":
+                        return "Lightweight";
+                    case "Pikachu":
+                        return "Aerial game";
+                }
+            }
+            break;
+            case "Captain Falcon": {
+                switch(right) {
+                    case "Fox":
+                        return "Poor recovery";
+                    case "Falco":
+                        return "Poor recovery";
+                    case "Sheik":
+                        return "Poor recovery";
+                    case "Marth":
+                        return "Strong punish";
+                    case "Princess Peach":
+                        return "Trouble edgeguarding";
+                    case "Ice Climbers":
+                        return "Trouble separating";
+                    case "Samus Aran":
+                        return "Strong attacks";
+                    case "Dr. Mario":
+                        return "Strong attacks";
+                    case "Jigglypuff":
+                        return "Strong punish";
+                    case "Ganondorf":
+                        return "Easy to combo";
+                    case "Pikachu":
+                        return "Strong attacks";
+                }
+            }
+            break;
+            case "Ice Climbers": {
+                switch(right) {
+                    case "Fox":
+                        return "Can chain grab";
+                    case "Falco":
+                        return "Can gimp";
+                    case "Sheik":
+                        return "Easily wobbles";
+                    case "Marth":
+                        return "Easily separates";
+                    case "Princess Peach":
+                        return "Easily separates";
+                    case "Captain Falcon":
+                        return "Can wobble";
+                    case "Samus Aran":
+                        return "Easily separated";
+                    case "Dr. Mario":
+                        return "Strong attacks, easy ledge guard";
+                    case "Jigglypuff":
+                        return "Strong attacks";
+                    case "Ganondorf":
+                        return "Easily separated";
+                    case "Pikachu":
+                        return "Strong attacks";
+                }
+            }
+            break;
+            case "Samus Aran": {
+                switch(right) {
+                    case "Fox":
+                        return "Spam power";
+                    case "Falco":
+                        return "Spam power";
+                    case "Sheik":
+                        return "Easily comboed";
+                    case "Marth":
+                        return "Easily comboed";
+                    case "Princess Peach":
+                        return "Several recovery options";
+                    case "Captain Falcon":
+                        return "Floaty";
+                    case "Ice Climbers":
+                        return "Spam power";
+                    case "Dr. Mario":
+                        return "Spam power";
+                    case "Jigglypuff":
+                        return "Floaty";
+                    case "Ganondorf":
+                        return "Lightweight";
+                    case "Pikachu":
+                        return "Spam power";
+                }
+            }
+            break;
+            case "Dr. Mario": {
+                switch(right) {
+                    case "Fox":
+                        return "Can reflect recoveries";
+                    case "Falco":
+                        return "Can reflect recoveries";
+                    case "Sheik":
+                        return "Easily comboed";
+                    case "Marth":
+                        return "Priority";
+                    case "Princess Peach":
+                        return "Easily gimped";
+                    case "Captain Falcon":
+                        return "Punish game";
+                    case "Ice Climbers":
+                        return "Can reflect";
+                    case "Samus Aran":
+                        return "Can reflect";
+                    case "Jigglypuff":
+                        return "Strong attacks";
+                    case "Ganondorf":
+                        return "Lighter weight";
+                    case "Pikachu":
+                        return "Strong attacks";
+                }
+            }
+            break;
+            case "Jigglypuff": {
+                switch(right) {
+                    case "Fox":
+                        return "Floaty";
+                    case "Falco":
+                        return "Floaty";
+                    case "Sheik":
+                        return "Floaty";
+                    case "Marth":
+                        return "Floaty";
+                    case "Princess Peach":
+                        return "Edgeguards";
+                    case "Captain Falcon":
+                        return "Floaty";
+                    case "Ice Climbers":
+                        return "Hard to get grabbed";
+                    case "Samus Aran":
+                        return "Easy to avoid spam";
+                    case "Dr. Mario":
+                        return "Strong attacks, easy ledge guard";
+                    case "Ganondorf":
+                        return "Hard to catch";
+                    case "Pikachu":
+                        return "Edge guards";
+                }
+            }
+            break;
+            case "Ganondorf": {
+                switch(right) {
+                    case "Fox":
+                        return "Predicatable recovery";
+                    case "Falco":
+                        return "Predicatable recovery";
+                    case "Sheik":
+                        return "Easily gimped";
+                    case "Marth":
+                        return "Has reach";
+                    case "Princess Peach":
+                        return "Strong attacks";
+                    case "Captain Falcon":
+                        return "Predicatable recovery";
+                    case "Ice Climbers":
+                        return "Extremely powerful";
+                    case "Samus Aran":
+                        return "Powerful";
+                    case "Dr. Mario":
+                        return "Powerful";
+                    case "Jigglypuff":
+                        return "Gets edge guarded";
+                    case "Pikachu":
+                        return "Slow but powerful";
+                }
+            }
+            break;
+            case "Pikachu": {
+                switch(right) {
+                    case "Fox":
+                        return "Can chain grab";
+                    case "Falco":
+                        return "Can chain grab";
+                    case "Sheik":
+                        return "Weak to grabs";
+                    case "Marth":
+                        return "Excellent recovery";
+                    case "Princess Peach":
+                        return "Excellent recovery";
+                    case "Captain Falcon":
+                        return "Hard to catch";
+                    case "Ice Climbers":
+                        return "Easily pressured";
+                    case "Samus Aran":
+                        return "Excellent recovery";
+                    case "Dr. Mario":
+                        return "Strong attacks, easy ledge guard";
+                    case "Jigglypuff":
+                        return "Hard to catch";
+                    case "Ganondorf":
+                        return "Hard to catch";
+                }
+            }
+            break;
+        }
+        return "";
+    }
+
     public void setMatchupsView() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.matchup_array, android.R.layout.simple_spinner_item);
@@ -2030,7 +2366,9 @@ public class MatchupFragment extends Fragment {
                 un20XX();
         } else {
             un20XX();
+            muInfoLeft.setText(getInfo(characterLeft, characterRight));
             infoLeft.setText(getLeftPercent(characterLeft, characterRight) + "%");
+            muInfoRight.setText(getInfo(characterRight, characterLeft));
             infoRight.setText(getRightPercent(characterLeft, characterRight) + "%");
         }
     }

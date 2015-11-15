@@ -25,30 +25,30 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class FrameDataActivity extends AppCompatActivity {
-    int frame = 0;
-    int mTotal = 0;
+    private int frame = 0;
+    private int mTotal = 0;
 
-    Button nextBtn;
-    Button firstBtn;
-    Button backBtn;
-    Button playBtn;
+    private Button nextBtn;
+    private Button firstBtn;
+    private Button backBtn;
+    private Button playBtn;
 
-    boolean paused = false;
-    boolean running = false;
+    private boolean paused = false;
+    private boolean running = false;
 
-    String movePicked = "";
-    String characterPicked = "";
-    String characterPickedTitle = "";
+    private String movePicked = "";
+    private String characterPicked = "";
+    private String characterPickedTitle = "";
 
-    TextView iasa;
-    TextView frameNumber;
-    TextView totalFrame;
-    TextView landingLag;
+    private TextView iasa;
+    private TextView frameNumber;
+    private TextView totalFrame;
+    private TextView landingLag;
 
-    ImageView frameImage;
+    private ImageView frameImage;
 
-    ClickListener listener = new ClickListener();
-    LongClickListener longListener = new LongClickListener();
+    private ClickListener listener = new ClickListener();
+    private LongClickListener longListener = new LongClickListener();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,6 @@ public class FrameDataActivity extends AppCompatActivity {
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.framedata_layout);
-        Slidr.attach(this);
 
         Bundle mainData = getIntent().getExtras();
         if(mainData == null)

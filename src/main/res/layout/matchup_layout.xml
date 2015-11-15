@@ -36,8 +36,8 @@
     <View
         android:id="@+id/viewright"
         android:layout_width="150dp"
-        android:layout_gravity="end"
         android:layout_height="50dp"
+        android:layout_gravity="end"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="220dp"/>
 
@@ -118,5 +118,26 @@
         android:layout_marginTop="80dp"
         android:text="20XX"
         android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/muInfoLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
+        android:layout_marginBottom="130dp"
+        android:layout_marginRight="200dp"
+        android:layout_marginTop="200dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="?android:textColorPrimary"/>
+
+    <TextView
+        android:id="@+id/muInfoRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:layout_marginBottom="130dp"
+        android:layout_marginTop="200dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="?android:textColorPrimary"/>
 </FrameLayout>
 

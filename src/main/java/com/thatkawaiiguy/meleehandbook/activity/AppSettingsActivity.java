@@ -27,6 +27,8 @@ public class AppSettingsActivity extends PreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (getIntent().hasExtra("bundle") && savedInstanceState == null)
+            savedInstanceState = getIntent().getExtras().getBundle("bundle");
         Preferences.applySettingsTheme(this);
         getDelegate().installViewFactory();
         getDelegate().onCreate(savedInstanceState);

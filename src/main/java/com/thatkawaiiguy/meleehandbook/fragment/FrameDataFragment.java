@@ -77,7 +77,8 @@ public class FrameDataFragment extends Fragment {
                     childObjectList.add(customChildObject);
                     childObjectList.add(customChildObject2);
                     childObjectList.add(customChildObject3);
-                    if (actionBarTitle.equals("Marth") || actionBarTitle.equals("Sheik"))
+                    if (actionBarTitle.equals("Marth") || actionBarTitle.equals("Sheik") ||
+                            actionBarTitle.equals("Yoshi"))
                         break;
                     CustomChildObject customChildObject4 = new CustomChildObject();
                     CustomChildObject customChildObject5 = new CustomChildObject();
@@ -162,7 +163,6 @@ public class FrameDataFragment extends Fragment {
                         customChildObject4.setChildText(normalList[3]);
                         customChildObject5.setChildText(normalList[4]);
                         customChildObject6.setChildText(normalList[5]);
-                        childObjectList.add(customChildObject);
                         childObjectList.add(customChildObject2);
                         childObjectList.add(customChildObject3);
                         childObjectList.add(customChildObject4);
@@ -179,9 +179,11 @@ public class FrameDataFragment extends Fragment {
                         customChildObject3.setChildText(specialList[2]);
                         customChildObject4.setChildText(specialList[3]);
                         childObjectList.add(customChildObject);
-                        childObjectList.add(customChildObject2);
+                        if(!actionBarTitle.equals("Yoshi"))
+                            childObjectList.add(customChildObject2);
                         childObjectList.add(customChildObject3);
-                        childObjectList.add(customChildObject4);
+                        if(!actionBarTitle.equals("Dr. Mario"))
+                            childObjectList.add(customChildObject4);
                     } else {
                         CustomChildObject customChildObject5 = new CustomChildObject();
                         CustomChildObject customChildObject6 = new CustomChildObject();

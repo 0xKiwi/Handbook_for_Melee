@@ -9,6 +9,7 @@ import com.thatkawaiiguy.meleehandbook.fragment.InfoPageFragment;
 
 public class CharacterFragmentAdapter extends FragmentPagerAdapter{
     final int PAGE_COUNT = 2;
+
     private String tabTitles[] = new String[]{"Info", "Frame Data"};
 
     public CharacterFragmentAdapter(FragmentManager fm) {

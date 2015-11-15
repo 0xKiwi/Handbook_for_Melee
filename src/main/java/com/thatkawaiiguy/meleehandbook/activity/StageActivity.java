@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import com.thatkawaiiguy.meleehandbook.R;
 
-public class StageActivity extends ImageInfoActivity {
+public class StageActivity extends GifInfoActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,9 @@ public class StageActivity extends ImageInfoActivity {
                 break;
             case "Fountain of Dreams":
                 infoImage.setImageResource(R.drawable.fodbox);
+                break;
+            case "Kongo Jungle (SSB)":
+                infoImage.setImageResource(R.drawable.kongo);
                 break;
             case "Pokemon Stadium":
                 infoImage.setImageResource(R.drawable.pokestadiumbox);

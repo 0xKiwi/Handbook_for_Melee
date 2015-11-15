@@ -46,6 +46,8 @@ public class Preferences {
             contextThemeWrapper.setTheme(R.style.AppTheme_Light_Settings);
         else if(Preferences.blackActionBarThemeEnabled(contextThemeWrapper))
             contextThemeWrapper.setTheme(R.style.AppTheme_Black_Color_Settings);
+        else
+            contextThemeWrapper.setTheme(R.style.AppTheme_Settings);
     }
 
     private static boolean darkThemeEnabled(Context context) {

@@ -2,7 +2,6 @@ package com.thatkawaiiguy.meleehandbook.activity;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -21,8 +20,6 @@ public class GifInfoActivity extends AppCompatActivity {
 
     protected GifImageView infoImage;
 
-    protected AppBarLayout mAppBarLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (getIntent().hasExtra("bundle") && savedInstanceState == null)
@@ -32,7 +29,6 @@ public class GifInfoActivity extends AppCompatActivity {
         setContentView(R.layout.collapsing_gif_layout);
         Slidr.attach(this);
 
-        mAppBarLayout = (AppBarLayout) findViewById(R.id.app_bar_layout);
         Bundle mainData = getIntent().getExtras();
         if (mainData == null)
             return;

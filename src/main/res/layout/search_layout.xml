@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <include
-        android:id="@+id/include2"
+        android:id="@+id/include"
         layout="@layout/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -14,8 +14,10 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="8dp"
+        android:layout_marginTop="?attr/actionBarSize"
         android:clipToPadding="false"
-        android:layout_below="@+id/include2"/>
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"/>
 </RelativeLayout>

@@ -42,7 +42,7 @@ public class AppRater {
         editor.apply();
     }
 
-    public static void onCreateDialog(final Context mContext, final SharedPreferences.Editor editor) {
+    private static void onCreateDialog(final Context mContext, final SharedPreferences.Editor editor) {
         new AlertDialog.Builder(mContext)
                 .setTitle("Rate " + APP_TITLE)
                 .setMessage("If "+ APP_TITLE + " is helping you out, please take a moment to rate " +

@@ -8,6 +8,7 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
@@ -15,8 +16,7 @@
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,38 +26,27 @@
                 android:value=".other.SearchResultsActivity" />
         </activity>
         <activity
-            android:name=".activity.CharacterActivity"
-            android:label="@string/app_name" />
+            android:name=".activity.CharacterActivity"/>
         <activity
-            android:name=".activity.CharacterFrameActivity"
-            android:label="@string/app_name" />
+            android:name=".activity.CharacterFrameActivity"/>
         <activity
-            android:name=".activity.FunActivity"
-            android:label="@string/app_name" />
+            android:name=".activity.FunActivity"/>
         <activity
-            android:name=".activity.StageActivity"
-            android:label="@string/app_name" />
+            android:name=".activity.StageActivity"/>
         <activity
-            android:name=".activity.TechActivity"
-            android:label="@string/app_name" />
+            android:name=".activity.TechActivity"/>
         <activity
-            android:name=".activity.TechTabActivity"
-            android:label="@string/app_name" />
+            android:name=".activity.TechTabActivity"/>
         <activity
-            android:name=".activity.AppSettingsActivity"
-            android:label="@string/app_name" />
+            android:name=".activity.AppSettingsActivity"/>
         <activity
-            android:name=".activity.UniqueTechActivity"
-            android:label="@string/app_name" />
+            android:name=".activity.UniqueTechActivity"/>
         <activity
-            android:name=".activity.FrameDataActivity"
-            android:label="@string/app_name" />
+            android:name=".activity.FrameDataActivity"/>
         <activity
-            android:name=".activity.HealthyActivity"
-            android:label="@string/app_name" />
+            android:name=".activity.HealthyActivity"/>
         <activity
             android:name=".activity.SearchResultsActivity"
-            android:label="@string/app_name"
             android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />

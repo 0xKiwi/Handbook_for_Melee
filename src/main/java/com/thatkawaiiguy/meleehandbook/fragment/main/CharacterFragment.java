@@ -18,16 +18,15 @@ import com.thatkawaiiguy.meleehandbook.R;
 
 public class CharacterFragment extends Fragment {
 
-    protected boolean canStart = true;
+    private boolean canStart = true;
 
-    protected IconAdapter mAdapter;
-    protected RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerView;
 
-    protected LayoutManagerType mCurrentLayoutManagerType;
+    private LayoutManagerType mCurrentLayoutManagerType;
 
     private enum LayoutManagerType {LINEAR_LAYOUT_MANAGER}
 
-    protected String[] characters = ArrayHelper.getCharacterArray();
+    private String[] characters = ArrayHelper.getCharacterArray();
 
     public static CharacterFragment newInstance() {
         Bundle args = new Bundle();
@@ -53,7 +52,7 @@ public class CharacterFragment extends Fragment {
             mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable("layoutManager");
         setRecyclerViewLayoutManager();
 
-        mAdapter = new IconAdapter(characters);
+        IconAdapter mAdapter = new IconAdapter(characters);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.hasFixedSize();
 

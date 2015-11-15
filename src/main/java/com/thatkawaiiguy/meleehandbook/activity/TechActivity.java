@@ -17,6 +17,9 @@ public class TechActivity extends GifInfoActivity {
             case "Chain grab":
                 infoImage.setImageResource(R.drawable.cgrab);
                 break;
+            case "Crouch cancel":
+                infoImage.setImageResource(R.drawable.crouchcancel);
+                break;
             case "Dash-dance":
                 infoImage.setImageResource(R.drawable.ddance);
                 break;
@@ -25,9 +28,6 @@ public class TechActivity extends GifInfoActivity {
                 break;
             case "Directional Influence":
                 infoImage.setImageResource(R.drawable.di);
-                break;
-            case "Drop-cancel":
-                infoImage.setImageResource(R.drawable.dropcancel);
                 break;
             case "Fast falling":
                 infoImage.setImageResource(R.drawable.ffall);
@@ -55,6 +55,9 @@ public class TechActivity extends GifInfoActivity {
                 break;
             case "No-impact landing":
                 infoImage.setImageResource(R.drawable.noimpact);
+                break;
+            case "Platform cancel":
+                infoImage.setImageResource(R.drawable.dropcancel);
                 break;
             case "Powershield":
                 infoImage.setImageResource(R.drawable.pshield);

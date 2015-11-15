@@ -18,18 +18,22 @@ public class ArrayHelper {
 
     public static String[] getMapArray() {
         return new String[]{"Battlefield", "Dream Land", "Final Destination",
-                "Fountain of Dreams", "Pokemon Stadium", "Yoshi's Story"};
+                "Fountain of Dreams", "Kongo Jungle (SSB)", "Pokemon Stadium", "Yoshi's Story"};
     }
 
     public static String[] getFunArray() {
-        return new String[]{"Baiting", "Control", "Mind games", "Mix-ups", "Must reads", "Neutral game", "Pressuring", "Punishing", "Reading", "Spacing", "Tech skill", "Tournament ruleset", "Various tips"};
+        return new String[]{"Baiting", "Common errors", "Control", "Edge guarding",
+                "Improving", "Mindgames", "Mindset", "Mix-ups", "Must reads",
+                "Neutral game", "Pressuring", "Punishing", "Reading", "Recovery",
+                "Spacing", "Tech skill", "Tournament ruleset", "Various tips"};
     }
 
     public static String[] getTechArray() {
-        return new String[]{"Aerial interrupt", "Chain grab", "Dash-canceling", "Dash-dance",
-                "Drop-cancel",  "Directional Influence", "Fast falling", "Fox-trot",
+        return new String[]{"Aerial interrupt", "Chain grab", "Crouch cancel", "Dash-canceling", "Dash-dance",
+                "Directional Influence", "Fast falling", "Fox-trot",
                 "Jab cancel", "Jab reset", "Jump-canceling", "L-canceling",
-                "Ledge-canceling", "Ledgedash", "Ledge stall", "Moonwalk", "No-impact landing", "Platform warp",
+                "Ledge-canceling", "Ledgedash", "Ledge stall", "Moonwalk",
+                "No-impact landing", "Platform cancel", "Platform warp",
                 "Powershield", "Shield pressure", "Shield dropping",
                 "SHFFL", "Short hop", "Taunt canceling", "Team wobble", "Tech",
                 "Tech-chasing", "Wall jump", "Wavedash", "V-canceling"};
@@ -38,22 +42,26 @@ public class ArrayHelper {
     public static String[] getTermArray() {
         return new String[]{"20XX", "Air dodge", "Banned stage", "Beef", "Blastzone",
                 "Boost grab", "Brackets", "Buff", "BYOC", "Camera box", "Cancel", "Cave of life",
-                "Clone", "Counter", "Counterpick", "Crouch cancel", "Dave's stupid rule",
-                "Dashing",  "Dash-grab", "Disjointed hitbox", "Disrespect", "Ditto", "Doubles", "Easy money", "ECB", "Edge guarding",
-                "Edge hogging", "Frame", "Freeze frames", "Friendlies", "Helpless", "Gimp", "Go to the doctor", 
-                "Grab", "Hitbox", "Hitlag", "Hitstun", "Helicopter crash",
-                "IASA frames", "Infinite", "Input lag", "Invisible ceiling", "Janky", "Johns", "Jump cancel", "Juggling",
+                "Clone", "Counter", "Counterpick", "Crew battle", "Dave's stupid rule",
+                "Dashing",  "Dash-grab", "Disjointed hitbox", "Disrespect",
+                "Ditto", "Dong", "Doubles", "Easy money", "ECB", "Edge guarding",
+                "Edge hogging", "Frame", "Freeze frames", "Friendlies", "Helpless", "Gimp", "God",
+                "Go to the doctor", "Grab", "Hitbox", "Hitlag", "Hitstun", "Helicopter crash",
+                "IASA frames", "Infinite", "Input lag", "Invisible ceiling", "Ironman", "It's not safe",
+                "Janky", "Johns", "Jump cancel", "Jump canceled grab", "Juggling",
                 "JV3/JV4 stock", "Kappa", "Ken combo", "Kreygasm", "Lag",
-                "Landing lag", "Lean drop", "Legalize PokeFloats", "Matchups", "Meteor", "Meteor cancel",
+                "Landing lag", "Lean drop", "Legalize PokeFloats", "Mangle", "Mashedpotato Samurai",
+                "Matchups", "Meteor", "Meteor cancel",
                 "Metagame", "Mike Haze", "Mindgames", "Misfire", "My b", "Nerf", "Neutral game",
                 "OOS", "Overpowered", "PC drop", "Phantom hit", "Pivot","Pop-off", "Port priority",
-                "Priority", "Pummel",  "Randall the Cloud", "Recovery", "Respect your elders", "RNG",
+                "Priority", "Pummel", "Punish", "Randall the Cloud", "Recovery", "Respect your elders", "RNG",
                 "Rolling", "Salty", "Salty runback", "Scar jump", "Screen KO", "Self-destruct",
                 "Semiclone", "Set", "Sex kick", "Shieldhitstun", "Shielding", "Shieldstun", "Shield break",
                 "Shield grabbing", "Shine/Reflector", "Sidestepping", "Singles", "Smash attacks", "Smash inflation",
                 "Smashfest", "Sourspot", "Space animal", "Spike", "Stage humping", "Stage spike",
                 "Stale moves", "Star KO", "Stitch", "Stomp", "Style", "Sweetspot attack", "Sweetspot ledge",
-                "TAS", "The knee", "Tier list", "Tilts", "Tomahawk","Tourney", "Trade-off",
+                "TAS", "Tech trap", "The king is back",
+                "The knee", "The Zhu", "Tier list", "Tilts", "Tires don exits", "Tomahawk","Tourney", "Trade-off",
                 "Triangle jumping", "Turnaround special", "Walking", "Walk-off edges", "Wall of pain", "Wavecheat",
                 "Wombo combo", "Zoning"};
     }
@@ -203,6 +211,8 @@ public class ArrayHelper {
             case "Young Link":
                 image.setImageResource(R.drawable.linkicon);
                 break;
+
+            //STAGES
             case "Battlefield":
                 image.setImageResource(R.drawable.smashicon);
                 break;
@@ -214,6 +224,9 @@ public class ArrayHelper {
                 break;
             case "Fountain of Dreams":
                 image.setImageResource(R.drawable.kirbyicon);
+                break;
+            case "Kongo Jungle (SSB)":
+                image.setImageResource(R.drawable.dkicon);
                 break;
             case "Pokemon Stadium":
                 image.setImageResource(R.drawable.pokemonicon);
@@ -260,8 +273,8 @@ public class ArrayHelper {
                 return res.getString(R.string.counter_term_info);
             case "Counterpick":
                 return res.getString(R.string.counterpick_term_info);
-            case "Crouch cancel":
-                return res.getString(R.string.crouch_term_info);
+            case "Crew battle":
+                return  res.getString(R.string.crewbattle_term_info);
             case "Dashing":
                 return res.getString(R.string.dash_term_info);
             case "Dash-grab":
@@ -274,6 +287,8 @@ public class ArrayHelper {
                 return res.getString(R.string.disrespect_term_info);
             case "Ditto":
                 return res.getString(R.string.ditto_term_info);
+            case "Dong":
+                return res.getString(R.string.dong_term_info);
             case "Doubles":
                 return res.getString(R.string.doubles_term_info);
             case "Easy money":
@@ -294,6 +309,8 @@ public class ArrayHelper {
                 return res.getString(R.string.gimp_term_info);
             case "Grab":
                 return res.getString(R.string.grab_term_info);
+            case "God":
+                return res.getString(R.string.god_term_info);
             case "Go to the doctor":
                 return res.getString(R.string.gotothedoctor_term_info);
             case "Helpless":
@@ -314,6 +331,10 @@ public class ArrayHelper {
                 return res.getString(R.string.invisibleceil_term_info);
             case "Input lag":
                 return res.getString(R.string.ilag_term_info);
+            case "Ironman":
+                return  res.getString(R.string.ironman_term_info);
+            case "It's not safe":
+                return  res.getString(R.string.itsnotsafe_term_info);
             case "Janky":
                 return res.getString(R.string.janky_term_info);
             case "Johns":
@@ -322,7 +343,7 @@ public class ArrayHelper {
                 return res.getString(R.string.juggling_term_info);
             case "Jump cancel":
                 return res.getString(R.string.jcancel_term_info);
-            case "Jump cancelled grab":
+            case "Jump canceled grab":
                 return res.getString(R.string.jcgrab_term_info);
             case "JV3/JV4 stock":
                 return res.getString(R.string.jv3stock_term_info);
@@ -340,8 +361,12 @@ public class ArrayHelper {
                 return res.getString(R.string.leandrop_term_info);
             case "Legalize PokeFloats":
                 return res.getString(R.string.legalizepoke_term_info);
+            case "Mashedpotato Samurai":
+                return res.getString(R.string.mashedpotato_term_info);
             case "Matchups":
                 return res.getString(R.string.matchups_term_info);
+            case "Mangle":
+                return res.getString(R.string.mangle_term_info);
             case "Meteor":
                 return res.getString(R.string.meteor_term_info);
             case "Meteor cancel":
@@ -378,6 +403,8 @@ public class ArrayHelper {
                 return res.getString(R.string.priority_term_info);
             case "Pummel":
                 return res.getString(R.string.pummel_term_info);
+            case "Punish":
+                return res.getString(R.string.punish_term_info);
             case "Randall the Cloud":
                 return res.getString(R.string.randall_term_info);
             case "Recovery":
@@ -452,12 +479,20 @@ public class ArrayHelper {
                 return res.getString(R.string.sweetledge_term_info);
             case "TAS":
                 return res.getString(R.string.tas_term_info);
+            case "Tech trap":
+                return res.getString(R.string.techtrap_term_info);
+            case "The king is back":
+                return res.getString(R.string.theking_term_info);
             case "The knee":
                 return res.getString(R.string.knee_term_info);
+            case "The Zhu":
+                return res.getString(R.string.thezhu_term_info);
             case "Tier list":
                 return res.getString(R.string.tiers_term_info);
             case "Tilts":
                 return res.getString(R.string.tilts_term_info);
+            case "Tires don exits":
+                return res.getString(R.string.tiresdonexits_term_info);
             case "Tomahawk":
                 return res.getString(R.string.tomahawk_term_info);
             case "Tourney":
@@ -495,6 +530,8 @@ public class ArrayHelper {
                 return res.getString(R.string.aerialinterrupt_info_text);
             case "Chain grab":
                 return res.getString(R.string.chaing_info_text);
+            case "Crouch cancel":
+                return res.getString(R.string.crouchcancel_info_text);
             case "Dash-canceling":
                 return res.getString(R.string.dashcancel_info_text);
             case "Dash-dance":
@@ -503,8 +540,6 @@ public class ArrayHelper {
                 return res.getString(R.string.diangles_info_text);
             case "Directional Influence":
                 return res.getString(R.string.di_info_text);
-            case "Drop-cancel":
-                return res.getString(R.string.dropcancel_info_text);
             case "Fast falling":
                 return res.getString(R.string.ffall_info_text);
             case "Fox-trot":
@@ -527,6 +562,8 @@ public class ArrayHelper {
                 return res.getString(R.string.moonwalk_info_text);
             case "No-impact landing":
                 return res.getString(R.string.noimpact_info_text);
+            case "Platform cancel":
+                return res.getString(R.string.platformcancel_info_text);
             case "Platform warp":
                 return res.getString(R.string.platformwarp_info_text);
             case "Powershield":
@@ -541,8 +578,6 @@ public class ArrayHelper {
                 return res.getString(R.string.shop_info_text);
             case "Smash DI":
                 return res.getString(R.string.sdi_info_text);
-            case "Spacing":
-                return res.getString(R.string.spacing_info_text);
             case "Tech":
                 return res.getString(R.string.tech_info_text);
             case "Tech-chasing":
@@ -677,20 +712,48 @@ public class ArrayHelper {
                 return res.getString(R.string.fd_info_text);
             case "Fountain of Dreams":
                 return res.getString(R.string.fod_info_text);
+            case "Kongo Jungle (SSB)":
+                return res.getString(R.string.kongo_info_text);
             case "Pokemon Stadium":
                 return res.getString(R.string.pokestadium_info_text);
             case "Yoshi's Story":
                 return res.getString(R.string.ystory_info_text);
-            case "Tournament ruleset":
-                return res.getString(R.string.tourney_info_text);
 
             //Fundamentals
             case "Baiting":
                 return res.getString(R.string.bait_info_text);
+            case "Common errors":
+                return res.getString(R.string.commonerrors_info_text);
             case "Control":
                 return res.getString(R.string.control_info_text);
+            case "Edge guarding":
+                return res.getString(R.string.edgeguard_info_text);
+            case "Improving":
+                return res.getString(R.string.improve_info_text);
+            case "Mindgames":
+                return res.getString(R.string.mindgames_info_text);
+            case "Mindset":
+                return res.getString(R.string.mindset_info_text);
+            case "Mix-ups":
+                return res.getString(R.string.mixups_info_text);
+            case "Neutral game":
+                return res.getString(R.string.neutral_info_text);
+            case "Pressuring":
+                return res.getString(R.string.pressure_info_text);
+            case "Punishing":
+                return res.getString(R.string.punish_info_text);
+            case "Reading":
+                return res.getString(R.string.reading_info_text);
+            case "Recovery":
+                return res.getString(R.string.recovery_info_text);
+            case "Spacing":
+                return res.getString(R.string.spacing_info_text);
+            case "Tech skill":
+                return res.getString(R.string.techskill_info_text);
             case "Various tips":
                 return res.getString(R.string.tips_info_text);
+            case "Tournament ruleset":
+                return res.getString(R.string.tourney_info_text);
             default:
                 return res.getString(R.string.debug_text);
         }

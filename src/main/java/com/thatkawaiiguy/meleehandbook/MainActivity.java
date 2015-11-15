@@ -292,6 +292,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
 
+        final Menu men = menu;
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         searchView = (SearchView)
                 MenuItemCompat.getActionView(menu.findItem(R.id.search));
@@ -305,6 +306,9 @@ public class MainActivity extends AppCompatActivity {
                 if(!queryTextFocused) {
                     searchView.onActionViewCollapsed();
                     searchView.setQuery("", false);
+                    onBackPressed();
+
+
                 }
             }
         });

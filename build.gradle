@@ -7,14 +7,15 @@ android {
         applicationId "com.thatkawaiiguy.meleehandbook"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 5
+        versionCode 6
         versionName "0.9.99"
     }
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-rules.pro')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                    'proguard-rules.pro '
         }
     }
     packagingOptions {
@@ -24,12 +25,12 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.10'
     compile 'com.google.android.gms:play-services-ads:8.3.0'
-    compile 'com.android.support:design:23.1.0'
-    compile 'com.android.support:recyclerview-v7:23.1.0'
-    compile 'com.android.support:cardview-v7:23.1.0'
+    compile 'com.android.support:design:23.0.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile 'com.android.support:cardview-v7:23.0.1'
     compile 'com.turingtechnologies.materialscrollbar:lib:5.0.1'
     compile 'com.bignerdranch.android:expandablerecyclerview:1.0.3'
     compile 'com.r0adkll:slidableactivity:2.0.4'

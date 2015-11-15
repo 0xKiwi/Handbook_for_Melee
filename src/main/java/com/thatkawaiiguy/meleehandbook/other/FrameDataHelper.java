@@ -60,7 +60,7 @@ public class FrameDataHelper {
             case "Back Roll":
                 return "rollback";
             default:
-                return "";
+                return getMarthSideB(move);
         }
     }
 
