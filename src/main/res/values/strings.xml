@@ -1106,7 +1106,7 @@
     </string>
     <string name="priority_term_info">
         The range of an attack. For example, Marth\'s Forward Smash has much greater Priority
-        than that of Pichu. Moves with greater priority can override those with less. Do to the
+        than that of Pichu. Moves with greater priority can override those with less. Due to the
         fact they reach the hurtbox before the opponents move does.
     </string>
     <string name="pummel_term_info">
@@ -2273,8 +2273,8 @@
         SDI can also be used to move into a wall or ceiling in order to tech near-instantly (and is also possible with
         floors if the character starts in the air) or to (very minimally) increase the distance from the blast line
         that the attack is about to send them towards.
-        <br>Despite its near-identical name, SDI is not a subtype of directional influence, but a different mechanic
-        altogether that is performable under the same circumstances. The major difference is that, while DI changes
+        <br>Despite its near-identical name, SDI is not the same thing as directional influence.
+        The major difference is that, while DI changes
         the trajectory a character is launched in, SDI changes a character\'s position before launch.
         <br>The mechanics of SDI operate by shifting the character in a given direction if a new directional vector of
         sufficient size is input on that frame. As a result, repeatedly tapping in one direction will move the character
@@ -2287,6 +2287,13 @@
         <br>As the C-Stick can also be used for SDI, even \stronger\" forms of SDI exist. So-called double-stick DI
         utilizes the C-Stick\'s ability to override the control stick by holding one of the sticks in one direction
         and utilizing quarter-stick DI with the other.
+        <br>
+        <br><big><b>How to properly perform</b></big>
+        <br>What you do to SDI is simply jam the control stick the exact instant you are hit. This isn\'t done on reaction,
+        you must be expecting the hit. This is mostly done to survive combos where you know a certain move must be
+        used at a certain time. Because it is anticipated, you can actually throw people off by hitting them with a
+        different move than they expect or changing the timing. For example, as Fox if they are SDIing your uair
+        you can bair and they will have bad DI.
         <br>
         <br><b>Automatic smash directional influence</b>
         <br>ASDI is a weaker variant of SDI. Once a character\'s freeze frames are
@@ -4122,6 +4129,73 @@
         their exposed lower body and finishing them off with a full hopped Uair. MINDGAMES!!!!!!
         <br>
         <br>Full post: http://smashboards.com/threads/understanding-the-depth-of-mix-up-games-in-ssbm.105433/
+    ]]></string>
+    <string name="mustreads_info_text"><![CDATA[<big><b>Must reads</b></big>
+    <br><b>As there is just too much info to fit into this app, here are articles and
+    posts I highly suggest you read through, as they should help and inform you about several things.</b>
+    <br>
+    <br><b>Huge collection of everything</b>
+    <br>www.tinyurl.com/meleelibrary
+    <br>
+    <br><big><b>Smashboards</b></big>
+    <br>
+    <br><b>History of a Smasher by Chillindude</b></big>
+    <br>http://smashboards.com/threads/history-of-a-smasher.290961/
+    <br>
+    <br><b>The Four Aspects of Melee</b>
+    <br>http://smashboards.com/threads/the-four-aspects-of-melee.94597/
+    <br>
+    <br><b>10,000 Words of Power</b>
+    <br>http://smashboards.com/threads/10-000-words-of-power.295524/
+    <br>
+    <br><b>Confidence in Smash, from PPMD</b>
+    <br>http://smashboards.com/threads/falco-discussion-thread.256826/page-126#post-12281679
+    <br>
+    <br><b>Oberservation: The Key to Higher Level Play</b>
+    <br>http://smashboards.com/threads/observation-the-key-to-higher-level-smash-play.103017/
+    <br>
+    <br><b>An Analysis of Ascending to the Next Level</b>
+    <br>http://smashboards.com/threads/reaching-the-pantheon-an-analysis-of-ascending-to-the-next-level.96828/
+    <br>
+    <br><b>Approaching and Why Fox is good from PPMD</b>
+    <br>http://smashboards.com/threads/falco-discussion-thread.256826/page-265#post-13591750
+    <br>
+    <br><b>Advance, Attack, Avoid (Through the lens of Luigi</b>
+    <br>http://smashboards.com/threads/advance-attack-avoid-through-the-lens-of-luigi.389684/
+    <br>
+    <br><big><b>Reddit</b></big>
+    <br>
+    <br><b>Mindset of Improvement</b>
+    <br>https://www.reddit.com/r/smashbros/comments/235klc/discussing_the_mindset_of_improvement/
+    <br>
+    <br><b>How to understand a character\'s options</b>
+    <br>https://www.reddit.com/r/SSBM/comments/3r5g2l/how_to_understand_a_characters_movement_the/
+    <br>
+    <br><big><b>Other</b></big>
+    <br>
+    <br><b>Complete Complete, Blog from Wobbles</b>
+    <br>http://www.compete-complete.com/
+    <br>
+    <br><b>Tai\'s Marth guide (Everyone can benefit from this)</b>
+    <br>http://www.meleeitonme.com/sharpening-your-sword-tais-marth-guide/
+    <br>
+    <br><big><b>Videos</b></big>
+    <br>
+    <br><b>The Smash Documentary</b>
+    <br>https://www.youtube.com/watch?v=jX9hbbA-WP4
+    <br>
+    <br><b>The Smash Documentary Series (Remastered)
+    <br>https://www.youtube.com/watch?v=NSf2mgkRm7Q&list=PLoUHkRwnRH-IXbZfwlgiEN8eXmoj6DtKM
+    <br>
+    <br><b>Smash Practice, helpful words from Zhu and Cactuar</b>
+    <br>https://www.youtube.com/playlist?list=PL32VvbzXtv1Z5JqXR_gNCtUZI5h7TfOGR
+    <br>
+    <br><b>20GX, beginner fundamental discussion</b>
+    <br>https://www.youtube.com/watch?v=qAUVzXOct4o
+    <br>
+    <br><b>Mindset talk with PPMD</b>
+    <br>https://www.youtube.com/watch?v=l5UCDsBZtlk
+    <br>
     ]]></string>
     <string name="neutral_info_text"><![CDATA[<big><b>Neutral game</b></big>
         <br>In the Neutral game, the balance of options each player can perform is at a relative equilibrium.

@@ -5,7 +5,7 @@
         android:id="@+id/search"
         android:title="@string/search_title"
         android:icon="@drawable/ic_magnify_white_48dp"
-        yourapp:showAsAction="always"
+        yourapp:showAsAction="ifRoom"
         yourapp:actionViewClass="android.support.v7.widget.SearchView" />
 
     <item
@@ -13,7 +13,7 @@
         android:id="@+id/filter"
         android:orderInCategory="100"
         android:visible="true"
-        yourapp:showAsAction="ifRoom"
+        yourapp:showAsAction="always"
         android:icon="@drawable/ic_filter_list_white_48dp">
     </item>
 </menu>

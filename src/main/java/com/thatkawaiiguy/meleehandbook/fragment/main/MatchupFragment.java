@@ -1974,7 +1974,7 @@ public class MatchupFragment extends Fragment {
                     case "Jigglypuff":
                         return "Strong attacks";
                     case "Ganondorf":
-                        return "Easy to combo and gimp";
+                        return "Fast faller";
                     case "Pikachu":
                         return "Strong attacks";
                 }
@@ -2001,7 +2001,7 @@ public class MatchupFragment extends Fragment {
                     case "Jigglypuff":
                         return "Strong attacks, but easily rested";
                     case "Ganondorf":
-                        return "Easy to combo";
+                        return "Fast faller";
                     case "Pikachu":
                         return "Strong attacks";
                 }
@@ -2030,7 +2030,7 @@ public class MatchupFragment extends Fragment {
                     case "Jigglypuff":
                         return "Lightweight";
                     case "Ganondorf":
-                        return "Easy to combo and gimp";
+                        return "Lightweight";
                     case "Pikachu":
                         return "Can tech chase";
                 }
@@ -2111,7 +2111,7 @@ public class MatchupFragment extends Fragment {
                     case "Jigglypuff":
                         return "Strong punish";
                     case "Ganondorf":
-                        return "Easy to combo";
+                        return "Slightly faster";
                     case "Pikachu":
                         return "Strong attacks";
                 }
@@ -2238,7 +2238,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                         return "Strong attacks";
                     case "Captain Falcon":
-                        return "Predicatable recovery";
+                        return "Strong attacks";
                     case "Ice Climbers":
                         return "Extremely powerful";
                     case "Samus Aran":

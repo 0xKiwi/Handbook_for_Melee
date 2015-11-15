@@ -736,6 +736,8 @@ public class ArrayHelper {
                 return res.getString(R.string.mindset_info_text);
             case "Mix-ups":
                 return res.getString(R.string.mixups_info_text);
+            case "Must reads":
+                return res.getString(R.string.mustreads_info_text);
             case "Neutral game":
                 return res.getString(R.string.neutral_info_text);
             case "Pressuring":
