@@ -34,32 +34,26 @@ import java.util.ArrayList;
 
 public class SearchResultsActivity extends AppCompatActivity {
 
-    int titleTermNum = 0;
-    int termNum = 0;
-    int titleNum = 0;
+    private int titleTermNum = 0;
+    private int termNum = 0;
+    private int titleNum = 0;
 
-    String query = "";
-    String upperCaseQuery = "";
+    private String query = "";
+    private String TECH_KEY = "tech";
+    private String FUN_KEY = "fun";
+    private String MAP_KEY = "map";
+    private String CHAR_KEY = "char";
+    private String TERM_KEY = "term";
+    private String UNIQUE_KEY = "unique";
 
-    boolean canStart = true;
+    private boolean canStart = true;
+    private boolean[] checked;
 
-    boolean[] checked;
+    private Context context = this;
 
-    public Context context = this;
+    private SharedPreferences prefs;
 
-    SharedPreferences prefs;
-
-    String[] results;
-
-    SearchView searchView;
-
-    String TECH_KEY = "tech";
-    String FUN_KEY = "fun";
-    String MAP_KEY = "map";
-    String CHAR_KEY = "char";
-    String TERM_KEY = "term";
-    String UNIQUE_KEY = "unique";
-
+    private SearchView searchView;
     protected SearchAdapter mAdapter;
 
     protected RecyclerView mRecyclerView;
@@ -67,7 +61,6 @@ public class SearchResultsActivity extends AppCompatActivity {
     ArrayList<String> queries = new ArrayList<>();
 
     private enum LayoutManagerType {LINEAR_LAYOUT_MANAGER}
-
     protected LayoutManagerType mCurrentLayoutManagerType;
 
     @Override
@@ -98,8 +91,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
     private void handleIntent(Intent intent) {
         if(Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            upperCaseQuery = intent.getStringExtra(SearchManager.QUERY).replaceAll("\\s+$", "");
-            query = upperCaseQuery.toLowerCase();
+            query = intent.getStringExtra(SearchManager.QUERY).replaceAll("\\s+$", "").toLowerCase();
             queries.clear();
             titleTermNum = 0;
             titleNum = 0;
@@ -162,6 +154,8 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+                if(!newText.equals(""))
+                    search(newText);
                 return false;
             }
         });
@@ -241,110 +235,130 @@ public class SearchResultsActivity extends AppCompatActivity {
     }
 
     private class AsyncCaller extends AsyncTask<Void, Void, Void> {
-        ProgressDialog pdLoading = new ProgressDialog(SearchResultsActivity.this);
+        //ProgressDialog pdLoading = new ProgressDialog(SearchResultsActivity.this);
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
             //this method will be running on UI thread
-            pdLoading.setMessage("\tSearching...");
-            pdLoading.show();
+            //pdLoading.setMessage("\tSearching...");
+            //pdLoading.show();
         }
 
         @Override
         protected Void doInBackground(Void... params) {
+            String[] term = ArrayHelper.getTermArray();
+            String[] LCTerm = ArrayHelper.getLCTermArray();
+            String[] termInfo = ArrayHelper.getLCTermInfoArray(context);
 
-            for(int i = 0; i < ArrayHelper.getTermArray().length; i++) {
+            String[] tech = ArrayHelper.getTechArray();
+            String[] LCTech = ArrayHelper.getLCTechArray();
+            String[] techInfo = ArrayHelper.getLCTechInfoArray(context);
+
+            String[] unique = ArrayHelper.getUniqueArray();
+            String[] LCUnique = ArrayHelper.getLCUniqueArray();
+            String[] uniqueInfo = ArrayHelper.getLCUniqueInfoArray(context);
+
+            String[] fun = ArrayHelper.getFunArray();
+            String[] LCFun = ArrayHelper.getLCFunArray();
+            String[] funInfo = ArrayHelper.getLCFunInfoArray(context);
+
+            String[] character = ArrayHelper.getCharacterArray();
+            String[] LCCharacter = ArrayHelper.getLCCharacterArray();
+            String[] characterInfo = ArrayHelper.getLCCharacterInfoArray(context);
+
+            String[] map = ArrayHelper.getMapArray();
+            String[] LCMap = ArrayHelper.getLCMapArray();
+            String[] mapInfo = ArrayHelper.getLCMapInfoArray(context);
+
+            for(int i = 0; i < term.length; i++)
                 if(prefs.getBoolean(TERM_KEY, true)) {
-                    if(ArrayHelper.getLCTermArray()[i].contains(query)) {
-                        queries.add(ArrayHelper.getTermArray()[i]);
+                    if(LCTerm[i].contains(query)) {
+                        queries.add(term[i]);
                         titleTermNum++;
                     }
                 }
-            }
 
-            for(int i = 0; i < ArrayHelper.getTechArray().length; i++)
+            for(int i = 0; i < tech.length; i++)
                 if(prefs.getBoolean(TECH_KEY, true))
-                    if(ArrayHelper.getLCTechArray()[i].contains(query)) {
-                        queries.add(ArrayHelper.getTechArray()[i]);
+                    if(LCTech[i].contains(query)) {
+                        queries.add(tech[i]);
                         titleNum++;
                     }
 
-            for(int i = 0; i < ArrayHelper.getUniqueArray().length; i++)
+            for(int i = 0; i < unique.length; i++)
                 if(prefs.getBoolean(UNIQUE_KEY, true))
-                    if(ArrayHelper.getLCUniqueArray()[i].contains(query)) {
-                        queries.add(ArrayHelper.getUniqueArray()[i]);
+                    if(LCUnique[i].contains(query)) {
+                        queries.add(unique[i]);
                         titleNum++;
                     }
 
             for(int i = 0; i < ArrayHelper.getFunArray().length; i++)
                 if(prefs.getBoolean(FUN_KEY, true))
-                    if(ArrayHelper.getLCFunArray()[i].contains(query)) {
+                    if(LCFun[i].contains(query)) {
                         queries.add(ArrayHelper.getFunArray()[i]);
                         titleNum++;
                     }
 
-            for(int i = 0; i < ArrayHelper.getCharacterArray().length; i++)
+            for(int i = 0; i < character.length; i++)
                 if(prefs.getBoolean(CHAR_KEY, true))
-                    if(ArrayHelper.getLCCharacterArray()[i].contains(query)) {
-                        queries.add(ArrayHelper.getCharacterArray()[i]);
+                    if(LCCharacter[i].contains(query)) {
+                        queries.add(character[i]);
                         titleNum++;
                     }
 
-            for(int i = 0; i < ArrayHelper.getMapArray().length; i++)
+            for(int i = 0; i < map.length; i++)
                 if(prefs.getBoolean(MAP_KEY, true))
-                    if(ArrayHelper.getLCMapArray()[i].contains(query)) {
-                        queries.add(ArrayHelper.getMapArray()[i]);
+                    if(LCMap[i].contains(query)) {
+                        queries.add(map[i]);
                         titleNum++;
                     }
 
-            for(int i = 0; i < ArrayHelper.getTermArray().length; i++) {
+            for(int i = 0; i < ArrayHelper.getTermArray().length; i++)
                 if(prefs.getBoolean(TERM_KEY, true)) {
-                    if(ArrayHelper.getLCTermArray()[i].contains(query));
-                    else if(ArrayHelper.getLCTermInfoArray(context)[i].contains(query)) {
+                    if(LCTerm[i].contains(query));
+                    else if(termInfo[i].contains(query)) {
                         termNum++;
                         queries.add(ArrayHelper.getTermArray()[i]);
                     }
                 }
-            }
 
-            for(int i = 0; i < ArrayHelper.getTechArray().length; i++) {
+            for(int i = 0; i < tech.length; i++)
                 if(prefs.getBoolean(TECH_KEY, true)) {
-                    if(ArrayHelper.getLCTechArray()[i].contains(query));
-                    else if(ArrayHelper.getLCTechInfoArray(context)[i].contains(query))
-                        queries.add(ArrayHelper.getTechArray()[i]);
+                    if(LCTech[i].contains(query));
+                    else if(techInfo[i].contains(query))
+                        queries.add(tech[i]);
                 }
-            }
 
-            for(int i = 0; i < ArrayHelper.getUniqueArray().length; i++)
+            for(int i = 0; i < unique.length; i++)
                 if(prefs.getBoolean(UNIQUE_KEY, true)) {
-                    if(ArrayHelper.getLCUniqueArray()[i].contains(query));
-                    else if(ArrayHelper.getLCUniqueInfoArray(context)[i].contains(query))
-                        queries.add(ArrayHelper.getUniqueArray()[i]);
+                    if(LCUnique[i].contains(query));
+                    else if(uniqueInfo[i].contains(query))
+                        queries.add(unique[i]);
                 }
 
-            for(int i = 0; i < ArrayHelper.getFunArray().length; i++)
+            for(int i = 0; i < fun.length; i++)
                 if(prefs.getBoolean(FUN_KEY, true)) {
-                    if(ArrayHelper.getLCFunArray()[i].contains(query));
-                    else if((ArrayHelper.getLCFunInfoArray(context)[i].contains(query)))
-                        queries.add(ArrayHelper.getFunArray()[i]);
+                    if(LCFun[i].contains(query));
+                    else if((funInfo[i].contains(query)))
+                        queries.add(fun[i]);
                 }
 
-            for(int i = 0; i < ArrayHelper.getCharacterArray().length; i++)
+            for(int i = 0; i < character.length; i++)
                 if(prefs.getBoolean(CHAR_KEY, true)) {
-                    if(ArrayHelper.getLCCharacterArray()[i].contains(query));
-                    else if((ArrayHelper.getLCCharacterInfoArray(context)[i].contains(query)))
-                        queries.add(ArrayHelper.getCharacterArray()[i]);
+                    if(LCCharacter[i].contains(query));
+                    else if((characterInfo[i].contains(query)))
+                        queries.add(character[i]);
                 }
 
-            for(int i = 0; i < ArrayHelper.getMapArray().length; i++)
+            for(int i = 0; i < map.length; i++)
                 if(prefs.getBoolean(MAP_KEY, true)) {
-                    if(ArrayHelper.getLCMapArray()[i].contains(query));
-                    else if(ArrayHelper.getLCMapInfoArray(context)[i].contains(query))
-                        queries.add(ArrayHelper.getMapArray()[i]);
+                    if(LCMap[i].contains(query));
+                    else if(mapInfo[i].contains(query))
+                        queries.add(map[i]);
                 }
 
-            results = queries.toArray(new String[queries.size()]);
+            String[] results = queries.toArray(new String[queries.size()]);
             mAdapter = new SearchAdapter(results, titleNum, titleTermNum, termNum, context, query);
             return null;
         }
@@ -354,7 +368,7 @@ public class SearchResultsActivity extends AppCompatActivity {
             super.onPostExecute(result);
 
             //this method will be running on UI thread
-            pdLoading.dismiss();
+            ///pdLoading.dismiss();
 
             mRecyclerView.setAdapter(mAdapter);
 

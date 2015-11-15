@@ -3,7 +3,6 @@ package com.thatkawaiiguy.meleehandbook.activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.r0adkll.slidr.Slidr;
-import com.r0adkll.slidr.model.SlidrConfig;
+import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.fragment.DIFragmentAdapter;
 import com.thatkawaiiguy.meleehandbook.adapter.fragment.GrappleFragmentAdapter;
@@ -30,16 +29,12 @@ public class TechTabActivity extends AppCompatActivity {
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.collapsing_tab_gif_layout);
-        SlidrConfig config = new SlidrConfig.Builder().sensitivity(0.3f).build();
-        Slidr.attach(this, config);
+        final SlidrInterface slidrInterface = Slidr.attach(this);
 
         if (getIntent().getExtras() == null)
             return;
         String techPicked = getIntent().getExtras().getString("option");
 
-        final CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(
-                R.id.collapse_toolbar);
-        collapsingToolbar.setTitleEnabled(false);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             getWindow().setStatusBarColor(0x00000000);
         final AppBarLayout appBar = (AppBarLayout) findViewById(R.id.app_bar);
@@ -47,7 +42,6 @@ public class TechTabActivity extends AppCompatActivity {
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setTitle(techPicked);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
         final GifImageView tabImage = (GifImageView) findViewById(R.id.infoGif);
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -66,12 +60,15 @@ public class TechTabActivity extends AppCompatActivity {
                     switch (tab.getPosition()) {
                         case 0:
                             tabImage.setImageResource(R.drawable.walljump);
+                            slidrInterface.unlock();
                             break;
                         case 1:
                             tabImage.setImageResource(R.drawable.ledgewalljump);
+                            slidrInterface.lock();
                             break;
                         case 2:
                             tabImage.setImageResource(R.drawable.reversewalljump);
+                            slidrInterface.lock();
                             break;
                     }
                 }
@@ -96,12 +93,15 @@ public class TechTabActivity extends AppCompatActivity {
                     switch (tab.getPosition()) {
                         case 0:
                             tabImage.setImageResource(R.drawable.di);
+                            slidrInterface.unlock();
                             break;
                         case 1:
                             tabImage.setImageResource(R.drawable.sdi);
+                            slidrInterface.lock();
                             break;
                         case 2:
                             tabImage.setImageResource(R.drawable.diangles);
+                            slidrInterface.lock();
                             break;
                     }
                 }
@@ -124,9 +124,11 @@ public class TechTabActivity extends AppCompatActivity {
                     switch (tab.getPosition()) {
                         case 0:
                             tabImage.setImageResource(R.drawable.swd);
+                            slidrInterface.unlock();
                             break;
                         case 1:
                             tabImage.setImageResource(R.drawable.sdwd);
+                            slidrInterface.lock();
                             break;
                     }
                 }
@@ -149,9 +151,11 @@ public class TechTabActivity extends AppCompatActivity {
                     switch (tab.getPosition()) {
                         case 0:
                             tabImage.setImageResource(R.drawable.egrapple);
+                            slidrInterface.unlock();
                             break;
                         case 1:
                             tabImage.setImageResource(R.drawable.hominggrapple);
+                            slidrInterface.lock();
                             break;
                     }
                 }

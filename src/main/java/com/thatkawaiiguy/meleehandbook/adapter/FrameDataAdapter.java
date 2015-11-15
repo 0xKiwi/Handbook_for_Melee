@@ -21,9 +21,9 @@ public class FrameDataAdapter extends ExpandableRecyclerAdapter<CustomParentView
 
     private LayoutInflater mInflater;
 
-    String characterPicked;
+    private String characterPicked;
 
-    Context context;
+    private Context context;
 
     boolean canStart = true;
 

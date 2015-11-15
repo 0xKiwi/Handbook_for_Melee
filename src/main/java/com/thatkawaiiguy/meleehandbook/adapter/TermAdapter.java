@@ -50,7 +50,6 @@ public class TermAdapter extends RecyclerView.Adapter<TermAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         viewHolder.getTextView().setText(mDataSet[position]);
-
         viewHolder.getTermTextView().setText(ArrayHelper.getTermInfoArray(mContext)[position]);
     }
 

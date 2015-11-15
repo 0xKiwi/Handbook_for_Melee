@@ -20,20 +20,20 @@ import java.util.ArrayList;
 public class FrameDataFragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
 
-    public String[] parentList = {"Tilts","Aerial Attacks", "Smash Attacks", "Normal Attacks", "Special Attacks"};
+    private String[] parentList = {"Tilts","Aerial Attacks", "Smash Attacks", "Normal Attacks", "Special Attacks"};
 
-    public String[] smashList = {"Up Smash", "Down Smash", "Forward Smash"};
-    public String[] aerialList = {"Up Aerial", "Back Aerial", "Down Aerial", "Neutral Aerial", "Forward Aerial"};
-    public String[] normalList = {"Jab 1", "Jab 2", "Rapid Jab", "Grab", "Dash Grab", "Dash Attack","Jab 3"};
-    public String[] tiltList = {"Up Tilt", "Down Tilt", "Forward Tilt", "Forward Tilt (Up)", "Forward Tilt (Down)"};
-    public String[] specialList = {"Up-B", "Side-B", "Down-B", "Neutral B"};
-    public String[] marthSpecialList={"Side-B 1", "Side-B 2 Side/Down", "Side-B 2 Up",
+    private String[] smashList = {"Up Smash", "Down Smash", "Forward Smash"};
+    private String[] aerialList = {"Up Aerial", "Back Aerial", "Down Aerial", "Neutral Aerial", "Forward Aerial"};
+    private String[] normalList = {"Jab 1", "Jab 2", "Rapid Jab", "Grab", "Dash Grab", "Dash Attack","Jab 3"};
+    private String[] tiltList = {"Up Tilt", "Down Tilt", "Forward Tilt", "Forward Tilt (Up)", "Forward Tilt (Down)"};
+    private String[] specialList = {"Up-B", "Side-B", "Down-B", "Neutral B"};
+    private String[] marthSpecialList={"Side-B 1", "Side-B 2 Side/Down", "Side-B 2 Up",
         "Side-B 3 Side", "Side-B 3 Up", "Side-B 3 Down", "Side-B 4 Side",
             "Side-B 4 Up", "Side-B 4 Down"};
 
-    String actionBarTitle = "";
+    private String actionBarTitle = "";
 
-    FrameDataAdapter mExpandableAdapter;
+    private FrameDataAdapter mExpandableAdapter;
 
     public static FrameDataFragment newInstance(int page) {
         Bundle args = new Bundle();

@@ -227,7 +227,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendToast() {
-        Toast.makeText(getApplicationContext(), "You should stretch! You don't want to have to go to the doctor.",
+        Toast.makeText(getApplicationContext(), "You should stretch! You don't want to have to go" +
+                        " to the doctor.",
                 Toast.LENGTH_SHORT).show();
     }
 
@@ -285,10 +286,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
-        if(searchView != null)
-            searchView.onActionViewCollapsed();
-        super.onResume();
+    protected void onPause() {
+        if(searchView != null) {
+            searchView.clearFocus();
+            searchView.setIconified(true);
+            if(mMenu != null)
+                (mMenu.findItem(R.id.search)).collapseActionView();
+        }
+        super.onPause();
     }
 
     @Override

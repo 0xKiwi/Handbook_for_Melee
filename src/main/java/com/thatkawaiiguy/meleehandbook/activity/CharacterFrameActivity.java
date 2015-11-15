@@ -2,7 +2,6 @@ package com.thatkawaiiguy.meleehandbook.activity;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -11,7 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.r0adkll.slidr.Slidr;
-import com.r0adkll.slidr.model.SlidrConfig;
+import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.fragment.CharacterFragmentAdapter;
@@ -25,16 +24,11 @@ public class CharacterFrameActivity extends AppCompatActivity {
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.collapsing_tab_image_layout);
-        SlidrConfig config = new SlidrConfig.Builder().sensitivity(0.3f).build();
-        Slidr.attach(this, config);
+        final SlidrInterface slidrInterface = Slidr.attach(this);
 
         if (getIntent().getExtras() == null)
             return;
         String charPicked = getIntent().getExtras().getString("option");
-
-        final CollapsingToolbarLayout collapsingToolbar = (CollapsingToolbarLayout) findViewById(
-                R.id.collapse_toolbar);
-        collapsingToolbar.setTitleEnabled(false);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             getWindow().setStatusBarColor(ContextCompat.getColor(this, android.R.color.transparent));
@@ -46,7 +40,27 @@ public class CharacterFrameActivity extends AppCompatActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new CharacterFragmentAdapter(getSupportFragmentManager()));
 
-        ((TabLayout) findViewById(R.id.tabs)).setupWithViewPager(viewPager);
+        TabLayout tabs = ((TabLayout) findViewById(R.id.tabs));
+        tabs.setupWithViewPager(viewPager);
+        tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 1:
+                        slidrInterface.unlock();
+                        break;
+                    case 2:
+                        slidrInterface.lock();
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {}
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {}
+        });
     }
 
     @Override

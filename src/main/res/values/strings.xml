@@ -1399,7 +1399,6 @@
         lightweights, and smaller characters. Some circumstances can enable a chain grab to be a zero-to-death
         combo. The Ice Climbers are particularly potent at this.
         <br>
-        <br>
         <br><big><b>Characters who can chain grab</b></big>
         <br>
         <br><b>Note:</b> Don\'t take these too seriously, all chain grabs depend largely on weight, percent, and DI.
@@ -1545,6 +1544,14 @@
         for escaping combos such as Jigglypuff\'s up-throw to rest combo on fast-fallers (see the space animal slayer).
         Perhaps one of DI\'s most useful applications is the ability to make the character move in a path that is as
         long as possible before crossing the blast line.
+        <br>
+        <br><big><b>How to properly DI</b></big>
+        <br>To male sure you DI well anticipate what move your opponent is going to land on you
+        and DI in a way that\'ll save you. If a Falco dairs you, DI towards the stage so you\'ll go into
+        the stage and be able to tech, rather than get spiked past the stage and die. Another example is if a Fox
+        side smashes you, to DI whichever way extends the distance traveled to reach the side blastzones. As his
+        side smash is usually a NE/NW angle, it\'s best if you DI upwards so the arch you travel needs to cover more
+        distance to reach the blastzone.
         <br>"Good DI" usually occurs when a character is sent in a
         trajectory that creates the greatest distance between the character and the blast line. In most situations,
         angling towards the upper-left or upper-right corners will grant the greatest chance of surviving a
@@ -1837,6 +1844,7 @@
         ground attacks. This is especially true for characters with heavier aerial landing lag,
         most notably Bowser and Ganondorf. L-canceling in Melee can be performed
         only when L, R or Z are pressed once during the activation period, otherwise the effect will be canceled.
+        <br>
     ]]></string>
     <string name="ledgecancel_info_text"><![CDATA[<big><b>Ledge-canceling</b></big>
         <br>This technique also known as edge canceling) allows players to end the
@@ -2469,6 +2477,7 @@
         <br>
         <br>Ledge wall jumping is done solely by smashing the stick away from the stage while you\'re holding to an edge.
         <br>
+        <br>How to perform</b></big>
         <br>Grab the ledge, let go (with or without fastfalling), double jump towards the wall so that at one point you\'ll
         be sliding along it (this is important), and so that you catch the ledge again as soon as possible in your double
         jump (thus you have to double jump at a certain height, and you have to take the risk to double jump too low and miss the edge)
