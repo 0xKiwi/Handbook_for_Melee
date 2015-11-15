@@ -24,13 +24,17 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private String[] mDataSet;
 
     int termAmount = 0;
+    int titleTermAmount = 0;
+    int titleAmount = 0;
 
     public Context mContext;
 
     String query = "";
 
-    public SearchAdapter(String[] data, int terms, Context context, String query) {
+    public SearchAdapter(String[] data, int titleNum, int titleTerms, int terms, Context context, String query) {
         mDataSet = data;
+        titleAmount = titleNum;
+        titleTermAmount = titleTerms;
         termAmount = terms;
         mContext = context;
         this.query = query;
@@ -45,7 +49,7 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         String string = Html.fromHtml(ArrayHelper.getInfoString(mDataSet[position], mContext))
                 .toString();
-        if(position < termAmount) {
+        if(ifTerm(position)){
             ((TermAdapter.ViewHolder) holder).getTextView().setText(mDataSet[position]);
             highlight(query, ArrayHelper.getTermInfoString(mDataSet[position], mContext),
                     ((TermAdapter.ViewHolder) holder).getTermTextView());
@@ -106,7 +110,7 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public int getItemViewType(int position) {
-        if(position < termAmount)
+        if(ifTerm(position))
             return 0;
         else if(position < mDataSet.length)
             return 1;
@@ -130,5 +134,10 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 .inflate(R.layout.card_layout, parent, false);
 
         return new TermAdapter.ViewHolder(v);
+    }
+
+    private boolean ifTerm(int position){
+        return (position < titleTermAmount || (position
+                < titleTermAmount + titleAmount + termAmount && position >= titleAmount + titleTermAmount));
     }
 }
