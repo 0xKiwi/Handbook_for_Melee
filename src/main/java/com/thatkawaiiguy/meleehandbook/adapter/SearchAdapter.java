@@ -50,11 +50,11 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         String string = Html.fromHtml(ArrayHelper.getInfoString(mDataSet[position], mContext))
                 .toString();
         if(ifTerm(position)){
-            ((TermAdapter.ViewHolder) holder).getTextView().setText(mDataSet[position]);
+            highlight(query, mDataSet[position], ((TermAdapter.ViewHolder) holder).getTextView());
             highlight(query, ArrayHelper.getTermInfoString(mDataSet[position], mContext),
                     ((TermAdapter.ViewHolder) holder).getTermTextView());
         } else {
-            ((TermAdapter.ViewHolder) holder).getTextView().setText(mDataSet[position]);
+            highlight(query, mDataSet[position], ((TermAdapter.ViewHolder) holder).getTextView());
             highlightAndCut(query, string, ((TermAdapter.ViewHolder) holder).getTermTextView());
         }
     }

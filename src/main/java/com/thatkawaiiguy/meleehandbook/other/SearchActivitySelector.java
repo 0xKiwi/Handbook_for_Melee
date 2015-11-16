@@ -11,9 +11,6 @@ import com.thatkawaiiguy.meleehandbook.activity.TechActivity;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.activity.UniqueTechActivity;
 
-/**
- * Created by thatkawaiiguy on 10/1/15.
- */
 public class SearchActivitySelector {
 
     public static Intent selectUniqueActivity(String query, Context context) {
@@ -47,7 +44,7 @@ public class SearchActivitySelector {
     }
 
     public static Intent selectCharacterActivity(String query, Context context) {
-        String[] characters = ArrayHelper.getLCCharacterArray();
+        String[] characters = ArrayHelper.getLCCharacterArray(context);
 
         for (int i = 0; i < characters.length; i++) {
             if (characters[i].contains(query)) {
@@ -55,9 +52,9 @@ public class SearchActivitySelector {
                     return new Intent(context, CharacterFrameActivity.class).putExtra("character", "Falco");
                 else if (characters[i].equals("sheik") || characters[i].equals("fox") || characters[i].equals("marth")
                         || characters[i].equals("captain falcon")) {
-                    return new Intent(context, CharacterFrameActivity.class).putExtra("option", ArrayHelper.getCharacterArray()[i]);
+                    return new Intent(context, CharacterFrameActivity.class).putExtra("option", ArrayHelper.getCharacterArray(context)[i]);
                 } else
-                    return new Intent(context, CharacterActivity.class).putExtra("option", ArrayHelper.getCharacterArray()[i]);
+                    return new Intent(context, CharacterActivity.class).putExtra("option", ArrayHelper.getCharacterArray(context)[i]);
             }
         }
         return null;
