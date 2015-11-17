@@ -112,9 +112,8 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public int getItemViewType(int position) {
         if(ifTerm(position))
             return 0;
-        else if(position < mDataSet.length)
+        else
             return 1;
-        return 1;
     }
 
     @Override

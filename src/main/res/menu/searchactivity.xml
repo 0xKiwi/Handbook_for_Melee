@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:yourapp="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/search"
+        android:id="@+id/searchview"
         android:title="@string/search_title"
         android:icon="@drawable/ic_magnify_white_48dp"
         yourapp:showAsAction="ifRoom"
@@ -14,6 +14,6 @@
         android:orderInCategory="100"
         android:visible="true"
         yourapp:showAsAction="always"
-        android:icon="@drawable/ic_filter_list_white_48dp">
+        android:icon="@drawable/ic_filter_white_36dp">
     </item>
 </menu>

@@ -140,13 +140,15 @@ public class SearchResultsActivity extends AppCompatActivity {
         searchView = (SearchView)
                 MenuItemCompat.getActionView(menu.findItem(R.id.searchview));
 
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(cn));
         searchView.onActionViewExpanded();
+
         if(Intent.ACTION_SEARCH.equals(getIntent().getAction())) {
             searchView.setQuery(getIntent().getStringExtra(SearchManager.QUERY).replaceAll("\\s+$",
                     ""), false);
+            searchView.setSearchableInfo(searchManager.getSearchableInfo(cn));
             searchView.clearFocus();
         }
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
