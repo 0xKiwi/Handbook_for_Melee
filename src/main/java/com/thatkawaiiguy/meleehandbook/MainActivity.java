@@ -2,17 +2,12 @@ package com.thatkawaiiguy.meleehandbook;
 
 import android.app.DialogFragment;
 import android.app.Fragment;
-import android.app.SearchManager;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -48,11 +43,6 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawer;
 
     private CharSequence mTitle;
-
-    SearchView searchView;
-
-
-    Menu mMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -275,50 +265,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.search) {
-            onSearchRequested();
-            return true;
-        } else if(drawerToggle.onOptionsItemSelected(item)) {
-            if(searchView != null)
-                searchView.onActionViewCollapsed();
+            startActivity(new Intent(this, SearchResultsActivity.class));
+            overridePendingTransition(0, 0);
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
-    protected void onPause() {
-        if(searchView != null) {
-            searchView.clearFocus();
-            searchView.setIconified(true);
-            if(mMenu != null)
-                (mMenu.findItem(R.id.search)).collapseActionView();
-        }
-        super.onPause();
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
-        mMenu = menu;
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        searchView = (SearchView)
-                MenuItemCompat.getActionView(menu.findItem(R.id.search));
-
-        ComponentName cn = new ComponentName(this, SearchResultsActivity.class);
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(cn));
-
-        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean queryTextFocused) {
-                if(!queryTextFocused) {
-                    searchView.clearFocus();
-                    searchView.setIconified(true);
-
-                    if(mMenu != null)
-                        (mMenu.findItem(R.id.search)).collapseActionView();
-                }
-            }
-        });
         return super.onCreateOptionsMenu(menu);
     }
 

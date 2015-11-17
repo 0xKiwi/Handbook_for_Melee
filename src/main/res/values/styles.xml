@@ -15,7 +15,7 @@
         <item name="customColorPrimary">@color/theme_primary</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="customToolbarStyle">@style/ToolbarTheme</item>
-        <item name="android:textColorLink">#5c5cff</item>
+        <item name="android:textColorLink">@color/overscroll_color</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorEdgeEffect">@color/overscroll_color</item>
         <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
@@ -38,7 +38,7 @@
     <style name="AppTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="dividerColor">@color/divider_color</item>
-        <item name="android:textColorLink">#0000ee</item>
+        <item name="android:textColorLink">@color/theme_primary</item>
         <item name="android:windowContentTransitions">true</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="android:colorAccent">@color/overscroll_color</item>
