@@ -2,14 +2,18 @@ package com.thatkawaiiguy.meleehandbook.other;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.widget.ImageView;
 
 import com.thatkawaiiguy.meleehandbook.R;
 
 public class ArrayHelper {
 
-    public static String[] getCharacterArray() {
-        return new String[]{"Bowser", "Captain Falcon", "Donkey Kong", "Dr. Mario",
+    public static String[] getCharacterArray(Context context) {
+        return Preferences.sortByTierEnabled(context) ?
+                new String[]{"Fox", "Falco", "Sheik", "Marth", "Jigglypuff", "Princess Peach",
+                "Captain Falcon", "Ice Climbers", "Dr. Mario", "Pikachu", "Samus Aran", "Ganondorf",
+                "Luigi", "Mario", "Young Link", "Link","Donkey Kong", "Yoshi", "Princess Zelda",
+                "Roy", "Mewtwo", "Mr. Game & Watch", "Ness", "Bowser","Pichu", "Kirby"} :
+                new String[]{"Bowser", "Captain Falcon", "Donkey Kong", "Dr. Mario",
                 "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Kirby", "Link",
                 "Luigi", "Mario", "Marth", "Mewtwo", "Mr. Game & Watch", "Ness", "Pichu",
                 "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran", "Sheik",
@@ -45,7 +49,7 @@ public class ArrayHelper {
                 "Clone", "Counter", "Counterpick", "Crew battle", "Dave's stupid rule",
                 "Dashing",  "Dash-grab", "Disjointed hitbox", "Disrespect",
                 "Ditto", "Dong", "Doubles", "Easy money", "ECB", "Edge guarding",
-                "Edge hogging", "Frame", "Freeze frames", "Friendlies", "Helpless", "Gimp", "God",
+                "Edge hogging", "Frame", "Freeze frames", "Friendlies", "Fun-canceling", "Helpless", "Gimp", "God",
                 "Go to the doctor", "Grab", "Hitbox", "Hitlag", "Hitstun", "Helicopter crash",
                 "IASA frames", "Infinite", "Input lag", "Invisible ceiling", "Ironman", "It's not safe",
                 "Janky", "Johns", "Jump cancel", "Jump canceled grab", "Juggling",
@@ -77,8 +81,8 @@ public class ArrayHelper {
                 "Wavelanded laser", "Waveshine", "Wobbling", "Yo-yo glitch"};
     }
 
-    public static String[] getLCCharacterArray() {
-        String[] array = getCharacterArray();
+    public static String[] getLCCharacterArray(Context context) {
+        String[] array = getCharacterArray(context);
 
         for(int i = 0; i < array.length; i++)
             array[i] = array[i].toLowerCase();
@@ -196,6 +200,8 @@ public class ArrayHelper {
                 return res.getString(R.string.friendlies_term_info);
             case "Frame":
                 return res.getString(R.string.frame_term_info);
+            case "Fun-canceling":
+                return res.getString(R.string.funcanceling_term_info);
             case "Gimp":
                 return res.getString(R.string.gimp_term_info);
             case "Grab":
@@ -653,7 +659,7 @@ public class ArrayHelper {
     }
 
     public static String[] getLCCharacterInfoArray(Context context) {
-        String[] chars = getCharacterArray();
+        String[] chars = getCharacterArray(context);
         String[] charInfo = new String[chars.length];
 
         for(int i = 0; i < charInfo.length; i++)

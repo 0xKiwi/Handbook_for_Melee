@@ -1,4 +1,4 @@
-<FrameLayout
+<RelativeLayout
     style="@style/LayoutMargins"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -31,7 +31,8 @@
         android:layout_marginTop="220dp"
         android:spinnerMode="dialog"
         android:textColor="?android:textColorPrimary"
-        android:textSize="16pt"/>
+        android:textSize="16pt"
+        android:layout_alignParentRight="true"/>
 
     <View
         android:id="@+id/viewright"
@@ -39,7 +40,8 @@
         android:layout_height="50dp"
         android:layout_gravity="end"
         android:layout_marginBottom="5dp"
-        android:layout_marginTop="220dp"/>
+        android:layout_marginTop="220dp"
+        android:layout_alignParentRight="true"/>
 
     <TextView
         android:id="@+id/vsText"
@@ -51,7 +53,8 @@
         android:text="VS."
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="?android:textColorPrimary"
-        android:visibility="visible"/>
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/muTextLeft"
@@ -74,7 +77,8 @@
         android:width="100dp"
         android:text="Mirror"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="?android:textColorPrimary"/>
+        android:textColor="?android:textColorPrimary"
+        android:layout_alignParentRight="true"/>
 
     <ImageButton
         android:id="@+id/muImgLeft"
@@ -96,48 +100,50 @@
         android:layout_marginTop="75dp"
         android:background="@android:color/transparent"
         android:scaleType="fitXY"
-        android:src="@drawable/bowser"/>
+        android:src="@drawable/bowser"
+        android:layout_alignParentRight="true"/>
 
     <Button
         android:id="@+id/shineTextBottom"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="190dp"
         android:text="20XX"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/shineTextTop"/>
 
     <Button
         android:id="@+id/shineTextTop"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="80dp"
         android:text="20XX"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/vsText"/>
 
     <TextView
         android:id="@+id/muInfoLeft"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center|left"
         android:layout_marginBottom="130dp"
-        android:layout_marginRight="200dp"
-        android:layout_marginTop="200dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="?android:textColorPrimary"/>
+        android:textColor="?android:textColorPrimary"
+        android:layout_below="@+id/muTextLeft"
+        android:layout_marginTop="16dp"
+        android:layout_alignRight="@+id/spinnerLeft"/>
 
     <TextView
         android:id="@+id/muInfoRight"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center|right"
         android:layout_marginBottom="130dp"
-        android:layout_marginTop="200dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="?android:textColorPrimary"/>
-</FrameLayout>
+        android:textColor="?android:textColorPrimary"
+        android:layout_alignParentRight="true"
+        android:layout_alignLeft="@+id/spinnerRight"
+        android:layout_below="@+id/muTextRight"
+        android:layout_marginTop="16dp"/>
+</RelativeLayout>
 

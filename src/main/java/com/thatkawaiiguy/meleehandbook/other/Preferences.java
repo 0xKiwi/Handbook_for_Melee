@@ -88,11 +88,16 @@ public class Preferences {
 
     private static String getDefaultListItem(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
-                .getString(context.getString(R.string.pref_default), context.getString(R.string.title_advancedtech));
+                .getString(context.getString(R.string.pref_default), context.getString(R.string
+                        .title_advancedtech));
     }
 
     public static String defaultListItem(Context context){
         return getDefaultListItem(context);
+    }
+
+    public static boolean sortByTierEnabled(Context context){
+        return sortByTier(context);
     }
 
     private static boolean hideAdsEnabled(Context context) {
@@ -103,5 +108,10 @@ public class Preferences {
     private static boolean exitDialogEnabled(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(context.getString(R.string.pref_exit), false);
+    }
+
+    private static boolean sortByTier(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(context.getString(R.string.pref_tier), false);
     }
 }

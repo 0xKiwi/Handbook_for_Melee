@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.thatkawaiiguy.meleehandbook.MainActivity;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterFrameActivity;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterActivity;
 import com.thatkawaiiguy.meleehandbook.adapter.IconAdapter;
@@ -26,7 +27,7 @@ public class CharacterFragment extends Fragment {
 
     private enum LayoutManagerType {LINEAR_LAYOUT_MANAGER}
 
-    private String[] characters = ArrayHelper.getCharacterArray();
+    private String[] characters;
 
     public static CharacterFragment newInstance() {
         Bundle args = new Bundle();
@@ -44,6 +45,7 @@ public class CharacterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
+        characters = ArrayHelper.getCharacterArray(getActivity());
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 

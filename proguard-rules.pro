@@ -15,21 +15,18 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
-#-keep class com.thatkawaiiguy.meleehandbook.** { *; }
-#-keep class com.android.google.gms.** { *; }
+-keep class com.thatkawaiiguy.meleehandbook.** { *; }
+-keep class com.android.google.gms.** { *; }
 
-#-keep class org.apache.http.** { *; }
-#-dontwarn org.apache.http.**
+-keep class android.net.http.** { *; }
+-dontwarn android.net.http.**
 
-#-keep class android.net.http.** { *; }
-#-dontwarn android.net.http.**
-
-#-keep class android.support.v7.** { *; }
-#-keep class android.support.v4.** { *; }
+-dontwarn android.support.v4.**
+-keep class android.support.v4.** { *; }
 
 -dontwarn android.support.v7.**
 -keep class android.support.v7.** { *; }
 -keep interface android.support.v7.** { *; }
 
--keep public class com.google.android.gms.**
--dontwarn com.google.android.gms.**
+-keep class com.google.android.gms.** { *; }
+-dontwarn com.google.android.gms.

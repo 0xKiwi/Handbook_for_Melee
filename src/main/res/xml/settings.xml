@@ -28,4 +28,9 @@
         android:key="@string/pref_exit"
         android:title="@string/pref_exit_title"/>
 
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="@string/pref_tier"
+        android:title="@string/pref_tier_title"/>
+
 </PreferenceScreen>

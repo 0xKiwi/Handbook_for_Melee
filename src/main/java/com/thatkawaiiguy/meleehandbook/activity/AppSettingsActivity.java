@@ -47,6 +47,8 @@ public class AppSettingsActivity extends PreferenceActivity {
                     restart = true;
                 else if(key.equals(getString(R.string.pref_ads)))
                     restart = true;
+                else if(key.equals(getString(R.string.pref_tier)))
+                    restart = true;
             }
         };
     }
