@@ -16,9 +16,9 @@ import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import pl.droidsonroids.gif.GifImageView;
 
 public class GifInfoActivity extends AppCompatActivity {
-    protected String optionPicked = "";
+    String optionPicked = "";
 
-    protected GifImageView infoImage;
+    GifImageView infoImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

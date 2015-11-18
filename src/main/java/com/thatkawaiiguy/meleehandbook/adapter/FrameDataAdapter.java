@@ -19,13 +19,13 @@ import java.util.List;
 
 public class FrameDataAdapter extends ExpandableRecyclerAdapter<CustomParentViewHolder, CustomChildViewHolder> {
 
-    private LayoutInflater mInflater;
+    private final LayoutInflater mInflater;
 
-    private String characterPicked;
+    private final String characterPicked;
 
-    private Context context;
+    private final Context context;
 
-    boolean canStart = true;
+    private boolean canStart = true;
 
     public FrameDataAdapter(Context context, List<ParentObject> parentItemList, String character) {
         super(context, parentItemList);

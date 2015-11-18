@@ -20,17 +20,22 @@
 
     <CheckBoxPreference
         android:defaultValue="false"
+        android:key="@string/pref_open"
+        android:title="@string/pref_open_title"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
         android:key="@string/pref_ads"
         android:title="@string/pref_ads_title"/>
 
     <CheckBoxPreference
         android:defaultValue="false"
-        android:key="@string/pref_exit"
-        android:title="@string/pref_exit_title"/>
+        android:key="@string/pref_tier"
+        android:title="@string/pref_tier_title"/>
 
     <CheckBoxPreference
         android:defaultValue="false"
-        android:key="@string/pref_tier"
-        android:title="@string/pref_tier_title"/>
+        android:key="@string/pref_exit"
+        android:title="@string/pref_exit_title"/>
 
 </PreferenceScreen>

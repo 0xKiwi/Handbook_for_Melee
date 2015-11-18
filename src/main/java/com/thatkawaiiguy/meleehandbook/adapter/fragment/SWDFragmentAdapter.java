@@ -7,8 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.thatkawaiiguy.meleehandbook.fragment.TechInfoFragment;
 
 public class SWDFragmentAdapter extends FragmentPagerAdapter {
-    final int PAGE_COUNT = 2;
-    private String tabTitles[] = new String[]{"Super Wavedash", "Super Duper Wavedash"};
+    private final String[] tabTitles = new String[]{"Super Wavedash", "Super Duper Wavedash"};
 
     public SWDFragmentAdapter(FragmentManager fm) {
         super(fm);
@@ -16,7 +15,7 @@ public class SWDFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return PAGE_COUNT;
+        return 2;
     }
 
     @Override

@@ -15,13 +15,12 @@ import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.turingtechnologies.materialscrollbar.MaterialScrollBar;
 
 public class TermFragment extends Fragment {
-    protected TermAdapter mAdapter;
 
-    protected RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerView;
 
-    protected LayoutManagerType mCurrentLayoutManagerType;
+    private LayoutManagerType mCurrentLayoutManagerType;
 
-    protected String[] terms = ArrayHelper.getTermArray();
+    private final String[] terms = ArrayHelper.getTermArray();
 
     private enum LayoutManagerType {LINEAR_LAYOUT_MANAGER}
 
@@ -30,11 +29,6 @@ public class TermFragment extends Fragment {
         TermFragment fragment = new TermFragment();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -49,8 +43,8 @@ public class TermFragment extends Fragment {
             mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable("layoutManager");
         setRecyclerViewLayoutManager();
 
-        mAdapter = new TermAdapter(terms, getActivity());
-        mRecyclerView.setAdapter(mAdapter);
+        TermAdapter adapter = new TermAdapter(terms, getActivity());
+        mRecyclerView.setAdapter(adapter);
         mRecyclerView.hasFixedSize();
 
         new MaterialScrollBar(getActivity(), mRecyclerView, true).setBarThickness(12).
@@ -59,7 +53,7 @@ public class TermFragment extends Fragment {
         return rootView;
     }
 
-    public void setRecyclerViewLayoutManager() {
+    private void setRecyclerViewLayoutManager() {
         mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.scrollToPosition(0);

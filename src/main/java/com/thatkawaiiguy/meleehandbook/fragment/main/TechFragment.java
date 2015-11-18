@@ -21,30 +21,24 @@ public class TechFragment extends Fragment {
     private static final String TAG = "TechFragment";
     private static final String KEY_LAYOUT_MANAGER = "layoutManager";
 
-    private String[] techs = ArrayHelper.getTechArray();
+    private final String[] techs = ArrayHelper.getTechArray();
 
     private enum LayoutManagerType {
         LINEAR_LAYOUT_MANAGER
     }
 
-    protected LayoutManagerType mCurrentLayoutManagerType;
+    private LayoutManagerType mCurrentLayoutManagerType;
 
-    protected boolean canStart = true;
+    private boolean canStart = true;
 
-    protected RecyclerView mRecyclerView;
-    protected TextAdapter mAdapter;
-    protected RecyclerView.LayoutManager mLayoutManager;
+    private RecyclerView mRecyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     public static TechFragment newInstance() {
         Bundle args = new Bundle();
         TechFragment fragment = new TechFragment();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -61,11 +55,11 @@ public class TechFragment extends Fragment {
             mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable(KEY_LAYOUT_MANAGER);
         setRecyclerViewLayoutManager();
 
-        mAdapter = new TextAdapter(techs);
-        mRecyclerView.setAdapter(mAdapter);
+        TextAdapter adapter = new TextAdapter(techs);
+        mRecyclerView.setAdapter(adapter);
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
-            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+            public void onItemClicked(int position) {
                 if (canStart) {
                     Intent mIntent;
                     if (techs[position].equals("Wall jump") ||
@@ -90,7 +84,7 @@ public class TechFragment extends Fragment {
         super.onResume();
     }
 
-    public void setRecyclerViewLayoutManager() {
+    private void setRecyclerViewLayoutManager() {
         int scrollPosition = 0;
 
         if (mRecyclerView.getLayoutManager() != null) {

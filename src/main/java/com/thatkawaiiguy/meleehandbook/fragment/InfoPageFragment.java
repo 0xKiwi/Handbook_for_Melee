@@ -14,7 +14,7 @@ import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 
 public class InfoPageFragment extends Fragment {
 
-    public static final String ARG_PAGE = "ARG_PAGE";
+    private static final String ARG_PAGE = "ARG_PAGE";
 
     public static InfoPageFragment newInstance(int page) {
         Bundle args = new Bundle();
@@ -22,11 +22,6 @@ public class InfoPageFragment extends Fragment {
         InfoPageFragment fragment = new InfoPageFragment();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -40,11 +35,13 @@ public class InfoPageFragment extends Fragment {
 
         String characterPicked = mainData.getString("option");
 
-        ((TextView) view.findViewById(R.id.infoText)).setText(Html
+        ((TextView)view.findViewById(R.id.infoText)).setText(Html
                 .fromHtml(ArrayHelper.getInfoString(characterPicked, getActivity())));
 
         ImageView characterImage = (ImageView) getActivity().findViewById(R.id.infoImage);
 
+        assert characterPicked != null;
+        assert characterPicked != null;
         switch (characterPicked) {
             case "Captain Falcon":
                 characterImage.setImageResource(R.drawable.falcon);

@@ -44,7 +44,7 @@ public class AboutDialogFragment extends DialogFragment {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse
-                                        ("https://plus.google.com/+IvanMartinezxda/posts"));
+                                        ("https://plus.google.com/+IvanMartinezxda"));
                                 startActivity(browserIntent);
                             }
                         })

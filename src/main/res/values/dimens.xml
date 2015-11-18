@@ -9,9 +9,6 @@
 
     <dimen name="actionBarSize">56dp</dimen>
 
-    <dimen name="abc_action_bar_stacked_tab_max_width">1000dp</dimen>
-    <dimen name="abc_action_bar_stacked_max_height">408dp</dimen>
-
     <!-- Action Bar auto-hide-on-scroll behavior parameters -->
     <dimen name="margin_standard">16dp</dimen>
     <dimen name="margin_short">8dp</dimen>

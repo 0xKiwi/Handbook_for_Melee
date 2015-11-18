@@ -18,28 +18,21 @@ import com.thatkawaiiguy.meleehandbook.activity.UniqueTechActivity;
 
 public class UniqueFragment extends Fragment {
 
-    protected TextAdapter mAdapter;
+    private boolean canStart = true;
 
-    protected boolean canStart = true;
-
-    protected RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerView;
 
     private enum LayoutManagerType {LINEAR_LAYOUT_MANAGER}
 
-    protected LayoutManagerType mCurrentLayoutManagerType;
+    private LayoutManagerType mCurrentLayoutManagerType;
 
-    private String[] uniqueTechs = ArrayHelper.getUniqueArray();
+    private final String[] uniqueTechs = ArrayHelper.getUniqueArray();
 
     public static UniqueFragment newInstance() {
         Bundle args = new Bundle();
         UniqueFragment fragment = new UniqueFragment();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -54,13 +47,13 @@ public class UniqueFragment extends Fragment {
             mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable("layoutManager");
         setRecyclerViewLayoutManager();
 
-        mAdapter = new TextAdapter(uniqueTechs);
-        mRecyclerView.setAdapter(mAdapter);
+        TextAdapter adapter = new TextAdapter(uniqueTechs);
+        mRecyclerView.setAdapter(adapter);
         mRecyclerView.hasFixedSize();
 
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
-            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+            public void onItemClicked(int position) {
                 if(canStart) {
                     Intent mIntent;
                     if(uniqueTechs[position].equals("Super wavedash & SDWD") ||
@@ -85,7 +78,7 @@ public class UniqueFragment extends Fragment {
         super.onResume();
     }
 
-    public void setRecyclerViewLayoutManager() {
+    private void setRecyclerViewLayoutManager() {
         mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.scrollToPosition(0);

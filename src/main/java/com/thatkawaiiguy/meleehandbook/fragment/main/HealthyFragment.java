@@ -20,27 +20,22 @@ import com.thatkawaiiguy.meleehandbook.adapter.HealthyExpandableAdapter;
 import java.util.ArrayList;
 
 public class HealthyFragment extends Fragment {
-    public String[] parentList = {"Eye stretches", "Hand stretches"};
+    private final String[] parentList = {"Eye stretches", "Hand stretches"};
 
-    public String[] eyeList = {"Dozer", "Upstairs, downstairs", "King leer", "Sidewatcher", "Near, far"};
-    public String[] handList = {"Handshake", "Thumb sweep", "Cuticle check", "Wrist circles", "Break at the wrist",
+    private final String[] eyeList = {"Dozer", "Upstairs, downstairs", "King leer", "Sidewatcher", "Near, far"};
+    private final String[] handList = {"Handshake", "Thumb sweep", "Cuticle check", "Wrist circles", "Break at the wrist",
             "Stop (in the name of love)", "Underhanded stretch", "The block", "Thumb push",
             "Thumb pull"};
 
-    HealthyExpandableAdapter mExpandableAdapter;
+    private HealthyExpandableAdapter mExpandableAdapter;
 
-    boolean canStart = true;
+    private boolean canStart = true;
 
     public static HealthyFragment newInstance() {
         Bundle args = new Bundle();
         HealthyFragment fragment = new HealthyFragment();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -78,15 +73,15 @@ public class HealthyFragment extends Fragment {
         });
 
         RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        mExpandableAdapter = new HealthyExpandableAdapter(getActivity(), setUpData(2));
+        mExpandableAdapter = new HealthyExpandableAdapter(getActivity(), setUpData());
         mRecyclerView.setAdapter(mExpandableAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;
     }
 
-    private ArrayList<ParentObject> setUpData(int numItems) {
+    private ArrayList<ParentObject> setUpData() {
         ArrayList<ParentObject> parentObjectList = new ArrayList<>();
-        for (int i = 0; i < numItems; i++) {
+        for (int i = 0; i < 2; i++) {
             ArrayList<Object> childObjectList = new ArrayList<>();
             CustomChildObject customChildObject = new CustomChildObject();
             CustomChildObject customChildObject2 = new CustomChildObject();

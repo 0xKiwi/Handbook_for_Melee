@@ -7,8 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.thatkawaiiguy.meleehandbook.fragment.TechInfoFragment;
 
 public class WallJumpFragmentAdapter extends FragmentPagerAdapter {
-    final int PAGE_COUNT = 3;
-    private String tabTitles[] = new String[]{"Wall Jump", "Ledge Wall Jump", "Reverse Wall Jump"};
+    private final String[] tabTitles = new String[]{"Wall Jump", "Ledge Wall Jump", "Reverse Wall Jump"};
 
     public WallJumpFragmentAdapter(FragmentManager fm) {
         super(fm);
@@ -16,7 +15,7 @@ public class WallJumpFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return PAGE_COUNT;
+        return 3;
     }
 
     @Override

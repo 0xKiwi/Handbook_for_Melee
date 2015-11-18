@@ -19,11 +19,11 @@ import java.util.List;
 
 public class HealthyExpandableAdapter extends ExpandableRecyclerAdapter<CustomParentViewHolder, CustomChildViewHolder> {
 
-    private LayoutInflater mInflater;
+    private final LayoutInflater mInflater;
 
-    Context context;
+    private final Context context;
 
-    boolean canStart = true;
+    private boolean canStart = true;
 
     public HealthyExpandableAdapter(Context context, List<ParentObject> parentItemList) {
         super(context, parentItemList);

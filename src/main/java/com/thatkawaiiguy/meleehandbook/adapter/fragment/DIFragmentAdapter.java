@@ -6,12 +6,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.thatkawaiiguy.meleehandbook.fragment.TechInfoFragment;
 
-/**
- * Created by thatkawaiiguy on 9/17/15.
- */
 public class DIFragmentAdapter extends FragmentPagerAdapter {
-    final int PAGE_COUNT = 3;
-    private String tabTitles[] = new String[]{"Directional Influence", "Smash DI", "DI Angles"};
+    private final String[] tabTitles = new String[]{"Directional Influence", "Smash DI", "DI Angles"};
 
     public DIFragmentAdapter(FragmentManager fm) {
         super(fm);
@@ -19,7 +15,7 @@ public class DIFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return PAGE_COUNT;
+        return 3;
     }
 
     @Override

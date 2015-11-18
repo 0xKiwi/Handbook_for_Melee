@@ -22,9 +22,6 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <meta-data
-                android:name="android.app.default_searchable"
-                android:value=".other.SearchResultsActivity" />
         </activity>
         <activity
             android:name=".activity.CharacterActivity"/>

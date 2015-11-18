@@ -50,11 +50,6 @@ public class MatchupFragment extends Fragment {
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle
@@ -90,9 +85,7 @@ public class MatchupFragment extends Fragment {
                                                             .getStartOffset(), afd.getLength());
                                                     mp.prepare();
                                                     mp.start();
-                                                } catch(IllegalStateException e) {
-                                                    e.printStackTrace();
-                                                } catch(IOException e) {
+                                                } catch(IllegalStateException | IOException e) {
                                                     e.printStackTrace();
                                                 }
                                                 return true;
@@ -116,9 +109,7 @@ public class MatchupFragment extends Fragment {
                                                                        .getLength());
                                                        mp2.prepare();
                                                        mp2.start();
-                                                   } catch(IllegalStateException e) {
-                                                       e.printStackTrace();
-                                                   } catch(IOException e) {
+                                                   } catch(IllegalStateException | IOException e) {
                                                        e.printStackTrace();
                                                    }
                                                    return true;
@@ -132,13 +123,13 @@ public class MatchupFragment extends Fragment {
         return view;
     }
 
-    public String getRightPercent(String left, String right) {
+    private String getRightPercent(String left, String right) {
         if(left.equals(right))
             return "Mirror";
         return getLeftPercent(right, left);
     }
 
-    public String getLeftPercent(String left, String right) {
+    private String getLeftPercent(String left, String right) {
         switch(left) {
             case "Fox": {
                 switch(right) {
@@ -1951,7 +1942,7 @@ public class MatchupFragment extends Fragment {
         return "uhh";
     }
 
-    public String getInfo(String left, String right) {
+    private String getInfo(String left, String right) {
         switch(left) {
             case "Fox": {
                 switch(right) {
@@ -2283,7 +2274,7 @@ public class MatchupFragment extends Fragment {
         return "";
     }
 
-    public void setMatchupsView() {
+    private void setMatchupsView() {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.matchup_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -2342,7 +2333,7 @@ public class MatchupFragment extends Fragment {
         });
     }
 
-    public void createMatchup() {
+    private void createMatchup() {
         if(getLeftPercent(characterLeft, characterRight).equals("Mirror")) {
             infoLeft.setText("Mirror");
             infoRight.setText("Mirror");
@@ -2355,9 +2346,7 @@ public class MatchupFragment extends Fragment {
                             ());
                     mp.prepare();
                     mp.start();
-                } catch(IllegalStateException e) {
-                    e.printStackTrace();
-                } catch(IOException e) {
+                } catch(IllegalStateException | IOException e) {
                     e.printStackTrace();
                 }
                 if(characterLeft.equals("Fox") && characterRight.equals("Fox"))
@@ -2373,7 +2362,7 @@ public class MatchupFragment extends Fragment {
         }
     }
 
-    public void setMatchupImage(String picked, ImageButton imgView) {
+    private void setMatchupImage(String picked, ImageButton imgView) {
         switch(picked) {
             case "Fox":
                 imgView.setImageResource(R.drawable.fox);
@@ -2456,20 +2445,20 @@ public class MatchupFragment extends Fragment {
         }
     }
 
-    public void setMatchupLeft(String character) {
+    private void setMatchupLeft(String character) {
         characterLeft = character;
     }
 
-    public void setMatchupRight(String character) {
+    private void setMatchupRight(String character) {
         characterRight = character;
     }
 
-    public void un20XX() {
+    private void un20XX() {
         shineTop.setVisibility(View.GONE);
         shineBottom.setVisibility(View.GONE);
     }
 
-    public void to20XX() {
+    private void to20XX() {
         shineTop.setVisibility(View.VISIBLE);
         shineBottom.setVisibility(View.VISIBLE);
     }

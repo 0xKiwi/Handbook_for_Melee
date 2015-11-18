@@ -8,7 +8,7 @@ import com.thatkawaiiguy.meleehandbook.R;
 
 public class CustomChildViewHolder extends ChildViewHolder {
 
-    public TextView dataText;
+    public final TextView dataText;
 
     public CustomChildViewHolder(View itemView) {
         super(itemView);

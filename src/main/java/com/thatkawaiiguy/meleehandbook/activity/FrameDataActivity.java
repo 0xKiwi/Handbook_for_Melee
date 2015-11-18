@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.fragment.FrameInfoDialogFragment;
 import com.thatkawaiiguy.meleehandbook.other.FrameDataHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
@@ -47,8 +46,8 @@ public class FrameDataActivity extends AppCompatActivity {
 
     private ImageView frameImage;
 
-    private ClickListener listener = new ClickListener();
-    private LongClickListener longListener = new LongClickListener();
+    private final ClickListener listener = new ClickListener();
+    private final LongClickListener longListener = new LongClickListener();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,7 +103,7 @@ public class FrameDataActivity extends AppCompatActivity {
         doStuff();
     }
 
-    public void setFrame() {
+    private void setFrame() {
         InputStream is = null;
         try {
             is = getResources().getAssets().open(characterPicked + File.separator +
@@ -116,13 +115,13 @@ public class FrameDataActivity extends AppCompatActivity {
         frameNumber.setText(String.valueOf(frame + 1));
     }
 
-    public void interruptPlay() {
+    private void interruptPlay() {
         listener.getHandler().removeCallbacks(listener.getRunnable());
         longListener.getHandler().removeCallbacks(longListener.getRunnable());
         running = false;
     }
 
-    public void doStuff() {
+    private void doStuff() {
         InputStream is = null;
         String[] filelist = {"#@#", "#@$@#"};
         try {
@@ -264,8 +263,8 @@ public class FrameDataActivity extends AppCompatActivity {
 
     class ClickListener implements View.OnClickListener {
 
-        Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
+        final Handler handler = new Handler();
+        final Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 if(frame < Integer.parseInt((String) totalFrame.getText()) - 1) {
@@ -308,8 +307,8 @@ public class FrameDataActivity extends AppCompatActivity {
 
     class LongClickListener implements View.OnLongClickListener {
 
-        Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
+        final Handler handler = new Handler();
+        final Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 if(frame < Integer.parseInt((String) totalFrame.getText()) - 1) {

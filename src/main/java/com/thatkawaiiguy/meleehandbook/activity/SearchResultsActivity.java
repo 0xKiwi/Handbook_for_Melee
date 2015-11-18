@@ -17,7 +17,6 @@ import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ListView;
 
 import com.r0adkll.slidr.Slidr;
@@ -32,35 +31,31 @@ import java.util.ArrayList;
 
 public class SearchResultsActivity extends AppCompatActivity {
 
-    protected int titleTermNum = 0;
-    protected int termNum = 0;
-    protected int titleNum = 0;
+    private int titleTermNum = 0;
+    private int termNum = 0;
+    private int titleNum = 0;
 
     private String query = "";
-    private String TECH_KEY = "tech";
-    private String FUN_KEY = "fun";
-    private String MAP_KEY = "map";
-    private String CHAR_KEY = "char";
-    private String TERM_KEY = "term";
-    private String UNIQUE_KEY = "unique";
+    private final String TECH_KEY = "tech";
+    private final String FUN_KEY = "fun";
+    private final String MAP_KEY = "map";
+    private final String CHAR_KEY = "char";
+    private final String TERM_KEY = "term";
+    private final String UNIQUE_KEY = "unique";
 
     private boolean canStart = true;
     private boolean[] checked;
 
-    private Context context = this;
+    private final Context context = this;
 
     private SharedPreferences prefs;
 
     private SearchView searchView;
-    protected SearchAdapter mAdapter;
+    private SearchAdapter mAdapter;
 
-    protected RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerView;
 
-    ArrayList<String> queries = new ArrayList<>();
-
-    private enum LayoutManagerType {LINEAR_LAYOUT_MANAGER}
-
-    protected LayoutManagerType mCurrentLayoutManagerType;
+    private final ArrayList<String> queries = new ArrayList<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,10 +73,6 @@ public class SearchResultsActivity extends AppCompatActivity {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-        if(savedInstanceState != null)
-            mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable
-                    ("layoutManager");
         setRecyclerViewLayoutManager();
 
         handleIntent(getIntent());
@@ -100,8 +91,8 @@ public class SearchResultsActivity extends AppCompatActivity {
         }
     }
 
-    public void search(String text) {
-        query = text.toLowerCase();
+    private void search(String text) {
+        query = text.toLowerCase().trim();
         queries.clear();
         titleTermNum = 0;
         titleNum = 0;
@@ -152,6 +143,8 @@ public class SearchResultsActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                if(!query.equals(""))
+                    search(query);
                 searchView.clearFocus();
                 return false;
             }
@@ -173,13 +166,12 @@ public class SearchResultsActivity extends AppCompatActivity {
         handleIntent(intent);
     }
 
-    public void setRecyclerViewLayoutManager() {
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
+    private void setRecyclerViewLayoutManager() {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.scrollToPosition(0);
     }
 
-    public void showDialog() {
+    private void showDialog() {
         AlertDialog dialog;
 
         checked = new boolean[]{prefs.getBoolean(TECH_KEY, true), prefs.getBoolean(CHAR_KEY,
@@ -239,15 +231,6 @@ public class SearchResultsActivity extends AppCompatActivity {
     }
 
     private class AsyncCaller extends AsyncTask<Void, Void, Void> {
-        //ProgressDialog pdLoading = new ProgressDialog(SearchResultsActivity.this);
-
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            //this method will be running on UI thread
-            //pdLoading.setMessage("\tSearching...");
-            //pdLoading.show();
-        }
 
         @Override
         protected Void doInBackground(Void... params) {
@@ -377,15 +360,12 @@ public class SearchResultsActivity extends AppCompatActivity {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
 
-            //this method will be running on UI thread
-            ///pdLoading.dismiss();
-
             mRecyclerView.setAdapter(mAdapter);
 
             ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
                     .OnItemClickListener() {
                 @Override
-                public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                public void onItemClicked(int position) {
                     if((position < titleTermNum || (position
                             < titleTermNum + titleNum + termNum && position >= titleNum +
                             titleTermNum)))

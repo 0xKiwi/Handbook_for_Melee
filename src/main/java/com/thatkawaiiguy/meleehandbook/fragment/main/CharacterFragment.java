@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.thatkawaiiguy.meleehandbook.MainActivity;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterFrameActivity;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterActivity;
 import com.thatkawaiiguy.meleehandbook.adapter.IconAdapter;
@@ -37,11 +36,6 @@ public class CharacterFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
@@ -50,27 +44,28 @@ public class CharacterFragment extends Fragment {
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
         mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-        if (savedInstanceState != null)
-            mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable("layoutManager");
+        if(savedInstanceState != null)
+            mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable
+                    ("layoutManager");
         setRecyclerViewLayoutManager();
 
         IconAdapter mAdapter = new IconAdapter(characters);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.hasFixedSize();
 
-        ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+        ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                .OnItemClickListener() {
             @Override
-            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+            public void onItemClicked(int position) {
                 if(canStart) {
                     Intent mIntent;
                     if(hasFrame(position))
                         mIntent = new Intent(getActivity(), CharacterFrameActivity.class);
                     else
                         mIntent = new Intent(getActivity(), CharacterActivity.class);
-                mIntent.putExtra("option", characters[position]);
-                startActivity(mIntent);
-
-                canStart = false;
+                    mIntent.putExtra("option", characters[position]);
+                    startActivity(mIntent);
+                    canStart = false;
                 }
             }
         });
@@ -79,8 +74,8 @@ public class CharacterFragment extends Fragment {
         return rootView;
     }
 
-    public boolean hasFrame(int position){
-        switch(characters[position]){
+    private boolean hasFrame(int position) {
+        switch(characters[position]) {
             case "Captain Falcon":
                 return true;
             case "Ganondorf":
@@ -116,7 +111,7 @@ public class CharacterFragment extends Fragment {
         super.onResume();
     }
 
-    public void setRecyclerViewLayoutManager() {
+    private void setRecyclerViewLayoutManager() {
         mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.scrollToPosition(0);

@@ -7,8 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.thatkawaiiguy.meleehandbook.fragment.TechInfoFragment;
 
 public class GrappleFragmentAdapter extends FragmentPagerAdapter {
-    final int PAGE_COUNT = 2;
-    private String tabTitles[] = new String[]{"Extended grapple", "Homing grapple"};
+    private final String[] tabTitles = new String[]{"Extended grapple", "Homing grapple"};
 
     public GrappleFragmentAdapter(FragmentManager fm) {
         super(fm);
@@ -16,7 +15,7 @@ public class GrappleFragmentAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return PAGE_COUNT;
+        return 2;
     }
 
     @Override

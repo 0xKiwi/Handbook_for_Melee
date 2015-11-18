@@ -8,9 +8,8 @@ import com.thatkawaiiguy.meleehandbook.fragment.FrameDataFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.InfoPageFragment;
 
 public class CharacterFragmentAdapter extends FragmentPagerAdapter{
-    final int PAGE_COUNT = 2;
 
-    private String tabTitles[] = new String[]{"Info", "Frame Data"};
+    private final String[] tabTitles = new String[]{"Info", "Frame Data"};
 
     public CharacterFragmentAdapter(FragmentManager fm) {
         super(fm);
@@ -18,7 +17,7 @@ public class CharacterFragmentAdapter extends FragmentPagerAdapter{
 
     @Override
     public int getCount() {
-        return PAGE_COUNT;
+        return 2;
     }
 
     @Override
@@ -26,7 +25,7 @@ public class CharacterFragmentAdapter extends FragmentPagerAdapter{
         if (position == 0)
             return InfoPageFragment.newInstance(0);
         else if (position == 1)
-            return FrameDataFragment.newInstance(1);
+            return FrameDataFragment.newInstance();
         return InfoPageFragment.newInstance(position + 1);
     }
 

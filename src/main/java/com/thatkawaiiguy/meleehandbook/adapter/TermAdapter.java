@@ -12,12 +12,12 @@ import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 
 public class TermAdapter extends RecyclerView.Adapter<TermAdapter.ViewHolder> {
 
-    private String[] mDataSet;
-    private Context mContext;
+    private final String[] mDataSet;
+    private final Context mContext;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView menuText;
-        private TextView subText;
+        private final TextView menuText;
+        private final TextView subText;
 
         public ViewHolder(View v) {
             super(v);

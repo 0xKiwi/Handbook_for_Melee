@@ -11,11 +11,11 @@ import com.thatkawaiiguy.meleehandbook.R;
 
 public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
 
-    protected String[] mDataSet;
+    private final String[] mDataSet;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView menuText;
-        private ImageView menuImage;
+        private final TextView menuText;
+        private final ImageView menuImage;
 
         public ViewHolder(View v) {
             super(v);

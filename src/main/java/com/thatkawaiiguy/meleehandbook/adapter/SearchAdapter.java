@@ -21,15 +21,15 @@ import java.util.Locale;
 
 public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private String[] mDataSet;
+    private final String[] mDataSet;
 
-    int termAmount = 0;
-    int titleTermAmount = 0;
-    int titleAmount = 0;
+    private int termAmount = 0;
+    private int titleTermAmount = 0;
+    private int titleAmount = 0;
 
-    public Context mContext;
+    private final Context mContext;
 
-    String query = "";
+    private String query = "";
 
     public SearchAdapter(String[] data, int titleNum, int titleTerms, int terms, Context context, String query) {
         mDataSet = data;
@@ -59,7 +59,7 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         }
     }
 
-    public void highlight(String search, String originalText, TextView textView) {
+    private void highlight(String search, String originalText, TextView textView) {
         int startPos = originalText.toLowerCase(Locale.US).indexOf(search.toLowerCase(Locale.US));
         int endPos = startPos + search.length();
 
@@ -76,7 +76,7 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             textView.setText(originalText);
     }
 
-    public void highlightAndCut(String search, String originalText, TextView textView) {
+    private void highlightAndCut(String search, String originalText, TextView textView) {
         int startPos = originalText.toLowerCase().indexOf(search);
         int endPos = startPos + search.length();
 

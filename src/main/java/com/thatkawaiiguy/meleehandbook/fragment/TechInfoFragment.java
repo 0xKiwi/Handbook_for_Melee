@@ -12,7 +12,7 @@ import com.thatkawaiiguy.meleehandbook.R;
 
 public class TechInfoFragment extends Fragment {
 
-    public static final String ARG_PAGE = "ARG_PAGE";
+    private static final String ARG_PAGE = "ARG_PAGE";
 
     public static TechInfoFragment newInstance(int page) {
         Bundle args = new Bundle();
@@ -20,11 +20,6 @@ public class TechInfoFragment extends Fragment {
         TechInfoFragment fragment = new TechInfoFragment();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -40,48 +35,58 @@ public class TechInfoFragment extends Fragment {
 
         TextView techSelectedInfo = (TextView) view.findViewById(R.id.infoText);
 
-        if(techPicked.equals("Directional Influence"))
-            switch (getArguments().getInt(ARG_PAGE)) {
-                case 2:
-                    techSelectedInfo.setText(Html.fromHtml(getString(R.string.diangles_info_text)));
-                    break;
-                case 0:
-                    techSelectedInfo.setText(Html.fromHtml(getString(R.string.di_info_text)));
-                    break;
-                case 1:
-                    techSelectedInfo.setText(Html.fromHtml(getString(R.string.sdi_info_text)));
-                    break;
-            }
-        else if (techPicked.equals("Wall jump"))
-            switch (getArguments().getInt(ARG_PAGE)) {
-                case 0:
-                    techSelectedInfo.setText(Html.fromHtml(getString(R.string.walljump_info_text)));
-                    break;
-                case 1:
-                    techSelectedInfo.setText(Html.fromHtml(getString(R.string.ledgewalljump_info_text)));
-                    break;
-                case 2:
-                    techSelectedInfo.setText(Html.fromHtml(getString(R.string.reversewalljump_info_text)));
-                    break;
-            }
-        else if(techPicked.equals("Super wavedash & SDWD"))
-            switch (getArguments().getInt(ARG_PAGE)) {
-                case 0:
-                    techSelectedInfo.setText(Html.fromHtml(getString(R.string.swd_info_text)));
-                    break;
-                case 1:
-                    techSelectedInfo.setText(Html.fromHtml(getString(R.string.sdwd_info_text)));
-                    break;
-            }
-        else if(techPicked.equals("Extended & homing grapple"))
-            switch (getArguments().getInt(ARG_PAGE)) {
-                case 0:
-                    techSelectedInfo.setText(Html.fromHtml(getString(R.string.egrapple_info_text)));
-                    break;
-                case 1:
-                    techSelectedInfo.setText(Html.fromHtml(getString(R.string.hominggrapple_info_text)));
-                    break;
-            }
+        switch(techPicked) {
+            case "Directional Influence":
+                switch(getArguments().getInt(ARG_PAGE)) {
+                    case 0:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string.di_info_text)));
+                        break;
+                    case 1:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string.sdi_info_text)));
+                        break;
+                    case 2:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string
+                                .diangles_info_text)));
+                        break;
+                }
+                break;
+            case "Wall jump":
+                switch(getArguments().getInt(ARG_PAGE)) {
+                    case 0:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string
+                                .walljump_info_text)));
+                        break;
+                    case 1:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string
+                                .ledgewalljump_info_text)));
+                        break;
+                    case 2:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string
+                                .reversewalljump_info_text)));
+                        break;
+                }
+                break;
+            case "Super wavedash & SDWD":
+                switch(getArguments().getInt(ARG_PAGE)) {
+                    case 0:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string.swd_info_text)));
+                        break;
+                    case 1:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string.sdwd_info_text)));
+                        break;
+                }
+                break;
+            case "Extended & homing grapple":
+                switch(getArguments().getInt(ARG_PAGE)) {
+                    case 0:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string.egrapple_info_text)));
+                        break;
+                    case 1:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string.hominggrapple_info_text)));
+                        break;
+                }
+                break;
+        }
 
         return view;
     }

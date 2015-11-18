@@ -26,12 +26,11 @@
     <string name="action_healthy">Staying Healthy</string>
     <string name="action_settings">Settings</string>
     <string name="action_info">Help</string>
-    <string name="action_support">Support</string>
     <string name="action_about">About</string>
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="gplus">G+</string>
-    <string name="about_text">\t\t\tMelee Handbook v0.9.99
+    <string name="about_text">\t\t\tMelee Handbook v1.0
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
@@ -92,8 +91,10 @@
     <string name="pref_tier">pref_tier</string>
     <string name="pref_tier_title">Sort characters by tier</string>
 
+    <string name="pref_open">pref_open</string>
+    <string name="pref_open_title">Open navigation menu on launch</string>
+
     <string name="banner_ad_unit_id">ca-app-pub-9162115758603564/9298660133</string>
-    <string name="test_banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
     <!-- BEGIN UNIQUE TECH LIST -->
     <string name="boomjump_info_text"><![CDATA[<b>Applies to:</b> Link and Young Link
@@ -298,7 +299,7 @@
     ]]></string>
     <string name="lhdl_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
         <br>
-        <br>Exmaple of LHDL: http://oddshot.tv/shot/beyondthesummit-2015110625841140
+        <br>Example of LHDL: http://oddshot.tv/shot/beyondthesummit-2015110625841140
         <br>
         <br>A detailed instruction on the execution of LHDL: https://www.youtube.com/watch?v=FF_YhidQ_NE
         <br>
@@ -958,7 +959,8 @@
         https://www.youtube.com/watch?v=OR1pNBmT7NM
     </string>
     <string name="kreygasm_term_info">
-        A term or graphic emoticon used to express intense emotion.
+        A term or graphic emoticon used to express intense emotion. One commonly used phrase is
+        \"PPMD Kreygasm\".
     </string>
     <string name="gimp_term_info">
         Losing a stock to an opponent in a situation where you didn\'t have many options,
@@ -1038,11 +1040,11 @@
         from the last hit you took. Popularized by smasher JV3x3.
     </string>
     <string name="lag_term_info">
-        The time it takes for an attack to start or stop.
+       The downtime period the occurs before or after performing certain attacks or actions.
     </string>
     <string name="landlag_term_info">
-        The time when an attack is interrupted by landing and the character is unable to act,
-        can be shortented with L-canceling.
+        The time where an attack is interrupted by landing and the character is unable to act,
+        can usually be shortened with L-canceling.
     </string>
     <string name="leandrop_term_info">
         When a player runs to the ledge and turns around (using the ledge to cancel their turn around
@@ -2888,7 +2890,7 @@
         <br><b>Total jump height:</b> 4th-5th highest
         <br><b>Average fall speed:</b> 1st fastest
         <br><b>Fast falling speed:</b> 1st fastest
-        <br><b>Falling speed acceleration:</b> 1st fastest
+        <br><b>Falling speed:</b> 1st fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 8th longest
@@ -2949,7 +2951,7 @@
         <br><b>Total jump height:</b> 14th-15th highest
         <br><b>Average Fall Speed:</b> 3rd fastest
         <br><b>Fast falling speed:</b> 2nd fastest
-        <br><b>Falling speed acceleration:</b> 2nd fastest
+        <br><b>Falling speed:</b> 2nd fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 5th farthest
@@ -2981,7 +2983,7 @@
     <string name="fox_info_text" formatted="false"><![CDATA[<b>Weight:</b> 5th lightest (4th in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
-        <br><b>Grab range:</b> 14th-15th longest
+        <br><b>Grab range:</b> 14th longest
         <br><b>Roll length:</b> 15th longest
         <br><b>Shield size:</b> 10-12th biggest
         <br><b>Wavedash length:</b> 12th longest
@@ -2999,7 +3001,7 @@
         <br><b>Total jump height:</b> 6th-8th highest
         <br><b>Average fall speed:</b> 2nd fastest
         <br><b>Fast falling speed:</b> 3rd fastest
-        <br><b>Falling speed acceleration:</b> 1st fastest
+        <br><b>Falling speed:</b> 3rd fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 6th shortest
@@ -3054,7 +3056,7 @@
         <br><b>Total jump height:</b> 19th highest
         <br><b>Average Fall Speed:</b> 10th fastest
         <br><b>Fast falling speed:</b> 10th fastest
-        <br><b>Falling speed acceleration:</b> 10th
+        <br><b>Falling speed:</b> 10th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 2nd farthest
@@ -3103,7 +3105,7 @@
         <br><b>Total jump height:</b> 9th highest
         <br><b>Average Fall Speed:</b> 6-7th fastest
         <br><b>Fast falling speed:</b> 3/4th fastest
-        <br><b>Falling speed acceleration:</b> 7-9th fastest
+        <br><b>Falling speed:</b> 7-9th fastest
         <br>2
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 17th longest
@@ -3148,7 +3150,7 @@
         <br><b>Total jump height:</b> 23rd highest
         <br><b>Average Fall Speed:</b> 16-18th fastest
         <br><b>Fast falling speed:</b> 14-18th fastest
-        <br><b>Falling speed acceleration:</b> 7-9th fastest
+        <br><b>Falling speed:</b> 16-18th fastest
         <br>2
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 22-23rd longest
@@ -3187,7 +3189,7 @@
         <br><b>Total jump height:</b>  15th highest
         <br><b>Average Fall Speed:</b> 8-10th fastest
         <br><b>Fast falling speed:</b> 6th fastest
-        <br><b>Falling speed acceleration:</b> 6th fastest
+        <br><b>Falling speed:</b> 6th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 12th farthest
@@ -3228,7 +3230,7 @@
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 4th longest
         <br><b>Shield Size:</b> 18-20th biggest
-        <br><b>Grab Range:</b> 9th longest
+        <br><b>Grab Range:</b> 24th longest
         <br><b>Wavedash Length:</b> 22th longest
         <br>
         <br><b><u>Movement stats</u></b>
@@ -3244,7 +3246,7 @@
         <br><b>Total jump height:</b> 4-5th highest
         <br><b>Average Fall Speed:</b> 13-14th fastest
         <br><b>Fast falling speed:</b> 11-12th fastest
-        <br><b>Falling speed acceleration:</b> 24-25th fastest
+        <br><b>Falling speed:</b> 12-14th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 1st shortest
@@ -3288,7 +3290,7 @@
         <br><b>Total jump height:</b> 22 highest
         <br><b>Average Fall Speed:</b> 21-22th fastest
         <br><b>Fast falling speed:</b> 21-24 fastest
-        <br><b>Falling speed acceleration:</b> 19-21th fastest
+        <br><b>Falling speed:</b> 22-23rd fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 6th farthest
@@ -3332,7 +3334,7 @@
         <br><b>Total jump height:</b> 10th highest
         <br><b>Average Fall Speed:</b> 15th fastest
         <br><b>Fast falling speed:</b> 19/20th fastest
-        <br><b>Falling speed acceleration:</b> 15th fastest
+        <br><b>Falling speed:</b> 15th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 10th farthest
@@ -3370,7 +3372,7 @@
         <br><b>Total jump height:</b> 6-8th highest
         <br><b>Average Fall Speed:</b> 21-22th fastest
         <br><b>Fast falling speed:</b> 21-24th fastest
-        <br><b>Falling speed acceleration:</b> 19-21st fastest
+        <br><b>Falling speed:</b> 19-21st fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 15th farthest
@@ -3408,7 +3410,7 @@
         <br><b>Total jump height:</b> 2nd highest
         <br><b>Average Fall Speed:</b> 20th fastest
         <br><b>Fast falling speed:</b> 22-23 fastest
-        <br><b>Falling speed acceleration:</b> 22-23rd fastest
+        <br><b>Falling speed:</b> 22-23rd fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 7th farthest
@@ -3447,7 +3449,7 @@
         <br><b>Total jump height:</b> 20-21 highest
         <br><b>Average Fall Speed:</b> 8-10th fastest
         <br><b>Fast falling speed:</b> 7-9th fastest
-        <br><b>Falling speed acceleration:</b> 7-9th fastest
+        <br><b>Falling speed:</b> 7-9th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 14th farthest
@@ -3472,7 +3474,7 @@
         <br><b><u>Shield stats</b></u>
         <br><b>Roll Length:</b> 3rd shortest
         <br><b>Shield Size:</b> 3rd smallest
-        <br><b>Grab Range:</b> 4th longest
+        <br><b>Grab Range:</b> 3rd longest
         <br><b>Wavedash Length:</b> 15th longest
         <br>
         <br><b><u>Movement stats</b></u>
@@ -3488,7 +3490,7 @@
         <br><b>Total jump height:</b>  18th highest
         <br><b>Average Fall Speed:</b> 8-10th fastest
         <br><b>Fast falling speed:</b> 19-20th fastest
-        <br><b>Falling speed acceleration:</b> 6th fastest
+        <br><b>Falling speed:</b> 7-9th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 2nd shortest
@@ -3521,14 +3523,14 @@
         <br><b>Running Speed:</b> 25-26th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
-        <br><b>Short Hop:</b> 3-4rth highest
+        <br><b>Short Hop:</b> 3-4th highest
         <br><b>Aerial Speed:</b> 10th fastest
         <br><b>First Jump Height:</b> 19-20th highest
         <br><b>Second Jump Height:</b> 26th highest
         <br><b>Total jump height:</b> 11-12th highest
-        <br><b>Average Fall Speed:</b> 25 fastest
+        <br><b>Average Fall Speed:</b> 25th fastest
         <br><b>Fast falling speed:</b> 24-25th fastest
-        <br><b>Falling speed acceleration:</b> 24-25th fastest
+        <br><b>Falling speed:</b> 24-25th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 3rd farthest
@@ -3546,11 +3548,38 @@
         (along with Peach). Additionally, despite Zeldas somewhat long recovery, her recovery is very easily edgeguarded and/or edgehogged. This
         contributes to Zelda having poor matchups against others, though she does have a few even matchups against those higher than her, such as
         Dr. Mario.]]></string>
-    <string name="bowser_info_text"><![CDATA[<b>Notable players:</b> DJ Nintendo
+    <string name="bowser_info_text" formatted="false"><![CDATA[<b>Weight:</b> 1st heaviest
+        <br>
+        <br><b><u>Shield stats</u></b>
+        <br><b>Roll Length:</b> 1st shortest
+        <br><b>Shield Size:</b> 1st biggest
+        <br><b>Grab Range:</b> 23rd longest
+        <br><b>Wavedash Length:</b> 13th longest
+        <br>
+        <br><b><u>Movement stats</u></b>
+        <br><b>Walking Speed:</b> 1st slowest
+        <br><b>Turning Speed:</b> 24th fastest
+        <br><b>Running Speed:</b> 11-15th fastest
+        <br>
+        <br><b><u>Aerial stats</u></b>
+        <br><b>Short Hop:</b> 18-23rd highest
+        <br><b>Aerial Speed:</b> 20th fastest
+        <br><b>First Jump Height:</b> 17-18th highest
+        <br><b>Second Jump Height:</b> 13th highest
+        <br><b>Total jump height:</b> 24-25th highest
+        <br><b>Average Fall Speed:</b> 11th fastest
+        <br><b>Fast falling speed:</b> 13th fastest
+        <br><b>Falling speed:</b> 12-14th fastest
+        <br>
+        <br><b><u>Ledge stats</u></b>
+        <br><b>0-99&#37; ledge roll:</b> 4th farthest
+        <br><b>100&#37;+ ledge roll:</b> 9th farthest
+        <br><b>0-99&#37; ledge attack range:</b> 1st farthest
+        <br><b>100+&#37; ledge attack range:</b> 18th farthest
+        <br>
+        <br><b>Notable players:</b> DJ Nintendo
         <br>
         <br><b>Smashboards forum:</b> http://smashboards.com/forums/bowser.65/
-        <br>
-        <br><b>Helpful guide on Jiggs:</b> http://smashboards.com/threads/mah0nes-stuff-about-puff.298777/
         <br>
         <br>Bowser is currently ranked 24th in the F tier in the current Melee tier list. Among Bowser\'s positive traits is his difficulty in getting KO\'d due to his
         high weight and rather fast falling speed; additionally, he has among the most powerful attacks in the game (most notably his forward smash), as
@@ -3558,7 +3587,7 @@
         making him extremely easy to combo. His moves are also very sluggish, and his approach is among the worst in the game, with laggy aerials, poor
         jumping ability (leading to an awful SHFFL), a short wavedash, poor projectile, and slow, predictable recovery. Bowser is among few characters to
         lack any positive matchups, and only two, against Yoshi and Pichu, are considered even.]]></string>
-    <string name="jiggs_info_text"><![CDATA[<b>Weight:</b>  24-25th heaviest
+    <string name="jiggs_info_text" formatted="false"><![CDATA[<b>Weight:</b>  24-25th heaviest
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 19th longest
@@ -3579,7 +3608,7 @@
         <br><b>Total jump height:</b> 3rd highest
         <br><b>Average Fall Speed:</b> 1st slowest
         <br><b>Fast falling speed:</b> 1th slowest
-        <br><b>Falling speed acceleration:</b> 7-9th fastest
+        <br><b>Falling speed:</b> 26th fastest
         <br>2
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 13th longest
@@ -3624,13 +3653,13 @@
         <br>
         <br><b><u>Aerial stats</u></b>
         <br><b>Short Hop:</b> 24th highest
-        <br><b>Aerial Speed:</b> 8-9 fastest
+        <br><b>Aerial Speed:</b> 8-9th fastest
         <br><b>First Jump Height:</b> 24th highest
         <br><b>Second Jump Height:</b> 21st highest
         <br><b>Total jump height:</b> 11-12th highest
         <br><b>Average Fall Speed:</b> 16-18th fastest
         <br><b>Fast falling speed:</b> 14/18th fastest
-        <br><b>Falling speed acceleration:</b> 16-18th fastest
+        <br><b>Falling speed:</b> 16-18th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 20th farthest
@@ -3649,7 +3678,34 @@
         of being the only character in the game who cannot L-cancel all of his aerial attacks, and is considered to have one of the worst shields in the
         game, as it fails to completely cover his entire body after even slight damage. All of this gives him very poor matchups against a majority of
         the cast, including three nearly unwinnable matchups, although there are five matchups in his favor.]]></string>
-    <string name="dong_info_text"><![CDATA[
+    <string name="dong_info_text" formatted="false"><![CDATA[<b>Weight:</b>  2nd heaviest
+        <br>
+        <br><b><u>Shield stats</u></b>
+        <br><b>Roll Length:</b> 10th longest
+        <br><b>Shield Size:</b> 2nd biggest
+        <br><b>Grab Range:</b> 16th longest
+        <br><b>Wavedash Length:</b> 17th longest
+        <br>
+        <br><b><u>Movement stats</u></b>
+        <br><b>Walking Speed:</b> 6-10th fastest
+        <br><b>Turning Speed:</b> 25th fastest
+        <br><b>Running Speed:</b> 7-10th fastest
+        <br>
+        <br><b><u>Aerial stats</u></b>
+        <br><b>Short Hop:</b> 13th highest
+        <br><b>Aerial Speed:</b> 8-9th fastest
+        <br><b>First Jump Height:</b> 4th highest
+        <br><b>Second Jump Height:</b> 20th highest
+        <br><b>Total jump height:</b> 24-25th highest
+        <br><b>Average Fall Speed:</b> 4-5th fastest
+        <br><b>Fast falling speed:</b> 6th fastest
+        <br><b>Falling speed:</b> 4-5th fastest
+        <br>
+        <br><b><u>Ledge stats</u></b>
+        <br><b>0-99&#37; ledge roll:</b> 1st farthest
+        <br><b>100&#37;+ ledge roll:</b> 1st farthest
+        <br><b>0-99&#37; ledge attack range:</b> 2nd farthest
+        <br><b>100+&#37; ledge attack range:</b> 1st farthest
         <br>
         <br><b>Notable players:</b> WestBallz, Green Ranger, NJzFinest, Phish-It, Chandy
         <br>
@@ -3681,7 +3737,7 @@
         <br><b>Total jump height:</b> 1st lowest
         <br><b>Average Fall Speed:</b> 16-18th fastest
         <br><b>Fast falling speed:</b> 14-18th fastest
-        <br><b>Falling speed acceleration:</b> 7-9th fastest
+        <br><b>Falling speed:</b> 7-9th fastest
         <br>2
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 22-23rd longest
@@ -3720,7 +3776,7 @@
         <br><b>Total jump height:</b> 22.5nd highest
         <br><b>Average Fall Speed:</b> 19th fastest
         <br><b>Fast falling speed:</b> 21-24th fastest
-        <br><b>Falling speed acceleration:</b> 19-21st fastest
+        <br><b>Falling speed:</b> 19-21st fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 19th farthest
@@ -3762,7 +3818,7 @@
         <br><b>Total jump height:</b> 17th highest
         <br><b>Average Fall Speed:</b> 23-24th fastest
         <br><b>Fast falling speed:</b> 14-18th fastest
-        <br><b>Falling speed acceleration:</b> 7-9th fastest
+        <br><b>Falling speed:</b> 24-25th fastest
         <br>2
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 11th longest
@@ -3792,7 +3848,34 @@
         Regardless, Samus has a large amount of advantageous matchups, three of which are close to
         unloseable (against Roy, Yoshi and Pichu).
     ]]></string>
-    <string name="luigi_info_text"><![CDATA[
+    <string name="luigi_info_text" formatted="false"><![CDATA[<b>Weight:</b> 8-10th heaviest
+        <br>
+        <br><b><u>Shield stats</u></b>
+        <br><b>Roll Length:</b> 9th longest
+        <br><b>Shield Size:</b> 15-16th biggest
+        <br><b>Grab Range:</b> 15th longest
+        <br><b>Wavedash Length:</b> 1st longest
+        <br>
+        <br><b><u>Movement stats</u></b>
+        <br><b>Walking Speed:</b> 12-15th fastest
+        <br><b>Turning Speed:</b> 4-7th fastest
+        <br><b>Running Speed:</b> 22nd fastest
+        <br>
+        <br><b><u>Aerial stats</u></b>
+        <br><b>Short Hop:</b> 7-8th highest
+        <br><b>Aerial Speed:</b> 24th fastest
+        <br><b>First Jump Height:</b> 2nd highest
+        <br><b>Second Jump Height:</b> 9th highest
+        <br><b>Total jump height:</b> 13th highest
+        <br><b>Average Fall Speed:</b> 23rd fastest
+        <br><b>Fast falling speed:</b> 21-24th fastest
+        <br><b>Falling speed:</b> 19-21st fastest
+        <br>2
+        <br><b><u>Ledge stats</u></b>
+        <br><b>0-99&#37; ledge roll:</b> 9th longest
+        <br><b>100&#37;+ ledge roll:</b> 13th longest
+        <br><b>0-99&#37; ledge attack range:</b> 14th farthest
+        <br><b>100+&#37; ledge attack range:</b> 14th farthest
         <br>
         <br><b>Notable players:</b> Eddy Mexico, Blea Gelo, Vudujin, Abate
         <br>
@@ -3834,7 +3917,7 @@
         <br><b>Total jump height:</b> 6-8th highest
         <br><b>Average Fall Speed:</b> 12th fastest
         <br><b>Fast falling speed:</b> 12-14th fastest
-        <br><b>Falling speed acceleration:</b> 12-14th fastest
+        <br><b>Falling speed:</b> 12-14th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 16th farthest
@@ -3876,7 +3959,7 @@
         <br><b>Total jump height:</b> 20-21st highest
         <br><b>Average Fall Speed:</b> 4-5th fastest
         <br><b>Fast falling speed:</b> 8th fastest
-        <br><b>Falling speed acceleration:</b> 4-5th fastest
+        <br><b>Falling speed:</b> 4-5th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 18th farthest
@@ -3919,7 +4002,7 @@
         <br><b>Total jump height:</b> 16th highest
         <br><b>Average Fall Speed:</b> 13-14 fastest
         <br><b>Fast falling speed:</b> 7th fastest
-        <br><b>Falling speed acceleration:</b> 11th fastest
+        <br><b>Falling speed:</b> 11th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 24th farthest
@@ -3963,6 +4046,8 @@
         <br>It\'s best to bait when you notice your opponent\'s patterns and you are in the position to
         exploit their flaws. Only bait when you\'re sure you have room to act before getting punished, or else
         you\'ll take more damage than it is worth.
+        <br>Make sure you don\'t bait your opponent the same way several times or else they\'ll learn to stop
+        making the same mistakes.
     ]]></string>
     <string name="commonerrors_info_text"><![CDATA[&#8226;Jumping into a crouch cancel bait.
         <br>
@@ -4080,6 +4165,8 @@
         His ledge invincibility will last long enough to take away their sweetspot option]
         <br>
         <br>Source: http://smashboards.com/threads/10-000-words-of-power.295524/
+        <br>
+        <br>This may help: https://www.reddit.com/r/SSBM/comments/313rvt/my_falco_vs_spacie_edgeguarding_flowchart/
     ]]></string>
     <string name="improve_info_text"><![CDATA[<big><b>Words on improving from PPMD</b></big>
         <br>Setting short term goals for friendlies is the easiest way
@@ -4225,6 +4312,9 @@
     <br>
     <br><big><b>Smashboards</b></big>
     <br>
+    <br><b>Best of Smashboards #1</b>
+    <br>https://badmelee.wordpress.com/2015/11/16/the-best-of-smashboards-1/
+    <br>
     <br><b>History of a Smasher by Chillindude</b></big>
     <br>http://smashboards.com/threads/history-of-a-smasher.290961/
     <br>
@@ -4246,7 +4336,7 @@
     <br><b>Approaching and Why Fox is good from PPMD</b>
     <br>http://smashboards.com/threads/falco-discussion-thread.256826/page-265#post-13591750
     <br>
-    <br><b>Advance, Attack, Avoid (Through the lens of Luigi</b>
+    <br><b>Advance, Attack, Avoid (Through the lens of Luigi)</b>
     <br>http://smashboards.com/threads/advance-attack-avoid-through-the-lens-of-luigi.389684/
     <br>
     <br><big><b>Reddit</b></big>
@@ -4313,6 +4403,8 @@
         character has, the brilliance behind the decisions of top players becomes clear.
         <br>
         <br>Full post: https://www.reddit.com/r/SSBM/comments/2jc3gb/nmws_guide_to_getting_good_at_melee/
+        <br>
+        <br>This may help: https://www.reddit.com/r/smashbros/comments/3sqhfc/my_attempt_at_covering_the_neutral_in_a_flow_chart/
     ]]></string>
     <string name="reading_info_text"><![CDATA[<big><b>Reading</b></big>
         <br>Reading is successfully knowing what your opponent will do next. If a player can read properly, he can exploit

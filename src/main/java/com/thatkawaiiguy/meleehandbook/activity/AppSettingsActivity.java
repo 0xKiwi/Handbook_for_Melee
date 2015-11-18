@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.IntentCompat;
 import android.support.v7.app.ActionBar;
@@ -67,6 +68,7 @@ public class AppSettingsActivity extends PreferenceActivity {
         return getDelegate().getSupportActionBar();
     }
 
+    @NonNull
     @Override
     public MenuInflater getMenuInflater() {
         return getDelegate().getMenuInflater();

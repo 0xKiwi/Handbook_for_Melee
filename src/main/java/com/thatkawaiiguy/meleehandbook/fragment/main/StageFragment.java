@@ -19,7 +19,6 @@ package com.thatkawaiiguy.meleehandbook.fragment.main;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -32,20 +31,15 @@ import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
 import com.thatkawaiiguy.meleehandbook.activity.StageActivity;
 import com.thatkawaiiguy.meleehandbook.R;
 
-/**
- * Demonstrates the use of {@link RecyclerView} with a {@link LinearLayoutManager} and a
- * {@link GridLayoutManager}.
- */
 public class StageFragment extends Fragment {
 
-    protected boolean canStart = true;
+    private boolean canStart = true;
 
-    protected IconAdapter mAdapter;
-    protected RecyclerView mRecyclerView;
+    private RecyclerView mRecyclerView;
 
     private enum LayoutManagerType {LINEAR_LAYOUT_MANAGER}
 
-    protected LayoutManagerType mCurrentLayoutManagerType;
+    private LayoutManagerType mCurrentLayoutManagerType;
 
     private final String[] stages = ArrayHelper.getMapArray();
 
@@ -54,11 +48,6 @@ public class StageFragment extends Fragment {
         StageFragment fragment = new StageFragment();
         fragment.setArguments(args);
         return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -73,13 +62,13 @@ public class StageFragment extends Fragment {
             mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable("layoutManager");
         setRecyclerViewLayoutManager();
 
-        mAdapter = new IconAdapter(stages);
-        mRecyclerView.setAdapter(mAdapter);
+        IconAdapter adapter = new IconAdapter(stages);
+        mRecyclerView.setAdapter(adapter);
         mRecyclerView.hasFixedSize();
 
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
-            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+            public void onItemClicked(int position) {
                 if (canStart) {
                     Intent mIntent;
                     mIntent = new Intent(getActivity(), StageActivity.class);
@@ -100,7 +89,7 @@ public class StageFragment extends Fragment {
         super.onResume();
     }
 
-    public void setRecyclerViewLayoutManager() {
+    private void setRecyclerViewLayoutManager() {
         mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.scrollToPosition(0);

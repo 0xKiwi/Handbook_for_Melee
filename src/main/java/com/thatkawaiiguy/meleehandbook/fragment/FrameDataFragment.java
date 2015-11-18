@@ -18,16 +18,14 @@ import com.thatkawaiiguy.meleehandbook.adapter.FrameDataAdapter;
 import java.util.ArrayList;
 
 public class FrameDataFragment extends Fragment {
-    public static final String ARG_PAGE = "ARG_PAGE";
+    private final String[] parentList = {"Tilts","Aerial Attacks", "Smash Attacks", "Normal Attacks", "Special Attacks"};
 
-    private String[] parentList = {"Tilts","Aerial Attacks", "Smash Attacks", "Normal Attacks", "Special Attacks"};
-
-    private String[] smashList = {"Up Smash", "Down Smash", "Forward Smash"};
-    private String[] aerialList = {"Up Aerial", "Back Aerial", "Down Aerial", "Neutral Aerial", "Forward Aerial"};
-    private String[] normalList = {"Jab 1", "Jab 2", "Rapid Jab", "Grab", "Dash Grab", "Dash Attack","Jab 3"};
-    private String[] tiltList = {"Up Tilt", "Down Tilt", "Forward Tilt", "Forward Tilt (Up)", "Forward Tilt (Down)"};
-    private String[] specialList = {"Up-B", "Side-B", "Down-B", "Neutral B"};
-    private String[] marthSpecialList={"Side-B 1", "Side-B 2 Side/Down", "Side-B 2 Up",
+    private final String[] smashList = {"Up Smash", "Down Smash", "Forward Smash"};
+    private final String[] aerialList = {"Up Aerial", "Back Aerial", "Down Aerial", "Neutral Aerial", "Forward Aerial"};
+    private final String[] normalList = {"Jab 1", "Jab 2", "Rapid Jab", "Grab", "Dash Grab", "Dash Attack","Jab 3"};
+    private final String[] tiltList = {"Up Tilt", "Down Tilt", "Forward Tilt", "Forward Tilt (Up)", "Forward Tilt (Down)"};
+    private final String[] specialList = {"Up-B", "Side-B", "Down-B", "Neutral B"};
+    private final String[] marthSpecialList={"Side-B 1", "Side-B 2 Side/Down", "Side-B 2 Up",
         "Side-B 3 Side", "Side-B 3 Up", "Side-B 3 Down", "Side-B 4 Side",
             "Side-B 4 Up", "Side-B 4 Down"};
 
@@ -35,9 +33,8 @@ public class FrameDataFragment extends Fragment {
 
     private FrameDataAdapter mExpandableAdapter;
 
-    public static FrameDataFragment newInstance(int page) {
+    public static FrameDataFragment newInstance() {
         Bundle args = new Bundle();
-        args.putInt(ARG_PAGE, page);
         FrameDataFragment fragment = new FrameDataFragment();
         fragment.setArguments(args);
         return fragment;
@@ -55,15 +52,15 @@ public class FrameDataFragment extends Fragment {
         View view = inflater.inflate(R.layout.list_layout, container, false);
 
         RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        mExpandableAdapter = new FrameDataAdapter(getActivity(), setUpData(5), actionBarTitle);
+        mExpandableAdapter = new FrameDataAdapter(getActivity(), setUpData(), actionBarTitle);
         mRecyclerView.setAdapter(mExpandableAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;
     }
 
-    private ArrayList<ParentObject> setUpData(int numItems) {
+    private ArrayList<ParentObject> setUpData() {
         ArrayList<ParentObject> parentObjectList = new ArrayList<>();
-        for (int i = 0; i < numItems; i++) {
+        for (int i = 0; i < 5; i++) {
             ArrayList<Object> childObjectList = new ArrayList<>();
             CustomChildObject customChildObject = new CustomChildObject();
             CustomChildObject customChildObject2 = new CustomChildObject();
@@ -119,55 +116,64 @@ public class FrameDataFragment extends Fragment {
                     CustomChildObject customChildObject7 = new CustomChildObject();
                     customChildObject.setChildText(normalList[0]);
                     childObjectList.add(customChildObject);
-                    if (actionBarTitle.equals("Marth") || actionBarTitle.equals("Jigglypuff")
-                            || actionBarTitle.equals("Samus Aran") || actionBarTitle.equals("Ice Climbers")
-                            || actionBarTitle.equals("Yoshi")) {
-                        customChildObject2.setChildText(normalList[1]);
-                        customChildObject4.setChildText(normalList[3]);
-                        customChildObject5.setChildText(normalList[4]);
-                        customChildObject6.setChildText(normalList[5]);
-                        childObjectList.add(customChildObject2);
-                        childObjectList.add(customChildObject4);
-                        childObjectList.add(customChildObject5);
-                        childObjectList.add(customChildObject6);
-                    } else if(actionBarTitle.equals("Captain Falcon")) {
-                        customChildObject2.setChildText(normalList[1]);
-                        customChildObject3.setChildText(normalList[6]);
-                        customChildObject4.setChildText(normalList[2]);
-                        customChildObject5.setChildText(normalList[3]);
-                        customChildObject6.setChildText(normalList[4]);
-                        customChildObject7.setChildText(normalList[5]);
-                        childObjectList.add(customChildObject2);
-                        childObjectList.add(customChildObject3);
-                        childObjectList.add(customChildObject4);
-                        childObjectList.add(customChildObject5);
-                        childObjectList.add(customChildObject6);
-                        childObjectList.add(customChildObject7);
-                    } else if(actionBarTitle.equals("Dr. Mario")) {
-                        customChildObject2.setChildText(normalList[1]);
-                        customChildObject3.setChildText(normalList[6]);
-                        customChildObject5.setChildText(normalList[3]);
-                        customChildObject6.setChildText(normalList[4]);
-                        customChildObject7.setChildText(normalList[5]);
-                        childObjectList.add(customChildObject2);
-                        childObjectList.add(customChildObject3);
-                        childObjectList.add(customChildObject5);
-                        childObjectList.add(customChildObject6);
-                        childObjectList.add(customChildObject7);
-                    } else if(actionBarTitle.equals("Ganondorf") || actionBarTitle.equals("Pikachu")) {
-                        customChildObject6.setChildText(normalList[5]);
-                        childObjectList.add(customChildObject6);
-                    } else {
-                        customChildObject2.setChildText(normalList[1]);
-                        customChildObject3.setChildText(normalList[2]);
-                        customChildObject4.setChildText(normalList[3]);
-                        customChildObject5.setChildText(normalList[4]);
-                        customChildObject6.setChildText(normalList[5]);
-                        childObjectList.add(customChildObject2);
-                        childObjectList.add(customChildObject3);
-                        childObjectList.add(customChildObject4);
-                        childObjectList.add(customChildObject5);
-                        childObjectList.add(customChildObject6);
+                    switch(actionBarTitle) {
+                        case "Marth":
+                        case "Jigglypuff":
+                        case "Samus Aran":
+                        case "Ice Climbers":
+                        case "Yoshi":
+                            customChildObject2.setChildText(normalList[1]);
+                            customChildObject4.setChildText(normalList[3]);
+                            customChildObject5.setChildText(normalList[4]);
+                            customChildObject6.setChildText(normalList[5]);
+                            childObjectList.add(customChildObject2);
+                            childObjectList.add(customChildObject4);
+                            childObjectList.add(customChildObject5);
+                            childObjectList.add(customChildObject6);
+                            break;
+                        case "Captain Falcon":
+                            customChildObject2.setChildText(normalList[1]);
+                            customChildObject3.setChildText(normalList[6]);
+                            customChildObject4.setChildText(normalList[2]);
+                            customChildObject5.setChildText(normalList[3]);
+                            customChildObject6.setChildText(normalList[4]);
+                            customChildObject7.setChildText(normalList[5]);
+                            childObjectList.add(customChildObject2);
+                            childObjectList.add(customChildObject3);
+                            childObjectList.add(customChildObject4);
+                            childObjectList.add(customChildObject5);
+                            childObjectList.add(customChildObject6);
+                            childObjectList.add(customChildObject7);
+                            break;
+                        case "Dr. Mario":
+                            customChildObject2.setChildText(normalList[1]);
+                            customChildObject3.setChildText(normalList[6]);
+                            customChildObject5.setChildText(normalList[3]);
+                            customChildObject6.setChildText(normalList[4]);
+                            customChildObject7.setChildText(normalList[5]);
+                            childObjectList.add(customChildObject2);
+                            childObjectList.add(customChildObject3);
+                            childObjectList.add(customChildObject5);
+                            childObjectList.add(customChildObject6);
+                            childObjectList.add(customChildObject7);
+                            break;
+                        case "Ganondorf":
+                        case "Pikachu":
+                            customChildObject6.setChildText(normalList[5]);
+                            childObjectList.add(customChildObject6);
+                            break;
+                        default:
+                            customChildObject2.setChildText(normalList[1]);
+                            customChildObject3.setChildText(normalList[2]);
+                            customChildObject4.setChildText(normalList[3]);
+                            customChildObject5.setChildText(normalList[4]);
+                            customChildObject6.setChildText(normalList[5]);
+                            childObjectList.add(customChildObject2);
+                            childObjectList.add(customChildObject3);
+                            childObjectList.add(customChildObject4);
+                            childObjectList.add(customChildObject5);
+                            childObjectList.add(customChildObject6);
+                            break;
                     }
                 }
                 break;

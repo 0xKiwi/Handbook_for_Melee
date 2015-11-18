@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,11 +35,9 @@ import com.thatkawaiiguy.meleehandbook.activity.SearchResultsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    int listdefault = 0;
+    private int listdefault = 0;
 
-    Fragment fg = TechFragment.newInstance();
-
-    ActionBarDrawerToggle drawerToggle;
+    private Fragment fg = TechFragment.newInstance();
 
     private DrawerLayout mDrawer;
 
@@ -100,10 +99,12 @@ public class MainActivity extends AppCompatActivity {
             addFragment();
             nvDrawer.getMenu().getItem(listdefault).setChecked(true);
             AppRater.app_launched(this);
+            if(Preferences.openNavLaunchEnabled(this))
+                mDrawer.openDrawer(Gravity.LEFT);
         }
     }
 
-    public void selectDrawerItem(MenuItem menuItem) {
+    private void selectDrawerItem(MenuItem menuItem) {
         switch(menuItem.getItemId()) {
             case R.id.advancedtech:
                 mTitle = getString(R.string.title_advancedtech);
@@ -176,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
     }
 
-    public void changeFragment(CharSequence title) {
+    private void changeFragment(CharSequence title) {
         switch((String) title) {
             case "Advanced Techniques":
                 if(!fg.equals(TechFragment.newInstance()))
@@ -216,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
         getFragmentManager().beginTransaction().replace(R.id.fragmentLayout, fg).commit();
     }
 
-    public void sendToast() {
+    private void sendToast() {
         Toast.makeText(getApplicationContext(), "You should stretch! You don't want to have to go" +
                         " to the doctor.",
                 Toast.LENGTH_SHORT).show();

@@ -48,124 +48,129 @@ public class TechTabActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
-        if(techPicked.equals("Wall jump")) {
-            viewPager.setAdapter(new WallJumpFragmentAdapter(getSupportFragmentManager()));
-            tabLayout.setupWithViewPager(viewPager);
-            tabImage.setImageResource(R.drawable.walljump);
-            tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-                @Override
-                public void onTabSelected(TabLayout.Tab tab) {
-                    viewPager.setCurrentItem(tab.getPosition());
-                    appBar.setExpanded(true);
-                    switch (tab.getPosition()) {
-                        case 0:
-                            tabImage.setImageResource(R.drawable.walljump);
-                            slidrInterface.unlock();
-                            break;
-                        case 1:
-                            tabImage.setImageResource(R.drawable.ledgewalljump);
-                            slidrInterface.lock();
-                            break;
-                        case 2:
-                            tabImage.setImageResource(R.drawable.reversewalljump);
-                            slidrInterface.lock();
-                            break;
+        switch(techPicked) {
+            case "Wall jump":
+                viewPager.setAdapter(new WallJumpFragmentAdapter(getSupportFragmentManager()));
+                tabLayout.setupWithViewPager(viewPager);
+                tabImage.setImageResource(R.drawable.walljump);
+                tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                    @Override
+                    public void onTabSelected(TabLayout.Tab tab) {
+                        viewPager.setCurrentItem(tab.getPosition());
+                        appBar.setExpanded(true);
+                        switch(tab.getPosition()) {
+                            case 0:
+                                tabImage.setImageResource(R.drawable.walljump);
+                                slidrInterface.unlock();
+                                break;
+                            case 1:
+                                tabImage.setImageResource(R.drawable.ledgewalljump);
+                                slidrInterface.lock();
+                                break;
+                            case 2:
+                                tabImage.setImageResource(R.drawable.reversewalljump);
+                                slidrInterface.lock();
+                                break;
+                        }
                     }
-                }
 
-                @Override
-                public void onTabUnselected(TabLayout.Tab tab) {
-                }
-
-                @Override
-                public void onTabReselected(TabLayout.Tab tab) {
-                }
-            });
-        } else if (techPicked.equals("Directional Influence")) {
-            viewPager.setAdapter(new DIFragmentAdapter(getSupportFragmentManager()));
-            tabLayout.setupWithViewPager(viewPager);
-            tabImage.setImageResource(R.drawable.di);
-            tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-                @Override
-                public void onTabSelected(TabLayout.Tab tab) {
-                    viewPager.setCurrentItem(tab.getPosition());
-                    appBar.setExpanded(true);
-                    switch (tab.getPosition()) {
-                        case 0:
-                            tabImage.setImageResource(R.drawable.di);
-                            slidrInterface.unlock();
-                            break;
-                        case 1:
-                            tabImage.setImageResource(R.drawable.sdi);
-                            slidrInterface.lock();
-                            break;
-                        case 2:
-                            tabImage.setImageResource(R.drawable.diangles);
-                            slidrInterface.lock();
-                            break;
+                    @Override
+                    public void onTabUnselected(TabLayout.Tab tab) {
                     }
-                }
 
-                @Override
-                public void onTabUnselected(TabLayout.Tab tab) {}
-
-                @Override
-                public void onTabReselected(TabLayout.Tab tab) {}
-            });
-        } else if (techPicked.equals("Super wavedash & SDWD")) {
-            viewPager.setAdapter(new SWDFragmentAdapter(getSupportFragmentManager()));
-            tabLayout.setupWithViewPager(viewPager);
-            tabImage.setImageResource(R.drawable.swd);
-            tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-                @Override
-                public void onTabSelected(TabLayout.Tab tab) {
-                    viewPager.setCurrentItem(tab.getPosition());
-                    appBar.setExpanded(true);
-                    switch (tab.getPosition()) {
-                        case 0:
-                            tabImage.setImageResource(R.drawable.swd);
-                            slidrInterface.unlock();
-                            break;
-                        case 1:
-                            tabImage.setImageResource(R.drawable.sdwd);
-                            slidrInterface.lock();
-                            break;
+                    @Override
+                    public void onTabReselected(TabLayout.Tab tab) {
                     }
-                }
-
-                @Override
-                public void onTabUnselected(TabLayout.Tab tab) {}
-
-                @Override
-                public void onTabReselected(TabLayout.Tab tab) {}
-            });
-        } else if (techPicked.equals("Extended & homing grapple")) {
-            viewPager.setAdapter(new GrappleFragmentAdapter(getSupportFragmentManager()));
-            tabLayout.setupWithViewPager(viewPager);
-            tabImage.setImageResource(R.drawable.egrapple);
-            tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-                @Override
-                public void onTabSelected(TabLayout.Tab tab) {
-                    viewPager.setCurrentItem(tab.getPosition());
-                    appBar.setExpanded(true);
-                    switch (tab.getPosition()) {
-                        case 0:
-                            tabImage.setImageResource(R.drawable.egrapple);
-                            slidrInterface.unlock();
-                            break;
-                        case 1:
-                            tabImage.setImageResource(R.drawable.hominggrapple);
-                            slidrInterface.lock();
-                            break;
+                });
+                break;
+            case "Directional Influence":
+                viewPager.setAdapter(new DIFragmentAdapter(getSupportFragmentManager()));
+                tabLayout.setupWithViewPager(viewPager);
+                tabImage.setImageResource(R.drawable.di);
+                tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                    @Override
+                    public void onTabSelected(TabLayout.Tab tab) {
+                        viewPager.setCurrentItem(tab.getPosition());
+                        appBar.setExpanded(true);
+                        switch(tab.getPosition()) {
+                            case 0:
+                                tabImage.setImageResource(R.drawable.di);
+                                slidrInterface.unlock();
+                                break;
+                            case 1:
+                                tabImage.setImageResource(R.drawable.sdi);
+                                slidrInterface.lock();
+                                break;
+                            case 2:
+                                tabImage.setImageResource(R.drawable.diangles);
+                                slidrInterface.lock();
+                                break;
+                        }
                     }
-                }
 
-                @Override
-                public void onTabUnselected(TabLayout.Tab tab) {}
+                    @Override
+                    public void onTabUnselected(TabLayout.Tab tab) {}
 
-                @Override
-                public void onTabReselected(TabLayout.Tab tab) {}
-            });
+                    @Override
+                    public void onTabReselected(TabLayout.Tab tab) {}
+                });
+                break;
+            case "Super wavedash & SDWD":
+                viewPager.setAdapter(new SWDFragmentAdapter(getSupportFragmentManager()));
+                tabLayout.setupWithViewPager(viewPager);
+                tabImage.setImageResource(R.drawable.swd);
+                tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                    @Override
+                    public void onTabSelected(TabLayout.Tab tab) {
+                        viewPager.setCurrentItem(tab.getPosition());
+                        appBar.setExpanded(true);
+                        switch(tab.getPosition()) {
+                            case 0:
+                                tabImage.setImageResource(R.drawable.swd);
+                                slidrInterface.unlock();
+                                break;
+                            case 1:
+                                tabImage.setImageResource(R.drawable.sdwd);
+                                slidrInterface.lock();
+                                break;
+                        }
+                    }
+
+                    @Override
+                    public void onTabUnselected(TabLayout.Tab tab) {}
+
+                    @Override
+                    public void onTabReselected(TabLayout.Tab tab) {}
+                });
+                break;
+            case "Extended & homing grapple":
+                viewPager.setAdapter(new GrappleFragmentAdapter(getSupportFragmentManager()));
+                tabLayout.setupWithViewPager(viewPager);
+                tabImage.setImageResource(R.drawable.egrapple);
+                tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+                    @Override
+                    public void onTabSelected(TabLayout.Tab tab) {
+                        viewPager.setCurrentItem(tab.getPosition());
+                        appBar.setExpanded(true);
+                        switch(tab.getPosition()) {
+                            case 0:
+                                tabImage.setImageResource(R.drawable.egrapple);
+                                slidrInterface.unlock();
+                                break;
+                            case 1:
+                                tabImage.setImageResource(R.drawable.hominggrapple);
+                                slidrInterface.lock();
+                                break;
+                        }
+                    }
+
+                    @Override
+                    public void onTabUnselected(TabLayout.Tab tab) {}
+
+                    @Override
+                    public void onTabReselected(TabLayout.Tab tab) {}
+                });
+                break;
         }
     }
 

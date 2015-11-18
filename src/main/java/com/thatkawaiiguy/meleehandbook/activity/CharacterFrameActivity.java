@@ -46,10 +46,10 @@ public class CharacterFrameActivity extends AppCompatActivity {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()) {
-                    case 1:
+                    case 0:
                         slidrInterface.unlock();
                         break;
-                    case 2:
+                    case 1:
                         slidrInterface.lock();
                         break;
                 }
