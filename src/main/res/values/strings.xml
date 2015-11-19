@@ -47,7 +47,7 @@
     \n\t\t\t\tschmooblidon
     \n\t\t\t\t/u/djloreddit
     \n\t\t\t\tsupersmashwikia
-    \t\t\t\t\t/u/DigitalAge98
+    \n\t\t\t\t/u/DigitalAge98
     \n\t\t\t\tMy friends and testers
     \n\t\t\t\tValeria Boikova (icon)
     \n\t\t\t\tTristan, Tyler, Luis and Juan
@@ -1070,6 +1070,7 @@
     <string name="mangle_term_info">
         A mangle is when a player (usually a Fox or Falco) gets back onto the stage using their Up-B in an
         odd or unexpected angle, usually somehow avoiding an attack from the person guarding the edge.
+        Also called a Mew2Kingangle.
     </string>
     <string name="meteor_term_info">
         A move that sends someone downward, and is designated by the game as a special.
@@ -1336,7 +1337,7 @@
     </string>
     <string name="walk_term_info">
         Moving by slowly pressing the control stick left or right, tilts can be done from this and it is
-        slower than dashing. Except for Falco.
+        slower than dashing.
     </string>
     <string name="walkoff_term_info">
          A stage where you can walk all the way through the sides, reaching the blast zone. Walk-off edge
@@ -2353,7 +2354,7 @@
         <br>Video on Shield DI: https://www.youtube.com/watch?v=53t9fDzdCyw
     ]]></string>
     <string name="tcancel_info_text"><![CDATA[<big><b>Taunt canceling</b></big>
-        <br>Done by ledge-canceling a taunch, this technique cancels the taunt animation
+        <br>Done by ledge-canceling a taunt, this technique cancels the taunt animation
         of a character but not the taunt sound, often for mindgames or for humorous purposes.
         <br>It is done by combining a taunt with the teetering animation that occurs when a character is on the edge
         of a platform. Pressing taunt at the moment of teeter will result in that character\'s taunt sound being played,
@@ -2932,9 +2933,8 @@
         the best projectile in the game. Top Falco players are notorious for their high levels of
         technical ability.
         <br>
-        <br>Falco\'s play style is said to be very similar to Fox\'s in Super Smash Bros. He is also known
-        to have the second fastest normal falling speed and the fastest fast falling speed. This means
-        he has resistance to juggling, is hard to hit in the air, and can perform SHFFLs well. On the downside,
+        <br>Due to Falco\'s fast falling, he has resistance to juggling, is hard to hit in
+        the air, and can perform SHFFLs well. On the downside,
         his recovery is shortened, and he is vulnerable to combos and chaingrabs that work on Fast fallers. However,
         he can chaingrab floaties.
         <br>
@@ -3133,7 +3133,7 @@
         <br><b>0-99&#37; ledge attack range:</b> 9th longest
         <br><b>100+&#37; ledge attack range:</b> 22nd longest
         <br>
-        <br><b>Notable players:</b> Plup, Mew2King, Android, Overtriforce, DruggedFox, KirbyKaze
+        <br><b>Notable players:</b> Shroomed, Plup, Mew2King, Android, Overtriforce, DruggedFox, KirbyKaze
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/sheik.128/
         <br>
