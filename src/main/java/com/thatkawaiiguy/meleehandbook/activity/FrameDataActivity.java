@@ -97,9 +97,6 @@ public class FrameDataActivity extends AppCompatActivity {
         }
 
         movePicked = FrameDataHelper.setShortMovePicked(movePicked);
-        if(movePicked.equals(""))
-            movePicked = FrameDataHelper.getMarthSideB(movePicked);
-
         doStuff();
     }
 

@@ -30,13 +30,14 @@
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="gplus">G+</string>
-    <string name="about_text">\t\t\tMelee Handbook v1.0
+    <string name="about_text">\t\t\tMelee Handbook v1.0.2
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
-    \n\t\t\t\twww.supersmashbros.wikia.com/
-    \n\t\t\t\twww.reddit.com/r/smashbros/wiki/bkam
+    \n\t\t\t\twww.smashboards.com/
     \n\t\t\t\tSuper Smash Bros. Melee
+    \n\t\t\t\twww.supersmashbros.wikia.com/
+    \n\t\t\t\twww.reddit.com/r/smashbros/wiki/bkam/
     \n
     \n\t\t\tAll thanks to:
     \n\t\t\t\tNintendo
@@ -46,6 +47,7 @@
     \n\t\t\t\tschmooblidon
     \n\t\t\t\t/u/djloreddit
     \n\t\t\t\tsupersmashwikia
+    \t\t\t\t\t/u/DigitalAge98
     \n\t\t\t\tMy friends and testers
     \n\t\t\t\tValeria Boikova (icon)
     \n\t\t\t\tTristan, Tyler, Luis and Juan
@@ -473,7 +475,7 @@
         <br>
         <br><big><b>Short hop laser</b></big>
         <br>The short hop laser (abbreviated to SHL) is a technique usually performed by short hopping with Fox or Falco,
-        using their blaster to shoot a laser, and fastfalling (although with Fox\'s you don't fastfall).
+        using their blaster to shoot a laser, and fastfalling (although with Fox\'s you don\'t fastfall).
         <br>The technique has two variants; the short hop double laser (SHDL) and the short hop triple laser (SHTL), for which two and
         three lasers respectively are shot during the short hop and no fastfall is performed.
         <br>Kirby can also perform some of these techniques by copying Fox and Falco\'s blaster abilities using Inhale.
@@ -826,7 +828,8 @@
     <string name="xx_term_info">
         The year is 20XX. Everyone plays Fox at TAS levels of perfection. Because of this,
         the winner of a match depends solely on port priority. The RPS metagame has evolved to
-        ridiculous levels due to it being the only remaining factor to decide matches.
+        ridiculous levels due to it being the only remaining factor to decide matches. Variations
+        of this are 20GX (Falcon), 2222 (Sheik), 20EggsEggs (Yoshi), 20AxeAxe (Pikachu).
     </string>
     <string name="airdodge_term_info">
         Dodging in the air, can have several directions.
@@ -1027,7 +1030,7 @@
         Is faster and has more range.
     </string>
     <string name="john_term_info">
-        A john is an excuse. Remember people, if you lose you lose. No johns.
+        A john is an excuse. Remember people, if you lose you lose. No johns. http://poyoarya.github.io/john.html
     </string>
     <string name="juggling_term_info">
         Repeatedly hitting your opponent above you to prevent them from landing.
@@ -1360,7 +1363,7 @@
     <!-- END TERM LIST -->
 
     <!-- BEGIN STANDARD TECH STRINGS -->
-    <string name="aerialinterrupt_info_text"><![CDATA[Note: This technique cannot be performed in as many ways with DK, Jigglypuff or Kirby, as their ECB
+    <string name="aerialinterrupt_info_text"><![CDATA[<b>Note:</b> This technique cannot be performed in as many ways with DK, Jigglypuff or Kirby, as their ECB
         (Environmental Collision Box, the \"bones\" of the player model) is fixed and does not change orientation during jumps.
         <br>
         <br><big><b>Aerial Interrupt</b></big>
@@ -1569,7 +1572,7 @@
         long as possible before crossing the blast line.
         <br>
         <br><big><b>How to properly DI</b></big>
-        <br>To male sure you DI well anticipate what move your opponent is going to land on you
+        <br>To make sure you DI well you have to anticipate what move your opponent is going to land on you
         and DI in a way that\'ll save you. If a Falco dairs you, DI towards the stage so you\'ll go into
         the stage and be able to tech, rather than get spiked past the stage and die. Another example is if a Fox
         side smashes you, to DI whichever way extends the distance traveled to reach the side blastzones. As his
@@ -1617,7 +1620,7 @@
     ]]></string>
     <string name="diangles_info_text"><![CDATA[These are the possible angles which you can DI and angle certain moves.
         <br>Any Up-B move which lets you change your aim in a circular manner (like Falco\'s or Zelda\'s)
-        have as many angles as in this diagram.
+        has as many angles as in this diagram.
         <br>This diagram also shows the angles it\'s possible to DI towards.
         <br>
         <br><b>Quick facts</b>
@@ -2038,7 +2041,7 @@
         <br>
         <br>More info: http://www.ssbwiki.com/moonwalk
     ]]></string>
-    <string name="noimpact_info_text"><![CDATA[Note: This technique cannot be performed in as many ways with DK, Jigglypuff or Kirby, as their ECB
+    <string name="noimpact_info_text"><![CDATA[<b>Note:</b> This technique cannot be performed in as many ways with DK, Jigglypuff or Kirby, as their ECB
         (Environmental Collision Box, the \"bones\" of the player model) is fixed and does not change orientation during jumps.
         <br>
         <br><big><b>No-impact landing</b></big>
@@ -2631,13 +2634,15 @@
     <!-- END STANDARD TECH STRINGS -->
 
     <!-- BEGIN MAP INFO STRINGS -->
-    <string name="battlefield_info_text"><![CDATA[Note: The blue inner box is the camera box (limits that the camera goes
+    <string name="battlefield_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
+        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Neutral
         <br>
-        <br><b>Characters with an advantage:</b> It is (mostly) even for all
+        <br><b>Characters with an advantage:</b> Characters with quick attack options for above opponents
         <br>
         <br><big><b>Battlefield</b></big>
         <br>This is a special stage in Super Smash Bros. Melee that is
@@ -2666,8 +2671,10 @@
         <br>The stage offers wide horizontal blastzones, and smaller vertical blastzones. While vertical knockback
         still matters here, it doesn\'t matter as much when compared to FoD or Yoshi\'s Story.
     ]]></string>
-    <string name="dreamland_info_text"><![CDATA[Note: The blue inner box is the camera box (limits that the camera goes
+    <string name="dreamland_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
+        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Neutral
@@ -2689,8 +2696,10 @@
         to characters that have to \"go in for the kill\", like Fox and Peach to take their opponent out with a Down-B or aerial.
         <br>The stage has platforms, giving more options to characters who\'s recoveries are usually predictable.
     ]]></string>
-    <string name="fd_info_text"><![CDATA[Note: The blue inner box is the camera box (limits that the camera goes
+    <string name="fd_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
+        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Neutral
@@ -2720,8 +2729,10 @@
         <br>Characters who usually have several options to recover are held back in this stage, as there are no other platforms
         to recover onto and the opponent can easily cover most of their options.
     ]]></string>
-    <string name="fod_info_text"><![CDATA[Note: The blue inner box is the camera box (limits that the camera goes
+    <string name="fod_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
+        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Banned
@@ -2747,7 +2758,10 @@
         <br>
         <br>The music for this stage is an orchestral arrangement of the main Gourmet Race music from Kirby Super Star.
     ]]></string>
-    <string name="kongo_info_text"><![CDATA[<b>Singles:</b> Banned
+    <string name="kongo_info_text"><![CDATA[<b>Note:</b> Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
+        is the character respawn point, where you respawn after death.
+        <br>
+        <br><b>Singles:</b> Banned
         <br><b>Doubles:</b> Counterpick
         <br>
         <br><b>Characters that have an advantage:</b> Mainly equal, long horizontal recoveries benefit
@@ -2779,8 +2793,10 @@
         gameplay removing the camping disadvantages, but the stage is seldom picked in tournaments, so much so that
         it is being fazed out of stage selection for doubles tournaments altogether.
     ]]></string>
-    <string name="pokestadium_info_text"><![CDATA[Note: The blue inner box is the camera box (limits that the camera goes
+    <string name="pokestadium_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
+        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Counterpick
         <br><b>Doubles:</b> Starter/Counterpick
@@ -2826,8 +2842,10 @@
         creates can cause infinites and caves of life. The top of the mountain itself acts as a solid platform. The mountains
         left side is almost vertical and ends almost at the right edge of the stage, leaving however a small walkable space.
     ]]></string>
-    <string name="ystory_info_text"><![CDATA[Note: The blue inner box is the camera box (limits that the camera goes
+    <string name="ystory_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
+        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Neutral
@@ -2886,8 +2904,8 @@
         <br><b>Running Speed:</b> 11th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
-        <br><b>Short hop:</b> 9th-10th shortest
-        <br><b>Aerial speed:</b> 25th slowest
+        <br><b>Short hop:</b> 26-27th highest
+        <br><b>Aerial speed:</b> 25th fastest
         <br><b>First jump height:</b> 1th highest
         <br><b>Second jump height:</b> 5th highest
         <br><b>Total jump height:</b> 4th-5th highest
@@ -2899,7 +2917,7 @@
         <br><b>0-99&#37; ledge roll:</b> 8th longest
         <br><b>100&#37;+ ledge roll:</b> 10th longest
         <br><b>0-99&#37; ledge attack range:</b> 4th farthest
-        <br><b>100&#37;+ ledge attack range:</b> 8th shortest
+        <br><b>100&#37;+ ledge attack range:</b> 18th farthest
         <br>
         <br><b>Notable players:</b> MaNgo, Westballz, GimR, PPMD, Axe
         <br>
@@ -2936,13 +2954,13 @@
     <string name="falcon_info_text" formatted="false"><![CDATA[<b>Weight:</b>  6-7th heaviest
         <br>
         <br><b><u>Shield stats</u></b>
-        <br><b>Grab Range:</b> 6th shortest
+        <br><b>Grab Range:</b> 7th longest
         <br><b>Roll Length:</b> 14th longest
         <br><b>Shield Size:</b> 7th biggest
-        <br><b>Wavedash Length:</b> 6th-7th shortest
+        <br><b>Wavedash Length:</b> 19-20th longest
         <br>
         <br><b><u>Movement stats</u></b>
-        <br><b>Walking Speed:</b> 7th slowest
+        <br><b>Walking Speed:</b> 20th fastest
         <br><b>Turning Speed:</b> 12th fastest
         <br><b>Running Speed:</b> 1st fastest
         <br>
@@ -2997,8 +3015,8 @@
         <br><b>Running Speed:</b> 2nd fastest
         <br>
         <br><b><u>Aerial stats</u></b>
-        <br><b>Short hop:</b> 4th-8th shortest
-        <br><b>Aerial speed:</b> 1st slowest
+        <br><b>Short hop:</b> 18-22nd longest
+        <br><b>Aerial speed:</b> 26th fastest
         <br><b>First jump height:</b> 7th highest
         <br><b>Second jump height:</b> 6th-7th highest
         <br><b>Total jump height:</b> 6th-8th highest
@@ -3007,10 +3025,10 @@
         <br><b>Falling speed:</b> 3rd fastest
         <br>
         <br><b><u>Ledge stats</u></b>
-        <br><b>0-99&#37; ledge roll:</b> 6th shortest
-        <br><b>100&#37;+ ledge roll:</b> 7th shortest
+        <br><b>0-99&#37; ledge roll:</b> 20th longest
+        <br><b>100&#37;+ ledge roll:</b> 19th longest
         <br><b>0-99&#37; ledge attack range:</b> 4th farthest
-        <br><b>100&#37;+ ledge attack range:</b> 8th shortest
+        <br><b>100&#37;+ ledge attack range:</b> 18th farthest
         <br>
         <br><b>Notable players:</b> Leffen, MaNgo, Chillindude, Hax, Lucky, Mew2King, SFAT, Silent Wolf, Fiction, Armada
         <br>
@@ -3034,28 +3052,27 @@
         can result in extremely early horizontal KOs if the players DI is poor. Although he boasts a very long recovery distance, he only
         has linear recovery options, which makes it easier for certain characters like Marth to predict his recovery path and edgeguard or gimp him.
         <br>
-        <br>Regardless, his pros greatly outshine his cons, and Fox is notable for being one of only four characters in the series (the other
-        three being Pikachu in Smash 64 and Falco in Melee) to have no disadvantageous matchups, with only three
-        (Falco, Marth and Samus) being considered even.
+        <br>Regardless, his pros greatly outshine his cons, and Fox is notable for being one of two characters in Melee (the other
+        and Falco) to have no disadvantageous matchups, with only three (Falco, Marth and Samus) being considered even.
     ]]></string>
     <string name="ganon_info_text" formatted="false"><![CDATA[<b>Weight:</b> 4th heaviest
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 8th longest
         <br><b>Shield Size:</b> 3-5th biggest
-        <br><b>Grab Range:</b> 8th shortest
+        <br><b>Grab Range:</b> 18th longest
         <br><b>Wavedash Length:</b> 16th longest
         <br>
         <br><b><u>Movement stats</u></b>
-        <br><b>Walking Speed:</b> 4th slowest
+        <br><b>Walking Speed:</b> 23rd fastest
         <br><b>Turning Speed:</b> 12-14th fastest
-        <br><b>Running Speed:</b> 6th slowest
-        <br><b>Short Hop:</b> 5-6th shortest
+        <br><b>Running Speed:</b> 19th fastest
+        <br><b>Short Hop:</b> 20-21st longest
         <br>
         <br><b><u>Aerial stats</u></b>
-        <br><b>Aerial Speed:</b> 5-6th slowest
-        <br><b>First Jump Height:</b> 4th shortest
-        <br><b>Second Jump Height:</b> 5th shortest
+        <br><b>Aerial Speed:</b> 20-21st fastest
+        <br><b>First Jump Height:</b> 23rd longest
+        <br><b>Second Jump Height:</b> 22nd longest
         <br><b>Total jump height:</b> 19th highest
         <br><b>Average Fall Speed:</b> 10th fastest
         <br><b>Fast falling speed:</b> 10th fastest
@@ -3252,10 +3269,10 @@
         <br><b>Falling speed:</b> 12-14th fastest
         <br>
         <br><b><u>Ledge stats</u></b>
-        <br><b>0-99&#37; ledge roll:</b> 1st shortest
-        <br><b>100&#37;+ ledge roll:</b> 1st shortest
-        <br><b>0-99&#37; ledge attack range:</b> 1st shortest
-        <br><b>100+&#37; ledge attack range:</b> 1st shortest
+        <br><b>0-99&#37; ledge roll:</b> 26th longest
+        <br><b>100&#37;+ ledge roll:</b> 26th longest
+        <br><b>0-99&#37; ledge attack range:</b> 26th longest
+        <br><b>100+&#37; ledge attack range:</b> 26th longest
         <br>
         <br><b>Notable players:</b> Mew2King
         <br>
@@ -3345,7 +3362,7 @@
         <br><b>0-99&#37; ledge attack range:</b> 22-24th farthest
         <br><b>100+&#37; ledge attack range:</b> 25th farthest
         <br>
-        <br><b>Notable players:</b> HungryBox, Vrud, Kahnu
+        <br><b>Notable players:</b> Simna Ibn Sind, HungryBox, Vrud, Kahnu
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/ness.79/
         <br>
@@ -3476,7 +3493,7 @@
         <br>
         <br><b><u>Shield stats</b></u>
         <br><b>Roll Length:</b> 3rd shortest
-        <br><b>Shield Size:</b> 3rd smallest
+        <br><b>Shield Size:</b> 24th biggest
         <br><b>Grab Range:</b> 3rd longest
         <br><b>Wavedash Length:</b> 15th longest
         <br>
@@ -3498,7 +3515,7 @@
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 2nd shortest
         <br><b>100&#37;+ ledge roll:</b> 3rd shortest
-        <br><b>0-99&#37; ledge attack range:</b> 5th shortest
+        <br><b>0-99&#37; ledge attack range:</b> 22nd farthest
         <br><b>100+&#37; ledge attack range:</b>  16th farthest
         <br>
         <br><b>Notable players:</b> Axe, ChuDat, Laijin
@@ -3554,13 +3571,13 @@
     <string name="bowser_info_text" formatted="false"><![CDATA[<b>Weight:</b> 1st heaviest
         <br>
         <br><b><u>Shield stats</u></b>
-        <br><b>Roll Length:</b> 1st shortest
+        <br><b>Roll Length:</b> 26th biggest
         <br><b>Shield Size:</b> 1st biggest
         <br><b>Grab Range:</b> 23rd longest
         <br><b>Wavedash Length:</b> 13th longest
         <br>
         <br><b><u>Movement stats</u></b>
-        <br><b>Walking Speed:</b> 1st slowest
+        <br><b>Walking Speed:</b> 26th fastest
         <br><b>Turning Speed:</b> 24th fastest
         <br><b>Running Speed:</b> 11-15th fastest
         <br>
@@ -3606,11 +3623,11 @@
         <br><b><u>Aerial stats</u></b>
         <br><b>Short Hop:</b> 26th highest
         <br><b>Aerial Speed:</b> 1st fastest
-        <br><b>First Jump Height:</b> 1st lowest
+        <br><b>First Jump Height:</b> 26th highest
         <br><b>Second Jump Height:</b> 3rd highest
         <br><b>Total jump height:</b> 3rd highest
-        <br><b>Average Fall Speed:</b> 1st slowest
-        <br><b>Fast falling speed:</b> 1th slowest
+        <br><b>Average Fall Speed:</b> 26th fastest
+        <br><b>Fast falling speed:</b> 26th fastest
         <br><b>Falling speed:</b> 26th fastest
         <br>2
         <br><b><u>Ledge stats</u></b>
@@ -3737,7 +3754,7 @@
         <br><b>Aerial Speed:</b> 16th fastest
         <br><b>First Jump Height:</b> 21-22nd highest
         <br><b>Second Jump Height:</b> 16-19th highest
-        <br><b>Total jump height:</b> 1st lowest
+        <br><b>Total jump height:</b> 26th highest
         <br><b>Average Fall Speed:</b> 16-18th fastest
         <br><b>Fast falling speed:</b> 14-18th fastest
         <br><b>Falling speed:</b> 7-9th fastest

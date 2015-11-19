@@ -19,7 +19,7 @@
         android:title="@string/pref_default_title"/>
 
     <CheckBoxPreference
-        android:defaultValue="false"
+        android:defaultValue="true"
         android:key="@string/pref_open"
         android:title="@string/pref_open_title"/>
 

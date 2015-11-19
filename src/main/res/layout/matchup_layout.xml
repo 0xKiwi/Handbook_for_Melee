@@ -124,9 +124,9 @@
     <TextView
         android:id="@+id/muInfoLeft"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center|left"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="50dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="?android:textColorPrimary"
         android:layout_below="@+id/muTextLeft"
@@ -136,9 +136,9 @@
     <TextView
         android:id="@+id/muInfoRight"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center|right"
-        android:layout_marginBottom="130dp"
+        android:layout_marginBottom="50dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="?android:textColorPrimary"
         android:layout_alignParentRight="true"

@@ -37,7 +37,7 @@ public class CharacterFrameActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(charPicked);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(new CharacterFragmentAdapter(getSupportFragmentManager()));
 
         TabLayout tabs = ((TabLayout) findViewById(R.id.tabs));
@@ -45,6 +45,7 @@ public class CharacterFrameActivity extends AppCompatActivity {
         tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
                 switch (tab.getPosition()) {
                     case 0:
                         slidrInterface.unlock();
