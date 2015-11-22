@@ -100,6 +100,8 @@ public class CharacterFragment extends Fragment {
                 return true;
             case "Dr. Mario":
                 return true;
+            case "Princess Peach":
+                return true;
             default:
                 return false;
         }

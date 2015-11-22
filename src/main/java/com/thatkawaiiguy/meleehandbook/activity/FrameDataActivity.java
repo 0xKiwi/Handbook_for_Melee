@@ -14,6 +14,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.r0adkll.slidr.Slidr;
+import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.fragment.FrameInfoDialogFragment;
 import com.thatkawaiiguy.meleehandbook.other.FrameDataHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
@@ -31,6 +33,8 @@ public class FrameDataActivity extends AppCompatActivity {
     private Button firstBtn;
     private Button backBtn;
     private Button playBtn;
+
+    protected SlidrInterface inter;
 
     private boolean paused = false;
     private boolean running = false;
@@ -56,6 +60,7 @@ public class FrameDataActivity extends AppCompatActivity {
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.framedata_layout);
+        inter = Slidr.attach(this);
 
         Bundle mainData = getIntent().getExtras();
         if(mainData == null)
@@ -64,6 +69,7 @@ public class FrameDataActivity extends AppCompatActivity {
         movePicked = mainData.getString("frame");
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        assert getSupportActionBar() != null;
         getSupportActionBar().setTitle(characterPickedTitle + "'s " + movePicked);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -92,6 +98,9 @@ public class FrameDataActivity extends AppCompatActivity {
             case "Samus Aran":
                 characterPicked = "samus";
                 break;
+            case "Princess Peach":
+                characterPicked = "peach";
+                break;
             default:
                 characterPicked = characterPickedTitle.toLowerCase();
         }
@@ -110,12 +119,17 @@ public class FrameDataActivity extends AppCompatActivity {
         }
         frameImage.setImageBitmap(BitmapFactory.decodeStream(is));
         frameNumber.setText(String.valueOf(frame + 1));
+        if(!running)
+            inter.unlock();
+        else
+            inter.lock();
     }
 
     private void interruptPlay() {
         listener.getHandler().removeCallbacks(listener.getRunnable());
         longListener.getHandler().removeCallbacks(longListener.getRunnable());
         running = false;
+        inter.unlock();
     }
 
     private void doStuff() {

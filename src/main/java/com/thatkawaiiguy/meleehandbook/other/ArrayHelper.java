@@ -46,7 +46,7 @@ public class ArrayHelper {
     public static String[] getTermArray() {
         return new String[]{"20XX", "Air dodge", "Banned stage", "Beef", "Blastzone",
                 "Boost grab", "Brackets", "Buff", "BYOC", "Camera box", "Cancel", "Cave of life",
-                "Clone", "Counter", "Counterpick", "Crew battle", "Dave's stupid rule",
+                "Clone", "Cory in the house", "Counter", "Counterpick", "Crew battle", "Dave's stupid rule",
                 "Dashing",  "Dash-grab", "Disjointed hitbox", "Disrespect",
                 "Ditto", "Dong", "Doubles", "Easy money", "ECB", "Edge guarding",
                 "Edge hogging", "Frame", "Freeze frames", "Friendlies", "Fun-canceling", "Helpless", "Gimp", "God",
