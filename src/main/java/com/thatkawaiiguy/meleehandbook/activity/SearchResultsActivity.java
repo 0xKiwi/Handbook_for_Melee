@@ -307,36 +307,48 @@ public class SearchResultsActivity extends AppCompatActivity {
                 }
 
             if(prefs.getBoolean(TERM_KEY, true))
-                for(int i = 0; i < term.length && LCTerm[i].contains(query); i++)
-                    if(termInfo[i].contains(query)) {
+                for(int i = 0; i < term.length; i++) {
+                    if(LCTerm[i].contains(query));
+                    else if(termInfo[i].contains(query)) {
                         termNum++;
                         queries.add(ArrayHelper.getTermArray()[i]);
                     }
+                }
 
             if(prefs.getBoolean(TECH_KEY, true))
-                for(int i = 0; i < tech.length && LCTech[i].contains(query); i++)
-                    if(techInfo[i].contains(query))
+                for(int i = 0; i < tech.length; i++) {
+                    if(LCTech[i].contains(query));
+                    else if(techInfo[i].contains(query))
                         queries.add(tech[i]);
+                }
 
             if(prefs.getBoolean(UNIQUE_KEY, true))
-                for(int i = 0; i < unique.length && !LCUnique[i].contains(query); i++)
-                    if(uniqueInfo[i].contains(query))
+                for(int i = 0; i < unique.length; i++) {
+                    if(LCUnique[i].contains(query));
+                    else if(uniqueInfo[i].contains(query))
                         queries.add(unique[i]);
+                }
 
             if(prefs.getBoolean(FUN_KEY, true))
-                for(int i = 0; i < fun.length && LCFun[i].contains(query); i++)
-                    if((funInfo[i].contains(query)))
+                for(int i = 0; i < fun.length; i++) {
+                    if(LCFun[i].contains(query));
+                    else if((funInfo[i].contains(query)))
                         queries.add(fun[i]);
+                }
 
             if(prefs.getBoolean(CHAR_KEY, true))
-                for(int i = 0; i < character.length && LCCharacter[i].contains(query); i++)
-                    if((characterInfo[i].contains(query)))
+                for(int i = 0; i < character.length; i++) {
+                    if(LCCharacter[i].contains(query));
+                    else if((characterInfo[i].contains(query)))
                         queries.add(character[i]);
+                }
 
             if(prefs.getBoolean(MAP_KEY, true))
-                for(int i = 0; i < map.length && LCMap[i].contains(query); i++)
-                    if(mapInfo[i].contains(query))
+                for(int i = 0; i < map.length; i++) {
+                    if(LCMap[i].contains(query));
+                    else if(mapInfo[i].contains(query))
                         queries.add(map[i]);
+                }
 
             String[] results = queries.toArray(new String[queries.size()]);
             mAdapter = new SearchAdapter(results, titleNum, titleTermNum, termNum, context,
