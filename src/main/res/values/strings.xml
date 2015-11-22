@@ -2637,8 +2637,6 @@
     <!-- BEGIN MAP INFO STRINGS -->
     <string name="battlefield_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
-        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
-        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Neutral
@@ -2674,8 +2672,6 @@
     ]]></string>
     <string name="dreamland_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
-        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
-        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Neutral
@@ -2699,8 +2695,6 @@
     ]]></string>
     <string name="fd_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
-        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
-        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Neutral
@@ -2732,8 +2726,6 @@
     ]]></string>
     <string name="fod_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
-        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
-        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Banned
@@ -2759,10 +2751,7 @@
         <br>
         <br>The music for this stage is an orchestral arrangement of the main Gourmet Race music from Kirby Super Star.
     ]]></string>
-    <string name="kongo_info_text"><![CDATA[<b>Note:</b> Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
-        is the character respawn point, where you respawn after death.
-        <br>
-        <br><b>Singles:</b> Banned
+    <string name="kongo_info_text"><![CDATA[<b>Singles:</b> Banned
         <br><b>Doubles:</b> Counterpick
         <br>
         <br><b>Characters that have an advantage:</b> Mainly equal, long horizontal recoveries benefit
@@ -2796,8 +2785,6 @@
     ]]></string>
     <string name="pokestadium_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
-        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
-        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Counterpick
         <br><b>Doubles:</b> Starter/Counterpick
@@ -2845,8 +2832,6 @@
     ]]></string>
     <string name="ystory_info_text"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
         and the outer yellow box is the blastzone (where the character dies if they pass it)
-        <br>Yellow plus signs are item spawn points. Blue plus signs are the initial character spawn points. The green plus signs
-        is the character respawn point, where you respawn after death.
         <br>
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Neutral

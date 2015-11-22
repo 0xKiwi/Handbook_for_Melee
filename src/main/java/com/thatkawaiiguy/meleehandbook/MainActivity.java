@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
@@ -108,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         switch(menuItem.getItemId()) {
             case R.id.advancedtech:
                 mTitle = getString(R.string.title_advancedtech);
+                assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
                 changeFragment(mTitle);
                 menuItem.setChecked(true);
@@ -115,36 +117,42 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.characters:
                 mTitle = getString(R.string.title_characters);
+                assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
                 changeFragment(mTitle);
                 menuItem.setChecked(true);
                 break;
             case R.id.fundamentals:
                 mTitle = getString(R.string.title_fundamentals);
+                assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
                 changeFragment(mTitle);
                 menuItem.setChecked(true);
                 break;
             case R.id.mu:
                 mTitle = getString(R.string.title_matchups);
+                assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
                 changeFragment(mTitle);
                 menuItem.setChecked(true);
                 break;
             case R.id.stages:
                 mTitle = getString(R.string.title_stages);
+                assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
                 changeFragment(mTitle);
                 menuItem.setChecked(true);
                 break;
             case R.id.term:
                 mTitle = getString(R.string.title_term);
+                assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
                 changeFragment(mTitle);
                 menuItem.setChecked(true);
                 break;
             case R.id.uniquetech:
                 mTitle = getString(R.string.title_uniquetech);
+                assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
                 changeFragment(mTitle);
                 menuItem.setChecked(true);
@@ -152,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.healthy:
                 mTitle = getString(R.string.title_healthy);
+                assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
                 changeFragment(getString(R.string.title_healthy));
                 menuItem.setChecked(true);

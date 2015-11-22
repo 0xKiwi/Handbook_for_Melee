@@ -17,6 +17,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.thatkawaiiguy.meleehandbook.R;
+import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 
 import java.io.IOException;
 
@@ -466,7 +467,7 @@ public class MatchupFragment extends Fragment {
                     case "Roy":
                         return "60";
                     case "Young Link":
-                        return "30";
+                        return "60";
                     case "Pikachu":
                         return "60";
                     case "Yoshi":
@@ -2275,8 +2276,8 @@ public class MatchupFragment extends Fragment {
     }
 
     private void setMatchupsView() {
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.matchup_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R
+                .layout.simple_spinner_item, ArrayHelper.getCharacterArray(getActivity()));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerLeft.setAdapter(adapter);
         spinnerRight.setAdapter(adapter);

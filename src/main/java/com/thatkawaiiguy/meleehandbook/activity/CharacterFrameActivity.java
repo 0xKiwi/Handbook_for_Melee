@@ -76,6 +76,7 @@ public class CharacterFrameActivity extends AppCompatActivity {
     }
 
     public String getSupportActionBarTitle(){
+        assert getSupportActionBar() != null;
         return (String)getSupportActionBar().getTitle();
     }
 }

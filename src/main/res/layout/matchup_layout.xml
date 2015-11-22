@@ -87,8 +87,7 @@
         android:layout_marginBottom="15dp"
         android:layout_marginTop="75dp"
         android:background="@android:color/transparent"
-        android:scaleType="fitXY"
-        android:src="@drawable/bowser"/>
+        android:scaleType="fitXY"/>
 
     <ImageButton
         android:id="@+id/muImgRight"
@@ -100,7 +99,6 @@
         android:layout_marginTop="75dp"
         android:background="@android:color/transparent"
         android:scaleType="fitXY"
-        android:src="@drawable/bowser"
         android:layout_alignParentRight="true"/>
 
     <Button

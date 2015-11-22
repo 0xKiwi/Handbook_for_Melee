@@ -64,7 +64,7 @@ public class FrameDataHelper {
         }
     }
 
-    public static String getMarthSideB(String move) {
+    private static String getMarthSideB(String move) {
         switch(move) {
             case "Side-B 1":
                 return "sb1";
@@ -115,6 +115,8 @@ public class FrameDataHelper {
                 return getYoshiLandLag(move);
             case "Dr. Mario":
                 return getDoctorLandLag(move);
+            case "Princess Peach":
+                return getPeachLandLag(move);
             default:
                 return "";
         }
@@ -146,6 +148,8 @@ public class FrameDataHelper {
                 return getYoshiIASA(move);
             case "Dr. Mario":
                 return getDoctorIASA(move);
+            case "Princess Peach":
+                return getPeachIASA(move);
             default:
                 return "";
         }
@@ -638,6 +642,56 @@ public class FrameDataHelper {
                 return "IASA: 30";
             case "dash":
                 return "IASA: 38";
+            default:
+                return "  ";
+        }
+    }
+
+    private static String getPeachLandLag(String move) {
+        switch(move) {
+            case "dair":
+                return "Landing lag: 15";
+            case "fair":
+                return "Landing lag: 25";
+            case "nair":
+                return "Landing lag: 17";
+            case "uair":
+                return "Landing lag: 15";
+            case "bair":
+                return "Landing lag: 15";
+            case "upb":
+                return "Landing lag: 30";
+            case "sideb":
+                return "Landing lag: 33";
+            default:
+                return "";
+        }
+    }
+
+    private static String getPeachIASA(String move) {
+        switch(move) {
+            case "jabtwo":
+                return "IASA: 17";
+            case "uair":
+                return "IASA: 34";
+            case "bair":
+                return "IASA: 38";
+            case "fair":
+                return "IASA: 51";
+            case "dair":
+                return "IASA: 36";
+            case "nair":
+                return "IASA: 42";
+            case "utilt":
+                return "IASA: 37";
+            case "ftilt":
+                return "IASA: 37";
+            case "dtilt":
+                return "IASA: 26";
+            case "fsmash":
+                return "IASA: 40";
+            case "dash":
+                return "IASA: 36";
             default:
                 return "  ";
         }
