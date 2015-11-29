@@ -1,34 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="matchup_array">
-        <item>Bowser</item>
-        <item>Captain Falcon</item>
-        <item>Donkey Kong</item>
-        <item>Dr. Mario</item>
-        <item>Falco</item>
-        <item>Fox</item>
-        <item>Ganondorf</item>
-        <item>Ice Climbers</item>
-        <item>Jigglypuff</item>
-        <item>Kirby</item>
-        <item>Link</item>
-        <item>Luigi</item>
-        <item>Mario</item>
-        <item>Marth</item>
-        <item>Mewtwo</item>
-        <item>Mr. Game &amp; Watch</item>
-        <item>Ness</item>
-        <item>Pichu</item>
-        <item>Pikachu</item>
-        <item>Princess Peach</item>
-        <item>Princess Zelda</item>
-        <item>Roy</item>
-        <item>Samus Aran</item>
-        <item>Sheik</item>
-        <item>Yoshi</item>
-        <item>Young Link</item>
-    </string-array>
-
     <!-- Theme -->
     <string-array name="pref_theme_options">
         <item>Light</item>

@@ -4,7 +4,7 @@
     <item
         android:id="@+id/searchview"
         android:title="@string/search_title"
-        android:icon="@drawable/ic_magnify_white_48dp"
+        android:icon="@drawable/ic_magnify_white_24dp"
         yourapp:showAsAction="ifRoom"
         yourapp:actionViewClass="android.support.v7.widget.SearchView" />
 
@@ -14,6 +14,6 @@
         android:orderInCategory="100"
         android:visible="true"
         yourapp:showAsAction="always"
-        android:icon="@drawable/ic_filter_white_36dp">
+        android:icon="@drawable/ic_filter_white_24dp">
     </item>
 </menu>

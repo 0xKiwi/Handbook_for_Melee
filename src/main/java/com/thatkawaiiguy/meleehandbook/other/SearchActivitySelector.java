@@ -14,17 +14,17 @@ import com.thatkawaiiguy.meleehandbook.activity.UniqueTechActivity;
 public class SearchActivitySelector {
 
     public static Intent selectUniqueActivity(String query, Context context) {
-        String[] uniqueTechs = ArrayHelper.getLCUniqueArray();
+        String[] uniqueTechs = ArrayHelper.getUniqueArray();
 
         for(int i = 0; i < uniqueTechs.length; i++) {
-            if(uniqueTechs[i].contains(query)) {
-                if(uniqueTechs[i].equals("super wavedash & sdwd") ||
-                        uniqueTechs[i].equals("extended & homing grapple"))
+            if(uniqueTechs[i].toLowerCase().contains(query)) {
+                if(uniqueTechs[i].toLowerCase().equals("super wavedash & sdwd") ||
+                        uniqueTechs[i].toLowerCase().equals("extended & homing grapple"))
                     return new Intent(context, TechTabActivity.class).putExtra("option",
-                            ArrayHelper.getUniqueArray()[i]);
+                            uniqueTechs[i]);
                 else
                     return new Intent(context, UniqueTechActivity.class).putExtra("option",
-                            ArrayHelper.getUniqueArray()[i]);
+                            uniqueTechs[i]);
             }
         }
 
@@ -32,28 +32,26 @@ public class SearchActivitySelector {
     }
 
     public static Intent selectTechActivity(String query, Context context) {
-        String[] techs = ArrayHelper.getLCTechArray();
+        String[] techs = ArrayHelper.getTechArray();
 
         for(int i = 0; i < techs.length; i++) {
-            if(techs[i].contains(query) && !"fox".contains(query)) {
-                if(techs[i].equals("wall jump") || query.equals("directional influence"))
-                    return new Intent(context, TechTabActivity.class).putExtra("option",
-                            ArrayHelper.getTechArray()[i]);
+            if(techs[i].toLowerCase().contains(query) && !"fox".contains(query)) {
+                if(techs[i].equals("Wall jump") || techs[i].equals("Directional Influence"))
+                    return new Intent(context, TechTabActivity.class).putExtra("option", techs[i]);
                 else
-                    return new Intent(context, TechActivity.class).putExtra("option", ArrayHelper
-                            .getTechArray()[i]);
+                    return new Intent(context, TechActivity.class).putExtra("option", techs[i]);
             }
         }
         return null;
     }
 
     public static Intent selectCharacterActivity(String query, Context context) {
-        String[] characters = ArrayHelper.getLCCharacterArray(context);
+        String[] characters = ArrayHelper.getCharacterArray(context);
 
         boolean hasFrame;
 
         for(int i = 0; i < characters.length; i++) {
-            if(characters[i].contains(query)) {
+            if(characters[i].toLowerCase().contains(query)) {
                 switch(characters[i]) {
                     case "Captain Falcon":
                         hasFrame = true;
@@ -91,42 +89,43 @@ public class SearchActivitySelector {
                     case "Dr. Mario":
                         hasFrame = true;
                         break;
+                    case "Princess Peach":
+                        hasFrame = true;
+                        break;
                     default:
                         hasFrame = false;
                         break;
                 }
                 if("falco".contains(query))
                     return new Intent(context, CharacterFrameActivity.class).putExtra
-                            ("character", "Falco");
+                            ("option", "Falco");
                 else if(hasFrame) {
                     return new Intent(context, CharacterFrameActivity.class).putExtra("option",
-                            ArrayHelper.getCharacterArray(context)[i]);
+                            characters[i]);
                 } else
                     return new Intent(context, CharacterActivity.class).putExtra("option",
-                            ArrayHelper.getCharacterArray(context)[i]);
+                            characters[i]);
             }
         }
         return null;
     }
 
     public static Intent selectFunActivity(String query, Context context) {
-        String[] funs = ArrayHelper.getLCFunArray();
+        String[] funs = ArrayHelper.getFunArray();
 
         for(int i = 0; i < funs.length; i++) {
-            if(funs[i].contains(query))
-                return new Intent(context, FunActivity.class).putExtra("option", ArrayHelper
-                        .getFunArray()[i]);
+            if(funs[i].toLowerCase().contains(query))
+                return new Intent(context, FunActivity.class).putExtra("option", funs[i]);
         }
         return null;
     }
 
     public static Intent selectMapActivity(String query, Context context) {
-        String[] maps = ArrayHelper.getLCMapArray();
+        String[] maps = ArrayHelper.getMapArray();
 
         for(int i = 0; i < maps.length; i++) {
-            if(maps[i].contains(query) && !"yoshi".contains(query))
-                return new Intent(context, StageActivity.class).putExtra("option", ArrayHelper
-                        .getMapArray()[i]);
+            if(maps[i].toLowerCase().contains(query) && !"yoshi".contains(query))
+                return new Intent(context, StageActivity.class).putExtra("option", maps[i]);
         }
         return null;
     }

@@ -235,32 +235,26 @@ public class SearchResultsActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... params) {
             String[] term = ArrayHelper.getTermArray();
-            String[] LCTerm = ArrayHelper.getLCTermArray();
             String[] termInfo = ArrayHelper.getLCTermInfoArray(context);
 
             String[] tech = ArrayHelper.getTechArray();
-            String[] LCTech = ArrayHelper.getLCTechArray();
             String[] techInfo = ArrayHelper.getLCTechInfoArray(context);
 
             String[] unique = ArrayHelper.getUniqueArray();
-            String[] LCUnique = ArrayHelper.getLCUniqueArray();
             String[] uniqueInfo = ArrayHelper.getLCUniqueInfoArray(context);
 
             String[] fun = ArrayHelper.getFunArray();
-            String[] LCFun = ArrayHelper.getLCFunArray();
             String[] funInfo = ArrayHelper.getLCFunInfoArray(context);
 
             String[] character = ArrayHelper.getCharacterArray(context);
-            String[] LCCharacter = ArrayHelper.getLCCharacterArray(context);
             String[] characterInfo = ArrayHelper.getLCCharacterInfoArray(context);
 
             String[] map = ArrayHelper.getMapArray();
-            String[] LCMap = ArrayHelper.getLCMapArray();
             String[] mapInfo = ArrayHelper.getLCMapInfoArray(context);
 
             if(prefs.getBoolean(TERM_KEY, true))
                 for(int i = 0; i < term.length; i++) {
-                    if(LCTerm[i].contains(query)) {
+                    if(term[i].toLowerCase().contains(query)) {
                         queries.add(term[i]);
                         titleTermNum++;
                     }
@@ -268,7 +262,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             if(prefs.getBoolean(TECH_KEY, true))
                 for(int i = 0; i < tech.length; i++) {
-                    if(LCTech[i].contains(query)) {
+                    if(tech[i].toLowerCase().contains(query)) {
                         queries.add(tech[i]);
                         titleNum++;
                     }
@@ -276,7 +270,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             if(prefs.getBoolean(UNIQUE_KEY, true))
                 for(int i = 0; i < unique.length; i++) {
-                    if(LCUnique[i].contains(query)) {
+                    if(unique[i].toLowerCase().contains(query)) {
                         queries.add(unique[i]);
                         titleNum++;
                     }
@@ -284,7 +278,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             if(prefs.getBoolean(FUN_KEY, true))
                 for(int i = 0; i < fun.length; i++) {
-                    if(LCFun[i].contains(query)) {
+                    if(fun[i].toLowerCase().contains(query)) {
                         queries.add(ArrayHelper.getFunArray()[i]);
                         titleNum++;
                     }
@@ -292,7 +286,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             if(prefs.getBoolean(CHAR_KEY, true))
                 for(int i = 0; i < character.length; i++) {
-                    if(LCCharacter[i].contains(query)) {
+                    if(character[i].toLowerCase().contains(query)) {
                         queries.add(character[i]);
                         titleNum++;
                     }
@@ -300,7 +294,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             if(prefs.getBoolean(MAP_KEY, true))
                 for(int i = 0; i < map.length; i++) {
-                    if(LCMap[i].contains(query)) {
+                    if(map[i].toLowerCase().contains(query)) {
                         queries.add(map[i]);
                         titleNum++;
                     }
@@ -308,7 +302,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             if(prefs.getBoolean(TERM_KEY, true))
                 for(int i = 0; i < term.length; i++) {
-                    if(LCTerm[i].contains(query));
+                    if(term[i].toLowerCase().contains(query));
                     else if(termInfo[i].contains(query)) {
                         termNum++;
                         queries.add(ArrayHelper.getTermArray()[i]);
@@ -317,35 +311,35 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             if(prefs.getBoolean(TECH_KEY, true))
                 for(int i = 0; i < tech.length; i++) {
-                    if(LCTech[i].contains(query));
+                    if(tech[i].toLowerCase().contains(query));
                     else if(techInfo[i].contains(query))
                         queries.add(tech[i]);
                 }
 
             if(prefs.getBoolean(UNIQUE_KEY, true))
                 for(int i = 0; i < unique.length; i++) {
-                    if(LCUnique[i].contains(query));
+                    if(unique[i].toLowerCase().contains(query));
                     else if(uniqueInfo[i].contains(query))
                         queries.add(unique[i]);
                 }
 
             if(prefs.getBoolean(FUN_KEY, true))
                 for(int i = 0; i < fun.length; i++) {
-                    if(LCFun[i].contains(query));
+                    if(fun[i].toLowerCase().contains(query));
                     else if((funInfo[i].contains(query)))
                         queries.add(fun[i]);
                 }
 
             if(prefs.getBoolean(CHAR_KEY, true))
                 for(int i = 0; i < character.length; i++) {
-                    if(LCCharacter[i].contains(query));
+                    if(character[i].toLowerCase().contains(query));
                     else if((characterInfo[i].contains(query)))
                         queries.add(character[i]);
                 }
 
             if(prefs.getBoolean(MAP_KEY, true))
                 for(int i = 0; i < map.length; i++) {
-                    if(LCMap[i].contains(query));
+                    if(map[i].toLowerCase().contains(query));
                     else if(mapInfo[i].contains(query))
                         queries.add(map[i]);
                 }
@@ -362,8 +356,8 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             mRecyclerView.setAdapter(mAdapter);
 
-            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
-                    .OnItemClickListener() {
+            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(
+                    new ItemClickSupport.OnItemClickListener() {
                 @Override
                 public void onItemClicked(int position) {
                     if((position < titleTermNum || (position
