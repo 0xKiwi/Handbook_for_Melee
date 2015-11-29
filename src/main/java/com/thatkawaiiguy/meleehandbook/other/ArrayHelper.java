@@ -44,7 +44,7 @@ public class ArrayHelper {
     }
 
     public static String[] getTermArray() {
-        return new String[]{"20XX", "Air dodge", "Banned stage", "Beef", "Blastzone",
+        return new String[]{"20XX", "Air dodge", "Baby pop off", "Banned stage", "Beef", "Blastzone",
                 "Boost grab", "Brackets", "Buff", "BYOC", "Camera box", "Cancel", "Cave of life",
                 "Clone", "Cory in the house", "Counter", "Counterpick", "Crew battle", "Dave's stupid rule",
                 "Dashing",  "Dash-grab", "Disjointed hitbox", "Disrespect",
@@ -54,10 +54,11 @@ public class ArrayHelper {
                 "IASA frames", "Infinite", "Input lag", "Invisible ceiling", "Ironman", "It's not safe",
                 "Janky", "Johns", "Jump cancel", "Jump canceled grab", "Juggling",
                 "JV3/JV4 stock", "Kappa", "Ken combo", "Kreygasm", "Lag",
-                "Landing lag", "Lean drop", "Legalize PokeFloats", "Mangle", "Mashedpotato Samurai",
+                "Landing lag", "Lean drop", "Legalize PokeFloats", "lol m2k",
+                "Mangle", "Mashedpotato Samurai",
                 "Matchups", "Meteor", "Meteor cancel",
                 "Metagame", "Mike Haze", "Mindgames", "Misfire", "My b", "Nerf", "Neutral game",
-                "OOS", "Overpowered", "PC drop", "Phantom hit", "Pivot","Pop-off", "Port priority",
+                "OOS", "Overpowered", "PC drop", "Phantom hit", "Pivot","Pop off", "Port priority",
                 "Priority", "Pummel", "Punish", "Randall the Cloud", "Recovery", "Respect your elders", "RNG",
                 "Rolling", "Salty", "Salty runback", "Scar jump", "Screen KO", "Self-destruct",
                 "Semiclone", "Set", "Sex kick", "Shieldhitstun", "Shielding", "Shieldstun", "Shield break",
@@ -79,60 +80,6 @@ public class ArrayHelper {
                 "Side-B shorten", "Super wavedash & SDWD", "Vududash",
                 "Up-B cancel", "Up-B turnaround", "Wallbombing",
                 "Wavelanded laser", "Waveshine", "Wobbling", "Yo-yo glitch"};
-    }
-
-    public static String[] getLCCharacterArray(Context context) {
-        String[] array = getCharacterArray(context);
-
-        for(int i = 0; i < array.length; i++)
-            array[i] = array[i].toLowerCase();
-
-        return array;
-    }
-
-    public static String[] getLCFunArray() {
-        String[] array = getFunArray();
-
-        for(int i = 0; i < array.length; i++)
-            array[i] = array[i].toLowerCase();
-
-        return array;
-    }
-
-    public static String[] getLCMapArray() {
-        String[] array = getMapArray();
-
-        for(int i = 0; i < array.length; i++)
-            array[i] = array[i].toLowerCase();
-
-        return array;
-    }
-
-    public static String[] getLCTechArray() {
-        String[] array = getTechArray();
-
-        for(int i = 0; i < array.length; i++)
-            array[i] = array[i].toLowerCase();
-
-        return array;
-    }
-
-    public static String[] getLCUniqueArray() {
-        String[] array = getUniqueArray();
-
-        for(int i = 0; i < array.length; i++)
-            array[i] = array[i].toLowerCase();
-
-        return array;
-    }
-
-    public static String[] getLCTermArray() {
-        String[] array = getTermArray();
-
-        for(int i = 0; i < array.length; i++)
-            array[i] = array[i].toLowerCase();
-
-        return array;
     }
 
     public static String getTermInfoString(String text, Context context){
@@ -292,7 +239,7 @@ public class ArrayHelper {
                 return res.getString(R.string.phit_term_info);
             case "Pivot":
                 return res.getString(R.string.pivot_term_info);
-            case "Pop-off":
+            case "Pop off":
                 return res.getString(R.string.popoff_term_info);
             case "Port priority":
                 return res.getString(R.string.ppriority_term_info);

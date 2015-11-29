@@ -64,7 +64,7 @@ public class AppRater {
                         dialog.dismiss();
                     }
                 })
-                .setNegativeButton("Don't show again", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Never", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if(editor != null)
