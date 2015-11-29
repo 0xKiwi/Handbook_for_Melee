@@ -49,9 +49,7 @@ public class CharacterFragment extends Fragment {
                     ("layoutManager");
         setRecyclerViewLayoutManager();
 
-        IconAdapter mAdapter = new IconAdapter(characters);
-        mRecyclerView.setAdapter(mAdapter);
-        mRecyclerView.hasFixedSize();
+        mRecyclerView.setAdapter(new IconAdapter(characters));
 
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
                 .OnItemClickListener() {

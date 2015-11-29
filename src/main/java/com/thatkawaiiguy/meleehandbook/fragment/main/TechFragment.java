@@ -55,8 +55,7 @@ public class TechFragment extends Fragment {
             mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable(KEY_LAYOUT_MANAGER);
         setRecyclerViewLayoutManager();
 
-        TextAdapter adapter = new TextAdapter(techs);
-        mRecyclerView.setAdapter(adapter);
+        mRecyclerView.setAdapter(new TextAdapter(techs));
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(int position) {

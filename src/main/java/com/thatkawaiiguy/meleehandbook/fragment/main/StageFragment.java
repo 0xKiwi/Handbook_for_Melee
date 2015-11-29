@@ -62,8 +62,7 @@ public class StageFragment extends Fragment {
             mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable("layoutManager");
         setRecyclerViewLayoutManager();
 
-        IconAdapter adapter = new IconAdapter(stages);
-        mRecyclerView.setAdapter(adapter);
+        mRecyclerView.setAdapter(new IconAdapter(stages));
         mRecyclerView.hasFixedSize();
 
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {

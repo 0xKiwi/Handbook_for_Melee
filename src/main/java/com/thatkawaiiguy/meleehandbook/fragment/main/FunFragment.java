@@ -54,8 +54,7 @@ public class FunFragment extends Fragment {
             mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable(KEY_LAYOUT_MANAGER);
         setRecyclerViewLayoutManager();
 
-        TextAdapter adapter = new TextAdapter(funs);
-        mRecyclerView.setAdapter(adapter);
+        mRecyclerView.setAdapter(new TextAdapter(funs));
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(int position) {
