@@ -86,9 +86,6 @@ public class TechActivity extends GifInfoActivity {
             case "Tech-chasing":
                 infoImage.setImageResource(R.drawable.techchase);
                 break;
-            case "Taunt canceling":
-                infoImage.setImageResource(R.drawable.tcancel);
-                break;
             case "Team wobble":
                 infoImage.setImageResource(R.drawable.twobble);
                 break;

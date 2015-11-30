@@ -48,6 +48,7 @@ public class TechTabActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
+        assert techPicked != null;
         switch(techPicked) {
             case "Wall jump":
                 viewPager.setAdapter(new WallJumpFragmentAdapter(getSupportFragmentManager()));

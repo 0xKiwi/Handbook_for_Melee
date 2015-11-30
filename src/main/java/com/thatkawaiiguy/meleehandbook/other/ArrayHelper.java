@@ -39,7 +39,7 @@ public class ArrayHelper {
                 "Ledge-canceling", "Ledgedash", "Ledge stall", "Moonwalk",
                 "No-impact landing", "Platform cancel", "Platform warp",
                 "Powershield", "Shield pressure", "Shield dropping",
-                "SHFFL", "Short hop", "Taunt canceling", "Team wobble", "Tech",
+                "SHFFL", "Short hop", "Team wobble", "Tech",
                 "Tech-chasing", "Wall jump", "Wavedash", "V-canceling"};
     }
 
@@ -55,19 +55,18 @@ public class ArrayHelper {
                 "Janky", "Johns", "Jump cancel", "Jump canceled grab", "Juggling",
                 "JV3/JV4 stock", "Kappa", "Ken combo", "Kreygasm", "Lag",
                 "Landing lag", "Lean drop", "Legalize PokeFloats", "lol m2k",
-                "Mangle", "Mashedpotato Samurai",
-                "Matchups", "Meteor", "Meteor cancel",
+                "Mangle", "Mashedpotato Samurai", "Matchups", "Meteor", "Meteor cancel",
                 "Metagame", "Mike Haze", "Mindgames", "Misfire", "My b", "Nerf", "Neutral game",
                 "OOS", "Overpowered", "PC drop", "Phantom hit", "Pivot","Pop off", "Port priority",
                 "Priority", "Pummel", "Punish", "Randall the Cloud", "Recovery", "Respect your elders", "RNG",
-                "Rolling", "Salty", "Salty runback", "Scar jump", "Screen KO", "Self-destruct",
+                "Rolling", "Sacred combo", "Salty", "Salty runback", "Scar jump", "Screen KO", "Self-destruct",
                 "Semiclone", "Set", "Sex kick", "Shieldhitstun", "Shielding", "Shieldstun", "Shield break",
                 "Shield grabbing", "Shine/Reflector", "Sidestepping", "Singles", "Smash attacks", "Smash inflation",
                 "Smashfest", "Sourspot", "Space animal", "Spike", "Stage humping", "Stage spike",
                 "Stale moves", "Star KO", "Stitch", "Stomp", "Style", "Sweetspot attack", "Sweetspot ledge",
-                "TAS", "Tech trap", "The king is back",
+                "TAS", "Taunt cancel", "Tech trap", "The king is back",
                 "The knee", "The Zhu", "Tier list", "Tilts", "Tires don exits", "Tomahawk","Tourney", "Trade-off",
-                "Triangle jumping", "Turnaround special", "Walking", "Walk-off edges", "Wall of pain", "Wavecheat",
+                "Trash 4", "Triangle jumping", "Turnaround special", "Walking", "Walk-off edges", "Wall of pain", "Wavecheat",
                 "Wombo combo", "Zoning"};
     }
 
@@ -89,6 +88,8 @@ public class ArrayHelper {
                 return res.getString(R.string.xx_term_info);
             case "Air dodge":
                 return res.getString(R.string.airdodge_term_info);
+            case "Baby pop off":
+                return res.getString(R.string.babypopoff_term_info);
             case "Banned stage":
                 return res.getString(R.string.bannedstage_term_info);
             case "Beef":
@@ -111,6 +112,8 @@ public class ArrayHelper {
                 return res.getString(R.string.clone_term_info);
             case "Cancel":
                 return res.getString(R.string.cancel_term_info);
+            case "Cory in the house":
+                return res.getString(R.string.cory_term_info);
             case "Counter":
                 return res.getString(R.string.counter_term_info);
             case "Counterpick":
@@ -205,6 +208,8 @@ public class ArrayHelper {
                 return res.getString(R.string.leandrop_term_info);
             case "Legalize PokeFloats":
                 return res.getString(R.string.legalizepoke_term_info);
+            case "lol m2k":
+                return res.getString(R.string.lolm2k_term_info);
             case "Mashedpotato Samurai":
                 return res.getString(R.string.mashedpotato_term_info);
             case "Matchups":
@@ -259,6 +264,8 @@ public class ArrayHelper {
                 return res.getString(R.string.rng_term_info);
             case "Rolling":
                 return res.getString(R.string.roll_term_info);
+            case "Sacred combo":
+                return res.getString(R.string.sacredcombo_term_info);
             case "Salty":
                 return res.getString(R.string.salty_term_info);
             case "Salty runback":
@@ -323,6 +330,8 @@ public class ArrayHelper {
                 return res.getString(R.string.sweetledge_term_info);
             case "TAS":
                 return res.getString(R.string.tas_term_info);
+            case "Taunt cancel":
+                return res.getString(R.string.tauntcancel_term_info);
             case "Tech trap":
                 return res.getString(R.string.techtrap_term_info);
             case "The king is back":
@@ -345,6 +354,8 @@ public class ArrayHelper {
                 return res.getString(R.string.traction_term_info);
             case "Trade-off":
                 return res.getString(R.string.tradeoff_term_info);
+            case "Trash 4":
+                return res.getString(R.string.trash4_term_info);
             case "Triangle jumping":
                 return res.getString(R.string.triangle_term_info);
             case "Turnaround special":
@@ -426,8 +437,6 @@ public class ArrayHelper {
                 return res.getString(R.string.tech_info_text);
             case "Tech-chasing":
                 return res.getString(R.string.techchase_info_text);
-            case "Taunt canceling":
-                return res.getString(R.string.tcancel_info_text);
             case "Team wobble":
                 return res.getString(R.string.twobble_info_text);
             case "Wall jump":

@@ -30,7 +30,7 @@
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="gplus">G+</string>
-    <string name="about_text">\t\t\tMelee Handbook v1.0.2
+    <string name="about_text">\t\t\tMelee Handbook v1.0.8
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
@@ -834,6 +834,9 @@
     <string name="airdodge_term_info">
         Dodging in the air, can have several directions.
     </string>
+    <string name="babypopoff_term_info">
+        Like a pop off, but smaller and not as visible. Hence being a \"baby\".
+    </string>
     <string name="bannedstage_term_info">
         Stages that are banned from most tournaments for providing an unfair
         advantage for certain characters such as infinites, stalling,
@@ -878,6 +881,10 @@
     </string>
     <string name="clone_term_info">
         A character who has a nearly identical moveset to another with slight variation.
+    </string>
+    <string name="cory_term_info">
+        When a Fox or Falco throws out a Forward Smash at a
+        seemingly random moment with or without intention, but it works.
     </string>
     <string name="counter_term_info">
         Counter is the down special move for Marth and Roy. It is used as a counterattack to deliver
@@ -1058,6 +1065,9 @@
         People joking about what stages should be legal, saying the once legal stage \"PokeFloats\" should be legal.
         It was considered not legal due to the lack of ledges characters can grab onto.
     </string>
+    <string name="lolm2k_term_info">
+        A twitch meme, now expanded to all of the smash community. Origin: http://pastebin.com/YZj6B2Wt
+    </string>
     <string name="mashedpotato_term_info">
         A comical misspelling of Masahiro Sakurai, the director of all Smash Bros. games. Other
         misspellings are MassiveHero SoccerGuy, and Mashed potato Sack of Rye
@@ -1161,6 +1171,9 @@
     </string>
     <string name="roll_term_info">Hitting left or right on the control or c
         stick while shielding. Not used very often in Melee.
+    </string>
+    <string name="sacredcombo_term_info">
+        Falcon knee (fair) to Falcon Punch (Neutral-B) https://www.youtube.com/watch?v=MlGM0BFv3JU
     </string>
     <string name="salty_term_info">A word used to describe someone who is
         upset. (mainly because of their loss to someone) https://www.youtube.com/watch?v=zTVOjo05_E0
@@ -1290,6 +1303,10 @@
         or frame-by-frame advance of the gameplay in order to play it (frame) perfectly.
         https://www.youtube.com/watch?v=l1PYPAYWTII
     </string>
+    <string name="tauntcancel_term_info">
+        A technique done for mindgames or humorous purpose where the player cancels their
+        taunt animation with a ledge. Can be done with Young Link and Dr. Mario.
+    </string>
     <string name="techtrap_term_info">
         When a player combos on their opponent in a way that a missed tech leads to another
         opportunity to tech, but due to the 40 frame lockout for techs, the player being hit is forced to miss
@@ -1331,6 +1348,11 @@
         When two players hit each other and get hit by their opponent\'s attacks at the same time.
         Usually results in both players flying apart.
     </string>
+    <string name="trash4_term_info">
+        A comical term meant to refer to Smash 4, the 4th iteration of Super Smash Bros. which is on
+        the Wii U and 3DS. People also use Snore 4 and TR4SH. Please be respectful to all players of the Smash
+        community.
+    </string>
     <string name="triangle_term_info">
         Similar to wave dashing but after the jump has initially performed, usually done to space oneself from the
         opponent, such as a Marth triangle jumping back to properly sweet spot the sword.
@@ -1364,8 +1386,9 @@
     <!-- END TERM LIST -->
 
     <!-- BEGIN STANDARD TECH STRINGS -->
-    <string name="aerialinterrupt_info_text"><![CDATA[<b>Note:</b> This technique cannot be performed in as many ways with DK, Jigglypuff or Kirby, as their ECB
-        (Environmental Collision Box, the \"bones\" of the player model) is fixed and does not change orientation during jumps.
+    <string name="aerialinterrupt_info_text"><![CDATA[<b>Note:</b> This technique
+        cannot be performed in as many ways with DK, Jigglypuff or Kirby, as their ECB
+        (Environmental Collision Box, the \"bones\" of the player model) is fixed and does not change orientation during attacks.
         <br>
         <br><big><b>Aerial Interrupt</b></big>
         <br>Often abbreviated as AI, this technique can be used to quickly land onto platforms or to quickly land from
@@ -1638,6 +1661,7 @@
         <br>&#8226;Smash DI can be shortened down to 70% of its full length, with the number of intermediate lengths only limited by the control stick.
         <br>
         <br>Here is a nice visual display of it: http://i.imgur.com/BIDsld8.gif
+        <br>One more: http://www.gfycat.com/MarvelousFavorableIndianjackal
     ]]></string>
     <string name="platformcancel_info_text"><![CDATA[<b>Note:</b> The nair performed by Mario is the platform cancel. The initial
         hit is a aerial interrupt attack uair.
@@ -2353,19 +2377,6 @@
         <br>
         <br>Video on Shield DI: https://www.youtube.com/watch?v=53t9fDzdCyw
     ]]></string>
-    <string name="tcancel_info_text"><![CDATA[<big><b>Taunt canceling</b></big>
-        <br>Done by ledge-canceling a taunt, this technique cancels the taunt animation
-        of a character but not the taunt sound, often for mindgames or for humorous purposes.
-        <br>It is done by combining a taunt with the teetering animation that occurs when a character is on the edge
-        of a platform. Pressing taunt at the moment of teeter will result in that character\'s taunt sound being played,
-        but without the animation, allowing a player to move freely. When done rapidly, it is possible to have the
-        same taunt sound be played multiple times overlapping each other.
-        <br>Any character can taunt cancel, but
-        Luigi, Link, Samus, Kirby, and Fox will not produce a sound while doing so. This technique is also possible
-        in Melee by using Randall the Cloud by taunting right before Randall moves back into the stage.
-        <br>
-        <br>Here is a video displaying DK\'s taunt cancel: https://www.youtube.com/watch?v=2wBvTVPZbd8
-    ]]></string>
     <string name="twobble_info_text"><![CDATA[<big><b>Team Wobble</b></big>
         <br>This is a group technique, performed by two players on a team continuously grabbing a single opponent
         just as they escape from the other\'s grab (or throw). Two players stand on each side of their target,
@@ -2376,10 +2387,11 @@
         not require prediction of the opponent\'s escape like the grab release version does. As long as both players
         grab correctly, this is a team infinite. Although all characters can perform this, those with fast and long
         grabs (such as Marth) are better at team wobbles than those with slow or short grabs (such as Bowser
-        or Pikachu).
-        <br>Although difficult, it is possible to escape or at least disrupt a team wobble by forcing an air release via timely
-        jump inputs. This technique can be performed with two players on a team, or two opposing players working
-        together (although they must be sure not to get hit by each others\' pummels). Because of stale-move negation,
+        <br>It is possible to escape or at least disrupt a team wobble by forcing an air release via timely
+        jump inputs.
+        <br>This technique can be performed with two players on a team, or two opposing players working
+        together (although they must be sure not to get hit by each others\' pummels).
+        <bt>Because of stale-move negation,
         this strategy takes a large amount of time to build up notable damage, so is mostly use for stalling the game,
         or annoying the target player.
     ]]></string>
@@ -2653,15 +2665,11 @@
         <br>
         <br><big><b>Wonky sides</b></big>
         <br>Recovery on this stage is considered difficult for many characters due to the very thin edges on either end. If a player
-        misses the edge with a vertically aimed up special move, they will end up underneath the stage, and suffer a possible
+        misses the edge with an aimed up special move, they will end up underneath or away the stage, and suffer a possible
         KO or SD. It is more difficult to sweet spot the edge using characters such as Marth and Fox on this stage compared to other
         similar stages.
-        <br>
-        <br>Battlefield is also infamous for its \"glitchy\" edges. It is said that, unlike other stages, if players attempt to sweet spot
-        the ledge and hold toward the ledge as they do so, they may often miss the ledge when it clearly appears they should
-        have been able to grab it. For example, it is possible for Peach to be floating within the edge grab range, but then
-        not grab the edge and simply plummet after she stops floating. Also, there have been cases where \"miracle ledge grabs\"
-        have been performed in cases where it did not appear as if the character should have survived.
+        <br>Although Fox and Falco can survive if they end up under Battlefield with proper spacing, as seen here:
+        https://www.reddit.com/r/SSBM/comments/3sy8b6/fox_can_grab_battlefield_ledge_from_under_the/
         <br>
         <br><big><b>Advantages and Disadvantages</b></big>
         <br>This stage gives advantages to characters who move horizontally during their recoveries, such as Falcon or
@@ -2699,7 +2707,7 @@
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Neutral
         <br>
-        <br><b>Characters with an advantage:</b> Chain grabbers, Falco, Campers
+        <br><b>Characters with an advantage:</b> Tech-chasers, Chain grabbers, Falco, Campers
         <br>
         <br><big><b>Final Destination</b></big>
         <br>Sometimes abbreviated as FD or Final D, Final Destination is a neutral stage in Super Smash
@@ -2716,7 +2724,7 @@
         of background. The entire cycle lasts about 216 seconds.
         <br>
         <br><big><b>Advantages</b></big>
-        <br>The stage\'s platformless style gives benefits to chain grabbers and techchasers.
+        <br>The stage\'s platformless style gives benefits to chain grabbers and tech-chasers.
         Falco also benefits from the flat form of the stage, as it let\'s Falco successfully SHL and stop
         his opponents in their actions.
         <br>
@@ -2876,7 +2884,7 @@
     <!-- END MAP INFO STRINGS -->
 
     <!-- BEGIN CHARACTER INFO STRINGS -->
-    <string name="falco_info_text" formatted="false"><![CDATA[<b>Weight:</b> 6th-7th lightest
+    <string name="falco_info_text" formatted="false"><![CDATA[<b>Weight:</b> 20-21st heaviest
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Grab range:</b> 10th longest
@@ -2936,7 +2944,7 @@
         Falco Phantasm, is difficult to shorten consistently, but is faster at recovering than
         Fox\'s Fox Illusion.
     ]]></string>
-    <string name="falcon_info_text" formatted="false"><![CDATA[<b>Weight:</b>  6-7th heaviest
+    <string name="falcon_info_text" formatted="false"><![CDATA[<b>Weight:</b> 6-7th heaviest
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Grab Range:</b> 7th longest
@@ -2986,7 +2994,7 @@
         top-tiered characters. Regardless of his weaknesses, Captain Falcon still has an impressive number of winning matchups,
         including six that are near-unloseable.
     ]]></string>
-    <string name="fox_info_text" formatted="false"><![CDATA[<b>Weight:</b> 5th lightest (4th in PAL)
+    <string name="fox_info_text" formatted="false"><![CDATA[<b>Weight:</b> 22nd heaviest (23rd in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Grab range:</b> 14th longest
@@ -3230,7 +3238,7 @@
         to overcome his aforementioned flaws. Regardless of these flaws, Marth has excellent match-ups against many characters, including six that
         are nearly unloseable.
     ]]></string>
-    <string name="pichu_info_text" formatted="false"><![CDATA[<b>Weight:</b> 1st lightest
+    <string name="pichu_info_text" formatted="false"><![CDATA[<b>Weight:</b> 26th heaviest
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 4th longest
@@ -3356,7 +3364,7 @@
 	    to intercept and edgeguard against, and he also has significant trouble KOing opponents, again owing to his poor range. As a result of
 	    these significant weaknesses, Ness has terrible matchups, with six unfavorable, one even (against Yoshi), and only three favorable
 	    (against Bowser, Kirby, and Pichu).]]></string>
-    <string name="kirby_info_text" formatted="false"><![CDATA[<b>Weight:</b> 4th lightest
+    <string name="kirby_info_text" formatted="false"><![CDATA[<b>Weight:</b> 23rd heaviest
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 21th longest
@@ -4200,7 +4208,7 @@
         test a certain option. I disregard neutral and stock count because I\'d rather try
         to do something than win this one friendly out of 100 that we played.
         <br>
-        <br>Soruce: https://www.reddit.com/r/smashbros/comments/2e0qfn/improvement_mindset_part_2_short_term_goals/
+        <br>Source: https://www.reddit.com/r/smashbros/comments/2e0qfn/improvement_mindset_part_2_short_term_goals/
         <br>
         <br>More info: http://smashboards.com/threads/drastic-improvement.311129/
     ]]></string>
@@ -4315,10 +4323,16 @@
     <br><b>Huge collection of everything</b>
     <br>www.tinyurl.com/meleelibrary
     <br>
+    <br><b>20XX TE, a tourney Melee hack pack</b>
+    <br>http://www.20xx.me/
+    <br>
     <br><big><b>Smashboards</b></big>
     <br>
     <br><b>Best of Smashboards #1</b>
     <br>https://badmelee.wordpress.com/2015/11/16/the-best-of-smashboards-1/
+    <br>
+    <br><b>Best of Smashboards #2</b>
+    <br>http://badmelee.com/2015/11/23/the-best-of-smashboards-2/
     <br>
     <br><b>History of a Smasher by Chillindude</b></big>
     <br>http://smashboards.com/threads/history-of-a-smasher.290961/
@@ -4360,12 +4374,15 @@
     <br><b>Tai\'s Marth guide (Everyone can benefit from this)</b>
     <br>http://www.meleeitonme.com/sharpening-your-sword-tais-marth-guide/
     <br>
+    <br><b>Bad Melee, humorous and helpful blog</b>
+    <br>http://badmelee.com/
+    <br>
     <br><big><b>Videos</b></big>
     <br>
     <br><b>The Smash Documentary</b>
     <br>https://www.youtube.com/watch?v=jX9hbbA-WP4
     <br>
-    <br><b>The Smash Documentary Series (Remastered)
+    <br><b>The Smash Documentary Series (Remastered)</b>
     <br>https://www.youtube.com/watch?v=NSf2mgkRm7Q&list=PLoUHkRwnRH-IXbZfwlgiEN8eXmoj6DtKM
     <br>
     <br><b>Smash Practice, helpful words from Zhu and Cactuar</b>
@@ -4377,6 +4394,13 @@
     <br><b>Mindset talk with PPMD</b>
     <br>https://www.youtube.com/watch?v=l5UCDsBZtlk
     <br>
+    <br><big><b>Streams</b></big>
+    <br>
+    <br><b>Smash Practice with Zhu and Cactuar</b>
+    <br>http://www.twitch.tv/smashpractice
+    <br>
+    <br><b>Melee It On Me</b>
+    <br>http://www.twitch.tv/meleeitonme
     ]]></string>
     <string name="neutral_info_text"><![CDATA[<big><b>Neutral game</b></big>
         <br>In the Neutral game, the balance of options each player can perform is at a relative equilibrium.
@@ -4402,8 +4426,8 @@
         that come to my mind that puzzled me for years. I always heard about stage control and about momentum of the
         match. Yet it was difficult to see how control of the match influences decisions about when to attack and
         when to evade. The lack of understanding of these concepts is obvious in new players because of how frequently
-        throw out attacks from defensive situations. As your ability to understand other characters blossoms so willl
-        your ability to mindgame other people. After hearing "rolling is bad" for years, beutral game is when you should
+        they throw out attacks from defensive situations. As your ability to understand other characters blossoms so willl
+        your ability to mindgame other people. After hearing "rolling is bad" for years, neutral game is when you should
         finally have enough situational understanding to bait and punish them. Once you understand the options a
         character has, the brilliance behind the decisions of top players becomes clear.
         <br>

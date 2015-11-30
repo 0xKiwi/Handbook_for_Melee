@@ -35,6 +35,7 @@ public class TechInfoFragment extends Fragment {
 
         TextView techSelectedInfo = (TextView) view.findViewById(R.id.infoText);
 
+        assert techPicked != null;
         switch(techPicked) {
             case "Directional Influence":
                 switch(getArguments().getInt(ARG_PAGE)) {
