@@ -20,9 +20,6 @@ public class CharacterActivity extends GifInfoActivity {
             case "Dr. Mario":
                 infoImage.setImageResource(R.drawable.drmario);
                 break;
-            case "Ganondorf":
-                infoImage.setImageResource(R.drawable.ganondorf);
-                break;
             case "Kirby":
                 infoImage.setImageResource(R.drawable.kirby);
                 break;
@@ -47,20 +44,11 @@ public class CharacterActivity extends GifInfoActivity {
             case "Pichu":
                 infoImage.setImageResource(R.drawable.pichu);
                 break;
-            case "Pikachu":
-                infoImage.setImageResource(R.drawable.pikachu);
-                break;
-            case "Princess Peach":
-                infoImage.setImageResource(R.drawable.peach);
-                break;
             case "Princess Zelda":
                 infoImage.setImageResource(R.drawable.zelda);
                 break;
             case "Roy":
                 infoImage.setImageResource(R.drawable.roy);
-                break;
-            case "Yoshi":
-                infoImage.setImageResource(R.drawable.yoshi);
                 break;
             case "Young Link":
                 infoImage.setImageResource(R.drawable.ylink);

@@ -41,7 +41,6 @@ public class InfoPageFragment extends Fragment {
         ImageView characterImage = (ImageView) getActivity().findViewById(R.id.infoImage);
 
         assert characterPicked != null;
-        assert characterPicked != null;
         switch (characterPicked) {
             case "Captain Falcon":
                 characterImage.setImageResource(R.drawable.falcon);
@@ -69,6 +68,9 @@ public class InfoPageFragment extends Fragment {
                 break;
             case "Pikachu":
                 characterImage.setImageResource(R.drawable.pikachu);
+                break;
+            case "Princess Peach":
+                characterImage.setImageResource(R.drawable.peach);
                 break;
             case "Samus Aran":
                 characterImage.setImageResource(R.drawable.samus);
