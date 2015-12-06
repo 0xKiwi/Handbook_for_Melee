@@ -38,6 +38,7 @@ public class GifInfoActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(0x00000000);
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(optionPicked);
 

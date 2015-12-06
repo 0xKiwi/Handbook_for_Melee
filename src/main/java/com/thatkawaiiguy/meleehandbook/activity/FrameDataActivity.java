@@ -34,7 +34,7 @@ public class FrameDataActivity extends AppCompatActivity {
     private Button backBtn;
     private Button playBtn;
 
-    protected SlidrInterface inter;
+    private SlidrInterface inter;
 
     private boolean paused = false;
     private boolean running = false;

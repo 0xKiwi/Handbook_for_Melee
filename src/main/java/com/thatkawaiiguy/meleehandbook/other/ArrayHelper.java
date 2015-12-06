@@ -33,7 +33,8 @@ public class ArrayHelper {
     }
 
     public static String[] getTechArray() {
-        return new String[]{"Aerial interrupt", "Chain grab", "Crouch cancel", "Dash-canceling", "Dash-dance",
+        return new String[]{"Aerial interrupt", "Chain grab",
+                "Crouch cancel", "Dash-canceling", "Dash-dance",
                 "Directional Influence", "Fast falling", "Fox-trot",
                 "Jab cancel", "Jab reset", "Jump-canceling", "L-canceling",
                 "Ledge-canceling", "Ledgedash", "Ledge stall", "Moonwalk",
@@ -44,29 +45,46 @@ public class ArrayHelper {
     }
 
     public static String[] getTermArray() {
-        return new String[]{"20XX", "Air dodge", "Baby pop off", "Banned stage", "Beef", "Blastzone",
-                "Boost grab", "Brackets", "Buff", "BYOC", "Camera box", "Cancel", "Cave of life",
-                "Clone", "Cory in the house", "Counter", "Counterpick", "Crew battle", "Dave's stupid rule",
+        return new String[]{"20XX", "Air dodge", "Baby pop off",
+                "Banned stage", "Beef", "Blastzone",
+                "Boost grab", "Brackets", "Buff", "Buster",
+                "BYOC", "Camera box", "Cancel", "Cave of life",
+                "Clone", "Cory in the house", "Counter", "Counterpick",
+                "Crew battle", "Dave's stupid rule",
                 "Dashing",  "Dash-grab", "Disjointed hitbox", "Disrespect",
-                "Ditto", "Dong", "Doubles", "Easy money", "ECB", "Edge guarding",
-                "Edge hogging", "Frame", "Freeze frames", "Friendlies", "Fun-canceling", "Helpless", "Gimp", "God",
-                "Go to the doctor", "Grab", "Hitbox", "Hitlag", "Hitstun", "Helicopter crash",
-                "IASA frames", "Infinite", "Input lag", "Invisible ceiling", "Ironman", "It's not safe",
+                "Ditto", "Dong", "Doormat", "Doubles",
+                "Easy money", "ECB", "Edge guarding",
+                "Edge hogging", "Frame", "Freeze frames",
+                "Friendlies", "Fun-canceling", "Helpless", "Gimp", "God",
+                "Go to the doctor", "Grab", "Hitbox",
+                "Hitlag", "Hitstun", "Helicopter crash",
+                "IASA frames", "Infinite", "Input lag",
+                "Invisible ceiling", "Ironman", "It's not safe",
                 "Janky", "Johns", "Jump cancel", "Jump canceled grab", "Juggling",
                 "JV3/JV4 stock", "Kappa", "Ken combo", "Kreygasm", "Lag",
                 "Landing lag", "Lean drop", "Legalize PokeFloats", "lol m2k",
                 "Mangle", "Mashedpotato Samurai", "Matchups", "Meteor", "Meteor cancel",
-                "Metagame", "Mike Haze", "Mindgames", "Misfire", "My b", "Nerf", "Neutral game",
-                "OOS", "Overpowered", "PC drop", "Phantom hit", "Pivot","Pop off", "Port priority",
-                "Priority", "Pummel", "Punish", "Randall the Cloud", "Recovery", "Respect your elders", "RNG",
-                "Rolling", "Sacred combo", "Salty", "Salty runback", "Scar jump", "Screen KO", "Self-destruct",
-                "Semiclone", "Set", "Sex kick", "Shieldhitstun", "Shielding", "Shieldstun", "Shield break",
-                "Shield grabbing", "Shine/Reflector", "Sidestepping", "Singles", "Smash attacks", "Smash inflation",
-                "Smashfest", "Sourspot", "Space animal", "Spike", "Stage humping", "Stage spike",
-                "Stale moves", "Star KO", "Stitch", "Stomp", "Style", "Sweetspot attack", "Sweetspot ledge",
+                "Metagame", "Mike Haze", "Mindgames",
+                "Misfire", "My b", "Nerf", "Neutral game",
+                "OOS", "Overpowered", "PC drop", "Phantom hit",
+                "Pivot","Pop off", "Port priority",
+                "Priority", "Pummel", "Punish", "Ramen noodle edge steal",
+                "Randall the Cloud", "Recovery", "Respect your elders", "RNG",
+                "Rolling", "Sacred combo", "Salty", "Salty runback",
+                "Scar jump", "Screen KO", "Self-destruct",
+                "Semiclone", "Set", "Sex kick", "Shieldhitstun",
+                "Shielding", "Shieldstun", "Shield break",
+                "Shield grabbing", "Shine/Reflector", "Sidestepping",
+                "Singles", "Smash attacks", "Smash inflation",
+                "Smashfest", "Sourspot", "Space animal", "Spike",
+                "Stage humping", "Stage spike",
+                "Stale moves", "Star KO", "Stitch", "Stomp", "Style",
+                "Sweetspot attack", "Sweetspot ledge",
                 "TAS", "Taunt cancel", "Tech trap", "The king is back",
-                "The knee", "The Zhu", "Tier list", "Tilts", "Tires don exits", "Tomahawk","Tourney", "Trade-off",
-                "Trash 4", "Triangle jumping", "Turnaround special", "Walking", "Walk-off edges", "Wall of pain", "Wavecheat",
+                "The knee", "The Zhu", "Tier list", "Tilts",
+                "Tires don exits", "Tomahawk","Tourney", "Trade-off",
+                "Trash 4", "Triangle jumping", "Turnaround special", "Walking", "Walk-off edges",
+                "Walk up slowly and down smash", "Wall of pain", "Wavecheat",
                 "Wombo combo", "Zoning"};
     }
 
@@ -102,6 +120,8 @@ public class ArrayHelper {
                 return res.getString(R.string.bracket_term_info);
             case "Buff":
                 return res.getString(R.string.buff_term_info);
+            case "Buster":
+                return res.getString(R.string.buster_term_info);
             case "BYOC":
                 return res.getString(R.string.byoc_term_info);
             case "Camera box":
@@ -134,6 +154,8 @@ public class ArrayHelper {
                 return res.getString(R.string.ditto_term_info);
             case "Dong":
                 return res.getString(R.string.dong_term_info);
+            case "Doormat":
+                return res.getString(R.string.doormat_term_info);
             case "Doubles":
                 return res.getString(R.string.doubles_term_info);
             case "Easy money":
@@ -254,6 +276,8 @@ public class ArrayHelper {
                 return res.getString(R.string.pummel_term_info);
             case "Punish":
                 return res.getString(R.string.punish_term_info);
+            case "Ramen noodle edge steal":
+                return res.getString(R.string.ramen_term_info);
             case "Randall the Cloud":
                 return res.getString(R.string.randall_term_info);
             case "Recovery":

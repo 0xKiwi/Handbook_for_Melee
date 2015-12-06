@@ -16,15 +16,15 @@ public class SearchActivitySelector {
     public static Intent selectUniqueActivity(String query, Context context) {
         String[] uniqueTechs = ArrayHelper.getUniqueArray();
 
-        for(int i = 0; i < uniqueTechs.length; i++) {
-            if(uniqueTechs[i].toLowerCase().contains(query)) {
-                if(uniqueTechs[i].toLowerCase().equals("super wavedash & sdwd") ||
-                        uniqueTechs[i].toLowerCase().equals("extended & homing grapple"))
+        for(String uniqueTech : uniqueTechs) {
+            if(uniqueTech.toLowerCase().contains(query)) {
+                if(uniqueTech.toLowerCase().equals("super wavedash & sdwd") ||
+                        uniqueTech.toLowerCase().equals("extended & homing grapple"))
                     return new Intent(context, TechTabActivity.class).putExtra("option",
-                            uniqueTechs[i]);
+                            uniqueTech);
                 else
                     return new Intent(context, UniqueTechActivity.class).putExtra("option",
-                            uniqueTechs[i]);
+                            uniqueTech);
             }
         }
 
@@ -34,12 +34,12 @@ public class SearchActivitySelector {
     public static Intent selectTechActivity(String query, Context context) {
         String[] techs = ArrayHelper.getTechArray();
 
-        for(int i = 0; i < techs.length; i++) {
-            if(techs[i].toLowerCase().contains(query) && !"fox".contains(query)) {
-                if(techs[i].equals("Wall jump") || techs[i].equals("Directional Influence"))
-                    return new Intent(context, TechTabActivity.class).putExtra("option", techs[i]);
+        for(String tech : techs) {
+            if(tech.toLowerCase().contains(query) && !"fox".contains(query)) {
+                if(tech.equals("Wall jump") || tech.equals("Directional Influence"))
+                    return new Intent(context, TechTabActivity.class).putExtra("option", tech);
                 else
-                    return new Intent(context, TechActivity.class).putExtra("option", techs[i]);
+                    return new Intent(context, TechActivity.class).putExtra("option", tech);
             }
         }
         return null;
@@ -50,9 +50,9 @@ public class SearchActivitySelector {
 
         boolean hasFrame;
 
-        for(int i = 0; i < characters.length; i++) {
-            if(characters[i].toLowerCase().contains(query)) {
-                switch(characters[i]) {
+        for(String character : characters) {
+            if(character.toLowerCase().contains(query)) {
+                switch(character) {
                     case "Captain Falcon":
                         hasFrame = true;
                         break;
@@ -101,10 +101,10 @@ public class SearchActivitySelector {
                             ("option", "Falco");
                 else if(hasFrame) {
                     return new Intent(context, CharacterFrameActivity.class).putExtra("option",
-                            characters[i]);
+                            character);
                 } else
                     return new Intent(context, CharacterActivity.class).putExtra("option",
-                            characters[i]);
+                            character);
             }
         }
         return null;
@@ -113,9 +113,9 @@ public class SearchActivitySelector {
     public static Intent selectFunActivity(String query, Context context) {
         String[] funs = ArrayHelper.getFunArray();
 
-        for(int i = 0; i < funs.length; i++) {
-            if(funs[i].toLowerCase().contains(query))
-                return new Intent(context, FunActivity.class).putExtra("option", funs[i]);
+        for(String fun : funs) {
+            if(fun.toLowerCase().contains(query))
+                return new Intent(context, FunActivity.class).putExtra("option", fun);
         }
         return null;
     }
@@ -123,9 +123,9 @@ public class SearchActivitySelector {
     public static Intent selectMapActivity(String query, Context context) {
         String[] maps = ArrayHelper.getMapArray();
 
-        for(int i = 0; i < maps.length; i++) {
-            if(maps[i].toLowerCase().contains(query) && !"yoshi".contains(query))
-                return new Intent(context, StageActivity.class).putExtra("option", maps[i]);
+        for(String map : maps) {
+            if(map.toLowerCase().contains(query) && !"yoshi".contains(query))
+                return new Intent(context, StageActivity.class).putExtra("option", map);
         }
         return null;
     }

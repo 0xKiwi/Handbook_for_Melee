@@ -29,6 +29,7 @@ public class FunActivity extends AppCompatActivity {
         String optionPicked = mainData.getString("option");
 
         setSupportActionBar((Toolbar)findViewById(R.id.toolbar));
+        assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(optionPicked);
 

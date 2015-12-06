@@ -2276,7 +2276,7 @@ public class MatchupFragment extends Fragment {
     }
 
     private void setMatchupsView() {
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R
                 .layout.simple_spinner_item, ArrayHelper.getCharacterArray(getActivity()));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerLeft.setAdapter(adapter);

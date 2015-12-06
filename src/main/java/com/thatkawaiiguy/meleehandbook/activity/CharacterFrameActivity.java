@@ -34,6 +34,7 @@ public class CharacterFrameActivity extends AppCompatActivity {
             getWindow().setStatusBarColor(ContextCompat.getColor(this, android.R.color.transparent));
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        assert getSupportActionBar() != null;
         getSupportActionBar().setTitle(charPicked);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

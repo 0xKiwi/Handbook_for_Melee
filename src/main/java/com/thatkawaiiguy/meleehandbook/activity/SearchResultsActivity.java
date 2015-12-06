@@ -69,6 +69,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
@@ -253,25 +254,25 @@ public class SearchResultsActivity extends AppCompatActivity {
             String[] mapInfo = ArrayHelper.getLCMapInfoArray(context);
 
             if(prefs.getBoolean(TERM_KEY, true))
-                for(int i = 0; i < term.length; i++) {
-                    if(term[i].toLowerCase().contains(query)) {
-                        queries.add(term[i]);
+                for(String aTerm : term) {
+                    if(aTerm.toLowerCase().contains(query)) {
+                        queries.add(aTerm);
                         titleTermNum++;
                     }
                 }
 
             if(prefs.getBoolean(TECH_KEY, true))
-                for(int i = 0; i < tech.length; i++) {
-                    if(tech[i].toLowerCase().contains(query)) {
-                        queries.add(tech[i]);
+                for(String aTech : tech) {
+                    if(aTech.toLowerCase().contains(query)) {
+                        queries.add(aTech);
                         titleNum++;
                     }
                 }
 
             if(prefs.getBoolean(UNIQUE_KEY, true))
-                for(int i = 0; i < unique.length; i++) {
-                    if(unique[i].toLowerCase().contains(query)) {
-                        queries.add(unique[i]);
+                for(String anUnique : unique) {
+                    if(anUnique.toLowerCase().contains(query)) {
+                        queries.add(anUnique);
                         titleNum++;
                     }
                 }
@@ -285,17 +286,17 @@ public class SearchResultsActivity extends AppCompatActivity {
                 }
 
             if(prefs.getBoolean(CHAR_KEY, true))
-                for(int i = 0; i < character.length; i++) {
-                    if(character[i].toLowerCase().contains(query)) {
-                        queries.add(character[i]);
+                for(String aCharacter : character) {
+                    if(aCharacter.toLowerCase().contains(query)) {
+                        queries.add(aCharacter);
                         titleNum++;
                     }
                 }
 
             if(prefs.getBoolean(MAP_KEY, true))
-                for(int i = 0; i < map.length; i++) {
-                    if(map[i].toLowerCase().contains(query)) {
-                        queries.add(map[i]);
+                for(String aMap : map) {
+                    if(aMap.toLowerCase().contains(query)) {
+                        queries.add(aMap);
                         titleNum++;
                     }
                 }

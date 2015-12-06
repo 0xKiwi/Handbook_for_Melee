@@ -40,6 +40,7 @@ public class TechTabActivity extends AppCompatActivity {
         final AppBarLayout appBar = (AppBarLayout) findViewById(R.id.app_bar);
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        assert getSupportActionBar() != null;
         getSupportActionBar().setTitle(techPicked);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

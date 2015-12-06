@@ -864,6 +864,9 @@
     <string name="buff_term_info">
         A term used to describe an improvement in a character or a certain aspect of a character, usually through an update.
     </string>
+    <string name="buster_term_info">
+        A fraud. A flop. A bust. Basically a term for someone who didn\'t meet expectations.
+    </string>
     <string name="byoc_term_info">
         Bring Your Own Controller to tournaments. They won\'t give you.
     </string>
@@ -912,14 +915,19 @@
         A hitbox that cannot take damage, such as Marth\'s sword.
     </string>
     <string name="disrespect_term_info">
-        When you do something that is unnecessary to mess with your opponent. For example, if you edge-hog another player and they\'re
-        going to die anyway and then you shine spike or dair them then you\'re disrespecting them.
+        When someone use a non-optimal and stylish option to deliberately make their opponent
+        feel bad about themselves. Like spiking someone who was not going to make it back to the
+        stage anyways.
     </string>
     <string name="ditto_term_info">
         A match with all the same characters.
     </string>
     <string name="dong_term_info">
         A shortened version of \"Donkey Kong\", usually spoken as \"Expand dong\".
+    </string>
+    <string name="doormat_term_info">
+        When a player gets stomped (dair\'d) on by Captain Falcon or Ganondorf 3 or more
+        times in a row.
     </string>
     <string name="doubles_term_info">
         When 2 teams of two players each go against another. Usually has their own bracket.
@@ -1152,6 +1160,10 @@
     <string name="punish_term_info">
         When a player exploits a mistake of their opponent, such as a missed tech,
         improper input or bad judgement.
+    </string>
+    <string name="ramen_term_info">
+        When a player steals the ledge from another player almost instantly, as if the player
+        stealing the ledge got to it a frame before the other.
     </string>
     <string name="randall_term_info">
         The cloud that flies around the stage in Yoshi\s Story.
