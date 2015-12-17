@@ -54,7 +54,8 @@ public class ArrayHelper {
                 "Dashing",  "Dash-grab", "Disjointed hitbox", "Disrespect",
                 "Ditto", "Dong", "Doormat", "Doubles",
                 "Easy money", "ECB", "Edge guarding",
-                "Edge hogging", "Frame", "Freeze frames",
+                "Edge hogging", "Forbidden ledge guard",
+                "Frame", "Freeze frames",
                 "Friendlies", "Fun-canceling", "Helpless", "Gimp", "God",
                 "Go to the doctor", "Grab", "Hitbox",
                 "Hitlag", "Hitstun", "Helicopter crash",
@@ -70,21 +71,25 @@ public class ArrayHelper {
                 "Pivot","Pop off", "Port priority",
                 "Priority", "Pummel", "Punish", "Ramen noodle edge steal",
                 "Randall the Cloud", "Recovery", "Respect your elders", "RNG",
-                "Rolling", "Sacred combo", "Salty", "Salty runback",
+                "Rolling", "Sacred combo", "Sacrilegious combo",
+                "Salty", "Salty runback",
                 "Scar jump", "Screen KO", "Self-destruct",
                 "Semiclone", "Set", "Sex kick", "Shieldhitstun",
                 "Shielding", "Shieldstun", "Shield break",
                 "Shield grabbing", "Shine/Reflector", "Sidestepping",
+                "Silent john",
                 "Singles", "Smash attacks", "Smash inflation",
                 "Smashfest", "Sourspot", "Space animal", "Spike",
                 "Stage humping", "Stage spike",
                 "Stale moves", "Star KO", "Stitch", "Stomp", "Style",
                 "Sweetspot attack", "Sweetspot ledge",
                 "TAS", "Taunt cancel", "Tech trap", "The king is back",
-                "The knee", "The Zhu", "Tier list", "Tilts",
+                "The knee", "The Zhu", "Thunder's combo",
+                "Tier list", "Tilts",
                 "Tires don exits", "Tomahawk","Tourney", "Trade-off",
-                "Trash 4", "Triangle jumping", "Turnaround special", "Walking", "Walk-off edges",
-                "Walk up slowly and down smash", "Wall of pain", "Wavecheat",
+                "Trash 4", "Triangle jumping", "Turnaround special",
+                "Viagra kick", "Walking", "Walk-off edges",
+                "Did he just walk up slowly and down smash?", "Wall of pain", "Wavecheat",
                 "Wombo combo", "Zoning"};
     }
 
@@ -290,6 +295,8 @@ public class ArrayHelper {
                 return res.getString(R.string.roll_term_info);
             case "Sacred combo":
                 return res.getString(R.string.sacredcombo_term_info);
+            case "Sacrilegious combo":
+                return res.getString(R.string.sacrilegiouscombo_term_info);
             case "Salty":
                 return res.getString(R.string.salty_term_info);
             case "Salty runback":
@@ -320,6 +327,8 @@ public class ArrayHelper {
                 return res.getString(R.string.shine_term_info);
             case "Sidestepping":
                 return res.getString(R.string.sidestep_term_info);
+            case "Silent john":
+                return res.getString(R.string.silentjohn_term_info);
             case "Singles":
                 return res.getString(R.string.singles_term_info);
             case "Smash attacks":
@@ -384,6 +393,10 @@ public class ArrayHelper {
                 return res.getString(R.string.triangle_term_info);
             case "Turnaround special":
                 return res.getString(R.string.turnaroundspec_term_info);
+            case "Viagra kick":
+                return res.getString(R.string.viagrakick_term_info);
+            case "Did he just walk up slowly and down smash?":
+                return res.getString(R.string.walkupslowly_term_info);
             case "Walking":
                 return res.getString(R.string.walk_term_info);
             case "Walk-off edges":

@@ -40,16 +40,17 @@
     \n\t\t\t\twww.reddit.com/r/smashbros/wiki/bkam/
     \n
     \n\t\t\tAll thanks to:
-    \n\t\t\t\tNintendo
+    \n\t\t\t\tVesne
     \n\t\t\t\tssbwiki
     \n\t\t\t\tWobbles
+    \n\t\t\t\tNintendo
     \n\t\t\t\tMew2King
-    \n\t\t\t\tschmooblidon
     \n\t\t\t\t/u/djloreddit
+    \n\t\t\t\tschmooblidon
     \n\t\t\t\tsupersmashwikia
     \n\t\t\t\t/u/DigitalAge98
-    \n\t\t\t\tMy friends and testers
     \n\t\t\t\tValeria Boikova (icon)
+    \n\t\t\t\tMy friends and testers
     \n\t\t\t\tTristan, Tyler, Luis and Juan
     \n\t\t\t\tStratocaster\'s Hitbox System
     \n
@@ -82,7 +83,7 @@
     <string name="pref_theme_value_blackactionbar">black with colored action bar</string>
 
     <string name="pref_default">pref_default</string>
-    <string name="pref_default_title">Default List Item</string>
+    <string name="pref_default_title">Start up page</string>
 
     <string name="pref_ads">pref_ads</string>
     <string name="pref_ads_title">Hide ads</string>
@@ -470,6 +471,7 @@
     ]]></string>
     <string name="shl_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
         <br>
+        <br>Excellent SHDL\'ing by Fox main Lucky: https://gyfcat.com/RepulsiveWarmheartedEider
         <br>Example of SHL: http://wiki.teamliquid.net/smash/images/a/a4/Short_Hop_Double_Laser_Example.gif
         <br>http://wiki.teamliquid.net/smash/images/1/18/Short_Hop_Laser_Example.gif
         <br>
@@ -949,6 +951,10 @@
         Due to only one character being able to hold onto the ledge, you can
         cause your opponent to miss it when they are recovering due to you currently taking it.
     </string>
+    <string name="forbiddenledge_term_info">
+        Coined by top Young Link main Axe, Young Link can take advantage of the boomerang glitch
+        which allows him to ledge extremely easily. OODDSHOTHERE
+    </string>
     <string name="frame_term_info">
         Since the game runs at 60 frames per second, one frame would be the actions
         that take place in .0166 seconds.
@@ -1087,8 +1093,7 @@
     </string>
     <string name="mangle_term_info">
         A mangle is when a player (usually a Fox or Falco) gets back onto the stage using their Up-B in an
-        odd or unexpected angle, usually somehow avoiding an attack from the person guarding the edge.
-        Also called a Mew2Kingangle.
+        odd or unexpected angle, somehow avoiding an attack from the person guarding the edge.
     </string>
     <string name="meteor_term_info">
         A move that sends someone downward, and is designated by the game as a special.
@@ -1103,8 +1108,8 @@
         method used in a game which transcends a prescribed ruleset.
     </string>
     <string name="mikehaze_term_info">
-        To have your smash career ended by a Falcon punch. Popularized after
-        smasher Mike Haze\'s destruction by Falcon punches. https://www.youtube.com/watch?v=XSgklDhaZR0
+        To have your smash career ended by a Falcon Punch. Popularized after
+        smasher Mike Haze\'s destruction by Falcon Punches. https://www.youtube.com/watch?v=XSgklDhaZR0
     </string>
     <string name="mindgames_term_info">
         A series of deliberate actions or responses planned for psychological effect
@@ -1187,6 +1192,9 @@
     <string name="sacredcombo_term_info">
         Falcon knee (fair) to Falcon Punch (Neutral-B) https://www.youtube.com/watch?v=MlGM0BFv3JU
     </string>
+    <string name="sacrilegiouscombo_term_info">
+        The opposite of the sacred combo, a Falcon Punch to knee (fair). https://youtu.be/GOevcqeb6w4
+    </string>
     <string name="salty_term_info">A word used to describe someone who is
         upset. (mainly because of their loss to someone) https://www.youtube.com/watch?v=zTVOjo05_E0
     </string>
@@ -1239,6 +1247,10 @@
     </string>
     <string name="sidestep_term_info">
         To dodge and stay in place, also called spot dodge. Done by shielding downward on the ground.
+    </string>
+    <string name="silentjohn_term_info">
+        When a player fixes the cable of their controller after losing a stock,
+        it\'s a john saying the cable is messing them up, but they fix it silently.
     </string>
     <string name="singles_term_info">
         One on one smashing, has its own bracket at tourneys.
@@ -1368,6 +1380,14 @@
     <string name="triangle_term_info">
         Similar to wave dashing but after the jump has initially performed, usually done to space oneself from the
         opponent, such as a Marth triangle jumping back to properly sweet spot the sword.
+    </string>
+    <string name="viagrakick_term_info">
+        The opposite of a sex kick. The longer it stays out the stronger it gets.
+    </string>
+    <string name="walkupslowly_term_info">
+        A quote from Scar commentating Mango (Falcon) vs. Hax (Fox) at TBH4.
+        Mango picked Falcon to make fun of Hax\'s decision to switch to Fox as he
+        was arguably the best Falcon at the time. https://youtu.be/3NMhGCf20i0
     </string>
     <string name="walk_term_info">
         Moving by slowly pressing the control stick left or right, tilts can be done from this and it is
@@ -1553,9 +1573,8 @@
         <br><b>Down smash</b>
         <br>Within the first few frames of a crouch, it is possible to press the attack button to interrupt
         and perform a down smash, which allows the player to slide while using the down smash if a
-        dash is used first. This is still considered hyphen smashing as the character will slide for
-        a short distance if charged. Down smashes are also useful approach tactics when used in this manner
-        because they tend to sweep the ground. Unlike using the up smash though, the down smash will not cause
+        dash is used first. Down smashes are also useful approach tactics when used in this manner
+        because they tend to sweep the ground. However, the down smash will not cause
         all of the characters to slide, as some down smashes negate momentum like Links.
         <br>It is impossible to cancel a dash with a side smash because it requires that the player tap the control
         stick/D-pad left or right again, which is impossible due to the effects of traction.
@@ -4567,7 +4586,10 @@
         you grab it too closely and go into freefall. Learn to space it, don\'t kill yourself and
         give the opponent a free stock.
     ]]></string>
-    <string name="spacing_info_text"><![CDATA[<big><b>Spacing</b></big>
+    <string name="spacing_info_text"><![CDATA[<b>Great spacing by Fox main Lucky:</b> http://gyfcat.com/RepulsiveWarmheartedEider
+        <br>http://gfycat.com/ThatGrizzledBlackrhino
+        <br>
+        <big><b>Spacing</b></big>
         <br>Spacing is easily one of the most important aspects of
         Smash and fighting games in general. Everyone incorporates spacing into their game,
         whether it be intentional or instinctual.
