@@ -12,7 +12,6 @@ public class CustomParentViewHolder extends ParentViewHolder {
 
     public CustomParentViewHolder(View itemView) {
         super(itemView);
-
         dataText = (TextView) itemView.findViewById(R.id.recycler_item_text_parent);
     }
 }

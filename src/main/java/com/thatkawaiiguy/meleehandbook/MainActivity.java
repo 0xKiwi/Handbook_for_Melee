@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendToast() {
-        Toast.makeText(getApplicationContext(), "You should stretch! You don't want to have to go" +
+        Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You don't want to have to go" +
                         " to the doctor.",
                 Toast.LENGTH_SHORT).show();
     }

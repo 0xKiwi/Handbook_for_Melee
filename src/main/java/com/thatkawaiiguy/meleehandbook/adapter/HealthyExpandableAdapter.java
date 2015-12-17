@@ -58,9 +58,8 @@ public class HealthyExpandableAdapter extends ExpandableRecyclerAdapter<CustomPa
             @Override
             public void onClick(View v) {
                 if(canStart) {
-                    Intent mIntent = new Intent(context, HealthyActivity.class);
-                    mIntent.putExtra("option", childViewHolder.dataText.getText());
-                    context.startActivity(mIntent);
+                    context.startActivity( new Intent(context, HealthyActivity.class)
+                            .putExtra("option", childViewHolder.dataText.getText()));
                     canStart = false;
                 }
             }

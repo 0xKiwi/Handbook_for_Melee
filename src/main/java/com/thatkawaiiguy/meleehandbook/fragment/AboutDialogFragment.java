@@ -34,18 +34,16 @@ public class AboutDialogFragment extends DialogFragment {
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
-                                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse
-                                        ("http://bit.ly/1NXCD2o"));
-                                startActivity(browserIntent);
+                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
+                                        ("http://bit.ly/1NXCD2o")));
                             }
                         })
                 .setNegativeButton(R.string.gplus,
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
-                                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse
-                                        ("https://plus.google.com/+IvanMartinezxda"));
-                                startActivity(browserIntent);
+                                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse
+                                        ("https://plus.google.com/+IvanMartinezxda")));
                             }
                         })
                 .setPositiveButton(R.string.close,

@@ -69,12 +69,10 @@ public class StageFragment extends Fragment {
             @Override
             public void onItemClicked(int position) {
                 if (canStart) {
-                    Intent mIntent;
-                    mIntent = new Intent(getActivity(), StageActivity.class);
-                    mIntent.putExtra("option", stages[position]);
-                    startActivity(mIntent);
+                    startActivity(new Intent(getActivity(),
+                            StageActivity.class).putExtra("option", stages[position]));
+                    canStart = false;
                 }
-                canStart = false;
             }
         });
         mRecyclerView.setHasFixedSize(true);

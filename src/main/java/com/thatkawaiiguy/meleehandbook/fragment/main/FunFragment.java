@@ -59,10 +59,7 @@ public class FunFragment extends Fragment {
             @Override
             public void onItemClicked(int position) {
                 if (canStart) {
-                    Intent mIntent;
-                    mIntent = new Intent(getActivity(), FunActivity.class);
-                    mIntent.putExtra("option", funs[position]);
-                    startActivity(mIntent);
+                    startActivity(new Intent(getActivity(), FunActivity.class).putExtra("option", funs[position]));
                     canStart = false;
                 }
             }

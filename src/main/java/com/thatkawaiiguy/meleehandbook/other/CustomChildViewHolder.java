@@ -12,7 +12,6 @@ public class CustomChildViewHolder extends ChildViewHolder {
 
     public CustomChildViewHolder(View itemView) {
         super(itemView);
-
         dataText = (TextView) itemView.findViewById(R.id.recycler_item_text_child);
     }
 }

@@ -25,7 +25,6 @@ import com.thatkawaiiguy.meleehandbook.adapter.SearchAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
-import com.thatkawaiiguy.meleehandbook.other.SearchActivitySelector;
 
 import java.util.ArrayList;
 
@@ -303,8 +302,8 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             if(prefs.getBoolean(TERM_KEY, true))
                 for(int i = 0; i < term.length; i++) {
-                    if(term[i].toLowerCase().contains(query));
-                    else if(termInfo[i].contains(query)) {
+                    if(!term[i].toLowerCase().contains(query))
+                        if(termInfo[i].contains(query)) {
                         termNum++;
                         queries.add(ArrayHelper.getTermArray()[i]);
                     }
@@ -312,42 +311,41 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             if(prefs.getBoolean(TECH_KEY, true))
                 for(int i = 0; i < tech.length; i++) {
-                    if(tech[i].toLowerCase().contains(query));
-                    else if(techInfo[i].contains(query))
+                    if(!tech[i].toLowerCase().contains(query))
+                        if(techInfo[i].contains(query))
                         queries.add(tech[i]);
                 }
 
             if(prefs.getBoolean(UNIQUE_KEY, true))
                 for(int i = 0; i < unique.length; i++) {
-                    if(unique[i].toLowerCase().contains(query));
-                    else if(uniqueInfo[i].contains(query))
+                    if(!unique[i].toLowerCase().contains(query))
+                        if(uniqueInfo[i].contains(query))
                         queries.add(unique[i]);
                 }
 
             if(prefs.getBoolean(FUN_KEY, true))
                 for(int i = 0; i < fun.length; i++) {
-                    if(fun[i].toLowerCase().contains(query));
-                    else if((funInfo[i].contains(query)))
+                    if(!fun[i].toLowerCase().contains(query))
+                        if((funInfo[i].contains(query)))
                         queries.add(fun[i]);
                 }
 
             if(prefs.getBoolean(CHAR_KEY, true))
                 for(int i = 0; i < character.length; i++) {
-                    if(character[i].toLowerCase().contains(query));
-                    else if((characterInfo[i].contains(query)))
+                    if(!character[i].toLowerCase().contains(query))
+                        if((characterInfo[i].contains(query)))
                         queries.add(character[i]);
                 }
 
             if(prefs.getBoolean(MAP_KEY, true))
                 for(int i = 0; i < map.length; i++) {
-                    if(map[i].toLowerCase().contains(query));
-                    else if(mapInfo[i].contains(query))
-                        queries.add(map[i]);
+                    if(!map[i].toLowerCase().contains(query))
+                        if(mapInfo[i].contains(query))
+                            queries.add(map[i]);
                 }
 
-            String[] results = queries.toArray(new String[queries.size()]);
-            mAdapter = new SearchAdapter(results, titleNum, titleTermNum, termNum, context,
-                    query);
+            mAdapter = new SearchAdapter(queries.toArray(new String[queries.size()])
+                    , titleNum, titleTermNum, termNum, context, query);
             return null;
         }
 
@@ -359,34 +357,149 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(
                     new ItemClickSupport.OnItemClickListener() {
-                @Override
-                public void onItemClicked(int position) {
-                    if((position < titleTermNum || (position
-                            < titleTermNum + titleNum + termNum && position >= titleNum +
-                            titleTermNum)))
-                        return;
-                    String searchQuery = queries.get(position).toLowerCase();
-                    if(canStart) {
-                        Intent mIntent = SearchActivitySelector.selectTechActivity(searchQuery,
-                                context);
-                        if(mIntent == null)
-                            mIntent = SearchActivitySelector.selectUniqueActivity(searchQuery,
-                                    context);
-                        if(mIntent == null)
-                            mIntent = SearchActivitySelector.selectFunActivity(searchQuery,
-                                    context);
-                        if(mIntent == null)
-                            mIntent = SearchActivitySelector.selectMapActivity(searchQuery,
-                                    context);
-                        if(mIntent == null)
-                            mIntent = SearchActivitySelector.selectCharacterActivity(searchQuery,
-                                    context);
-                        startActivity(mIntent);
-                        canStart = false;
-                    }
-                }
-            });
+                        @Override
+                        public void onItemClicked(int position) {
+                            if((position < titleTermNum || (position
+                                    < titleTermNum + titleNum + termNum && position >= titleNum +
+                                    titleTermNum)))
+                                return;
+                            if(canStart) {
+                                startActivity(selectRightIntent(queries.get(position).toLowerCase()));
+                                canStart = false;
+                            }
+                        }
+                    });
         }
 
+    }
+
+    public Intent selectRightIntent(String searchQuery){
+        Intent mIntent = selectTechActivity(searchQuery, context);
+        if(mIntent == null)
+            mIntent = selectUniqueActivity(searchQuery, context);
+        if(mIntent == null)
+            mIntent = selectFunActivity(searchQuery, context);
+        if(mIntent == null)
+            mIntent = selectMapActivity(searchQuery, context);
+        if(mIntent == null)
+            mIntent = selectCharacterActivity(searchQuery, context);
+        return mIntent;
+    }
+
+    public Intent selectUniqueActivity(String query, Context context) {
+        String[] uniqueTechs = ArrayHelper.getUniqueArray();
+
+        for(String uniqueTech : uniqueTechs) {
+            if(uniqueTech.toLowerCase().contains(query)) {
+                if(uniqueTech.toLowerCase().equals("super wavedash & sdwd") ||
+                        uniqueTech.toLowerCase().equals("extended & homing grapple"))
+                    return new Intent(context, TechTabActivity.class)
+                            .putExtra("option", uniqueTech);
+                else
+                    return new Intent(context, UniqueTechActivity.class)
+                            .putExtra("option", uniqueTech);
+            }
+        }
+
+        return null;
+    }
+
+    public Intent selectTechActivity(String query, Context context) {
+        String[] techs = ArrayHelper.getTechArray();
+
+        for(String tech : techs) {
+            if(tech.toLowerCase().contains(query) && !"fox".contains(query)) {
+                if(tech.equals("Wall jump") || tech.equals("Directional Influence"))
+                    return new Intent(context, TechTabActivity.class).putExtra("option", tech);
+                else
+                    return new Intent(context, TechActivity.class).putExtra("option", tech);
+            }
+        }
+        return null;
+    }
+
+    public Intent selectCharacterActivity(String query, Context context) {
+        String[] characters = ArrayHelper.getCharacterArray(context);
+
+        boolean hasFrame;
+
+        for(String character : characters) {
+            if(character.toLowerCase().contains(query)) {
+                switch(character) {
+                    case "Captain Falcon":
+                        hasFrame = true;
+                        break;
+                    case "Ganondorf":
+                        hasFrame = true;
+                        break;
+                    case "Falco":
+                        hasFrame = true;
+                        break;
+                    case "Fox":
+                        hasFrame = true;
+                        break;
+                    case "Ice Climbers":
+                        hasFrame = true;
+                        break;
+                    case "Jigglypuff":
+                        hasFrame = true;
+                        break;
+                    case "Marth":
+                        hasFrame = true;
+                        break;
+                    case "Pikachu":
+                        hasFrame = true;
+                        break;
+                    case "Samus Aran":
+                        hasFrame = true;
+                        break;
+                    case "Sheik":
+                        hasFrame = true;
+                        break;
+                    case "Yoshi":
+                        hasFrame = true;
+                        break;
+                    case "Dr. Mario":
+                        hasFrame = true;
+                        break;
+                    case "Princess Peach":
+                        hasFrame = true;
+                        break;
+                    default:
+                        hasFrame = false;
+                        break;
+                }
+                if("falco".contains(query))
+                    return new Intent(context, CharacterFrameActivity.class).putExtra
+                            ("option", "Falco");
+                else if(hasFrame) {
+                    return new Intent(context, CharacterFrameActivity.class).putExtra("option",
+                            character);
+                } else
+                    return new Intent(context, CharacterActivity.class).putExtra("option",
+                            character);
+            }
+        }
+        return null;
+    }
+
+    public Intent selectFunActivity(String query, Context context) {
+        String[] funs = ArrayHelper.getFunArray();
+
+        for(String fun : funs) {
+            if(fun.toLowerCase().contains(query))
+                return new Intent(context, FunActivity.class).putExtra("option", fun);
+        }
+        return null;
+    }
+
+    public Intent selectMapActivity(String query, Context context) {
+        String[] maps = ArrayHelper.getMapArray();
+
+        for(String map : maps) {
+            if(map.toLowerCase().contains(query) && !"yoshi".contains(query))
+                return new Intent(context, StageActivity.class).putExtra("option", map);
+        }
+        return null;
     }
 }

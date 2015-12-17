@@ -45,8 +45,8 @@ public class GifInfoActivity extends AppCompatActivity {
         infoImage = (GifImageView) findViewById(R.id.infoGif);
 
         TextView infoText = (TextView) findViewById(R.id.infoText);
-        infoText.setText(Html
-                .fromHtml(ArrayHelper.getInfoString(optionPicked, this)));
+        infoText.setText(Html.fromHtml(
+                ArrayHelper.getInfoString(optionPicked, this)));
     }
 
     @Override

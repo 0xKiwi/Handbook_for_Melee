@@ -50,10 +50,8 @@ public class HealthyFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (canStart) {
-                    Intent mIntent;
-                    mIntent = new Intent(getActivity(), HealthyActivity.class);
-                    mIntent.putExtra("option", "Posture");
-                    startActivity(mIntent);
+                    startActivity(new Intent(getActivity(),
+                            HealthyActivity.class).putExtra("option", "Posture"));
                     canStart = false;
                 }
             }
@@ -63,10 +61,8 @@ public class HealthyFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (canStart) {
-                    Intent mIntent;
-                    mIntent = new Intent(getActivity(), HealthyActivity.class);
-                    mIntent.putExtra("option", "Mental health");
-                    startActivity(mIntent);
+                    startActivity(new Intent(getActivity(),
+                            HealthyActivity.class).putExtra("option", "Mental health"));
                     canStart = false;
                 }
             }

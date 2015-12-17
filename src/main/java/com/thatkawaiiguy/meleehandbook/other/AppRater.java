@@ -51,8 +51,7 @@ public class AppRater {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
-                                ("market://details" +
-                                        "?id=" + APP_PNAME)));
+                                ("market://details?id=" + APP_PNAME)));
                         if(editor != null)
                             editor.putBoolean("dontshowagain", true).commit();
                         dialog.dismiss();

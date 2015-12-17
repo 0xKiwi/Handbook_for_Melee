@@ -61,10 +61,10 @@ public class FrameDataAdapter extends ExpandableRecyclerAdapter<CustomParentView
             @Override
             public void onClick(View v) {
                 if(canStart) {
-                    Intent mIntent = new Intent(context, FrameDataActivity.class);
-                    mIntent.putExtra("option", characterPicked);
-                    mIntent.putExtra("frame", childViewHolder.dataText.getText());
-                    context.startActivity(mIntent);
+                    context.startActivity(
+                            new Intent(context, FrameDataActivity.class)
+                            .putExtra("option", characterPicked)
+                            .putExtra("frame", childViewHolder.dataText.getText()));
                     canStart = false;
                 }
             }
