@@ -47,23 +47,14 @@ public class UniqueTechActivity extends GifInfoActivity {
             case "Reverse angle boomerang":
                 infoImage.setImageResource(R.drawable.revangle);
                 break;
-            case "Rising pound":
-                infoImage.setImageResource(R.drawable.risepound);
-                break;
             case "RI grapple cancel":
                 infoImage.setImageResource(R.drawable.rigcancel);
-                break;
-            case "SHFF missiles":
-                infoImage.setImageResource(R.drawable.shffmissile);
                 break;
             case "Short hop laser":
                 infoImage.setImageResource(R.drawable.shl);
                 break;
             case "Side-B shorten":
                 infoImage.setImageResource(R.drawable.sbshorten);
-                break;
-            case "Super wavedash":
-                infoImage.setImageResource(R.drawable.swd);
                 break;
             case "Up-B turnaround":
                 infoImage.setImageResource(R.drawable.upbturn);
@@ -73,12 +64,6 @@ public class UniqueTechActivity extends GifInfoActivity {
                 break;
             case "Vududash":
                 infoImage.setImageResource(R.drawable.vudu);
-                break;
-            case "Wallbombing":
-                infoImage.setImageResource(R.drawable.wallbomb);
-                break;
-            case "Wavelanded laser":
-                infoImage.setImageResource(R.drawable.wavelandedl);
                 break;
             case "Waveshine":
                 infoImage.setImageResource(R.drawable.waveshine);

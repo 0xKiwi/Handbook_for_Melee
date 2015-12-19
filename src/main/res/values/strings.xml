@@ -455,7 +455,9 @@
         <br>This is certainly not the safest recovery option for Samus, but it is very quick and if she fails to
         sweetspot the ledge, she suffers from very little lag when landing on the stage.
     ]]></string>
-    <string name="risingpound_info_text"><![CDATA[<b>Applies to:</b> Jigglypuff
+    <string name="risingpound_info_text"><![CDATA[http://i.imgur.com/Kztgh5D.gifv
+        <br>
+        <br><b>Applies to:</b> Jigglypuff
         <br>
         <br><big><b>Rising pound</b></big>
         <br>Jigglypuff\'s Side-B is Pound. It\'s a fairly strong physical attack that sets up the opponent to get
@@ -501,7 +503,9 @@
         <br>To SHDL with Fox you must short hop, either by lightly flicking the control stick up or using X or Y, and then press
         B twice immediately after getting off the ground. You do not fast fall for SHDL.
     ]]></string>
-    <string name="shffmissile_info_text"><![CDATA[<b>Applies to:</b> Samus
+    <string name="shffmissile_info_text"><![CDATA[http://i.imgur.com/mSJz8I7.gifv
+        <br>
+        <br><b>Applies to:</b> Samus
         <br>
         <br><big><b>Shorthop fastfall missiles</b></big>
         <br>Both versions of Samus\' Side-B, Homing Missile and Super Missile, can have their
@@ -552,7 +556,9 @@
         <br>\t4. Short. Press B again on frame 22
         <br>\t4. Feint. Press B again on frame 20 or 21, you will barely move, and no hitbox will come out.
     ]]></string>
-    <string name="swd_info_text"><![CDATA[<b>Applies to:</b> Samus
+    <string name="swd_info_text"><![CDATA[https://gfycat.com/MixedShockingEeve
+        <br>
+        <b>Applies to:</b> Samus
         <br>
         <br>Examples of SWD: https://www.youtube.com/watch?v=8YSeHeuiX8U
         <br>https://www.youtube.com/watch?v=ylY3dzVrkI8
@@ -590,7 +596,9 @@
         In actuality, it still is the exact same position as the regular 41st frame and since they skipped the
         first 2 frames, it can still be argued as being the 41st frame.
     ]]></string>
-    <string name="sdwd_info_text"><![CDATA[<b>Applies to:</b> Samus
+    <string name="sdwd_info_text"><![CDATA[http://i.imgur.com/hNroDRW.gifv
+        <br>
+        <b>Applies to:</b> Samus
         <br>
         <br><big><b>Super duper wavedash</b></big>
         <br>A variant of the Super Wave Dash is the \"Super Duper Wavedash." Execution is similar to
@@ -669,7 +677,9 @@
         <br><big><b>How to perform</b></big>
         <br>To perform the technique, simply wavedash off a platform or stage, and press B right before sliding off.
     ]]></string>
-    <string name="wallbomb_info_text"><![CDATA[<b>Applies to:</b> Peach
+    <string name="wallbomb_info_text"><![CDATA[http://i.imgur.com/9eeElnL.gifv
+        <br>
+        <b>Applies to:</b> Peach
         <br>
         <br><big><b>Wallbombing</b></big>
         <br>If Peach uses her Side-B and runs into a wall, she will bounce off of it. She can
@@ -690,7 +700,9 @@
         <br>Here is MacD using the wallbomb technique to get back onto the stage
         http://oddshot.tv/shot/teamoxy-2015110261422335
     ]]></string>
-    <string name="wavelandedl_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
+    <string name="wavelandedl_info_text"><![CDATA[http://www.ssbwiki.com/images/5/57/Wavelanded_laser.gif
+        <br>
+        <br><b>Applies to:</b> Fox and Falco
         <br>
         <br><big><b>Wavelanded laser</b></big>
         <br>The wavelanded laser, also known as a falling wavelanding laser, is a variation of the Short Hop Laser that
@@ -953,7 +965,8 @@
     </string>
     <string name="forbiddenledge_term_info">
         Coined by top Young Link main Axe, Young Link can take advantage of the boomerang glitch
-        which allows him to ledge extremely easily. OODDSHOTHERE
+        which allows him to ledge extremely easily. Explanation by him: http://oddshot.tv/shot/az-axe-201512092547403
+        http://oddshot.tv/shot/az-axe-2015120925418797
     </string>
     <string name="frame_term_info">
         Since the game runs at 60 frames per second, one frame would be the actions
@@ -1344,6 +1357,10 @@
         When a Falco wavedashes off of a platform, and double jumps into bair to edge guard. Named
         after Zhu.
     </string>
+    <string name="thunder_term_info">
+        A extremely impressive combo for Fox. Short hop-> Down Air(l-cancelled)-> Waveshine -> Jab Reset->
+        Short hop towards opponent-> Falling Up Air(l-cancelled)-> Charged Up Smash http://i.imgur.com/fl9Uov4.gifv
+    </string>
     <string name="tiers_term_info">
         In gaming, a tier list is a list that ranks all characters based on metagame, effectiveness of strategies,
         moveset, statistics, matchups, and tournament results.
@@ -1529,7 +1546,9 @@
         <br><b>Donkey Kong:</b> can chain throw Fox, Falco and Falcon with the up throw at low to mid percentages. Donkey Kong can
         also chain throw Fox, Falco, and Captain Falcon with forward throw, then while carrying them, up throw.]]>
     </string>
-    <string name="crouchcancel_info_text"><![CDATA[<big><b>Crouch Canceling</b></big>
+    <string name="crouchcancel_info_text"><![CDATA[<b>Useful video for learning to CC:</b> https://www.youtube.com/watch?v=IA-ROZiZJqY
+        <br>
+        <big><b>Crouch Canceling</b></big>
         <br>Abbreviated as CC, Crouch canceling is the act of crouching when being hit by an attack in
         order to reduce your knockback and damage taken. Most players suggest you should always crouch
         cancel, with the exception to some moves such as Peach\'s down smash as CC\'ing it will
@@ -1966,7 +1985,11 @@
         sliding off of it, and it grants the player access to any moves they can use while grounded instead
         of moves that can be performed while in the air.
     ]]></string>
-    <string name="ledgedash_info_text"><![CDATA[<big><b>Ledgedash</b></big>
+    <string name="ledgedash_info_text"><![CDATA[http://gfycat.com/SphericalQueasyGoshawk
+        <br>http://gfycat.com/SmugOilyAmericanquarterhorse
+        <br>http://gfycat.com/GracefulMiniatureHousefly
+        <br>
+        <big><b>Ledgedash</b></big>
         <br>Ledgedashing is a technique where one takes advantage of the 29 frames of invincibility
         that occurs upon dropping from the ledge and uses several other advanced techniques (such
         as wavedash) to get back onto the stage and gain control in an otherwise
@@ -1979,6 +2002,7 @@
         This is when you have the choice to ledgestall, ledgedash, or just approach with any other option.
         Ledgedashing involves the character double jumping, wavelanding onto the stage, and using any
         other extra frames to their advantage. This technique requires perfect inputs to be performed correctly.
+        <br>Detailed numbers on perfect ledge dash invincibility: http://bit.ly/1PgXMqZ
         <br>
         <br><big><b>How to perform</b></big>
         <br>To perform a ledgedash, hang on a ledge, and drop down on the first frame available, then double jump,
@@ -2037,6 +2061,36 @@
         like Marth, need to fastfall in order to get down far enough in time before the intangibility has run
         out while others, like Captain Falcon need to waste a few frames so they don\'t fall below the
         stage before the intangibility ends.
+    ]]></string>
+    <string name="ledgewalljump_info_text"><![CDATA[http://i.imgur.com/QxxmkgL.gifv
+        <br>
+        <big><b>Ledge Wall Jumping</b></big>
+        <br>Ledge wall jumping is wall jumping instantly from a
+        ledge you\'re holding on without using your second jump.
+        <br>
+        <br>Ledge wall jumping is done solely by smashing the stick away from the stage while you\'re holding to an edge.
+        <br>
+        <br>How to perform</b></big>
+        <br>Grab the ledge, let go (with or without fastfalling), double jump towards the wall so that at one point you\'ll
+        be sliding along it (this is important), and so that you catch the ledge again as soon as possible in your double
+        jump (thus you have to double jump at a certain height, and you have to take the risk to double jump too low and miss the edge)
+        <br>While grabbing the ledge, smash away with the control stick (It isn\'t always necessary but if you don\'t do it, it might not work).
+        <br>Then, you\'re ready to ledge wall jump : you have to smash the stick away in 1 frame to wall jump (if not, it\'ll start
+        registering it as a tilt and you\'ll let go of the edge normally)
+        <br>
+        <br>This is not the only way to get a ledgewall jump, It\'s been done FD\'s ledge after grabbing the ledge with a Firefox.
+        <br>It\'s also possible to ledge wall jump, shine, turn around, fall a bit, double jump, grab the edge, ledge wall jump again.
+        <br>
+        <br>Possible with all the characters that can wall jump
+        <br>
+        <br><big><b>Detailed instructions</b></big>
+        <br>1. Grab the ledge
+        <br>2. Drop from the ledge
+        <br>3. Double jump* back to the ledge, making sure that you rub up against the wall as you do so.
+        <br>4. While hanging from the ledge, quick tap away.
+        <br>
+        <br>*You don\'t have to double jump. You can also use a Special attack, so long as you make sure that you
+        are touching the wall on the way to the ledge.
     ]]></string>
     <string name="moonwalk_info_text"><![CDATA[<big><b>Moonwalk</b></big>
         <br>This is a technique that involves
@@ -2168,7 +2222,9 @@
         distance 1.5X, the laser is not safe, as powershielding does yield follow-ups such as a grab.
         <br>Yoshi\'s shield sometimes powershields attacks even when the shield is already up.
     ]]></string>
-    <string name="platformwarp_info_text"><![CDATA[<big><b>Platform warp</b></big>
+    <string name="platformwarp_info_text"><![CDATA[http://gfycat.com/NeighboringDefiniteCockerspaniel
+        <br>
+        <big><b>Platform warp</b></big>
         <br>Abbreviated as PW, Platform warping is taking advantage of ECB (Environmental Collision Box, the \"bones\"
         of the player model) changes after a double jump to quickly land onto platforms. The main difference
         between a platform warp and an AI (Aerial Interrupt) is that a platform warp takes place only on platforms and requires the
@@ -2187,6 +2243,12 @@
         <br>\tPikachu - uair
         <br>\tLuigi - nair
         <br>
+        <br><b>Walljump platform warp</b>
+        <br>It is also possible to perform a platform warp from a walljump, with the only discovered set ups (in legal stages)
+        found in Pokemon Stadium. http://gfycat.com/AmusedSneakyGelding
+        <br>You have only 1 frame of landing, since you are technically doing a NIL. Walljump gives you 14 frames of intangibility,
+        and the amount of grounded actionable intangible frames you get is dependent on the frame of the walljump you cancel.
+        <br>
         <br><big><b>How it works</b></big>
         <br>Every character has a ECB, which are essentially the bones of your character, it is a diamond shape,
         with the bottom point triggering landing when colliding with a surface. When on
@@ -2203,6 +2265,7 @@
         <br><b>More info</b>
         <br>For more information go here: http://smashboards.com/threads/new-tech-platform-warp.385768/
         <br>And here: https://www.youtube.com/watch?v=TtiDd5cQWJc&feature=youtu.be
+        <br>Walljump PW: https://www.reddit.com/r/SSBM/comments/3w5is0/useless_new_tech_walljump_platform_warp/
     ]]></string>
     <string name="reversewalljump_info_text"><![CDATA[<big><b>Reverse wall jumping</b></big>
         <br>It is actually possible to perform a reverse wall jump with
@@ -2219,8 +2282,6 @@
         left wall until he touches the ground. Once on the ground the game stops updating if he is touching a wall.
         Since he walks up to the right wall before jumping when he goes airborne he is still hugging a wall and can
         activate the wall jump intended to be done off the left wall letting him perform a reverse wall jump.
-        <br>That video is from 2009 and none of that information is new, though most players likely are not aware
-        of this glitch.
         <br>
         <br><b>Ways of setting up the reverse wall jump</b>
         <br>
@@ -2356,13 +2417,15 @@
         much easier. The height of a short hop varies from character to character as well. Short hopping is also
         used during wavedashing, to an extreme degree. For frame data, refer to Jumping.
     ]]></string>
-    <string name="sdi_info_text"><![CDATA[<big><b>Smash directional influence</b></big>
+    <string name="sdi_info_text"><![CDATA[Useful video: https://www.youtube.com/watch?v=CO7YD9KqNhY
+        <br>
+        <big><b>Smash directional influence</b></big>
         <br>Often shortened to Smash DI or SDI is a mechanic that allows players to slightly alter their position during
         the freeze frames of being hit by an attack. Tapping the control stick or C-Stick in any direction (rapidly, like
         how you rapidly tap the C-Stick when performing an aerial or smash attack), during freeze frames will slightly
         move their character in that direction, allowing them to potentially escape multi-hit moves or certain combos.
         SDI can also be used to move into a wall or ceiling in order to tech near-instantly (and is also possible with
-        floors if the character starts in the air) or to (very minimally) increase the distance from the blast line
+        floors if the character starts in the air) or to (very minimally) increase the distance from the bjlast line
         that the attack is about to send them towards.
         <br>Despite its near-identical name, SDI is not the same thing as directional influence.
         The major difference is that, while DI changes
@@ -2387,11 +2450,11 @@
         you can bair and they will have bad DI.
         <br>
         <br><b>Automatic smash directional influence</b>
-        <br>ASDI is a weaker variant of SDI. Once a character\'s freeze frames are
-        over, they shift slightly in whatever direction the control stick is currently held, slightly less than
+        <br>ASDI is a weaker variant of SDI which uses the C-Stick. Once a character\'s freeze frames are
+        over, they shift slightly in whatever direction the C-Stick is currently held, slightly less than
         one SDI input. If the C-Stick is also being held in a direction, it will override the control stick\'s input,
-        allowing the player to DI in another direction simultaneously. ASDI is significantly less useful than regular
-        SDI and is generally ignored as any stick position during this time is likely to be attempt at regular DI.
+        allowing the player to DI in another direction simultaneously. To perform simply hold the C-Stick the direcion you want
+        to SDI, this method is efficient for multi-hit attacks.
         <br>
         <br><big><b>Shield DI</b></big>
         <br>If you are in a shield and someone attacks it, rapidly tapping the control stick or C-Stick similar to SDI
@@ -2541,34 +2604,6 @@
         character, and can pull them back towards the stage. Because you can\'t wall jump during an attack,
         you want to use your shortest Aerial. Both Back-Air and Neutral-Air last 40 frames for YL, but
         Back-Air is significantly easier to execute, since you can just smash both sticks towards the stage.
-    ]]></string>
-    <string name="ledgewalljump_info_text"><![CDATA[<big><b>Ledge Wall Jumping</b></big>
-        <br>Ledge wall jumping is wall jumping instantly from a
-        ledge you\'re holding on without using your second jump.
-        <br>
-        <br>Ledge wall jumping is done solely by smashing the stick away from the stage while you\'re holding to an edge.
-        <br>
-        <br>How to perform</b></big>
-        <br>Grab the ledge, let go (with or without fastfalling), double jump towards the wall so that at one point you\'ll
-        be sliding along it (this is important), and so that you catch the ledge again as soon as possible in your double
-        jump (thus you have to double jump at a certain height, and you have to take the risk to double jump too low and miss the edge)
-        <br>While grabbing the ledge, smash away with the control stick (It isn\'t always necessary but if you don\'t do it, it might not work).
-        <br>Then, you\'re ready to ledge wall jump : you have to smash the stick away in 1 frame to wall jump (if not, it\'ll start
-        registering it as a tilt and you\'ll let go of the edge normally)
-        <br>
-        <br>This is not the only way to get a ledgewall jump, It\'s been done FD\'s ledge after grabbing the ledge with a Firefox.
-        <br>It\'s also possible to ledge wall jump, shine, turn around, fall a bit, double jump, grab the edge, ledge wall jump again.
-        <br>
-        <br>Possible with all the characters that can wall jump
-        <br>
-        <br><big><b>Detailed instructions</b></big>
-        <br>1. Grab the ledge
-        <br>2. Drop from the ledge
-        <br>3. Double jump* back to the ledge, making sure that you rub up against the wall as you do so.
-        <br>4. While hanging from the ledge, quick tap away.
-        <br>
-        <br>*You don\'t have to double jump. You can also use a Special attack, so long as you make sure that you
-        are touching the wall on the way to the ledge.
     ]]></string>
     <string name="wavedash_info_text"><![CDATA[<big><b>Wavedash</b></big>
         <br>A wavedash is a technique

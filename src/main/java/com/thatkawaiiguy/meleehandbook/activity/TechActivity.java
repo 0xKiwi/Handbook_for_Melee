@@ -23,12 +23,6 @@ public class TechActivity extends GifInfoActivity {
             case "Dash-dance":
                 infoImage.setImageResource(R.drawable.ddance);
                 break;
-            case "DI angles":
-                infoImage.setImageResource(R.drawable.diangles);
-                break;
-            case "Directional Influence":
-                infoImage.setImageResource(R.drawable.di);
-                break;
             case "Fast falling":
                 infoImage.setImageResource(R.drawable.ffall);
                 break;
@@ -40,9 +34,6 @@ public class TechActivity extends GifInfoActivity {
                 break;
             case "L-canceling":
                 infoImage.setImageResource(R.drawable.lcancel);
-                break;
-            case "Ledgedash":
-                infoImage.setImageResource(R.drawable.ledgedash);
                 break;
             case "Ledge stall":
                 infoImage.setImageResource(R.drawable.ledgestall);
@@ -65,9 +56,6 @@ public class TechActivity extends GifInfoActivity {
             case "Platform warp":
                 infoImage.setImageResource(R.drawable.pwarp);
                 break;
-            case "Scar jump":
-                infoImage.setImageResource(R.drawable.scarjump);
-                break;
             case "Shield pressure":
                 infoImage.setImageResource(R.drawable.shieldpress);
                 break;
@@ -77,9 +65,6 @@ public class TechActivity extends GifInfoActivity {
             case "SHFFL":
                 infoImage.setImageResource(R.drawable.shffl);
                 break;
-            case "Smash DI":
-                infoImage.setImageResource(R.drawable.sdi);
-                break;
             case "Tech":
                 infoImage.setImageResource(R.drawable.tech);
                 break;
@@ -88,9 +73,6 @@ public class TechActivity extends GifInfoActivity {
                 break;
             case "Team wobble":
                 infoImage.setImageResource(R.drawable.twobble);
-                break;
-            case "Wall jump":
-                infoImage.setImageResource(R.drawable.walljump);
                 break;
             case "Wavedash":
                 infoImage.setImageResource(R.drawable.wavedash);
