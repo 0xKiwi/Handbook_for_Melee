@@ -406,6 +406,70 @@
         SHFFL\'d down aerial, and the cycle continues. Grabs and other aerials can also be canceled into in place of the down
         aerial. This technique is sometimes used in tandem with waveshines and waveshine infinites and followed up with jabs or down tilts.
     ]]></string>
+    <string name="psspike_info_text"><![CDATA[Marth\'s spike: http://gfycat.com/LiquidBrownAmurratsnake
+        <br>
+        <br><b>Applies to:</b> Peach, Marth, Roy, and Kirby (with Peach hat)
+        <br>
+        <br><big><b>Princess/Swordsman spiking</b></big>
+        <br>Princess/Swordsman spiking is done by using Peach, Marth, and Roy\'s counter to
+        intentionally setup an invisible ceiling glitch on your opponent. For Peach
+        Toad will send them in the same trajectory as normal while it will cause Marth
+        and Roy\'s counter to send your opponent away for a short distance and then
+        switch to falling straight down. Additionally if this is used on an opponent
+        to the left of you and they are sent offstage then the invisible ceiling glitch
+        will remain active on them until they recover back on stage or grab the ledge.
+        Any moves hitting an opponent off stage will cause your move to lose any vertical
+        knockback it has while keeping its horizontal knockback and hitstun the same.
+        <br>This means moves with decent hitstun that normally have upward knockback will
+        know turn into spikes or semispikes that Peach, Marth, or Roy can use to gimp
+        their opponent. Even though there is no downward vertical knockback the hitstun
+        is still there and gravity will pull them down.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br><b>Step 1:</b> Press L or R to shield
+        <br><b>Step 2:</b> Release shield by letting go of trigger or using any out of shield options (jump, roll, grab)
+        <br><b>Step 3:</b> Counter one of your opponents grounded attacks
+        <br><b>Step 4:</b> Perform an attack on the opponent while they are airborne
+        <br>
+        <br><big><b>How it works</b></big>
+        <br>This likely works because Peach\'s toad hitbox and Marth and Roy\'s counter
+        hitbox are very similar to the hitbox of a shield and are color coded as the
+        same type of hitbox as shields in debug mode. A standard invisible ceiling
+        glitch is triggered by going airborne while still sliding back after a grounded
+        attack hits an opponents shield. Which can happen by either getting hit out of
+        their attack on shield or for certain characters by walking or dropping through
+        a platform after hitting an opponents shield with a specific attack. Normally
+        if you hit a counter it won\'t cause any of the shield push back required to
+        trigger an invisible ceiling glitch. However once you have used your shield
+        earlier on that stock when your opponent attacks your counter they will receive
+        the same push back as they would have if they attacked the shield you were
+        previously holding up.
+        <br>
+        <br>Your counter will still be able to trigger the Princess/Swordsman Spike
+        until you release a shield when it is incredibly light or the next time
+        you die. As far as I can tell moving around, fighting, or using the
+        counter do not undo the glitched shield + counter hybrid.
+        <br>
+        <br><b>How the shield affects the spike</b>
+        <br>How light or strong your shield is before you release it has an impact on
+        how soon after your counter will trigger the invisible ceiling glitch and
+        they will lose their vertical knockback. This is because how light your
+        shield is reduces the amount your opponent is pushed back when they hit your
+        shield. So if you release a lighter shield that is used for your counter
+        they will lose their vertical momentum sooner. If you make your shield too
+        light they may not have any sliding back momentum when your counter hits
+        which means it will not trigger the invisible ceiling. If you are too
+        slow when you release a hard shield the game may register the light
+        shield during the time your spring pushed your shoulder button back to
+        its resting position so try to release your trigger quickly or use an out
+        of shield option to avoid the risk entirely. The stronger a move is that
+        hits your counter the longer it takes for your counter to trigger the
+        invisible ceiling and the lighter you can hold your shield while still
+        triggering the invisible ceiling glitch.
+        <br>
+        <br>Original post: http://bit.ly/1OCWiTh
+        <br>For more info on the invisible ceiling glitch, check here: http://bit.ly/1T8RqZP
+    ]]></string>
     <string name="revangle_info_text"><![CDATA[<b>Applies to:</b> Link and Young Link
         <br>
         <br><big><b>Reverse angle boomerang</b></big>
@@ -868,7 +932,8 @@
         Most stages contain blast zones that are far away from any sides. Can be viewed in the stages section.
     </string>
     <string name="boostgrab_term_info">
-        Canceling a dash attack with a dash grab. Only Sheik, Fox, Marth, and Falco benefit from it.
+        Canceling a dash attack with a dash grab. Has more range
+        than a normal dash grab. http://bit.ly/1Yoaslw
     </string>
     <string name="bracket_term_info">
         Tournament standard of matches, player\'s matches are played between
@@ -1061,7 +1126,7 @@
     <string name="jcgrab_term_info">
         Abbreviated as JC grab, a jump canceled grab can be done by jumping immediately
         followed by a grab. The character will slide a bit (depending on traction) and grab.
-        Is faster and has more range.
+        http://bit.ly/1Yoaslw
     </string>
     <string name="john_term_info">
         A john is an excuse. Remember people, if you lose you lose. No johns. http://poyoarya.github.io/john.html

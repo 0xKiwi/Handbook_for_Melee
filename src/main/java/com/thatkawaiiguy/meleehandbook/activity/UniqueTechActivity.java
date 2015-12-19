@@ -44,6 +44,9 @@ public class UniqueTechActivity extends GifInfoActivity {
             case "Pillaring":
                 infoImage.setImageResource(R.drawable.pillar);
                 break;
+            case "Princess/Swordsman spiking":
+                infoImage.setImageResource(R.drawable.psspiking);
+                break;
             case "Reverse angle boomerang":
                 infoImage.setImageResource(R.drawable.revangle);
                 break;

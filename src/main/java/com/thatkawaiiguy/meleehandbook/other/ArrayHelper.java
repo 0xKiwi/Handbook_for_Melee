@@ -92,7 +92,8 @@ public class ArrayHelper {
         return new String[]{"Boomerang superjump", "DJC counter", "Desynching",
                 "Double jump cancel","Double jump refresh","Edge canceled eggs",
                 "Extended & homing grapple","Float cancel","Ledgehop double laser",
-                "Multishine","Parry","Pillaring","RI grapple cancel",
+                "Multishine","Parry","Pillaring", "Princess/Swordsman spiking",
+                "RI grapple cancel",
                 "Reverse angle boomerang","Rising pound","SHFF missiles",
                 "Short hop laser","Side-B shorten","Super wavedash & SDWD",
                 "Up-B cancel","Up-B turnaround","Vududash","Wallbombing",
@@ -505,6 +506,8 @@ public class ArrayHelper {
                 return res.getString(R.string.parry_info_text);
             case "Pillaring":
                 return res.getString(R.string.pillar_info_text);
+            case "Princess/Swordsman spiking":
+                return res.getString(R.string.psspike_info_text);
             case "Reverse angle boomerang":
                 return res.getString(R.string.revangle_info_text);
             case "Rising pound":
