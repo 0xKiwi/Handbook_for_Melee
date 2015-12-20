@@ -689,6 +689,32 @@
         crouch and grab, so you have to shield for at least one frame. You don\'t have to
         actually move the control stick down on 46 and press shield on 47. You can buffer the inputs.
     ]]></string>
+    <string name="shinemine_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
+        <br>
+        <br>Video displaying several ways to set up: https://www.youtube.com/watch?v=rF1BQnuvBOQ
+        <br>
+        <br><big><b>Shine mine</b></big>
+        <br>Shine mining, a term coined and discovered by Darktooth is a technique
+        performed by first shining in the location the player wishes to leave the
+        shine mine. Then, when the player wishes to activate the mine, he/she must
+        perform a shine drop through a platform anywhere on stage, and the mine will
+        become an active reflector for exactly two frames starting from the 2nd frame
+        after activation. It is important to note that the mine is only a reflector,
+        no hitbox effects.
+        <br>However when playing Melee without hitbox\'s being
+        displayed (by using debug mode or 20XX) you can only leave behind a
+        reflector hitbox if you jump out of
+        the original shine while an active enemy projectile is on screen.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br><b>Step 1:</b> Shine somewhere (Make sure an enemy projectile is on screen)
+        <br><b>Step 2:</b> Go anywhere on a platform, and shine drop (but you have to be shining on the ground).
+        <br><b>Step 3:</b> The hitbox will appear at the previous shine location for 2 frames.
+        <br>
+        <br><big><b>Uses</b></big>
+        <br>This technique is extremely situational but it can be used for edge guards and reads since it is
+        only the reflecting hitbox.
+    ]]></string>
     <string name="upbcancel_info_text"><![CDATA[<br>Applies to: Dr. Mario
         <br>
         <br>Examples of the cancel: http://www.youtube.com/watch?v=oWMDcnbPgy0
@@ -1109,7 +1135,8 @@
     </string>
     <string name="invisibleceil_term_info">
         A glitch that occurs in Melee where the character affected loses most of their vertical
-        velocity after being hit by an attack. http://oddshot.tv/shot/vgbootcamp-2015100417555965
+        velocity after being hit by an attack. Used in Princess/Swordsman spiking http://oddshot.tv/shot/vgbootcamp-2015100417555965
+        http://www.gfycat.com/GregariousHauntingDrafthorse
     </string>
     <string name="ironman_term_info">
         An ironman is a special type of match where 2 players select 5 different characters,
@@ -1322,6 +1349,11 @@
     </string>
     <string name="shine_term_info">
         Fox and Falco\'s Down Special (Down-B). While Falco\'s sends the opponent upwards, Fox\'s spikes at a set knockback.
+    </string>
+    <string name="shinedrop_term_info">
+        A technique with Fox and Falco, lets the player drop through a platform with a shine.
+        Done in a similar action to shield dropping.
+        Used to trigger shine mines.
     </string>
     <string name="sidestep_term_info">
         To dodge and stay in place, also called spot dodge. Done by shielding downward on the ground.
@@ -3065,8 +3097,7 @@
         <br>Falco\'s excellent short hop makes him very good at combos and short hop lasers. His short hop lasers prevent
         most characters from approaching and can increase pressure on the opponent. His Reflector not only reflects
         projectiles, but can also be used for combo opportunities like pillaring. Falco also has the highest initial jump,
-        the ability to wall jump, and a very effective Down Aerial spike. He also has the odd property of having a higher
-        top walking speed than running speed.
+        the ability to wall jump, and a very effective Down Aerial spike.
         <br>
         <br>Like Fox, Falco is lightweight and has a very poor recovery. Not only
         does he have the aforementioned fast-falling problem, but also the slowest air speed, along with Fox. Falcos Up

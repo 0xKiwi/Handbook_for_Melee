@@ -71,17 +71,19 @@ public class ArrayHelper {
                 "Pop off","Port priority","Priority","Pummel","Punish",
                 "RNG","Ramen noodle edge steal","Randall the Cloud",
                 "Recovery","Respect your elders","Rolling",
-                "Sacred combo","Sacrilegious combo","Salty runback",
+                "Sacred combo","Sacrilegious combo",
+                "Sakurai combo", "Salty runback",
                 "Salty","Scar jump","Screen KO","Self-destruct",
                 "Semiclone","Set","Sex kick","Shield break",
                 "Shield grabbing","Shieldhitstun","Shielding",
-                "Shieldstun","Shine/Reflector","Sidestepping",
+                "Shieldstun","Shine/Reflector", "Shine drop", "Sidestepping",
                 "Silent john","Singles","Smash attacks","Smash inflation",
                 "Smashfest","Sourspot","Space animal","Spike",
                 "Stage humping","Stage spike","Stale moves","Star KO",
                 "Stitch","Stomp","Style","Sweetspot attack","Sweetspot ledge",
                 "TAS","Taunt cancel","Tech trap","The Zhu","The king is back",
-                "The knee","Thunders combo","Tier list","Tilts","Tires don exits",
+                "The knee","Thundercat combo",
+                "Thunders combo","Tier list","Tilts","Tires don exits",
                 "Tomahawk","Tourney","Trade-off","Trash 4",
                 "Triangle jumping","Turnaround special","Viagra kick",
                 "Walk-off edges","Walking","Wall of pain","Wavecheat",
@@ -95,7 +97,7 @@ public class ArrayHelper {
                 "Multishine","Parry","Pillaring", "Princess/Swordsman spiking",
                 "RI grapple cancel",
                 "Reverse angle boomerang","Rising pound","SHFF missiles",
-                "Short hop laser","Side-B shorten","Super wavedash & SDWD",
+                "Short hop laser","Side-B shorten", "Shine mine", "Super wavedash & SDWD",
                 "Up-B cancel","Up-B turnaround","Vududash","Wallbombing",
                 "Wavelanded laser","Waveshine","Wobbling","Yo-yo glitch"};
     }
@@ -321,6 +323,8 @@ public class ArrayHelper {
                 return res.getString(R.string.shieldgrab_term_info);
             case "Shine/Reflector":
                 return res.getString(R.string.shine_term_info);
+            case "Shine drop":
+                return res.getString(R.string.shinedrop_term_info);
             case "Sidestepping":
                 return res.getString(R.string.sidestep_term_info);
             case "Silent john":
@@ -520,8 +524,12 @@ public class ArrayHelper {
                 return res.getString(R.string.shl_info_text);
             case "Side-B shorten":
                 return res.getString(R.string.sidebshorten_info_text);
+            case "Shine mine":
+                return res.getString(R.string.shinemine_info_text);
             case "Super wavedash & SDWD":
                 return res.getString(R.string.swd_info_text);
+            case "Super duper wavedash":
+                return res.getString(R.string.sdwd_info_text);
             case "Vududash":
                 return res.getString(R.string.vududash_info_text);
             case "Up-B cancel":

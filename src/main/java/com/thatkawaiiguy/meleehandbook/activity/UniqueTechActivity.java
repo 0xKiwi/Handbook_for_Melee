@@ -59,6 +59,9 @@ public class UniqueTechActivity extends GifInfoActivity {
             case "Side-B shorten":
                 infoImage.setImageResource(R.drawable.sbshorten);
                 break;
+            case "Shine mine":
+                infoImage.setImageResource(R.drawable.shinemine);
+                break;
             case "Up-B turnaround":
                 infoImage.setImageResource(R.drawable.upbturn);
                 break;
