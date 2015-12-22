@@ -737,11 +737,8 @@
         perform a shine drop through a platform anywhere on stage, and the mine will
         become an active reflector for exactly two frames starting from the 2nd frame
         after activation. It is important to note that the mine is only a reflector,
-        no hitbox effects.
-        <br>However when playing Melee without hitbox\'s being
-        displayed (by using debug mode or 20XX) you can only leave behind a
-        reflector hitbox if you jump out of
-        the original shine while an active enemy projectile is on screen.
+        no hitbox effects and that both actions (setting of the trap, and activating it)
+        must both be performed while there are active projectiles on the screen.
         <br>
         <br><big><b>How to perform</b></big>
         <br><b>Step 1:</b> Shine somewhere (Make sure an enemy projectile is on screen)
@@ -1317,6 +1314,7 @@
     </string>
     <string name="randall_term_info">
         The cloud that flies around the stage in Yoshi\s Story.
+        Timing for Randall explained: http://oddshot.tv/shot/bleagel0-2015122203619419
     </string>
     <string name="recovery_term_info">
         The Up-B attack is usually referred to as the recovery since it is how most
@@ -2201,7 +2199,7 @@
     ]]></string>
     <string name="ledgewalljump_info_text"><![CDATA[http://i.imgur.com/QxxmkgL.gifv
         <br>
-        <big><b>Ledge Wall Jumping</b></big>
+        <br><big><b>Ledge Wall Jumping</b></big>
         <br>Ledge wall jumping is wall jumping instantly from a
         ledge you\'re holding on without using your second jump.
         <br>
@@ -2406,23 +2404,25 @@
     ]]></string>
     <string name="reversewalljump_info_text"><![CDATA[<big><b>Reverse wall jumping</b></big>
         <br>It is actually possible to perform a reverse wall jump with
-        any character capable of wall jumping on tournament legal stages. This glitch is similar to the ledge wall jump.
-        That glitch stores the wall jump from riding up Final Destination\'s ledge when you grab the ledge and when
-        you press away it will instantly activate the wall jump.
+        any character capable of wall jumping on tournament legal stages. This glitch is similar to the ledge wall jump
+        which stores the wall jump from riding up Final Destination\'s ledge when you grab the ledge and when
+        you press away it instantly activates the wall jump.
         <br>
         <br><big><b>How it works</big></b>
-        <br>Grabbing the ledge is not the only way you can keep a wall jump stored, you are capable of getting up
-        from the ledge and walking around on the stage as well. Only once you jump and enter freefall does the
-        game update and check if you are hugging a wall and should be capable of wall jumping.
+        <br>By manipulating the way the game detects wall jumps, the player can \"trick\" the game into thinking
+        the player is wall jumping from an opposite facing wall. This is done by storing wall jumps through methods
+        stated below. By performing a wall jump stored from the opposite wall you are currently on the game still gives
+        you the same wall jump which would normally send you away from the stage but will now send you towards the stage.
+        <br>Details on this here: http://pastebin.com/wHhscGty
         <br>This is why Fox is capable of doing a reverse wallump on his target test stage as seen in this
         video (https://www.youtube.com/watch?v=rAN3SejRi3w) from 2009. Fox jumps and hugs the
         left wall until he touches the ground. Once on the ground the game stops updating if he is touching a wall.
         Since he walks up to the right wall before jumping when he goes airborne he is still hugging a wall and can
         activate the wall jump intended to be done off the left wall letting him perform a reverse wall jump.
         <br>
-        <br><b>Ways of setting up the reverse wall jump</b>
+        <br><b>Ways of storing wall jumps</b>
         <br>
-        <br>1. Use a grounded special including an Up-B\ (with the exception of Mario). Even
+        <br>1. Use a grounded special including an Up-B\ (with the exception of Mario)against a wall. Even
         though Up-B\'s put you airborne and then into freefall this is considered a separate state called
         SpecialFall and the game does not update if you are hugging a wall in this state.
         <br>
@@ -2443,9 +2443,9 @@
         for one frame and pressing it into the wall on the next frame.
         <br>
         <br>It is also possible for Fox, Falco, Young Link, and Mario to perform a reverse wall jump
-        from Final Destination\'s ledge by dropping from the ledge with c-stick down or away and the
-        next frame pressing analog into the wall. Mario is also capable of performing this on FoD
-        and Pokemon Stadium.
+        from Final Destination\'s ledge by dropping from the ledge by inputting down or away
+        on the control and the next frame pressing analog into the wall. Mario is also
+        capable of performing this on FoD and Pokemon Stadium.
         <br>
         <br><b>More info</b>
         <br>For a much more detailed version of this with exact frame data and several gifs, go to this smashboards post by
@@ -2514,15 +2514,16 @@
     ]]></string>
     <string name="shffl_info_text"><![CDATA[<big><b>SHFFL</b></big>
         <br>The short hop fast fall L-cancel, commonly abbreviated as \"SHFFL\"
-        (pronounced - and sometimes written - like the word \"shuffle\"), is a combination of advanced techniques
-        that, for most characters, results in the quickest and least laggy way to jump and perform an
-        aerial from the ground in Super Smash Bros. Melee. A SHFFL, per its name, comprises a short hop,
+        (pronounced \"shuffle\"), is a combination of advanced techniques
+        that results in the quickest and least laggy way to jump and perform an
+        aerial from the ground. A SHFFL, per its name, comprises a short hop,
         a fast-fall and an L-cancel, and an aerial attack that occurs while the user is in mid-air.
         <br>When teaching advanced techniques to new players, higher-leveled smashers often emphasize the
         importance of SHFFLing because the technique reflects a mastery of several important advanced
         techniques. SHFFLing is highly useful in battle and in competitive play because its speed allows
         players to use aerial attacks in tandem with ground moves.
-        <br>Chronological button input:
+        <br>
+        <br><b>Chronological button input:</b>
         <br>\tX/Y/up slightly
         <br>\tA/A+direction/C/Z
         <br>\tDown

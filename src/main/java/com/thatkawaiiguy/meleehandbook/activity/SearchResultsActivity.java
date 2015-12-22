@@ -373,7 +373,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
     }
 
-    public Intent selectRightIntent(String searchQuery){
+    private Intent selectRightIntent(String searchQuery){
         Intent mIntent = selectTechActivity(searchQuery, context);
         if(mIntent == null)
             mIntent = selectUniqueActivity(searchQuery, context);
@@ -386,7 +386,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         return mIntent;
     }
 
-    public Intent selectUniqueActivity(String query, Context context) {
+    private Intent selectUniqueActivity(String query, Context context) {
         String[] uniqueTechs = ArrayHelper.getUniqueArray();
 
         for(String uniqueTech : uniqueTechs) {
@@ -404,7 +404,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         return null;
     }
 
-    public Intent selectTechActivity(String query, Context context) {
+    private Intent selectTechActivity(String query, Context context) {
         String[] techs = ArrayHelper.getTechArray();
 
         for(String tech : techs) {
@@ -418,7 +418,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         return null;
     }
 
-    public Intent selectCharacterActivity(String query, Context context) {
+    private Intent selectCharacterActivity(String query, Context context) {
         String[] characters = ArrayHelper.getCharacterArray(context);
 
         boolean hasFrame;
@@ -483,7 +483,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         return null;
     }
 
-    public Intent selectFunActivity(String query, Context context) {
+    private Intent selectFunActivity(String query, Context context) {
         String[] funs = ArrayHelper.getFunArray();
 
         for(String fun : funs) {
@@ -493,7 +493,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         return null;
     }
 
-    public Intent selectMapActivity(String query, Context context) {
+    private Intent selectMapActivity(String query, Context context) {
         String[] maps = ArrayHelper.getMapArray();
 
         for(String map : maps) {

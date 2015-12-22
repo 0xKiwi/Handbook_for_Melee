@@ -150,7 +150,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">?attr/actionBarSize</item>
-        <item name="android:src">@drawable/style</item>
+        <item name="android:src">@drawable/defaultpic</item>
         <item name="android:background">?customColorPrimary</item>
         <item name="android:fitsSystemWindows">true</item>
         <item name="android:adjustViewBounds">true</item>

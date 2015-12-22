@@ -65,6 +65,9 @@ public class TechActivity extends GifInfoActivity {
             case "SHFFL":
                 infoImage.setImageResource(R.drawable.shffl);
                 break;
+            case "Short hop":
+                infoImage.setImageResource(R.drawable.shop);
+                break;
             case "Tech":
                 infoImage.setImageResource(R.drawable.tech);
                 break;
