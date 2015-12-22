@@ -68,9 +68,6 @@ public class UniqueTechActivity extends GifInfoActivity {
             case "Up-B cancel":
                 infoImage.setImageResource(R.drawable.upbcancel);
                 break;
-            case "Vududash":
-                infoImage.setImageResource(R.drawable.vudu);
-                break;
             case "Waveshine":
                 infoImage.setImageResource(R.drawable.waveshine);
                 break;
