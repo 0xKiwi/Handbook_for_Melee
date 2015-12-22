@@ -9,16 +9,16 @@ public class ArrayHelper {
 
     public static String[] getCharacterArray(Context context) {
         return Preferences.sortByTierEnabled(context) ?
-                new String[]{"Fox", "Falco", "Marth", "Sheik", "Jigglypuff", "Captain Falcon",
-                "Princess Peach", "Ice Climbers", "Samus Aran", "Pikachu","Luigi",
-                "Dr. Mario", "Yoshi","Ganondorf",
-                "Mario", "Young Link", "Link", "Donkey Kong", "Mr. Game & Watch", "Roy",
-                "Ness", "Pichu", "Mewtwo", "Princess Zelda", "Bowser", "Kirby"} :
+                new String[]{"Fox", "Falco", "Marth", "Sheik", "Jigglypuff", "Princess Peach",
+                        "Ice Climbers", "Captain Falcon", "Pikachu", "Samus Aran",
+                        "Dr. Mario", "Yoshi", "Luigi", "Ganondorf",
+                        "Mario", "Young Link", "Donkey Kong", "Link", "Mr. Game & Watch", "Roy",
+                        "Mewtwo", "Princess Zelda", "Ness", "Pichu", "Bowser", "Kirby"} :
                 new String[]{"Bowser", "Captain Falcon", "Donkey Kong", "Dr. Mario",
-                "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Kirby", "Link",
-                "Luigi", "Mario", "Marth", "Mewtwo", "Mr. Game & Watch", "Ness", "Pichu",
-                "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran", "Sheik",
-                "Yoshi", "Young Link"};
+                        "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Kirby", "Link",
+                        "Luigi", "Mario", "Marth", "Mewtwo", "Mr. Game & Watch", "Ness", "Pichu",
+                        "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran", "Sheik",
+                        "Yoshi", "Young Link"};
     }
 
     public static String[] getMapArray() {
@@ -46,65 +46,65 @@ public class ArrayHelper {
     }
 
     public static String[] getTermArray() {
-        return new String[]{"20XX","Air dodge","BYOC","Baby pop off",
-                "Banned stage","Beef","Blastzone","Boost grab",
-                "Brackets","Buff","Buster","Camera box","Cancel",
-                "Cave of life","Clone","Cory in the house","Counter",
-                "Counterpick","Crew battle","Dash-grab","Dashing",
+        return new String[]{"20XX", "Air dodge", "BYOC", "Baby pop off",
+                "Banned stage", "Beef", "Blastzone", "Boost grab",
+                "Brackets", "Buff", "Buster", "Camera box", "Cancel",
+                "Cave of life", "Clone", "Cory in the house", "Counter",
+                "Counterpick", "Crew battle", "Dash-grab", "Dashing",
                 "Dave's stupid rule",
                 "Did he just walk up slowly and down smash?",
-                "Disjointed hitbox","Disrespect","Ditto","Dong",
-                "Doormat","Doubles","ECB","Easy money","Edge guarding",
-                "Edge hogging","Forbidden ledge guard","Frame",
-                "Freeze frames","Friendlies","Fun-canceling","Gimp",
-                "Go to the doctor","God","Grab","Helicopter crash",
-                "Helpless","Hitbox","Hitlag","Hitstun","IASA frames",
-                "Infinite","Input lag","Invisible ceiling glitch",
-                "Ironman","It's not safe","JV3/JV4 stock","Janky",
-                "Johns","Juggling","Jump cancel","Jump canceled grab",
-                "Kappa","Ken combo","Kreygasm","Lag","Landing lag",
-                "Lean drop","Legalize PokeFloats","Mangle",
-                "Mashedpotato Samurai","Matchups","Metagame",
-                "Meteor cancel","Meteor","Mike Haze","Mindgames",
-                "Misfire","My b","Nerf","Neutral game","OOS",
-                "Overpowered","PC drop","Phantom hit","Pivot",
-                "Pop off","Port priority","Priority","Pummel","Punish",
-                "RNG","Ramen noodle edge steal","Randall the Cloud",
-                "Recovery","Respect your elders","Rolling",
-                "Sacred combo","Sacrilegious combo",
+                "Disjointed hitbox", "Disrespect", "Ditto", "Dong",
+                "Doormat", "Doubles", "ECB", "Easy money", "Edge guarding",
+                "Edge hogging", "Forbidden ledge guard", "Frame",
+                "Freeze frames", "Friendlies", "Fun-canceling", "Gimp",
+                "Go to the doctor", "God", "Grab", "Helicopter crash",
+                "Helpless", "Hitbox", "Hitlag", "Hitstun", "IASA frames",
+                "Infinite", "Input lag", "Invisible ceiling glitch",
+                "Ironman", "It's not safe", "JV3/JV4 stock", "Janky",
+                "Johns", "Juggling", "Jump cancel", "Jump canceled grab",
+                "Kappa", "Ken combo", "Kreygasm", "Lag", "Landing lag",
+                "Lean drop", "Legalize PokeFloats", "Mangle",
+                "Mashedpotato Samurai", "Matchups", "Metagame",
+                "Meteor cancel", "Meteor", "Mike Haze", "Mindgames",
+                "Misfire", "My b", "Nerf", "Neutral game", "OOS",
+                "Overpowered", "PC drop", "Phantom hit", "Pivot",
+                "Pop off", "Port priority", "Priority", "Pummel", "Punish",
+                "RNG", "Ramen noodle edge steal", "Randall the Cloud",
+                "Recovery", "Respect your elders", "Rolling",
+                "Sacred combo", "Sacrilegious combo",
                 "Sakurai combo", "Salty runback",
-                "Salty","Scar jump","Screen KO","Self-destruct",
-                "Semiclone","Set","Sex kick","Shield break",
-                "Shield grabbing","Shieldhitstun","Shielding",
-                "Shieldstun","Shine/Reflector", "Shine drop", "Sidestepping",
-                "Silent john","Singles","Smash attacks","Smash inflation",
-                "Smashfest","Sourspot","Space animal","Spike",
-                "Stage humping","Stage spike","Stale moves","Star KO",
-                "Stitch","Stomp","Style","Sweetspot attack","Sweetspot ledge",
-                "TAS","Taunt cancel","Tech trap","The Zhu","The king is back",
-                "The knee","Thundercat combo",
-                "Thunders combo","Tier list","Tilts","Tires don exits",
-                "Tomahawk","Tourney","Trade-off","Trash 4",
-                "Triangle jumping","Turnaround special","Viagra kick",
-                "Walk-off edges","Walking","Wall of pain","Wavecheat",
-                "Wombo combo","Zoning","lol m2k"};
+                "Salty", "Scar jump", "Screen KO", "Self-destruct",
+                "Semiclone", "Set", "Sex kick", "Shield break",
+                "Shield grabbing", "Shieldhitstun", "Shielding",
+                "Shieldstun", "Shine/Reflector", "Shine drop", "Sidestepping",
+                "Silent john", "Singles", "Smash attacks", "Smash inflation",
+                "Smashfest", "Sourspot", "Space animal", "Spike",
+                "Stage humping", "Stage spike", "Stale moves", "Star KO",
+                "Stitch", "Stomp", "Style", "Sweetspot attack", "Sweetspot ledge",
+                "TAS", "Taunt cancel", "Tech trap", "The Zhu", "The king is back",
+                "The knee", "Thundercat combo",
+                "Thunders combo", "Tier list", "Tilts", "Tires don exits",
+                "Tomahawk", "Tourney", "Trade-off", "Trash 4",
+                "Triangle jumping", "Turnaround special", "Viagra kick",
+                "Walk-off edges", "Walking", "Wall of pain", "Wavecheat",
+                "Wombo combo", "Zoning", "lol m2k"};
     }
 
     public static String[] getUniqueArray() {
         return new String[]{"Boomerang superjump", "DJC counter", "Desynching",
-                "Double jump cancel","Double jump refresh","Edge canceled eggs",
-                "Extended & homing grapple","Float cancel","Ledgehop double laser",
-                "Multishine","Parry","Pillaring", "Princess/Swordsman spiking",
-                "RI grapple cancel",
-                "Reverse angle boomerang","Rising pound","SHFF missiles",
-                "Short hop laser","Side-B shorten", "Shine mine", "Super wavedash & SDWD",
-                "Up-B cancel","Up-B turnaround","Vududash","Wallbombing",
-                "Wavelanded laser","Waveshine","Wobbling","Yo-yo glitch"};
+                "Double jump cancel", "Double jump refresh", "Edge canceled eggs",
+                "Extended & homing grapple", "Float cancel", "Frozen turnip glitch",
+                "Ledgehop double laser", "Multishine", "Parry", "Pillaring",
+                "Princess/Swordsman spiking", "RI grapple cancel",
+                "Reverse angle boomerang", "Rising pound", "SHFF missiles",
+                "Short hop laser", "Side-B shorten", "Shine mine", "Super wavedash & SDWD",
+                "Up-B cancel", "Up-B turnaround", "Vududash", "Wallbombing",
+                "Wavelanded laser", "Waveshine", "Wobbling", "Yo-yo glitch"};
     }
 
-    public static String getTermInfoString(String text, Context context){
+    public static String getTermInfoString(String text, Context context) {
         Resources res = context.getResources();
-        switch(text){
+        switch(text) {
             case "20XX":
                 return res.getString(R.string.xx_term_info);
             case "Air dodge":
@@ -142,7 +142,7 @@ public class ArrayHelper {
             case "Counterpick":
                 return res.getString(R.string.counterpick_term_info);
             case "Crew battle":
-                return  res.getString(R.string.crewbattle_term_info);
+                return res.getString(R.string.crewbattle_term_info);
             case "Dashing":
                 return res.getString(R.string.dash_term_info);
             case "Dash-grab":
@@ -204,9 +204,9 @@ public class ArrayHelper {
             case "Input lag":
                 return res.getString(R.string.ilag_term_info);
             case "Ironman":
-                return  res.getString(R.string.ironman_term_info);
+                return res.getString(R.string.ironman_term_info);
             case "It's not safe":
-                return  res.getString(R.string.itsnotsafe_term_info);
+                return res.getString(R.string.itsnotsafe_term_info);
             case "Janky":
                 return res.getString(R.string.janky_term_info);
             case "Johns":
@@ -502,6 +502,8 @@ public class ArrayHelper {
                 return res.getString(R.string.edgecanceleggs_info_text);
             case "Float cancel":
                 return res.getString(R.string.fcancel_info_text);
+            case "Frozen turnip glitch":
+                return res.getString(R.string.frozenturnip_info_text);
             case "Ledgehop double laser":
                 return res.getString(R.string.lhdl_info_text);
             case "Multishine":

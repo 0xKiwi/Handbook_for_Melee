@@ -290,6 +290,43 @@
         <br>The FCAN Peach is also using a technique that allows her to instantly float by holding down
         on the control stick and a jump button, known as Auto-floating.
     ]]></string>
+    <string name="frozenturnip_info_text"><![CDATA[http://gfycat.com/GloomySnoopyFawn
+        <br>
+        <br><b>Applies to:</b> Peach
+        <br>
+        <br><big><b>Frozen turnip glitch</b></big>
+        <br>The frozen turnip glitch is a glitch on the 1.00 NTSC version of Melee that
+        will cause a turnip to not travel any distance when thrown and will remain frozen
+        in air with the hitbox still active. The turnip will stay in place indefinitely
+        and won\'t disappear after a set amount of time.
+        <br>This means you can leave a turnip as a
+        remote hitbox to temporarily control a part of the stage or set it offstage by the
+        ledge to intercept an opponents recovery. The hitbox is deactivated after hitting
+        an opponent but if the turnip is picked up and thrown the turnip will become frozen
+        in this new position with a reactivated hitbox. When a frozen turnip has an active
+        hitbox it can be used to repeatedly hit shields without deactivating the hitbox,
+        the turnip will hit the shield every 17 frames until the shield is pushed out of range.
+        <br>
+        <br><b>Grab side effects</b>
+        <br>The frozen turnip has a side effect of enlarging its grab range, the grab range expands
+        each time it is thrown. http://gfycat.com/AdeptYellowBorderterrier (grey area is the grab
+        range)
+        <br>Since the turnips don\'t disappear and can be regrabbed and thrown this means
+        that a frozen turnip could be used for the rest of the match and could essentially
+        remove both the ability for either players to use tilts or jabs since it will cause
+        them to pick up the turnip. The only way for the enemy to remove the turnip is to
+        die with it in their hand. Peach is capable of returning the turnip to normal by
+        using her parasol while holding the turnip.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br><b>Step 1:</b> Grab an item (turnip, sword, etc.)
+        <br><b>Step 2:</b> Have an opponent (or team member) hit you on the first frame of
+        Peach\'s Up-B.
+        <br><b>Step 3:</b> Have fun.
+        <br>(This also works with Mr. Game and Watch\'s down tilt)
+        <br>
+        <br>Full explanation: http://bit.ly/1PjNVR3
+    ]]></string>
     <string name="hominggrapple_info_text"><![CDATA[<b>Applies to:</b> Samus
         <br>
         <br>Example of the homing grapple: http://gfycat.com/HeftyTenderCalf
@@ -755,13 +792,16 @@
         <br>Examples of Up-B turnaround: https://www.youtube.com/watch?v=y9nivZx7U8c
         <br>https://www.youtube.com/watch?v=IUrKbyyJWas
     ]]></string>
-    <string name="vududash_info_text"><![CDATA[<b>Applies to:</b> Luigi, but may work for others
+    <string name="vududash_info_text"><![CDATA[http://i.imgur.com/Fod2w0B.gifv
+        <br>
+        <br><b>Applies to:</b> Luigi, but may work for others
         <br>
         <br><big><b>Vududash</b></big>
         <br>When a character wavedashes off a platform or the stage, they lose their momentum when
-        transitioning from the wavedash into freefalling. However, some moves will maintain momentum, such as Luigi\'s Fireball.
-        <br>This technique is known as a Vududash, named after the Luigi main Vudujin.
-        <br>This technique can be useful for edgeguarding in situations where Luigi is near the middle of the
+        transitioning from the wavedash into freefalling. However,
+        some moves will maintain momentum, such as Luigi\'s Fireball.
+        <br>This technique is known as a Vududash, named after the Luigi main Vudujin
+        it\'s edgeguarding in situations where Luigi is near the middle of the
         stage and the opponent is a good distance off-stage, as seen here.
         <br>
         <br><big><b>How to perform</b></big>
@@ -1565,6 +1605,13 @@
         <br>
         <br><big><b>Other types of AI</b></big>
         <br>
+        <br><b>Aerial Interrupt Attack</b>
+        <br>Abbreviated as AIA, this is practically a AI with a hitbox. This is performed almost exactly the same as an AI, but
+        the move that is used does not have it\'s ECB align properly to AI until the moves hitbox comes out, one example is Dr. Mario\'s
+        uair, since the attack has Dr. turn upside down on the second frame of the hitbox, his ECB is adjusted at that position and time
+        and he can AI with a hitbox coming out. Unlike AI, it is required to L-cancel an AIA to properly perform it. This can be used to
+        punish extremely quickly, and to lead to more follow ups. Characters like Mario, Dr. Mario
+        <br>
         <br><b>Instant AI</b>
         <br>Performed by doing a normal AI, except that you are taking advantage of the ability to extend the ECB of your character
         downward with certain moves, so that you land on the first frame of the move performed, rather than a frame after 1.
@@ -1573,15 +1620,8 @@
         <br>Similar to instant AI, except you\'re using an aerial that moves your ECB upwards, higher than your character is, so it
         would reach it\'s position as if you were normally AI, and seemingly lift you (albeit slightly) to whatever platform you\'re
         attempting to AI onto. One quick way to perform this is to try to shorthop onto the middle platform from the left or right one
-         on Yoshi\'s Story as Falco, and dair at the point where Falco reaches the apex of his jump. The dair will move Falco\'s
+        on Yoshi\'s Story as Falco, and dair at the point where Falco reaches the apex of his jump. The dair will move Falco\'s
         ECB upwards, just enough to AI onto the top play form.
-        <br>
-        <br><b>Aerial Interrupt Attack</b>
-        <br>Abbreviated as AIA, this is practically a AI with a hitbox. This is performed almost exactly the same as an AI, but
-        the move that is used does not have it\'s ECB align properly to AI until the moves hitbox comes out, one example is Dr. Mario\'s
-        uair, since the attack has Dr. turn upside down on the second frame of the hitbox, his ECB is adjusted at that position and time
-        and he can AI with a hitbox coming out. Unlike AI, it is required to L-cancel an AIA to properly perform it. This can be used to
-        punish extremely quickly, and to lead to more follow ups.
         <br>
         <br>Aerial interrupt example: https://www.youtube.com/watch?v=NWGVkGz_kE8
     ]]></string>
@@ -3632,7 +3672,7 @@
         <br><b>0-99&#37; ledge attack range:</b> 13th farthest
         <br><b>100+&#37; ledge attack range:</b> 2nd farthest
         <br>
-        <br><b>Notable players:</jb> The GERM, Aether
+        <br><b>Notable players:</b> The GERM, Aether
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/link.71/
         <br>
