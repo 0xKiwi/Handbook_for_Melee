@@ -66,7 +66,7 @@ public class TechTabActivity extends AppCompatActivity {
                                 slidrInterface.unlock();
                                 break;
                             case 1:
-                                tabImage.setImageResource(R.drawable.style);
+                                tabImage.setImageResource(R.drawable.defaultpic);
                                 slidrInterface.lock();
                                 break;
                             case 2:
@@ -120,7 +120,7 @@ public class TechTabActivity extends AppCompatActivity {
             case "Super wavedash & SDWD":
                 viewPager.setAdapter(new SWDFragmentAdapter(getSupportFragmentManager()));
                 tabLayout.setupWithViewPager(viewPager);
-                tabImage.setImageResource(R.drawable.style);
+                tabImage.setImageResource(R.drawable.swd);
                 tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                     @Override
                     public void onTabSelected(TabLayout.Tab tab) {
@@ -128,9 +128,11 @@ public class TechTabActivity extends AppCompatActivity {
                         appBar.setExpanded(true);
                         switch(tab.getPosition()) {
                             case 0:
+                                tabImage.setImageResource(R.drawable.swd);
                                 slidrInterface.unlock();
                                 break;
                             case 1:
+                                tabImage.setImageResource(R.drawable.defaultpic);
                                 slidrInterface.lock();
                                 break;
                         }

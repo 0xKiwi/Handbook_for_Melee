@@ -219,7 +219,9 @@
         or float away in the direction they were previously headed. Any aerial or special move can be done immediately after impact,
         but the most common are Yoshi\'s faster aerial attacks (such as neutral aerial) or his Egg Lay.
     ]]></string>
-    <string name="doublejump_info_text"><![CDATA[<b>Applies to:</b> Captain Falcon and Ganondorf
+    <string name="doublejump_info_text"><![CDATA[https://i.imgur.com/Mqr8335.jpg
+        <br>
+        <br><b>Applies to:</b> Captain Falcon and Ganondorf
         <br>
         <br><big><b>Double jump refresh</b></big>
         <br>Captain Falcon and Ganondorf can refresh their double jumps by performing their Down-B attacks.
@@ -231,8 +233,6 @@
         <br>You should use this technique when you are sent upwards and off the stage high enough
         so that if you were to perform the Down-B you wouldn\'t SD by the endlag sending you into the bottom
         blastzone.
-        <br>
-        <br>Visual of it: https://i.imgur.com/Mqr8335.jpg
     ]]></string>
     <string name="egrapple_info_text"><![CDATA[<b>Applies to:</b> Samus
         <br>
@@ -657,9 +657,7 @@
         <br>\t4. Short. Press B again on frame 22
         <br>\t4. Feint. Press B again on frame 20 or 21, you will barely move, and no hitbox will come out.
     ]]></string>
-    <string name="swd_info_text"><![CDATA[https://gfycat.com/MixedShockingEeve
-        <br>
-        <b>Applies to:</b> Samus
+    <string name="swd_info_text"><![CDATA[<b>Applies to:</b> Samus
         <br>
         <br>Examples of SWD: https://www.youtube.com/watch?v=8YSeHeuiX8U
         <br>https://www.youtube.com/watch?v=ylY3dzVrkI8
@@ -699,7 +697,7 @@
     ]]></string>
     <string name="sdwd_info_text"><![CDATA[http://i.imgur.com/hNroDRW.gifv
         <br>
-        <b>Applies to:</b> Samus
+        <br><b>Applies to:</b> Samus
         <br>
         <br><big><b>Super duper wavedash</b></big>
         <br>A variant of the Super Wave Dash is the \"Super Duper Wavedash." Execution is similar to
@@ -775,10 +773,11 @@
     <string name="upbturn_info_text"><![CDATA[<b>Applies to:</b> Mewtwo, Pichu, Pikachu, Sheik, and Zelda
         <br>
         <br><big><b>Up-B turnaround</b></big>
-        <br>Although characters with a one directional recovery, such as Marth and Captain Falcon can
-        turn around their Up-B at the start, this is simply B-reversing, rather than Up-B turnaround.
+        <br>Characters who have a omnidirectional recovery that is similar to a teleport, such as Mewtwo or
+        Sheik, have the ability to turnaround their Up-B. Characters like Pichu and Pikachu can take
+        advantage of this to go the same direction twice, which is impossible to do without this technique.
         <br>
-        <br><big<b>How to perform</b></big>
+        <br><big><b>How to perform</b></big>
         <br>To do this, begin your Up-B. Now at the startup of your Up-B (before your character starts
         to actually moves/vanishes), you must LIGHTLY tilt the control stick in the opposite direction
         you are facing. This tilt must be light enough so that you do not actually travel in that
@@ -806,7 +805,7 @@
     ]]></string>
     <string name="wallbomb_info_text"><![CDATA[http://i.imgur.com/9eeElnL.gifv
         <br>
-        <b>Applies to:</b> Peach
+        <br><b>Applies to:</b> Peach
         <br>
         <br><big><b>Wallbombing</b></big>
         <br>If Peach uses her Side-B and runs into a wall, she will bounce off of it. She can
@@ -906,20 +905,22 @@
         uses Blizzard to attack opponents instead of using a tilt. Like Wobbling, it is also inescapable.
         <br>
         <br><big><b>How to perform</b></big>
-        <br>Here is a slightly more in-depth description on how to do it from Wobbles:
-        <br>\t1. Grab.
-        <br>\t2. Make sure Nana, your secondary IC, is close to you.
-        <br>\t3. Hit A to have Popo headbutt; Nana will jab.
-        <br>\t4. Gently slide the joystick either forward or down so that when you hit A next, Nana will tilt.
+        <br>Here is a slightly more in-depth description on how to do it from Wobbles, note that if your opponent is
+        less than 30&#37; they can struggle out of the grab.
+        <br>\t<b>Step 1:</b> Grab.
+        <br>\t<b>Step 2:</b> Make sure Nana, your secondary IC, is close to you.
+        <br>\t<b>Step 3:</b> Hit A to have Popo headbutt; Nana will jab.
+        <br>\t<b>Step 4:</b> Gently slide the joystick either forward or down so that when you hit A next, Nana will tilt.
         Make sure she does the tilt before the headbutt ends.
-        <br>\t5. As you continue sliding the joystick to its maximum, press A rhythmically. You want your attacks to
+        <br>\t<b>Step 5:</b> As you continue sliding the joystick to its maximum, press A rhythmically. You want your attacks to
         be spaced apart as evenly as possible.
-        <br>\t6. Keep pressing A with the joystick held in the direction you\'ve chosen. You don\'t have to move the
+        <br>\t<b>Step 6:</b> Keep pressing A with the joystick held in the direction you\'ve chosen. You don\'t have to move the
         joystick any more after this. Just keep it held to do the tilt you\'ve chosen.
-        <br>\t7. When you are done, discard the opponent. I recommend waiting until Popo headbutts then hitting the
+        <br>\t<b>Step 7:</b> When you are done, discard the opponent. I recommend waiting until Popo headbutts then hitting the
         c-stick down. Your down-smash will come out fastest and your opponent will have no forewarning that you\'re
         going to hit them; if there is anything to tech off of, they won\'t be able to. They also may DI poorly, but
         odds are you will continue hitting them until DI no longer matters.
+        <br>If you have trouble wobbling, check this video: https://youtu.be/QciuRXj5Q8E
         <br>
         <br><big><b>How it works</b></big>
         <br>Wobbling works by the existence of a mechanics exploit in Melee. When an opponent is grabbed, they cannot mash
@@ -1109,7 +1110,7 @@
         A normal match aimed to have no competitive value.
     </string>
     <string name="funcanceling_term_info">
-        Similar to wavecheating, this is a comical term used to make fun of l-canceling.
+        Similar to wavecheating, this is a comical term used to make fun of L-canceling.
     </string>
     <string name="helpless_term_info">
         Helpless is a state in which characters are unable to take any action until
@@ -1493,8 +1494,8 @@
         after Zhu.
     </string>
     <string name="thunder_term_info">
-        A extremely impressive combo for Fox. Short hop-> Down Air(l-cancelled)-> Waveshine -> Jab Reset->
-        Short hop towards opponent-> Falling Up Air(l-cancelled)-> Charged Up Smash http://i.imgur.com/fl9Uov4.gifv
+        A extremely impressive combo for Fox. Short hop-> Down Air(L-cancelled)-> Waveshine -> Jab Reset->
+        Short hop towards opponent-> Falling Up Air(L-cancelled)-> Charged Up Smash http://i.imgur.com/fl9Uov4.gifv
     </string>
     <string name="tiers_term_info">
         In gaming, a tier list is a list that ranks all characters based on metagame, effectiveness of strategies,
@@ -1683,7 +1684,7 @@
     </string>
     <string name="crouchcancel_info_text"><![CDATA[<b>Useful video for learning to CC:</b> https://www.youtube.com/watch?v=IA-ROZiZJqY
         <br>
-        <big><b>Crouch Canceling</b></big>
+        <br><big><b>Crouch Canceling</b></big>
         <br>Abbreviated as CC, Crouch canceling is the act of crouching when being hit by an attack in
         order to reduce your knockback and damage taken. Most players suggest you should always crouch
         cancel, with the exception to some moves such as Peach\'s down smash as CC\'ing it will
@@ -1848,63 +1849,6 @@
         <br>Here is a nice visual display of it: http://i.imgur.com/BIDsld8.gif
         <br>One more: http://www.gfycat.com/MarvelousFavorableIndianjackal
     ]]></string>
-    <string name="platformcancel_info_text"><![CDATA[<b>Note:</b> The nair performed by Mario is the platform cancel. The initial
-        hit is a aerial interrupt attack uair.
-        <br>
-        <br><big><b>Platform canceling</b></big>
-        <br>While dropping down from a platform - one frame after the initial crouch animation - characters
-        are considered to be in the air. Because of this, they are obviously allowed to use aerial attacks.
-        Platform canceling takes its name from the fact that using an aerial attack during that one frame causes
-        the character to re-land on the platform, thus canceling the platform.
-        <br>Platform cancels depends on many things. How fast the hitbox comes out, the strength of the attack
-        (which in turn affects how much hitlag there is), the fall speed of the character, and the ECB pattern
-        of the attack. The two most important ones are speed and strength.
-        <br>The main difference between an AI and a platform cancel is that platform canceling has the player stay
-        on top of the platform, and has much more strict timing. It also requires the hitlag from landing the aerial
-        you are platform canceling.
-        While an AI implies the player used the aerial while their character got onto the platform.
-        <br>
-        <br><big><b>How to perform</b></big>
-        <br>Drop through a platform that the character is standing on.
-        Exactly one frame afterwards, use any aerial attack, land it on an opponent, and L-cancel.
-        <br>If done correctly, a platform cancel will occur, your character would\'ve performed an
-        aerial (and landed it) all while staying on top of the platform.
-        <br>
-        <br><big><b>Applicable attacks in Melee</b></big>
-        <br>Unless noted, attacks have a one frame window. These apply to stationary platforms;
-        for downward moving platforms, the window sizes may vary, and more attacks may be possible.
-        <br>
-        <br>\t<b>Link</b> – nair (two frame window), uair
-        <br>\t<b>Luigi</b> – nair (two frame window), bair
-        <br>\t<b>Mario</b> – nair
-        <br>\t<b>Marth</b> – fair
-        <br>\t<b>Samus</b> – nair
-        <br>\t<b>Yoshi</b> – uair
-        <br>\t<b>Sheik</b> – nair
-        <br>\t<b>Falco</b> – bair
-        <br>\t<b>Young Link</b> – nair
-        <br>
-        <br><big><b>Application</b></big>
-        <br>When used with aerial attacks that have little lag, a platform-canceled aerial attack can lead
-        into lethal combos due to the incredibly small amount of lag. In comparison to the SHFFL, the
-        characters jump animation and falling animation are both eliminated, removing somewhere from
-        20-30 frames from an aerial attack. However, platform canceling could easily be considered the most
-        difficult to use advanced technique in the game, requiring frame-perfect technical skill to be
-        used consistently and effectively.
-        <br>It is also possible to do this in Smash 64, as demonstrated through TAS style combos by Jpheal,
-        and it is similarly incredibly difficult. However, it is only possible on rising platforms/diagonal platforms.
-        <br>
-        <br><big><b>Advantages</b></big>
-        <br>Erases the jumping and falling animations, replacing them with a one-frame crouching animation.
-        Slow-starting aerial attack are auto-canceled, creating a mindgame option.
-        <br>The speed of the technique allows for extremely fast combos, especially shield break combos.
-        <br>
-        <br><big><b>Disadvantages</b></big>
-        <br>Requires a platform which can be passed through.
-        <br>Extremely strict timing
-        <br>
-        <br>Example of platform canceling: https://www.youtube.com/watch?v=1JZh86P1ENY
-    ]]></string>
     <string name="ffall_info_text"><![CDATA[<big><b>Fast falling</b></big>
         <br>Fast falling is the act of falling quicker than usual in mid-air.
         <br>It is performed by tapping down on the control stick while falling. The character will continue
@@ -1962,7 +1906,7 @@
         <br>Fox-trotting can also be performed by jump-canceling a dash into a
         wavedash, then dashing again, or by dash-canceling a full dash into another dash.
     ]]></string>
-    <string name="jabcancel_info_text"><![CDATA[<br><big><b>Jab cancel</b></big>
+    <string name="jabcancel_info_text"><![CDATA[<big><b>Jab cancel</b></big>
         <br>Jab canceling can be performed by any character with a multiple-attack neutral attack jab
         combo. At any point in the combo, before reaching the \"final\" hit, the player can shield, crouch,
         or quickly turn around and back to cancel the combo and allow the character to perform other attack
@@ -2124,7 +2068,7 @@
         <br>http://gfycat.com/SmugOilyAmericanquarterhorse
         <br>http://gfycat.com/GracefulMiniatureHousefly
         <br>
-        <big><b>Ledgedash</b></big>
+        <br><big><b>Ledgedash</b></big>
         <br>Ledgedashing is a technique where one takes advantage of the 29 frames of invincibility
         that occurs upon dropping from the ledge and uses several other advanced techniques (such
         as wavedash) to get back onto the stage and gain control in an otherwise
@@ -2321,6 +2265,63 @@
         <br><b>More info</b>
         <br>For more info, check out this video from PewPewU: https://www.youtube.com/watch?v=XhujDoRBXeY
     ]]></string>
+    <string name="platformcancel_info_text"><![CDATA[<b>Note:</b> The nair performed by Mario is the platform cancel. The initial
+        hit is a aerial interrupt attack uair.
+        <br>
+        <br><big><b>Platform canceling</b></big>
+        <br>While dropping down from a platform - one frame after the initial crouch animation - characters
+        are considered to be in the air. Because of this, they are obviously allowed to use aerial attacks.
+        Platform canceling takes its name from the fact that using an aerial attack during that one frame causes
+        the character to re-land on the platform, thus canceling the platform.
+        <br>Platform cancels depends on many things. How fast the hitbox comes out, the strength of the attack
+        (which in turn affects how much hitlag there is), the fall speed of the character, and the ECB pattern
+        of the attack. The two most important ones are speed and strength.
+        <br>The main difference between an AI and a platform cancel is that platform canceling has the player stay
+        on top of the platform, and has much more strict timing. It also requires the hitlag from landing the aerial
+        you are platform canceling.
+        While an AI implies the player used the aerial while their character got onto the platform.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>Drop through a platform that the character is standing on.
+        Exactly one frame afterwards, use any aerial attack, land it on an opponent, and L-cancel.
+        <br>If done correctly, a platform cancel will occur, your character would\'ve performed an
+        aerial (and landed it) all while staying on top of the platform.
+        <br>
+        <br><big><b>Applicable attacks in Melee</b></big>
+        <br>Unless noted, attacks have a one frame window. These apply to stationary platforms;
+        for downward moving platforms, the window sizes may vary, and more attacks may be possible.
+        <br>
+        <br>\t<b>Link</b> – nair (two frame window), uair
+        <br>\t<b>Luigi</b> – nair (two frame window), bair
+        <br>\t<b>Mario</b> – nair
+        <br>\t<b>Marth</b> – fair
+        <br>\t<b>Samus</b> – nair
+        <br>\t<b>Yoshi</b> – uair
+        <br>\t<b>Sheik</b> – nair
+        <br>\t<b>Falco</b> – bair
+        <br>\t<b>Young Link</b> – nair
+        <br>
+        <br><big><b>Application</b></big>
+        <br>When used with aerial attacks that have little lag, a platform-canceled aerial attack can lead
+        into lethal combos due to the incredibly small amount of lag. In comparison to the SHFFL, the
+        characters jump animation and falling animation are both eliminated, removing somewhere from
+        20-30 frames from an aerial attack. However, platform canceling could easily be considered the most
+        difficult to use advanced technique in the game, requiring frame-perfect technical skill to be
+        used consistently and effectively.
+        <br>It is also possible to do this in Smash 64, as demonstrated through TAS style combos by Jpheal,
+        and it is similarly incredibly difficult. However, it is only possible on rising platforms/diagonal platforms.
+        <br>
+        <br><big><b>Advantages</b></big>
+        <br>Erases the jumping and falling animations, replacing them with a one-frame crouching animation.
+        Slow-starting aerial attack are auto-canceled, creating a mindgame option.
+        <br>The speed of the technique allows for extremely fast combos, especially shield break combos.
+        <br>
+        <br><big><b>Disadvantages</b></big>
+        <br>Requires a platform which can be passed through.
+        <br>Extremely strict timing
+        <br>
+        <br>Example of platform canceling: https://www.youtube.com/watch?v=1JZh86P1ENY
+    ]]></string>
     <string name="pshield_info_text"><![CDATA[<big><b>Powershield</b></big>
         <br>This is a technique where one activates a full shield such that it connects with an incoming attack on the first few frames. In
         order for the technique to be executed, one must rely on timing and skill. When the opponent is ready to strike, the player
@@ -2357,9 +2358,7 @@
         distance 1.5X, the laser is not safe, as powershielding does yield follow-ups such as a grab.
         <br>Yoshi\'s shield sometimes powershields attacks even when the shield is already up.
     ]]></string>
-    <string name="platformwarp_info_text"><![CDATA[http://gfycat.com/NeighboringDefiniteCockerspaniel
-        <br>
-        <big><b>Platform warp</b></big>
+    <string name="platformwarp_info_text"><![CDATA[<big><b>Platform warp</b></big>
         <br>Abbreviated as PW, Platform warping is taking advantage of ECB (Environmental Collision Box, the \"bones\"
         of the player model) changes after a double jump to quickly land onto platforms. The main difference
         between a platform warp and an AI (Aerial Interrupt) is that a platform warp takes place only on platforms and requires the
@@ -2452,7 +2451,8 @@
         Vesne: http://smashboards.com/threads/new-tech-reverse-walljumping.417240/
         ]]>
     </string>
-    <string name="shieldpress_info_text"><![CDATA[Shield pressure is a combination of attacks that enables a
+    <string name="shieldpress_info_text"><![CDATA[<big><b>Shield pressure</b></big>
+        <br>Shield pressure is a combination of attacks that enables a
         character to break an opponent\'s shield without the opponent having to hold down shield for the
         duration of the combo.
         <br>
@@ -2487,22 +2487,17 @@
         <br>\tYoshi\'s down aerial
         <br>\tA low-cooldown attack into a multi-hit attack is often considered a shield break combo
     ]]></string>
-    <string name="shielddrop_info_text"><![CDATA[Shield platform dropping is dropping through
-        a soft platform while shielding by tilting the analog stick down.
-        <br>
+    <string name="shielddrop_info_text"><![CDATA[
         <br><big><b>Shield dropping</b></big>
-        <br>As the sidestep is introduced in Melee, pressing the control stick too far and too fast results
-        in a sidestep. Since this makes it hard to platform drop while shielding, the player must either
-        be very precise with their inputs or press the stick down during a different action than shielding
-        (such as a dash or shield stun) with close enough timing that the sidestep window is closed but
-        the drop window is still open.
+        <br>Shield platform dropping is dropping through
+        a soft platform while shielding by tilting the analog stick down or
         <br>
         <br><big><b>How to perform</b></big>
         <br>There are two ways to perform a shield drop:
         <br><b>1.</b> Open up your shield, and tilt the control stick the correct amount downwards rapidly (approximately one
         notch on the GC remote)
-        <br><b>2.</b> The easier way, to move the control stick towards the side, and then bringing it down one notch. Although this way
-        is slow unless set up properly, and is easily readable.
+        <br><b>2.</b> Move the control stick towards the side, and then bringing it down one notch.
+        Although this method is slower, and is easily readable, it is easier to perform.
         <br>
         <br>For more help on how to shield drop consistently,
         check out this video by Victra: https://www.youtube.com/watch?v=hsl03HJ_LTU
@@ -2557,8 +2552,8 @@
     ]]></string>
     <string name="sdi_info_text"><![CDATA[Useful video: https://www.youtube.com/watch?v=CO7YD9KqNhY
         <br>
-        <big><b>Smash directional influence</b></big>
-        <br>Often shortened to Smash DI or SDI is a mechanic that allows players to slightly alter their position during
+        <br><big><b>Smash DI</b></big>
+        <br>Often shortened to SDI is a mechanic that allows players to slightly alter their position during
         the freeze frames of being hit by an attack. Tapping the control stick or C-Stick in any direction (rapidly, like
         how you rapidly tap the C-Stick when performing an aerial or smash attack), during freeze frames will slightly
         move their character in that direction, allowing them to potentially escape multi-hit moves or certain combos.
@@ -3182,8 +3177,8 @@
         <br>
         <br><b>Post for Falcon:</b> http://smashboards.com/threads/the-falcon-index-thread-new-post-of-the-week-by-magus.307911/
         <br>
-        <br>Captain Falcon currently ranks 7th place on the Melee tier list (in the S tier). He still ranks rather high like in the Smash
-        64 tier list because he retains his incredible comboing abilities; he has a fast falling speed and air speed, and the
+        <br>Captain Falcon currently ranks 8th place on the Melee tier list (in the B tier). He ranks rather high
+        because he of his incredible comboing abilities; he has a fast falling speed and air speed, and the
         fastest dash of all characters, giving him one of the best SHFFLs in the game. His above average weight and fast falling
         speed makes him the most resistant character to vertical KOs. His speed, fast rolls, and Raptor Boost enable an excellent
         dodging and tech-chasing game.
@@ -3232,7 +3227,7 @@
         <br>
         <br><b>Helpful guide on Fox:</b> http://smashboards.com/guides/guide-to-ace-arwing-pilot-fox-mccloud-updated-for-2015.100/
         <br>
-        <br>Fox currently ranks 1st on the S tier in the tier list, true to his position he is
+        <br>Fox currently ranks 1st on the SS tier in the tier list, true to his position he is
         an extremely efficient fighter, with fast attacks, excellent comboing and damaging ability,
         long recovery options, and numerous options to approach the opponent, boasting some of the best neutral game options among
         the entire cast. He has KO options and setups at a wide variety of percentages, and his high falling speed makes him resilient
@@ -3287,7 +3282,7 @@
         <br><b>What makes Ganon good:</b> https://www.youtube.com/watch?v=kZNJhUld7Ek
         <br><b>Q & A thread:</b> http://smashboards.com/threads/how-to-wreck-es-with-ganon-linguini-q-a-thread.215432/
         <br>
-        <br>Ganondorf currently ranks 12th in the A tier on the Melee tier list. Ganondorf boasts extreme power, good reach, decent chaingrabbing
+        <br>Ganondorf currently ranks 14th in the E tier on the Melee tier list. Ganondorf boasts extreme power, good reach, decent chaingrabbing
         ability, and very useful aerials, including the strongest meteor smash in the game in his down aerial. He also has several effective
         edgeguarding options including the aforementioned down aerial, both the strong and weak hitboxes of his up aerial, and his back
         aerial. Nonetheless, Ganondorf has extreme flaws to counteract these great strengths as well. He has a bad neutral game due to his
@@ -3340,7 +3335,7 @@
         <br><b>Tech-chasing:</b> http://portraitinsmash.blogspot.ca/2015/09/tech-chasing.html
         <br>
         <br>Sheik used to be first on the Melee tier list until the eighth version of it, where Fox now currently takes the top spot. Sheik now ranks
-        third on the tier list, in the S tier primarily due to her chain throw, excellent combos, a great finisher in her f-air, a very
+        4th on the tier list, in the S tier primarily due to her chain throw, excellent combos, a great finisher in her f-air, a very
         good approach due to fast aerials and high jumps, and one of the best edgeguarding games in Melee. Sheik, however, suffers from a
         relatively short and predictable recovery, as well as a rather short but quick wavedash. Also, most of her moves are weak for
         an attack of their type.
@@ -3378,9 +3373,9 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/mario.67/
         <br>
-        <br>Mario is ranked 14th on the current tier list in the A tier, placing him in the center, along with his brother Luigi and five
-        places below his clone, Dr. Mario. Mario acts as a well-rounded character, with average weight, falling speed and other such attributes.
-        Mario has above-average comboing ability, and a very versatile grab game; his powerful back throw can gimp recoveries, and his down
+        <br>Mario is ranked 15th on the current tier list in the E tier.
+        Mario acts as a well-rounded character, with average weight, falling speed and other such attributes.
+        He also has above-average comboing ability, and a very versatile grab game; his powerful back throw can gimp recoveries, and his down
         throw can chain-grab. Mario also has decent edge-guarding, with Fireball (a solid projectile), and his Cape which can easily and
         efficiently gimp almost every other characters recovery. Mario, however, lacks a reliable finisher, and his recovery is predictable
         and short, though he can extend it.]]></string>
@@ -3421,7 +3416,7 @@
         <br>https://docs.google.com/document/d/1Daf_Dqod1HoMj7L26ITeUM-xKUKhfxh2vJLWOl2N0C8/edit?pli=1
         <br><b>Chaingrab info:</b> http://smashboards.com/threads/detailled-chaingrab-information.323364/
         <br>
-        <br>Marth currently ranks 4th place on the tier list, in the S tier. This is due to fast overall startup in his attacks, long and disjointed range,
+        <br>Marth currently ranks 3rd place on the tier list, in the S tier. This is due to fast overall startup in his attacks, long and disjointed range,
         large amounts of extra power when attacks hit at the tip of his blade, very potent juggling and combo ability with one of the largest
         non-disjointed grab ranges, and a great edgeguarding ability. Marth is also blessed with a multitude of good movement options to
         approach and pressure with. He has a long dash dance and a long wavedash, both of which compliment his large reach. Marth also has
@@ -3474,7 +3469,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/pichu.115/
         <br>
-        <br>Pichu is currently ranked 25th in the F tier, the lowest ranked clone character. This is due to its terrible range and that most characters can
+        <br>Pichu is currently ranked 24th in the G tier, the lowest ranked clone character. This is due to its terrible range and that most characters can
         easily chain throw it, despite its small size and its status as the lightest character in the game, which are also its flaws. It takes
         damage from its own electric attacks, hindering its KOing ability, as most of its finishing attacks involve electricity. Pichu does
         have strengths, such as a surprisingly good grab game; Pichu is very quick and most of its attacks have little to no start-up lag. Pichu
@@ -3521,8 +3516,8 @@
         <br><b>Peach guide:</b> https://www.youtube.com/watch?v=zvNgmahChOM
         <br>https://www.youtube.com/watch?v=8C01hqm6bdQ
         <br>
-        <br>Currently, Peach is 6th in the S tier, the highest ranked of any Mario character (not including sub-series, though she is still ranked higher
-        than them, too). Her float cancel gives her a fantastic aerial game, and she can play mindgames by using Toad. Peach also has good
+        <br>Currently, Peach is 6th in the A tier, the highest ranked of any Mario character.
+        Her float cancel gives her a fantastic aerial game, and she can play mindgames by using Toad. Peach also has good
         chaingrabbing abilities, which is particularly useful against higher tiered characters. She is also the owner of one of the best
         projectiles in the game. Additionally, Peachs recovery is among the best in the game, with many options available to her, allowing
         her to recover at almost any angle. However, Peachs primary flaw is her light weight and floatiness, which makes her more susceptible
@@ -3600,7 +3595,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/kirby.80/
         <br>
-         <br>Currently, Kirby is ranked 26th in the F tier at the very bottom, a huge drop from his 2nd position in Smash 64. While he has some interesting
+         <br>Currently, Kirby is ranked 26th in the G tier at the very bottom. While he has some interesting
          throw options and a decent edgeguarding game, Kirbys approach and KO ability are among the worst in the game; slow attacks, a low air speed,
          an ineffective projectile, and numerous other flaws on both the ground and air prevent Kirby from easily approaching enemies, and he struggles
          against almost all characters as a result of this. Kirby currently has only two positive matchups (against Bowser and Roy), and even these
@@ -3638,7 +3633,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/mewtwo.82/
         <br>
-        <br>Mewtwo is ranked 21st on the current tier list, in the B tier. While initially deemed the worst character in the game, the changing metagame
+        <br>Mewtwo is ranked 21st on the current tier list, in the F tier. While initially deemed the worst character in the game, the changing metagame
         of Melee caused Mewtwo to experience a rise of five places. Mewtwos good attributes include a long, safe, and difficult-to-counter recovery,
         a rather good chaingrabbing ability, a large variance of mix-up options, a decent combo ability, and among the best throws in the game. However,
         Mewtwo suffers from an unusual combination of being a large target and a lightweight; this, combined with its floatiness, makes it easy to KO.
@@ -3677,7 +3672,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/link.71/
         <br>
-        <br>Link is ranked 16th in the tier list, in the B tier, which is much higher than his current rank in the Smash 64 tier list (11th out of 12), and just one
+        <br>Link is ranked 18th in the tier list, in the E tier just two places
         below his clone, Young Link. Links placement is due to a very good approach due to some low lag aerials (with his neutral and forward air), a
         good variety of projectiles and a very high air speed. A disjointed hitbox also gives Link a slight advantage against others, as well as a fully
         functional shield that can block a wide variety of projectiles. Link is also a potent edgeguarder in the NTSC versions of the game; his Spin
@@ -3718,7 +3713,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/young-link.112/
         <br>
-        <br>Young Link ranks 15th on the tier list in the B tier, one place higher than Link. Young Link has a very good approach due to some low lag aerials, a great SHFFL
+        <br>Young Link ranks 16th on the tier list in the E tier,  two places higher than Link. Young Link has a very good approach due to some low lag aerials, a great SHFFL
         and a good wavedash, as well as three projectiles. Young Link also is a potent comboer due to his projectiles, and can also edgeguard and space
         well. However, Young Links primary flaw is that he has trouble KOing, due to the lack of an efficient quick KO move and having difficulty in
         hitting cleanly with his smash attacks (except his down smash). Additionally, like Link, Young Link has a slow and predictable recovery, though
@@ -3758,7 +3753,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/zelda.73/
         <br>
-        <br>Zelda is 19th on the tier list, in the B tier. Zeldas positive attributes include an effective KO move with her Lightning Kick, as well as powerful
+        <br>Zelda is 22nd on the tier list, in the F tier. Zeldas positive attributes include an effective KO move with her Lightning Kick, as well as powerful
         attacks with transcendent priority. Zeldas primary weakness, however, is her poor movement, due to having the slowest dash speed in the game
         (along with Jigglypuff), slow falling, and air speed, which together with her very high traction results in the shortest wavedash in the game
         (along with Peach). Additionally, despite Zeldas somewhat long recovery, her recovery is very easily edgeguarded and/or edgehogged. This
@@ -3797,7 +3792,7 @@
         <br>
         <br><b>Smashboards forum:</b> http://smashboards.com/forums/bowser.65/
         <br>
-        <br>Bowser is currently ranked 24th in the F tier in the current Melee tier list. Among Bowser\'s positive traits is his difficulty in getting KO\'d due to his
+        <br>Bowser is currently ranked 25th in the G tier in the current Melee tier list. Among Bowser\'s positive traits is his difficulty in getting KO\'d due to his
         high weight and rather fast falling speed; additionally, he has among the most powerful attacks in the game (most notably his forward smash), as
         well as some very good aerial attacks, most notably his forward and upward aerials. However, he suffers due to his large size and falling speed,
         making him extremely easy to combo. His moves are also very sluggish, and his approach is among the worst in the game, with laggy aerials, poor
@@ -3838,8 +3833,8 @@
         <br>
         <br><b>Helpful guide on Jiggs:</b> http://smashboards.com/threads/mah0nes-stuff-about-puff.298777/
         <br>
-        <br>Jigglypuff is 5th place on the Melee tier list, in the S tier, a significant improvement from its 6/12 position on the previous games tier list.
-        Jigglypuffs jump on the tier list is due to its incredible recovery, an extremely dangerous edgeguarding technique in the wall of pain, a
+        <br>Jigglypuff is 5th place on the Melee tier list, in the A tier.
+        Jigglypuffs placement on the tier list is due to its incredible recovery, an extremely dangerous edgeguarding technique in the wall of pain, a
         powerful KO move that can easily be comboed into, and an overall great aerial game and developed metagame.
         <br>Its floatiness also makes it the
         only character in the top tier who cannot be easily comboed or chaingrabbed, which is also aided by its small size, which allows Jigglypuff
@@ -3887,7 +3882,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/game-watch.78/
         <br>
-        <br>Mr. Game &amp; Watch is currently ranked 22nd in Melees tier list. Mr. Game &amp; Watch\'s positive attributes include extremely powerful KO moves that have a
+        <br>Mr. Game &amp; Watch is currently ranked 19th in Melees tier list. Mr. Game &amp; Watch\'s positive attributes include extremely powerful KO moves that have a
         long duration as well as a slew of moderately effective special moves, two of which (Judge and Oil Panic) can give a OHKO. However, Mr. Game &amp;
         Watch\'s flaws are due to how he was translated to Melee; he has a bad approach due to his slow overall speed, and outside of his throws, he is
         rather predictable. His high hitstun and light weight also make him an easy target for combos. Mr. Game &amp; Watch also has the dubious distinction
@@ -3927,7 +3922,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/donkey-kong.77/
         <br>
-        <br>Donkey Kong is currently 17th on the tier list in the B tier. Donkey Kong, true to being a heavyweight, is difficult to KO, and this is aided by his fast falling
+        <br>Donkey Kong is currently 17th on the tier list in the E tier. Donkey Kong, true to being a heavyweight, is difficult to KO, and this is aided by his fast falling
         speed. Donkey Kong also has powerful attacks, and he has excellent range to boot. Despite his weight and size, Donkey Kong is very agile; most
         of his attacks are executed swiftly, he has good air speed, and his jumping prowess is surprisingly good. His mobility facilitates combos, and
         this is further aided by his remarkable grab. However, Donkey Kong himself is easy to combo due to his large frame, and his recovery is among
@@ -3965,7 +3960,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/doctor-mario.113/
         <br>
-        <br>Dr. Mario currently ranks 9th in Melee’s tier list at the top of the A tier, five places higher than Mario\'s rank. His relatively high tier placement is a
+        <br>Dr. Mario currently ranks 11th in Melee’s tier list at the top of the D tier, four places higher than Mario\'s rank. His relatively high tier placement is a
         consequence of his combo ability with overall uniqueness as a fighter, such as an unusual sex kick. His approach options are also very good, with a
         long wavedash and a good air game, as well as a very good SHFFL. Dr. Mario also has a good projectile, which itself can be used to aid his approach.
         However, Dr. Mario\'s primary weakness is his abysmal recovery, which is one of the worst in the game, due to its predictability and few methods of
@@ -4006,7 +4001,7 @@
         <br>
         <br><b>Helpful Climber guide:</b> http://smashboards.com/threads/the-solution-an-ice-climbers-guide-to-non-grab-skillz-by-choknater.112413/
         <br>
-        <br>Ice Climbers rank 8th on the tier list (in the S tier), highly accredited to the usage of Wobbling and Desynching and the fact that the fighter is literally
+        <br>Ice Climbers rank 7th on the tier list (in the B tier), highly accredited to the usage of Wobbling and Desynching and the fact that the fighter is literally
         \"two-in-one", which helps the climbers rack up damage, combo, and KO opponents; this gives the Ice Climber\'s one of the best grab games in Melee.
         Additionally, good players can quickly rack up damage with the two, and they have good approach options on the ground, due to disjointed hitboxes and
         two decent projectiles. The two also have a very long and floaty wavedash, aiding their approach tremendously. The Ice Climbers, however, have a poor
@@ -4055,7 +4050,7 @@
         previous game, Samus, similarly to Link, reprises her role as a short-ranged fighter with numerous ranged options. In addition, she received some
         powerful buffs, causing her to improve from a bottom-tiered character in Super Smash Bros. to a high-mid tiered character in Melee.
         <br>
-        <br>Samus is currently ranked 11th on the current tier list, placing her in upper A tier. This is mainly due to her numerous and effective projectiles
+        <br>Samus is currently ranked 10th on the current tier list, placing her in C tier. This is mainly due to her numerous and effective projectiles
         , which adds to her KOing power and her approach on the ground. She also has a good air game, complimented with a powerful back aerial. Samus
         recovery is among the best in the game; her bomb jumps, ability to wall jump, grappling beam, and heavy weight all contribute to making her among
         the toughest characters to KO horizontally. She also possesses techniques exclusive to her, such as the Super Wavedash and Extended Grapple, that
@@ -4100,7 +4095,7 @@
         <br><b>Guide on Luigi:</b> http://smashboards.com/threads/advance-attack-avoid-through-the-lens-of-luigi.389684/
         <br>https://www.reddit.com/r/SSBM/comments/334b0r/20gx_on_luigi/
         <br>
-        <br>Luigi currently ranks 13th on the tier list, in the A tier, placing him in the dead centre immediately above his older brother Mario. Luigi
+        <br>Luigi currently ranks 13th on the tier list, in the D tier, placing him in the dead centre immediately above his older brother Mario. Luigi
         is notable for having some of the best aerials in all of Melee; they are very fast, very powerful and have very low ending and landing lag.
         Luigis wavedash is the longest in the game, taking him nearly half the distance of Final Destination at a high speed (only slightly slower
         than Captain Falcon\'s dash). Luigi also has a wide array of efficient combo and KO moves both in the air and on the ground. Luigis traction
@@ -4148,7 +4143,7 @@
         <br><b>Pika guides:</b> http://smashboards.com/threads/pikachu-guide-2011.312544/
         <br>Q & A: http://smashboards.com/threads/ask-about-pikachu-hosted-by-axe-and-n64-feat-dkuo.240209/
         <br>
-        <br>Pikachu ranks 10th on the current tier list, in the A tier. Pikachu, while nerfed from the original SSB, is still a potent fighter; it has very good
+        <br>Pikachu ranks 9th on the current tier list, in the C tier. Pikachu, while nerfed from the original SSB, is still a potent fighter; it has very good
         speed and plenty of KO options, as it owns the strongest up smash in the game and a quick semi-spike in its up-air. It also has a very long,
         safe, and versatile recovery. However, Pikachu is strongly held back by a bad range, with its best finishers having hitboxes very close to its
         body; coupled with sub-par options in the air and a short wavedash, Pikachu overall
@@ -4191,7 +4186,7 @@
         the same animations and most having similar functioning, although they do also have their differences in their fighting styles (primarily in the
         location of their sweet and sourspots). Like Marth, he is a hidden character, making Roy the only clone of an unlockable character.
         <br>
-        <br>Roy is currently ranked 20th on the tier list, in the B tier. Roy\'s upsides include a good approach due to one of the best SHFFLs in the game, as well
+        <br>Roy is currently ranked 20th on the tier list, in the F tier. Roy\'s upsides include a good approach due to one of the best SHFFLs in the game, as well
         as a good grab game, and among the best reaches in the game. However, Roy\'s flaws are significant, including poor flexibility in his comboing
         game, attacks that are difficult ito properly land, generally possessing significantly laggy attacks, possessing few moves that can KO and only
         one of which (forward smash) that is an adequate finisher, and among the worst recoveries in the game while being a light character that is
@@ -4233,7 +4228,7 @@
         <br><b>Yoshi info:</b> http://smashboards.com/threads/some-yoshi-information.351635/
         <br>http://smashboards.com/threads/how-to-hatch-a-healthy-yoshi-a-yoshi-guide.53132/
         <br>
-        <br>Yoshi is currently ranked 18th on the current tier list, in the B tier. Yoshi has outstanding combo ability with his double jump canceling (especially
+        <br>Yoshi is currently ranked 12th on the current tier list, in the D tier. Yoshi has outstanding combo ability with his double jump canceling (especially
         against fast-fallers like Fox), a great aerial game (coupled with the third most powerful meteor smash in the game), and some decent approach
         options. He can also play mindgames and extend combos with his unpredictable Egg Throw, and has a very reliable finisher in his down smash,
         which has almost no start-up lag, outstanding reach and knockback, and a very favorable launch angle that is hard to DI against or recover
@@ -4520,90 +4515,90 @@
         <br>Full post: http://smashboards.com/threads/understanding-the-depth-of-mix-up-games-in-ssbm.105433/
     ]]></string>
     <string name="mustreads_info_text"><![CDATA[<big><b>Must reads</b></big>
-    <br><b>As there is just too much info to fit into this app, here are articles and
-    posts I highly suggest you read through, as they should help and inform you about several things.</b>
-    <br>
-    <br><b>Huge collection of everything</b>
-    <br>www.tinyurl.com/meleelibrary
-    <br>
-    <br><b>20XX TE, a tourney Melee hack pack</b>
-    <br>http://www.20xx.me/
-    <br>
-    <br><big><b>Smashboards</b></big>
-    <br>
-    <br><b>Best of Smashboards #1</b>
-    <br>https://badmelee.wordpress.com/2015/11/16/the-best-of-smashboards-1/
-    <br>
-    <br><b>Best of Smashboards #2</b>
-    <br>http://badmelee.com/2015/11/23/the-best-of-smashboards-2/
-    <br>
-    <br><b>History of a Smasher by Chillindude</b></big>
-    <br>http://smashboards.com/threads/history-of-a-smasher.290961/
-    <br>
-    <br><b>The Four Aspects of Melee</b>
-    <br>http://smashboards.com/threads/the-four-aspects-of-melee.94597/
-    <br>
-    <br><b>10,000 Words of Power</b>
-    <br>http://smashboards.com/threads/10-000-words-of-power.295524/
-    <br>
-    <br><b>Confidence in Smash, from PPMD</b>
-    <br>http://smashboards.com/threads/falco-discussion-thread.256826/page-126#post-12281679
-    <br>
-    <br><b>Oberservation: The Key to Higher Level Play</b>
-    <br>http://smashboards.com/threads/observation-the-key-to-higher-level-smash-play.103017/
-    <br>
-    <br><b>An Analysis of Ascending to the Next Level</b>
-    <br>http://smashboards.com/threads/reaching-the-pantheon-an-analysis-of-ascending-to-the-next-level.96828/
-    <br>
-    <br><b>Approaching and Why Fox is good from PPMD</b>
-    <br>http://smashboards.com/threads/falco-discussion-thread.256826/page-265#post-13591750
-    <br>
-    <br><b>Advance, Attack, Avoid (Through the lens of Luigi)</b>
-    <br>http://smashboards.com/threads/advance-attack-avoid-through-the-lens-of-luigi.389684/
-    <br>
-    <br><big><b>Reddit</b></big>
-    <br>
-    <br><b>Mindset of Improvement</b>
-    <br>https://www.reddit.com/r/smashbros/comments/235klc/discussing_the_mindset_of_improvement/
-    <br>
-    <br><b>How to understand a character\'s options</b>
-    <br>https://www.reddit.com/r/SSBM/comments/3r5g2l/how_to_understand_a_characters_movement_the/
-    <br>
-    <br><big><b>Other</b></big>
-    <br>
-    <br><b>Complete Complete, Blog from Wobbles</b>
-    <br>http://www.compete-complete.com/
-    <br>
-    <br><b>Tai\'s Marth guide (Everyone can benefit from this)</b>
-    <br>http://www.meleeitonme.com/sharpening-your-sword-tais-marth-guide/
-    <br>
-    <br><b>Bad Melee, humorous and helpful blog</b>
-    <br>http://badmelee.com/
-    <br>
-    <br><big><b>Videos</b></big>
-    <br>
-    <br><b>The Smash Documentary</b>
-    <br>https://www.youtube.com/watch?v=jX9hbbA-WP4
-    <br>
-    <br><b>The Smash Documentary Series (Remastered)</b>
-    <br>https://www.youtube.com/watch?v=NSf2mgkRm7Q&list=PLoUHkRwnRH-IXbZfwlgiEN8eXmoj6DtKM
-    <br>
-    <br><b>Smash Practice, helpful words from Zhu and Cactuar</b>
-    <br>https://www.youtube.com/playlist?list=PL32VvbzXtv1Z5JqXR_gNCtUZI5h7TfOGR
-    <br>
-    <br><b>20GX, beginner fundamental discussion</b>
-    <br>https://www.youtube.com/watch?v=qAUVzXOct4o
-    <br>
-    <br><b>Mindset talk with PPMD</b>
-    <br>https://www.youtube.com/watch?v=l5UCDsBZtlk
-    <br>
-    <br><big><b>Streams</b></big>
-    <br>
-    <br><b>Smash Practice with Zhu and Cactuar</b>
-    <br>http://www.twitch.tv/smashpractice
-    <br>
-    <br><b>Melee It On Me</b>
-    <br>http://www.twitch.tv/meleeitonme
+        <br><b>As there is just too much info to fit into this app, here are articles and
+        posts I highly suggest you read through, as they should help and inform you about several things.</b>
+        <br>
+        <br><b>Huge collection of everything</b>
+        <br>www.tinyurl.com/meleelibrary
+        <br>
+        <br><b>20XX TE, a tourney Melee hack pack</b>
+        <br>http://www.20xx.me/
+        <br>
+        <br><big><b>Smashboards</b></big>
+        <br>
+        <br><b>Best of Smashboards #1</b>
+        <br>https://badmelee.wordpress.com/2015/11/16/the-best-of-smashboards-1/
+        <br>
+        <br><b>Best of Smashboards #2</b>
+        <br>http://badmelee.com/2015/11/23/the-best-of-smashboards-2/
+        <br>
+        <br><b>History of a Smasher by Chillindude</b></big>
+        <br>http://smashboards.com/threads/history-of-a-smasher.290961/
+        <br>
+        <br><b>The Four Aspects of Melee</b>
+        <br>http://smashboards.com/threads/the-four-aspects-of-melee.94597/
+        <br>
+        <br><b>10,000 Words of Power</b>
+        <br>http://smashboards.com/threads/10-000-words-of-power.295524/
+        <br>
+        <br><b>Confidence in Smash, from PPMD</b>
+        <br>http://smashboards.com/threads/falco-discussion-thread.256826/page-126#post-12281679
+        <br>
+        <br><b>Oberservation: The Key to Higher Level Play</b>
+        <br>http://smashboards.com/threads/observation-the-key-to-higher-level-smash-play.103017/
+        <br>
+        <br><b>An Analysis of Ascending to the Next Level</b>
+        <br>http://smashboards.com/threads/reaching-the-pantheon-an-analysis-of-ascending-to-the-next-level.96828/
+        <br>
+        <br><b>Approaching and Why Fox is good from PPMD</b>
+        <br>http://smashboards.com/threads/falco-discussion-thread.256826/page-265#post-13591750
+        <br>
+        <br><b>Advance, Attack, Avoid (Through the lens of Luigi)</b>
+        <br>http://smashboards.com/threads/advance-attack-avoid-through-the-lens-of-luigi.389684/
+        <br>
+        <br><big><b>Reddit</b></big>
+        <br>
+        <br><b>Mindset of Improvement</b>
+        <br>https://www.reddit.com/r/smashbros/comments/235klc/discussing_the_mindset_of_improvement/
+        <br>
+        <br><b>How to understand a character\'s options</b>
+        <br>https://www.reddit.com/r/SSBM/comments/3r5g2l/how_to_understand_a_characters_movement_the/
+        <br>
+        <br><big><b>Other</b></big>
+        <br>
+        <br><b>Complete Complete, Blog from Wobbles</b>
+        <br>http://www.compete-complete.com/
+        <br>
+        <br><b>Tai\'s Marth guide (Everyone can benefit from this)</b>
+        <br>http://www.meleeitonme.com/sharpening-your-sword-tais-marth-guide/
+        <br>
+        <br><b>Bad Melee, humorous and helpful blog</b>
+        <br>http://badmelee.com/
+        <br>
+        <br><big><b>Videos</b></big>
+        <br>
+        <br><b>The Smash Documentary</b>
+        <br>https://www.youtube.com/watch?v=jX9hbbA-WP4
+        <br>
+        <br><b>The Smash Documentary Series (Remastered)</b>
+        <br>https://www.youtube.com/watch?v=NSf2mgkRm7Q&list=PLoUHkRwnRH-IXbZfwlgiEN8eXmoj6DtKM
+        <br>
+        <br><b>Smash Practice, helpful words from Zhu and Cactuar</b>
+        <br>https://www.youtube.com/playlist?list=PL32VvbzXtv1Z5JqXR_gNCtUZI5h7TfOGR
+        <br>
+        <br><b>20GX, beginner fundamental discussion</b>
+        <br>https://www.youtube.com/watch?v=qAUVzXOct4o
+        <br>
+        <br><b>Mindset talk with PPMD</b>
+        <br>https://www.youtube.com/watch?v=l5UCDsBZtlk
+        <br>
+        <br><big><b>Streams</b></big>
+        <br>
+        <br><b>Smash Practice with Zhu and Cactuar</b>
+        <br>http://www.twitch.tv/smashpractice
+        <br>
+        <br><b>Melee It On Me</b>
+        <br>http://www.twitch.tv/meleeitonme
     ]]></string>
     <string name="neutral_info_text"><![CDATA[<big><b>Neutral game</b></big>
         <br>In the Neutral game, the balance of options each player can perform is at a relative equilibrium.
