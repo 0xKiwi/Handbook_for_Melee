@@ -236,7 +236,7 @@
     ]]></string>
     <string name="egrapple_info_text"><![CDATA[<b>Applies to:</b> Samus
         <br>
-        <br>Examples of the extended grapple: https://www.youtube.com/watch?v=QanFnmIyqQI
+        <br>Examples of the extended grapple: https://youtu.be/QanFnmIyqQI
         <br>
         <br>Samus\' extended grapple is a technique that allows Samus to extend the length of her grab.
         <br>
@@ -251,8 +251,8 @@
     ]]></string>
     <string name="edgecanceleggs_info_text"><![CDATA[<b>Applies to:</b> Yoshi
         <br>
-        <br>Here are some examples of ECE\'ing: https://www.youtube.com/watch?v=aDmwVPK1l7Y
-        <br>https://www.youtube.com/watch?v=p82iyfl-yKo
+        <br>Here are some examples of ECE\'ing: https://youtu.be/aDmwVPK1l7Y
+        <br>https://youtu.be/p82iyfl-yKo
         <br>
         <br><big><b>Edge-canceled eggs</b></big>
         <br>Edge-canceled eggs (abbreviated \"ECE\") is a planking
@@ -341,7 +341,7 @@
         <br>
         <br>Example of LHDL: http://oddshot.tv/shot/beyondthesummit-2015110625841140
         <br>
-        <br>A detailed instruction on the execution of LHDL: https://www.youtube.com/watch?v=FF_YhidQ_NE
+        <br>A detailed instruction on the execution of LHDL: https://youtu.be/FF_YhidQ_NE
         <br>
         <br><big><b>Ledgehop double laser</b></big>
         <br>The ledgehopped double laser, or LHDL, is a technique that can be performed with both Fox
@@ -400,7 +400,7 @@
     ]]></string>
     <string name="parry_info_text"><![CDATA[<b>Applies to:</b> Yoshi
         <br>
-        <br>Example of parrying: https://www.youtube.com/watch?v=dVLRJ4jCBeI
+        <br>Example of parrying: https://youtu.be/dVLRJ4jCBeI
         <br>
         <br><big><b>Parry</b></big>
         <br>Also called supershielding, parrying is a technique used by Yoshi players that takes advantage of the
@@ -426,7 +426,7 @@
     ]]></string>
     <string name="pillar_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
         <br>
-        <br>Example of pillaring: https://www.youtube.com/watch?v=kPahZCKxcGI
+        <br>Example of pillaring: https://youtu.be/kPahZCKxcGI
         <br>
         <br><big><b>Pillaring</b></big>
         <br>Pillaring refers to pressuring an opponent\'s shield in Super Smash Bros. Melee by utilizing a combination of techniques
@@ -659,8 +659,8 @@
     ]]></string>
     <string name="swd_info_text"><![CDATA[<b>Applies to:</b> Samus
         <br>
-        <br>Examples of SWD: https://www.youtube.com/watch?v=8YSeHeuiX8U
-        <br>https://www.youtube.com/watch?v=ylY3dzVrkI8
+        <br>Examples of SWD: https://gfycat.com/MixedShockingEeve
+        <br>https://youtu.be/8YSeHeuiX8U
         <br>
         <br><big><b>Super wavedash</b></big>
         <br>The super wavedash (sometimes abbreviated as SWD) is a frame-perfect
@@ -726,7 +726,7 @@
     ]]></string>
     <string name="shinemine_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
         <br>
-        <br>Video displaying several ways to set up: https://www.youtube.com/watch?v=rF1BQnuvBOQ
+        <br>Video displaying several ways to set up: https://youtu.be/rF1BQnuvBOQ
         <br>
         <br><big><b>Shine mine</b></big>
         <br>Shine mining, a term coined and discovered by Darktooth is a technique
@@ -785,8 +785,8 @@
         <br>Fox and Falco cannot perform this technique, however they can turn around if they touch a wall
         (like the side of FD) when performing the Up-B straight up.
         <br>
-        <br>Examples of Up-B turnaround: https://www.youtube.com/watch?v=y9nivZx7U8c
-        <br>https://www.youtube.com/watch?v=IUrKbyyJWas
+        <br>Examples of Up-B turnaround: https://youtu.be/y9nivZx7U8c
+        <br>https://youtu.be/IUrKbyyJWas
     ]]></string>
     <string name="vududash_info_text"><![CDATA[http://i.imgur.com/Fod2w0B.gifv
         <br>
@@ -887,7 +887,7 @@
         the added horizontal distance such that he can jump up and catch up with his opponent. This is especially
         useful against a DIing Fox. A waveshine followed by another wavedash makes Falco a combo machine.
         <br>
-        <br>Examples of waveshining: https://www.youtube.com/watch?v=_F3LJ21jOzI
+        <br>Examples of waveshining: https://youtu.be/_F3LJ21jOzI
     ]]></string>
     <string name="wobbling_info_text"><![CDATA[<b>Applies to:</b> Ice Climbers
         <br>
@@ -933,7 +933,7 @@
     ]]></string>
     <string name="yoyo_info_text"><![CDATA[<b>Applies to:</b> Ness
         <br>
-        <br>Examples of the yo-yo glitch: https://www.youtube.com/watch?v=DI9KGybiCHo
+        <br>Examples of the yo-yo glitch: https://youtu.be/DI9KGybiCHo
         <br>http://gfycat.com/CanineComplexBullfrog
         <br>
         <br><big><b>Yo-yo glitch</b></big>
@@ -1078,7 +1078,7 @@
     <string name="easymoney_term_info">
         Quote from smasher Bizzarro Flame at Apex 2015, when asked what he thought when
         Ganon main Eikelmann would be going against him, Bizzarro replied \"EASY MONEY!\".
-        https://www.youtube.com/watch?v=97fQoffpJiM
+        https://youtu.be/97fQoffpJiM
     </string>
     <string name="ecb_term_info">
         Stands for Environmental Collision Box, and is the \"bones\" of a character model in Melee.
@@ -1094,7 +1094,7 @@
     </string>
     <string name="forbiddenledge_term_info">
         Coined by top Young Link main Axe, Young Link can take advantage of the boomerang glitch
-        which allows him to ledge extremely easily. Explanation by him: http://oddshot.tv/shot/az-axe-201512092547403
+        which allows him to ledge extremely easily. Explanation by Axe: http://oddshot.tv/shot/az-axe-201512092547403
         http://oddshot.tv/shot/az-axe-2015120925418797
     </string>
     <string name="frame_term_info">
@@ -1123,7 +1123,7 @@
     <string name="ken_term_info">
         The Ken Combo refers to a spike setup with Marth discovered and
         popularized by professional Marth player, Ken. Fair into dair.
-        https://www.youtube.com/watch?v=OR1pNBmT7NM
+        https://youtu.be/OR1pNBmT7NM
     </string>
     <string name="kreygasm_term_info">
         A term or graphic emoticon used to express intense emotion. One commonly used phrase is
@@ -1144,7 +1144,7 @@
         A comical phrase meant to refer to Mew2King\'s lack of medical support in response to his
         hand injuries. Mew2King, having been playing Melee competitively for several years without
         proper stretching or treatment, causing hand and finger pains. Make sure you stretch with
-        the information provided in this app before, during and after playing. https://www.youtube.com/watch?v=9JTqydWaioc
+        the information provided in this app before, during and after playing. https://youtu.be/9JTqydWaioc
     </string>
     <string name="helicrash_term_info">
         When a Fox or Falco SD\'s by falling off the stage and using their fair. Name is due to
@@ -1252,7 +1252,7 @@
     </string>
     <string name="mikehaze_term_info">
         To have your smash career ended by a Falcon Punch. Popularized after
-        smasher Mike Haze\'s destruction by Falcon Punches. https://www.youtube.com/watch?v=XSgklDhaZR0
+        smasher Mike Haze\'s destruction by Falcon Punches. https://youtu.be/XSgklDhaZR0
     </string>
     <string name="mindgames_term_info">
         A series of deliberate actions or responses planned for psychological effect
@@ -1263,7 +1263,7 @@
         causing his speed and horizontal distance covered to increase dramatically.
     </string>
     <string name="myb_term_info">
-        A shortened version of \"My bad\". Used by Chillindude. https://www.youtube.com/watch?v=1TO7MdV5qZo
+        A shortened version of \"My bad\". Used by Chillindude. https://youtu.be/1TO7MdV5qZo
     </string>
     <string name="nerf_term_info">
         A term used to describe a decline in a character or a certain aspect of a character, usually through an update.
@@ -1279,11 +1279,11 @@
     </string>
     <string name="pcdrop_term_info">
         Also called ledge turn around grab, done by walking to the ledge and doing a slow turn around, followed by fast fall.
-        Used to quickly edge hog. https://www.youtube.com/watch?v=yw9pfO9UORU
+        Used to quickly edge hog. https://youtu.be/yw9pfO9UORU
     </string>
     <string name="phit_term_info">
         If you barely hit your opponent, you\'ll do half damage and deal no knockback. All that
-        is visible is the percent change and the visual hit effect. https://www.youtube.com/watch?v=iAHw6z0j074
+        is visible is the percent change and the visual hit effect. https://youtu.be/iAHw6z0j074
     </string>
     <string name="pivot_term_info">
         When you quickly turn around to perform an action, can be done with any move.
@@ -1323,7 +1323,7 @@
     </string>
     <string name="respect_term_info">
         A diss track from Chillindude towards Leffen, in hype for Apex 2015. Leffen then
-        5-0\'s Chillin. https://www.youtube.com/watch?v=KhsOW-_TwfU
+        5-0\'s Chillin. https://youtu.be/KhsOW-_TwfU
     </string>
     <string name="rng_term_info">
         Random chance. Usually associated with Peach\'s Down-B or Game &amp; Watch\'s Side-B.
@@ -1334,13 +1334,16 @@
         stick while shielding. Not used very often in Melee.
     </string>
     <string name="sacredcombo_term_info">
-        Falcon knee (fair) to Falcon Punch (Neutral-B) https://www.youtube.com/watch?v=MlGM0BFv3JU
+        Falcon knee (fair) to Falcon Punch (Neutral-B) https://youtu.be/MlGM0BFv3JU
     </string>
     <string name="sacrilegiouscombo_term_info">
         The opposite of the sacred combo, a Falcon Punch to knee (fair). https://youtu.be/GOevcqeb6w4
     </string>
+    <string name="sakuraicombo_term_info">
+        A combo that involves the Up-B of Fox or Falco. https://youtu.be/XLuYNzCnhWI
+    </string>
     <string name="salty_term_info">A word used to describe someone who is
-        upset. (mainly because of their loss to someone) https://www.youtube.com/watch?v=zTVOjo05_E0
+        upset. (mainly because of their loss to someone) https://youtu.be/zTVOjo05_E0
     </string>
     <string name="saltyrun_term_info">The act of losing a match and angrily
         (or jokingly) demanding a rematch from your
@@ -1349,7 +1352,7 @@
     <string name="scarjump_term_info">
         Tapping the c-stick back lightly on a ledge grab so you can fall while keeping your
         second jump and be close enough to do some wall jump stalling edgeguards. Captain Falcon and Young link
-        get the most out of this. Used and popularized by Scar. https://www.youtube.com/watch?v=feXYCJKct0s
+        get the most out of this. Used and popularized by Scar. https://youtu.be/feXYCJKct0s
     </string>
     <string name="screenko_term_info">A KO when an opponent
         goes past the top blast zone and ends up hitting the screen.
@@ -1422,7 +1425,7 @@
     </string>
     <string name="style_term_info">
         To play for looks, usually spoken as \"Style out\". Meaning to perform in a way that is
-        just visually satisfying. https://www.youtube.com/watch?v=N7u46_7AvJA
+        just visually satisfying. https://youtu.be/N7u46_7AvJA
     </string>
     <string name="spaceanim_term_info">
         A comical nickname meant to refer to the Star Fox crew members, Fox and Falco, as they are
@@ -1436,7 +1439,7 @@
     <string name="stagehump_term_info">Not only the fastest way
         to crouch, it\'s also the slowest way of moving your character forward.
         Instead of crouching downward rapidly, you aim more of a diagonal down.
-        https://www.youtube.com/watch?v=-9bpqdRZl58
+        https://youtu.be/-9bpqdRZl58
     </string>
     <string name="stagespike_term_info">
         When a character is hit towards the stage when under, and the missed tech causes the player to bounce downward,
@@ -1452,7 +1455,7 @@
     <string name="stitch_term_info">
         Peach\'s Down-B has several different variations, many being stronger than the normal one.
         One of the more notable being the \"stitch face\", which can deal 33-41&#37; when thrown.
-        https://www.youtube.com/watch?v=8Nnr3L0DBeQ
+        https://youtu.be/8Nnr3L0DBeQ
     </string>
     <string name="stomp_term_info">
         Like wave dashing but downwards.
@@ -1474,7 +1477,7 @@
     <string name="tas_term_info">
         Tool Assisted Speedrun is a presentation produced by using features such as slow motion
         or frame-by-frame advance of the gameplay in order to play it (frame) perfectly.
-        https://www.youtube.com/watch?v=l1PYPAYWTII
+        https://youtu.be/l1PYPAYWTII
     </string>
     <string name="tauntcancel_term_info">
         A technique done for mindgames or humorous purpose where the player cancels their
@@ -1492,6 +1495,10 @@
     <string name="thezhu_term_info">
         When a Falco wavedashes off of a platform, and double jumps into bair to edge guard. Named
         after Zhu.
+    </string>
+    <string name="thundercat_term_info">
+        A kill performed with the top hitbox of Marth\'s Up Smash. Name is given from the pose
+        used in the animated TV show, Thundercats. https://youtu.be/EdhE0IdiUII
     </string>
     <string name="thunder_term_info">
         A extremely impressive combo for Fox. Short hop-> Down Air(L-cancelled)-> Waveshine -> Jab Reset->
@@ -1558,12 +1565,12 @@
         The most recognizable Smash video, referring to a California Tournament
         match with an impromptu combo by SilentSpectre and Tang against Zhu with commentary by
         HomeMadeWaffles, Phil, and MaNgo. Sometimes used to refer to a team combo that uses different moves.
-        The origin of \"DAT AINT FALCO\". https://www.youtube.com/watch?v=pD_imYhNoQ4
+        The origin of \"DAT AINT FALCO\". https://youtu.be/pD_imYhNoQ4
     </string>
     <string name="wop_term_info">
         A technique with Jigglypuff taking advantage of her multiple jumps to barrage or gimp players.
         Some times done to knock the player out of the side camera box using jigg\'s bair or nair.
-        https://www.youtube.com/watch?v=ZknGCSjgDMY
+        https://youtu.be/ZknGCSjgDMY
     </string>
     <string name="zoning_term_info">
          Controlling a specific area of a stage in order to have the most advantageous position.
@@ -1622,7 +1629,7 @@
         on Yoshi\'s Story as Falco, and dair at the point where Falco reaches the apex of his jump. The dair will move Falco\'s
         ECB upwards, just enough to AI onto the top play form.
         <br>
-        <br>Aerial interrupt example: https://www.youtube.com/watch?v=NWGVkGz_kE8
+        <br>Aerial interrupt example: https://youtu.be/NWGVkGz_kE8
     ]]></string>
     <string name="chaing_info_text" formatted="false"><![CDATA[<big><b>Chain grab</b></big>
         <br>Chain grabs, also referred to as a chain throw or abbreviated as CG, refers to a series
@@ -1682,7 +1689,7 @@
         <br><b>Donkey Kong:</b> can chain throw Fox, Falco and Falcon with the up throw at low to mid percentages. Donkey Kong can
         also chain throw Fox, Falco, and Captain Falcon with forward throw, then while carrying them, up throw.]]>
     </string>
-    <string name="crouchcancel_info_text"><![CDATA[<b>Useful video for learning to CC:</b> https://www.youtube.com/watch?v=IA-ROZiZJqY
+    <string name="crouchcancel_info_text"><![CDATA[<b>Useful video for learning to CC:</b> https://youtu.be/IA-ROZiZJqY
         <br>
         <br><big><b>Crouch Canceling</b></big>
         <br>Abbreviated as CC, Crouch canceling is the act of crouching when being hit by an attack in
@@ -1770,7 +1777,7 @@
         use of the technique, and proper use of dash-dancing is important in all of their respective
         metagames.
         <br>
-        <brExample of dash dancing: https://www.youtube.com/watch?v=mk09c6iLLdU
+        <brExample of dash dancing: https://youtu.be/mk09c6iLLdU
     ]]></string>
     <string name="di_info_text"><![CDATA[<big><b>Directional influence</b></big>
         <br>Often abbreviated as DI, this is the control the receiver of an attack
@@ -2090,7 +2097,7 @@
         Falco, and Falcon) If performed correctly, your character will arrive on top of the stage, and would have
         been invincible for a good chunk of the ledgedash. This technique is good to use to get out of a sticky spot.
         <br>
-        <br>This video may help: https://www.youtube.com/watch?v=7L2L7vyCc6c
+        <br>This video may help: https://youtu.be/7L2L7vyCc6c
         <br>Setups: https://www.youtube.com/playlist?list=PLKPEgSVjggtCm3IT9uYBlNgEcv3Qw9jaw
     ]]></string>
     <string name="ledgestall_info_text"><![CDATA[<big><b>Ledgestall</b></big>
@@ -2176,7 +2183,7 @@
         sliding backwards during in the initial dash animation. Discovered by the smasher Mr.C, the technique
         is named after the signature dance move of famed pop singer Michael Jackson.
         <br>
-        <br>Example of moonwalk: https://www.youtube.com/watch?v=D_xDJM3jOYg
+        <br>Example of moonwalk: https://youtu.be/D_xDJM3jOYg
         <br>
         <br><big><b>Performing the moonwalk</b></big>
         <br>Moonwalking is achieved by tilting the control stick backwards while dashing, but without passing
@@ -2263,7 +2270,7 @@
         in Battlefield, and to hop backwards with Falcon onto the top platform in Yoshi\'s Story.
         <br>
         <br><b>More info</b>
-        <br>For more info, check out this video from PewPewU: https://www.youtube.com/watch?v=XhujDoRBXeY
+        <br>For more info, check out this video from PewPewU: https://youtu.be/XhujDoRBXeY
     ]]></string>
     <string name="platformcancel_info_text"><![CDATA[<b>Note:</b> The nair performed by Mario is the platform cancel. The initial
         hit is a aerial interrupt attack uair.
@@ -2320,7 +2327,7 @@
         <br>Requires a platform which can be passed through.
         <br>Extremely strict timing
         <br>
-        <br>Example of platform canceling: https://www.youtube.com/watch?v=1JZh86P1ENY
+        <br>Example of platform canceling: https://youtu.be/1JZh86P1ENY
     ]]></string>
     <string name="pshield_info_text"><![CDATA[<big><b>Powershield</b></big>
         <br>This is a technique where one activates a full shield such that it connects with an incoming attack on the first few frames. In
@@ -2398,7 +2405,7 @@
         <br>
         <br><b>More info</b>
         <br>For more information go here: http://smashboards.com/threads/new-tech-platform-warp.385768/
-        <br>And here: https://www.youtube.com/watch?v=TtiDd5cQWJc&feature=youtu.be
+        <br>And here: https://youtu.be/TtiDd5cQWJc&feature=youtu.be
         <br>Walljump PW: https://www.reddit.com/r/SSBM/comments/3w5is0/useless_new_tech_walljump_platform_warp/
     ]]></string>
     <string name="reversewalljump_info_text"><![CDATA[<big><b>Reverse wall jumping</b></big>
@@ -2414,7 +2421,7 @@
         you the same wall jump which would normally send you away from the stage but will now send you towards the stage.
         <br>Details on this here: http://pastebin.com/wHhscGty
         <br>This is why Fox is capable of doing a reverse wallump on his target test stage as seen in this
-        video (https://www.youtube.com/watch?v=rAN3SejRi3w) from 2009. Fox jumps and hugs the
+        video (https://youtu.be/rAN3SejRi3w) from 2009. Fox jumps and hugs the
         left wall until he touches the ground. Once on the ground the game stops updating if he is touching a wall.
         Since he walks up to the right wall before jumping when he goes airborne he is still hugging a wall and can
         activate the wall jump intended to be done off the left wall letting him perform a reverse wall jump.
@@ -2500,7 +2507,7 @@
         Although this method is slower, and is easily readable, it is easier to perform.
         <br>
         <br>For more help on how to shield drop consistently,
-        check out this video by Victra: https://www.youtube.com/watch?v=hsl03HJ_LTU
+        check out this video by Victra: https://youtu.be/hsl03HJ_LTU
         <br>
         <br><big><b>Uses</b></big>
         <br>Shield platform dropping opens a larger possibility of comboing, tech-chasing, edgeguarding,
@@ -2550,7 +2557,7 @@
         much easier. The height of a short hop varies from character to character as well. Short hopping is also
         used during wavedashing, to an extreme degree. For frame data, refer to Jumping.
     ]]></string>
-    <string name="sdi_info_text"><![CDATA[Useful video: https://www.youtube.com/watch?v=CO7YD9KqNhY
+    <string name="sdi_info_text"><![CDATA[Useful video: https://youtu.be/CO7YD9KqNhY
         <br>
         <br><big><b>Smash DI</b></big>
         <br>Often shortened to SDI is a mechanic that allows players to slightly alter their position during
@@ -2602,7 +2609,7 @@
         <br>\tFalcon\'s raptor boost on shield
         <br>\tStrong attacks on shield that may seem unpunishable (like certain spacings of Falco\'s f-smash or d-tilt)
         <br>
-        <br>Video on Shield DI: https://www.youtube.com/watch?v=53t9fDzdCyw
+        <br>Video on Shield DI: https://youtu.be/53t9fDzdCyw
     ]]></string>
     <string name="twobble_info_text"><![CDATA[<big><b>Team Wobble</b></big>
         <br>This is a group technique, performed by two players on a team continuously grabbing a single opponent
@@ -2841,7 +2848,7 @@
         <br>
         <br>/u/achilles1515 discovered this tech while reverse engineering some of Melee\'s code.
         <br>
-        <br>Video about V-canceling: https://www.youtube.com/watch?v=J0je2cwI2eQ
+        <br>Video about V-canceling: https://youtu.be/J0je2cwI2eQ
     ]]></string>
     <!-- END STANDARD TECH STRINGS -->
 
@@ -3116,9 +3123,9 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/falco.111/
         <br>
-        <br><b>Falco tutorials:</b> https://www.youtube.com/watch?v=RkUfAtXnNAU
-        <br>https://www.youtube.com/watch?v=Rqw5wRh2E88
-        <br>https://www.youtube.com/watch?v=yLa6jCtQrVQ
+        <br><b>Falco tutorials:</b> https://youtu.be/RkUfAtXnNAU
+        <br>https://youtu.be/Rqw5wRh2E88
+        <br>https://youtu.be/yLa6jCtQrVQ
         <br>
         <br>Falco is an unlockable character in Super Smash Bros. Melee
         who is currently 2nd in the tier list due to good ability to combo, and having arguably
@@ -3279,7 +3286,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/ganondorf.110/
         <br>
-        <br><b>What makes Ganon good:</b> https://www.youtube.com/watch?v=kZNJhUld7Ek
+        <br><b>What makes Ganon good:</b> https://youtu.be/kZNJhUld7Ek
         <br><b>Q & A thread:</b> http://smashboards.com/threads/how-to-wreck-es-with-ganon-linguini-q-a-thread.215432/
         <br>
         <br>Ganondorf currently ranks 14th in the E tier on the Melee tier list. Ganondorf boasts extreme power, good reach, decent chaingrabbing
@@ -3328,7 +3335,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/sheik.128/
         <br>
-        <br><b>Edge cancels:</b> https://www.youtube.com/watch?v=3XYLLRzu7AU
+        <br><b>Edge cancels:</b> https://youtu.be/3XYLLRzu7AU
         <br><b>Q & A:</b> http://smashboards.com/threads/sheik-strategy-qna.129276/
         <br><b>What to do against Marth:</b> http://portraitinsmash.blogspot.com/2015/02/doing-bad-stuff-to-marth-101.html?m=0
         <br><b>Directory:</b> http://smashboards.com/threads/sheik-directory-guides-videos-misc.350457/
@@ -3412,7 +3419,7 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/marth.69/
         <br>
-        <br><b>Helpful guide for Marth:</b> https://www.youtube.com/watch?v=IiVzSzuuv88
+        <br><b>Helpful guide for Marth:</b> https://youtu.be/IiVzSzuuv88
         <br>https://docs.google.com/document/d/1Daf_Dqod1HoMj7L26ITeUM-xKUKhfxh2vJLWOl2N0C8/edit?pli=1
         <br><b>Chaingrab info:</b> http://smashboards.com/threads/detailled-chaingrab-information.323364/
         <br>
@@ -3513,8 +3520,8 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/peach.74/
         <br>
-        <br><b>Peach guide:</b> https://www.youtube.com/watch?v=zvNgmahChOM
-        <br>https://www.youtube.com/watch?v=8C01hqm6bdQ
+        <br><b>Peach guide:</b> https://youtu.be/zvNgmahChOM
+        <br>https://youtu.be/8C01hqm6bdQ
         <br>
         <br>Currently, Peach is 6th in the A tier, the highest ranked of any Mario character.
         Her float cancel gives her a fantastic aerial game, and she can play mindgames by using Toad. Peach also has good
@@ -4042,9 +4049,9 @@
         <br><b>Smashboard forum</b> http://smashboards.com/forums/samus.72/
         <br>
         <br><b>Samus guide:</b> http://smashboards.com/threads/intro-to-samus-character-match-ups.185258/
-        <br><b>Samus vs. Fox matchup:</b> https://www.youtube.com/watch?v=la9-P29TdR8
+        <br><b>Samus vs. Fox matchup:</b> https://youtu.be/la9-P29TdR8
         <br>http://smashboards.com/threads/the-samus-index-thread-updated-3-9-13.333011/
-        <br><b>Neutral game:</b> https://www.youtube.com/watch?v=is0DOA5lYuw
+        <br><b>Neutral game:</b> https://youtu.be/is0DOA5lYuw
         <br>
         <br>Samus Aran is a starter character in Super Smash Bros. Melee. Returning as a veteran from the
         previous game, Samus, similarly to Link, reprises her role as a short-ranged fighter with numerous ranged options. In addition, she received some
@@ -4578,19 +4585,19 @@
         <br><big><b>Videos</b></big>
         <br>
         <br><b>The Smash Documentary</b>
-        <br>https://www.youtube.com/watch?v=jX9hbbA-WP4
+        <br>https://youtu.be/jX9hbbA-WP4
         <br>
         <br><b>The Smash Documentary Series (Remastered)</b>
-        <br>https://www.youtube.com/watch?v=NSf2mgkRm7Q&list=PLoUHkRwnRH-IXbZfwlgiEN8eXmoj6DtKM
+        <br>https://youtu.be/NSf2mgkRm7Q&list=PLoUHkRwnRH-IXbZfwlgiEN8eXmoj6DtKM
         <br>
         <br><b>Smash Practice, helpful words from Zhu and Cactuar</b>
         <br>https://www.youtube.com/playlist?list=PL32VvbzXtv1Z5JqXR_gNCtUZI5h7TfOGR
         <br>
         <br><b>20GX, beginner fundamental discussion</b>
-        <br>https://www.youtube.com/watch?v=qAUVzXOct4o
+        <br>https://youtu.be/qAUVzXOct4o
         <br>
         <br><b>Mindset talk with PPMD</b>
-        <br>https://www.youtube.com/watch?v=l5UCDsBZtlk
+        <br>https://youtu.be/l5UCDsBZtlk
         <br>
         <br><big><b>Streams</b></big>
         <br>

@@ -169,6 +169,8 @@ public class ArrayHelper {
                 return res.getString(R.string.edgehog_term_info);
             case "Edge guarding":
                 return res.getString(R.string.edgeguard_term_info);
+            case "Forbidden ledge guard":
+                return res.getString(R.string.forbiddenledge_term_info);
             case "Freeze frames":
                 return res.getString(R.string.freezeframe_term_info);
             case "Friendlies":
@@ -295,6 +297,8 @@ public class ArrayHelper {
                 return res.getString(R.string.sacredcombo_term_info);
             case "Sacrilegious combo":
                 return res.getString(R.string.sacrilegiouscombo_term_info);
+            case "Sakurai combo":
+                return res.getString(R.string.sakuraicombo_term_info);
             case "Salty":
                 return res.getString(R.string.salty_term_info);
             case "Salty runback":
@@ -373,6 +377,8 @@ public class ArrayHelper {
                 return res.getString(R.string.knee_term_info);
             case "The Zhu":
                 return res.getString(R.string.thezhu_term_info);
+            case "Thundercat combo":
+                return res.getString(R.string.thundercat_term_info);
             case "Thunders combo":
                 return res.getString(R.string.thunder_term_info);
             case "Tier list":
