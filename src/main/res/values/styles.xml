@@ -15,7 +15,7 @@
         <item name="customColorPrimary">@color/theme_primary</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="customToolbarStyle">@style/ToolbarTheme</item>
-        <item name="android:textColorLink">@color/overscroll_color</item>
+        <item name="android:textColorLink">@color/theme_accent</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:colorEdgeEffect">@color/overscroll_color</item>
         <item name="android:colorPrimaryDark">@color/theme_primary_dark</item>
@@ -71,6 +71,7 @@
     </style>
 
     <style name="AppTheme.Black" parent="AppTheme.Black.Color">
+        <item name="android:windowIsTranslucent">true</item>
         <item name="dividerColor">@color/black</item>
         <item name="android:colorPrimary">@color/black</item>
         <item name="customColorPrimary">@color/black</item>
@@ -83,6 +84,7 @@
     </style>
 
     <style name="AppTheme.Black.Color" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
         <item name="cardViewBackground">@color/black</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:textColorSecondary">@color/dark_info_text_color</item>

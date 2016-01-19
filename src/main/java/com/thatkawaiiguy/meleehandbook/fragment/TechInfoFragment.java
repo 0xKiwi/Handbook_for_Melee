@@ -87,6 +87,16 @@ public class TechInfoFragment extends Fragment {
                         break;
                 }
                 break;
+            case "Shield dropping":
+                switch(getArguments().getInt(ARG_PAGE)) {
+                    case 0:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string.shielddrop_info_text)));
+                        break;
+                    case 1:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string.shaidrop_info_text)));
+                        break;
+                }
+                break;
         }
 
         return view;

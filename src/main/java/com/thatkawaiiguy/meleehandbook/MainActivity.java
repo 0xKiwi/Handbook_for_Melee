@@ -3,7 +3,9 @@ package com.thatkawaiiguy.meleehandbook;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
+import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -63,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
+
+        NavigationMenuView navigationMenuView = (NavigationMenuView) nvDrawer.getChildAt(0);
+        if (navigationMenuView != null)
+            navigationMenuView.setVerticalScrollBarEnabled(false);
+
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(
                 this, mDrawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close
@@ -165,13 +172,15 @@ public class MainActivity extends AppCompatActivity {
                 changeFragment(getString(R.string.title_healthy));
                 menuItem.setChecked(true);
                 break;
+            case R.id.support:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
+                        ("http://bit.ly/1NXCD2o")));
+                break;
             case R.id.settings:
-                Intent mSettingsIntent = new Intent(this, AppSettingsActivity.class);
-                startActivity(mSettingsIntent);
+                startActivity(new Intent(this, AppSettingsActivity.class));
                 break;
             case R.id.about:
-                DialogFragment newFragment = new AboutDialogFragment();
-                newFragment.show(getFragmentManager(), "about");
+                new AboutDialogFragment().show(getFragmentManager(), "about");
                 break;
         }
         mDrawer.closeDrawers();
@@ -180,8 +189,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if(Preferences.showExitDialog(this)) {
-            DialogFragment newFragment = new ExitDialogFragment();
-            newFragment.show(getFragmentManager(), "exit");
+            new ExitDialogFragment().show(getFragmentManager(), "exit");
         } else
             super.onBackPressed();
     }

@@ -409,7 +409,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
         for(String tech : techs) {
             if(tech.toLowerCase().contains(query) && !"fox".contains(query)) {
-                if(tech.equals("Wall jump") || tech.equals("Directional Influence"))
+                if(tech.equals("Wall jump") || tech.equals("Directional Influence") || tech.equals("Shield dropping"))
                     return new Intent(context, TechTabActivity.class).putExtra("option", tech);
                 else
                     return new Intent(context, TechActivity.class).putExtra("option", tech);

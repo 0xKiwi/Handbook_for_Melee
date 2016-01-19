@@ -44,9 +44,10 @@ public class AppSettingsActivity extends PreferenceActivity {
             @Override
             public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
                 Preferences.sync(getPreferenceManager(), key);
-                if (key.equals(getString(R.string.pref_theme)))
+                if (key.equals(getString(R.string.pref_theme))) {
                     restart = true;
-                else if(key.equals(getString(R.string.pref_ads)))
+                    recreate();
+                } else if(key.equals(getString(R.string.pref_ads)))
                     restart = true;
                 else if(key.equals(getString(R.string.pref_tier)))
                     restart = true;
@@ -97,7 +98,7 @@ public class AppSettingsActivity extends PreferenceActivity {
     @Override
     public void onBackPressed() {
         if(restart){
-            finish();
+            super.onBackPressed();
             final Intent intent = IntentCompat.makeMainActivity(new ComponentName(
                     AppSettingsActivity.this, MainActivity.class));
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);

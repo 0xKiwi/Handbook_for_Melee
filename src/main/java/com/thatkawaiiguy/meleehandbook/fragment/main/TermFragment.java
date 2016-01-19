@@ -18,11 +18,7 @@ public class TermFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
 
-    private LayoutManagerType mCurrentLayoutManagerType;
-
     private final String[] terms = ArrayHelper.getTermArray();
-
-    private enum LayoutManagerType {LINEAR_LAYOUT_MANAGER}
 
     public static TermFragment newInstance() {
         Bundle args = new Bundle();
@@ -38,10 +34,7 @@ public class TermFragment extends Fragment {
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-        if (savedInstanceState != null)
-            mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable("layoutManager");
-        setRecyclerViewLayoutManager();
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         TermAdapter adapter = new TermAdapter(terms, getActivity());
         mRecyclerView.setAdapter(adapter);
@@ -51,17 +44,5 @@ public class TermFragment extends Fragment {
                 setAutoHide(false).setBarColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color)).
         setHandleColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color));
         return rootView;
-    }
-
-    private void setRecyclerViewLayoutManager() {
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mRecyclerView.scrollToPosition(0);
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putSerializable("layoutManager", mCurrentLayoutManagerType);
-        super.onSaveInstanceState(savedInstanceState);
     }
 }

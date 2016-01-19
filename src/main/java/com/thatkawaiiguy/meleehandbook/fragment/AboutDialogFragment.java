@@ -30,15 +30,7 @@ public class AboutDialogFragment extends DialogFragment {
 
         return new AlertDialog.Builder(getActivity())
                 .setTitle(R.string.action_about)
-                .setNeutralButton(R.string.support,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int id) {
-                                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
-                                        ("http://bit.ly/1NXCD2o")));
-                            }
-                        })
-                .setNegativeButton(R.string.gplus,
+                .setNeutralButton(R.string.gplus,
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {

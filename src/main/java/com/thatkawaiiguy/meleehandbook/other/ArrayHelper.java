@@ -38,7 +38,8 @@ public class ArrayHelper {
                 "Crouch cancel", "Dash-canceling", "Dash-dance",
                 "Directional Influence", "Fast falling", "Fox-trot",
                 "Jab cancel", "Jab reset", "Jump-canceling", "L-canceling",
-                "Ledge-canceling", "Ledgedash", "Ledge stall", "Moonwalk",
+                "Ledge-canceling", "Ledgedash", "Ledge drop",
+                "Ledge stall", "Moonwalk",
                 "No-impact landing", "Platform cancel", "Platform warp",
                 "Powershield", "Shield pressure", "Shield dropping",
                 "SHFFL", "Short hop", "Team wobble", "Tech",
@@ -46,28 +47,31 @@ public class ArrayHelper {
     }
 
     public static String[] getTermArray() {
-        return new String[]{"20XX", "Air dodge", "BYOC", "Baby pop off",
+        return new String[]{"20XX", "Air dodge",
+                "Anti-ground infinite combo physics", "BYOC", "Baby pop off",
                 "Banned stage", "Beef", "Blastzone", "Boost grab",
                 "Brackets", "Buff", "Buster", "Camera box", "Cancel",
-                "Cave of life", "Clone", "Cory in the house", "Counter",
+                "Cave of life", "Circus music",
+                "Clone", "Cory in the house", "Counter",
                 "Counterpick", "Crew battle", "Dash-grab", "Dashing",
                 "Dave's stupid rule",
                 "Did he just walk up slowly and down smash?",
                 "Disjointed hitbox", "Disrespect", "Ditto", "Dong",
-                "Doormat", "Doubles", "ECB", "Easy money", "Edge guarding",
+                "Doormat", "Doubles", "Double dip", "Dumpster",
+                "ECB", "Easy money", "Edge guarding",
                 "Edge hogging", "Forbidden ledge guard", "Frame",
                 "Freeze frames", "Friendlies", "Fun-canceling", "Gimp",
-                "Go to the doctor", "God", "Grab", "Helicopter crash",
+                "Go to the doctor", "God", "Going ham", "Grab", "Helicopter crash",
                 "Helpless", "Hitbox", "Hitlag", "Hitstun", "IASA frames",
                 "Infinite", "Input lag", "Invisible ceiling glitch",
                 "Ironman", "It's not safe", "JV3/JV4 stock", "Janky",
                 "Johns", "Juggling", "Jump cancel", "Jump canceled grab",
                 "Kappa", "Ken combo", "Kreygasm", "Lag", "Landing lag",
-                "Lean drop", "Legalize PokeFloats", "Mangle",
+                "Lean drop", "Legalize PokeFloats", "lol m2k", "Love tap", "Mangle",
                 "Mashedpotato Samurai", "Matchups", "Metagame",
                 "Meteor cancel", "Meteor", "Mike Haze", "Mindgames",
                 "Misfire", "My b", "Nerf", "Neutral game", "OOS",
-                "Overpowered", "PC drop", "Phantom hit", "Pivot",
+                "Overpowered", "PC drop", "People's elbow", "Phantom hit", "Pivot",
                 "Pop off", "Port priority", "Priority", "Pummel", "Punish",
                 "RNG", "Ramen noodle edge steal", "Randall the Cloud",
                 "Recovery", "Respect your elders", "Rolling",
@@ -80,14 +84,14 @@ public class ArrayHelper {
                 "Silent john", "Singles", "Smash attacks", "Smash inflation",
                 "Smashfest", "Sourspot", "Space animal", "Spike",
                 "Stage humping", "Stage spike", "Stale moves", "Star KO",
-                "Stitch", "Stomp", "Style", "Sweetspot attack", "Sweetspot ledge",
+                "Stitch", "Stock canceling", "Stomp", "Style", "Sweetspot attack", "Sweetspot ledge",
                 "TAS", "Taunt cancel", "Tech trap", "The Zhu", "The king is back",
                 "The knee", "Thundercat combo",
                 "Thunders combo", "Tier list", "Tilts", "Tires don exits",
                 "Tomahawk", "Tourney", "Trade-off", "Trash 4",
                 "Triangle jumping", "Turnaround special", "Viagra kick",
                 "Walk-off edges", "Walking", "Wall of pain", "Wavecheat",
-                "Wombo combo", "Zoning", "lol m2k"};
+                "Wavedancing", "Wombo combo", "Woop", "Zoning"};
     }
 
     public static String[] getUniqueArray() {
@@ -109,6 +113,8 @@ public class ArrayHelper {
                 return res.getString(R.string.xx_term_info);
             case "Air dodge":
                 return res.getString(R.string.airdodge_term_info);
+            case "Anti-ground infinite combo physics":
+                return res.getString(R.string.antiground_term_info);
             case "Baby pop off":
                 return res.getString(R.string.babypopoff_term_info);
             case "Banned stage":
@@ -131,6 +137,8 @@ public class ArrayHelper {
                 return res.getString(R.string.cbox_term_info);
             case "Cave of life":
                 return res.getString(R.string.col_term_info);
+            case "Circus music":
+                return res.getString(R.string.circusmusic_term_info);
             case "Clone":
                 return res.getString(R.string.clone_term_info);
             case "Cancel":
@@ -161,6 +169,10 @@ public class ArrayHelper {
                 return res.getString(R.string.doormat_term_info);
             case "Doubles":
                 return res.getString(R.string.doubles_term_info);
+            case "Double dip":
+                return res.getString(R.string.doubledip_term_info);
+            case "Dumpster":
+                return res.getString(R.string.dumpster_term_info);
             case "Easy money":
                 return res.getString(R.string.easymoney_term_info);
             case "ECB":
@@ -185,6 +197,8 @@ public class ArrayHelper {
                 return res.getString(R.string.grab_term_info);
             case "God":
                 return res.getString(R.string.god_term_info);
+            case "Going ham":
+                return res.getString(R.string.goingham_term_info);
             case "Go to the doctor":
                 return res.getString(R.string.gotothedoctor_term_info);
             case "Helpless":
@@ -237,6 +251,8 @@ public class ArrayHelper {
                 return res.getString(R.string.legalizepoke_term_info);
             case "lol m2k":
                 return res.getString(R.string.lolm2k_term_info);
+            case "Love tap":
+                return res.getString(R.string.lovetap_term_info);
             case "Mashedpotato Samurai":
                 return res.getString(R.string.mashedpotato_term_info);
             case "Matchups":
@@ -267,6 +283,8 @@ public class ArrayHelper {
                 return res.getString(R.string.oos_term_info);
             case "PC drop":
                 return res.getString(R.string.pcdrop_term_info);
+            case "People's elbow":
+                return res.getString(R.string.peopleselbow_term_info);
             case "Phantom hit":
                 return res.getString(R.string.phit_term_info);
             case "Pivot":
@@ -357,6 +375,8 @@ public class ArrayHelper {
                 return res.getString(R.string.starko_term_info);
             case "Stitch":
                 return res.getString(R.string.stitch_term_info);
+            case "Stock canceling":
+                return res.getString(R.string.stockcancel_term_info);
             case "Stomp":
                 return res.getString(R.string.stomp_term_info);
             case "Style":
@@ -413,8 +433,12 @@ public class ArrayHelper {
                 return res.getString(R.string.wop_term_info);
             case "Wavecheat":
                 return res.getString(R.string.wavecheat_term_info);
+            case "Wavedancing":
+                return res.getString(R.string.wavedance_term_info);
             case "Wombo combo":
                 return res.getString(R.string.wombo_term_info);
+            case "Woop":
+                return res.getString(R.string.woop_term_info);
             case "Zoning":
                 return res.getString(R.string.zoning_term_info);
             default:

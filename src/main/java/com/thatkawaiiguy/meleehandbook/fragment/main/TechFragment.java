@@ -19,20 +19,12 @@ import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 public class TechFragment extends Fragment {
 
     private static final String TAG = "TechFragment";
-    private static final String KEY_LAYOUT_MANAGER = "layoutManager";
 
     private final String[] techs = ArrayHelper.getTechArray();
-
-    private enum LayoutManagerType {
-        LINEAR_LAYOUT_MANAGER
-    }
-
-    private LayoutManagerType mCurrentLayoutManagerType;
 
     private boolean canStart = true;
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
 
     public static TechFragment newInstance() {
         Bundle args = new Bundle();
@@ -49,11 +41,7 @@ public class TechFragment extends Fragment {
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
-        mLayoutManager = new LinearLayoutManager(getActivity());
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-        if (savedInstanceState != null)
-            mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable(KEY_LAYOUT_MANAGER);
-        setRecyclerViewLayoutManager();
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         mRecyclerView.setAdapter(new TextAdapter(techs));
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
@@ -62,7 +50,8 @@ public class TechFragment extends Fragment {
                 if (canStart) {
                     Intent mIntent;
                     if (techs[position].equals("Wall jump") ||
-                            techs[position].equals("Directional Influence"))
+                            techs[position].equals("Directional Influence") ||
+                            techs[position].equals("Shield dropping"))
                         mIntent = new Intent(getActivity(), TechTabActivity.class);
                     else
                         mIntent = new Intent(getActivity(), TechActivity.class);
@@ -81,26 +70,5 @@ public class TechFragment extends Fragment {
     public void onResume() {
         canStart = true;
         super.onResume();
-    }
-
-    private void setRecyclerViewLayoutManager() {
-        int scrollPosition = 0;
-
-        if (mRecyclerView.getLayoutManager() != null) {
-            scrollPosition = ((LinearLayoutManager) mRecyclerView.getLayoutManager())
-                    .findFirstCompletelyVisibleItemPosition();
-        }
-
-        mLayoutManager = new LinearLayoutManager(getActivity());
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.scrollToPosition(scrollPosition);
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putSerializable(KEY_LAYOUT_MANAGER, mCurrentLayoutManagerType);
-        super.onSaveInstanceState(savedInstanceState);
     }
 }

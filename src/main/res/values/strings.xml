@@ -25,6 +25,7 @@
     <string name="filter_title">Filter</string>
     <string name="action_healthy">Staying Healthy</string>
     <string name="action_settings">Settings</string>
+    <string name="action_support">Support The Dev</string>
     <string name="action_info">Help</string>
     <string name="action_about">About</string>
     <string name="close">CLOSE</string>
@@ -617,10 +618,10 @@
         <br>
         <br><big><b>How to perform</b></big>
         <br><b>One of the fastest ways to perform this technique is to:</b>
-        <br>\t1. Shorthop
-        <br>\t2. Fastfall at the peak of shorthop
-        <br>\t3. Launch the missile (strictly) 1 or 2 frames after fastfalling
-        <br>\t4. To repeat the cycle, input another shothop after being on the ground for 3 frames
+        <br>\t<b>Step 1:</b> Shorthop
+        <br>\t<b>Step 2:</b> Fastfall at the peak of shorthop
+        <br>\t<b>Step 3:</b> Launch the missile (strictly) 1 or 2 frames after fastfalling
+        <br>\t<b>Step 4:</b> To repeat the cycle, input another shothop after being on the ground for 3 frames
         <br>
         <br><big><b>Notes about this technique</b></big>
         <br>&#8226;Missiles shot in the air appear after 15 frames, as opposed to the 22 frames when grounded
@@ -645,17 +646,17 @@
         <br>Since Falco only travels for 4 frames, there are only 4 shortened Phantasm lengths, as opposed to Fox who has 5.
         <br>
         <br><big><b>Timing for Falco</b></big>
-        <br>\t1. Full length. don\'t cancel the attack
-        <br>\t3. Medium length. Press B again on frame 20
-        <br>\t4. Short. Press B again on frame 19
-        <br>\t4. Feint. Press B again on frame 17 or 18, you will barely move, and no hitbox will come out.
+        <br>\tFull length. don\'t cancel the attack
+        <br>\tMedium length. Press B again on frame 20
+        <br>\tShort. Press B again on frame 19
+        <br>\tFeint. Press B again on frame 17 or 18, you will barely move, and no hitbox will come out.
         <br>
         <br><big><b>Timing for Fox</b></big>
-        <br>\t1. Full length. don\'t cancel the attack
-        <br>\t2. Almost full length. Press B again on frame 24
-        <br>\t3. Medium length. Press B again on frame 23
-        <br>\t4. Short. Press B again on frame 22
-        <br>\t4. Feint. Press B again on frame 20 or 21, you will barely move, and no hitbox will come out.
+        <br>\tFull length. don\'t cancel the attack
+        <br>\tAlmost full length. Press B again on frame 24
+        <br>\tMedium length. Press B again on frame 23
+        <br>\tShort. Press B again on frame 22
+        <br>\tFeint. Press B again on frame 20 or 21, you will barely move, and no hitbox will come out.
     ]]></string>
     <string name="swd_info_text"><![CDATA[<b>Applies to:</b> Samus
         <br>
@@ -683,10 +684,10 @@
         Attacks will stop the super wave dash.
         <br>
         <br><big><b>Detailed instructions</b></big>
-        <br>1. Down b
-        <br>2. Input the opposite direction you want to go just before Samus lands
-        <br>3. Instantly input the opposite direction (where you want to go) on the next frame
-        <br>4. Let go of the stick to go the full distance
+        <br><b>Step 1:</b> Down b
+        <br><b>Step 2:</b> Input the opposite direction you want to go just before Samus lands
+        <br><b>Step 3:</b> Instantly input the opposite direction (where you want to go) on the next frame
+        <br><b>Step 4:</b> Let go of the stick to go the full distance
         <br>
         <br><big><b>Crouched bomb</b></big>
         <br>When crouching and laying a bomb, as opposed to laying a bomb without crouching, Samus will skip the
@@ -736,7 +737,7 @@
         become an active reflector for exactly two frames starting from the 2nd frame
         after activation. It is important to note that the mine is only a reflector,
         no hitbox effects and that both actions (setting of the trap, and activating it)
-        must both be performed while there are active projectiles on the screen.
+        must both be performed while there is an active projectile on the screen.
         <br>
         <br><big><b>How to perform</b></big>
         <br><b>Step 1:</b> Shine somewhere (Make sure an enemy projectile is on screen)
@@ -804,6 +805,9 @@
         <br>To perform the technique, simply wavedash off a platform or stage, and press B right before sliding off.
     ]]></string>
     <string name="wallbomb_info_text"><![CDATA[http://i.imgur.com/9eeElnL.gifv
+		<br>
+        <br>Here is MacD using the wallbomb technique to get back onto the stage
+        http://oddshot.tv/shot/teamoxy-2015110261422335
         <br>
         <br><b>Applies to:</b> Peach
         <br>
@@ -821,10 +825,6 @@
         (meaning a side special with smash attack button timing, B and control stick at the
         same time), and let the stick reset to neutral, then perform the smash side special again.
         <br>This technique should be possible on FoD, Yoshi\'s Story and FD. Other stages too.
-        <br>
-        <br>
-        <br>Here is MacD using the wallbomb technique to get back onto the stage
-        http://oddshot.tv/shot/teamoxy-2015110261422335
     ]]></string>
     <string name="wavelandedl_info_text"><![CDATA[http://www.ssbwiki.com/images/5/57/Wavelanded_laser.gif
         <br>
@@ -956,8 +956,8 @@
         <br><big><b>Thunder Jacket</b></big>
         <br>A follow-up technique to the Yoyo Glitch discovered by Simna ibn Sind.
         <br><b>Instructions:</b>
-        <br>1. Perform the Yoyo Glitch.
-        <br>2. Use PK Thunder to floorblast yourself from the air or use PK Thunder to hit yourself into a ledge and grab it.
+        <br><b>Step 1:</b> Perform the Yoyo Glitch.
+        <br><b>Step 2:</b> Use PK Thunder to floorblast yourself from the air or use PK Thunder to hit yourself into a ledge and grab it.
         <br><b>Effects:</b>
         <br>Attaches the hitbox of PK Thunder (Ness\' recovery attack) to Ness\' body.
         <br>Blocks most attacks that it collides with and hurts opponents and destructible stages.
@@ -975,6 +975,12 @@
     </string>
     <string name="airdodge_term_info">
         Dodging in the air, can have several directions.
+    </string>
+    <string name="antiground_term_info">
+        A mechanic in Melee where if a player\'s combo count is greater than or equal to
+        5 while grounded, the player is pushed backwards by an invisible force at a rate
+        of 0.025 meleemeters/frame. As the combo grows to 13 or more, the rate of pushback
+        is increased to 0.070 meleemeters/frame. More info: http://bit.ly/1Zw0lvE
     </string>
     <string name="babypopoff_term_info">
         Like a pop off, but smaller and not as visible. Hence being a \"baby\".
@@ -1017,6 +1023,10 @@
         An area of a stage with an impassable
         platform above the area and maybe other walls, which
         allows characters to tech and survive potentially fatal blows.
+    </string>
+    <string name="circusmusic_term_info">
+        Meant to refer to WestBallz\'s play, as he is known for perfoming amazing combo\'s into SD. Usually accidentally
+        Side-B\'ing off the stage or dying in some unreasonable avoidable way. https://youtu.be/hBzLIB1iSXM
     </string>
     <string name="cbox_term_info">
         The box of a stage where the camera is watching. The blastzones are usually past or at this box.
@@ -1074,6 +1084,13 @@
     </string>
     <string name="doubles_term_info">
         When 2 teams of two players each go against another. Usually has their own bracket.
+    </string>
+    <string name="doubledip_term_info">
+        A term used when a Falco uses his DAir to spike a character twice in a row. Sometimes
+        after a jump or walljump. http://oddshot.tv/shot/beyondthesummit-2015110913256628
+    </string>
+    <string name="dumpster_term_info">
+        Getting a premature kill off the edge using any sort of meteor smash or spike, specifically Marth\'s DAir or Falco\'s DAir
     </string>
     <string name="easymoney_term_info">
         Quote from smasher Bizzarro Flame at Apex 2015, when asked what he thought when
@@ -1140,6 +1157,9 @@
         A term used to refer to one of the Top 5 players in Melee, called Gods as they are all-powerful
         and rule the tournaments, the players are MaNgo, Mew2King, PPMD, Hungrybox and Armada.
     </string>
+    <string name="goingham_term_info">
+        To go completely crazy on someone, performing the best you possibly can against them.
+    </string>
     <string name="gotothedoctor_term_info">
         A comical phrase meant to refer to Mew2King\'s lack of medical support in response to his
         hand injuries. Mew2King, having been playing Melee competitively for several years without
@@ -1186,7 +1206,7 @@
         in response to a Falco LHDL\'ing and getting punished. http://oddshot.tv/shot/beyondthesummit-2015110625841140
     </string>
     <string name="janky_term_info">
-        Weird, unorthodox, or wonky
+        Something that happens that is just wierd or complete BS. https://youtu.be/iF9_EpCGfSs
     </string>
     <string name="jcgrab_term_info">
         Abbreviated as JC grab, a jump canceled grab can be done by jumping immediately
@@ -1224,6 +1244,9 @@
     </string>
     <string name="lolm2k_term_info">
         A twitch meme, now expanded to all of the smash community. Origin: http://pastebin.com/YZj6B2Wt
+    </string>
+    <string name="lovetap_term_info">
+        When a Captain Falcon hits an opponent with the later weak hitbox of his FAir (Knee).
     </string>
     <string name="mashedpotato_term_info">
         A comical misspelling of Masahiro Sakurai, the director of all Smash Bros. games. Other
@@ -1281,13 +1304,17 @@
         Also called ledge turn around grab, done by walking to the ledge and doing a slow turn around, followed by fast fall.
         Used to quickly edge hog. https://youtu.be/yw9pfO9UORU
     </string>
+    <string name="peopleselbow_term_info">
+        A nickname for Captain Falcon\'s side smash. Named after MIOM Co-Founder of MIOM Scar,
+        who is nicknamed \"The People\'s Champ\".
+    </string>
     <string name="phit_term_info">
         If you barely hit your opponent, you\'ll do half damage and deal no knockback. All that
         is visible is the percent change and the visual hit effect. https://youtu.be/iAHw6z0j074
     </string>
     <string name="pivot_term_info">
         When you quickly turn around to perform an action, can be done with any move.
-    </string>2
+    </string>
     <string name="popoff_term_info">
         When a smasher shows emotion after an action is performed, usually \"popping\" off their chair.
         Can be a positive or negative reaction. http://gfycat.com/FatWhoppingDikdik
@@ -1457,6 +1484,10 @@
         One of the more notable being the \"stitch face\", which can deal 33-41&#37; when thrown.
         https://youtu.be/8Nnr3L0DBeQ
     </string>
+    <string name="stockcancel_term_info">
+        A comical term meant to refer to SD\'ing or when a player\'s mistake or mindlessness
+        results in them losing a stock.
+    </string>
     <string name="stomp_term_info">
         Like wave dashing but downwards.
     </string>
@@ -1534,7 +1565,7 @@
     </string>
     <string name="trash4_term_info">
         A comical term meant to refer to Smash 4, the 4th iteration of Super Smash Bros. which is on
-        the Wii U and 3DS. People also use Snore 4 and TR4SH. Please be respectful to all players of the Smash
+        the Wii U and 3DS. People also use Connect  4, Snore 4 and TR4SH. Please be respectful to all players of the Smash
         community.
     </string>
     <string name="triangle_term_info">
@@ -1561,15 +1592,22 @@
         A comical term used referring to wavedashing when it is thought to be OP by players.
         Usually spoken as \"Stahp wavecheating guise\".
     </string>
+    <string name="wavedance_term_info">
+        Like dash-dancing, but with wavedashes.
+    </string>
     <string name="wombo_term_info">
         The most recognizable Smash video, referring to a California Tournament
         match with an impromptu combo by SilentSpectre and Tang against Zhu with commentary by
         HomeMadeWaffles, Phil, and MaNgo. Sometimes used to refer to a team combo that uses different moves.
         The origin of \"DAT AINT FALCO\". https://youtu.be/pD_imYhNoQ4
     </string>
+    <string name="woop_term_info">
+        A nickname for Mewtwo\'s Up-B, in which he teleports with a \"woop\" sound being played
+        when he vanishes and reappears.
+    </string>
     <string name="wop_term_info">
         A technique with Jigglypuff taking advantage of her multiple jumps to barrage or gimp players.
-        Some times done to knock the player out of the side camera box using jigg\'s bair or nair.
+        Some times done to knock the player out of the side camera box using Jigg\'s bair or nair.
         https://youtu.be/ZknGCSjgDMY
     </string>
     <string name="zoning_term_info">
@@ -1689,13 +1727,17 @@
         <br><b>Donkey Kong:</b> can chain throw Fox, Falco and Falcon with the up throw at low to mid percentages. Donkey Kong can
         also chain throw Fox, Falco, and Captain Falcon with forward throw, then while carrying them, up throw.]]>
     </string>
-    <string name="crouchcancel_info_text"><![CDATA[<b>Useful video for learning to CC:</b> https://youtu.be/IA-ROZiZJqY
+    <string name="crouchcancel_info_text"><![CDATA[<b>Note:</b> Peach is CC\'ing in order to take advantage
+        of the reduced knockback to punish the Fox with a down smash.
+        <br>
+        <br><b>Useful video for learning to CC:</b> https://youtu.be/IA-ROZiZJqY
         <br>
         <br><big><b>Crouch Canceling</b></big>
         <br>Abbreviated as CC, Crouch canceling is the act of crouching when being hit by an attack in
         order to reduce your knockback and damage taken. Most players suggest you should always crouch
         cancel, with the exception to some moves such as Peach\'s down smash as CC\'ing it will
-        cause you to get \"sucked\" in, and take more damage.
+        cause you to get \"sucked\" in, and take more damage. Keep in mind sometimes CC is not very effective after
+        around 50&#37;.
         <br>
         <br><big><b>How to perform</b></big>
         <br>To crouch cancel, simply crouch right before an enemy attacks, if done properly,
@@ -1747,7 +1789,9 @@
         good stunning ability, which allows follow-up into other attacks.
     ]]>
     </string>
-    <string name="ddance_info_text"><![CDATA[<big><b>Dash-dance</b></big>
+    <string name="ddance_info_text"><![CDATA[Example of dash dancing: https://youtu.be/mk09c6iLLdU
+        <br>
+        <br><big><b>Dash-dance</b></big>
         <br>This is an advanced technique performed by rapidly tapping
         the analog stick left and right while on the ground, it cancels out the characters initial dashing
         animation with another animation in the opposite direction, causing the character to quickly and
@@ -1777,7 +1821,6 @@
         use of the technique, and proper use of dash-dancing is important in all of their respective
         metagames.
         <br>
-        <brExample of dash dancing: https://youtu.be/mk09c6iLLdU
     ]]></string>
     <string name="di_info_text"><![CDATA[<big><b>Directional influence</b></big>
         <br>Often abbreviated as DI, this is the control the receiver of an attack
@@ -2170,10 +2213,10 @@
         <br>Possible with all the characters that can wall jump
         <br>
         <br><big><b>Detailed instructions</b></big>
-        <br>1. Grab the ledge
-        <br>2. Drop from the ledge
-        <br>3. Double jump* back to the ledge, making sure that you rub up against the wall as you do so.
-        <br>4. While hanging from the ledge, quick tap away.
+        <br><b>Step 1:</b> Grab the ledge
+        <br><b>Step 2:</b> Drop from the ledge
+        <br><b>Step 3:</b> Double jump* back to the ledge, making sure that you rub up against the wall as you do so.
+        <br><b>Step 4:</b> While hanging from the ledge, quick tap away.
         <br>
         <br>*You don\'t have to double jump. You can also use a Special attack, so long as you make sure that you
         are touching the wall on the way to the ledge.
@@ -2271,6 +2314,8 @@
         <br>
         <br><b>More info</b>
         <br>For more info, check out this video from PewPewU: https://youtu.be/XhujDoRBXeY
+        <br>Set ups for Fox and Falco: http://bit.ly/1SjtJAG
+        <br>
     ]]></string>
     <string name="platformcancel_info_text"><![CDATA[<b>Note:</b> The nair performed by Mario is the platform cancel. The initial
         hit is a aerial interrupt attack uair.
@@ -2458,6 +2503,30 @@
         Vesne: http://smashboards.com/threads/new-tech-reverse-walljumping.417240/
         ]]>
     </string>
+    <string name="shaidrop_info_text"><![CDATA[<big><b>Shai drop</b></big>
+        <br>Shai dropping is a technique for consistently doing frame perfect shield drops from a dash.
+        <br>Shai drops allow the player to quickly shield drop from a dash and lets the player keep their momentum
+        from the dash. They are also usually the fastest way to drop through a platform.
+		<br>
+		<br><big><b>Uses</b></big>
+		<br>Shai drops can be useful in a situation where you\'d usually drop through the platform and NAir or FAir,
+		but instead you can dash back, shai drop, and BAir (which is usually stronger). It can also be
+		used for mix-ups and mindgames since you can quickly drop through platforms without any foretelling.
+		<br>
+		<br><big><b>Execution</b></big>
+		<br><b>Method 1:</b> Dash, hold diagonal down in the direction of your dash/run
+		(45°), and shield. not simultaneously, but one after another with just a small
+		moment apart from positioning the stick down and shielding.
+		<br>This method is more lenient and
+		potentially faster than the aforementioned stick down method since
+		you don\'t need to worry spot dodging if you press the shield too soon after the stick is positioned.
+		<br>The downside of this method is that you must have a decently precise joystick in
+		order for it to be at all possible.
+		<br>
+		<br><b>Method 2:</b> Dash, hold straight down instead, and shield. Not simultaneously,
+		but one after another with just a small moment apart (2-frame window) from positioning the stick down and shielding.
+		<br>Shielding to early will result in a spot dodge and shielding too late will result in a normal shield.
+    ]]></string>
     <string name="shieldpress_info_text"><![CDATA[<big><b>Shield pressure</b></big>
         <br>Shield pressure is a combination of attacks that enables a
         character to break an opponent\'s shield without the opponent having to hold down shield for the
@@ -2494,25 +2563,20 @@
         <br>\tYoshi\'s down aerial
         <br>\tA low-cooldown attack into a multi-hit attack is often considered a shield break combo
     ]]></string>
-    <string name="shielddrop_info_text"><![CDATA[
-        <br><big><b>Shield dropping</b></big>
+    <string name="shielddrop_info_text"><![CDATA[<br><big><b>Shield dropping</b></big>
         <br>Shield platform dropping is dropping through
-        a soft platform while shielding by tilting the analog stick down or
+        a soft platform while shielding. This allows a player to quickly escape situations
+        or mix-up their approaches.
         <br>
         <br><big><b>How to perform</b></big>
         <br>There are two ways to perform a shield drop:
         <br><b>1.</b> Open up your shield, and tilt the control stick the correct amount downwards rapidly (approximately one
         notch on the GC remote)
         <br><b>2.</b> Move the control stick towards the side, and then bringing it down one notch.
-        Although this method is slower, and is easily readable, it is easier to perform.
+        Although this method is slower and is easily readable, it is easier to perform.
         <br>
         <br>For more help on how to shield drop consistently,
         check out this video by Victra: https://youtu.be/hsl03HJ_LTU
-        <br>
-        <br><big><b>Uses</b></big>
-        <br>Shield platform dropping opens a larger possibility of comboing, tech-chasing, edgeguarding,
-        mindgaming, and out-of-shield options. This technique also gives Yoshi a quick way to act out of his
-        unique shield, as he cannot jump out of shield in Melee.
     ]]></string>
     <string name="shffl_info_text"><![CDATA[<big><b>SHFFL</b></big>
         <br>The short hop fast fall L-cancel, commonly abbreviated as \"SHFFL\"
@@ -2629,7 +2693,9 @@
         this strategy takes a large amount of time to build up notable damage, so is mostly use for stalling the game,
         or annoying the target player.
     ]]></string>
-    <string name="tech_info_text"><![CDATA[<big><b>Tech</b></big>
+    <string name="tech_info_text"><![CDATA[How to tech: https://youtu.be/1R0yC4ztGPI
+        <br>
+        <br><big><b>Tech</b></big>
         <br>A tech is an action that can be performed when the player\'s character hits the
         ground, a wall, or a ceiling while tumbling or in hitstun. To tech, the user must press the shield button
         20 frames or fewer before hitting the surface; after that, a player won\'t be able to tech for 40 frames.
@@ -3123,7 +3189,8 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/falco.111/
         <br>
-        <br><b>Falco tutorials:</b> https://youtu.be/RkUfAtXnNAU
+        <br><b>Falco tutorials:</b> http://bit.ly/1RCpwrl
+        <br>https://youtu.be/RkUfAtXnNAU
         <br>https://youtu.be/Rqw5wRh2E88
         <br>https://youtu.be/yLa6jCtQrVQ
         <br>
@@ -3956,7 +4023,7 @@
         <br><b>Average Fall Speed:</b> 16-18th fastest
         <br><b>Fast falling speed:</b> 14-18th fastest
         <br><b>Falling speed:</b> 7-9th fastest
-        <br>2
+        <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 22-23rd longest
         <br><b>100&#37;+ ledge roll:</b> 21-22nd longest
@@ -4006,9 +4073,9 @@
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/ice-climbers.83/
         <br>
-        <br><b>Helpful Climber guide:</b> http://smashboards.com/threads/the-solution-an-ice-climbers-guide-to-non-grab-skillz-by-choknater.112413/
+        <br><b>Helpful Climber guide:</b> http://bit.ly/1Q6Pbrf
         <br>
-        <br>Ice Climbers rank 7th on the tier list (in the B tier), highly accredited to the usage of Wobbling and Desynching and the fact that the fighter is literally
+        <br>Ice Climbers rank 7th on the tier list (in the B tier), highly accredited to the usage of Wobbling and Desyncing and the fact that the fighter is literally
         \"two-in-one", which helps the climbers rack up damage, combo, and KO opponents; this gives the Ice Climber\'s one of the best grab games in Melee.
         Additionally, good players can quickly rack up damage with the two, and they have good approach options on the ground, due to disjointed hitboxes and
         two decent projectiles. The two also have a very long and floaty wavedash, aiding their approach tremendously. The Ice Climbers, however, have a poor
@@ -4347,14 +4414,15 @@
     <string name="edgeguard_info_text"><![CDATA[<big><b>Edge guarding</b></big>
         <br>The most important thing to remember about edge guarding is, against the
         majority of the cast IT IS NOT A GUESSING GAME.
+        <br>
         <br><b>Here\'s my simple 5 step edge guarding guide for beginners:</b>
-        <br>\t1. Hit them off the stage.
-        <br>\t2. Hit them again if they are still close to the stage. (Don\'t let a Falco Up-B really close to the ledge.)
-        <br>\t3. Grab the ledge. You may need to regrab the ledge for invincibility
+        <br>\t<b>Step 1:</b> Hit them off the stage.
+        <br>\t<b>Step 2:</b> Hit them again if they are still close to the stage. (Don\'t let a Falco Up-B really close to the ledge.)
+        <br>\t<b>Step 3:</b> Grab the ledge. You may need to regrab the ledge for invincibility
         depending on who you are edge guarding, ie: Marth. Overall it\'s a
         good habit to get into. http://www.youtube.com/watch?v=8d95uCpFeYQ&feature=player_detailpage#t=48s
-        <br>\t4. Stay on the ledge and WAIT!
-        <br>\t5. Did they make it back onto the stage? If so, hit them back off. If not just roll.
+        <br>\t<b>Step 4:</b> Stay on the ledge and WAIT!
+        <br>\t<b>Step 5:</b> Did they make it back onto the stage? If so, hit them back off. If not just roll.
         <br>
         <br>Edge guarding revolves around taking away your opponent\'s \"sweetspot the ledge\" option. Once you have taken
         their ability to sweetspot, they have no safe option to get back onto the stage.
@@ -4528,7 +4596,7 @@
         <br><b>Huge collection of everything</b>
         <br>www.tinyurl.com/meleelibrary
         <br>
-        <br><b>20XX TE, a tourney Melee hack pack</b>
+        <br><b>20XX TE, a GC compatible hack pack</b>
         <br>http://www.20xx.me/
         <br>
         <br><big><b>Smashboards</b></big>
@@ -4551,7 +4619,7 @@
         <br><b>Confidence in Smash, from PPMD</b>
         <br>http://smashboards.com/threads/falco-discussion-thread.256826/page-126#post-12281679
         <br>
-        <br><b>Oberservation: The Key to Higher Level Play</b>
+        <br><b>Observation: The Key to Higher Level Play</b>
         <br>http://smashboards.com/threads/observation-the-key-to-higher-level-smash-play.103017/
         <br>
         <br><b>An Analysis of Ascending to the Next Level</b>
@@ -4564,6 +4632,9 @@
         <br>http://smashboards.com/threads/advance-attack-avoid-through-the-lens-of-luigi.389684/
         <br>
         <br><big><b>Reddit</b></big>
+        <br>
+        <br><b>/r/SmashBros</b>
+        <br>https://www.reddit.com/r/smashbros
         <br>
         <br><b>Mindset of Improvement</b>
         <br>https://www.reddit.com/r/smashbros/comments/235klc/discussing_the_mindset_of_improvement/
@@ -4584,11 +4655,17 @@
         <br>
         <br><big><b>Videos</b></big>
         <br>
+        <br><b>Super Smash Academy</b>
+        <br>https://www.youtube.com/user/supersmashacademy
+        <br>
         <br><b>The Smash Documentary</b>
         <br>https://youtu.be/jX9hbbA-WP4
         <br>
         <br><b>The Smash Documentary Series (Remastered)</b>
         <br>https://youtu.be/NSf2mgkRm7Q&list=PLoUHkRwnRH-IXbZfwlgiEN8eXmoj6DtKM
+        <br>
+        <br><b>Melee It On Me YouTube channel</b>
+        <br>https://www.youtube.com/user/MeleeItOnMe/playlists
         <br>
         <br><b>Smash Practice, helpful words from Zhu and Cactuar</b>
         <br>https://www.youtube.com/playlist?list=PL32VvbzXtv1Z5JqXR_gNCtUZI5h7TfOGR

@@ -37,6 +37,10 @@
     <group android:id="@+id/numbertwo"
         android:checkableBehavior="none">
         <item
+            android:id="@+id/support"
+            android:icon="@drawable/ic_gift_white_36dp"
+            android:title="@string/action_support" />
+        <item
             android:id="@+id/settings"
             android:icon="@drawable/settings"
             android:title="@string/action_settings" />

@@ -22,10 +22,6 @@ public class CharacterFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
 
-    private LayoutManagerType mCurrentLayoutManagerType;
-
-    private enum LayoutManagerType {LINEAR_LAYOUT_MANAGER}
-
     private String[] characters;
 
     public static CharacterFragment newInstance() {
@@ -42,12 +38,7 @@ public class CharacterFragment extends Fragment {
         characters = ArrayHelper.getCharacterArray(getActivity());
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
-
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-        if(savedInstanceState != null)
-            mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable
-                    ("layoutManager");
-        setRecyclerViewLayoutManager();
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         mRecyclerView.setAdapter(new IconAdapter(characters));
 
@@ -109,17 +100,5 @@ public class CharacterFragment extends Fragment {
     public void onResume() {
         canStart = true;
         super.onResume();
-    }
-
-    private void setRecyclerViewLayoutManager() {
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mRecyclerView.scrollToPosition(0);
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putSerializable("layoutManager", mCurrentLayoutManagerType);
-        super.onSaveInstanceState(savedInstanceState);
     }
 }

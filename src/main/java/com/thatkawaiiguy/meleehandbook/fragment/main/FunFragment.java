@@ -18,20 +18,12 @@ import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 public class FunFragment extends Fragment {
 
     private static final String TAG = "TechFragment";
-    private static final String KEY_LAYOUT_MANAGER = "layoutManager";
 
     private final String[] funs = ArrayHelper.getFunArray();
-
-    private enum LayoutManagerType {
-        LINEAR_LAYOUT_MANAGER
-    }
-
-    private LayoutManagerType mCurrentLayoutManagerType;
 
     private boolean canStart = true;
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
 
     public static FunFragment newInstance() {
         Bundle args = new Bundle();
@@ -48,11 +40,7 @@ public class FunFragment extends Fragment {
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
-        mLayoutManager = new LinearLayoutManager(getActivity());
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-        if (savedInstanceState != null)
-            mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable(KEY_LAYOUT_MANAGER);
-        setRecyclerViewLayoutManager();
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         mRecyclerView.setAdapter(new TextAdapter(funs));
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
@@ -73,26 +61,5 @@ public class FunFragment extends Fragment {
     public void onResume() {
         canStart = true;
         super.onResume();
-    }
-
-    private void setRecyclerViewLayoutManager() {
-        int scrollPosition = 0;
-
-        if (mRecyclerView.getLayoutManager() != null) {
-            scrollPosition = ((LinearLayoutManager) mRecyclerView.getLayoutManager())
-                    .findFirstCompletelyVisibleItemPosition();
-        }
-
-        mLayoutManager = new LinearLayoutManager(getActivity());
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.scrollToPosition(scrollPosition);
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putSerializable(KEY_LAYOUT_MANAGER, mCurrentLayoutManagerType);
-        super.onSaveInstanceState(savedInstanceState);
     }
 }

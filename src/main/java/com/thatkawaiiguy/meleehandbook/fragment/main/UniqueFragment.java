@@ -22,10 +22,6 @@ public class UniqueFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
 
-    private enum LayoutManagerType {LINEAR_LAYOUT_MANAGER}
-
-    private LayoutManagerType mCurrentLayoutManagerType;
-
     private final String[] uniqueTechs = ArrayHelper.getUniqueArray();
 
     public static UniqueFragment newInstance() {
@@ -42,10 +38,7 @@ public class UniqueFragment extends Fragment {
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-        if(savedInstanceState != null)
-            mCurrentLayoutManagerType = (LayoutManagerType) savedInstanceState.getSerializable("layoutManager");
-        setRecyclerViewLayoutManager();
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         TextAdapter adapter = new TextAdapter(uniqueTechs);
         mRecyclerView.setAdapter(adapter);
@@ -76,17 +69,5 @@ public class UniqueFragment extends Fragment {
     public void onResume() {
         canStart = true;
         super.onResume();
-    }
-
-    private void setRecyclerViewLayoutManager() {
-        mCurrentLayoutManagerType = LayoutManagerType.LINEAR_LAYOUT_MANAGER;
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        mRecyclerView.scrollToPosition(0);
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        savedInstanceState.putSerializable("layoutManager", mCurrentLayoutManagerType);
-        super.onSaveInstanceState(savedInstanceState);
     }
 }
