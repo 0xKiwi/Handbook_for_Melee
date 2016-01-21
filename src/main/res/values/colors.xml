@@ -16,7 +16,7 @@
     along with Melee Handbook.  If not, see <http://www.gnu.org/licenses/>
 -->
 <resources>
-    <color name="overscroll_color">#80fdd835</color>
+    <color name="overscroll_color">#fffdd835</color>
     <color name="theme_primary">#303F9f</color>
     <color name="theme_primary_dark">#ff1A237E</color>
     <color name="theme_accent">#fdd835</color>

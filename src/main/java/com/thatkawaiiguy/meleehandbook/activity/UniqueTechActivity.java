@@ -34,12 +34,6 @@ public class UniqueTechActivity extends GifInfoActivity {
             case "Desynching":
                 infoImage.setImageResource(R.drawable.desync);
                 break;
-            case "DJC counter":
-                infoImage.setImageResource(R.drawable.djcc);
-                break;
-            case "Double jump cancel":
-                infoImage.setImageResource(R.drawable.djc);
-                break;
             case "Extended grapple":
                 infoImage.setImageResource(R.drawable.egrapple);
                 break;
@@ -48,6 +42,9 @@ public class UniqueTechActivity extends GifInfoActivity {
                 break;
             case "Float cancel":
                 infoImage.setImageResource(R.drawable.floatcan);
+                break;
+            case "DJ knockback armor":
+                infoImage.setImageResource(R.drawable.djka);
                 break;
             case "Ledgehop double laser":
                 infoImage.setImageResource(R.drawable.lhdl);

@@ -114,8 +114,9 @@ public class ArrayHelper {
     }
 
     public static String[] getUniqueArray() {
-        return new String[]{"Boomerang superjump", "DJC counter", "Desynching",
-                "Double jump cancel", "Double jump refresh", "Edge canceled eggs",
+        return new String[]{"Boomerang superjump", "Desynching",
+                "Double jump cancel",
+                "DJ knockback armor", "Double jump refresh", "Edge canceled eggs",
                 "Extended & homing grapple", "Float cancel", "Frozen turnip glitch",
                 "Ledgehop double laser", "Multishine", "Parry", "Pillaring",
                 "Princess/Swordsman spiking", "RI grapple cancel",
@@ -545,10 +546,10 @@ public class ArrayHelper {
                 return res.getString(R.string.desync_info_text);
             case "Double jump cancel":
                 return res.getString(R.string.djc_info_text);
+            case "DJ knockback armor":
+                return res.getString(R.string.knockbackarmor_info_text);
             case "Double jump refresh":
                 return res.getString(R.string.doublejump_info_text);
-            case "DJC counter":
-                return res.getString(R.string.djcc_info_text);
             case "Extended & homing grapple":
                 return res.getString(R.string.egrapple_info_text);
             case "Edge canceled eggs":

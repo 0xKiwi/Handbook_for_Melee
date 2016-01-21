@@ -2355,21 +2355,9 @@ public class MatchupFragment extends Fragment {
         if(getLeftPercent(characterLeft, characterRight).equals("Mirror")) {
             infoLeft.setText("Mirror");
             infoRight.setText("Mirror");
-            if(characterLeft.equals("Fox") || characterLeft.equals("Falco")) {
-                MediaPlayer mp = new MediaPlayer();
-                try {
-                    AssetFileDescriptor afd;
-                    afd = getResources().getAssets().openFd("shine.wav");
-                    mp.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength
-                            ());
-                    mp.prepare();
-                    mp.start();
-                } catch(IllegalStateException | IOException e) {
-                    e.printStackTrace();
-                }
-                if(characterLeft.equals("Fox") && characterRight.equals("Fox"))
-                    to20XX();
-            } else
+            if(characterLeft.equals("Fox") && characterRight.equals("Fox"))
+                to20XX();
+            else
                 un20XX();
         } else {
             un20XX();

@@ -219,22 +219,6 @@
         fall almost immediately, and L-cancel the aerial very quickly. The result will cause the character using this technique
         to attack extremely quickly.
     ]]></string>
-    <string name="djcc_info_text"><![CDATA[<b>Applies to:</b> Yoshi
-        <br>
-        <br><big><b>DJCC</b></big>
-        <br>The double jump cancel counter, abbreviated DJCC, (also called double jump knockback armor)
-        is a technique unique to Yoshi. Yoshi\'s midair jump has knockback
-        protection and will continue its momentum after the appropriate freeze-frames are applied against all attacks with
-        knockback below 120.
-        <br>The DJCC utilizes this protection to allow Yoshi to jump into an opponent, take a hit, and proceed to follow up with a
-        counterattack almost immediately.
-        <br>
-        <br><big><b>How to perform</b></big>
-        <br>To perform the technique, start by simply double-jumping at an opponent within their attacking range. They will likely
-        attack the player, and the player will absorb the hit (taking all applicable damage), and be able to immediately counterattack
-        or float away in the direction they were previously headed. Any aerial or special move can be done immediately after impact,
-        but the most common are Yoshi\'s faster aerial attacks (such as neutral aerial) or his Egg Lay.
-    ]]></string>
     <string name="doublejump_info_text"><![CDATA[https://i.imgur.com/Mqr8335.jpg
         <br>
         <br><b>Applies to:</b> Captain Falcon and Ganondorf
@@ -352,6 +336,22 @@
         extended grapple beam pulls out. The beam will the move towards the nearest opponent; however,
         unlike the normal Grapple Beam, one needs to press A or Z when the tip of the beam is over
         the enemy in order to grab them.
+    ]]></string>
+    <string name="knockbackarmor_info_text"><![CDATA[<b>Applies to:</b> Yoshi
+        <br>
+        <br><big><b>Double jump knockback armor</b></big>
+        <br>The double jump knockback armor, (Also called double jump cancel counter, abbreviated DJCC)
+        is a technique unique to Yoshi. Yoshi\'s midair jump has knockback
+        armor and will continue its momentum after the appropriate freeze-frames are applied against all attacks with
+        knockback below 120.
+        <br>The DJ knockback armor utilizes this protection to allow Yoshi to jump into an opponent, take a hit, and proceed to follow up with a
+        counterattack almost immediately.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>To perform the technique, start by simply double-jumping at an opponent within their attacking range. They will likely
+        attack the player, and Yoshi will absorb the hit (taking all applicable damage), and be able to immediately counterattack
+        or float away in the direction they were previously headed. Any aerial or special move can be done immediately after impact,
+        but the most common are Yoshi\'s faster aerial attacks (such as neutral aerial) or his Egg Lay.
     ]]></string>
     <string name="lhdl_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
         <br>
@@ -2527,7 +2527,7 @@
         ]]>
     </string>
     <string name="shaidrop_info_text"><![CDATA[<big><b>Shai drop</b></big>
-        <br>Shai dropping is a technique for consistently doing frame perfect shield drops from a dash.
+        <br>Shai dropping (also called running shield drop) is a technique for consistently doing frame perfect shield drops from a dash.
         <br>Shai drops allow the player to quickly shield drop from a dash and lets the player keep their momentum
         from the dash. They are also usually the fastest way to drop through a platform.
 		<br>
@@ -3193,6 +3193,7 @@
         <br><b>Running Speed:</b> 11th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 6 frames (16th fastest)
         <br><b>Short hop:</b> 26-27th highest
         <br><b>Aerial speed:</b> 25th fastest
         <br><b>First jump height:</b> 1th highest
@@ -3253,6 +3254,7 @@
         <br><b>Running Speed:</b> 1st fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 5 frames (8th fastest)
         <br><b>Short Hop:</b> 7th-8th highest
         <br><b>Aerial Speed:</b> 4th fastest
         <br><b>First Jump Height:</b> 3rd highest
@@ -3303,6 +3305,7 @@
         <br><b>Running Speed:</b> 2nd fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 4 frames (1st fastest)
         <br><b>Short hop:</b> 18-22nd longest
         <br><b>Aerial speed:</b> 26th fastest
         <br><b>First jump height:</b> 7th highest
@@ -3358,6 +3361,7 @@
         <br><b>Short Hop:</b> 20-21st longest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 7 frames (23rd fastest)
         <br><b>Aerial Speed:</b> 20-21st fastest
         <br><b>First Jump Height:</b> 23rd longest
         <br><b>Second Jump Height:</b> 22nd longest
@@ -3406,6 +3410,7 @@
         <br><b>Running Speed:</b> 3-5th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 4 frames (1st fastest)
         <br><b>Short Hop:</b> 2nd highest
         <br><b>Aerial Speed:</b> 19th fastest
         <br><b>First Jump Height:</b> 6th highest
@@ -3451,6 +3456,7 @@
         <br><b>Running Speed:</b> 11-15h fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 5 frames (8th fastest)
         <br><b>Short Hop:</b> 18-23rd highest
         <br><b>Aerial Speed:</b> 16th fastest
         <br><b>First Jump Height:</b> 21-22nd highest
@@ -3490,6 +3496,7 @@
         <br><b>Running Speed:</b> 5th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 5 frames (8th fastest)
         <br><b>Short Hop:</b> 10th highest
         <br><b>Aerial Speed:</b> 13th fastest
         <br><b>First Jump Height:</b> 5th highest
@@ -3547,6 +3554,7 @@
         <br><b>Running Speed:</b> 6th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 4 frames (1st fastest)
         <br><b>Short Hop:</b> 12th highest
         <br><b>Aerial Speed:</b> 17-18th fastest
         <br><b>First Jump Height:</b> 15th highest
@@ -3591,6 +3599,7 @@
         <br><b>Running Speed:</b> 23-24th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 6 frames (16th fastest)
         <br><b>Short Hop:</b> 5-6th highest
         <br><b>Aerial Speed:</b> 5th fastest
         <br><b>First Jump Height:</b> 19-20th highest
@@ -3635,6 +3644,7 @@
         <br><b>Running Speed:</b> 16-20th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 5 frames (8th fastest)
         <br><b>Short Hop:</b> 14-15th highest
         <br><b>Aerial Speed:</b> 11th fastest
         <br><b>First Jump Height:</b> 12-13th highest
@@ -3673,6 +3683,7 @@
         <br><b>Running Speed:</b> 16-20th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 4 frames (1th)
         <br><b>Short Hop:</b> 9-11th highest
         <br><b>Aerial Speed:</b> 21-22 fastest
         <br><b>First Jump Height:</b> 25th highest
@@ -3711,6 +3722,7 @@
         <br><b>Running Speed:</b> 16–20th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 6 frames (16th fastest)
         <br><b>Short Hop:</b> 14-15th highest
         <br><b>Aerial Speed:</b> 2-3 fastest
         <br><b>First Jump Height:</b> 17th-18th highest
@@ -3750,6 +3762,7 @@
         <br><b>Running Speed:</b> 23-24th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 7 frames (23rd fastest)
         <br><b>Short Hop:</b> 16-17th highest
         <br><b>Aerial Speed:</b> 6-7th fastest
         <br><b>First Jump Height:</b> 14th highest
@@ -3791,6 +3804,7 @@
         <br><b>Running Speed:</b> 7-10th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 5 frames (8th fastest)
         <br><b>Short Hop:</b> 18-23rd lowest
         <br><b>Aerial Speed:</b> 6-7th fastest
         <br><b>First Jump Height:</b> 9th highest
@@ -3831,6 +3845,7 @@
         <br><b>Running Speed:</b> 25-26th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 7 frames (23rd fastest)
         <br><b>Short Hop:</b> 3-4th highest
         <br><b>Aerial Speed:</b> 10th fastest
         <br><b>First Jump Height:</b> 19-20th highest
@@ -3870,6 +3885,7 @@
         <br><b>Running Speed:</b> 11-15th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 9 frames (26th fastest)
         <br><b>Short Hop:</b> 18-23rd highest
         <br><b>Aerial Speed:</b> 20th fastest
         <br><b>First Jump Height:</b> 17-18th highest
@@ -3909,6 +3925,7 @@
         <br><b>Running Speed:</b> 25-26th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 6 frames (16th fastest)
         <br><b>Short Hop:</b> 26th highest
         <br><b>Aerial Speed:</b> 1st fastest
         <br><b>First Jump Height:</b> 26th highest
@@ -3960,6 +3977,7 @@
         <br><b>Running Speed:</b> 11-15th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 5 frames (8th fastest)
         <br><b>Short Hop:</b> 24th highest
         <br><b>Aerial Speed:</b> 8-9th fastest
         <br><b>First Jump Height:</b> 24th highest
@@ -4000,6 +4018,7 @@
         <br><b>Running Speed:</b> 7-10th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 6 frames (16th fastest)
         <br><b>Short Hop:</b> 13th highest
         <br><b>Aerial Speed:</b> 8-9th fastest
         <br><b>First Jump Height:</b> 4th highest
@@ -4038,6 +4057,7 @@
         <br><b>Running Speed:</b> 11-15h fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 5 frames (8th fastest)
         <br><b>Short Hop:</b> 18-23rd highest
         <br><b>Aerial Speed:</b> 16th fastest
         <br><b>First Jump Height:</b> 21-22nd highest
@@ -4077,6 +4097,7 @@
         <br><b>Running Speed:</b> 16-20th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 4 frames (1st fastest)
         <br><b>Short Hop:</b> 25th highest
         <br><b>Aerial Speed:</b> 23rd fastest
         <br><b>First Jump Height:</b> 7-8th highest
@@ -4119,6 +4140,7 @@
         <br><b>Running Speed:</b> 16-20th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 4 frames (1st fastest)
         <br><b>Short Hop:</b> 1st highest
         <br><b>Aerial Speed:</b> 15th fastest
         <br><b>First Jump Height:</b> 10-11th highest
@@ -4170,6 +4192,7 @@
         <br><b>Running Speed:</b> 22nd fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 5 frames (8th fastest)
         <br><b>Short Hop:</b> 7-8th highest
         <br><b>Aerial Speed:</b> 24th fastest
         <br><b>First Jump Height:</b> 2nd highest
@@ -4218,6 +4241,7 @@
         <br><b>Running Speed:</b> 3-5th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 4 frames (1st fastest)
         <br><b>Short Hop:</b> 9-11th highest
         <br><b>Aerial Speed:</b> 17-18th fastest
         <br><b>First Jump Height:</b> 12-13th highest
@@ -4260,6 +4284,7 @@
         <br><b>Running Speed:</b> 7-10th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 6 frames (16th fastest)
         <br><b>Short Hop:</b> 18-23rd highest
         <br><b>Aerial Speed:</b> 12th-14th fastest
         <br><b>First Jump Height:</b> 19-20th highest
@@ -4303,6 +4328,7 @@
         <br><b>Running Speed:</b> 7-10th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
+        <br><b>Jump squat</b> 6 frames (16th fastest)
         <br><b>Short Hop:</b> 2-4th highest
         <br><b>Aerial Speed:</b> 2-3rd fastest
         <br><b>First Jump Height:</b> 10-11th highest
