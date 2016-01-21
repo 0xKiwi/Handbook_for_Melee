@@ -1,3 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    This file is part of Melee Handbook.
+
+    Melee Handbook is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Melee Handbook is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Melee Handbook.  If not, see <http://www.gnu.org/licenses/>
+-->
 <resources>
     <string name="app_name">Melee Handbook</string>
 
@@ -97,8 +114,6 @@
 
     <string name="pref_open">pref_open</string>
     <string name="pref_open_title">Open navigation menu on launch</string>
-
-    <string name="banner_ad_unit_id">ca-app-pub-9162115758603564/9298660133</string>
 
     <!-- BEGIN UNIQUE TECH LIST -->
     <string name="boomjump_info_text"><![CDATA[<b>Applies to:</b> Link and Young Link
@@ -2756,7 +2771,7 @@
         most of the momentum. There are few situations where there is a ceiling for a player to tech off of, but
         it can happen quite frequently in the caves of life in some stages.
         <br>
-        <br><big><b>Usefullness and application</b></big>
+        <br><big><b>Usefulness and application</b></big>
         <br>Teching can be a lifesaver in many situations and is a good technique for beginners to learn and practice.
         Teching can also help the user escape from combos.
         <br>Occasionally after accumulating sufficient damage, one will experience a wall or ceiling rebound that will send the
