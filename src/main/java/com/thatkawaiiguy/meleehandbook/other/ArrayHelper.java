@@ -30,7 +30,8 @@ public class ArrayHelper {
         return new String[]{"Baiting", "Common errors", "Control", "Edge guarding",
                 "Improving", "Mindgames", "Mindset", "Mix-ups", "Must reads",
                 "Neutral game", "Pressuring", "Punishing", "Reading", "Recovery",
-                "Spacing", "Tech skill", "Tournament ruleset", "Various tips"};
+                "Spacing", "Tech skill", "Tournament ruleset","Useful links",
+                "Various tips"};
     }
 
     public static String[] getTechArray() {
@@ -49,7 +50,7 @@ public class ArrayHelper {
     public static String[] getTermArray() {
         return new String[]{"20XX", "Air dodge",
                 "Anti-ground infinite combo physics", "BYOC", "Baby pop off",
-                "Banned stage", "Beef", "Blastzone", "Boost grab",
+                "Banned stage", "Beef", "Blastzone", "Blender", "Boost grab",
                 "Brackets", "Buff", "Buster", "Camera box", "Cancel",
                 "Cave of life", "Circus music",
                 "Clone", "Cory in the house", "Counter",
@@ -59,7 +60,8 @@ public class ArrayHelper {
                 "Disjointed hitbox", "Disrespect", "Ditto", "Dong",
                 "Doormat", "Doubles", "Double dip", "Dumpster",
                 "ECB", "Easy money", "Edge guarding",
-                "Edge hogging", "Forbidden ledge guard", "Frame",
+                "Edge hogging", "Falcoville",
+                "Forbidden ledge guard", "Frame",
                 "Freeze frames", "Friendlies", "Fun-canceling", "Gimp",
                 "Go to the doctor", "God", "Going ham", "Grab", "Helicopter crash",
                 "Helpless", "Hitbox", "Hitlag", "Hitstun", "IASA frames",
@@ -123,6 +125,8 @@ public class ArrayHelper {
                 return res.getString(R.string.beef_term_info);
             case "Blastzone":
                 return res.getString(R.string.blastzone_term_info);
+            case "Blender":
+                return res.getString(R.string.blender_term_info);
             case "Boost grab":
                 return res.getString(R.string.boostgrab_term_info);
             case "Brackets":
@@ -181,6 +185,8 @@ public class ArrayHelper {
                 return res.getString(R.string.edgehog_term_info);
             case "Edge guarding":
                 return res.getString(R.string.edgeguard_term_info);
+            case "Falcoville":
+                return res.getString(R.string.falcoville_term_info);
             case "Forbidden ledge guard":
                 return res.getString(R.string.forbiddenledge_term_info);
             case "Freeze frames":
@@ -682,6 +688,8 @@ public class ArrayHelper {
                 return res.getString(R.string.spacing_info_text);
             case "Tech skill":
                 return res.getString(R.string.techskill_info_text);
+            case "Useful links":
+                return res.getString(R.string.usefulinks_info_text);
             case "Various tips":
                 return res.getString(R.string.tips_info_text);
             case "Tournament ruleset":

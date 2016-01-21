@@ -1001,6 +1001,10 @@
         A blastzone is a boundary on a stage that a character cannot cross without getting KO\'d (in most cases).
         Most stages contain blast zones that are far away from any sides. Can be viewed in the stages section.
     </string>
+    <string name="blender_term_info">
+        An alternate name for Peach\'s down smash, which is known to deal multiple hits and an incredible amount of damage
+        when the player taking hit crouch cancels.
+    </string>
     <string name="boostgrab_term_info">
         Canceling a dash attack with a dash grab. Has more range
         than a normal dash grab. http://bit.ly/1Yoaslw
@@ -1108,6 +1112,10 @@
     <string name="edgehog_term_info">
         Due to only one character being able to hold onto the ledge, you can
         cause your opponent to miss it when they are recovering due to you currently taking it.
+    </string>
+    <string name="falcoville_term_info">
+        An alternate name for Yoshi\'s Story, which is often a counterpick for Falcos. Falco benefits from this
+        stage due to its low platforms and small vertical blastzones, making it easy for Falco to get a kill from a spike.
     </string>
     <string name="forbiddenledge_term_info">
         Coined by top Young Link main Axe, Young Link can take advantage of the boomerang glitch
@@ -3391,7 +3399,7 @@
         <br><b>Average Fall Speed:</b> 6-7th fastest
         <br><b>Fast falling speed:</b> 3/4th fastest
         <br><b>Falling speed:</b> 7-9th fastest
-        <br>2
+        <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 17th longest
         <br><b>100&#37;+ ledge roll:</b> 19th longest
@@ -3436,7 +3444,7 @@
         <br><b>Average Fall Speed:</b> 16-18th fastest
         <br><b>Fast falling speed:</b> 14-18th fastest
         <br><b>Falling speed:</b> 16-18th fastest
-        <br>2
+        <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 22-23rd longest
         <br><b>100&#37;+ ledge roll:</b> 21-22nd longest
@@ -3894,7 +3902,7 @@
         <br><b>Average Fall Speed:</b> 26th fastest
         <br><b>Fast falling speed:</b> 26th fastest
         <br><b>Falling speed:</b> 26th fastest
-        <br>2
+        <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 13th longest
         <br><b>100&#37;+ ledge roll:</b> 14th longest
@@ -4069,7 +4077,7 @@
         <br><b>0-99&#37; ledge attack range:</b> 20th farthest
         <br><b>100+&#37; ledge attack range:</b> 12th farthest
         <br>
-        <br><b>Notable players:</b> Wobbles, ChuDat, Fly Amanita,  Nintendude
+        <br><b>Notable players:</b> Wobbles, ChuDat, Fly Amanita, Nintendude, Frio
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/ice-climbers.83/
         <br>
@@ -4104,7 +4112,7 @@
         <br><b>Average Fall Speed:</b> 23-24th fastest
         <br><b>Fast falling speed:</b> 14-18th fastest
         <br><b>Falling speed:</b> 24-25th fastest
-        <br>2
+        <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 11th longest
         <br><b>100&#37;+ ledge roll:</b> 5th longest
@@ -4155,7 +4163,7 @@
         <br><b>Average Fall Speed:</b> 23rd fastest
         <br><b>Fast falling speed:</b> 21-24th fastest
         <br><b>Falling speed:</b> 19-21st fastest
-        <br>2
+        <br>
         <br><b><u>Ledge stats</u></b>
         <br><b>0-99&#37; ledge roll:</b> 9th longest
         <br><b>100&#37;+ ledge roll:</b> 13th longest
@@ -4454,6 +4462,45 @@
         <br>
         <br>This may help: https://www.reddit.com/r/SSBM/comments/313rvt/my_falco_vs_spacie_edgeguarding_flowchart/
     ]]></string>
+    <string name="usefullinks_info_text"><![CDATA[<big><b>Must reads</b></big>
+        <br><b>These are links to pages I suggest you read through or watch, others are just useful things.</b>
+        <br>
+        <br><b>Huge collection of everything</b>
+        <br>www.tinyurl.com/meleelibrary
+        <br>
+        <br><b>20XX TE, a GC compatible hack pack</b>
+        <br>http://www.20xx.me/
+        <br>
+        <br><b>Smash Database, a stash of gfycats/oddshots</b>
+        <br>http://smashdatabase.com/?cat=7
+        <br>
+        <br><big><b>Reddit</b></big>
+        <br>
+        <br><b>/r/SmashBros</b>
+        <br>https://www.reddit.com/r/smashbros
+        <br>
+        <br><big><b>Videos</b></big>
+        <br>
+        <br><b>Super Smash Academy</b>
+        <br>https://www.youtube.com/user/supersmashacademy
+        <br>
+        <br><b>Melee It On Me YouTube channel</b>
+        <br>https://www.youtube.com/user/MeleeItOnMe/playlists
+        <br>
+        <br><b>Smash Practice, helpful words from Zhu and Cactuar</b>
+        <br>https://www.youtube.com/playlist?list=PL32VvbzXtv1Z5JqXR_gNCtUZI5h7TfOGR
+        <br>
+        <br><b>A playlist of all Smash God encounters</b>
+        <br>http://bit.ly/1Pq3wKh
+        <br>
+        <br><big><b>Streams</b></big>
+        <br>
+        <br><b>Smash Practice with Zhu and Cactuar</b>
+        <br>http://www.twitch.tv/smashpractice
+        <br>
+        <br><b>Melee It On Me</b>
+        <br>http://www.twitch.tv/meleeitonme
+    ]]></string>
     <string name="improve_info_text"><![CDATA[<big><b>Words on improving from PPMD</b></big>
         <br>Setting short term goals for friendlies is the easiest way
         to start pathing towards improvement. It really and truly helps to have a
@@ -4596,9 +4643,6 @@
         <br><b>Huge collection of everything</b>
         <br>www.tinyurl.com/meleelibrary
         <br>
-        <br><b>20XX TE, a GC compatible hack pack</b>
-        <br>http://www.20xx.me/
-        <br>
         <br><big><b>Smashboards</b></big>
         <br>
         <br><b>Best of Smashboards #1</b>
@@ -4633,9 +4677,6 @@
         <br>
         <br><big><b>Reddit</b></big>
         <br>
-        <br><b>/r/SmashBros</b>
-        <br>https://www.reddit.com/r/smashbros
-        <br>
         <br><b>Mindset of Improvement</b>
         <br>https://www.reddit.com/r/smashbros/comments/235klc/discussing_the_mindset_of_improvement/
         <br>
@@ -4655,17 +4696,11 @@
         <br>
         <br><big><b>Videos</b></big>
         <br>
-        <br><b>Super Smash Academy</b>
-        <br>https://www.youtube.com/user/supersmashacademy
-        <br>
         <br><b>The Smash Documentary</b>
         <br>https://youtu.be/jX9hbbA-WP4
         <br>
         <br><b>The Smash Documentary Series (Remastered)</b>
         <br>https://youtu.be/NSf2mgkRm7Q&list=PLoUHkRwnRH-IXbZfwlgiEN8eXmoj6DtKM
-        <br>
-        <br><b>Melee It On Me YouTube channel</b>
-        <br>https://www.youtube.com/user/MeleeItOnMe/playlists
         <br>
         <br><b>Smash Practice, helpful words from Zhu and Cactuar</b>
         <br>https://www.youtube.com/playlist?list=PL32VvbzXtv1Z5JqXR_gNCtUZI5h7TfOGR
@@ -4676,13 +4711,6 @@
         <br><b>Mindset talk with PPMD</b>
         <br>https://youtu.be/l5UCDsBZtlk
         <br>
-        <br><big><b>Streams</b></big>
-        <br>
-        <br><b>Smash Practice with Zhu and Cactuar</b>
-        <br>http://www.twitch.tv/smashpractice
-        <br>
-        <br><b>Melee It On Me</b>
-        <br>http://www.twitch.tv/meleeitonme
     ]]></string>
     <string name="neutral_info_text"><![CDATA[<big><b>Neutral game</b></big>
         <br>In the Neutral game, the balance of options each player can perform is at a relative equilibrium.
