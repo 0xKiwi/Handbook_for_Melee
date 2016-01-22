@@ -73,22 +73,18 @@
     \n\t\t\t\tStratocaster\'s Hitbox System
     \n
     \n\t\t\tLibraries used:
-    \n\t\t\t\tandroid-gif-drawable
-    \n\t\t\t\tmaterialscrollbar
-    \n\t\t\t\texpandablerecyclerview
     \n\t\t\t\tslidr
+    \n\t\t\t\tmaterialscrollbar
+    \n\t\t\t\tandroid-gif-drawable
+    \n\t\t\t\texpandablerecyclerview
     </string>
     <string name="info_text">
     \n\t\t\t\tLong click for alternate functions
     \n
     \n\t\t\t\tRed boxes indicate a hitbox
-    \n
     \n\t\t\t\tBlue boxes indicate intangibility
-    \n
     \n\t\t\t\tYellow boxes indicate hurtboxes
-    \n
     \n\t\t\t\tGreen boxes indicate reflect boxes
-    \n
     \n\t\t\t\tPink boxes indicate grab boxes
     </string>
     
@@ -118,30 +114,29 @@
     <!-- BEGIN UNIQUE TECH LIST -->
     <string name="boomjump_info_text"><![CDATA[<b>Applies to:</b> Link and Young Link
         <br>
-        <br>Examples of the technique being used: http://gfycat.com/GlaringFoolhardyHake
+        <br>Examples: http://gfycat.com/GlaringFoolhardyHake
         <br>http://gfycat.com/ForkedBruisedIberianmole
         <br>
         <br><big><b>Boomerang superjump</b></big>
         <br>The boomerang superjump is a superjump glitch that can be performed by either Link or Young
-        Link in Super Smash Bros. Melee. It is done by throwing their boomerang, and then wall-grappling
+        Link in Super Smash Bros. Melee. 
+        <br>It is done by throwing their boomerang, and then wall-grappling
         on a wall or the side of a stage. If performed correctly, the boomerang will fly into Link/Young
-        Link and they will immediately fly high up into the air in a tumble animation. If anything is
-        done to disrupt the tumble animation (jumping, air dodge, etc.) then Link/Young Link will cease
-        to rise into the air. This will happen automatically after a certain period of time, but
-        disrupting it will cut it short.
+        Link and they will immediately fly high up into the air in a tumble animation and after sometime
+        it will end, although if an action is done to cancel the tumble Link will stop rising in the air.
         <br>
         <br>This glitch was removed from the 1.2 and PAL versions of the game.
     ]]></string>
     <string name="desync_info_text"><![CDATA[<b>Applies to:</b> Ice Climbers
         <br>
-        <br>Examples of desynching: http://www.gfycat.com/RawSmoggyIrishsetter
+        <br>Example: http://www.gfycat.com/RawSmoggyIrishsetter
         <br>
         <br><big><b>Desynching</b></big>
-        <br>Desynching is an advanced Ice Climbers technique that involves
+        <br>Desynching is an Ice Climbers technique that involves
         separating the two climbers\' states and controlling them individually. It is most commonly
         done during grabs to allow Nana to attack a captive opponent or regrab them, but the Ice
         Climbers can be desynched out of many attacks, allowing the player to perform an attack,
-        move, jump, or wavedash with either Nana or Popo, whilst inputting a different command
+        move, jump, or wavedash with either Nana or Popo, while inputting a different command
         to the other Ice Climber.
         <br>
         <br><big><b>How to perform</b></big>
@@ -158,7 +153,8 @@
         <br>Continuous desynch, as demonstrated in Two Climbers, Two Hands is a technique
         which involves keeping the Climbers acting individually for extended periods of time.
         In addition to making the Climbers much more powerful offensively, they also
-        become harder to approach with continuous desynch. Due to the extreme difficulty of
+        become harder to approach with continuous desynch. 
+        <br>Due to the extreme difficulty of
         timing and maintaining a continuous string of attacks, the in-combat potential of this
         approach is clearly substantial, but largely untapped.
         <br>
@@ -171,30 +167,28 @@
         <br>
         <br><big><b>Double jump cancel</b></big>
         <br>The double jump cancel, sometimes abbreviated as DJC,
-        is a glitch-tactic used by Ness, Mewtwo, Peach, and Yoshi, who can attack
+        is a technique used by Ness, Mewtwo, Peach, and Yoshi, who can attack
         immediately after their double jump to cancel their upward momentum and land
         on the ground soon after their attack. This tactic is used to perform aerial
         attacks incredibly quickly, thus allowing aerial combos and KO\'s to be
         performed more quickly.
         <br>
-        <br><big><b>Ness</b></big>
+        <br><b>Ness</b>
         <br>Ness can use the technique, though it is not very useful but still relatively powerful.
         <br>
-        <br><big><b>Peach</b></big>
-        <br>Peach can use this technique, but it is generally unused due to float canceling being significantly quicker and more useful.
+        <br><b>Peach</b>
+        <br>Peach can use this technique, but it is generally unused due to float 
+        canceling being significantly quicker and more useful.
         <br>
-        <br><big><b>Yoshi</b></big>
-        <br>Yoshi has the ability to \"counter\" attacks because of his double jump\'s unique properties. This is referred to as a double jump
-        cancel counter, and is often used to catch the opponent offguard with a neutral aerial.
-        <br>One obvious downfall of this tactic is that Yoshi loses his double jump, possibly resulting in a self-destruct when offstage.
-        This can be extremely detrimental to him, as he lacks a third jump, and if Yoshi is hit away from the stage, Yoshi will
-        have almost no means of recovery outside of the directional air dodge.
+        <br><b>Yoshi</b>
+        <br>Yoshi has the ability to \"block the knockback\" of attacks because of his 
+        double jump\'s unique knockback armor, and is often used to catch the opponent offguard with an aerial.
+        <br>One downside of this is the lack of a standard recovery, so messing up and being taken offstage
+        limits Yoshi\'s recovery options to a directional air dodge.
         <br>
-        <br><big><b>Mewtwo</b></big>
-        <br>Mewtwo gains a significant advantage over other characters in that it can utilize the DJC. The best use of the DJC for
-        Mewtwo is speeding up its forward aerial, though it can be used to assist its up aerial and back aerial as well
-        (neutral aerial and down aerial take too long to be truly helped by this technique). As with all characters, Mewtwo
-        must not perform the DJC frame-perfect, as it will hit the ground before its air attack connects.
+        <br><b>Mewtwo</b>
+        <br>Mewtwo gains a significant advantage from DJC. The best use of the DJC for
+        Mewtwo is speeding up its forward aerial, though it can be used to assist its up aerial and back aerial as well. 
         <br>
         <br><big><b>DJC physics</b></big>
         <br>Since the affected characters\' double jumps are of the \"delayed\" type (where they do not rise immediately), interrupting
@@ -210,13 +204,12 @@
         <br>Double Jump Canceling works by allowing the user to perform an air attack while remaining close to the ground (most aerial
         attacks are performed at a short hop\'s distance from the ground). However, if the user performs a DJC with frame-perfect
         precision (known as an \"Instant Double Jump Cancel\" or IDJC), they will actually hit the ground before the hitbox from their
-        air attack comes out. This is true of every attack for every character who can DJC. It should be noted, however, that
-        performing an IDJC is incredibly difficult under normal circumstances, and most often, players will be performing a DJC.
+        air attack comes out. This is true of every attack for every character who can DJC.
         <br>
         <br><big><b>Execution</b></big>
         <br>To perform this technique, the player must perform their first jump, then double jump just as they leave the ground, and
-        press A. The player\'s double jump will be canceled and they will do the attack and immediately fall. The player may fast
-        fall almost immediately, and L-cancel the aerial very quickly. The result will cause the character using this technique
+        perform an aerial around the start of the \"rising\" in the double jump. The player\'s double jump will be canceled and they will do the attack and immediately fall. The player may fast
+        fall almost immediately. The result will cause the character using this technique
         to attack extremely quickly.
     ]]></string>
     <string name="doublejump_info_text"><![CDATA[https://i.imgur.com/Mqr8335.jpg
@@ -238,9 +231,10 @@
         <br>
         <br>Examples of the extended grapple: https://youtu.be/QanFnmIyqQI
         <br>
+        <br><big><b>Extended grapple</b></big>
         <br>Samus\' extended grapple is a technique that allows Samus to extend the length of her grab.
         <br>
-        <br><big><b>Extended grapple</b></big>
+        <br><big><b>How to perform</b></big>
         <br>Samus can extend the length of her Grapple Beam if the player presses Z, then up,
         down, and up on the control pad (The D-Pad you use for taunts), then Z again.
         This combo must be inputted between frames 8-39 of the grab (the part of the
@@ -251,15 +245,16 @@
     ]]></string>
     <string name="edgecanceleggs_info_text"><![CDATA[<b>Applies to:</b> Yoshi
         <br>
-        <br>Here are some examples of ECE\'ing: https://youtu.be/aDmwVPK1l7Y
+        <br>Examples: https://youtu.be/aDmwVPK1l7Y
         <br>https://youtu.be/p82iyfl-yKo
         <br>
         <br><big><b>Edge-canceled eggs</b></big>
-        <br>Edge-canceled eggs (abbreviated \"ECE\") is a planking
-        technique performed by Yoshi that is performed by releasing from the edge, pressing
-        down or away from the edge, double jumping, and then throwing an egg. This must be done
-        fast enough so that when done, the player does not land on the stage or too far above the
-        edge. After the egg is thrown, the player can grab onto the edge, canceling all lag and renewing the edge invincibility frames.
+        <br>Edge-canceled eggs (abbreviated \"ECE\") is a
+        technique for Yoshi that is performed by releasing from the edge, pressing
+        down or away from the edge, double jumping, and then throwing an egg.
+        After the egg is thrown, the player can grab onto the edge, canceling 
+        all lag and renewing the edge invincibility frames. Note that the invicibility does not cover cover all
+        of the ECE, it ends after the egg is launched if performed perfectly.
         <br>
         <br><big><b>Usefulness</b></big>
         <br>Edge-canceled eggs is a rather useful technique allowing Yoshi to
@@ -268,13 +263,11 @@
         giving Yoshi strong ledge play.
         <br>
         <br><big><b>How to perform</b></big>
-        <br>There is a little trick to learning the edge egg. Most people complain that they can’t do it. Other than not
-        putting in the time to get the timing down well, they are also dying quite a lot while practicing, which is frustrating.
         <br>The best way to do it is to start by simply double jumping higher than the edge, and throwing an egg, and letting yourself
         fall to the edge again. Then, slowly work your way down, reducing the amount of double jump you use each time. This way,
         you’ll get faster at it, and not die all the time. Also, remember that in battle, it is not the speed you can edge egg
         at that counts; it is whether you can time it right. The speed comes with time, but the timing is much more important.
-        Remember to always have your finger poised above the midair dodge button, especially when edge egging, because you never
+        <br>Remember to always have your finger poised above the midair dodge button, especially when edge egging, because you never
         know when you might need to use it.
     ]]></string>
     <string name="fcancel_info_text"><![CDATA[<b>Applies to:</b> Peach
@@ -323,13 +316,12 @@
         <br><b>Step 2:</b> Have an opponent (or team member) hit you on the first frame of
         Peach\'s Up-B.
         <br><b>Step 3:</b> Have fun.
-        <br>(This also works with Mr. Game and Watch\'s down tilt)
         <br>
         <br>Full explanation: http://bit.ly/1PjNVR3
     ]]></string>
     <string name="hominggrapple_info_text"><![CDATA[<b>Applies to:</b> Samus
         <br>
-        <br>Example of the homing grapple: http://gfycat.com/HeftyTenderCalf
+        <br>Example: http://gfycat.com/HeftyTenderCalf
         <br>
         <br><big><b>How to perform</b></big>
         <br>To do the homing extended grapple, one must perform the extended grapple and press L as the
@@ -352,18 +344,19 @@
         attack the player, and Yoshi will absorb the hit (taking all applicable damage), and be able to immediately counterattack
         or float away in the direction they were previously headed. Any aerial or special move can be done immediately after impact,
         but the most common are Yoshi\'s faster aerial attacks (such as neutral aerial) or his Egg Lay.
+        <br>This can also be used to recover by double jumping up to the stage and taking in the opponents hit
+        to wavedash onto the stage and space yourself until you have space to fight.
     ]]></string>
     <string name="lhdl_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
         <br>
-        <br>Example of LHDL: http://oddshot.tv/shot/beyondthesummit-2015110625841140
+        <br>Example: http://oddshot.tv/shot/beyondthesummit-2015110625841140
         <br>
         <br>A detailed instruction on the execution of LHDL: https://youtu.be/FF_YhidQ_NE
         <br>
         <br><big><b>Ledgehop double laser</b></big>
         <br>The ledgehopped double laser, or LHDL, is a technique that can be performed with both Fox
-        and Falco, though it is far more useful and common among Falco players (outside of 64)
-        due to the superiority of his laser.
-        The technique was popularized in Melee by Japanese Falco player Bombsoldier. Though it sounds
+        and Falco, though it is far more useful and common among Falco players due to the superiority of his laser.
+        <br>The technique was popularized in Melee by Japanese Falco player Bombsoldier. Though it sounds
         simple in theory, the real trick is having the lasers travel at the proper height that the player wants.
         <br>If the player simply ledgehops as they normally would and tap the special button repeatedly, they will likely end up with
         two lasers that are extremely high and not at the same height. So the proper way to LHDL requires the player to drop from
@@ -381,10 +374,10 @@
     ]]></string>
     <string name="multishine_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
         <br>
-        <br>Example of multishining here: http://www.gfycat.com/ImmediateFirmChanticleer
+        <br>Example: http://www.gfycat.com/ImmediateFirmChanticleer
         <br>
         <br><big><b>Multishine</b></big>
-        <br>A multishine is the repeated use of Fox or Falco\'s Down-B move AKA shine or reflector.
+        <br>A multishine is the repeated use of Fox or Falco\'s Down-B (shine or reflector).
         It is performed by jump-canceling a reflector and
         using a second reflector just after leaving the ground, timed so that Fox or Falco will quickly land and allow the
         pattern to be repeated. It is a very difficult and technically demanding technique and is often practiced at slower
@@ -416,7 +409,7 @@
     ]]></string>
     <string name="parry_info_text"><![CDATA[<b>Applies to:</b> Yoshi
         <br>
-        <br>Example of parrying: https://youtu.be/dVLRJ4jCBeI
+        <br>Example: https://youtu.be/dVLRJ4jCBeI
         <br>
         <br><big><b>Parry</b></big>
         <br>Also called supershielding, parrying is a technique used by Yoshi players that takes advantage of the
@@ -432,7 +425,7 @@
         <br>Parry can be performed by shielding (full press, not light shielding), and then
         immediately following up with one of the actions listed below. Note that the actions must be done within
         the first frame of shielding, as only the second frame is jump cancellable without any drawbacks; the
-         other frames will cause shieldstun onto Yoshi.
+        other frames will cause shieldstun onto Yoshi.
         <br>
         <br><b>Parry followups include</b>
         <br>\tGrabbing
@@ -442,12 +435,11 @@
     ]]></string>
     <string name="pillar_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
         <br>
-        <br>Example of pillaring: https://youtu.be/kPahZCKxcGI
+        <br>Example: https://youtu.be/kPahZCKxcGI
         <br>
         <br><big><b>Pillaring</b></big>
-        <br>Pillaring refers to pressuring an opponent\'s shield in Super Smash Bros. Melee by utilizing a combination of techniques
-        (SHFFLs, aerials, and shines) performed by Fox and Falco. This is an advanced technique commonly used in high-level
-        play.
+        <br>Pillaring refers to pressuring an opponent\'s shield by utilizing a combination of techniques
+        (SHFFLs, aerials, and shines) performed by Fox and Falco. 
         <br>The term can also be used for a Falco shine to dair combo as the characters go up and down together, like \"pillars\".
         <br>Pillaring can lead to a defending player rolling out of their shield and being chased or having their shield broken,
         although the latter is rare in high-level play. Pressure from pillaring is usually relieved by a successfully performed
@@ -590,8 +582,8 @@
     ]]></string>
     <string name="shl_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
         <br>
-        <br>Excellent SHDL\'ing by Fox main Lucky: https://gyfcat.com/RepulsiveWarmheartedEider
-        <br>Example of SHL: http://wiki.teamliquid.net/smash/images/a/a4/Short_Hop_Double_Laser_Example.gif
+        <br>Excellent SHDL\'ing by Lucky: https://gyfcat.com/RepulsiveWarmheartedEider
+        <br>Examples: http://wiki.teamliquid.net/smash/images/a/a4/Short_Hop_Double_Laser_Example.gif
         <br>http://wiki.teamliquid.net/smash/images/1/18/Short_Hop_Laser_Example.gif
         <br>
         <br><big><b>Short hop laser</b></big>
@@ -820,7 +812,7 @@
         <br>To perform the technique, simply wavedash off a platform or stage, and press B right before sliding off.
     ]]></string>
     <string name="wallbomb_info_text"><![CDATA[http://i.imgur.com/9eeElnL.gifv
-		<br>
+	<br>
         <br>Here is MacD using the wallbomb technique to get back onto the stage
         http://oddshot.tv/shot/teamoxy-2015110261422335
         <br>
