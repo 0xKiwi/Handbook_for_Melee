@@ -329,7 +329,7 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    static class ExitDialogFragment extends DialogFragment {
+    public static class ExitDialogFragment extends DialogFragment {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             return new AlertDialog.Builder(getActivity())
