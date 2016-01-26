@@ -212,7 +212,7 @@ public class TechTabActivity extends AppCompatActivity {
                                 slidrInterface.unlock();
                                 break;
                             case 1:
-                                tabImage.setImageResource(R.drawable.hominggrapple);
+                                tabImage.setImageResource(R.drawable.shaidrop);
                                 slidrInterface.lock();
                                 break;
                         }

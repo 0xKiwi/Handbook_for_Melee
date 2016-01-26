@@ -73,10 +73,10 @@
     \n\t\t\t\tStratocaster\'s Hitbox System
     \n
     \n\t\t\tLibraries used:
-    \n\t\t\t\tandroid-gif-drawable
-    \n\t\t\t\tmaterialscrollbar
-    \n\t\t\t\texpandablerecyclerview
     \n\t\t\t\tslidr
+    \n\t\t\t\tmaterialscrollbar
+    \n\t\t\t\tandroid-gif-drawable
+    \n\t\t\t\texpandablerecyclerview
     </string>
     <string name="info_text">
     \n\t\t\t\tLong click for alternate functions

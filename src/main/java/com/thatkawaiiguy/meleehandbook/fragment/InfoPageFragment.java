@@ -55,48 +55,46 @@ public class InfoPageFragment extends Fragment {
         ((TextView)view.findViewById(R.id.infoText)).setText(Html
                 .fromHtml(ArrayHelper.getInfoString(characterPicked, getActivity())));
 
-        ImageView characterImage = (ImageView) getActivity().findViewById(R.id.infoImage);
-
         assert characterPicked != null;
         switch (characterPicked) {
             case "Captain Falcon":
-                characterImage.setImageResource(R.drawable.falcon);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.falcon);
                 break;
             case "Ganondorf":
-                characterImage.setImageResource(R.drawable.ganondorf);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.ganondorf);
                 break;
             case "Falco":
-                characterImage.setImageResource(R.drawable.falco);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.falco);
                 break;
             case "Fox":
-                characterImage.setImageResource(R.drawable.fox);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.fox);
                 break;
             case "Sheik":
-                characterImage.setImageResource(R.drawable.sheik);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.sheik);
                 break;
             case "Marth":
-                characterImage.setImageResource(R.drawable.marth);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.marth);
                 break;
             case "Ice Climbers":
-                characterImage.setImageResource(R.drawable.iceclimbers);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.iceclimbers);
                 break;
             case "Jigglypuff":
-                characterImage.setImageResource(R.drawable.jiggs);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.jiggs);
                 break;
             case "Pikachu":
-                characterImage.setImageResource(R.drawable.pikachu);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.pikachu);
                 break;
             case "Princess Peach":
-                characterImage.setImageResource(R.drawable.peach);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.peach);
                 break;
             case "Samus Aran":
-                characterImage.setImageResource(R.drawable.samus);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.samus);
                 break;
             case "Yoshi":
-                characterImage.setImageResource(R.drawable.yoshi);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.yoshi);
                 break;
             case "Dr. Mario":
-                characterImage.setImageResource(R.drawable.drmario);
+                ((ImageView) getActivity().findViewById(R.id.infoImage)).setImageResource(R.drawable.drmario);
                 break;
         }
         return view;

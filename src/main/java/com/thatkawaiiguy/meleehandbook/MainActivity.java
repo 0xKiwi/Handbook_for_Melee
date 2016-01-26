@@ -17,7 +17,11 @@
 
 package com.thatkawaiiguy.meleehandbook;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -39,7 +43,6 @@ import com.google.android.gms.ads.AdView;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.CharacterFragment;
-import com.thatkawaiiguy.meleehandbook.fragment.ExitDialogFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.FunFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.HealthyFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.StageFragment;
@@ -324,5 +327,27 @@ public class MainActivity extends AppCompatActivity {
                             return false;
                     }
                 });
+    }
+
+    static class ExitDialogFragment extends DialogFragment {
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            return new AlertDialog.Builder(getActivity())
+                    .setTitle("Are you sure you want to exit the app?")
+                    .setNegativeButton(R.string.no,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.dismiss();
+                                }
+                            })
+                    .setPositiveButton(R.string.yes,
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    getActivity().finish();
+                                    System.exit(0);
+                                }
+                            })
+                    .show();
+        }
     }
 }

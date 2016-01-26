@@ -56,7 +56,7 @@ public class ArrayHelper {
                 "Crouch cancel", "Dash-canceling", "Dash-dance",
                 "Directional Influence", "Fast falling", "Fox-trot",
                 "Jab cancel", "Jab reset", "Jump-canceling", "L-canceling",
-                "Ledge-canceling", "Ledgedash", "Ledge drop",
+                "Ledge-canceling", "Ledgedash",
                 "Ledge stall", "Moonwalk",
                 "No-impact landing", "Platform cancel", "Platform warp",
                 "Powershield", "Shield pressure", "Shield dropping",
