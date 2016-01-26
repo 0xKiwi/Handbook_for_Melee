@@ -65,8 +65,8 @@
     \n\t\t\t\tMew2King
     \n\t\t\t\t/u/djloreddit
     \n\t\t\t\tschmooblidon
-    \n\t\t\t\tsupersmashwikia
     \n\t\t\t\t/u/DigitalAge98
+    \n\t\t\t\tsupersmashwikia
     \n\t\t\t\tValeria Boikova (icon)
     \n\t\t\t\tMy friends and testers
     \n\t\t\t\tTristan, Tyler, Luis and Juan
@@ -3346,7 +3346,7 @@
         <br>Regardless, his pros greatly outshine his cons, and Fox is notable for being one of two characters in Melee (the other
         and Falco) to have no disadvantageous matchups, with only three (Falco, Marth and Samus) being considered even.
     ]]></string>
-    <string name="ganon_info_text" formatted="false"><![CDATA[<b>Weight:</b> 4th heaviest
+    <string name="ganon_info_text" formatted="false"><![CDATA[<b>Weight:</b> 4th heaviest (5th in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 8th longest
@@ -3442,7 +3442,7 @@
         relatively short and predictable recovery, as well as a rather short but quick wavedash. Also, most of her moves are weak for
         an attack of their type.
     ]]></string>
-    <string name="mario_info_text" formatted="false"><![CDATA[<b>Weight:</b>  8-10th heaviest
+    <string name="mario_info_text" formatted="false"><![CDATA[<b>Weight:</b>  8-10th heaviest (10th in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 17-18th longest
@@ -3482,7 +3482,7 @@
         throw can chain-grab. Mario also has decent edge-guarding, with Fireball (a solid projectile), and his Cape which can easily and
         efficiently gimp almost every other characters recovery. Mario, however, lacks a reliable finisher, and his recovery is predictable
         and short, though he can extend it.]]></string>
-    <string name="marth_info_text" formatted="false"><![CDATA[<b>Weight:</b> 16th heaviest
+    <string name="marth_info_text" formatted="false"><![CDATA[<b>Weight:</b> 16th heaviest (16-19th in PAL)
         <br>
         <br><b><u>Shield stats</b></u>
         <br><b>Roll Length:</b> 2nd longest
@@ -3669,7 +3669,7 @@
 	    to intercept and edgeguard against, and he also has significant trouble KOing opponents, again owing to his poor range. As a result of
 	    these significant weaknesses, Ness has terrible matchups, with six unfavorable, one even (against Yoshi), and only three favorable
 	    (against Bowser, Kirby, and Pichu).]]></string>
-    <string name="kirby_info_text" formatted="false"><![CDATA[<b>Weight:</b> 23rd heaviest
+    <string name="kirby_info_text" formatted="false"><![CDATA[<b>Weight:</b> 23rd heaviest (22nd in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 21th longest
@@ -3708,7 +3708,7 @@
          an ineffective projectile, and numerous other flaws on both the ground and air prevent Kirby from easily approaching enemies, and he struggles
          against almost all characters as a result of this. Kirby currently has only two positive matchups (against Bowser and Roy), and even these
          can be disputed at length.]]></string>
-    <string name="mewtwo_info_text" formatted="false"><![CDATA[<b>Weight:</b> 17-19th heaviest
+    <string name="mewtwo_info_text" formatted="false"><![CDATA[<b>Weight:</b> 17-19th heaviest (16-19th in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 1st longest
@@ -3790,7 +3790,7 @@
         speed and a high weight, making him an easy target for chain grabbing and combos. His recovery is also predictable, though he can extend it
         slightly.
     ]]></string>
-    <string name="ylink_info_text" formatted="false"><![CDATA[<b>Weight:</b> 17-19th heaviest
+    <string name="ylink_info_text" formatted="false"><![CDATA[<b>Weight:</b> 17-19th heaviest (16-19th in PAL)
         <br>
         <br><b><u>Shield stats</b></u>
         <br><b>Roll Length:</b> 3rd shortest
@@ -4043,7 +4043,7 @@
         of his attacks are executed swiftly, he has good air speed, and his jumping prowess is surprisingly good. His mobility facilitates combos, and
         this is further aided by his remarkable grab. However, Donkey Kong himself is easy to combo due to his large frame, and his recovery is among
         the worst in the game vertically (though it is rather good horizontally). Due to these traits, Donkey Kong is seen as a below-average character.]]></string>
-    <string name="drmario_info_text" formatted="false"><![CDATA[<b>Weight:</b>  8-10th heaviest
+    <string name="drmario_info_text" formatted="false"><![CDATA[<b>Weight:</b>  8-10th heaviest (8-9th in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 17-18th longest
@@ -4126,7 +4126,7 @@
         air game, and their floatiness causes them to be vulnerable to juggling and combos. Another vulnerability is that many of their benefits are lost if
         the second Climber is KOed.
     ]]></string>
-    <string name="samus_info_text" formatted="false"><![CDATA[<b>Weight:</b> 3rd heaviest
+    <string name="samus_info_text" formatted="false"><![CDATA[<b>Weight:</b> 3rd heaviest (4th in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 3rd longest
@@ -4178,7 +4178,7 @@
         Regardless, Samus has a large amount of advantageous matchups, three of which are close to
         unloseable (against Roy, Yoshi and Pichu).
     ]]></string>
-    <string name="luigi_info_text" formatted="false"><![CDATA[<b>Weight:</b> 8-10th heaviest
+    <string name="luigi_info_text" formatted="false"><![CDATA[<b>Weight:</b> 8-10th heaviest (8-9th in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 9th longest
@@ -4270,7 +4270,7 @@
         body; coupled with sub-par options in the air and a short wavedash, Pikachu overall
         has a poor approach
     ]]></string>
-    <string name="roy_info_text" formatted="false"><![CDATA[<b>Weight:</b> 17-19th heaviest
+    <string name="roy_info_text" formatted="false"><![CDATA[<b>Weight:</b> 17-19th heaviest (16-19th in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 7th longest
@@ -4314,7 +4314,7 @@
         one of which (forward smash) that is an adequate finisher, and among the worst recoveries in the game while being a light character that is
         heavily susceptible to combos; as a result, Roy has significant KOing problems while being easy to KO himself, leading to numerous matchups
         hard countering him, especially against those who are higher-tiered than him.]]></string>
-    <string name="yoshi_info_text" formatted="false"><![CDATA[<b>Weight:</b>  5th heaviest
+    <string name="yoshi_info_text" formatted="false"><![CDATA[<b>Weight:</b>  5th heaviest (3rd in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 22th longest
