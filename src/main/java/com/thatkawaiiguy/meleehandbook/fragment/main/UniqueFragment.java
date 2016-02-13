@@ -31,7 +31,7 @@ import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.activity.UniqueTechActivity;
+import com.thatkawaiiguy.meleehandbook.activity.TechActivity;
 
 public class UniqueFragment extends Fragment {
 
@@ -70,7 +70,7 @@ public class UniqueFragment extends Fragment {
                             uniqueTechs[position].equals("Extended & homing grapple"))
                         mIntent = new Intent(getActivity(), TechTabActivity.class);
                     else
-                        mIntent = new Intent(getActivity(), UniqueTechActivity.class);
+                        mIntent = new Intent(getActivity(), TechActivity.class);
                     mIntent.putExtra("option", uniqueTechs[position]);
                     startActivity(mIntent);
                     canStart = false;

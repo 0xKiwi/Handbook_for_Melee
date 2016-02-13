@@ -151,8 +151,8 @@ public class SearchResultsActivity extends AppCompatActivity {
         searchView.onActionViewExpanded();
 
         if(Intent.ACTION_SEARCH.equals(getIntent().getAction())) {
-            searchView.setQuery(getIntent().getStringExtra(SearchManager.QUERY).replaceAll("\\s+$",
-                    ""), false);
+            searchView.setQuery(getIntent().getStringExtra(SearchManager.QUERY)
+                    .replaceAll("\\s+$", ""), false);
             searchView.setSearchableInfo(searchManager.getSearchableInfo(cn));
             searchView.clearFocus();
         }
@@ -361,8 +361,8 @@ public class SearchResultsActivity extends AppCompatActivity {
                             queries.add(map[i]);
                 }
 
-            mAdapter = new SearchAdapter(queries.toArray(new String[queries.size()])
-                    , titleNum, titleTermNum, termNum, context, query);
+            mAdapter = new SearchAdapter(queries.toArray(new String[queries.size()]),
+                    titleNum, titleTermNum, termNum, context, query);
             return null;
         }
 
@@ -413,7 +413,7 @@ public class SearchResultsActivity extends AppCompatActivity {
                     return new Intent(context, TechTabActivity.class)
                             .putExtra("option", uniqueTech);
                 else
-                    return new Intent(context, UniqueTechActivity.class)
+                    return new Intent(context, TechActivity.class)
                             .putExtra("option", uniqueTech);
             }
         }

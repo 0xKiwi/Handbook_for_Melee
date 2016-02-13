@@ -21,7 +21,7 @@ import android.os.Bundle;
 
 import com.thatkawaiiguy.meleehandbook.R;
 
-public class StageActivity extends GifInfoActivity {
+public class StageActivity extends ImageInfoActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

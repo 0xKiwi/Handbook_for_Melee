@@ -43,6 +43,7 @@
     <string name="action_healthy">Staying Healthy</string>
     <string name="action_settings">Settings</string>
     <string name="action_support">Support The Dev</string>
+    <string name="action_removeads">Remove ads</string>
     <string name="action_info">Help</string>
     <string name="action_about">About</string>
     <string name="close">CLOSE</string>
@@ -98,9 +99,6 @@
 
     <string name="pref_default">pref_default</string>
     <string name="pref_default_title">Start up page</string>
-
-    <string name="pref_ads">pref_ads</string>
-    <string name="pref_ads_title">Hide ads</string>
 
     <string name="pref_exit">pref_exit</string>
     <string name="pref_exit_title">Show exit dialog</string>
@@ -564,9 +562,7 @@
         <br>This is certainly not the safest recovery option for Samus, but it is very quick and if she fails to
         sweetspot the ledge, she suffers from very little lag when landing on the stage.
     ]]></string>
-    <string name="risingpound_info_text"><![CDATA[http://i.imgur.com/Kztgh5D.gifv
-        <br>
-        <br><b>Applies to:</b> Jigglypuff
+    <string name="risingpound_info_text"><![CDATA[<b>Applies to:</b> Jigglypuff
         <br>
         <br><big><b>Rising pound</b></big>
         <br>Jigglypuff\'s Side-B is Pound. It\'s a fairly strong physical attack that sets up the opponent to get
@@ -612,9 +608,7 @@
         <br>To SHDL with Fox you must short hop, either by lightly flicking the control stick up or using X or Y, and then press
         B twice immediately after getting off the ground. You do not fast fall for SHDL.
     ]]></string>
-    <string name="shffmissile_info_text"><![CDATA[http://i.imgur.com/mSJz8I7.gifv
-        <br>
-        <br><b>Applies to:</b> Samus
+    <string name="shffmissile_info_text"><![CDATA[<b>Applies to:</b> Samus
         <br>
         <br><big><b>Shorthop fastfall missiles</b></big>
         <br>Both versions of Samus\' Side-B, Homing Missile and Super Missile, can have their
@@ -624,11 +618,11 @@
         on the stage. This essentially doubles the amount of Missiles that can be fired.
         <br>
         <br><big><b>How to perform</b></big>
-        <br><b>One of the fastest ways to perform this technique is to:</b>
-        <br>\t<b>Step 1:</b> Shorthop
-        <br>\t<b>Step 2:</b> Fastfall at the peak of shorthop
-        <br>\t<b>Step 3:</b> Launch the missile (strictly) 1 or 2 frames after fastfalling
-        <br>\t<b>Step 4:</b> To repeat the cycle, input another shothop after being on the ground for 3 frames
+        <br><b>The fastest way to perform this technique is to:</b>
+        <br><b>Step 1:</b> Shorthop
+        <br><b>Step 2:</b> Fastfall at the peak of shorthop
+        <br><b>Step 3:</b> Launch the missile (strictly) 1 or 2 frames after fastfalling
+        <br><b>Step 4:</b> To repeat the cycle, input another shothop after being on the ground for 3 frames
         <br>
         <br><big><b>Notes about this technique</b></big>
         <br>&#8226;Missiles shot in the air appear after 15 frames, as opposed to the 22 frames when grounded
@@ -811,9 +805,7 @@
         <br><big><b>How to perform</b></big>
         <br>To perform the technique, simply wavedash off a platform or stage, and press B right before sliding off.
     ]]></string>
-    <string name="wallbomb_info_text"><![CDATA[http://i.imgur.com/9eeElnL.gifv
-	<br>
-        <br>Here is MacD using the wallbomb technique to get back onto the stage
+    <string name="wallbomb_info_text"><![CDATA[MacD using the technique to get back on stage
         http://oddshot.tv/shot/teamoxy-2015110261422335
         <br>
         <br><b>Applies to:</b> Peach
@@ -914,16 +906,16 @@
         <br><big><b>How to perform</b></big>
         <br>Here is a slightly more in-depth description on how to do it from Wobbles, note that if your opponent is
         less than 30&#37; they can struggle out of the grab.
-        <br>\t<b>Step 1:</b> Grab.
-        <br>\t<b>Step 2:</b> Make sure Nana, your secondary IC, is close to you.
-        <br>\t<b>Step 3:</b> Hit A to have Popo headbutt; Nana will jab.
-        <br>\t<b>Step 4:</b> Gently slide the joystick either forward or down so that when you hit A next, Nana will tilt.
+        <br><b>Step 1:</b> Grab.
+        <br><b>Step 2:</b> Make sure Nana, your secondary IC, is close to you.
+        <br><b>Step 3:</b> Hit A to have Popo headbutt; Nana will jab.
+        <br><b>Step 4:</b> Gently slide the joystick either forward or down so that when you hit A next, Nana will tilt.
         Make sure she does the tilt before the headbutt ends.
-        <br>\t<b>Step 5:</b> As you continue sliding the joystick to its maximum, press A rhythmically. You want your attacks to
+        <br><b>Step 5:</b> As you continue sliding the joystick to its maximum, press A rhythmically. You want your attacks to
         be spaced apart as evenly as possible.
-        <br>\t<b>Step 6:</b> Keep pressing A with the joystick held in the direction you\'ve chosen. You don\'t have to move the
+        <br><b>Step 6:</b> Keep pressing A with the joystick held in the direction you\'ve chosen. You don\'t have to move the
         joystick any more after this. Just keep it held to do the tilt you\'ve chosen.
-        <br>\t<b>Step 7:</b> When you are done, discard the opponent. I recommend waiting until Popo headbutts then hitting the
+        <br><b>Step 7:</b> When you are done, discard the opponent. I recommend waiting until Popo headbutts then hitting the
         c-stick down. Your down-smash will come out fastest and your opponent will have no forewarning that you\'re
         going to hit them; if there is anything to tech off of, they won\'t be able to. They also may DI poorly, but
         odds are you will continue hitting them until DI no longer matters.
@@ -1027,6 +1019,10 @@
     <string name="buster_term_info">
         A fraud. A flop. A bust. Basically a term for someone who didn\'t meet expectations.
     </string>
+    <string name="butter_term_info">
+        When a character charges a smash attack, they turn yellow like butter.
+        \"He put a lot of butter into that one\"
+    </string>
     <string name="byoc_term_info">
         Bring Your Own Controller to tournaments. They won\'t give you.
     </string>
@@ -1120,9 +1116,17 @@
         Due to only one character being able to hold onto the ledge, you can
         cause your opponent to miss it when they are recovering due to you currently taking it.
     </string>
+    <string name="electricslide_term_info">
+        When a Samus super wavedashes into a charge beam.
+    </string>
     <string name="falcoville_term_info">
         An alternate name for Yoshi\'s Story, which is often a counterpick for Falcos. Falco benefits from this
         stage due to its low platforms and small vertical blastzones, making it easy for Falco to get a kill from a spike.
+    </string>
+    <string name="flub_term_info">
+        A phrase that explains the reasoning of a player mess up
+        meaning a player \"flubs\" (makes a mistake) or
+        the player is a \"scrub\" (is a new player).
     </string>
     <string name="forbiddenledge_term_info">
         Coined by top Young Link main Axe, Young Link can take advantage of the boomerang glitch
@@ -1537,6 +1541,10 @@
     <string name="theking_term_info">
         A phrasing stating the Super Smash Bros. Melee God Mew2King is back, meaning
         he is placing well in tournaments.
+    </string>
+    <string name="tourneywinner_term_info">
+        When a player performs the slow jump get up at a ledge, which is easily punishable,
+        hence leading to the player winning the tournament.
     </string>
     <string name="thezhu_term_info">
         When a Falco wavedashes off of a platform, and double jumps into bair to edge guard. Named
@@ -3188,7 +3196,7 @@
         <br><b>Jump squat</b> 6 frames (16th fastest)
         <br><b>Short hop:</b> 26-27th highest
         <br><b>Aerial speed:</b> 25th fastest
-        <br><b>First jump height:</b> 1th highest
+        <br><b>First jump height:</b> 1st highest
         <br><b>Second jump height:</b> 5th highest
         <br><b>Total jump height:</b> 4th-5th highest
         <br><b>Average fall speed:</b> 1st fastest
@@ -3675,7 +3683,7 @@
         <br><b>Running Speed:</b> 16-20th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
-        <br><b>Jump squat</b> 4 frames (1th)
+        <br><b>Jump squat</b> 4 frames (1st)
         <br><b>Short Hop:</b> 9-11th highest
         <br><b>Aerial Speed:</b> 21-22 fastest
         <br><b>First Jump Height:</b> 25th highest
@@ -4457,13 +4465,13 @@
         majority of the cast IT IS NOT A GUESSING GAME.
         <br>
         <br><b>Here\'s my simple 5 step edge guarding guide for beginners:</b>
-        <br>\t<b>Step 1:</b> Hit them off the stage.
-        <br>\t<b>Step 2:</b> Hit them again if they are still close to the stage. (Don\'t let a Falco Up-B really close to the ledge.)
-        <br>\t<b>Step 3:</b> Grab the ledge. You may need to regrab the ledge for invincibility
+        <br><b>Step 1:</b> Hit them off the stage.
+        <br><b>Step 2:</b> Hit them again if they are still close to the stage. (Don\'t let a Falco Up-B really close to the ledge.)
+        <br><b>Step 3:</b> Grab the ledge. You may need to regrab the ledge for invincibility
         depending on who you are edge guarding, ie: Marth. Overall it\'s a
         good habit to get into. http://www.youtube.com/watch?v=8d95uCpFeYQ&feature=player_detailpage#t=48s
-        <br>\t<b>Step 4:</b> Stay on the ledge and WAIT!
-        <br>\t<b>Step 5:</b> Did they make it back onto the stage? If so, hit them back off. If not just roll.
+        <br><b>Step 4:</b> Stay on the ledge and WAIT!
+        <br><b>Step 5:</b> Did they make it back onto the stage? If so, hit them back off. If not just roll.
         <br>
         <br>Edge guarding revolves around taking away your opponent\'s \"sweetspot the ledge\" option. Once you have taken
         their ability to sweetspot, they have no safe option to get back onto the stage.

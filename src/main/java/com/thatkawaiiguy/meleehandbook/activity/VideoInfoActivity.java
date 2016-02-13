@@ -17,26 +17,25 @@
 
 package com.thatkawaiiguy.meleehandbook.activity;
 
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.other.MutedVideoView;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
-import pl.droidsonroids.gif.GifImageView;
-
-public class GifInfoActivity extends AppCompatActivity {
+public class VideoInfoActivity extends AppCompatActivity {
     String optionPicked = "";
 
-    GifImageView infoGif;
+    MutedVideoView infoVid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,7 @@ public class GifInfoActivity extends AppCompatActivity {
             savedInstanceState = getIntent().getExtras().getBundle("bundle");
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.collapsing_gif_layout);
+        setContentView(R.layout.collapsing_video_layout);
         Slidr.attach(this);
 
         Bundle mainData = getIntent().getExtras();
@@ -60,7 +59,14 @@ public class GifInfoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(optionPicked);
 
-        infoGif = (GifImageView) findViewById(R.id.infoGif);
+        infoVid = (MutedVideoView) findViewById(R.id.infoVid);
+        infoVid.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setVolume(0,0);
+                mp.setLooping(true);
+            }
+        });
 
         ((TextView) findViewById(R.id.infoText)).setText(Html.fromHtml(
                 ArrayHelper.getInfoString(optionPicked, this)));

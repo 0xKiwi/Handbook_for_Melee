@@ -17,89 +17,193 @@
 
 package com.thatkawaiiguy.meleehandbook.activity;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.thatkawaiiguy.meleehandbook.R;
 
-public class TechActivity extends GifInfoActivity {
+public class TechActivity extends VideoInfoActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setVideo();
+    }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putString("option", optionPicked);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        optionPicked = savedInstanceState.getString("option");
+        setVideo();
+    }
+
+    public void setVideo(){
         switch (optionPicked) {
-            case "Aerial interrupt":
-                infoImage.setImageResource(R.drawable.aerialinterrupt);
+            case "Boomerang superjump":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
                 break;
-            case "Chain grab":
-                infoImage.setImageResource(R.drawable.cgrab);
+            case "Desynching":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Double jump refresh":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.jumprefresh));
+                break;
+            //case "Extended grapple":
+            //    infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+            //    break;
+            case "Edge canceled eggs":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ece));
+                break;
+            case "Float cancel":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.fcan));
+                break;
+            case "DJ knockback armor":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.djka));
+                break;
+            case "Ledgehop double laser":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Multishine":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Parry":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.parry));
+                break;
+            case "Pillaring":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Princess/Swordsman spiking":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Reverse angle boomerang":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "RI grapple cancel":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.rigc));
+                break;
+            case "Rising pound":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.risingpound));
+                break;
+            case "SHFF missiles":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.shffm));
+                break;
+            case "Short hop laser":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Side-B shorten":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Shine mine":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Up-B turnaround":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.upbturn));
+                break;
+            case "Up-B cancel":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Wallbombing":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.wallbomb));
+                break;
+            case "Waveshine":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Wobbling":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Yo-yo glitch":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Aerial interrupt":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+
+            //NORMAL TECHS
+
+            /*case "Chain grab":
+                infoVid.setImageResource(R.drawable.cgrab);
                 break;
             case "Crouch cancel":
-                infoImage.setImageResource(R.drawable.crouchcancel);
+                infoVid.setImageResource(R.drawable.crouchcancel);
                 break;
-            case "Dash-dance":
-                infoImage.setImageResource(R.drawable.ddance);
+            */case "Dash-dance":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.dashdance));
                 break;
-            case "Fast falling":
-                infoImage.setImageResource(R.drawable.ffall);
+            /*case "Fast falling":
+                infoVid.setImageResource(R.drawable.ffall);
                 break;
             case "Fox-trot":
-                infoImage.setImageResource(R.drawable.ftrot);
+                infoVid.setImageResource(R.drawable.ftrot);
                 break;
             case "Jab reset":
-                infoImage.setImageResource(R.drawable.jabreset);
+                infoVid.setImageResource(R.drawable.jabreset);
                 break;
-            case "L-canceling":
-                infoImage.setImageResource(R.drawable.lcancel);
-                break;
-            case "Ledge stall":
-                infoImage.setImageResource(R.drawable.ledgestall);
+            *///case "L-canceling":
+            //infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.lcancel));
+            //    break;
+            /*case "Ledge stall":
+                infoVid.setImageResource(R.drawable.ledgestall);
                 break;
             case "Ledge-canceling":
-                infoImage.setImageResource(R.drawable.ledgecancel);
+                infoVid.setImageResource(R.drawable.ledgecancel);
                 break;
             case "Moonwalk":
-                infoImage.setImageResource(R.drawable.moonwalk);
+                infoVid.setImageResource(R.drawable.moonwalk);
                 break;
             case "No-impact landing":
-                infoImage.setImageResource(R.drawable.noimpact);
+                infoVid.setImageResource(R.drawable.noimpact);
                 break;
             case "Platform cancel":
-                infoImage.setImageResource(R.drawable.dropcancel);
+                infoVid.setImageResource(R.drawable.dropcancel);
                 break;
             case "Powershield":
-                infoImage.setImageResource(R.drawable.pshield);
+                infoVid.setImageResource(R.drawable.pshield);
                 break;
             case "Platform warp":
-                infoImage.setImageResource(R.drawable.pwarp);
+                infoVid.setImageResource(R.drawable.pwarp);
                 break;
             case "Shield pressure":
-                infoImage.setImageResource(R.drawable.shieldpress);
+                infoVid.setImageResource(R.drawable.shieldpress);
                 break;
             case "Shield dropping":
-                infoImage.setImageResource(R.drawable.shielddrop);
+                infoVid.setImageResource(R.drawable.shielddrop);
                 break;
             case "SHFFL":
-                infoImage.setImageResource(R.drawable.shffl);
+                infoVid.setImageResource(R.drawable.shffl);
                 break;
             case "Short hop":
-                infoImage.setImageResource(R.drawable.shop);
+                infoVid.setImageResource(R.drawable.shop);
                 break;
             case "Tech":
-                infoImage.setImageResource(R.drawable.tech);
+                infoVid.setImageResource(R.drawable.tech);
                 break;
             case "Tech-chasing":
-                infoImage.setImageResource(R.drawable.techchase);
+                infoVid.setImageResource(R.drawable.techchase);
                 break;
             case "Team wobble":
-                infoImage.setImageResource(R.drawable.twobble);
+                infoVid.setImageResource(R.drawable.twobble);
                 break;
             case "Wavedash":
-                infoImage.setImageResource(R.drawable.wavedash);
+                infoVid.setImageResource(R.drawable.wavedash);
                 break;
             case "V-canceling":
-                infoImage.setImageResource(R.drawable.vcancel);
-                break;
+                infoVid.setImageResource(R.drawable.vcancel);
+                break;*/
         }
+        infoVid.start();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setVideo();
     }
 }

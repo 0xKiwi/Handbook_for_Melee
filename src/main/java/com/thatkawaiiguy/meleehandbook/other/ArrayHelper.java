@@ -68,7 +68,7 @@ public class ArrayHelper {
         return new String[]{"20XX", "Air dodge",
                 "Anti-ground infinite combo physics", "BYOC", "Baby pop off",
                 "Banned stage", "Beef", "Blastzone", "Blender", "Boost grab",
-                "Brackets", "Buff", "Buster", "Camera box", "Cancel",
+                "Brackets", "Buff", "Buster", "Butter", "Camera box", "Cancel",
                 "Cave of life", "Circus music",
                 "Clone", "Cory in the house", "Counter",
                 "Counterpick", "Crew battle", "Dash-grab", "Dashing",
@@ -76,9 +76,9 @@ public class ArrayHelper {
                 "Did he just walk up slowly and down smash?",
                 "Disjointed hitbox", "Disrespect", "Ditto", "Dong",
                 "Doormat", "Doubles", "Double dip", "Dumpster",
-                "ECB", "Easy money", "Edge guarding",
-                "Edge hogging", "Falcoville",
-                "Forbidden ledge guard", "Frame",
+                "Easy money", "ECB","Edge guarding",
+                "Edge hogging", "Electric slide", "Falcoville",
+                "Flub or scrub", "Forbidden ledge guard", "Frame",
                 "Freeze frames", "Friendlies", "Fun-canceling", "Gimp",
                 "Go to the doctor", "God", "Going ham", "Grab", "Helicopter crash",
                 "Helpless", "Hitbox", "Hitlag", "Hitstun", "IASA frames",
@@ -105,7 +105,7 @@ public class ArrayHelper {
                 "Stage humping", "Stage spike", "Stale moves", "Star KO",
                 "Stitch", "Stock canceling", "Stomp", "Style", "Sweetspot attack", "Sweetspot ledge",
                 "TAS", "Taunt cancel", "Tech trap", "The Zhu", "The king is back",
-                "The knee", "Thundercat combo",
+                "The knee", "The tourney winner", "Thundercat combo",
                 "Thunders combo", "Tier list", "Tilts", "Tires don exits",
                 "Tomahawk", "Tourney", "Trade-off", "Trash 4",
                 "Triangle jumping", "Turnaround special", "Viagra kick",
@@ -153,6 +153,8 @@ public class ArrayHelper {
                 return res.getString(R.string.buff_term_info);
             case "Buster":
                 return res.getString(R.string.buster_term_info);
+            case "Butter":
+                return res.getString(R.string.butter_term_info);
             case "BYOC":
                 return res.getString(R.string.byoc_term_info);
             case "Camera box":
@@ -203,8 +205,12 @@ public class ArrayHelper {
                 return res.getString(R.string.edgehog_term_info);
             case "Edge guarding":
                 return res.getString(R.string.edgeguard_term_info);
+            case "Electric slide":
+                return res.getString(R.string.electricslide_term_info);
             case "Falcoville":
                 return res.getString(R.string.falcoville_term_info);
+            case "Flub or scrub":
+                return res.getString(R.string.flub_term_info);
             case "Forbidden ledge guard":
                 return res.getString(R.string.forbiddenledge_term_info);
             case "Freeze frames":
@@ -419,6 +425,8 @@ public class ArrayHelper {
                 return res.getString(R.string.theking_term_info);
             case "The knee":
                 return res.getString(R.string.knee_term_info);
+            case "The tourney winner":
+                return res.getString(R.string.tourneywinner_term_info);
             case "The Zhu":
                 return res.getString(R.string.thezhu_term_info);
             case "Thundercat combo":

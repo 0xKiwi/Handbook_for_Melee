@@ -31,12 +31,10 @@ import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
-import pl.droidsonroids.gif.GifImageView;
-
-public class GifInfoActivity extends AppCompatActivity {
+public class ImageInfoActivity extends AppCompatActivity {
     String optionPicked = "";
 
-    GifImageView infoGif;
+    ImageView infoImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +42,7 @@ public class GifInfoActivity extends AppCompatActivity {
             savedInstanceState = getIntent().getExtras().getBundle("bundle");
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.collapsing_gif_layout);
+        setContentView(R.layout.collapsing_image_layout);
         Slidr.attach(this);
 
         Bundle mainData = getIntent().getExtras();
@@ -60,7 +58,7 @@ public class GifInfoActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(optionPicked);
 
-        infoGif = (GifImageView) findViewById(R.id.infoGif);
+        infoImage = (ImageView) findViewById(R.id.infoImage);
 
         ((TextView) findViewById(R.id.infoText)).setText(Html.fromHtml(
                 ArrayHelper.getInfoString(optionPicked, this)));

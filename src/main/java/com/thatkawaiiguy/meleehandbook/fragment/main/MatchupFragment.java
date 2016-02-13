@@ -1959,7 +1959,7 @@ public class MatchupFragment extends Fragment {
         }
         return "uhh";
     }
-
+/*
     private String getInfo(String left, String right) {
         switch(left) {
             case "Fox": {
@@ -2291,7 +2291,7 @@ public class MatchupFragment extends Fragment {
         }
         return "";
     }
-
+*/
     private void setMatchupsView() {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R
                 .layout.simple_spinner_item, ArrayHelper.getCharacterArray(getActivity()));
@@ -2361,9 +2361,9 @@ public class MatchupFragment extends Fragment {
                 un20XX();
         } else {
             un20XX();
-            muInfoLeft.setText(getInfo(characterLeft, characterRight));
+            //muInfoLeft.setText(getInfo(characterLeft, characterRight));
             infoLeft.setText(getLeftPercent(characterLeft, characterRight) + "%");
-            muInfoRight.setText(getInfo(characterRight, characterLeft));
+            //muInfoRight.setText(getInfo(characterRight, characterLeft));
             infoRight.setText(getRightPercent(characterLeft, characterRight) + "%");
         }
     }

@@ -36,6 +36,8 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class TechTabActivity extends AppCompatActivity {
 
+    String techPicked;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (getIntent().hasExtra("bundle") && savedInstanceState == null)
@@ -47,7 +49,7 @@ public class TechTabActivity extends AppCompatActivity {
 
         if (getIntent().getExtras() == null)
             return;
-        String techPicked = getIntent().getExtras().getString("option");
+        techPicked = getIntent().getExtras().getString("option");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             getWindow().setStatusBarColor(0x00000000);
@@ -242,5 +244,20 @@ public class TechTabActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         overridePendingTransition(0, 0);
+    }
+
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putString("tech", techPicked);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        techPicked = savedInstanceState.getString("tech");
     }
 }
