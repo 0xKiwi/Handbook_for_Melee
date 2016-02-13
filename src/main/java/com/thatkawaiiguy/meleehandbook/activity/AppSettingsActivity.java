@@ -64,9 +64,7 @@ public class AppSettingsActivity extends PreferenceActivity {
                 if (key.equals(getString(R.string.pref_theme))) {
                     restart = true;
                     recreate();
-                } else if(key.equals(getString(R.string.pref_ads)))
-                    restart = true;
-                else if(key.equals(getString(R.string.pref_tier)))
+                }else if(key.equals(getString(R.string.pref_tier)))
                     restart = true;
             }
         };

@@ -21,10 +21,14 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.net.Uri;
 import android.os.Build;
+import android.os.IBinder;
 import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
@@ -38,6 +42,7 @@ import android.view.View;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.Toast;
 
+import com.android.vending.billing.IInAppBillingService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
@@ -54,7 +59,7 @@ import com.thatkawaiiguy.meleehandbook.other.AppRater;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.thatkawaiiguy.meleehandbook.activity.SearchResultsActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ServiceConnection {
 
     private int listdefault = 0;
 
@@ -69,24 +74,25 @@ public class MainActivity extends AppCompatActivity {
         Preferences.applySettingsTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
-        if(!Preferences.hideAds(this)) {
+        //if(!Preferences.hideAds(this)) {
             mAdView.loadAd(new AdRequest.Builder().build());
             mAdView.setVisibility(View.VISIBLE);
-        } else if(Preferences.hideAds(this))
-            mAdView.setVisibility(View.GONE);
+        //} else if(Preferences.hideAds(this))
+        //    mAdView.setVisibility(View.GONE);
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
 
         NavigationMenuView navigationMenuView = (NavigationMenuView) nvDrawer.getChildAt(0);
-        if (navigationMenuView != null)
+        if(navigationMenuView != null)
             navigationMenuView.setVerticalScrollBarEnabled(false);
 
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(
@@ -191,9 +197,14 @@ public class MainActivity extends AppCompatActivity {
                 changeFragment(getString(R.string.title_healthy));
                 menuItem.setChecked(true);
                 break;
-            case R.id.support:
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
-                        ("http://bit.ly/1NXCD2o")));
+            case R.id.remove:
+                //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
+                //        ("http://bit.ly/1NXCD2o")));
+
+                Intent serviceIntent =
+                        new Intent("com.android.vending.billing.InAppBillingService.BIND");
+                serviceIntent.setPackage("com.android.vending");
+                bindService(serviceIntent, mServiceConn, Context.BIND_AUTO_CREATE);
                 break;
             case R.id.settings:
                 startActivity(new Intent(this, AppSettingsActivity.class));
@@ -212,6 +223,22 @@ public class MainActivity extends AppCompatActivity {
         } else
             super.onBackPressed();
     }
+
+    IInAppBillingService mService;
+
+    @Override
+    public void onServiceConnected(ComponentName name, IBinder service) {
+        mService = IInAppBillingService.Stub.asInterface(service);
+
+    }
+
+    @Override
+    public void onServiceDisconnected(ComponentName name) {
+        mService = null;
+    }
+
+    ServiceConnection mServiceConn = this;
+
 
     private void changeFragment(CharSequence title) {
         switch((String) title) {
@@ -254,7 +281,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sendToast() {
-        Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You don't want to have to go" +
+        Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You " +
+                "don't want to have to go" +
                         " to the doctor.",
                 Toast.LENGTH_SHORT).show();
     }
@@ -297,6 +325,14 @@ public class MainActivity extends AppCompatActivity {
                 fg = TechFragment.newInstance();
         }
         getFragmentManager().beginTransaction().add(R.id.fragmentLayout, fg).commit();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if(mService != null) {
+            unbindService(mServiceConn);
+        }
     }
 
     @Override

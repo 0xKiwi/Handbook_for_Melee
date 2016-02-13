@@ -95,10 +95,6 @@ public class Preferences {
                 .equals(context.getString(R.string.pref_theme_value_light));
     }
 
-    public static boolean hideAds(Context context){
-        return hideAdsEnabled(context);
-    }
-
     public static boolean showExitDialog(Context context){
         return exitDialogEnabled(context);
     }
@@ -119,11 +115,6 @@ public class Preferences {
 
     public static boolean sortByTierEnabled(Context context){
         return sortByTier(context);
-    }
-
-    private static boolean hideAdsEnabled(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(context.getString(R.string.pref_ads), false);
     }
 
     private static boolean exitDialogEnabled(Context context) {

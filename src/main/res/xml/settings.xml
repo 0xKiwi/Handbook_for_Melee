@@ -25,11 +25,6 @@
 
     <CheckBoxPreference
         android:defaultValue="false"
-        android:key="@string/pref_ads"
-        android:title="@string/pref_ads_title"/>
-
-    <CheckBoxPreference
-        android:defaultValue="false"
         android:key="@string/pref_tier"
         android:title="@string/pref_tier_title"/>
 
