@@ -48,43 +48,43 @@ public class TechActivity extends VideoInfoActivity {
     public void setVideo(){
         switch (optionPicked) {
             case "Boomerang superjump":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.boomjump));
                 break;
             case "Desynching":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.desync));
                 break;
             case "Double jump refresh":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.jumprefresh));
                 break;
-            //case "Extended grapple":
-            //    infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
-            //    break;
             case "Edge canceled eggs":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ece));
                 break;
             case "Float cancel":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.fcan));
                 break;
+            case "Frozen turnip glitch":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.frozenturnip));
+                break;
+            case "Double jump cancel":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.djc));
+                break;
             case "DJ knockback armor":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.djka));
                 break;
             case "Ledgehop double laser":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.lhdl));
                 break;
             case "Multishine":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.multishine));
                 break;
             case "Parry":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.parry));
                 break;
             case "Pillaring":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.pillar));
                 break;
             case "Princess/Swordsman spiking":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
-                break;
-            case "Reverse angle boomerang":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.psspiking));
                 break;
             case "RI grapple cancel":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.rigc));
@@ -96,107 +96,113 @@ public class TechActivity extends VideoInfoActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.shffm));
                 break;
             case "Short hop laser":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.shl));
                 break;
             case "Side-B shorten":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.sidebshorten));
                 break;
             case "Shine mine":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.shinemine));
                 break;
             case "Up-B turnaround":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.upbturn));
                 break;
             case "Up-B cancel":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.upbcan));
+                break;
+            case "Vududash":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.vudu));
                 break;
             case "Wallbombing":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.wallbomb));
                 break;
             case "Waveshine":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.waveshine));
                 break;
             case "Wobbling":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.wobbling));
                 break;
             case "Yo-yo glitch":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
-                break;
-            case "Aerial interrupt":
-                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.yoyoglitch));
                 break;
 
             //NORMAL TECHS
 
-            /*case "Chain grab":
-                infoVid.setImageResource(R.drawable.cgrab);
+            case "Aerial interrupt":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ai));
+                break;
+            case "Chain grab":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.cgrab));
                 break;
             case "Crouch cancel":
-                infoVid.setImageResource(R.drawable.crouchcancel);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.crouchcancel));
                 break;
-            */case "Dash-dance":
+            case "Dash-dance":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.dashdance));
                 break;
-            /*case "Fast falling":
-                infoVid.setImageResource(R.drawable.ffall);
+            case "Fast falling":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ffall));
                 break;
             case "Fox-trot":
-                infoVid.setImageResource(R.drawable.ftrot);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ftrot));
                 break;
             case "Jab reset":
-                infoVid.setImageResource(R.drawable.jabreset);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.jabreset));
                 break;
-            *///case "L-canceling":
-            //infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.lcancel));
-            //    break;
-            /*case "Ledge stall":
-                infoVid.setImageResource(R.drawable.ledgestall);
+            case "L-canceling":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.lcancel));
+                break;
+            case "Ledgedash":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ledgedash));
+                break;
+            case "Ledge stall":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ledgestall));
                 break;
             case "Ledge-canceling":
-                infoVid.setImageResource(R.drawable.ledgecancel);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.ledgecancel));
                 break;
             case "Moonwalk":
-                infoVid.setImageResource(R.drawable.moonwalk);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.moonwalk));
                 break;
             case "No-impact landing":
-                infoVid.setImageResource(R.drawable.noimpact);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.noimpact));
                 break;
             case "Platform cancel":
-                infoVid.setImageResource(R.drawable.dropcancel);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.platformcancel));
                 break;
             case "Powershield":
-                infoVid.setImageResource(R.drawable.pshield);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.pshield));
                 break;
             case "Platform warp":
-                infoVid.setImageResource(R.drawable.pwarp);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.pwarp));
                 break;
             case "Shield pressure":
-                infoVid.setImageResource(R.drawable.shieldpress);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.shieldpress));
                 break;
             case "Shield dropping":
-                infoVid.setImageResource(R.drawable.shielddrop);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.shielddrop));
                 break;
             case "SHFFL":
-                infoVid.setImageResource(R.drawable.shffl);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.shffl));
                 break;
             case "Short hop":
-                infoVid.setImageResource(R.drawable.shop);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.shop));
                 break;
             case "Tech":
-                infoVid.setImageResource(R.drawable.tech);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.tech));
                 break;
             case "Tech-chasing":
-                infoVid.setImageResource(R.drawable.techchase);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.techchase));
                 break;
             case "Team wobble":
-                infoVid.setImageResource(R.drawable.twobble);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.twobble));
                 break;
             case "Wavedash":
-                infoVid.setImageResource(R.drawable.wavedash);
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.wavedash));
                 break;
             case "V-canceling":
-                infoVid.setImageResource(R.drawable.vcancel);
-                break;*/
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.vcancel));
+                break;
         }
         infoVid.start();
     }

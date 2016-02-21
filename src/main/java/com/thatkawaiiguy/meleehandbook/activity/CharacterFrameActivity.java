@@ -25,6 +25,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrInterface;
@@ -50,9 +51,10 @@ public class CharacterFrameActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             getWindow().setStatusBarColor(ContextCompat.getColor(this, android.R.color.transparent));
 
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(charPicked);
         assert getSupportActionBar() != null;
-        getSupportActionBar().setTitle(charPicked);
+        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
@@ -80,6 +82,49 @@ public class CharacterFrameActivity extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {}
         });
+
+        assert charPicked != null;
+        switch (charPicked) {
+            case "Captain Falcon":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.falcon);
+                break;
+            case "Ganondorf":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.ganondorf);
+                break;
+            case "Falco":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.falco);
+                break;
+            case "Fox":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.fox);
+                break;
+            case "Sheik":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.sheik);
+                break;
+            case "Marth":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.marth);
+                break;
+            case "Ice Climbers":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.iceclimbers);
+                break;
+            case "Jigglypuff":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.jiggs);
+                break;
+            case "Pikachu":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.pikachu);
+                break;
+            case "Princess Peach":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.peach);
+                break;
+            case "Samus Aran":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.samus);
+                break;
+            case "Yoshi":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.yoshi);
+                break;
+            case "Dr. Mario":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.drmario);
+                break;
+        }
     }
 
     @Override

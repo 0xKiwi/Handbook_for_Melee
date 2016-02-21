@@ -1965,9 +1965,9 @@ public class MatchupFragment extends Fragment {
             case "Fox": {
                 switch(right) {
                     case "Falco":
-                        return "Better recovery";
+                        return "Better recovery and amaazing neutral";
                     case "Sheik":
-                        return "Strong attacks, speed";
+                        return "Strong attacks, punish game";
                     case "Marth":
                         return "Combo ability, strong attacks";
                     case "Princess Peach":
@@ -1994,7 +1994,7 @@ public class MatchupFragment extends Fragment {
                     case "Fox":
                         return "Stopping power, but poor recovery";
                     case "Sheik":
-                        return "Long tech roll";
+                        return "Long tech roll and punish game";
                     case "Marth":
                         return "Stopping power, but poor recovery";
                     case "Princess Peach":
@@ -2019,9 +2019,9 @@ public class MatchupFragment extends Fragment {
             case "Sheik": {
                 switch(right) {
                     case "Fox":
-                        return "Lightweight";
+                        return "Tech chase and gimping ability";
                     case "Falco":
-                        return "Better recovery";
+                        return "Gimp ability";
                     case "Sheik":
                         return "Good punish, needles";
                     case "Marth":

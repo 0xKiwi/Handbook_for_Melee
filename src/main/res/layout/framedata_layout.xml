@@ -88,8 +88,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:scaleType="fitCenter"
-        android:src="@drawable/yoyo"/>
+        android:scaleType="fitCenter"/>
 
     <android.support.v7.widget.CardView
         android:id="@+id/view"

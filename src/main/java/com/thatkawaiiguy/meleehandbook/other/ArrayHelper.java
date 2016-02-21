@@ -120,10 +120,10 @@ public class ArrayHelper {
                 "Extended & homing grapple", "Float cancel", "Frozen turnip glitch",
                 "Ledgehop double laser", "Multishine", "Parry", "Pillaring",
                 "Princess/Swordsman spiking", "RI grapple cancel",
-                "Reverse angle boomerang", "Rising pound", "SHFF missiles",
+                "Rising pound", "SHFF missiles",
                 "Short hop laser", "Side-B shorten", "Shine mine", "Super wavedash & SDWD",
                 "Up-B cancel", "Up-B turnaround", "Vududash", "Wallbombing",
-                "Wavelanded laser", "Waveshine", "Wobbling", "Yo-yo glitch"};
+                "Waveshine", "Wobbling", "Yo-yo glitch"};
     }
 
     public static String getTermInfoString(String text, Context context) {
@@ -576,8 +576,6 @@ public class ArrayHelper {
                 return res.getString(R.string.pillar_info_text);
             case "Princess/Swordsman spiking":
                 return res.getString(R.string.psspike_info_text);
-            case "Reverse angle boomerang":
-                return res.getString(R.string.revangle_info_text);
             case "Rising pound":
                 return res.getString(R.string.risingpound_info_text);
             case "RI grapple cancel":
@@ -602,8 +600,6 @@ public class ArrayHelper {
                 return res.getString(R.string.upbturn_info_text);
             case "Wallbombing":
                 return res.getString(R.string.wallbomb_info_text);
-            case "Wavelanded laser":
-                return res.getString(R.string.wavelandedl_info_text);
             case "Waveshine":
                 return res.getString(R.string.waveshine_info_text);
             case "Wobbling":

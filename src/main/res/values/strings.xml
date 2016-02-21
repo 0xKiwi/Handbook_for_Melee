@@ -513,33 +513,6 @@
         <br>Original post: http://bit.ly/1OCWiTh
         <br>For more info on the invisible ceiling glitch, check here: http://bit.ly/1T8RqZP
     ]]></string>
-    <string name="revangle_info_text"><![CDATA[<b>Applies to:</b> Link and Young Link
-        <br>
-        <br><big><b>Reverse angle boomerang</b></big>
-        <br>The reverse angle boomerang, named by Maryland Smasher B-Run, is a trick used with Link\'s and
-        Young Link\'s side special move. While there is a wider range of reverse angles
-        available to Young Link, a Link player may still find the occasional use for the reverse angle\'s
-        unique game mechanics. The point of the reverse angle boomerang is to use the fact that when the
-        boomerang is on its return path, it passes through every substance in the game, solid or not solid.
-        <br>
-        <br><big><b>Execution</b></big>
-        <br>The simplest way for a Young Link player to execute a reverse angle is to throw his boomerang
-        at as close as an angle as possible to directly down; the boomerang will bounce up, and instead
-        of being caught by Young Link, will continue over his head in a wide arch. Link may also perform this
-        type of reverse angle when the ground is uneven or slopes up in front of him at particular angles,
-        but those are very few and much less reliable than Young Link\'s downward reverse angle. For Young
-        Link, however, this method\'s ease of use and predictable boomerang path, combined with the speed
-        of the execution, will make this the most useful form of the reverse angle boomerang.
-        <br>
-        <br><big><b>Weaknesses</b></big>
-        <br>One weakness is that in fast paced fights, especially against characters such as Sheik, the
-        reverse angle boomerang can quickly cause Link to be vulnerable to attack. The animation is not
-        a short one, and in most cases, Link will be facing the opposite direction of his opponent while
-        performing the reverse angle, leaving the only defensive possibilities to blocking, dodging, or
-        rolling to avoid getting hit.
-        <br>
-        <br>More info: http://www.ssbwiki.com/Reverse_angle_boomerang
-    ]]></string>
     <string name="rigcancel_info_text"><![CDATA[<b>Applies to:</b> Samus
         <br>
         <br><big><b>Rising instant grapple cancel</b></big>
@@ -824,28 +797,6 @@
         (meaning a side special with smash attack button timing, B and control stick at the
         same time), and let the stick reset to neutral, then perform the smash side special again.
         <br>This technique should be possible on FoD, Yoshi\'s Story and FD. Other stages too.
-    ]]></string>
-    <string name="wavelandedl_info_text"><![CDATA[http://www.ssbwiki.com/images/5/57/Wavelanded_laser.gif
-        <br>
-        <br><b>Applies to:</b> Fox and Falco
-        <br>
-        <br><big><b>Wavelanded laser</b></big>
-        <br>The wavelanded laser, also known as a falling wavelanding laser, is a variation of the Short Hop Laser that
-        can be performed by Falco and Fox (as well as Kirby if he copies Fox
-        or Falco\'s Blaster). This occurs due to Falco, Fox and Kirby automatically changing direction when firing the Blaster
-        after falling off of a platform. The goal is to shoot an opponent that is landing, standing, or falling and make a direct
-        hit. The tricky part of this move is trying to get the Blaster to go directly where the player wants it to go. Because of
-        the speed of Falco\'s laser, he won\'t be able to shoot an opponent directly on the platform, but he can only shoot the
-        opponent if he or she falls through. This can be either advantageous or disadvantageous for Falco at times.
-        <br>
-        <br><big><b>Performance</b></big>
-        <br>The wavelanded laser is achieved by firing the Blaster as soon as Falco, Fox, or Kirby faces away from the opponent, wavedashes or wavelands
-        off of a platform and fires the Blaster immediately upon falling off the platform. If the Wavelanded Laser is done correctly,
-        Falco, Fox, or Kirby will slide backwards off the platform, face their opponent, and shoot the Blaster. It\'s impossible
-        to use the technique while facing the opponent because the player automatically turns in the opposite direction as soon
-        as the Blaster is shot, and much harder to accomplish while wavedashing or wavelanding forward and because wavedashing and
-        wavelanding forward usually causes the player to stumble on the edge of the platform. The player can also perform
-        a falling wavelanded Double Laser as well, but it would only work with Fox or Kirby with Fox\'s Blaster copied.
     ]]></string>
     <string name="waveshine_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
         <br>
@@ -2085,8 +2036,7 @@
     ]]></string>
     <string name="lcancel_info_text"><![CDATA[<big><b>L-canceling</b></big>
         <br>Part of SHFFL, this is a technique that allows characters to act faster than usual when landing in the middle
-        of an aerial attack. L-canceling is done by pressing a shield button 11 frames or fewer before landing
-        during an aerial attack in Smash 64 (the grab button also works because of its unique properties), or
+        of an aerial attack. L-canceling is done
         by pressing the shield button 1 to 7 frames before landing in Melee.
         <br>Only regular aerial attacks can be L-canceled; special moves that have landing lag cannot. If an
         attack is auto-canceled then L-canceling has no effect. All aerials can be canceled except
