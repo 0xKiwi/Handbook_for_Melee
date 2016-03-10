@@ -32,7 +32,7 @@ import com.thatkawaiiguy.meleehandbook.activity.HealthyActivity;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomParentObject;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.adapter.HealthyExpandableAdapter;
+import com.thatkawaiiguy.meleehandbook.adapter.ExpandableAdapter;
 
 import java.util.ArrayList;
 
@@ -44,7 +44,7 @@ public class HealthyFragment extends Fragment {
             "Stop (in the name of love)", "Underhanded stretch", "The block", "Thumb push",
             "Thumb pull"};
 
-    private HealthyExpandableAdapter mExpandableAdapter;
+    private ExpandableAdapter mExpandableAdapter;
 
     private boolean canStart = true;
 
@@ -86,7 +86,7 @@ public class HealthyFragment extends Fragment {
         });
 
         RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        mExpandableAdapter = new HealthyExpandableAdapter(getActivity(), setUpData());
+        mExpandableAdapter = new ExpandableAdapter(getActivity(), setUpData(), true);
         mRecyclerView.setAdapter(mExpandableAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;

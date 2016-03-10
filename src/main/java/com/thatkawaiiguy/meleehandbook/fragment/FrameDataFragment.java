@@ -92,7 +92,7 @@ public class FrameDataFragment extends Fragment {
                     childObjectList.add(customChildObject2);
                     childObjectList.add(customChildObject3);
                     if (actionBarTitle.equals("Marth") || actionBarTitle.equals("Sheik") ||
-                            actionBarTitle.equals("Yoshi"))
+                            actionBarTitle.equals("Yoshi") || actionBarTitle.equals("Princess Peach"))
                         break;
                     CustomChildObject customChildObject4 = new CustomChildObject();
                     CustomChildObject customChildObject5 = new CustomChildObject();

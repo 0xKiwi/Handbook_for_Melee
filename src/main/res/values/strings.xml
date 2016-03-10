@@ -110,9 +110,7 @@
     <string name="pref_open_title">Open navigation menu on launch</string>
 
     <!-- BEGIN UNIQUE TECH LIST -->
-    <string name="boomjump_info_text"><![CDATA[<b>Applies to:</b> Link and Young Link
-        <br>
-        <br>Examples: http://gfycat.com/GlaringFoolhardyHake
+    <string name="boomjump_info_text"><![CDATA[Examples: http://gfycat.com/GlaringFoolhardyHake
         <br>http://gfycat.com/ForkedBruisedIberianmole
         <br>
         <br><big><b>Boomerang superjump</b></big>
@@ -125,11 +123,7 @@
         <br>
         <br>This glitch was removed from the 1.2 and PAL versions of the game.
     ]]></string>
-    <string name="desync_info_text"><![CDATA[<b>Applies to:</b> Ice Climbers
-        <br>
-        <br>Example: http://www.gfycat.com/RawSmoggyIrishsetter
-        <br>
-        <br><big><b>Desynching</b></big>
+    <string name="desync_info_text"><![CDATA[<big><b>Desynching</b></big>
         <br>Desynching is an Ice Climbers technique that involves
         separating the two climbers\' states and controlling them individually. It is most commonly
         done during grabs to allow Nana to attack a captive opponent or regrab them, but the Ice
@@ -158,9 +152,7 @@
         <br>
         <br>The technique shown in the image is known as the \"Nanapult\"
     ]]></string>
-    <string name="djc_info_text"><![CDATA[<b>Applies to:</b> Mewtwo, Ness, Peach, and Yoshi
-        <br>
-        <br>Examples of DJC: https://youtu.be/O2Oa60lfkyo
+    <string name="djc_info_text"><![CDATA[Examples of DJC: https://youtu.be/O2Oa60lfkyo
         <br>https://youtu.be/hBTgDxEqHw0
         <br>
         <br><big><b>Double jump cancel</b></big>
@@ -210,11 +202,7 @@
         fall almost immediately. The result will cause the character using this technique
         to attack extremely quickly.
     ]]></string>
-    <string name="doublejump_info_text"><![CDATA[https://i.imgur.com/Mqr8335.jpg
-        <br>
-        <br><b>Applies to:</b> Captain Falcon and Ganondorf
-        <br>
-        <br><big><b>Double jump refresh</b></big>
+    <string name="doublejump_info_text"><![CDATA[<big><b>Double jump refresh</b></big>
         <br>Captain Falcon and Ganondorf can refresh their double jumps by performing their Down-B attacks.
         This means they can jump, double jump, Down-B, and then double jump again.
         <br>This technique is often used when CF or Ganon have been smashed into the upper right or left areas
@@ -225,9 +213,7 @@
         so that if you were to perform the Down-B you wouldn\'t SD by the endlag sending you into the bottom
         blastzone.
     ]]></string>
-    <string name="egrapple_info_text"><![CDATA[<b>Applies to:</b> Samus
-        <br>
-        <br>Examples of the extended grapple: https://youtu.be/QanFnmIyqQI
+    <string name="egrapple_info_text"><![CDATA[Examples of the extended grapple: https://youtu.be/QanFnmIyqQI
         <br>
         <br><big><b>Extended grapple</b></big>
         <br>Samus\' extended grapple is a technique that allows Samus to extend the length of her grab.
@@ -241,9 +227,7 @@
         <br>
         <br>This technique was removed in the PAL version of Melee.
     ]]></string>
-    <string name="edgecanceleggs_info_text"><![CDATA[<b>Applies to:</b> Yoshi
-        <br>
-        <br>Examples: https://youtu.be/aDmwVPK1l7Y
+    <string name="edgecanceleggs_info_text"><![CDATA[Examples: https://youtu.be/aDmwVPK1l7Y
         <br>https://youtu.be/p82iyfl-yKo
         <br>
         <br><big><b>Edge-canceled eggs</b></big>
@@ -251,7 +235,7 @@
         technique for Yoshi that is performed by releasing from the edge, pressing
         down or away from the edge, double jumping, and then throwing an egg.
         After the egg is thrown, the player can grab onto the edge, canceling 
-        all lag and renewing the edge invincibility frames. Note that the invicibility does not cover cover all
+        all lag and renewing the edge invincibility frames. Note that the invicibility does not cover all
         of the ECE, it ends after the egg is launched if performed perfectly.
         <br>
         <br><big><b>Usefulness</b></big>
@@ -268,9 +252,7 @@
         <br>Remember to always have your finger poised above the midair dodge button, especially when edge egging, because you never
         know when you might need to use it.
     ]]></string>
-    <string name="fcancel_info_text"><![CDATA[<b>Applies to:</b> Peach
-        <br>
-        <br><big><b>Float cancel</b></big>
+    <string name="fcancel_info_text"><![CDATA[<big><b>Float cancel</b></big>
         <br>Every character can cancel some of the endlag of their aerials by pressing L, R or Z seven frames before
         landing. This technique is known as L-canceling, and it will cut the lag of the attack in half.
         The Peach labeled "LCAN" is using this technique, and suffers from 12 frames of lag.
@@ -281,11 +263,7 @@
         <br>The FCAN Peach is also using a technique that allows her to instantly float by holding down
         on the control stick and a jump button, known as Auto-floating.
     ]]></string>
-    <string name="frozenturnip_info_text"><![CDATA[http://gfycat.com/GloomySnoopyFawn
-        <br>
-        <br><b>Applies to:</b> Peach
-        <br>
-        <br><big><b>Frozen turnip glitch</b></big>
+    <string name="frozenturnip_info_text"><![CDATA[big><b>Frozen turnip glitch</b></big>
         <br>The frozen turnip glitch is a glitch on the 1.00 NTSC version of Melee that
         will cause a turnip to not travel any distance when thrown and will remain frozen
         in air with the hitbox still active. The turnip will stay in place indefinitely
@@ -317,9 +295,7 @@
         <br>
         <br>Full explanation: http://bit.ly/1PjNVR3
     ]]></string>
-    <string name="hominggrapple_info_text"><![CDATA[<b>Applies to:</b> Samus
-        <br>
-        <br>Example: http://gfycat.com/HeftyTenderCalf
+    <string name="hominggrapple_info_text"><![CDATA[Example: http://gfycat.com/HeftyTenderCalf
         <br>
         <br><big><b>How to perform</b></big>
         <br>To do the homing extended grapple, one must perform the extended grapple and press L as the
@@ -327,9 +303,7 @@
         unlike the normal Grapple Beam, one needs to press A or Z when the tip of the beam is over
         the enemy in order to grab them.
     ]]></string>
-    <string name="knockbackarmor_info_text"><![CDATA[<b>Applies to:</b> Yoshi
-        <br>
-        <br><big><b>Double jump knockback armor</b></big>
+    <string name="knockbackarmor_info_text"><![CDATA[<big><b>Double jump knockback armor</b></big>
         <br>The double jump knockback armor, (Also called double jump cancel counter, abbreviated DJCC)
         is a technique unique to Yoshi. Yoshi\'s midair jump has knockback
         armor and will continue its momentum after the appropriate freeze-frames are applied against all attacks with
@@ -345,9 +319,7 @@
         <br>This can also be used to recover by double jumping up to the stage and taking in the opponents hit
         to wavedash onto the stage and space yourself until you have space to fight.
     ]]></string>
-    <string name="lhdl_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
-        <br>
-        <br>Example: http://oddshot.tv/shot/beyondthesummit-2015110625841140
+    <string name="lhdl_info_text"><![CDATA[Example: http://oddshot.tv/shot/beyondthesummit-2015110625841140
         <br>
         <br>A detailed instruction on the execution of LHDL: https://youtu.be/FF_YhidQ_NE
         <br>
@@ -370,9 +342,7 @@
         <br>The LHDL is done by dropping down from the ledge, jumping after a height similar to the gif above,
         and then firing two lasers by tapping B twice with proper timing, and controlling your movement with the control stick.
     ]]></string>
-    <string name="multishine_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
-        <br>
-        <br>Example: http://www.gfycat.com/ImmediateFirmChanticleer
+    <string name="multishine_info_text"><![CDATA[Example: http://www.gfycat.com/ImmediateFirmChanticleer
         <br>
         <br><big><b>Multishine</b></big>
         <br>A multishine is the repeated use of Fox or Falco\'s Down-B (shine or reflector).
@@ -405,9 +375,7 @@
         <br>
         <br>Fox can shine every 8 frames.
     ]]></string>
-    <string name="parry_info_text"><![CDATA[<b>Applies to:</b> Yoshi
-        <br>
-        <br>Example: https://youtu.be/dVLRJ4jCBeI
+    <string name="parry_info_text"><![CDATA[Example: https://youtu.be/dVLRJ4jCBeI
         <br>
         <br><big><b>Parry</b></big>
         <br>Also called supershielding, parrying is a technique used by Yoshi players that takes advantage of the
@@ -431,9 +399,7 @@
         <br>\tJump
         <br>\tShield drop
     ]]></string>
-    <string name="pillar_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
-        <br>
-        <br>Example: https://youtu.be/kPahZCKxcGI
+    <string name="pillar_info_text"><![CDATA[Example: https://youtu.be/kPahZCKxcGI
         <br>
         <br><big><b>Pillaring</b></big>
         <br>Pillaring refers to pressuring an opponent\'s shield by utilizing a combination of techniques
@@ -449,11 +415,7 @@
         SHFFL\'d down aerial, and the cycle continues. Grabs and other aerials can also be canceled into in place of the down
         aerial. This technique is sometimes used in tandem with waveshines and waveshine infinites and followed up with jabs or down tilts.
     ]]></string>
-    <string name="psspike_info_text"><![CDATA[Marth\'s spike: http://gfycat.com/LiquidBrownAmurratsnake
-        <br>
-        <br><b>Applies to:</b> Peach, Marth, Roy, and Kirby (with Peach hat)
-        <br>
-        <br><big><b>Princess/Swordsman spiking</b></big>
+    <string name="psspike_info_text"><![CDATA[<big><b>Princess/Swordsman spiking</b></big>
         <br>Princess/Swordsman spiking is done by using Peach, Marth, and Roy\'s counter to
         intentionally setup an invisible ceiling glitch on your opponent. For Peach
         Toad will send them in the same trajectory as normal while it will cause Marth
@@ -513,9 +475,7 @@
         <br>Original post: http://bit.ly/1OCWiTh
         <br>For more info on the invisible ceiling glitch, check here: http://bit.ly/1T8RqZP
     ]]></string>
-    <string name="rigcancel_info_text"><![CDATA[<b>Applies to:</b> Samus
-        <br>
-        <br><big><b>Rising instant grapple cancel</b></big>
+    <string name="rigcancel_info_text"><![CDATA[<big><b>Rising instant grapple cancel</b></big>
         <br>Samus has one of the best recoveries in the game. She can Walljump, Bomb Jump, Grapple, and has a very powerful Up-B.
         <br>One of the most versatile of these options is the Grapple. When used in the air, the beam can latch onto the side of
         the stage. Samus will dangle there until she presses Z or A to pull herself up. If she is grappled perfectly onto the
@@ -535,9 +495,7 @@
         <br>This is certainly not the safest recovery option for Samus, but it is very quick and if she fails to
         sweetspot the ledge, she suffers from very little lag when landing on the stage.
     ]]></string>
-    <string name="risingpound_info_text"><![CDATA[<b>Applies to:</b> Jigglypuff
-        <br>
-        <br><big><b>Rising pound</b></big>
+    <string name="risingpound_info_text"><![CDATA[<big><b>Rising pound</b></big>
         <br>Jigglypuff\'s Side-B is Pound. It\'s a fairly strong physical attack that sets up the opponent to get
         rested and can punch its way through several projectiles.
         <br>One of the odd things about the attack is it can be angled up or down, unlike most Side-B\'s. By angling the
@@ -549,10 +507,7 @@
         <br>This technique can be performed by simply doing the Side-B but rather than doing it straight you aim diagonally
         down or upwards.
     ]]></string>
-    <string name="shl_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
-        <br>
-        <br>Excellent SHDL\'ing by Lucky: https://gyfcat.com/RepulsiveWarmheartedEider
-        <br>Examples: http://wiki.teamliquid.net/smash/images/a/a4/Short_Hop_Double_Laser_Example.gif
+    <string name="shl_info_text"><![CDATA[Examples: http://wiki.teamliquid.net/smash/images/a/a4/Short_Hop_Double_Laser_Example.gif
         <br>http://wiki.teamliquid.net/smash/images/1/18/Short_Hop_Laser_Example.gif
         <br>
         <br><big><b>Short hop laser</b></big>
@@ -581,9 +536,7 @@
         <br>To SHDL with Fox you must short hop, either by lightly flicking the control stick up or using X or Y, and then press
         B twice immediately after getting off the ground. You do not fast fall for SHDL.
     ]]></string>
-    <string name="shffmissile_info_text"><![CDATA[<b>Applies to:</b> Samus
-        <br>
-        <br><big><b>Shorthop fastfall missiles</b></big>
+    <string name="shffmissile_info_text"><![CDATA[<big><b>Shorthop fastfall missiles</b></big>
         <br>Both versions of Samus\' Side-B, Homing Missile and Super Missile, can have their
         endlag canceled by landing, similar to Falco\'s Laser and some other moves.
         <br>This technique can become even more effective when combined with platforms, as Samus
@@ -605,9 +558,7 @@
         <br>&#8226;Homing missiles are done by tilting the control stick and pressing B
         <br>&#8226;Super missiles are done by smashing the control stick and pressing B
     ]]></string>
-    <string name="sidebshorten_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
-        <br>
-        <br>Examples of shorten: http://gfycat.com/EminentHonestGalapagosdove
+    <string name="sidebshorten_info_text"><![CDATA[Examples of shorten: http://gfycat.com/EminentHonestGalapagosdove
         <br>
         <br>Both the Fox Illusion and Falco Phantasm (The Side-B of Fox and Falco)
         can be ended early by pressing the button for a special move before its animation is complete, but a few
@@ -632,10 +583,7 @@
         <br>\tShort. Press B again on frame 22
         <br>\tFeint. Press B again on frame 20 or 21, you will barely move, and no hitbox will come out.
     ]]></string>
-    <string name="swd_info_text"><![CDATA[<b>Applies to:</b> Samus
-        <br>
-        <br>Examples of SWD: https://gfycat.com/MixedShockingEeve
-        <br>https://youtu.be/8YSeHeuiX8U
+    <string name="swd_info_text"><![CDATA[Examples of SWD: https://youtu.be/8YSeHeuiX8U
         <br>
         <br><big><b>Super wavedash</b></big>
         <br>The super wavedash (sometimes abbreviated as SWD) is a frame-perfect
@@ -670,9 +618,7 @@
         In actuality, it still is the exact same position as the regular 41st frame and since they skipped the
         first 2 frames, it can still be argued as being the 41st frame.
     ]]></string>
-    <string name="sdwd_info_text"><![CDATA[http://i.imgur.com/hNroDRW.gifv
-        <br>
-        <br><b>Applies to:</b> Samus
+    <string name="sdwd_info_text"><![CDATA[<b>Applies to:</b> Samus
         <br>
         <br><big><b>Super duper wavedash</b></big>
         <br>A variant of the Super Wave Dash is the \"Super Duper Wavedash." Execution is similar to
@@ -699,9 +645,7 @@
         crouch and grab, so you have to shield for at least one frame. You don\'t have to
         actually move the control stick down on 46 and press shield on 47. You can buffer the inputs.
     ]]></string>
-    <string name="shinemine_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
-        <br>
-        <br>Video displaying several ways to set up: https://youtu.be/rF1BQnuvBOQ
+    <string name="shinemine_info_text"><![CDATA[Video displaying several ways to set up: https://youtu.be/rF1BQnuvBOQ
         <br>
         <br><big><b>Shine mine</b></big>
         <br>Shine mining, a term coined and discovered by Darktooth is a technique
@@ -722,9 +666,7 @@
         <br>This technique is extremely situational but it can be used for edge guards and reads since it is
         only the reflecting hitbox.
     ]]></string>
-    <string name="upbcancel_info_text"><![CDATA[<br>Applies to: Dr. Mario
-        <br>
-        <br>Examples of the cancel: http://www.youtube.com/watch?v=oWMDcnbPgy0
+    <string name="upbcancel_info_text"><![CDATA[Examples of the cancel: http://www.youtube.com/watch?v=oWMDcnbPgy0
         <br>http://gfycat.com/DecimalExhaustedAnemone
         <br>
         <br><big><b>Up-B cancel</b></big>
@@ -745,9 +687,7 @@
         stop shield pressure, mix up jabs and waveland onto stage followups. Just keep in mind
         the character you are attacking has to be closer than Dr. Mario\'s jab range.
     ]]></string>
-    <string name="upbturn_info_text"><![CDATA[<b>Applies to:</b> Mewtwo, Pichu, Pikachu, Sheik, and Zelda
-        <br>
-        <br><big><b>Up-B turnaround</b></big>
+    <string name="upbturn_info_text"><![CDATA[<big><b>Up-B turnaround</b></big>
         <br>Characters who have a omnidirectional recovery that is similar to a teleport, such as Mewtwo or
         Sheik, have the ability to turnaround their Up-B. Characters like Pichu and Pikachu can take
         advantage of this to go the same direction twice, which is impossible to do without this technique.
@@ -763,11 +703,7 @@
         <br>Examples of Up-B turnaround: https://youtu.be/y9nivZx7U8c
         <br>https://youtu.be/IUrKbyyJWas
     ]]></string>
-    <string name="vududash_info_text"><![CDATA[http://i.imgur.com/Fod2w0B.gifv
-        <br>
-        <br><b>Applies to:</b> Luigi, but may work for others
-        <br>
-        <br><big><b>Vududash</b></big>
+    <string name="vududash_info_text"><![CDATA[<big><b>Vududash</b></big>
         <br>When a character wavedashes off a platform or the stage, they lose their momentum when
         transitioning from the wavedash into freefalling. However,
         some moves will maintain momentum, such as Luigi\'s Fireball.
@@ -778,12 +714,7 @@
         <br><big><b>How to perform</b></big>
         <br>To perform the technique, simply wavedash off a platform or stage, and press B right before sliding off.
     ]]></string>
-    <string name="wallbomb_info_text"><![CDATA[MacD using the technique to get back on stage
-        http://oddshot.tv/shot/teamoxy-2015110261422335
-        <br>
-        <br><b>Applies to:</b> Peach
-        <br>
-        <br><big><b>Wallbombing</b></big>
+    <string name="wallbomb_info_text"><![CDATA[<big><b>Wallbombing</b></big>
         <br>If Peach uses her Side-B and runs into a wall, she will bounce off of it. She can
         then perform the move again 29-35 frames later, and because the beginning of the
         moves brings her slightly upwards, she will rise up the wall. It is important to note
@@ -798,9 +729,7 @@
         same time), and let the stick reset to neutral, then perform the smash side special again.
         <br>This technique should be possible on FoD, Yoshi\'s Story and FD. Other stages too.
     ]]></string>
-    <string name="waveshine_info_text"><![CDATA[<b>Applies to:</b> Fox and Falco
-        <br>
-        <br><big><b>Waveshine</b></big>
+    <string name="waveshine_info_text"><![CDATA[big><b>Waveshine</b></big>
         <br>A waveshine is a wavedash done immediately out of a shine.
         It can be done by Fox and Falco, and requires a very high level of tech skill as
         it is very demanding to implement it into your game.
@@ -839,9 +768,7 @@
         <br>
         <br>Examples of waveshining: https://youtu.be/_F3LJ21jOzI
     ]]></string>
-    <string name="wobbling_info_text"><![CDATA[<b>Applies to:</b> Ice Climbers
-        <br>
-        <br>Examples of wobbling: http://oddshot.tv/shot/dreamhacksmash-2015092012552578/
+    <string name="wobbling_info_text"><![CDATA[Examples of wobbling: http://oddshot.tv/shot/dreamhacksmash-2015092012552578/
         <br>http://gfycat.com/InbornObeseIbizanhound
         <br>
         <br><big><b>Wobbling</b></big>
@@ -881,9 +808,7 @@
         character to escape from the grab; the delay between the pummel and the tilt is minuscule if not nonexistent,
         and is humanly impossible to escape from.
     ]]></string>
-    <string name="yoyo_info_text"><![CDATA[<b>Applies to:</b> Ness
-        <br>
-        <br>Examples of the yo-yo glitch: https://youtu.be/DI9KGybiCHo
+    <string name="yoyo_info_text"><![CDATA[Examples of the yo-yo glitch: https://youtu.be/DI9KGybiCHo
         <br>http://gfycat.com/CanineComplexBullfrog
         <br>
         <br><big><b>Yo-yo glitch</b></big>
@@ -1461,6 +1386,9 @@
     <string name="stomp_term_info">
         Like wave dashing but downwards.
     </string>
+    <string name="swantonbomb_term_info">
+        An offstage falling U-Air by Fox. http://gfycat.com/VibrantClutteredInchworm
+    </string>
     <string name="sweetattack_term_info">
         A hitbox that is usually much stronger and deals more knockback than its weaker counterpart,
         the sourspot hitbox. Once this hitbox appears in a move and is out for a short time,
@@ -1718,51 +1646,6 @@
         you should have taken very little knockback and less damage would have been dealt compared to a
         non CC\'d attack.
     ]]></string>
-    <string name="dashcancel_info_text" formatted="false"><![CDATA[<big><b>Dash-canceling</b></big>
-        <br>This technique cancels a characters dash, the simplest way to dash cancel is to jump. Characters who have good aerial attacks, such
-        as Jigglypuff, are able to benefit the most from this. Some of the momentum
-        from the dash is carried into the characters jump, so those with fast running speed, like Fox.
-        It is also possible to jump cancel into a grab, or, if the player taps
-        up to jump, an up smash or up special.
-        <br>
-        <br><big><b>You can cancel dashes with:</b></big>
-        <br>
-        <br><b>Crouching</b>
-        <br>Crouching is an option during the run, not the dash, and is thus
-        called run-canceling. Canceling with a crouch causes the character to slide a little bit, almost
-        like Wavedashing. If the crouch is released while the character slides, he/she is still considered
-        to be standing, so basic, non-dashing A button-attacks are able to be performed while sliding (with
-        the exception of the side smash, which negates momentum unless the C-stick is used). It can also be
-        used to simply exit the dash for those with slow running speed, since the distance of the slide is
-        dependent on speed, not traction.
-        <br>
-        <br><b>Shielding</b>
-        <br>Putting up a shield allows the character to do any defensive techniques involving the shield while
-        the game considers one to be standing. This not only allows the character to do a roll or sidestep,
-        but also a grab without the normal lag of a dashing grab.
-        <br>
-        <br><b>Up smash</b>
-        <br>The small delay provided by an initial jump makes it possible to execute an up smash while running.
-        The result is the character sliding a little while performing their up smash. This is usually a
-        good alternative to using the characters dash attack, which often has more lag than the up
-        smash. Because smashes can be charged from Melee onward, this allows for execution of the slide
-        smash technique.
-        <br>
-        <br><b>Down smash</b>
-        <br>Within the first few frames of a crouch, it is possible to press the attack button to interrupt
-        and perform a down smash, which allows the player to slide while using the down smash if a
-        dash is used first. Down smashes are also useful approach tactics when used in this manner
-        because they tend to sweep the ground. However, the down smash will not cause
-        all of the characters to slide, as some down smashes negate momentum like Links.
-        <br>It is impossible to cancel a dash with a side smash because it requires that the player tap the control
-        stick/D-pad left or right again, which is impossible due to the effects of traction.
-        <br>
-        <br><b>Using special attacks</b>
-        <br>The player can exit a dash using any special move, which is very useful for approach. Projectile-based
-        attacks like the Fireball can be very useful when done while dashing. Many special attacks also have
-        good stunning ability, which allows follow-up into other attacks.
-    ]]>
-    </string>
     <string name="ddance_info_text"><![CDATA[Example of dash dancing: https://youtu.be/mk09c6iLLdU
         <br>
         <br><big><b>Dash-dance</b></big>
@@ -1929,63 +1812,6 @@
         different.
         <br>Fox-trotting can also be performed by jump-canceling a dash into a
         wavedash, then dashing again, or by dash-canceling a full dash into another dash.
-    ]]></string>
-    <string name="jabcancel_info_text"><![CDATA[<big><b>Jab cancel</b></big>
-        <br>Jab canceling can be performed by any character with a multiple-attack neutral attack jab
-        combo. At any point in the combo, before reaching the \"final\" hit, the player can shield, crouch,
-        or quickly turn around and back to cancel the combo and allow the character to perform other attack
-        moves without continuing the combo. Shielding to cancel the jab can be performed in Melee, but due
-        to the longer time it takes for a shield to drop, it is seldom used.
-        <br>
-        <br><big><b>Applications</b></big>
-        <br>Jab canceling is beneficial because the final hit of a jab combo is usually either a medium-strength
-        attack that knocks the opponent away or a multi-hit attack that is easily DIed out of. It also allows
-        the player to take advantage of the hit-stun and low knockback of the first few attacks in a jab combo
-        to continue to attack the opponent, rather than sending them away uselessly (the last hit tends not
-        to have enough knockback to KO) or pointlessly jabbing repeatedly at nothing after an opponent DIs out
-        of a multi-hit attack.
-        <br>The jab cancel can also be used to tack extra damage on the beginning of combos with quick moves,
-        such as tilts. It can also be used to open the opponent up for a grab (not to get confused with jab
-        grab).This is especially useful against a shield grabbing opponent, as most jabs are faster than grabs,
-        allowing the jab canceling character to attack a shield, jab when the shielding character attempts to
-        grab, and segue into a grab of their own. Jab cancels can also be used to open the opponent up to attacks
-        that are often difficult to land on their own. Because jabs tend to be very quick and often have a good
-        range and low knockback (or even knockback that moves the opponent closer), they are a great way to land
-        difficult moves. One of the best exmaples for this is Luigi\'s Super Jump Punch sweetspot, the Fire Jump Punch.
-        <br>
-        <br><big><b>Jab lock</b></big>
-        <br>The jab cancel can also be used to repeatedly do the starting hits of a jab combo against an opponent. This
-        is most potent with jabs that move the character slightly forward, like Sheiks. This is performed
-        by jabbing, canceling the jab with a jab fake, and starting another jab combo. This can be done
-        repeatedly until the opponent DIs out or are at a high enough percentage to be knocked out of it.
-    ]]></string>
-    <string name="jumpcancel_info_text"><![CDATA[<big><b>Jump-canceling</b></big>
-        <br>This term may refer to two different techniques: canceling a jump by using an attack, or jumping while using the shield.
-        <br>
-        <br><big><b>Canceling the jump with an attack</b></big>
-        <br>The jump-cancel occurs as a result of the pre-jump lag every character has. After the player presses X, Y,
-        or up on the control stick, there is a period of delay, ranging from 3 to 8 frames, before the players
-        character actually leaves the ground. During this delay, since the character is grounded, it is possible
-        to execute a few of the characters standing moves. These moves are up smash, up B, grab, and the item throw.
-        The up smash works because of the jump delay. The player needs to press A, while holding \"up\" on the control
-        stick, during jump delay to perform an up smash. The jump delay may have been created to help players perform
-        the up smash without jumping instead. It is unknown why grabs and other moves can be used during jump delay
-        while jabs and tilts are not.
-        <br>One application of the jump-cancel is the jump-canceled grab. Most characters have more range, less startup,
-        and less lag time on the standing grabs than on their dash grabs. The jump-cancel allows these characters to
-        use their standing grab instead of their inferior dash grabs while running.
-        This tactic is also what allows one to do a running up smash by dashing and jump-canceling into an up smash.
-        The player can also jump-cancel an item throw to use the faster normal item throw instead of a higher-ranged running one.
-        <br>
-        <br><big><b>Leaving the shield with a jump</b></big>
-        <br>Another usage of the term\ \"jump-cancel\" refers to the cancellation of a shield, shine, or another
-        special animation by jumping. Any character but Yoshi may jump directly from the shield. Additionally,
-        Fox and Falco can do the same with their shine. The animation achieved by turning around while dashing
-        (after leaving the initial dash animation) can also be jump-canceled.
-        <br>It is possible to jump-cancel a shield into a jump-canceled attack (most commonly Bowser and
-        Links up B, or Fox and Pikachu\'s up smash) - in this instance, only one use of the word
-        \"jump-cancel\" is used: \"Link used a jump-canceled up B from his shield." One can also jump-cancel
-        the shield into a wavedash, because the wavedash starts with a jump.
     ]]></string>
     <string name="jabreset_info_text"><![CDATA[<big><b>Jab reset</b></big>
         <br>A jab reset is a technique that is performed
@@ -4158,7 +3984,7 @@
         <br><b>0-99&#37; ledge attack range:</b> 14th farthest
         <br><b>100+&#37; ledge attack range:</b> 14th farthest
         <br>
-        <br><b>Notable players:</b> Eddy Mexico, Blea Gelo, Vudujin, Abate
+        <br><b>Notable players:</b> Blea Gelo, Abate, Eddy Mexico, Vudujin
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/luigi.75/
         <br>

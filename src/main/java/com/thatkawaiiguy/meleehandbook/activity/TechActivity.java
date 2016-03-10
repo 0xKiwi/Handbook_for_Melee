@@ -19,6 +19,7 @@ package com.thatkawaiiguy.meleehandbook.activity;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.thatkawaiiguy.meleehandbook.R;
 
@@ -204,7 +205,12 @@ public class TechActivity extends VideoInfoActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.vcancel));
                 break;
         }
-        infoVid.start();
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                infoVid.start();
+            }
+        });
     }
 
     @Override

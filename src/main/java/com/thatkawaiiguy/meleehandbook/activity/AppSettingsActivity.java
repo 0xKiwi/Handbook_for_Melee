@@ -62,8 +62,8 @@ public class AppSettingsActivity extends PreferenceActivity {
             public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
                 Preferences.sync(getPreferenceManager(), key);
                 if (key.equals(getString(R.string.pref_theme))) {
-                    restart = true;
                     recreate();
+                    restart = true;
                 }else if(key.equals(getString(R.string.pref_tier)))
                     restart = true;
             }

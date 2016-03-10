@@ -17,13 +17,18 @@
 
 package com.thatkawaiiguy.meleehandbook.activity;
 
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.r0adkll.slidr.Slidr;
@@ -51,8 +56,18 @@ public class VideoInfoActivity extends AppCompatActivity {
             return;
         optionPicked = mainData.getString("option");
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setStatusBarColor(0x00000000);
+            findViewById(R.id.video_scrollView).setOnScrollChangeListener(new View.OnScrollChangeListener() {
+                @Override
+                public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                    if(scrollX < 5)
+                        getWindow().setStatusBarColor(0x00000000);
+                    else
+                        getWindow().setStatusBarColor(adjustAlpha(ContextCompat.getColor(getParent(), R.color.theme_accent), (float) (scrollX + 20) / 10));
+                }
+            });
+        }
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         assert getSupportActionBar() != null;
@@ -81,6 +96,14 @@ public class VideoInfoActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public int adjustAlpha(int color, float factor) {
+        int alpha = Math.round(Color.alpha(color) * factor);
+        int red = Color.red(color);
+        int green = Color.green(color);
+        int blue = Color.blue(color);
+        return Color.argb(alpha, red, green, blue);
     }
 
     @Override

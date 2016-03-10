@@ -38,6 +38,20 @@ public class ArrayHelper {
                         "Yoshi", "Young Link"};
     }
 
+    public static String[] getUniqueTechCharArray(Context context) {
+        return Preferences.sortByTierEnabled(context) ?
+                new String[]{"Fox", "Falco", "Marth", "Jigglypuff", "Princess Peach",
+                        "Ice Climbers", "Captain Falcon", "Pikachu", "Samus Aran",
+                        "Dr. Mario", "Yoshi", "Luigi", "Ganondorf",
+                        "Mario", "Young Link", "Link","Roy",
+                        "Mewtwo", "Princess Zelda", "Ness", "Pichu",} :
+                new String[]{"Captain Falcon", "Dr. Mario",
+                        "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Link",
+                        "Luigi", "Mario", "Marth", "Mewtwo", "Ness", "Pichu",
+                        "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran",
+                        "Yoshi", "Young Link"};
+    }
+
     public static String[] getMapArray() {
         return new String[]{"Battlefield", "Dream Land", "Final Destination",
                 "Fountain of Dreams", "Kongo Jungle (SSB)", "Pokemon Stadium", "Yoshi's Story"};
@@ -53,9 +67,9 @@ public class ArrayHelper {
 
     public static String[] getTechArray() {
         return new String[]{"Aerial interrupt", "Chain grab",
-                "Crouch cancel", "Dash-canceling", "Dash-dance",
+                "Crouch cancel", "Dash-dance",
                 "Directional Influence", "Fast falling", "Fox-trot",
-                "Jab cancel", "Jab reset", "Jump-canceling", "L-canceling",
+                "Jab reset", "L-canceling",
                 "Ledge-canceling", "Ledgedash",
                 "Ledge stall", "Moonwalk",
                 "No-impact landing", "Platform cancel", "Platform warp",
@@ -103,7 +117,8 @@ public class ArrayHelper {
                 "Silent john", "Singles", "Smash attacks", "Smash inflation",
                 "Smashfest", "Sourspot", "Space animal", "Spike",
                 "Stage humping", "Stage spike", "Stale moves", "Star KO",
-                "Stitch", "Stock canceling", "Stomp", "Style", "Sweetspot attack", "Sweetspot ledge",
+                "Stitch", "Stock canceling", "Stomp", "Style", "Swanton bomb",
+                "Sweetspot attack", "Sweetspot ledge",
                 "TAS", "Taunt cancel", "Tech trap", "The Zhu", "The king is back",
                 "The knee", "The tourney winner", "Thundercat combo",
                 "Thunders combo", "Tier list", "Tilts", "Tires don exits",
@@ -122,7 +137,7 @@ public class ArrayHelper {
                 "Princess/Swordsman spiking", "RI grapple cancel",
                 "Rising pound", "SHFF missiles",
                 "Short hop laser", "Side-B shorten", "Shine mine", "Super wavedash & SDWD",
-                "Up-B cancel", "Up-B turnaround", "Vududash", "Wallbombing",
+                "Up-B cancel", "Up-B turnaround", "Up-B walljump", "Vududash", "Wallbombing",
                 "Waveshine", "Wobbling", "Yo-yo glitch"};
     }
 
@@ -411,6 +426,8 @@ public class ArrayHelper {
                 return res.getString(R.string.stomp_term_info);
             case "Style":
                 return res.getString(R.string.style_term_info);
+            case "Swanton bomb":
+                return res.getString(R.string.swantonbomb_term_info);
             case "Sweetspot attack":
                 return res.getString(R.string.sweetattack_term_info);
             case "Sweetspot ledge":
@@ -488,8 +505,6 @@ public class ArrayHelper {
                 return res.getString(R.string.chaing_info_text);
             case "Crouch cancel":
                 return res.getString(R.string.crouchcancel_info_text);
-            case "Dash-canceling":
-                return res.getString(R.string.dashcancel_info_text);
             case "Dash-dance":
                 return res.getString(R.string.ddance_info_text);
             case "DI angles":
@@ -500,12 +515,8 @@ public class ArrayHelper {
                 return res.getString(R.string.ffall_info_text);
             case "Fox-trot":
                 return res.getString(R.string.ftrot_info_text);
-            case "Jab cancel":
-                return res.getString(R.string.jabcancel_info_text);
             case "Jab reset":
                 return res.getString(R.string.jabreset_info_text);
-            case "Jump-canceling":
-                return res.getString(R.string.jumpcancel_info_text);
             case "L-canceling":
                 return res.getString(R.string.lcancel_info_text);
             case "Ledgedash":
