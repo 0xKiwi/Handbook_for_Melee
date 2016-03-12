@@ -21,16 +21,17 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
@@ -50,6 +51,13 @@ public class VideoInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.collapsing_video_layout);
         Slidr.attach(this);
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        if(!Preferences.hideAds(this)) {
+            mAdView.loadAd(new AdRequest.Builder().build());
+            mAdView.setVisibility(View.VISIBLE);
+        } else if(Preferences.hideAds(this))
+            mAdView.setVisibility(View.GONE);
 
         Bundle mainData = getIntent().getExtras();
         if (mainData == null)

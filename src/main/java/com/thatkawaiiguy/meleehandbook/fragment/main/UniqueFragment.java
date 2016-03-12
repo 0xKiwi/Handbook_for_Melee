@@ -18,7 +18,9 @@
 package com.thatkawaiiguy.meleehandbook.fragment.main;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -26,11 +28,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
+import com.thatkawaiiguy.meleehandbook.activity.TechActivity;
+import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.adapter.ExpandableAdapter;
+import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomParentObject;
 import com.thatkawaiiguy.meleehandbook.R;
+import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
+import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 import java.util.ArrayList;
 
@@ -66,30 +73,34 @@ public class UniqueFragment extends Fragment {
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
-        mExpandableAdapter = new ExpandableAdapter(getActivity(), setUpData(), false);
-        mRecyclerView.setAdapter(mExpandableAdapter);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        if(Preferences.groupByCharacterEnabled(getActivity())) {
+            mExpandableAdapter = new ExpandableAdapter(getActivity(), setUpData(), false);
+            mRecyclerView.setAdapter(mExpandableAdapter);
+            mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        } else {
+            TextAdapter adapter = new TextAdapter(uniqueTechs);
+            mRecyclerView.setAdapter(adapter);
+            mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        //TextAdapter adapter = new TextAdapter(uniqueTechs);
-        //mRecyclerView.setAdapter(adapter);
-
-        /*ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
-        .OnItemClickListener() {
-            @Override
-            public void onItemClicked(int position) {
-                if(canStart) {
-                    Intent mIntent;
-                    if(uniqueTechs[position].equals("Super wavedash & SDWD") ||
-                            uniqueTechs[position].equals("Extended & homing grapple"))
-                        mIntent = new Intent(getActivity(), TechTabActivity.class);
-                    else
-                        mIntent = new Intent(getActivity(), TechActivity.class);
-                    mIntent.putExtra("option", uniqueTechs[position]);
-                    startActivity(mIntent);
-                    canStart = false;
+            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                    .OnItemClickListener() {
+                @Override
+                public void onItemClicked(int position) {
+                    if(canStart) {
+                        Intent mIntent;
+                        if(uniqueTechs[position].equals("Super wavedash & SDWD") ||
+                                uniqueTechs[position].equals("Extended & homing grapple"))
+                            mIntent = new Intent(getActivity(), TechTabActivity.class);
+                        else
+                            mIntent = new Intent(getActivity(), TechActivity.class);
+                        mIntent.putExtra("option", uniqueTechs[position]);
+                        startActivity(mIntent);
+                        canStart = false;
+                    }
                 }
-            }
-        });*/
+            });
+        }
+
         mRecyclerView.setHasFixedSize(true);
 
         return rootView;
@@ -121,13 +132,15 @@ public class UniqueFragment extends Fragment {
                     CustomChildObject customChildObject5 = new CustomChildObject();
                     CustomChildObject customChildObject6 = new CustomChildObject();
                     CustomChildObject customChildObject7 = new CustomChildObject();
-                    customChildObject.setChildText("Ledgehop double laser");
-                    customChildObject2.setChildText("Multishine");
-                    customChildObject3.setChildText("Pillaring");
-                    customChildObject4.setChildText("Short hop laser");
-                    customChildObject5.setChildText("Side-B shorten");
-                    customChildObject6.setChildText("Shine mine");
-                    customChildObject7.setChildText("Waveshine");
+                    CustomChildObject customChildObject8 = new CustomChildObject();
+                    customChildObject.setChildText("Chillin dash");
+                    customChildObject2.setChildText("Ledgehop double laser");
+                    customChildObject3.setChildText("Multishine");
+                    customChildObject4.setChildText("Pillaring");
+                    customChildObject5.setChildText("Short hop laser");
+                    customChildObject6.setChildText("Side-B shorten");
+                    customChildObject7.setChildText("Shine mine");
+                    customChildObject8.setChildText("Waveshine");
                     childObjectList.add(customChildObject);
                     childObjectList.add(customChildObject2);
                     childObjectList.add(customChildObject3);
@@ -135,6 +148,7 @@ public class UniqueFragment extends Fragment {
                     childObjectList.add(customChildObject5);
                     childObjectList.add(customChildObject6);
                     childObjectList.add(customChildObject7);
+                    childObjectList.add(customChildObject8);
                 }
                 break;
                 case "Ice Climbers": {
@@ -201,7 +215,7 @@ public class UniqueFragment extends Fragment {
                 }
                 break;
                 case "Marth":
-                case "Roy" : {
+                case "Roy": {
                     customChildObject.setChildText(psspike);
                     childObjectList.add(customChildObject);
                 }
@@ -248,6 +262,7 @@ public class UniqueFragment extends Fragment {
     public void onResume() {
         super.onResume();
         canStart = true;
-        mExpandableAdapter.setCanStart();
+        if(Preferences.groupByCharacterEnabled(getActivity()) && mExpandableAdapter != null)
+            mExpandableAdapter.setCanStart();
     }
 }

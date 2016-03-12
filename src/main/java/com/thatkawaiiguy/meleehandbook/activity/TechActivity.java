@@ -51,6 +51,9 @@ public class TechActivity extends VideoInfoActivity {
             case "Boomerang superjump":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.boomjump));
                 break;
+            case "Chillin dash":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.chillindash));
+                break;
             case "Desynching":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.desync));
                 break;
@@ -110,6 +113,9 @@ public class TechActivity extends VideoInfoActivity {
                 break;
             case "Up-B cancel":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.upbcan));
+                break;
+            case "Up-B walljump":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.upbwalljump));
                 break;
             case "Vududash":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.vudu));

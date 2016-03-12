@@ -88,7 +88,10 @@
     \n\t\t\t\tGreen boxes indicate reflect boxes
     \n\t\t\t\tPink boxes indicate grab boxes
     </string>
-    
+
+    <string name="pref_ads">pref_ads</string>
+    <string name="pref_ads_title">Hide ads</string>
+
     <string name="pref_theme">pref_theme</string>
     <string name="pref_theme_title">Theme</string>
 
@@ -106,6 +109,9 @@
     <string name="pref_tier">pref_tier</string>
     <string name="pref_tier_title">Sort characters by tier</string>
 
+    <string name="pref_uniquegroup">pref_uniquegroup</string>
+    <string name="pref_uniquegroup_title">Group unique techniques by character</string>
+
     <string name="pref_open">pref_open</string>
     <string name="pref_open_title">Open navigation menu on launch</string>
 
@@ -122,6 +128,18 @@
         it will end, although if an action is done to cancel the tumble Link will stop rising in the air.
         <br>
         <br>This glitch was removed from the 1.2 and PAL versions of the game.
+    ]]></string>>
+    <string name="chillindash_info_text"><![CDATA[<big><b>Chillin dash</b></big>
+        <br>Fox and Falco can perform a technique referred to as Chillin dashing, named after
+        Chillindude829, in Super Smash Bros. Melee. It is performed by running off the edge,
+        and at the moment the character is going to fall off, the character must use the
+        Reflector and perform a jump shine. Covering a decent distance, it is useful for
+        edgeguarding. It is generally followed up by a jump canceled back aerial.
+        <br>This technique is better to use than jumping off the stage to edege guard far away
+        because the chillin dash travels farther than a jump by Fox or Falco.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>
     ]]></string>
     <string name="desync_info_text"><![CDATA[<big><b>Desynching</b></big>
         <br>Desynching is an Ice Climbers technique that involves
@@ -507,8 +525,8 @@
         <br>This technique can be performed by simply doing the Side-B but rather than doing it straight you aim diagonally
         down or upwards.
     ]]></string>
-    <string name="shl_info_text"><![CDATA[Examples: http://wiki.teamliquid.net/smash/images/a/a4/Short_Hop_Double_Laser_Example.gif
-        <br>http://wiki.teamliquid.net/smash/images/1/18/Short_Hop_Laser_Example.gif
+    <string name="shl_info_text"><![CDATA[Examples: http://wiki.teamliquid.net/commons/images/a/a4/Short_Hop_Double_Laser_Example.gif
+        <br>http://wiki.teamliquid.net/commons/images/1/18/Short_Hop_Laser_Example.gif
         <br>
         <br><big><b>Short hop laser</b></big>
         <br>The short hop laser (abbreviated to SHL) is a technique usually performed by short hopping with Fox or Falco,
@@ -703,6 +721,20 @@
         <br>Examples of Up-B turnaround: https://youtu.be/y9nivZx7U8c
         <br>https://youtu.be/IUrKbyyJWas
     ]]></string>
+    <string name="upbwalljump_info_text"><![CDATA[<big><b>Up-B walljump</b></big>
+        <br>Mario can walljump out of his up-b attack, Super Jump Punch. Instead of going into
+        the helpless state, Mario will be able to perform actions out of the walljump, like Up-B
+        again or cape.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>To perform the Up-B walljump a Mario must Up-B while touching the wall at the start and
+        then tap the control stick in the opposite direction of the wall once Mario has
+        begin to turn around (or a bit after the peak of the Up-B) so you can wall jump.
+        <br>
+        <br><big><b>Applications</b></big>
+        <br>This allows Mario to recover much better, due to the fact it allows him to Up-B twice or
+        use his cape to stall before recovering. It can also be used as a good mix-up.
+    ]]></string>
     <string name="vududash_info_text"><![CDATA[<big><b>Vududash</b></big>
         <br>When a character wavedashes off a platform or the stage, they lose their momentum when
         transitioning from the wavedash into freefalling. However,
@@ -880,6 +912,9 @@
         An alternate name for Peach\'s down smash, which is known to deal multiple hits and an incredible amount of damage
         when the player taking hit crouch cancels.
     </string>
+    <string name="bombcomb_term_info">
+        A Falco combo that uses shine to Up-B at the top of the stage for an early kill.
+    </string>
     <string name="boostgrab_term_info">
         Canceling a dash attack with a dash grab. Has more range
         than a normal dash grab. http://bit.ly/1Yoaslw
@@ -946,6 +981,9 @@
     <string name="dave_term_info">
         A rule that no stage that has already been won on in a set may be picked by the
         winner for another game in the same set.
+    </string>
+    <string name="deedah_term_info">
+        What Mango Jr. (Mango\'s son) says when he Falcon punches. http://oddshot.tv/shot/mang0-2016030804425983
     </string>
     <string name="disjointedhb_term_info">
         A hitbox that cannot take damage, such as Marth\'s sword.
@@ -1107,6 +1145,9 @@
         Abbreviated as JC grab, a jump canceled grab can be done by jumping immediately
         followed by a grab. The character will slide a bit (depending on traction) and grab.
         http://bit.ly/1Yoaslw
+    </string>
+    <string name="johnnystock_term_info">
+        When a player gets a grab and 0-deaths them from the grab.
     </string>
     <string name="john_term_info">
         A john is an excuse. Remember people, if you lose you lose. No johns. http://poyoarya.github.io/john.html
@@ -1598,7 +1639,7 @@
         opponent to land standing up, where they are easily grabbed again. Even without Nana, Popo by himself can
         chain throw a handful of characters, such as Roy, Sheik, and Ganondorf with down throw until about 50&#37;.
         <br>
-        <br>Peach: can chain throw fast fallers, floaty characters, and heavyweight at high percentage with her down throw. She
+        <br><b>Peach:</b> can chain throw fast fallers, floaty characters, and heavyweight at high percentage with her down throw. She
         can also chain grab with her up throw against everyone at 0&#37; and fast fallers at 40&#37;.
         <br>
         <br><b>Captain Falcon:</b> can pseudo chain throw with down throw against Marth, Sheik, and Roy from 0&#37; to about 20&#37;. It can
@@ -2427,23 +2468,21 @@
         the freeze frames of being hit by an attack. Tapping the control stick or C-Stick in any direction (rapidly, like
         how you rapidly tap the C-Stick when performing an aerial or smash attack), during freeze frames will slightly
         move their character in that direction, allowing them to potentially escape multi-hit moves or certain combos.
-        SDI can also be used to move into a wall or ceiling in order to tech near-instantly (and is also possible with
-        floors if the character starts in the air) or to (very minimally) increase the distance from the bjlast line
+        <br>SDI can also be used to move into a wall or ceiling in order to tech near-instantly (and is also possible with
+        floors if the character starts in the air) or to (very minimally) increase the distance from the blast line
         that the attack is about to send them towards.
         <br>Despite its near-identical name, SDI is not the same thing as directional influence.
         The major difference is that, while DI changes
-        the trajectory a character is launched in, SDI changes a character\'s position before launch.
-        <br>The mechanics of SDI operate by shifting the character in a given direction if a new directional vector of
-        sufficient size is input on that frame. As a result, repeatedly tapping in one direction will move the character
-        much farther than simply holding the stick in that direction. In addition, because diagonals are considered to
-        be two vectors, changing from an orthogonal position to an adjacent diagonal one will generate a new SDI \"pulse\",
-        while changing from a diagonal position to an adjacent orthogonal one will not. This results in a technique
-        called quarter-circle DI, which involves quickly rotating the stick between two orthogonal positions for
+        the trajectory a character is launched in while SDI changes a character\'s position before launch.
+        <br>The mechanics of SDI operate by shifting the character in the given direction.
+        As a result, repeatedly tapping in one direction will move the character
+        much farther than simply holding the stick in that direction. This results in a technique
+        called quarter-circle DI, which involves quickly rotating the stick between two \"notches\" for
         increased distance. Quarter-circle DI was introduced to the United States by smasher Captain Jack and was once
         known as Japanese DI.
         <br>As the C-Stick can also be used for SDI, even \stronger\" forms of SDI exist. So-called double-stick DI
         utilizes the C-Stick\'s ability to override the control stick by holding one of the sticks in one direction
-        and utilizing quarter-stick DI with the other.
+        and utilizing quarter-stick DI with the other. This is often used when a player wants to SDI one way, and DI the other.
         <br>
         <br><big><b>How to properly perform</b></big>
         <br>What you do to SDI is simply jam the control stick the exact instant you are hit. This isn\'t done on reaction,

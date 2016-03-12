@@ -21,6 +21,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
+import android.app.PendingIntent;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -81,11 +82,11 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
-        //if(!Preferences.hideAds(this)) {
+        if(!Preferences.hideAds(this)) {
             mAdView.loadAd(new AdRequest.Builder().build());
             mAdView.setVisibility(View.VISIBLE);
-        //} else if(Preferences.hideAds(this))
-        //    mAdView.setVisibility(View.GONE);
+        } else if(Preferences.hideAds(this))
+            mAdView.setVisibility(View.GONE);
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
                 this, mDrawer, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close
         );
+
         //mDrawer.setDrawerListener(mDrawerToggle);
         mDrawer.setDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -198,13 +200,22 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
                 menuItem.setChecked(true);
                 break;
             case R.id.remove:
-                //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
-                //        ("http://bit.ly/1NXCD2o")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
+                        ("http://bit.ly/1NXCD2o")));
 
-                Intent serviceIntent =
+                /*Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(),
+                        sku, "inapp", "bGoa+V7g/yqDXvKRqq+JTFn4uQZbPiQJo4pf9RzJ");
+                PendingIntent pendingIntent = buyIntentBundle.getParcelable("BUY_INTENT");
+                startIntentSenderForResult(pendingIntent.getIntentSender(),
+                        1001, new Intent(), Integer.valueOf(0), Integer.valueOf(0),
+                        Integer.valueOf(0));
+                */
+
+                /*Intent serviceIntent =
                         new Intent("com.android.vending.billing.InAppBillingService.BIND");
                 serviceIntent.setPackage("com.android.vending");
                 bindService(serviceIntent, mServiceConn, Context.BIND_AUTO_CREATE);
+                */
                 break;
             case R.id.settings:
                 startActivity(new Intent(this, AppSettingsActivity.class));

@@ -45,7 +45,7 @@ public class AppSettingsActivity extends PreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (getIntent().hasExtra("bundle") && savedInstanceState == null)
+        if(getIntent().hasExtra("bundle") && savedInstanceState == null)
             savedInstanceState = getIntent().getExtras().getBundle("bundle");
         Preferences.applySettingsTheme(this);
         getDelegate().installViewFactory();
@@ -61,10 +61,14 @@ public class AppSettingsActivity extends PreferenceActivity {
             @Override
             public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
                 Preferences.sync(getPreferenceManager(), key);
-                if (key.equals(getString(R.string.pref_theme))) {
+                if(key.equals(getString(R.string.pref_theme))) {
                     recreate();
                     restart = true;
-                }else if(key.equals(getString(R.string.pref_tier)))
+                } else if(key.equals(getString(R.string.pref_ads)))
+                    restart = true;
+                else if(key.equals(getString(R.string.pref_tier)))
+                    restart = true;
+                else if(key.equals(getString(R.string.pref_uniquegroup)))
                     restart = true;
             }
         };
@@ -92,7 +96,7 @@ public class AppSettingsActivity extends PreferenceActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
+        if(item.getItemId() == android.R.id.home) {
             onBackPressed();
             return true;
         }
@@ -107,12 +111,13 @@ public class AppSettingsActivity extends PreferenceActivity {
     @Override
     public void onResume() {
         super.onResume();
-        getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(mListener);
+        getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener
+                (mListener);
     }
 
     @Override
     public void onBackPressed() {
-        if(restart){
+        if(restart) {
             super.onBackPressed();
             final Intent intent = IntentCompat.makeMainActivity(new ComponentName(
                     AppSettingsActivity.this, MainActivity.class));
@@ -130,7 +135,8 @@ public class AppSettingsActivity extends PreferenceActivity {
 
     @Override
     public void onPause() {
-        getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(mListener);
+        getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener
+                (mListener);
         super.onPause();
     }
 
@@ -147,7 +153,7 @@ public class AppSettingsActivity extends PreferenceActivity {
     }
 
     private AppCompatDelegate getDelegate() {
-        if (mDelegate == null)
+        if(mDelegate == null)
             mDelegate = AppCompatDelegate.create(this, null);
         return mDelegate;
     }

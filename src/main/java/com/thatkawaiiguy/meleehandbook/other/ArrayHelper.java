@@ -81,12 +81,13 @@ public class ArrayHelper {
     public static String[] getTermArray() {
         return new String[]{"20XX", "Air dodge",
                 "Anti-ground infinite combo physics", "BYOC", "Baby pop off",
-                "Banned stage", "Beef", "Blastzone", "Blender", "Boost grab",
+                "Banned stage", "Beef", "Blastzone", "Blender", "Bombsoldier combo",
+                "Boost grab",
                 "Brackets", "Buff", "Buster", "Butter", "Camera box", "Cancel",
                 "Cave of life", "Circus music",
                 "Clone", "Cory in the house", "Counter",
                 "Counterpick", "Crew battle", "Dash-grab", "Dashing",
-                "Dave's stupid rule",
+                "Dave's stupid rule", "Dee dah",
                 "Did he just walk up slowly and down smash?",
                 "Disjointed hitbox", "Disrespect", "Ditto", "Dong",
                 "Doormat", "Doubles", "Double dip", "Dumpster",
@@ -98,7 +99,7 @@ public class ArrayHelper {
                 "Helpless", "Hitbox", "Hitlag", "Hitstun", "IASA frames",
                 "Infinite", "Input lag", "Invisible ceiling glitch",
                 "Ironman", "It's not safe", "JV3/JV4 stock", "Janky",
-                "Johns", "Juggling", "Jump cancel", "Jump canceled grab",
+                "Johnny stock", "Johns", "Juggling", "Jump cancel", "Jump canceled grab",
                 "Kappa", "Ken combo", "Kreygasm", "Lag", "Landing lag",
                 "Lean drop", "Legalize PokeFloats", "lol m2k", "Love tap", "Mangle",
                 "Mashedpotato Samurai", "Matchups", "Metagame",
@@ -160,6 +161,8 @@ public class ArrayHelper {
                 return res.getString(R.string.blastzone_term_info);
             case "Blender":
                 return res.getString(R.string.blender_term_info);
+            case "Bombsoldier combo":
+                return res.getString(R.string.bombcomb_term_info);
             case "Boost grab":
                 return res.getString(R.string.boostgrab_term_info);
             case "Brackets":
@@ -196,6 +199,8 @@ public class ArrayHelper {
                 return res.getString(R.string.dashgrab_term_info);
             case "Dave's stupid rule":
                 return res.getString(R.string.dave_term_info);
+            case "Dee dah":
+                return res.getString(R.string.deedah_term_info);
             case "Disjointed hitbox":
                 return res.getString(R.string.disjointedhb_term_info);
             case "Disrespect":
@@ -270,6 +275,8 @@ public class ArrayHelper {
                 return res.getString(R.string.itsnotsafe_term_info);
             case "Janky":
                 return res.getString(R.string.janky_term_info);
+            case "Johnny stock":
+                return res.getString(R.string.johnnystock_term_info);
             case "Johns":
                 return res.getString(R.string.john_term_info);
             case "Juggling":
@@ -561,6 +568,8 @@ public class ArrayHelper {
             //UNIQUE
             case "Boomerang superjump":
                 return res.getString(R.string.boomjump_info_text);
+            case "Chillin dashing":
+                return res.getString(R.string.chillindash_info_text);
             case "Desynching":
                 return res.getString(R.string.desync_info_text);
             case "Double jump cancel":
@@ -609,6 +618,8 @@ public class ArrayHelper {
                 return res.getString(R.string.upbcancel_info_text);
             case "Up-B turnaround":
                 return res.getString(R.string.upbturn_info_text);
+            case "Up-B walljump":
+                return res.getString(R.string.upbwalljump_info_text);
             case "Wallbombing":
                 return res.getString(R.string.wallbomb_info_text);
             case "Waveshine":

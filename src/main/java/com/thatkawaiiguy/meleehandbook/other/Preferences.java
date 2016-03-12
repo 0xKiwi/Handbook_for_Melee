@@ -117,9 +117,22 @@ public class Preferences {
         return sortByTier(context);
     }
 
+    public static boolean groupByCharacterEnabled(Context context){
+        return groupByCharacter(context);
+    }
+
+    public static boolean hideAds(Context context){
+        return hideAdsEnabled(context);
+    }
+
     private static boolean exitDialogEnabled(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(context.getString(R.string.pref_exit), false);
+    }
+
+    private static boolean hideAdsEnabled(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(context.getString(R.string.pref_ads), false);
     }
 
     private static boolean openNavLaunch(Context context) {
@@ -130,5 +143,10 @@ public class Preferences {
     private static boolean sortByTier(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(context.getString(R.string.pref_tier), false);
+    }
+
+    private static boolean groupByCharacter(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(context.getString(R.string.pref_uniquegroup), false);
     }
 }
