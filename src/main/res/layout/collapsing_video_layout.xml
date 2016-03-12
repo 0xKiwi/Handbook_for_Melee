@@ -33,34 +33,50 @@
             android:id="@+id/collapsing_toolbar"
             style="@style/CollapsingBar">
 
-                <com.thatkawaiiguy.meleehandbook.other.MutedVideoView
-                    android:id="@+id/infoVid"
-                    style="@style/VideoStyle"/>
+            <com.thatkawaiiguy.meleehandbook.other.MutedVideoView
+                android:id="@+id/infoVid"
+                style="@style/VideoStyle"/>
 
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="?attr/actionBarSize"
-                    app:layout_collapseMode="pin"
-                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/video_scrollView"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <include
-            layout="@layout/infotext"
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/video_scrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent"
+            android:layout_above="@id/adView">
 
-    </android.support.v4.widget.NestedScrollView>
+            <include
+                layout="@layout/infotext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal|bottom"
+            android:visibility="visible"
+            app:adSize="SMART_BANNER"
+            app:adUnitId="@string/tech_banner_ad_unit_id"/>
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

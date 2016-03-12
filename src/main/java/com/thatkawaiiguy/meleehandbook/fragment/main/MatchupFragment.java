@@ -476,7 +476,7 @@ public class MatchupFragment extends Fragment {
                     case "Ganondorf":
                         return "60";
                     case "Link":
-                        return "20";
+                        return "80";
                     case "Luigi":
                         return "55";
                     case "Donkey Kong":
@@ -484,7 +484,7 @@ public class MatchupFragment extends Fragment {
                     case "Roy":
                         return "60";
                     case "Young Link":
-                        return "60";
+                        return "70";
                     case "Pikachu":
                         return "60";
                     case "Yoshi":

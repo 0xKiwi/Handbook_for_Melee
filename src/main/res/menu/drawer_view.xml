@@ -39,7 +39,7 @@
         <item
             android:id="@+id/remove"
             android:icon="@drawable/ic_gift_white_36dp"
-            android:title="@string/action_removeads" />
+            android:title="@string/support" />
         <item
             android:id="@+id/settings"
             android:icon="@drawable/settings"

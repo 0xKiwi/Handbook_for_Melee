@@ -1,17 +1,13 @@
 package com.thatkawaiiguy.meleehandbook.other;
 
 import android.annotation.TargetApi;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.media.AudioManager;
 import android.media.MediaFormat;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Looper;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.Pair;
@@ -253,7 +249,6 @@ public class MutedVideoView extends SurfaceView
             mMediaPlayer = new MediaPlayer();
             // TODO: create SubtitleController in MediaPlayer, but we need
             // a context for the subtitle renderers
-            final Context context = getContext();
 
             if (mAudioSession != 0) {
                 mMediaPlayer.setAudioSessionId(mAudioSession);
@@ -282,13 +277,11 @@ public class MutedVideoView extends SurfaceView
             mCurrentState = STATE_ERROR;
             mTargetState = STATE_ERROR;
             mErrorListener.onError(mMediaPlayer, MediaPlayer.MEDIA_ERROR_UNKNOWN, 0);
-            return;
         } catch (IllegalArgumentException ex) {
             Log.w(TAG, "Unable to open content: " + mUri, ex);
             mCurrentState = STATE_ERROR;
             mTargetState = STATE_ERROR;
             mErrorListener.onError(mMediaPlayer, MediaPlayer.MEDIA_ERROR_UNKNOWN, 0);
-            return;
         } finally {
             mPendingSubtitleTracks.clear();
         }
