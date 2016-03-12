@@ -568,7 +568,7 @@ public class ArrayHelper {
             //UNIQUE
             case "Boomerang superjump":
                 return res.getString(R.string.boomjump_info_text);
-            case "Chillin dashing":
+            case "Chillin dash":
                 return res.getString(R.string.chillindash_info_text);
             case "Desynching":
                 return res.getString(R.string.desync_info_text);

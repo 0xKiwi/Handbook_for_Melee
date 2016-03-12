@@ -135,11 +135,13 @@
         and at the moment the character is going to fall off, the character must use the
         Reflector and perform a jump shine. Covering a decent distance, it is useful for
         edgeguarding. It is generally followed up by a jump canceled back aerial.
-        <br>This technique is better to use than jumping off the stage to edege guard far away
+        <br>This technique is better to use than jumping off the stage to edge guard far away
         because the chillin dash travels farther than a jump by Fox or Falco.
         <br>
         <br><big><b>How to perform</b></big>
-        <br>
+        <br><b>Step 1:</b>Sprint towards ledge (Slam grey stick horizontally)
+        <br><b>Step 2:</b>Input shine on the frame that you are about to leave the ground. (Release grey stick and shine, or quartercircle down into b input, both seem to work as long as you\'re quick)
+        <br><b>Step 3:</b>Continue holding shine if you wish to jump out of it, otherwise, let it fade.
     ]]></string>
     <string name="desync_info_text"><![CDATA[<big><b>Desynching</b></big>
         <br>Desynching is an Ice Climbers technique that involves
@@ -695,6 +697,14 @@
         for tournament play: the move can be used out of shield to give you breathing room, or as an edge
         guard to set up an f-smash.
         <br>
+        <br><b>Up-B cancel ledgestall</b>
+        <br>Doc can also Up-B cancel to the ledge, this allows him to ledgestall and retain invincibility.
+        <br>This ledgestall is also very safe, as the Up-B cancel has a hitbox, meaning opponents trying to camp at the
+        edge of the stage will need to be defensive while you recover, rather than offensive.
+        <br>http://gfycat.com/AdorableCornyIndusriverdolphin
+        <br>
+        <br>More details can be found here: http://bit.ly/1YLaobU
+        <br>
         <br><big><b>How to perform</b></big>
         <br>To perform a Up-B cancel, turn the stick to the upwards left/right (the direction
         you want to Up-B cancel) and press B, and within 4 frames move the stick to the upwards
@@ -878,7 +888,7 @@
         The year is 20XX. Everyone plays Fox at TAS levels of perfection. Because of this,
         the winner of a match depends solely on port priority. The RPS metagame has evolved to
         ridiculous levels due to it being the only remaining factor to decide matches. Variations
-        of this are 20GX (Falcon), 2222 (Sheik), 20EggsEggs (Yoshi), 20AxeAxe (Pikachu).
+        of this are 20GX (Falcon), 2222 (Sheik), 20EggsEggs (Yoshi), 20AxeAxe (Pikachu), 20Rx (Dr. Mario).
     </string>
     <string name="airdodge_term_info">
         Dodging in the air, can have several directions.
