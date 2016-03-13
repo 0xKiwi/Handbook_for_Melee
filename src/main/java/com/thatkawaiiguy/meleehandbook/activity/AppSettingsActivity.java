@@ -78,6 +78,8 @@ public class AppSettingsActivity extends PreferenceActivity {
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         getDelegate().onPostCreate(savedInstanceState);
+        if(savedInstanceState != null)
+            restart = savedInstanceState.getBoolean("restart");
     }
 
     private void setSupportActionBar(@Nullable Toolbar toolbar) {
@@ -151,6 +153,15 @@ public class AppSettingsActivity extends PreferenceActivity {
         super.onDestroy();
         getDelegate().onDestroy();
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        if(outState != null)
+            outState.putBoolean("restart", restart);
+    }
+
 
     private AppCompatDelegate getDelegate() {
         if(mDelegate == null)

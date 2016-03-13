@@ -638,7 +638,9 @@
         In actuality, it still is the exact same position as the regular 41st frame and since they skipped the
         first 2 frames, it can still be argued as being the 41st frame.
     ]]></string>
-    <string name="sdwd_info_text"><![CDATA[<b>Applies to:</b> Samus
+    <string name="sdwd_info_text"><![CDATA[http://i.imgur.com/hNroDRW.webm
+        <br>
+        <b>Applies to:</b> Samus
         <br>
         <br><big><b>Super duper wavedash</b></big>
         <br>A variant of the Super Wave Dash is the \"Super Duper Wavedash." Execution is similar to
@@ -1704,7 +1706,7 @@
         the analog stick left and right while on the ground, it cancels out the characters initial dashing
         animation with another animation in the opposite direction, causing the character to quickly and
         repeatedly dash to the right and left in a short distance.
-        <br>In the GIF above, KJH performs a well done dash-dance to trick Armada into keeping his shield up,
+        <br>In the video above, KJH performs a well done dash-dance to trick Armada into keeping his shield up,
         believing that KJH may attack him from the dash-dance.
         <br>
         <br>The maximum time a character can dash in one direction and still change direction by dash dancing is the
@@ -2167,10 +2169,7 @@
         <br>Set ups for Fox and Falco: http://bit.ly/1SjtJAG
         <br>
     ]]></string>
-    <string name="platformcancel_info_text"><![CDATA[<b>Note:</b> The nair performed by Mario is the platform cancel. The initial
-        hit is a aerial interrupt attack uair.
-        <br>
-        <br><big><b>Platform canceling</b></big>
+    <string name="platformcancel_info_text"><![CDATA[<big><b>Platform canceling</b></big>
         <br>While dropping down from a platform - one frame after the initial crouch animation - characters
         are considered to be in the air. Because of this, they are obviously allowed to use aerial attacks.
         Platform canceling takes its name from the fact that using an aerial attack during that one frame causes

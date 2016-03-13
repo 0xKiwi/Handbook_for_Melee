@@ -220,7 +220,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                         return "50";
                     case "Captain Falcon":
-                        return "55";
+                        return "60";
                     case "Ice Climbers":
                         return "50";
                     case "Samus Aran":
