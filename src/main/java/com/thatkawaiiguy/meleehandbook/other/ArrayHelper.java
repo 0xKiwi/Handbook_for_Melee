@@ -112,7 +112,8 @@ public class ArrayHelper {
                 "Sacred combo", "Sacrilegious combo",
                 "Sakurai combo", "Salty runback",
                 "Salty", "Scar jump", "Screen KO", "Self-destruct",
-                "Semiclone", "Set", "Sex kick", "Shield break",
+                "Semiclone", "Set", "Sex kick", "Shakespeare theory",
+                "Shield break",
                 "Shield grabbing", "Shieldhitstun", "Shielding",
                 "Shieldstun", "Shine/Reflector", "Shine drop", "Sidestepping",
                 "Silent john", "Singles", "Smash attacks", "Smash inflation",
@@ -385,6 +386,8 @@ public class ArrayHelper {
                 return res.getString(R.string.set_term_info);
             case "Sex kick":
                 return res.getString(R.string.skick_term_info);
+            case "Shakespeare theory":
+                return res.getString(R.string.shaketheory_term_info);
             case "Shield break":
                 return res.getString(R.string.shieldbreak_info_text);
             case "Shieldhitstun":
