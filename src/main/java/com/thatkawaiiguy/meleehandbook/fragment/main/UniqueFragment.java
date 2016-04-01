@@ -210,8 +210,11 @@ public class UniqueFragment extends Fragment {
                 }
                 break;
                 case "Ness": {
+                    CustomChildObject customChildObject2 = new CustomChildObject();
                     customChildObject.setChildText(djc);
+                    customChildObject2.setChildText("Yo-yo glitch");
                     childObjectList.add(customChildObject);
+                    childObjectList.add(customChildObject2);
                 }
                 break;
                 case "Marth":

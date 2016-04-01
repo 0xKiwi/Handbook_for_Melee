@@ -101,11 +101,12 @@ public class ArrayHelper {
                 "Ironman", "It's not safe", "JV3/JV4 stock", "Janky",
                 "Johnny stock", "Johns", "Juggling", "Jump cancel", "Jump canceled grab",
                 "Kappa", "Ken combo", "Kreygasm", "Lag", "Landing lag",
-                "Lean drop", "Legalize PokeFloats", "lol m2k", "Love tap", "Mangle",
+                "Lean drop", "Legalize PokeFloats", "lol m2k", "Love tap", "MacD", "Mangle",
                 "Mashedpotato Samurai", "Matchups", "Metagame",
                 "Meteor cancel", "Meteor", "Mike Haze", "Mindgames",
                 "Misfire", "My b", "Nerf", "Neutral game", "OOS",
                 "Overpowered", "PC drop", "People's elbow", "Phantom hit", "Pivot",
+                "Pop a balloon",
                 "Pop off", "Port priority", "Priority", "Pummel", "Punish",
                 "RNG", "Ramen noodle edge steal", "Randall the Cloud",
                 "Recovery", "Respect your elders", "Rolling",
@@ -306,6 +307,8 @@ public class ArrayHelper {
                 return res.getString(R.string.lolm2k_term_info);
             case "Love tap":
                 return res.getString(R.string.lovetap_term_info);
+            case "MacD":
+                return res.getString(R.string.macd_term_info);
             case "Mashedpotato Samurai":
                 return res.getString(R.string.mashedpotato_term_info);
             case "Matchups":
@@ -342,6 +345,8 @@ public class ArrayHelper {
                 return res.getString(R.string.phit_term_info);
             case "Pivot":
                 return res.getString(R.string.pivot_term_info);
+            case "Pop a balloon":
+                return res.getString(R.string.popballoon_term_info);
             case "Pop off":
                 return res.getString(R.string.popoff_term_info);
             case "Port priority":

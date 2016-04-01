@@ -1196,6 +1196,10 @@
     <string name="lovetap_term_info">
         When a Captain Falcon hits an opponent with the later weak hitbox of his FAir (Knee).
     </string>
+    <string name="macd_term_info">
+        When a player unplugs something, named after MacD after being accused of sabotaging
+        MVG Sandstorm (A tournament) http://oddshot.tv/shot/armadaugs-201603231601580
+    </string>
     <string name="mashedpotato_term_info">
         A comical misspelling of Masahiro Sakurai, the director of all Smash Bros. games. Other
         misspellings are MassiveHero SoccerGuy, and Mashed potato Sack of Rye
@@ -1262,6 +1266,9 @@
     </string>
     <string name="pivot_term_info">
         When you quickly turn around to perform an action, can be done with any move.
+    </string>
+    <string name="popballoon_term_info">
+        When a Sheik unloads a full set of needles onto a Jigglypuff.
     </string>
     <string name="popoff_term_info">
         When a smasher shows emotion after an action is performed, usually \"popping\" off their chair.
