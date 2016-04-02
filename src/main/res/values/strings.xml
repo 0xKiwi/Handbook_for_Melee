@@ -169,8 +169,6 @@
         <br>Due to the extreme difficulty of
         timing and maintaining a continuous string of attacks, the in-combat potential of this
         approach is clearly substantial, but largely untapped.
-        <br>
-        <br>The technique shown in the image is known as the \"Nanapult\"
     ]]></string>
     <string name="djc_info_text"><![CDATA[Examples of DJC: https://youtu.be/O2Oa60lfkyo
         <br>https://youtu.be/hBTgDxEqHw0
@@ -4743,7 +4741,7 @@
     <string name="spacing_info_text"><![CDATA[<b>Great spacing by Fox main Lucky:</b> http://gyfcat.com/RepulsiveWarmheartedEider
         <br>http://gfycat.com/ThatGrizzledBlackrhino
         <br>
-        <big><b>Spacing</b></big>
+        <br><big><b>Spacing</b></big>
         <br>Spacing is easily one of the most important aspects of
         Smash and fighting games in general. Everyone incorporates spacing into their game,
         whether it be intentional or instinctual.

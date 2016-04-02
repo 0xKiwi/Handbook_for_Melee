@@ -21,15 +21,10 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
-import android.app.PendingIntent;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.ServiceConnection;
 import android.net.Uri;
 import android.os.Build;
-import android.os.IBinder;
 import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
@@ -43,7 +38,8 @@ import android.view.View;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.Toast;
 
-import com.android.vending.billing.IInAppBillingService;
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
@@ -60,7 +56,7 @@ import com.thatkawaiiguy.meleehandbook.other.AppRater;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.thatkawaiiguy.meleehandbook.activity.SearchResultsActivity;
 
-public class MainActivity extends AppCompatActivity implements ServiceConnection {
+public class MainActivity extends AppCompatActivity implements BillingProcessor.IBillingHandler {
 
     private int listdefault = 0;
 
@@ -70,11 +66,18 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 
     private CharSequence mTitle;
 
+    BillingProcessor bp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Preferences.applySettingsTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        bp = new BillingProcessor(this, getResources().getString(R.string.licensekey), this);
+        bp.loadOwnedPurchasesFromGoogle();
+
+        //if(bp.isPurchased(getResources().getString(R.string.adproductid)))
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -82,10 +85,10 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
-        if(!Preferences.hideAds(this)) {
+        if(!bp.isPurchased(getResources().getString(R.string.adproductid))) {
             mAdView.loadAd(new AdRequest.Builder().build());
             mAdView.setVisibility(View.VISIBLE);
-        } else if(Preferences.hideAds(this))
+        } else
             mAdView.setVisibility(View.GONE);
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -200,9 +203,16 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
                 menuItem.setChecked(true);
                 break;
             case R.id.remove:
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
-                        ("http://bit.ly/1NXCD2o")));
+                if(bp.isPurchased(getResources().getString(R.string.adproductid)))
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://bit" +
+                            ".ly/1NXCD2o")));
 
+                else if(BillingProcessor.isIabServiceAvailable(this)) {
+                    bp.purchase(this, getResources().getString(R.string.adproductid));
+                } else {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://bit" +
+                            ".ly/1NXCD2o")));
+                }
                 /*Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(),
                         sku, "inapp", "bGoa+V7g/yqDXvKRqq+JTFn4uQZbPiQJo4pf9RzJ");
                 PendingIntent pendingIntent = buyIntentBundle.getParcelable("BUY_INTENT");
@@ -235,21 +245,28 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
             super.onBackPressed();
     }
 
-    IInAppBillingService mService;
-
     @Override
-    public void onServiceConnected(ComponentName name, IBinder service) {
-        mService = IInAppBillingService.Stub.asInterface(service);
-
+    public void onBillingError(int errorCode, Throwable error) {
     }
 
     @Override
-    public void onServiceDisconnected(ComponentName name) {
-        mService = null;
+    public void onProductPurchased(String productId, TransactionDetails details) {
     }
 
-    ServiceConnection mServiceConn = this;
+    @Override
+    public void onPurchaseHistoryRestored() {
+        recreate();
+    }
 
+    @Override
+    public void onBillingInitialized() {
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(!bp.handleActivityResult(requestCode, resultCode, data))
+            super.onActivityResult(requestCode, resultCode, data);
+    }
 
     private void changeFragment(CharSequence title) {
         switch((String) title) {
@@ -293,7 +310,7 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
 
     private void sendToast() {
         Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You " +
-                "don't want to have to go" +
+                        "don't want to have to go" +
                         " to the doctor.",
                 Toast.LENGTH_SHORT).show();
     }
@@ -341,9 +358,9 @@ public class MainActivity extends AppCompatActivity implements ServiceConnection
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if(mService != null) {
-            unbindService(mServiceConn);
-        }
+
+        if(bp != null)
+            bp.release();
     }
 
     @Override

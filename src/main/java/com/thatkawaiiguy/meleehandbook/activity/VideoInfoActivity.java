@@ -29,8 +29,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
@@ -38,10 +39,12 @@ import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.MutedVideoView;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
-public class VideoInfoActivity extends AppCompatActivity {
+public class VideoInfoActivity extends AppCompatActivity implements BillingProcessor.IBillingHandler{
     String optionPicked = "";
 
     MutedVideoView infoVid;
+
+    BillingProcessor bp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,11 +55,14 @@ public class VideoInfoActivity extends AppCompatActivity {
         setContentView(R.layout.collapsing_video_layout);
         Slidr.attach(this);
 
+        bp = new BillingProcessor(this, getResources().getString(R.string.licensekey), this);
+        bp.loadOwnedPurchasesFromGoogle();
+
         AdView mAdView = (AdView) findViewById(R.id.adView);
-        if(!Preferences.hideAds(this)) {
+        if(!bp.isPurchased(getResources().getString(R.string.adproductid))) {
             mAdView.loadAd(new AdRequest.Builder().build());
             mAdView.setVisibility(View.VISIBLE);
-        } else if(Preferences.hideAds(this))
+        } else
             mAdView.setVisibility(View.GONE);
 
         Bundle mainData = getIntent().getExtras();
@@ -104,6 +110,26 @@ public class VideoInfoActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onBillingError(int errorCode, Throwable error) {
+
+    }
+
+    @Override
+    public void onProductPurchased(String productId, TransactionDetails details) {
+
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+
+    }
+
+    @Override
+    public void onBillingInitialized() {
+
     }
 
     public int adjustAlpha(int color, float factor) {

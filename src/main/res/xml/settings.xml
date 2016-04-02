@@ -23,10 +23,10 @@
         android:key="@string/pref_open"
         android:title="@string/pref_open_title"/>
 
-    <CheckBoxPreference
+    <!--<CheckBoxPreference
         android:defaultValue="false"
         android:key="@string/pref_ads"
-        android:title="@string/pref_ads_title"/>
+        android:title="@string/pref_ads_title"/>-->
 
     <CheckBoxPreference
         android:defaultValue="false"

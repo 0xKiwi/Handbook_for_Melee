@@ -121,19 +121,19 @@ public class Preferences {
         return groupByCharacter(context);
     }
 
-    public static boolean hideAds(Context context){
-        return hideAdsEnabled(context);
-    }
+    //public static boolean hideAds(Context context){
+    //    return hideAdsEnabled(context);
+    //}
 
     private static boolean exitDialogEnabled(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(context.getString(R.string.pref_exit), false);
     }
 
-    private static boolean hideAdsEnabled(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(context.getString(R.string.pref_ads), false);
-    }
+    //private static boolean hideAdsEnabled(Context context) {
+    //    return PreferenceManager.getDefaultSharedPreferences(context)
+    //            .getBoolean(context.getString(R.string.pref_ads), false);
+    //}
 
     private static boolean openNavLaunch(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
