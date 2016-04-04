@@ -22,6 +22,7 @@ import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
@@ -40,6 +41,7 @@ import com.thatkawaiiguy.meleehandbook.other.MutedVideoView;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 public class VideoInfoActivity extends AppCompatActivity implements BillingProcessor.IBillingHandler{
+
     String optionPicked = "";
 
     MutedVideoView infoVid;
@@ -72,13 +74,16 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setStatusBarColor(0x00000000);
-            findViewById(R.id.video_scrollView).setOnScrollChangeListener(new View.OnScrollChangeListener() {
+            NestedScrollView scroll = (NestedScrollView)findViewById(R.id.video_scrollView);
+            scroll.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
                 @Override
-                public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int
+                        oldScrollX, int oldScrollY) {
                     if(scrollX < 5)
                         getWindow().setStatusBarColor(0x00000000);
                     else
                         getWindow().setStatusBarColor(adjustAlpha(ContextCompat.getColor(getParent(), R.color.theme_accent), (float) (scrollX + 20) / 10));
+
                 }
             });
         }

@@ -99,6 +99,10 @@ public class Preferences {
         return exitDialogEnabled(context);
     }
 
+    public static String getMainChar(Context context){
+        return getMain(context);
+    }
+
     private static String getDefaultListItem(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getString(context.getString(R.string.pref_default), context.getString(R.string
@@ -130,10 +134,25 @@ public class Preferences {
                 .getBoolean(context.getString(R.string.pref_exit), false);
     }
 
+    private static String getMain(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(context.getString(R.string.pref_main), "");
+    }
+
     //private static boolean hideAdsEnabled(Context context) {
     //    return PreferenceManager.getDefaultSharedPreferences(context)
     //            .getBoolean(context.getString(R.string.pref_ads), false);
     //}
+
+    public static void setHideAds(Context context, boolean hide) {
+        PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean
+                (context.getString(R.string.pref_ads), hide).apply();
+    }
+
+    public static boolean hideAds(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean
+                (context.getString(R.string.pref_ads), false);
+    }
 
     private static boolean openNavLaunch(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)

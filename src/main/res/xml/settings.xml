@@ -18,6 +18,13 @@
         android:key="@string/pref_default"
         android:title="@string/pref_default_title"/>
 
+    <ListPreference
+        android:defaultValue=""
+        android:entries="@array/character_array"
+        android:entryValues="@array/character_array"
+        android:key="@string/pref_main"
+        android:title="@string/pref_main_title"/>
+
     <CheckBoxPreference
         android:defaultValue="true"
         android:key="@string/pref_open"

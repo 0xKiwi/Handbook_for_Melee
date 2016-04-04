@@ -103,6 +103,9 @@
     <string name="pref_default">pref_default</string>
     <string name="pref_default_title">Start up page</string>
 
+    <string name="pref_main">pref_main</string>
+    <string name="pref_main_title">Main</string>
+
     <string name="pref_exit">pref_exit</string>
     <string name="pref_exit_title">Show exit dialog</string>
 
@@ -3934,7 +3937,7 @@
         <br><b>Aerial Speed:</b> 23rd fastest
         <br><b>First Jump Height:</b> 7-8th highest
         <br><b>Second Jump Height:</b> 11th highest
-        <br><b>Total jump height:</b> 22.5nd highest
+        <br><b>Total jump height:</b> 1st highest
         <br><b>Average Fall Speed:</b> 19th fastest
         <br><b>Fast falling speed:</b> 21-24th fastest
         <br><b>Falling speed:</b> 19-21st fastest

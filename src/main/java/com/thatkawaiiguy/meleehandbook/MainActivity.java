@@ -85,19 +85,24 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
-        if(!bp.isPurchased(getResources().getString(R.string.adproductid))) {
+        if(!Preferences.hideAds(this)) {
             mAdView.loadAd(new AdRequest.Builder().build());
             mAdView.setVisibility(View.VISIBLE);
         } else
             mAdView.setVisibility(View.GONE);
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
+        if(Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this)){
+            nvDrawer.getMenu().findItem(R.id.remove).setTitle("Support the Dev");
+        }
 
         NavigationMenuView navigationMenuView = (NavigationMenuView) nvDrawer.getChildAt(0);
-        if(navigationMenuView != null)
+        if(navigationMenuView != null) {
             navigationMenuView.setVerticalScrollBarEnabled(false);
+        }
 
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(
                 this, mDrawer, toolbar,
@@ -251,10 +256,16 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public void onProductPurchased(String productId, TransactionDetails details) {
+        Preferences.setHideAds(this, true);
+        recreate();
     }
 
     @Override
     public void onPurchaseHistoryRestored() {
+        if(bp.isPurchased(getString(R.string.adproductid)))
+            Preferences.setHideAds(this, true);
+        else if(!bp.isPurchased(getString(R.string.adproductid)))
+            Preferences.setHideAds(this, false);
         recreate();
     }
 

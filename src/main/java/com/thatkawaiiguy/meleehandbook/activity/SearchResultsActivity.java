@@ -263,7 +263,7 @@ public class SearchResultsActivity extends AppCompatActivity {
             String[] fun = ArrayHelper.getFunArray();
             String[] funInfo = ArrayHelper.getLCFunInfoArray(context);
 
-            String[] character = ArrayHelper.getCharacterArray(context);
+            String[] character = ArrayHelper.getCharacterArray(context, true);
             String[] characterInfo = ArrayHelper.getLCCharacterInfoArray(context);
 
             String[] map = ArrayHelper.getMapArray();
@@ -436,7 +436,7 @@ public class SearchResultsActivity extends AppCompatActivity {
     }
 
     private Intent selectCharacterActivity(String query, Context context) {
-        String[] characters = ArrayHelper.getCharacterArray(context);
+        String[] characters = ArrayHelper.getCharacterArray(context, true);
 
         boolean hasFrame;
 

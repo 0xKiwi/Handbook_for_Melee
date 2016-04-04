@@ -22,34 +22,69 @@ import android.content.res.Resources;
 
 import com.thatkawaiiguy.meleehandbook.R;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ArrayHelper {
 
-    public static String[] getCharacterArray(Context context) {
-        return Preferences.sortByTierEnabled(context) ?
-                new String[]{"Fox", "Falco", "Marth", "Sheik", "Jigglypuff", "Princess Peach",
-                        "Ice Climbers", "Captain Falcon", "Pikachu", "Samus Aran",
-                        "Dr. Mario", "Yoshi", "Luigi", "Ganondorf",
-                        "Mario", "Young Link", "Donkey Kong", "Link", "Mr. Game & Watch", "Roy",
-                        "Mewtwo", "Princess Zelda", "Ness", "Pichu", "Bowser", "Kirby"} :
-                new String[]{"Bowser", "Captain Falcon", "Donkey Kong", "Dr. Mario",
-                        "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Kirby", "Link",
-                        "Luigi", "Mario", "Marth", "Mewtwo", "Mr. Game & Watch", "Ness", "Pichu",
-                        "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran", "Sheik",
-                        "Yoshi", "Young Link"};
+    public static String[] getCharacterArray(Context context, boolean mainFirst) {
+        ArrayList<String> chars;
+        boolean sortByTier = Preferences.sortByTierEnabled(context);
+        if(sortByTier) {
+            chars = new ArrayList<>(Arrays.asList(new String[]{"Fox", "Falco", "Marth", "Sheik",
+                    "Jigglypuff", "Princess Peach",
+                    "Ice Climbers", "Captain Falcon", "Pikachu", "Samus Aran",
+                    "Dr. Mario", "Yoshi", "Luigi", "Ganondorf",
+                    "Mario", "Young Link", "Donkey Kong", "Link", "Mr. Game & Watch", "Roy",
+                    "Mewtwo", "Princess Zelda", "Ness", "Pichu", "Bowser", "Kirby"}));
+        } else {
+            chars = new ArrayList<>(Arrays.asList(new String[]{"Bowser", "Captain Falcon",
+                    "Donkey Kong", "Dr. Mario",
+                    "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Kirby", "Link",
+                    "Luigi", "Mario", "Marth", "Mewtwo", "Mr. Game & Watch", "Ness", "Pichu",
+                    "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran", "Sheik",
+                    "Yoshi", "Young Link"}));
+        }
+
+        if(mainFirst) {
+            String main = Preferences.getMainChar(context);
+            if(!main.equals("") && !main.equals("None")) {
+                chars.remove(main);
+                chars.add(0, main);
+            }
+        }
+
+        return chars.toArray(new String[chars.size()]);
     }
 
+
     public static String[] getUniqueTechCharArray(Context context) {
-        return Preferences.sortByTierEnabled(context) ?
-                new String[]{"Fox", "Falco", "Marth", "Jigglypuff", "Princess Peach",
-                        "Ice Climbers", "Captain Falcon", "Pikachu", "Samus Aran",
-                        "Dr. Mario", "Yoshi", "Luigi", "Ganondorf",
-                        "Mario", "Young Link", "Link","Roy",
-                        "Mewtwo", "Princess Zelda", "Ness", "Pichu",} :
-                new String[]{"Captain Falcon", "Dr. Mario",
-                        "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Link",
-                        "Luigi", "Mario", "Marth", "Mewtwo", "Ness", "Pichu",
-                        "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran",
-                        "Yoshi", "Young Link"};
+        ArrayList<String> chars;
+        boolean sortByTier = Preferences.sortByTierEnabled(context);
+        if(sortByTier) {
+            chars = new ArrayList<>(Arrays.asList(new String[]{"Fox", "Falco", "Marth",
+                    "Jigglypuff", "Princess Peach",
+                    "Ice Climbers", "Captain Falcon", "Pikachu", "Samus Aran",
+                    "Dr. Mario", "Yoshi", "Luigi", "Ganondorf",
+                    "Mario", "Young Link", "Link", "Roy",
+                    "Mewtwo", "Princess Zelda", "Ness", "Pichu",}));
+        } else {
+            chars = new ArrayList<>(Arrays.asList(new String[]{"Captain Falcon", "Dr. Mario",
+                    "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Link",
+                    "Luigi", "Mario", "Marth", "Mewtwo", "Ness", "Pichu",
+                    "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran",
+                    "Yoshi", "Young Link"}));
+        }
+
+        String main = Preferences.getMainChar(context);
+        if(!main.equals("") || !main.equals("None")) {
+            if(chars.contains(main)) {
+                chars.remove(main);
+                chars.add(0, main);
+            }
+        }
+
+        return chars.toArray(new String[chars.size()]);
     }
 
     public static String[] getMapArray() {
@@ -61,7 +96,7 @@ public class ArrayHelper {
         return new String[]{"Baiting", "Common errors", "Control", "Edge guarding",
                 "Improving", "Mindgames", "Mindset", "Mix-ups", "Must reads",
                 "Neutral game", "Pressuring", "Punishing", "Reading", "Recovery",
-                "Spacing", "Tech skill", "Tournament ruleset","Useful links",
+                "Spacing", "Tech skill", "Tournament ruleset", "Useful links",
                 "Various tips"};
     }
 
@@ -91,7 +126,7 @@ public class ArrayHelper {
                 "Did he just walk up slowly and down smash?",
                 "Disjointed hitbox", "Disrespect", "Ditto", "Dong",
                 "Doormat", "Doubles", "Double dip", "Dumpster",
-                "Easy money", "ECB","Edge guarding",
+                "Easy money", "ECB", "Edge guarding",
                 "Edge hogging", "Electric slide", "Falcoville",
                 "Flub or scrub", "Forbidden ledge guard", "Frame",
                 "Freeze frames", "Friendlies", "Fun-canceling", "Gimp",
@@ -752,7 +787,7 @@ public class ArrayHelper {
     }
 
     public static String[] getLCCharacterInfoArray(Context context) {
-        String[] chars = getCharacterArray(context);
+        String[] chars = getCharacterArray(context, true);
         String[] charInfo = new String[chars.length];
 
         for(int i = 0; i < charInfo.length; i++)

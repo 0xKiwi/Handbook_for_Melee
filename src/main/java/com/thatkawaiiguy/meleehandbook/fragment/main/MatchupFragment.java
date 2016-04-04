@@ -35,6 +35,7 @@ import android.widget.TextView;
 
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 import java.io.IOException;
 
@@ -2294,7 +2295,7 @@ public class MatchupFragment extends Fragment {
 */
     private void setMatchupsView() {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R
-                .layout.simple_spinner_item, ArrayHelper.getCharacterArray(getActivity()));
+                .layout.simple_spinner_item, ArrayHelper.getCharacterArray(getActivity(), false));
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerLeft.setAdapter(adapter);
         spinnerRight.setAdapter(adapter);
@@ -2349,6 +2350,15 @@ public class MatchupFragment extends Fragment {
                 spinnerRight.performClick();
             }
         });
+
+        String main = Preferences.getMainChar(getActivity());
+        if(!main.equals("None") && !main.equals("")){
+            setMatchupLeft(main);
+            spinnerLeft.setSelection(getIndex(spinnerLeft, main));
+            setMatchupImage(Preferences.getMainChar(getActivity()), muImgLeft);
+            createMatchup();
+        }
+
     }
 
     private void createMatchup() {
@@ -2366,6 +2376,18 @@ public class MatchupFragment extends Fragment {
             //muInfoRight.setText(getInfo(characterRight, characterLeft));
             infoRight.setText(getRightPercent(characterLeft, characterRight) + "%");
         }
+    }
+
+    private int getIndex(Spinner spinner, String myString){
+
+        int index = 0;
+
+        for (int i=0;i<spinner.getCount();i++){
+            if (spinner.getItemAtPosition(i).equals(myString)){
+                index = i;
+            }
+        }
+        return index;
     }
 
     private void setMatchupImage(String picked, ImageButton imgView) {
