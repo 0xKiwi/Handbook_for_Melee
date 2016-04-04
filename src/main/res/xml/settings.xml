@@ -19,6 +19,13 @@
         android:title="@string/pref_default_title"/>
 
     <ListPreference
+        android:defaultValue="14"
+        android:entries="@array/pref_size_options"
+        android:entryValues="@array/pref_size_values"
+        android:key="@string/pref_textsize"
+        android:title="@string/pref_textsize_title"/>
+
+    <ListPreference
         android:defaultValue=""
         android:entries="@array/character_array"
         android:entryValues="@array/character_array"

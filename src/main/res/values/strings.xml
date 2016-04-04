@@ -109,6 +109,9 @@
     <string name="pref_exit">pref_exit</string>
     <string name="pref_exit_title">Show exit dialog</string>
 
+    <string name="pref_textsize">text_size</string>
+    <string name="pref_textsize_title">Text size</string>
+
     <string name="pref_tier">pref_tier</string>
     <string name="pref_tier_title">Sort characters by tier</string>
 
@@ -143,7 +146,7 @@
         <br>
         <br><big><b>How to perform</b></big>
         <br><b>Step 1:</b>Sprint towards ledge (Slam grey stick horizontally)
-        <br><b>Step 2:</b>Input shine on the frame that you are about to leave the ground. (Release grey stick and shine, or quartercircle down into b input, both seem to work as long as you\'re quick)
+        <br><b>Step 2:</b>Input shine right before you are about to leave the ground. (Release grey stick and shine, or quartercircle down into b input, both seem to work as long as you\'re quick)
         <br><b>Step 3:</b>Continue holding shine if you wish to jump out of it, otherwise, let it fade.
     ]]></string>
     <string name="desync_info_text"><![CDATA[<big><b>Desynching</b></big>
@@ -1264,6 +1267,9 @@
     <string name="phit_term_info">
         If you barely hit your opponent, you\'ll do half damage and deal no knockback. All that
         is visible is the percent change and the visual hit effect. https://youtu.be/iAHw6z0j074
+    </string>
+    <string name="pinesol_term_info">
+        When your moonwalk is so smooth it\'s like you just cleaned the floor, coined by my boy Juan (CREED_).
     </string>
     <string name="pivot_term_info">
         When you quickly turn around to perform an action, can be done with any move.

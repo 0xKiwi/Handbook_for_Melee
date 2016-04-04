@@ -70,6 +70,8 @@ public class AppSettingsActivity extends PreferenceActivity {
                     restart = true;
                 else if(key.equals(getString(R.string.pref_uniquegroup)))
                     restart = true;
+                else if(key.equals(getString(R.string.pref_main)))
+                    restart = true;
             }
         };
     }

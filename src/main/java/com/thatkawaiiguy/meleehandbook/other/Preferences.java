@@ -125,6 +125,10 @@ public class Preferences {
         return groupByCharacter(context);
     }
 
+    public static String getTextSize(Context context){
+        return textSize(context);
+    }
+
     //public static boolean hideAds(Context context){
     //    return hideAdsEnabled(context);
     //}
@@ -162,6 +166,11 @@ public class Preferences {
     private static boolean sortByTier(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(context.getString(R.string.pref_tier), false);
+    }
+
+    private static String textSize(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getString(context.getString(R.string.pref_textsize), "14");
     }
 
     private static boolean groupByCharacter(Context context) {

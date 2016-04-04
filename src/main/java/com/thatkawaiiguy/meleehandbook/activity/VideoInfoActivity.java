@@ -26,6 +26,7 @@ import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -102,8 +103,9 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
             }
         });
 
-        ((TextView) findViewById(R.id.infoText)).setText(Html.fromHtml(
-                ArrayHelper.getInfoString(optionPicked, this)));
+        TextView text = (TextView) findViewById(R.id.infoText);
+        text.setText(Html.fromHtml(ArrayHelper.getInfoString(optionPicked, this)));
+        text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize(this)));
     }
 
     @Override
@@ -157,5 +159,14 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
         super.onRestoreInstanceState(savedInstanceState);
 
         optionPicked = savedInstanceState.getString("option");
+    }
+
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        if(bp != null)
+            bp.release();
     }
 }

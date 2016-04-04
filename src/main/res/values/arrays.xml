@@ -91,4 +91,26 @@
         <item>Yoshi</item>
         <item>Young Link</item>
     </string-array>
+
+    <string-array name="pref_size_values">
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+        <item>20</item>
+        <item>22</item>
+    </string-array>
+
+    <string-array name="pref_size_options">
+        <item>Tiny</item>
+        <item>Extra small</item>
+        <item>Small</item>
+        <item>Normal</item>
+        <item>Bigger</item>
+        <item>Biggerer</item>
+        <item>Biggest</item>
+        <item>Biggestest</item>
+    </string-array>
 </resources>

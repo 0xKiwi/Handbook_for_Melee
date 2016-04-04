@@ -20,6 +20,7 @@ package com.thatkawaiiguy.meleehandbook.fragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,7 @@ import android.widget.TextView;
 
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 public class InfoPageFragment extends Fragment {
 
@@ -52,8 +54,9 @@ public class InfoPageFragment extends Fragment {
 
         String characterPicked = mainData.getString("option");
 
-        ((TextView)view.findViewById(R.id.infoText)).setText(Html
-                .fromHtml(ArrayHelper.getInfoString(characterPicked, getActivity())));
+        TextView text = (TextView) view.findViewById(R.id.infoText);
+        text.setText(Html.fromHtml(ArrayHelper.getInfoString(characterPicked, getActivity())));
+        text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize(getActivity())));
 
         return view;
     }
