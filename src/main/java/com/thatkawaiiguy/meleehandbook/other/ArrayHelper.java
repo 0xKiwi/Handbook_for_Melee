@@ -140,8 +140,8 @@ public class ArrayHelper {
                 "Mashedpotato Samurai", "Matchups", "Metagame",
                 "Meteor cancel", "Meteor", "Mike Haze", "Mindgames",
                 "Misfire", "My b", "Nerf", "Neutral game", "OOS",
-                "Overpowered", "PC drop", "People's elbow", "Phantom hit", "Pivot",
-                "Pop a balloon",
+                "Overpowered", "PC drop", "People's elbow", "Phantom hit", "Pine sol",
+                "Pivot", "Pop a balloon",
                 "Pop off", "Port priority", "Priority", "Pummel", "Punish",
                 "RNG", "Ramen noodle edge steal", "Randall the Cloud",
                 "Recovery", "Respect your elders", "Rolling",
@@ -380,6 +380,8 @@ public class ArrayHelper {
                 return res.getString(R.string.phit_term_info);
             case "Pivot":
                 return res.getString(R.string.pivot_term_info);
+            case "Pine sol":
+                return res.getString(R.string.pinesol_term_info);
             case "Pop a balloon":
                 return res.getString(R.string.popballoon_term_info);
             case "Pop off":
