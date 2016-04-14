@@ -11,7 +11,7 @@ https://play.google.com/store/apps/details?id=com.thatkawaiiguy.meleehandbook&hl
 
 # License
 ```
-Melee Handbook by Ivan Martinez (ThatKawaiiGuy)
+Melee Handbook by ThatKawaiiGuy
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
