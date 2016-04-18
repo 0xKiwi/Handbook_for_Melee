@@ -891,13 +891,10 @@
 
     <!-- BEGIN TERM LIST -->
     <string name="xx_term_info">
-        The year is 20XX. Everyone plays Fox at TAS levels of perfection. Because of this,
-        the winner of a match depends solely on port priority. The RPS metagame has evolved to
-        ridiculous levels due to it being the only remaining factor to decide matches. Variations
-        of this are 20GX (Falcon), 2222 (Sheik), 20EggsEggs (Yoshi), 20AxeAxe (Pikachu), 20Rx (Dr. Mario).
+        A hypothetical future popularized by Hax where everyone plays Fox frame-perfectly. Since the only thing determining the winner of a match is port priority, the Rock-Paper-Scissors metagame has evolved \"to ridiculous levels\" and has become the only remaining factor to decide the outcome of matches. The 20XX Hack Pack and 20XX Tournament Edition are also popular mods for Melee.
     </string>
     <string name="airdodge_term_info">
-        Dodging in the air, can have several directions.
+       A technique performed by full presing the L or R button in the air. Air dodging halts momentum, gives intangibility frames to the user, and it can be angled using the control stick to give a small boost in a direction. It leaves the user in the helpless state after use. 
     </string>
     <string name="antiground_term_info">
         A mechanic in Melee where if a player\'s combo count is greater than or equal to
@@ -906,60 +903,53 @@
         is increased to 0.070 meleemeters/frame. More info: http://bit.ly/1Zw0lvE
     </string>
     <string name="babypopoff_term_info">
-        Like a pop off, but smaller and not as visible. Hence being a \"baby\".
+        Similar to a pop-off, but not as significant and more subtle.
     </string>
     <string name="bannedstage_term_info">
         Stages that are banned from most tournaments for providing an unfair
         advantage for certain characters such as infinites, stalling,
         or lethal environments.
     </string>
-    <string name="turnaroundspec_term_info">
-        Quickly sticking the control stick the opposite direction you\'re facing before performing
-        your neutral B will make you turn around and then perform the special.
-    </string>
+
     <string name="beef_term_info">
-        Like salt, but personal.
+        A grudge held against another person.
     </string>
     <string name="blastzone_term_info">
         A blastzone is a boundary on a stage that a character cannot cross without getting KO\'d (in most cases).
         Most stages contain blast zones that are far away from any sides. Can be viewed in the stages section.
     </string>
     <string name="blender_term_info">
-        An alternate name for Peach\'s down smash, which is known to deal multiple hits and an incredible amount of damage
-        when the player taking hit crouch cancels.
+        An alternate name for Peach\'s down smash, which can deal multiple hits and a significant amount of damage if used on a player who is crouch cancelling.
     </string>
     <string name="bombcomb_term_info">
         A Falco combo that uses shine to Up-B at the top of the stage for an early kill.
     </string>
     <string name="boostgrab_term_info">
-        Canceling a dash attack with a dash grab. Has more range
-        than a normal dash grab. http://bit.ly/1Yoaslw
+       Boost grabbing is an advanced technique in which the momentum from a character\'s dash attack is transferred into a dash grab, resulting in a longer-ranged dash grab. http://bit.ly/1Yoaslw
     </string>
     <string name="bracket_term_info">
-        Tournament standard of matches, player\'s matches are played between
-        two entrants, the winner advancing to play another player the next round and the loser
-        is eliminated from the tournament.
+        A tournament standard in which a player\'s matches are played between
+        two entrants, resulting in the winner advancing to play another player the next round and the loser
+        being eliminated from the tournament.
     </string>
     <string name="buff_term_info">
-        A term used to describe an improvement in a character or a certain aspect of a character, usually through an update.
+       An improvement in a character or a certain aspect of a character, usually through an update.
     </string>
     <string name="buster_term_info">
-        A fraud. A flop. A bust. Basically a term for someone who didn\'t meet expectations.
+        A fraud; someone who didn't meet expecations.
     </string>
     <string name="butter_term_info">
         When a character charges a smash attack, they turn yellow like butter.
         \"He put a lot of butter into that one\"
     </string>
     <string name="byoc_term_info">
-        Bring Your Own Controller to tournaments. They won\'t give you.
+        Bring Your Own Controller to tournaments. They won\'t supply controllers.
     </string>
     <string name="col_term_info">
-        An area of a stage with an impassable
-        platform above the area and maybe other walls, which
-        allows characters to tech and survive potentially fatal blows.
+       An enclosed area in a stage where characters can survive to much higher percentages than usual. These areas have an impassable platform above the area, and can contain other walls, which allows characters to tech and survive potentially fatal blows. Even without teching, characters will bounce off the ceiling, which absorbs some of the knockback, and allows the character to survive longer than usual.
     </string>
     <string name="circusmusic_term_info">
-        Meant to refer to WestBallz\'s play, as he is known for perfoming amazing combo\'s into SD. Usually accidentally
+        Refers to WestBallz\'s play, who is infamous for accidentally SD\'ing in the middle of a combo. This term can also mean accidentally
         Side-B\'ing off the stage or dying in some unreasonable avoidable way. https://youtu.be/hBzLIB1iSXM
     </string>
     <string name="cbox_term_info">
@@ -974,43 +964,43 @@
     </string>
     <string name="cory_term_info">
         When a Fox or Falco throws out a Forward Smash at a
-        seemingly random moment with or without intention, but it works.
+        seemingly random moment with or without intention, but the move hits.
     </string>
     <string name="counter_term_info">
         Counter is the down special move for Marth and Roy. It is used as a counterattack to deliver
         damage to the attacker when the user is hit.
     </string>
     <string name="counterpick_term_info">
-        Counterpicking is the act of choosing a character or stage in order to have the
+        The act of choosing a character or stage in order to have the
         advantage on the opponent in the next round.
     </string>
     <string name="crewbattle_term_info">
-        A battle when players share a group of stocks, like 2 teams of 4 have 16 stocks, 4 stocks each.
+        A battle when teams of players share a group of stocks,
         Whichever team is runs out of stocks first loses. More info: www.ssbwiki.com/Crew_battle
     </string>
     <string name="dash_term_info">
-        Rapidly holding the control stick in a direction, faster than running.
+        A form of ground movement faster than walking. It is performed by tapping sideways on the control stick.
     </string>
     <string name="dashgrab_term_info">
-        Grabbing from a dash, gives more range, but has more lag.
+        A variation of a grab that is performed by pressing the grab button while dashing.
     </string>
     <string name="dave_term_info">
         A rule that no stage that has already been won on in a set may be picked by the
-        winner for another game in the same set.
+        winner for another game in the same set. It was named after the smasher Scamp.
     </string>
     <string name="deedah_term_info">
-        What Mango Jr. (Mango\'s son) says when he Falcon punches. http://oddshot.tv/shot/mang0-2016030804425983
+        A nickname for the Falcon Punch, originating from when Mango's son said the phrase while using the move on stream. http://oddshot.tv/shot/mang0-2016030804425983
     </string>
     <string name="disjointedhb_term_info">
-        A hitbox that cannot take damage, such as Marth\'s sword.
+        A hitbox that is separated from a character\'s hurtbox, such as Marth\'s sword.
     </string>
     <string name="disrespect_term_info">
-        When someone use a non-optimal and stylish option to deliberately make their opponent
-        feel bad about themselves. Like spiking someone who was not going to make it back to the
+        When someone uses a non-optimal and stylish option to deliberately make their opponent
+        feel bad about themselves, such as spiking someone who was not going to make it back to the
         stage anyways.
     </string>
     <string name="ditto_term_info">
-        A match with all the same characters.
+        Match where bother players choose the the same character. Also known as a mirror match.
     </string>
     <string name="dong_term_info">
         A shortened version of \"Donkey Kong\", usually spoken as \"Expand dong\".
@@ -1020,14 +1010,14 @@
         times in a row.
     </string>
     <string name="doubles_term_info">
-        When 2 teams of two players each go against another. Usually has their own bracket.
+        The 2 vs 2 part of a tournament. Doubles requires a different strategy, namely teamwork, to defeat opponents.
     </string>
     <string name="doubledip_term_info">
-        A term used when a Falco uses his DAir to spike a character twice in a row. Sometimes
+        When a Falco uses his Dair to spike a character twice in a row, sometimes
         after a jump or walljump. http://oddshot.tv/shot/beyondthesummit-2015110913256628
     </string>
     <string name="dumpster_term_info">
-        Getting a premature kill off the edge using any sort of meteor smash or spike, specifically Marth\'s DAir or Falco\'s DAir
+        Getting a premature kill off the edge using any sort of meteor smash or spike, specifically Marth\'s Dair or Falco\'s Dair
     </string>
     <string name="easymoney_term_info">
         Quote from smasher Bizzarro Flame at Apex 2015, when asked what he thought when
@@ -1040,7 +1030,7 @@
         and no-impact landing to occur.
     </string>
     <string name="edgeguard_term_info">
-        Preventing your opponent from getting back on the stages from the edges.
+        The attempt to prevent an off-stage recovering opponent from reaching the stage, thus causing them to be KO\'d.
     </string>
     <string name="edgehog_term_info">
         Due to only one character being able to hold onto the ledge, you can
@@ -1543,6 +1533,10 @@
     <string name="triangle_term_info">
         Similar to wave dashing but after the jump has initially performed, usually done to space oneself from the
         opponent, such as a Marth triangle jumping back to properly sweet spot the sword.
+    </string>
+    <string name="turnaroundspec_term_info">
+        Quickly sticking the control stick the opposite direction you\'re facing before performing
+        your neutral B will make you turn around and then perform the special.
     </string>
     <string name="viagrakick_term_info">
         The opposite of a sex kick. The longer it stays out the stronger it gets.
