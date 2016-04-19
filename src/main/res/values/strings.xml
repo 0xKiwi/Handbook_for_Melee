@@ -964,7 +964,7 @@
     </string>
     <string name="cory_term_info">
         When a Fox or Falco throws out a Forward Smash at a
-        seemingly random moment with or without intention, but the move hits.
+        seemingly random moment with or without intention, but the move hits. Named after the greatest anime of all time.
     </string>
     <string name="counter_term_info">
         Counter is the down special move for Marth and Roy. It is used as a counterattack to deliver
@@ -1032,57 +1032,50 @@
     <string name="edgeguard_term_info">
         The attempt to prevent an off-stage recovering opponent from reaching the stage, thus causing them to be KO\'d.
     </string>
-    <string name="edgehog_term_info">
+    <<string name="edgehog_term_info">
         Due to only one character being able to hold onto the ledge, you can
         cause your opponent to miss it when they are recovering due to you currently taking it.
     </string>
     <string name="electricslide_term_info">
-        When a Samus super wavedashes into a charge beam.
+        When a Samus super wavedashes into a charge shot.
     </string>
     <string name="falcoville_term_info">
-        An alternate name for Yoshi\'s Story, which is often a counterpick for Falcos. Falco benefits from this
+        An alternate name for Yoshi\'s Story, which is often a counterpick for Falco players. Falco benefits from this
         stage due to its low platforms and small vertical blastzones, making it easy for Falco to get a kill from a spike.
     </string>
     <string name="flub_term_info">
-        A phrase that explains the reasoning of a player mess up
-        meaning a player \"flubs\" (makes a mistake) or
-        the player is a \"scrub\" (is a new player).
+        To make a mistake or an error.
     </string>
     <string name="forbiddenledge_term_info">
         Coined by top Young Link main Axe, Young Link can take advantage of the boomerang glitch
-        which allows him to ledge extremely easily. Explanation by Axe: http://oddshot.tv/shot/az-axe-201512092547403
+        which allows him to ledge stall extremely easily. Explanation by Axe: http://oddshot.tv/shot/az-axe-201512092547403
         http://oddshot.tv/shot/az-axe-2015120925418797
     </string>
     <string name="frame_term_info">
-        Since the game runs at 60 frames per second, one frame would be the actions
-        that take place in .0166 seconds.
+        A frame is the primary unit of time in Melee. Every frame, the game reads controller input, performs calculations, and renders an image on the screen, one frame is 1/60th of a second, meaning the game runs at 60 fps (frames per second).
     </string>
     <string name="freezeframe_term_info">
-        Freeze frames, (also known as hitlag), are when a character will freeze for a few frames
-        after connecting an attack. If successful, the attacker is frozen for a number of frames
-        while the target suffers from hitstun.
+        The frames during which a character will freeze for a period of time after connecting with an attack. If an attack hits successfully, both the attacker and target are frozen in time for a number of frames. Also known as hitlag.
     </string>
     <string name="friendlies_term_info">
-        A normal match aimed to have no competitive value.
+        An match played with a competitive ruleset but is used for practice or just for fun in general. 
     </string>
     <string name="funcanceling_term_info">
         Similar to wavecheating, this is a comical term used to make fun of L-canceling.
     </string>
     <string name="helpless_term_info">
-        Helpless is a state in which characters are unable to take any action until
-        they land on the ground or grab a ledge. Usually after an air dodge or a recovery.
+        A state in which characters are unable to take any action, with the exception of grabbing a ledge, maneuvering left/right, fastfalling, or climbing a ladder, until they land on the ground.
     </string>
     <string name="kappa_term_info">
-        A graphic emoticon or term used to
-        convey sarcasm. \"If you main Fox you\'ll lose your hands, Kappa.\"
+        An emoticon on Twitch.tv used to convey sarcasm. \"If you main Fox you\'ll lose your hands, Kappa.\"
     </string>
     <string name="ken_term_info">
         The Ken Combo refers to a spike setup with Marth discovered and
-        popularized by professional Marth player, Ken. Fair into dair.
+        popularized by professional Marth player, Ken. It consists of a single jump, forward aerial; midair jump, down aerial.
         https://youtu.be/OR1pNBmT7NM
     </string>
     <string name="kreygasm_term_info">
-        A term or graphic emoticon used to express intense emotion. One commonly used phrase is
+        An emoticon on Twitch.tv used to convey an intense feeling of elation or pleasure. One commonly used phrase is
         \"PPMD Kreygasm\".
     </string>
     <string name="gimp_term_info">
@@ -1094,7 +1087,7 @@
     </string>
     <string name="god_term_info">
         A term used to refer to one of the Top 5 players in Melee, called Gods as they are all-powerful
-        and rule the tournaments, the players are MaNgo, Mew2King, PPMD, Hungrybox and Armada.
+        and rule the tournaments, the players are Mango, Mew2King, PPMD, Hungrybox and Armada.
     </string>
     <string name="goingham_term_info">
         To go completely crazy on someone, performing the best you possibly can against them.
