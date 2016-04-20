@@ -1079,41 +1079,43 @@
         \"PPMD Kreygasm\".
     </string>
     <string name="gimp_term_info">
-        Losing a stock to an opponent in a situation where you didn\'t have many options,
-        such as being spiked at low percents, or your opponent constantly knocking you away from the stage.
+        The action of KOing a recovering opponent by interrupting their recovery
     </string>
     <string name="grab_term_info">
-        A grab can be done with Z, or A when shielding. Pummel with A and throw with a direction.
+        The action of grabbing and holding an opponent. Regular grabs are performed by pressing either the shield and A buttons simultaneously, or by pressing Z. Once grabbed, a character can be thrown by tilting the control stick in any of the four standard directions, or pummeled with the A or Z button.
     </string>
     <string name="god_term_info">
-        A term used to refer to one of the Top 5 players in Melee, called Gods as they are all-powerful
-        and rule the tournaments, the players are Mango, Mew2King, PPMD, Hungrybox and Armada.
+        One of the Top 5 players in Melee, called Gods as they are all-powerful
+        and rule the tournaments. The players are Mango, Mew2King, PPMD, Hungrybox and Armada.
     </string>
     <string name="goingham_term_info">
         To go completely crazy on someone, performing the best you possibly can against them.
     </string>
     <string name="gotothedoctor_term_info">
         A comical phrase meant to refer to Mew2King\'s lack of medical support in response to his
-        hand injuries. Mew2King, having been playing Melee competitively for several years without
+        hand injuries. Mew2King had been playing Melee competitively for several years without
         proper stretching or treatment, causing hand and finger pains. Make sure you stretch with
-        the information provided in this app before, during and after playing. https://youtu.be/9JTqydWaioc
+        the information provided in this app before, during, and after playing. https://youtu.be/9JTqydWaioc
     </string>
     <string name="helicrash_term_info">
-        When a Fox or Falco SD\'s by falling off the stage and using their fair. Name is due to
+        When a Fox or Falco SD\'s by falling off the stage and using their fair. The term's name is due to
         the move looking like a helicopter.
     </string>
     <string name="hitbox_term_info">
-        The area an attack covers that deals damage.
+        The main structure for how attacks are executed in most fighting games. Attacks have one or more hitboxes associated with them, and when these hitboxes overlap with a target\'s hurtbox, the attack is considered a hit. Hitboxes are invisible spheres and usually have the same shape as the attack's animation.
     </string>
     <string name="hitlag_term_info">
-        A different name for freeze frames, frames after an attack connects where neither players can move.
+        The frames during which a character will freeze for a period of time after connecting with an attack. If an attack hits successfully, both the attacker and target are frozen in time for a number of frames. Also known as freeze frames.
     </string>
     <string name="hitstun_term_info">
         A period of time after being hit by an attack that a character is unable to perform any
-        actions other than tech and DI.
+        actions other than DI or teching.
+    </string>
+    <string name="hurtbox_term_info">
+    	The damageable area of a target. When the hitboxes of an attack collide with a target\'s hurtbox, an attack is considered a hit.
     </string>
     <string name="iasa_term_info">
-        Interruptible As Soon As: The earliest point at when you can act during or after an attack.
+        Interruptible As Soon As. The earliest point at when you can act during or after an attack.
     </string>
     <string name="infinite_term_info">
         Any move or technique which can be maintained indefinitely, either through
@@ -1121,32 +1123,30 @@
     </string>
     <string name="ilag_term_info">
         Input lag is either the delay between the television or monitor receiving a signal
-        and it being displayed on the screen
+        and it being displayed on the screen or the delay between pressing a button and seeing the game react.
     </string>
     <string name="invisibleceil_term_info">
-        A glitch that occurs in Melee where the character affected loses most of their vertical
-        velocity after being hit by an attack. Used in Princess/Swordsman spiking http://oddshot.tv/shot/vgbootcamp-2015100417555965
+        A glitch in Melee that resets the victim's vertical velocity to zero upon activation. Most commonly, this makes a character knocked upward appear to get hit by an invisible ceiling, seemingly being stage spiked downward. This glitch infamously resulted in S2J losing a set to Abate at The Big House 5. http://oddshot.tv/shot/vgbootcamp-2015100417555965
         http://www.gfycat.com/GregariousHauntingDrafthorse
     </string>
     <string name="ironman_term_info">
         An ironman is a special type of match where 2 players select 5 different characters,
         and match their opponent with 3 stocks per character. Whichever player runs out of stocks
-        first loses.
+        first loses. http://smashboards.com/threads/the-ironman-match.110560/
     </string>
     <string name="itsnotsafe_term_info">
         A phrase commentators use to say that a certain action isn\'t safe to perform, most often spoken
         in response to a Falco LHDL\'ing and getting punished. http://oddshot.tv/shot/beyondthesummit-2015110625841140
     </string>
     <string name="janky_term_info">
-        Something that happens that is just wierd or complete BS. https://youtu.be/iF9_EpCGfSs
+        Something that happens that is just weird, buggy, or not working as you would expect it to. https://youtu.be/iF9_EpCGfSs
     </string>
     <string name="jcgrab_term_info">
-        Abbreviated as JC grab, a jump canceled grab can be done by jumping immediately
-        followed by a grab. The character will slide a bit (depending on traction) and grab.
+        A technique where a character interrupts a dash or run with a jump, which itself is then jump-canceled with a grab during the jumpsquat animation. This results in the character using their standing grab while maintaining some momentum from their dash. This is sometimes abbreviated as JC grab.
         http://bit.ly/1Yoaslw
     </string>
     <string name="johnnystock_term_info">
-        When a player gets a grab and 0-deaths them from the grab.
+        When a player gets a 0-death with just one combo. The term is named after Johnny Kim, aka S2J.
     </string>
     <string name="john_term_info">
         A john is an excuse. Remember people, if you lose you lose. No johns. http://poyoarya.github.io/john.html
