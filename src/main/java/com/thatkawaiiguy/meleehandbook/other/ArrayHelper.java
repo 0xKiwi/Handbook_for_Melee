@@ -135,6 +135,7 @@ public class ArrayHelper {
                 "Infinite", "Input lag", "Invisible ceiling glitch",
                 "Ironman", "It's not safe", "JV3/JV4 stock", "Janky",
                 "Johnny stock", "Johns", "Juggling", "Jump cancel", "Jump canceled grab",
+                "Junco combo",
                 "Kappa", "Ken combo", "Kreygasm", "Lag", "Landing lag",
                 "Lean drop", "Legalize PokeFloats", "lol m2k", "Love tap", "MacD", "Mangle",
                 "Mashedpotato Samurai", "Matchups", "Metagame",
@@ -254,6 +255,8 @@ public class ArrayHelper {
                 return res.getString(R.string.doubledip_term_info);
             case "Dumpster":
                 return res.getString(R.string.dumpster_term_info);
+            case "Dynasty":
+                return res.getString(R.string.dynasty_term_info);
             case "Easy money":
                 return res.getString(R.string.easymoney_term_info);
             case "ECB":
@@ -322,6 +325,8 @@ public class ArrayHelper {
                 return res.getString(R.string.jcancel_term_info);
             case "Jump canceled grab":
                 return res.getString(R.string.jcgrab_term_info);
+            case "Junco combo":
+                return res.getString(R.string.junco_term_info);
             case "JV3/JV4 stock":
                 return res.getString(R.string.jv3stock_term_info);
             case "Kappa":

@@ -49,7 +49,7 @@
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="gplus">G+</string>
-    <string name="about_text">\t\t\tMelee Handbook v1.3.5
+    <string name="about_text">\t\t\tMelee Handbook v1.4.2
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
@@ -120,6 +120,9 @@
 
     <string name="pref_open">pref_open</string>
     <string name="pref_open_title">Open navigation menu on launch</string>
+
+    <string name="pref_toast">pref_toast</string>
+    <string name="pref_toast_title">Show the stretch toast</string>
 
     <!-- BEGIN UNIQUE TECH LIST -->
     <string name="boomjump_info_text"><![CDATA[Examples: http://gfycat.com/GlaringFoolhardyHake
@@ -1029,6 +1032,9 @@
     <string name="dumpster_term_info">
         Getting a premature kill off the edge using any sort of meteor smash or spike, specifically Marth\'s DAir or Falco\'s DAir
     </string>
+    <string name="dynasty_term_info">
+        A Sheik combo that ends with an Up Smash
+    </string>
     <string name="easymoney_term_info">
         Quote from smasher Bizzarro Flame at Apex 2015, when asked what he thought when
         Ganon main Eikelmann would be going against him, Bizzarro replied \"EASY MONEY!\".
@@ -1173,6 +1179,9 @@
     </string>
     <string name="jcancel_term_info">
         Canceling an action with a jump, most notable example are the shines of Falco and Fox.
+    </string>
+    <string name="junco_term_info">
+        Link Down throw to Up-B, done several times by my friend Junco.
     </string>
     <string name="jv3stock_term_info">
         A JV3 stock is when you win with 2 stocks and 0&#37; damage, same for JV4
@@ -3050,7 +3059,7 @@
         <br><b>0-99&#37; ledge attack range:</b> 4th farthest
         <br><b>100&#37;+ ledge attack range:</b> 18th farthest
         <br>
-        <br><b>Notable players:</b> MaNgo, Westballz, GimR, PPMD, Axe
+        <br><b>Notable players:</b> MaNgo, Westballz, Zhu, GimR, PPMD, Axe
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/falco.111/
         <br>
@@ -3997,7 +4006,7 @@
         <br><b>0-99&#37; ledge attack range:</b> 12th farthest
         <br><b>100+&#37; ledge attack range:</b> 8th farthest
         <br>
-        <br><b>Notable players:</b> Plup, HugS, quiKsilver, ESAM
+        <br><b>Notable players:</b> Plup, Duck, HugS, quiKsilver, ESAM
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/samus.72/
         <br>
