@@ -42,6 +42,8 @@ import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.mopub.common.MoPub;
+import com.mopub.mobileads.MoPubView;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.CharacterFragment;
@@ -66,6 +68,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     private CharSequence mTitle;
 
+    MoPubView mAdView;
+
     BillingProcessor bp;
 
     @Override
@@ -84,18 +88,22 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+        mAdView = (MoPubView) findViewById(R.id.adView);
         if(!Preferences.hideAds(this)) {
-            mAdView.loadAd(new AdRequest.Builder().build());
+            MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
+            mAdView.setAdUnitId(getResources().getString(R.string.banner_ad_unit_id));
+            mAdView.loadAd();
+            mAdView.setAutorefreshEnabled(true);
             mAdView.setVisibility(View.VISIBLE);
-        } else
+        } else {
             mAdView.setVisibility(View.GONE);
+        }
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
-        if(Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this)){
+        if(Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this)) {
             nvDrawer.getMenu().findItem(R.id.remove).setTitle("Support the Dev");
         }
 
@@ -320,10 +328,12 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     private void sendToast() {
-        Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You " +
-                        "don't want to have to go" +
-                        " to the doctor.",
-                Toast.LENGTH_SHORT).show();
+        if(Preferences.showToast(this)) {
+            Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You" +
+                            "don't want to have to go" +
+                            " to the doctor.",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void addFragment() {
@@ -372,6 +382,9 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         if(bp != null)
             bp.release();
+
+        if(mAdView != null)
+            mAdView.destroy();
     }
 
     @Override

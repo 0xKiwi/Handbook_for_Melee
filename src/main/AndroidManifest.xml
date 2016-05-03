@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.thatkawaiiguy.meleehandbook"
-    android:installLocation="preferExternal">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.thatkawaiiguy.meleehandbook"
+          android:installLocation="preferExternal">
 
     <!-- Include required permissions for Google Mobile Ads to run-->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:node="remove"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:node="remove"/>
 
     <application
         android:allowBackup="true"
@@ -35,9 +38,9 @@
         <activity
             android:name=".activity.TechTabActivity"/>
         <activity
-            android:name=".activity.AppSettingsActivity"/>
+            android:name=".activity.VideoInfoActivity"/>
         <activity
-            android:name=".activity.TechActivity"/>
+            android:name=".activity.AppSettingsActivity"/>
         <activity
             android:name=".activity.FrameDataActivity"/>
         <activity
@@ -62,6 +65,8 @@
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
+        <activity android:name="com.mopub.mobileads.MoPubActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.mopub.common.MoPubBrowser" android:configChanges="keyboardHidden|orientation|screenSize"/>
     </application>
 
 </manifest>

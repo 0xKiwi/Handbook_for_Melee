@@ -17,6 +17,7 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?customWindowBG"
@@ -35,7 +36,11 @@
 
             <com.thatkawaiiguy.meleehandbook.other.MutedVideoView
                 android:id="@+id/infoVid"
-                style="@style/VideoStyle"/>
+                android:minHeight="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"/>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -57,9 +62,9 @@
 
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/video_scrollView"
+            android:layout_above="@id/adView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@id/adView">
+            android:layout_height="match_parent">
 
             <include
                 layout="@layout/infotext"
@@ -68,15 +73,12 @@
 
         </android.support.v4.widget.NestedScrollView>
 
-        <com.google.android.gms.ads.AdView
+        <com.mopub.mobileads.MoPubView
             android:id="@+id/adView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center_horizontal|bottom"
             android:visibility="visible"
-            app:adSize="SMART_BANNER"
-            app:adUnitId="@string/tech_banner_ad_unit_id"/>
+            android:layout_height="50dp"/>
     </RelativeLayout>
-
 </android.support.design.widget.CoordinatorLayout>
