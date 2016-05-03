@@ -117,6 +117,10 @@ public class Preferences {
         return openNavLaunch(context);
     }
 
+    public static boolean showToast(Context context){
+        return toast(context);
+    }
+
     public static boolean sortByTierEnabled(Context context){
         return sortByTier(context);
     }
@@ -161,6 +165,11 @@ public class Preferences {
     private static boolean openNavLaunch(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getBoolean(context.getString(R.string.pref_open), false);
+    }
+
+    private static boolean toast(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context)
+                .getBoolean(context.getString(R.string.pref_toast), false);
     }
 
     private static boolean sortByTier(Context context) {

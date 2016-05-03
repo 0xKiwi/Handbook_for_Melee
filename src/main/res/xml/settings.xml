@@ -37,6 +37,11 @@
         android:key="@string/pref_open"
         android:title="@string/pref_open_title"/>
 
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="@string/pref_toast"
+        android:title="@string/pref_toast_title"/>
+
     <!--<CheckBoxPreference
         android:defaultValue="false"
         android:key="@string/pref_ads"
