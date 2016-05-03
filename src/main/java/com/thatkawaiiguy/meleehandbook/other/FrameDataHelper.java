@@ -134,6 +134,8 @@ public class FrameDataHelper {
                 return getDoctorLandLag(move);
             case "Princess Peach":
                 return getPeachLandLag(move);
+            case "Luigi":
+                return getLuigiLandLag(move);
             default:
                 return "";
         }
@@ -167,6 +169,8 @@ public class FrameDataHelper {
                 return getDoctorIASA(move);
             case "Princess Peach":
                 return getPeachIASA(move);
+            case "Luigi":
+                return getLuigiIASA(move);
             default:
                 return "";
         }
@@ -709,6 +713,48 @@ public class FrameDataHelper {
                 return "IASA: 40";
             case "dash":
                 return "IASA: 36";
+            default:
+                return "  ";
+        }
+    }
+
+
+
+    private static String getLuigiLandLag(String move) {
+        switch(move) {
+            case "dair":
+                return "Landing lag: 18";
+            case "fair":
+                return "Landing lag: 25";
+            case "nair":
+                return "Landing lag: 15";
+            case "uair":
+                return "Landing lag: 15";
+            case "bair":
+                return "Landing lag: 15";
+            case "upb":
+                return "Landing lag: 40";
+            case "sideb":
+                return "Landing lag: 41";
+            default:
+                return "";
+        }
+    }
+
+    private static String getLuigiIASA(String move) {
+        switch(move) {
+            case "dair":
+                return "IASA: 29";
+            case "uair":
+                return "IASA: 30";
+            case "fair":
+                return "IASA: 33";
+            case "utilt":
+                return "IASA: 30";
+            case "ftilt":
+                return "IASA: 32";
+            case "dash":
+                return "IASA: 59";
             default:
                 return "  ";
         }
