@@ -43,9 +43,6 @@ public class CharacterActivity extends ImageInfoActivity {
             case "Link":
                 infoImage.setImageResource(R.drawable.link);
                 break;
-            case "Luigi":
-                infoImage.setImageResource(R.drawable.luigi);
-                break;
             case "Mario":
                 infoImage.setImageResource(R.drawable.mario);
                 break;

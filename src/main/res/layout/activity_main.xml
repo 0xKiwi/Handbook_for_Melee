@@ -22,15 +22,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <com.google.android.gms.ads.AdView
+        <com.mopub.mobileads.MoPubView
             android:id="@+id/adView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center_horizontal|bottom"
             android:visibility="visible"
-            app:adSize="SMART_BANNER"
-            app:adUnitId="@string/banner_ad_unit_id" />
+            android:layout_height="50dp"/>
 
         <RelativeLayout
             xmlns:android="http://schemas.android.com/apk/res/android"

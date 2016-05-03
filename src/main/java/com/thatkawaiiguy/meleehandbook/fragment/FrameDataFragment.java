@@ -162,6 +162,7 @@ public class FrameDataFragment extends Fragment {
                             childObjectList.add(customChildObject6);
                             childObjectList.add(customChildObject7);
                             break;
+                        case "Luigi":
                         case "Dr. Mario":
                             customChildObject2.setChildText(normalList[1]);
                             customChildObject3.setChildText(normalList[6]);

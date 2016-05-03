@@ -161,9 +161,9 @@ public class MatchupFragment extends Fragment {
                     case "Marth":
                         return "50";
                     case "Princess Peach":
-                        return "50";
-                    case "Captain Falcon":
                         return "60";
+                    case "Captain Falcon":
+                        return "65";
                     case "Ice Climbers":
                         return "65";
                     case "Samus Aran":
@@ -282,7 +282,7 @@ public class MatchupFragment extends Fragment {
                     case "Captain Falcon":
                         return "60";
                     case "Ice Climbers":
-                        return "50";
+                        return "45";
                     case "Samus Aran":
                         return "60";
                     case "Dr. Mario":
@@ -316,7 +316,7 @@ public class MatchupFragment extends Fragment {
                     case "Bowser":
                         return "90";
                     case "Kirby":
-                        return "60";
+                        return "75";
                     case "Pichu":
                         return "80";
                     case "Mewtwo":
@@ -348,7 +348,7 @@ public class MatchupFragment extends Fragment {
                     case "Dr. Mario":
                         return "60";
                     case "Jigglypuff":
-                        return "55";
+                        return "50";
                     case "Mario":
                         return "70";
                     case "Ganondorf":
@@ -366,7 +366,7 @@ public class MatchupFragment extends Fragment {
                     case "Pikachu":
                         return "40";
                     case "Yoshi":
-                        return "50";
+                        return "60";
                     case "Princess Zelda":
                         return "60";
                     case "Mr. Game & Watch":
@@ -548,7 +548,7 @@ public class MatchupFragment extends Fragment {
                     case "Roy":
                         return "90";
                     case "Young Link":
-                        return "80";
+                        return "65";
                     case "Pikachu":
                         return "70";
                     case "Yoshi":
@@ -669,7 +669,7 @@ public class MatchupFragment extends Fragment {
                     case "Ganondorf":
                         return "50";
                     case "Link":
-                        return "50";
+                        return "55";
                     case "Luigi":
                         return "60";
                     case "Donkey Kong":
@@ -683,11 +683,11 @@ public class MatchupFragment extends Fragment {
                     case "Yoshi":
                         return "70";
                     case "Princess Zelda":
-                        return "50";
+                        return "55";
                     case "Mr. Game & Watch":
                         return "70";
                     case "Ness":
-                        return "50";
+                        return "60";
                     case "Bowser":
                         return "80";
                     case "Kirby":
@@ -731,13 +731,13 @@ public class MatchupFragment extends Fragment {
                     case "Jigglypuff":
                         return "Mirror";
                     case "Mario":
-                        return "50";
+                        return "60";
                     case "Ganondorf":
-                        return "40";
+                        return "45";
                     case "Link":
                         return "50";
                     case "Luigi":
-                        return "50";
+                        return "60";
                     case "Donkey Kong":
                         return "70";
                     case "Roy":
@@ -745,11 +745,11 @@ public class MatchupFragment extends Fragment {
                     case "Young Link":
                         return "60";
                     case "Pikachu":
-                        return "20";
+                        return "60";
                     case "Yoshi":
                         return "70";
                     case "Princess Zelda":
-                        return "40";
+                        return "60";
                     case "Mr. Game & Watch":
                         return "60";
                     case "Ness":
@@ -812,7 +812,7 @@ public class MatchupFragment extends Fragment {
                     case "Young Link":
                         return "60";
                     case "Pikachu":
-                        return "70";
+                        return "40";
                     case "Yoshi":
                         return "60";
                     case "Princess Zelda":
@@ -880,11 +880,11 @@ public class MatchupFragment extends Fragment {
                     case "Young Link":
                         return "60";
                     case "Pikachu":
-                        return "20";
+                        return "50";
                     case "Yoshi":
                         return "70";
                     case "Princess Zelda":
-                        return "40";
+                        return "60";
                     case "Mr. Game & Watch":
                         return "60";
                     case "Ness":
@@ -941,7 +941,7 @@ public class MatchupFragment extends Fragment {
                     case "Link":
                         return "Mirror";
                     case "Luigi":
-                        return "55";
+                        return "50";
                     case "Donkey Kong":
                         return "60";
                     case "Roy":
@@ -949,7 +949,7 @@ public class MatchupFragment extends Fragment {
                     case "Young Link":
                         return "55";
                     case "Pikachu":
-                        return "65";
+                        return "40";
                     case "Yoshi":
                         return "70";
                     case "Princess Zelda":
@@ -1015,7 +1015,7 @@ public class MatchupFragment extends Fragment {
                     case "Donkey Kong":
                         return "50";
                     case "Roy":
-                        return "50";
+                        return "60";
                     case "Young Link":
                         return "45";
                     case "Pikachu":
@@ -1023,11 +1023,11 @@ public class MatchupFragment extends Fragment {
                     case "Yoshi":
                         return "50";
                     case "Princess Zelda":
-                        return "50";
+                        return "60";
                     case "Mr. Game & Watch":
-                        return "40";
+                        return "60";
                     case "Ness":
-                        return "40";
+                        return "50";
                     case "Bowser":
                         return "70";
                     case "Kirby":
@@ -1096,7 +1096,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Zelda":
                         return "50";
                     case "Mr. Game & Watch":
-                        return "20";
+                        return "55";
                     case "Ness":
                         return "70";
                     case "Bowser":
@@ -1170,7 +1170,7 @@ public class MatchupFragment extends Fragment {
                     case "Mr. Game & Watch":
                         return "50";
                     case "Ness":
-                        return "20";
+                        return "30";
                     case "Bowser":
                         return "70";
                     case "Kirby":
@@ -1237,13 +1237,13 @@ public class MatchupFragment extends Fragment {
                     case "Pikachu":
                         return "50";
                     case "Yoshi":
-                        return "50";
+                        return "55";
                     case "Princess Zelda":
                         return "60";
                     case "Mr. Game & Watch":
                         return "60";
                     case "Ness":
-                        return "30";
+                        return "60";
                     case "Bowser":
                         return "70";
                     case "Kirby":
@@ -1311,13 +1311,13 @@ public class MatchupFragment extends Fragment {
                     case "Pikachu":
                         return "Mirror";
                     case "Yoshi":
-                        return "30";
+                        return "40";
                     case "Princess Zelda":
-                        return "50";
+                        return "65";
                     case "Mr. Game & Watch":
-                        return "50";
+                        return "60";
                     case "Ness":
-                        return "20";
+                        return "70";
                     case "Bowser":
                         return "70";
                     case "Kirby":
@@ -1468,7 +1468,7 @@ public class MatchupFragment extends Fragment {
                     case "Mr. Game & Watch":
                         return "50";
                     case "Ness":
-                        return "20";
+                        return "30";
                     case "Bowser":
                         return "70";
                     case "Kirby":
@@ -1551,7 +1551,7 @@ public class MatchupFragment extends Fragment {
                     case "Kirby":
                         return "70";
                     case "Pichu":
-                        return "70";
+                        return "60";
                     case "Mewtwo":
                         return "30";
                 }

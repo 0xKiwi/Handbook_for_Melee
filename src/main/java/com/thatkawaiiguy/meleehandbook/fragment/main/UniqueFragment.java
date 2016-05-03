@@ -20,7 +20,6 @@ package com.thatkawaiiguy.meleehandbook.fragment.main;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -28,8 +27,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
-import com.thatkawaiiguy.meleehandbook.activity.TechActivity;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
+import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
 import com.thatkawaiiguy.meleehandbook.adapter.ExpandableAdapter;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
@@ -92,7 +91,7 @@ public class UniqueFragment extends Fragment {
                                 uniqueTechs[position].equals("Extended & homing grapple"))
                             mIntent = new Intent(getActivity(), TechTabActivity.class);
                         else
-                            mIntent = new Intent(getActivity(), TechActivity.class);
+                            mIntent = new Intent(getActivity(), VideoInfoActivity.class);
                         mIntent.putExtra("option", uniqueTechs[position]);
                         startActivity(mIntent);
                         canStart = false;

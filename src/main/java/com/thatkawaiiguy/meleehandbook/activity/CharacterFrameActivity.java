@@ -100,6 +100,9 @@ public class CharacterFrameActivity extends AppCompatActivity {
             case "Sheik":
                 ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.sheik);
                 break;
+            case "Luigi":
+                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.luigi);
+                break;
             case "Marth":
                 ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.marth);
                 break;

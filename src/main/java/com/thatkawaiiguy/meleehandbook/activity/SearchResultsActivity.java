@@ -413,7 +413,7 @@ public class SearchResultsActivity extends AppCompatActivity {
                     return new Intent(context, TechTabActivity.class)
                             .putExtra("option", uniqueTech);
                 else
-                    return new Intent(context, TechActivity.class)
+                    return new Intent(context, VideoInfoActivity.class)
                             .putExtra("option", uniqueTech);
             }
         }
@@ -429,7 +429,7 @@ public class SearchResultsActivity extends AppCompatActivity {
                 if(tech.equals("Wall jump") || tech.equals("Directional Influence") || tech.equals("Shield dropping"))
                     return new Intent(context, TechTabActivity.class).putExtra("option", tech);
                 else
-                    return new Intent(context, TechActivity.class).putExtra("option", tech);
+                    return new Intent(context, VideoInfoActivity.class).putExtra("option", tech);
             }
         }
         return null;

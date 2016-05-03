@@ -26,8 +26,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.thatkawaiiguy.meleehandbook.activity.TechActivity;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
+import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
 import com.thatkawaiiguy.meleehandbook.R;
@@ -71,7 +71,7 @@ public class TechFragment extends Fragment {
                             techs[position].equals("Shield dropping"))
                         mIntent = new Intent(getActivity(), TechTabActivity.class);
                     else
-                        mIntent = new Intent(getActivity(), TechActivity.class);
+                        mIntent = new Intent(getActivity(), VideoInfoActivity.class);
                     mIntent.putExtra("option", techs[position]);
                     startActivity(mIntent);
                     canStart = false;

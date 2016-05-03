@@ -25,8 +25,8 @@ import android.view.ViewGroup;
 
 import com.bignerdranch.expandablerecyclerview.Adapter.ExpandableRecyclerAdapter;
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
-import com.thatkawaiiguy.meleehandbook.activity.TechActivity;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
+import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildViewHolder;
 import com.thatkawaiiguy.meleehandbook.other.CustomParentObject;
@@ -90,7 +90,7 @@ public class ExpandableAdapter extends ExpandableRecyclerAdapter<CustomParentVie
                         mIntent = new Intent(context, TechTabActivity.class);
                     else
                         mIntent = new Intent(context, healthy ? HealthyActivity.class
-                                : TechActivity.class);
+                                : VideoInfoActivity.class);
                     mIntent.putExtra("option", childViewHolder.dataText.getText());
                     context.startActivity(mIntent);
                     canStart = false;

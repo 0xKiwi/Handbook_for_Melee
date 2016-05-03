@@ -16,7 +16,6 @@
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapse_toolbar"
-            app:titleEnabled="false"
             style="@style/CollapsingBar">
 
             <pl.droidsonroids.gif.GifImageView
