@@ -8,8 +8,8 @@ android {
         applicationId "com.thatkawaiiguy.meleehandbook"
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 16
-        versionName "1.4.2"
+        versionCode 17
+        versionName "1.4.4"
     }
     buildTypes {
         release {
