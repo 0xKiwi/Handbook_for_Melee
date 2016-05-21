@@ -118,7 +118,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                 }
             } else
                 setUpAds();
-        }
+        } else
+            setUpAds();
 
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
@@ -175,24 +176,28 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     private void setUpAds() {
+        //Check if user has purchased ad removal
         if(!Preferences.hideAds(this)) {
             mAdView.setAdUnitId(getResources().getString(R.string.banner_ad_unit_id));
             mAdView.loadAd();
+            //Check if on marshmallow
             if(Build.VERSION.SDK_INT >= 23) {
+                //If so check system permission access, if denied don't use data
                 if(checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) ==
                         PackageManager.PERMISSION_GRANTED)
                     MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
                 else
                     MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
-            } else if(Preferences.shouldUseLocation(this))
-                MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
-            else
-                MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
+            } else {
+                if(Preferences.shouldUseLocation(this)) // If not MM check if user allowed access
+                    MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
+                else
+                    MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
+            }
 
             mAdView.setVisibility(View.VISIBLE);
-        } else {
+        } else //If they have, hide the ad
             mAdView.setVisibility(View.GONE);
-        }
     }
 
     private void selectDrawerItem(MenuItem menuItem) {
@@ -457,7 +462,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                 });
     }
 
-    private static class ExitDialogFragment extends DialogFragment {
+    public static class ExitDialogFragment extends DialogFragment {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             return new AlertDialog.Builder(getActivity())
