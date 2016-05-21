@@ -1,33 +1,36 @@
 /*
-    This file is part of Melee Handbook.
+    This file is part of Handbook for Melee.
 
-    Melee Handbook is free software: you can redistribute it and/or modify
+    Handbook for Melee is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Melee Handbook is distributed in the hope that it will be useful,
+    Handbook for Melee is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Melee Handbook.  If not, see <http://www.gnu.org/licenses/>
+    along with Handbook for Melee.  If not, see <http://www.gnu.org/licenses/>
  */
 
 package com.thatkawaiiguy.meleehandbook;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -40,8 +43,6 @@ import android.widget.Toast;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.mopub.common.MoPub;
 import com.mopub.mobileads.MoPubView;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
@@ -89,15 +90,11 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         mAdView = (MoPubView) findViewById(R.id.adView);
-        if(!Preferences.hideAds(this)) {
-            MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
-            mAdView.setAdUnitId(getResources().getString(R.string.banner_ad_unit_id));
-            mAdView.loadAd();
-            mAdView.setAutorefreshEnabled(true);
-            mAdView.setVisibility(View.VISIBLE);
-        } else {
-            mAdView.setVisibility(View.GONE);
-        }
+
+        if(Build.VERSION.SDK_INT >= 23)
+            checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
+        else
+            setUpAds();
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -152,6 +149,21 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             AppRater.app_launched(this);
             if(Preferences.openNavLaunchEnabled(this))
                 mDrawer.openDrawer(Gravity.LEFT);
+        }
+    }
+
+    private void setUpAds() {
+        if(Preferences.hideAds(this)) {
+            if(checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+                MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
+            else
+                MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
+            mAdView.setAdUnitId(getResources().getString(R.string.banner_ad_unit_id));
+            mAdView.loadAd();
+            mAdView.setAutorefreshEnabled(true);
+            mAdView.setVisibility(View.VISIBLE);
+        } else {
+            mAdView.setVisibility(View.GONE);
         }
     }
 
@@ -417,7 +429,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                 });
     }
 
-    public static class ExitDialogFragment extends DialogFragment {
+    private static class ExitDialogFragment extends DialogFragment {
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             return new AlertDialog.Builder(getActivity())
@@ -437,5 +449,46 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                             })
                     .show();
         }
+    }
+
+    private void checkPermission(final String string) {
+        if(checkSelfPermission(string) != PackageManager.PERMISSION_GRANTED) {
+            if(!shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_COARSE_LOCATION)) {
+                showMessageOKCancel("Allow access to network location for ads?",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                requestPermissions(new String[]{string}, 420);
+                            }
+                        });
+                return;
+            }
+            requestPermissions(new String[]{string}, 420);
+        } else
+            setUpAds();
+    }
+
+    private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
+        final MainActivity activity = this;
+
+        new AlertDialog.Builder(MainActivity.this)
+                .setMessage(message)
+                .setPositiveButton("OK", okListener)
+                .setNegativeButton("Cancel", null)
+                .setOnCancelListener(new DialogInterface.OnCancelListener() {
+                    @Override
+                    public void onCancel(DialogInterface dialog) {
+                        Snackbar.make(activity.findViewById(R.id.container),"Location is requested for ads", Snackbar.LENGTH_SHORT);
+                    }
+                })
+                .create()
+                .show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        mAdView.setAutorefreshEnabled(true);
     }
 }

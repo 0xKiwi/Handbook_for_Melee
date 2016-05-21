@@ -1,18 +1,18 @@
 /*
-    This file is part of Melee Handbook.
+    This file is part of Handbook for Melee.
 
-    Melee Handbook is free software: you can redistribute it and/or modify
+    Handbook for Melee is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Melee Handbook is distributed in the hope that it will be useful,
+    Handbook for Melee is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Melee Handbook.  If not, see <http://www.gnu.org/licenses/>
+    along with Handbook for Melee.  If not, see <http://www.gnu.org/licenses/>
  */
 
 package com.thatkawaiiguy.meleehandbook.other;
@@ -104,7 +104,7 @@ public class ArrayHelper {
         return new String[]{"Aerial interrupt", "Chain grab",
                 "Crouch cancel", "Dash-dance",
                 "Directional Influence", "Fast falling", "Fox-trot",
-                "Jab reset", "L-canceling",
+                "Jab reset", "Jump-canceled grab", "L-canceling",
                 "Ledge-canceling", "Ledgedash",
                 "Ledge stall", "Moonwalk",
                 "No-impact landing", "Platform cancel", "Platform warp",
@@ -134,7 +134,7 @@ public class ArrayHelper {
                 "Helpless", "Hitbox", "Hitlag", "Hitstun", "IASA frames",
                 "Infinite", "Input lag", "Invisible ceiling glitch",
                 "Ironman", "It's not safe", "JV3/JV4 stock", "Janky",
-                "Johnny stock", "Johns", "Juggling", "Jump cancel", "Jump canceled grab",
+                "Johnny stock", "Johns", "Juggling", "Jump cancel",
                 "Junco combo",
                 "Kappa", "Ken combo", "Kreygasm", "Lag", "Landing lag",
                 "Lean drop", "Legalize PokeFloats", "lol m2k", "Love tap", "MacD", "Mangle",
@@ -323,8 +323,6 @@ public class ArrayHelper {
                 return res.getString(R.string.juggling_term_info);
             case "Jump cancel":
                 return res.getString(R.string.jcancel_term_info);
-            case "Jump canceled grab":
-                return res.getString(R.string.jcgrab_term_info);
             case "Junco combo":
                 return res.getString(R.string.junco_term_info);
             case "JV3/JV4 stock":
@@ -574,6 +572,8 @@ public class ArrayHelper {
                 return res.getString(R.string.ftrot_info_text);
             case "Jab reset":
                 return res.getString(R.string.jabreset_info_text);
+            case "Jump-canceled grab":
+                return res.getString(R.string.jcgrab_info_text);
             case "L-canceling":
                 return res.getString(R.string.lcancel_info_text);
             case "Ledgedash":

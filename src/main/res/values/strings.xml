@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    This file is part of Melee Handbook.
+    This file is part of Handbook for Melee.
 
-    Melee Handbook is free software: you can redistribute it and/or modify
+    Handbook for Melee is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Melee Handbook is distributed in the hope that it will be useful,
+    Handbook for Melee is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Melee Handbook.  If not, see <http://www.gnu.org/licenses/>
+    along with Handbook for Melee.  If not, see <http://www.gnu.org/licenses/>
 -->
 <resources>
-    <string name="app_name">Melee Handbook</string>
+    <string name="app_name">Handbook for Melee</string>
 
     <string name="debug_text">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
@@ -49,7 +49,7 @@
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="gplus">G+</string>
-    <string name="about_text">\t\t\tMelee Handbook v1.4.2
+    <string name="about_text">\t\t\tHandbook for Melee v1.4.2
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
@@ -59,6 +59,7 @@
     \n\t\t\t\twww.reddit.com/r/smashbros/wiki/bkam/
     \n
     \n\t\t\tAll thanks to:
+    \n\t\t\t\tZhu
     \n\t\t\t\tVesne
     \n\t\t\t\tssbwiki
     \n\t\t\t\tWobbles
@@ -1163,11 +1164,6 @@
     <string name="janky_term_info">
         Something that happens that is just wierd or complete BS. https://youtu.be/iF9_EpCGfSs
     </string>
-    <string name="jcgrab_term_info">
-        Abbreviated as JC grab, a jump canceled grab can be done by jumping immediately
-        followed by a grab. The character will slide a bit (depending on traction) and grab.
-        http://bit.ly/1Yoaslw
-    </string>
     <string name="johnnystock_term_info">
         When a player gets a grab and 0-deaths them from the grab.
     </string>
@@ -1939,6 +1935,19 @@
         they\'re around 40 or so depending on weight, and Jiggs\' jab 1 is an OLTR
         until near 100.
     ]]></string>
+    <string name="jcgrab_info_text"><![CDATA[<big><b>Jump-canceled grab</b></big>
+        <br>A jump-canceled grab (abbreviated as "JC grab") is a way of grabbing your opponent
+        that usually functions better than a dash grab. JC grabs usually have less startup and
+        cooldown lag compared to the normal dash grab and also usually have slightly larger
+        hitboxes than standard grab (though still smaller than actual dash-garb). When you
+        do a JC grab the character performs the standing grab animation while sliding
+        forward slightly (depending on traction). Fox and Falco can also perform it out
+        of their shine (Shine-grabbing).
+        <br>
+        <br><big><b>How to perform></b></big>
+        <br>In order to perform a JC grab you must jump with Up, X or Y and then immediately
+        click Z to cancel the jump with your grab.
+    ]]></string>
     <string name="lcancel_info_text"><![CDATA[<big><b>L-canceling</b></big>
         <br>Part of SHFFL, this is a technique that allows characters to act faster than usual when landing in the middle
         of an aerial attack. L-canceling is done
@@ -2042,7 +2051,6 @@
         <br>Zelda, Sheik, Fox, Falco, Mewtwo and Pikachu (possibly others as well?) can ledgestall with their up
         specials. Sheik\'s \"Shino Stall\", named after Japanese Sheik player Shino, is by far the easiest and
         most useful as her up special has innate intangibility, a strong hitbox and many movement options.
-        <br>The image displayed is Falco\'s Up-B ledgestall.
         <br>
         <br><b>How to perform</b>
         <br>This technique can be performed by putting the control stick back, so you ledge drop, then jumping and

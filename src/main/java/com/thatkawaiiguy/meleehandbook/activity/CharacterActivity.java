@@ -1,18 +1,18 @@
 /*
-    This file is part of Melee Handbook.
+    This file is part of Handbook for Melee.
 
-    Melee Handbook is free software: you can redistribute it and/or modify
+    Handbook for Melee is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Melee Handbook is distributed in the hope that it will be useful,
+    Handbook for Melee is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Melee Handbook.  If not, see <http://www.gnu.org/licenses/>
+    along with Handbook for Melee.  If not, see <http://www.gnu.org/licenses/>
  */
 
 package com.thatkawaiiguy.meleehandbook.activity;
