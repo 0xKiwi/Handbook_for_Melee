@@ -940,7 +940,7 @@
        An improvement in a character or a certain aspect of a character, usually through an update.
     </string>
     <string name="buster_term_info">
-        A fraud; someone who didn't meet expecations.
+        A fraud; someone who didn\'t meet expectaions.
     </string>
     <string name="butter_term_info">
         When a character charges a smash attack, they turn yellow like butter.
@@ -993,7 +993,7 @@
         winner for another game in the same set. It was named after the smasher Scamp.
     </string>
     <string name="deedah_term_info">
-        A nickname for the Falcon Punch, originating from when Mango's son said the phrase while using the move on stream. http://oddshot.tv/shot/mang0-2016030804425983
+        A nickname for the Falcon Punch, originating from when Mango\'s son said the phrase while using the move on stream. http://oddshot.tv/shot/mang0-2016030804425983
     </string>
     <string name="disjointedhb_term_info">
         A hitbox that is separated from a character\'s hurtbox, such as Marth\'s sword.
@@ -1039,7 +1039,7 @@
     <string name="edgeguard_term_info">
         The attempt to prevent an off-stage recovering opponent from reaching the stage, thus causing them to be KO\'d.
     </string>
-    <<string name="edgehog_term_info">
+    <string name="edgehog_term_info">
         Due to only one character being able to hold onto the ledge, you can
         cause your opponent to miss it when they are recovering due to you currently taking it.
     </string>
@@ -1105,11 +1105,14 @@
         the information provided in this app before, during, and after playing. https://youtu.be/9JTqydWaioc
     </string>
     <string name="helicrash_term_info">
-        When a Fox or Falco SD\'s by falling off the stage and using their fair. The term's name is due to
+        When a Fox or Falco SD\'s by falling off the stage and using their fair. The term\'s name is due to
         the move looking like a helicopter.
     </string>
     <string name="hitbox_term_info">
-        The main structure for how attacks are executed in most fighting games. Attacks have one or more hitboxes associated with them, and when these hitboxes overlap with a target\'s hurtbox, the attack is considered a hit. Hitboxes are invisible spheres and usually have the same shape as the attack's animation.
+        The main structure for how attacks are executed in most fighting games. Attacks have one or more hitboxes
+        associated with them, and when these hitboxes overlap with a target\'s hurtbox, the
+        attack is considered a hit. Hitboxes are invisible spheres and usually have the
+        same shape as the attack\'s animation.
     </string>
     <string name="hitlag_term_info">
         The frames during which a character will freeze for a period of time after connecting with an attack. If an attack hits successfully, both the attacker and target are frozen in time for a number of frames. Also known as freeze frames.
@@ -1133,7 +1136,10 @@
         and it being displayed on the screen or the delay between pressing a button and seeing the game react.
     </string>
     <string name="invisibleceil_term_info">
-        A glitch in Melee that resets the victim's vertical velocity to zero upon activation. Most commonly, this makes a character knocked upward appear to get hit by an invisible ceiling, seemingly being stage spiked downward. This glitch infamously resulted in S2J losing a set to Abate at The Big House 5. http://oddshot.tv/shot/vgbootcamp-2015100417555965
+        A glitch in Melee that resets the victim\'s vertical velocity to zero upon activation.
+        Most commonly, this makes a character knocked upward appear to get hit by an invisible
+        ceiling, seemingly being stage spiked downward. This glitch infamously resulted in
+        S2J losing a set to Abate at The Big House 5. http://oddshot.tv/shot/vgbootcamp-2015100417555965
         http://www.gfycat.com/GregariousHauntingDrafthorse
     </string>
     <string name="ironman_term_info">
@@ -1147,10 +1153,6 @@
     </string>
     <string name="janky_term_info">
         Something that happens that is just weird, buggy, or not working as you would expect it to. https://youtu.be/iF9_EpCGfSs
-    </string>
-    <string name="jcgrab_term_info">
-        A technique where a character interrupts a dash or run with a jump, which itself is then jump-canceled with a grab during the jumpsquat animation. This results in the character using their standing grab while maintaining some momentum from their dash. This is sometimes abbreviated as JC grab.
-        http://bit.ly/1Yoaslw
     </string>
     <string name="johnnystock_term_info">
         When a player gets a 0-death with just one combo. The term is named after Johnny Kim, aka S2J.
@@ -1936,9 +1938,10 @@
         forward slightly (depending on traction). Fox and Falco can also perform it out
         of their shine (Shine-grabbing).
         <br>
-        <br><big><b>How to perform></b></big>
+        <br><big><b>How to perform</b></big>
         <br>In order to perform a JC grab you must jump with Up, X or Y and then immediately
-        click Z to cancel the jump with your grab.
+        click Z to cancel the jump with your grab. It can be performed standing still or while dashing,
+        the latter being the preferred form of usage.
     ]]></string>
     <string name="lcancel_info_text"><![CDATA[<big><b>L-canceling</b></big>
         <br>Part of SHFFL, this is a technique that allows characters to act faster than usual when landing in the middle

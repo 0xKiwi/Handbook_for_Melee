@@ -18,6 +18,7 @@
 package com.thatkawaiiguy.meleehandbook;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -91,12 +92,33 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         mAdView = (MoPubView) findViewById(R.id.adView);
 
-        if(Build.VERSION.SDK_INT >= 23)
-            checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
-        else
-            setUpAds();
-
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        if(!Preferences.hideAds(this)) {
+            if(Preferences.shouldAskLocation(this)) {
+                if(Build.VERSION.SDK_INT >= 23)
+                    checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
+                else {
+                    showMessageOKCancel("Allow access to network location for ads?",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Preferences.setLocationUse(getApplicationContext(), true);
+                                    Preferences.setLocationAsk(getApplicationContext(), false);
+                                    setUpAds();
+                                }
+                            }, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Preferences.setLocationUse(getApplicationContext(), false);
+                                    Preferences.setLocationAsk(getApplicationContext(), false);
+                                    setUpAds();
+                                }
+                            });
+                }
+            } else
+                setUpAds();
+        }
 
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
@@ -153,14 +175,20 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     private void setUpAds() {
-        if(Preferences.hideAds(this)) {
-            if(checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
-                MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
-            else
-                MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
+        if(!Preferences.hideAds(this)) {
             mAdView.setAdUnitId(getResources().getString(R.string.banner_ad_unit_id));
             mAdView.loadAd();
-            mAdView.setAutorefreshEnabled(true);
+            if(Build.VERSION.SDK_INT >= 23) {
+                if(checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) ==
+                        PackageManager.PERMISSION_GRANTED)
+                    MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
+                else
+                    MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
+            } else if(Preferences.shouldUseLocation(this))
+                MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
+            else
+                MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
+
             mAdView.setVisibility(View.VISIBLE);
         } else {
             mAdView.setVisibility(View.GONE);
@@ -452,6 +480,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     private void checkPermission(final String string) {
+        final MainActivity activity = this;
         if(checkSelfPermission(string) != PackageManager.PERMISSION_GRANTED) {
             if(!shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_COARSE_LOCATION)) {
                 showMessageOKCancel("Allow access to network location for ads?",
@@ -459,28 +488,29 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 requestPermissions(new String[]{string}, 420);
+                                setUpAds();
+                            }
+                        }, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Snackbar.make(activity.findViewById(R.id.container), "Location is" +
+                                        " " +
+                                        "requested for ads", Snackbar.LENGTH_SHORT);
+                                Preferences.setLocationAsk(activity, false);
+                                setUpAds();
                             }
                         });
-                return;
             }
-            requestPermissions(new String[]{string}, 420);
         } else
             setUpAds();
     }
 
-    private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
-        final MainActivity activity = this;
-
+    private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener,
+                                     DialogInterface.OnClickListener cancelListener) {
         new AlertDialog.Builder(MainActivity.this)
                 .setMessage(message)
                 .setPositiveButton("OK", okListener)
-                .setNegativeButton("Cancel", null)
-                .setOnCancelListener(new DialogInterface.OnCancelListener() {
-                    @Override
-                    public void onCancel(DialogInterface dialog) {
-                        Snackbar.make(activity.findViewById(R.id.container),"Location is requested for ads", Snackbar.LENGTH_SHORT);
-                    }
-                })
+                .setNegativeButton("Cancel", cancelListener)
                 .create()
                 .show();
     }
@@ -488,7 +518,5 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     @Override
     protected void onResume() {
         super.onResume();
-
-        mAdView.setAutorefreshEnabled(true);
     }
 }
