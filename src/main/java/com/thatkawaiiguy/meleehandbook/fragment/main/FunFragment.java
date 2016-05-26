@@ -44,8 +44,6 @@ public class FunFragment extends Fragment {
 
     private boolean canStart = true;
 
-    private RecyclerView mRecyclerView;
-
     public static FunFragment newInstance() {
         Bundle args = new Bundle();
         FunFragment fragment = new FunFragment();
@@ -59,7 +57,8 @@ public class FunFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
         rootView.setTag(TAG);
 
-        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         if(!Preferences.hideAds(getActivity())) {
             AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
@@ -70,14 +69,13 @@ public class FunFragment extends Fragment {
                     getResources().getString(R.string.native_on_main_placement)/*Placement key*/
             );
 
-            avocarrotInstreamRecyclerView.setSandbox(true);
+            avocarrotInstreamRecyclerView.setSandbox(false);
             avocarrotInstreamRecyclerView.setFrequency(3, 9);
-            avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+            avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-            mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+            recyclerView.setAdapter(avocarrotInstreamRecyclerView);
 
-            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                     .OnItemClickListener() {
                 @Override
                 public void onItemClicked(int position) {
@@ -90,12 +88,10 @@ public class FunFragment extends Fragment {
                             }
                 }
             });
-            mRecyclerView.setHasFixedSize(true);
         } else {
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-            mRecyclerView.setAdapter(new TextAdapter(funs));
+            recyclerView.setAdapter(new TextAdapter(funs));
 
-            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                     .OnItemClickListener() {
                 @Override
                 public void onItemClicked(int position) {
@@ -105,9 +101,9 @@ public class FunFragment extends Fragment {
                     }
                 }
             });
-
-            mRecyclerView.setHasFixedSize(true);
         }
+
+        recyclerView.setHasFixedSize(true);
 
         return rootView;
     }

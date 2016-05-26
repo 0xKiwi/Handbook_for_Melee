@@ -36,7 +36,7 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class TechTabActivity extends AppCompatActivity {
 
-    String techPicked;
+    private String techPicked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

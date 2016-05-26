@@ -17,21 +17,17 @@
 
 package com.thatkawaiiguy.meleehandbook;
 
-import android.Manifest;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -44,8 +40,6 @@ import android.widget.Toast;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
-import com.google.android.gms.ads.MobileAds;
-import com.mopub.common.MoPub;
 import com.mopub.mobileads.MoPubView;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
@@ -71,9 +65,9 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     private CharSequence mTitle;
 
-    MoPubView mAdView;
+    private MoPubView mAdView;
 
-    BillingProcessor bp;
+    private BillingProcessor bp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         );
 
         //mDrawer.setDrawerListener(mDrawerToggle);
-        mDrawer.setDrawerListener(new DrawerLayout.DrawerListener() {
+        mDrawer.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -321,7 +315,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     private void sendToast() {
         if(Preferences.showToast(this)) {
-            Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You" +
+            Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You "+
                             "don't want to have to go" +
                             " to the doctor.",
                     Toast.LENGTH_SHORT).show();
@@ -429,10 +423,5 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                             })
                     .show();
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
     }
 }

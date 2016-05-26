@@ -30,9 +30,6 @@ import android.view.ViewGroup;
 
 import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
 import com.avocarrot.androidsdk.AvocarrotUser;
-import com.google.android.gms.ads.MobileAds;
-import com.thatkawaiiguy.meleehandbook.MainActivity;
-import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
@@ -49,8 +46,6 @@ public class TechFragment extends Fragment {
 
     private boolean canStart = true;
 
-    private RecyclerView mRecyclerView;
-
     public static TechFragment newInstance() {
         Bundle args = new Bundle();
         TechFragment fragment = new TechFragment();
@@ -64,8 +59,8 @@ public class TechFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
         rootView.setTag(TAG);
 
-        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         AvocarrotUser.setGender(AvocarrotUser.Gender.MALE);
 
@@ -79,13 +74,13 @@ public class TechFragment extends Fragment {
                 Key */
             );
 
-            avocarrotInstreamRecyclerView.setSandbox(true);
+            avocarrotInstreamRecyclerView.setSandbox(false);
             avocarrotInstreamRecyclerView.setFrequency(3, 11);
-            avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+            avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
-            mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+            recyclerView.setAdapter(avocarrotInstreamRecyclerView);
 
-            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                     .OnItemClickListener() {
                 @Override
                 public void onItemClicked(int position) {
@@ -107,9 +102,9 @@ public class TechFragment extends Fragment {
                 }
             });
         } else {
-            mRecyclerView.setAdapter(new TextAdapter(techs));
+            recyclerView.setAdapter(new TextAdapter(techs));
 
-            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                     .OnItemClickListener() {
                 @Override
                 public void onItemClicked(int position) {
@@ -129,7 +124,7 @@ public class TechFragment extends Fragment {
             });
         }
 
-        mRecyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
 
         return rootView;
     }

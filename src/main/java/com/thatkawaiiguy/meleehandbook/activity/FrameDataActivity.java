@@ -58,7 +58,7 @@ public class FrameDataActivity extends AppCompatActivity {
     private boolean paused = false;
     private boolean running = false;
 
-    InputStream is = null;
+    private InputStream is = null;
     private String[] filelist = {"#@#", "#@$@#"};
 
     private Bitmap bitmap;
@@ -288,7 +288,7 @@ public class FrameDataActivity extends AppCompatActivity {
         public Runnable getRunnable() {return runnable;}
     }
 
-    class ASyncTask extends AsyncTask<Void, Void, Void>{
+    private class ASyncTask extends AsyncTask<Void, Void, Void>{
         @Override
         protected Void doInBackground(Void... params) {
             try {

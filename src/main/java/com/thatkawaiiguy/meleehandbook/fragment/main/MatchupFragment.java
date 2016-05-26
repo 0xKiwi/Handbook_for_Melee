@@ -50,9 +50,6 @@ public class MatchupFragment extends Fragment {
     private TextView infoLeft;
     private TextView infoRight;
 
-    private TextView muInfoLeft;
-    private TextView muInfoRight;
-
     private ImageButton muImgLeft;
     private ImageButton muImgRight;
 
@@ -78,9 +75,9 @@ public class MatchupFragment extends Fragment {
         leftView = view.findViewById(R.id.viewleft);
         rightView = view.findViewById(R.id.viewright);
         infoLeft = (TextView) view.findViewById(R.id.muTextLeft);
-        muInfoLeft = (TextView) view.findViewById(R.id.muInfoLeft);
+        TextView muInfoLeft = (TextView) view.findViewById(R.id.muInfoLeft);
         infoRight = (TextView) view.findViewById(R.id.muTextRight);
-        muInfoRight = (TextView) view.findViewById(R.id.muInfoRight);
+        TextView muInfoRight = (TextView) view.findViewById(R.id.muInfoRight);
         spinnerLeft = (Spinner) view.findViewById(R.id.spinnerLeft);
         spinnerRight = (Spinner) view.findViewById(R.id.spinnerRight);
         muImgRight = (ImageButton) view.findViewById(R.id.muImgRight);

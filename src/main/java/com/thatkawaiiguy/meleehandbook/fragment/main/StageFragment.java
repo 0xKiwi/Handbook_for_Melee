@@ -29,7 +29,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
-import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
 import com.thatkawaiiguy.meleehandbook.adapter.IconAdapter;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
@@ -41,8 +40,6 @@ import com.thatkawaiiguy.meleehandbook.other.Preferences;
 public class StageFragment extends Fragment {
 
     private boolean canStart = true;
-
-    private RecyclerView mRecyclerView;
 
     private final String[] stages = ArrayHelper.getMapArray();
 
@@ -58,8 +55,8 @@ public class StageFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
 
-        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         if(!Preferences.hideAds(getActivity())) {
             AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
@@ -74,9 +71,9 @@ public class StageFragment extends Fragment {
             avocarrotInstreamRecyclerView.setFrequency(3, 9);
             avocarrotInstreamRecyclerView.setLogger(true, "ALL");
 
-            mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+            recyclerView.setAdapter(avocarrotInstreamRecyclerView);
 
-            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                     .OnItemClickListener() {
                 @Override
                 public void onItemClicked(int position) {
@@ -91,9 +88,9 @@ public class StageFragment extends Fragment {
                 }
             });
         } else {
-            mRecyclerView.setAdapter(new IconAdapter(stages));
+            recyclerView.setAdapter(new IconAdapter(stages));
 
-            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                     .OnItemClickListener() {
                 @Override
                 public void onItemClicked(int position) {
@@ -106,7 +103,7 @@ public class StageFragment extends Fragment {
             });
         }
 
-        mRecyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
 
         return rootView;
     }

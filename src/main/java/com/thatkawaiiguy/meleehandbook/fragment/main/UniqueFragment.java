@@ -29,7 +29,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
-import com.avocarrot.androidsdk.AvocarrotUser;
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
 import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
@@ -48,16 +47,14 @@ import java.util.ArrayList;
 public class UniqueFragment extends Fragment {
     private String[] parentList;
 
+    private ExpandableAdapter mExpandableAdapter;
+
     private final String djc = "Double jump cancel";
     private final String upbturn = "Up-B turnaround";
     private final String jumprefresh = "Double jump refresh";
     private final String psspike = "Princess/Swordsman spiking";
 
-    private ExpandableAdapter mExpandableAdapter;
-
     private boolean canStart = true;
-
-    private RecyclerView mRecyclerView;
 
     private final String[] uniqueTechs = ArrayHelper.getUniqueArray();
 
@@ -75,14 +72,16 @@ public class UniqueFragment extends Fragment {
 
         parentList = ArrayHelper.getUniqueTechCharArray(getActivity());
 
-        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        mExpandableAdapter = new ExpandableAdapter(getActivity(), setUpData(), false);
 
         if(Preferences.groupByCharacterEnabled(getActivity())) {
             if(!Preferences.hideAds(getActivity())) {
                 AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
                         AvocarrotInstreamRecyclerView(
-                        new ExpandableAdapter(getActivity(), setUpData(), false),
+                        mExpandableAdapter,
                         getActivity(),                   /* reference to your Activity */
                         getResources().getString(R.string.avocarrot_app_id), /* this is your
                         Avocarrot API Key */
@@ -91,13 +90,13 @@ public class UniqueFragment extends Fragment {
                 Key */
                 );
 
-                avocarrotInstreamRecyclerView.setSandbox(true);
+                avocarrotInstreamRecyclerView.setSandbox(false);
                 avocarrotInstreamRecyclerView.setFrequency(3, 8);
-                avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+                avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
-                mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+                recyclerView.setAdapter(avocarrotInstreamRecyclerView);
 
-                ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                         .OnItemClickListener() {
                     @Override
                     public void onItemClicked(int position) {
@@ -114,9 +113,9 @@ public class UniqueFragment extends Fragment {
                     }
                 });
             } else {
-                mRecyclerView.setAdapter(new ExpandableAdapter(getActivity(), setUpData(), false));
+                recyclerView.setAdapter(new ExpandableAdapter(getActivity(), setUpData(), false));
 
-                ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                         .OnItemClickListener() {
                     @Override
                     public void onItemClicked(int position) {
@@ -138,13 +137,13 @@ public class UniqueFragment extends Fragment {
                         getResources().getString(R.string.native_on_main_placement)/*Placement key*/
                 );
 
-                avocarrotInstreamRecyclerView.setSandbox(true);
+                avocarrotInstreamRecyclerView.setSandbox(false);
                 avocarrotInstreamRecyclerView.setFrequency(3, 11);
-                avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+                avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
-                mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+                recyclerView.setAdapter(avocarrotInstreamRecyclerView);
 
-                ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                         .OnItemClickListener() {
                     @Override
                     public void onItemClicked(int position) {
@@ -168,9 +167,9 @@ public class UniqueFragment extends Fragment {
                     }
                 });
             } else {
-                mRecyclerView.setAdapter(new TextAdapter(uniqueTechs));
+                recyclerView.setAdapter(new TextAdapter(uniqueTechs));
 
-                ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                         .OnItemClickListener() {
                     @Override
                     public void onItemClicked(int position) {
@@ -190,7 +189,7 @@ public class UniqueFragment extends Fragment {
             }
         }
 
-        mRecyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
 
         return rootView;
     }
@@ -204,6 +203,7 @@ public class UniqueFragment extends Fragment {
             switch(parentList[i]) {
                 case "Ganondorf":
                 case "Captain Falcon": {
+                    String jumprefresh = "Double jump refresh";
                     customChildObject.setChildText(jumprefresh);
                     childObjectList.add(customChildObject);
                 }

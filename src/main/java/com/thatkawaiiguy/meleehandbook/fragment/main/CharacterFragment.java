@@ -31,7 +31,6 @@ import android.view.ViewGroup;
 import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterFrameActivity;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterActivity;
-import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
 import com.thatkawaiiguy.meleehandbook.adapter.IconAdapter;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
@@ -42,8 +41,6 @@ import com.thatkawaiiguy.meleehandbook.other.Preferences;
 public class CharacterFragment extends Fragment {
 
     private boolean canStart = true;
-
-    private RecyclerView mRecyclerView;
 
     private String[] characters;
 
@@ -60,8 +57,9 @@ public class CharacterFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
         characters = ArrayHelper.getCharacterArray(getActivity(), true);
 
-        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
         if(!Preferences.hideAds(getActivity())) {
             AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
                     AvocarrotInstreamRecyclerView(
@@ -71,13 +69,13 @@ public class CharacterFragment extends Fragment {
                     getResources().getString(R.string.native_on_main_placement)/*Placement key*/
             );
 
-            avocarrotInstreamRecyclerView.setSandbox(true);
+            avocarrotInstreamRecyclerView.setSandbox(false);
             avocarrotInstreamRecyclerView.setFrequency(3, 10);
-            avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+            avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
-            mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+            recyclerView.setAdapter(avocarrotInstreamRecyclerView);
 
-            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                     .OnItemClickListener() {
                 @Override
                 public void onItemClicked(int position) {
@@ -97,9 +95,9 @@ public class CharacterFragment extends Fragment {
                 }
             });
         } else {
-            mRecyclerView.setAdapter(new IconAdapter(characters));
+            recyclerView.setAdapter(new IconAdapter(characters));
 
-            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
                     .OnItemClickListener() {
                 @Override
                 public void onItemClicked(int position) {
@@ -116,7 +114,7 @@ public class CharacterFragment extends Fragment {
                 }
             });
         }
-        mRecyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
 
         return rootView;
     }
