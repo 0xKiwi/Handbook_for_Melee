@@ -22,14 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <!--<com.mopub.mobileads.MoPubView
-            android:id="@+id/adView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center_horizontal|bottom"
-            android:visibility="visible"/>-->
-
         <RelativeLayout
             android:id="@+id/fragmentLayout"
             android:layout_width="fill_parent"

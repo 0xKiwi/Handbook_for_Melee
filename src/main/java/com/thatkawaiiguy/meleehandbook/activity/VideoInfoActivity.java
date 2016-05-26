@@ -70,16 +70,7 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
 
         mAdView = (MoPubView) findViewById(R.id.adView);
         if(!Preferences.hideAds(this)) {
-            if(Build.VERSION.SDK_INT >= 23) {
-                if(checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) ==
-                        PackageManager.PERMISSION_GRANTED)
-                    MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
-                else
-                    MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
-            } else if(Preferences.shouldUseLocation(this))
-                MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
-            else
-                MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
+            MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
             mAdView.setAdUnitId(getResources().getString(R.string.tech_banner_ad_unit_id));
             mAdView.loadAd();
             mAdView.setAutorefreshEnabled(true);

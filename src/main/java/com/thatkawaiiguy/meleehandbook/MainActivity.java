@@ -91,36 +91,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        //mAdView = (MoPubView) findViewById(R.id.adView);
-
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        /*if(!Preferences.hideAds(this)) {
-            if(Preferences.shouldAskLocation(this)) {
-                if(Build.VERSION.SDK_INT >= 23)
-                    checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
-                else {
-                    showMessageOKCancel("Allow access to network location for ads?",
-                            new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    Preferences.setLocationUse(getApplicationContext(), true);
-                                    Preferences.setLocationAsk(getApplicationContext(), false);
-                                    setUpAds();
-                                }
-                            }, new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    Preferences.setLocationUse(getApplicationContext(), false);
-                                    Preferences.setLocationAsk(getApplicationContext(), false);
-                                    setUpAds();
-                                }
-                            });
-                }
-            } else
-                setUpAds();
-        } else
-            setUpAds();*/
 
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
@@ -174,31 +145,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             if(Preferences.openNavLaunchEnabled(this))
                 mDrawer.openDrawer(Gravity.LEFT);
         }
-    }
-
-    private void setUpAds() {
-        //Check if user has purchased ad removal
-        if(!Preferences.hideAds(this)) {
-            mAdView.setAdUnitId(getResources().getString(R.string.banner_ad_unit_id));
-            mAdView.loadAd();
-            //Check if on marshmallow
-            if(Build.VERSION.SDK_INT >= 23) {
-                //If so check system permission access, if denied don't use data
-                if(checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) ==
-                        PackageManager.PERMISSION_GRANTED)
-                    MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
-                else
-                    MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
-            } else {
-                if(Preferences.shouldUseLocation(this)) // If not MM check if user allowed access
-                    MoPub.setLocationAwareness(MoPub.LocationAwareness.TRUNCATED);
-                else
-                    MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
-            }
-
-            mAdView.setVisibility(View.VISIBLE);
-        } else //If they have, hide the ad
-            mAdView.setVisibility(View.GONE);
     }
 
     private void selectDrawerItem(MenuItem menuItem) {
@@ -483,42 +429,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                             })
                     .show();
         }
-    }
-
-    private void checkPermission(final String string) {
-        final MainActivity activity = this;
-        if(checkSelfPermission(string) != PackageManager.PERMISSION_GRANTED) {
-            if(!shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_COARSE_LOCATION)) {
-                showMessageOKCancel("Allow access to network location for ads?",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                requestPermissions(new String[]{string}, 420);
-                                setUpAds();
-                            }
-                        }, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Snackbar.make(activity.findViewById(R.id.container), "Location is" +
-                                        " " +
-                                        "requested for ads", Snackbar.LENGTH_SHORT);
-                                Preferences.setLocationAsk(activity, false);
-                                setUpAds();
-                            }
-                        });
-            }
-        } else
-            setUpAds();
-    }
-
-    private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener,
-                                     DialogInterface.OnClickListener cancelListener) {
-        new AlertDialog.Builder(MainActivity.this)
-                .setMessage(message)
-                .setPositiveButton("OK", okListener)
-                .setNegativeButton("Cancel", cancelListener)
-                .create()
-                .show();
     }
 
     @Override

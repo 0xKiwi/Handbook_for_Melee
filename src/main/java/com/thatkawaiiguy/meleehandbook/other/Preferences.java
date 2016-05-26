@@ -125,24 +125,6 @@ public class Preferences {
         return sortByTier(context);
     }
 
-    public static boolean shouldAskLocation(Context context){
-        return askLocation(context);
-    }
-
-    public static void setLocationAsk(Context context, boolean hide) {
-        PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean
-                ("location", hide).apply();
-    }
-
-    public static boolean shouldUseLocation(Context context){
-        return useLocation(context);
-    }
-
-    public static void setLocationUse(Context context, boolean hide) {
-        PreferenceManager.getDefaultSharedPreferences(context).edit().putBoolean
-                ("locationuse", hide).apply();
-    }
-
     public static boolean groupByCharacterEnabled(Context context){
         return groupByCharacter(context);
     }
@@ -198,16 +180,6 @@ public class Preferences {
     private static String textSize(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
                 .getString(context.getString(R.string.pref_textsize), "14");
-    }
-
-    private static boolean askLocation(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean("location", true);
-    }
-
-    private static boolean useLocation(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean("locationuse", false);
     }
 
     private static boolean groupByCharacter(Context context) {
