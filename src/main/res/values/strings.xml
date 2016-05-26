@@ -781,7 +781,7 @@
         same time), and let the stick reset to neutral, then perform the smash side special again.
         <br>This technique should be possible on FoD, Yoshi\'s Story and FD. Other stages too.
     ]]></string>
-    <string name="waveshine_info_text"><![CDATA[big><b>Waveshine</b></big>
+    <string name="waveshine_info_text"><![CDATA[<big><b>Waveshine</b></big>
         <br>A waveshine is a wavedash done immediately out of a shine.
         It can be done by Fox and Falco, and requires a very high level of tech skill as
         it is very demanding to implement it into your game.

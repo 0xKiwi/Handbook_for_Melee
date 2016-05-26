@@ -48,13 +48,13 @@ import com.thatkawaiiguy.meleehandbook.other.Preferences;
 public class VideoInfoActivity extends AppCompatActivity implements BillingProcessor
         .IBillingHandler {
 
-    String optionPicked = "";
+    private String optionPicked = "";
 
-    MutedVideoView infoVid;
+    private MutedVideoView infoVid;
 
-    BillingProcessor bp;
+    private BillingProcessor bp;
 
-    MoPubView mAdView;
+    private MoPubView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +104,28 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
         text.setText(Html.fromHtml(ArrayHelper.getInfoString(optionPicked, this)));
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize
                 (this)));
+
+        final int oldStatusColor = getWindow().getStatusBarColor();
+        getWindow().setStatusBarColor(0x00000000);
+
+        final VideoInfoActivity activity = this;
+        final int vidHeight = infoVid.getHeight();
+        final int abheight = getActionBarHeight();
+
+        if(Build.VERSION.SDK_INT >= 21) {
+            ((NestedScrollView) findViewById(R.id.video_scrollView))
+                    .setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+                        @Override
+                        public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int
+                                oldScrollX, int oldScrollY) {
+                            if(scrollY < vidHeight - activity
+                                    .getStatusBarHeight() - abheight)
+                                activity.getWindow().setStatusBarColor(0x00000000);
+                            else
+                                activity.getWindow().setStatusBarColor(oldStatusColor);
+                        }
+                    });
+        }
     }
 
     private void setVideo() {
@@ -408,5 +430,25 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
 
         if(mAdView != null)
             mAdView.destroy();
+    }
+
+    private int getStatusBarHeight() {
+        int result = 0;
+        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if(resourceId > 0) {
+            result = getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
+    }
+
+    private int getActionBarHeight(){
+        int actionBarHeight = 0;
+
+        TypedValue tv = new TypedValue();
+        if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true))
+        {
+            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
+        }
+        return actionBarHeight;
     }
 }

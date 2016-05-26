@@ -26,6 +26,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.ads.MobileAds;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
@@ -78,7 +79,6 @@ public class TechFragment extends Fragment {
                 }
             }
         });
-        mRecyclerView.setHasFixedSize(true);
 
         return rootView;
     }

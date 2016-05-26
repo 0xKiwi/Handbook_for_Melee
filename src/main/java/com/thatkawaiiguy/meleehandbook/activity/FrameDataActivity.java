@@ -18,7 +18,9 @@
 package com.thatkawaiiguy.meleehandbook.activity;
 
 import android.app.DialogFragment;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -55,6 +57,14 @@ public class FrameDataActivity extends AppCompatActivity {
 
     private boolean paused = false;
     private boolean running = false;
+
+    InputStream is = null;
+    private String[] filelist = {"#@#", "#@$@#"};
+
+    private Bitmap bitmap;
+
+    private String landLag = "";
+    private String iasaString = "";
 
     private String movePicked = "";
     private String characterPicked = "";
@@ -150,107 +160,7 @@ public class FrameDataActivity extends AppCompatActivity {
     }
 
     private void doStuff() {
-        InputStream is = null;
-        String[] filelist = {"#@#", "#@$@#"};
-        try {
-            is = getResources().getAssets().open(characterPicked + File.separator +
-                    movePicked + File.separator + frame + ".jpg");
-            filelist = getResources().getAssets().list(characterPicked + File.separator +
-                    movePicked);
-        } catch(IOException e) {
-            e.printStackTrace();
-        }
-        mTotal = filelist.length;
-        totalFrame.setText(String.valueOf(mTotal));
-
-        frameImage.setImageBitmap(BitmapFactory.decodeStream(is));
-
-        landingLag.setText(FrameDataHelper.getLandLag(characterPickedTitle, movePicked));
-        iasa.setText(FrameDataHelper.getIASA(characterPickedTitle, movePicked));
-
-        firstBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!running) {
-                    playBtn.setBackgroundResource(R.drawable.playicon);
-                    frame = 0;
-                    setFrame();
-                } else {
-                    interruptPlay();
-                    firstBtn.performClick();
-                }
-            }
-        });
-
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!running) {
-                    playBtn.setBackgroundResource(R.drawable.playicon);
-                    if(frame > 0) {
-                        frame--;
-                        setFrame();
-                    }
-                } else {
-                    interruptPlay();
-                    backBtn.performClick();
-                }
-            }
-        });
-        backBtn.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                if(!running) {
-                    playBtn.setBackgroundResource(R.drawable.playicon);
-                    if(frame >= 10) {
-                        frame -= 10;
-                        setFrame();
-                    }
-                } else {
-                    interruptPlay();
-                    backBtn.performLongClick();
-                }
-                return true;
-            }
-        });
-
-        nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!running) {
-                    playBtn.setBackgroundResource(R.drawable.playicon);
-                    if(frame < Integer.parseInt((String) totalFrame.getText()) - 1) {
-                        frame++;
-                        setFrame();
-                    }
-                } else {
-                    interruptPlay();
-                    nextBtn.performClick();
-                }
-            }
-        });
-        nextBtn.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                if(!running) {
-                    playBtn.setBackgroundResource(R.drawable.playicon);
-                    if(frame <= Integer.parseInt((String) totalFrame.getText()) - 11) {
-                        frame += 10;
-                        setFrame();
-                    } else {
-                        frame = Integer.parseInt((String) totalFrame.getText()) - 1;
-                        setFrame();
-                    }
-                } else {
-                    interruptPlay();
-                    nextBtn.performLongClick();
-                }
-                return true;
-            }
-        });
-
-        playBtn.setOnClickListener(listener);
-        playBtn.setOnLongClickListener(longListener);
+        new ASyncTask().execute();
     }
 
     @Override
@@ -289,7 +199,7 @@ public class FrameDataActivity extends AppCompatActivity {
         super.onStop();
     }
 
-    class ClickListener implements View.OnClickListener {
+    private class ClickListener implements View.OnClickListener {
 
         final Handler handler = new Handler();
         final Runnable runnable = new Runnable() {
@@ -333,7 +243,7 @@ public class FrameDataActivity extends AppCompatActivity {
         public Runnable getRunnable() {return runnable;}
     }
 
-    class LongClickListener implements View.OnLongClickListener {
+    private class LongClickListener implements View.OnLongClickListener {
 
         final Handler handler = new Handler();
         final Runnable runnable = new Runnable() {
@@ -376,5 +286,121 @@ public class FrameDataActivity extends AppCompatActivity {
         public Handler getHandler() {return handler;}
 
         public Runnable getRunnable() {return runnable;}
+    }
+
+    class ASyncTask extends AsyncTask<Void, Void, Void>{
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                is = getResources().getAssets().open(characterPicked + File.separator +
+                        movePicked + File.separator + frame + ".jpg");
+                filelist = getResources().getAssets().list(characterPicked + File.separator +
+                        movePicked);
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+
+            mTotal = filelist.length;
+
+            landLag= FrameDataHelper.getLandLag(characterPickedTitle, movePicked);
+            iasaString = FrameDataHelper.getIASA(characterPickedTitle, movePicked);
+            bitmap = BitmapFactory.decodeStream(is);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            totalFrame.setText(String.valueOf(mTotal));
+
+            frameImage.setImageBitmap(bitmap);
+
+            landingLag.setText(landLag);
+            iasa.setText(iasaString);
+
+            firstBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(!running) {
+                        playBtn.setBackgroundResource(R.drawable.playicon);
+                        frame = 0;
+                        setFrame();
+                    } else {
+                        interruptPlay();
+                        firstBtn.performClick();
+                    }
+                }
+            });
+
+            backBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(!running) {
+                        playBtn.setBackgroundResource(R.drawable.playicon);
+                        if(frame > 0) {
+                            frame--;
+                            setFrame();
+                        }
+                    } else {
+                        interruptPlay();
+                        backBtn.performClick();
+                    }
+                }
+            });
+            backBtn.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    if(!running) {
+                        playBtn.setBackgroundResource(R.drawable.playicon);
+                        if(frame >= 10) {
+                            frame -= 10;
+                            setFrame();
+                        }
+                    } else {
+                        interruptPlay();
+                        backBtn.performLongClick();
+                    }
+                    return true;
+                }
+            });
+
+            nextBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(!running) {
+                        playBtn.setBackgroundResource(R.drawable.playicon);
+                        if(frame < Integer.parseInt((String) totalFrame.getText()) - 1) {
+                            frame++;
+                            setFrame();
+                        }
+                    } else {
+                        interruptPlay();
+                        nextBtn.performClick();
+                    }
+                }
+            });
+            nextBtn.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    if(!running) {
+                        playBtn.setBackgroundResource(R.drawable.playicon);
+                        if(frame <= Integer.parseInt((String) totalFrame.getText()) - 11) {
+                            frame += 10;
+                            setFrame();
+                        } else {
+                            frame = Integer.parseInt((String) totalFrame.getText()) - 1;
+                            setFrame();
+                        }
+                    } else {
+                        interruptPlay();
+                        nextBtn.performLongClick();
+                    }
+                    return true;
+                }
+            });
+
+            playBtn.setOnClickListener(listener);
+            playBtn.setOnLongClickListener(longListener);
+        }
     }
 }

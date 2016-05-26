@@ -44,6 +44,7 @@ import android.widget.Toast;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
+import com.google.android.gms.ads.MobileAds;
 import com.mopub.common.MoPub;
 import com.mopub.mobileads.MoPubView;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
@@ -90,11 +91,11 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        mAdView = (MoPubView) findViewById(R.id.adView);
+        //mAdView = (MoPubView) findViewById(R.id.adView);
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-        if(!Preferences.hideAds(this)) {
+        /*if(!Preferences.hideAds(this)) {
             if(Preferences.shouldAskLocation(this)) {
                 if(Build.VERSION.SDK_INT >= 23)
                     checkPermission(Manifest.permission.ACCESS_COARSE_LOCATION);
@@ -119,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             } else
                 setUpAds();
         } else
-            setUpAds();
+            setUpAds();*/
 
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);

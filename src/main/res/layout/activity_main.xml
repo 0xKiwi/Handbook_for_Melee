@@ -22,20 +22,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <com.mopub.mobileads.MoPubView
+        <!--<com.mopub.mobileads.MoPubView
             android:id="@+id/adView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center_horizontal|bottom"
-            android:visibility="visible"/>
+            android:visibility="visible"/>-->
 
         <RelativeLayout
             android:id="@+id/fragmentLayout"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:layout_above="@id/adView"
             android:layout_marginEnd="20dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
