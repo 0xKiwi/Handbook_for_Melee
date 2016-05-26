@@ -17,34 +17,17 @@
 
 package com.thatkawaiiguy.meleehandbook.adapter;
 
-import android.app.Activity;
-import android.content.Context;
-import android.graphics.LightingColorFilter;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.avocarrot.androidsdk.CustomModel;
-import com.avocarrot.androidsdk.ui.AdChoicesView;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.NativeExpressAdView;
-import com.thatkawaiiguy.meleehandbook.MainActivity;
 import com.thatkawaiiguy.meleehandbook.R;
-
-import java.util.List;
 
 public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private final String[] mDataSet;
-    private final int NATIVE_AD = 0;
-    private final int TEXT = 1;
-
-    private Activity mContext;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView menuText;
@@ -59,28 +42,8 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-    public static class NativeViewHolder extends RecyclerView.ViewHolder {
-        private final NativeExpressAdView mNativeExpressAdView;
-        private final View view;
-
-        public NativeViewHolder(View v) {
-            super(v);
-            view = v;
-            mNativeExpressAdView = (NativeExpressAdView) v.findViewById(R.id.adView);
-        }
-
-        public NativeExpressAdView getNativeExpressAdView() {
-            return mNativeExpressAdView;
-        }
-
-        public View getView() {
-            return view;
-        }
-    }
-
-    public TextAdapter(String[] mDataSet, Activity context) {
+    public TextAdapter(String[] mDataSet) {
         this.mDataSet = mDataSet;
-        mContext = context;
     }
 
     @Override
@@ -94,27 +57,8 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         ((ViewHolder) viewHolder).getTextView().setText(mDataSet[position]);
     }
 
-    @Override
-    public int getItemViewType(int position) {
-        ////if(position == 2)
-         //   return NATIVE_AD;
-        //else if(position == 16)
-        //    return NATIVE_AD;
-        //else if(position == 30)
-        ///    return NATIVE_AD;
-        //else
-            return TEXT;
-    }
-
-    private int calculateCorrectPos(int position) {
-        if(getItemViewType(position) == TEXT) {
-            if(position > 2)
-                return -1;
-            else
-                return -position / 7;
-        }
-
-        return 0;
+    public static boolean isPosAd(int pos){
+        return pos == 3 || ((pos - 3) % 8 == 0);
     }
 
     @Override

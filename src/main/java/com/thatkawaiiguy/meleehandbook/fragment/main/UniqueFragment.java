@@ -18,7 +18,9 @@
 package com.thatkawaiiguy.meleehandbook.fragment.main;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -27,7 +29,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
+import com.avocarrot.androidsdk.AvocarrotUser;
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
+import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
 import com.thatkawaiiguy.meleehandbook.adapter.ExpandableAdapter;
@@ -72,44 +76,118 @@ public class UniqueFragment extends Fragment {
         parentList = ArrayHelper.getUniqueTechCharArray(getActivity());
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         if(Preferences.groupByCharacterEnabled(getActivity())) {
-            mExpandableAdapter = new ExpandableAdapter(getActivity(), setUpData(), false);
-            mRecyclerView.setAdapter(mExpandableAdapter);
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        } else {
-            AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
-                    AvocarrotInstreamRecyclerView(
-                    new TextAdapter(uniqueTechs, getActivity()),
-                    getActivity(),                   /* reference to your Activity */
-                    getResources().getString(R.string.avocarrot_app_id), /* this is your Avocarrot API Key */
-                    getResources().getString(R.string.native_on_main_placement)  /* this is your Avocarrot Placement
+            if(!Preferences.hideAds(getActivity())) {
+                AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
+                        AvocarrotInstreamRecyclerView(
+                        new ExpandableAdapter(getActivity(), setUpData(), false),
+                        getActivity(),                   /* reference to your Activity */
+                        getResources().getString(R.string.avocarrot_app_id), /* this is your
+                        Avocarrot API Key */
+                        getResources().getString(R.string.native_on_main_placement)  /* this is
+                        your Avocarrot Placement
                 Key */
-            );
+                );
 
-            avocarrotInstreamRecyclerView.setSandbox(true);
-            avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+                avocarrotInstreamRecyclerView.setSandbox(true);
+                avocarrotInstreamRecyclerView.setFrequency(3, 8);
+                avocarrotInstreamRecyclerView.setLogger(true, "ALL");
 
-            mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-            mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+                mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
 
-            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
-                    .OnItemClickListener() {
-                @Override
-                public void onItemClicked(int position) {
-                    if(canStart) {
-                        Intent mIntent;
-                        if(uniqueTechs[position].equals("Super wavedash & SDWD") ||
-                                uniqueTechs[position].equals("Extended & homing grapple"))
-                            mIntent = new Intent(getActivity(), TechTabActivity.class);
-                        else
-                            mIntent = new Intent(getActivity(), VideoInfoActivity.class);
-                        mIntent.putExtra("option", uniqueTechs[position]);
-                        startActivity(mIntent);
-                        canStart = false;
+                ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                        .OnItemClickListener() {
+                    @Override
+                    public void onItemClicked(int position) {
+                        if(((ConnectivityManager) getActivity().getSystemService(Context.
+                                CONNECTIVITY_SERVICE)).getActiveNetworkInfo()
+                                .isConnectedOrConnecting())
+                            if(!TextAdapter.isPosAd(position))
+                                if(canStart) {
+                                    startActivity(new Intent(getActivity(), FunActivity.class)
+                                            .putExtra
+                                                    ("option", uniqueTechs[position]));
+                                    canStart = false;
+                                }
                     }
-                }
-            });
+                });
+            } else {
+                mRecyclerView.setAdapter(new ExpandableAdapter(getActivity(), setUpData(), false));
+
+                ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                        .OnItemClickListener() {
+                    @Override
+                    public void onItemClicked(int position) {
+                        if(canStart) {
+                            startActivity(new Intent(getActivity(), FunActivity.class).putExtra
+                                    ("option", uniqueTechs[position]));
+                            canStart = false;
+                        }
+                    }
+                });
+            }
+        } else {
+            if(!Preferences.hideAds(getActivity())) {
+                AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
+                        AvocarrotInstreamRecyclerView(
+                        new TextAdapter(uniqueTechs),
+                        getActivity(),                   /* reference to your Activity */
+                        getResources().getString(R.string.avocarrot_app_id), /* Avocarrot API Key */
+                        getResources().getString(R.string.native_on_main_placement)/*Placement key*/
+                );
+
+                avocarrotInstreamRecyclerView.setSandbox(true);
+                avocarrotInstreamRecyclerView.setFrequency(3, 11);
+                avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+
+                mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+
+                ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                        .OnItemClickListener() {
+                    @Override
+                    public void onItemClicked(int position) {
+                        if(((ConnectivityManager) getActivity().getSystemService(Context.
+                                CONNECTIVITY_SERVICE)).getActiveNetworkInfo()
+                                .isConnectedOrConnecting())
+                            if(!TextAdapter.isPosAd(position))
+                                if(canStart) {
+                                    Intent mIntent;
+                                    if(uniqueTechs[position].equals("Super wavedash & SDWD") ||
+                                            uniqueTechs[position].equals("Extended & homing " +
+                                                    "grapple"))
+                                        mIntent = new Intent(getActivity(), TechTabActivity.class);
+                                    else
+                                        mIntent = new Intent(getActivity(), VideoInfoActivity
+                                                .class);
+                                    mIntent.putExtra("option", uniqueTechs[position]);
+                                    startActivity(mIntent);
+                                    canStart = false;
+                                }
+                    }
+                });
+            } else {
+                mRecyclerView.setAdapter(new TextAdapter(uniqueTechs));
+
+                ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                        .OnItemClickListener() {
+                    @Override
+                    public void onItemClicked(int position) {
+                        if(canStart) {
+                            Intent mIntent;
+                            if(uniqueTechs[position].equals("Super wavedash & SDWD") ||
+                                    uniqueTechs[position].equals("Extended & homing grapple"))
+                                mIntent = new Intent(getActivity(), TechTabActivity.class);
+                            else
+                                mIntent = new Intent(getActivity(), VideoInfoActivity.class);
+                            mIntent.putExtra("option", uniqueTechs[position]);
+                            startActivity(mIntent);
+                            canStart = false;
+                        }
+                    }
+                });
+            }
         }
 
         mRecyclerView.setHasFixedSize(true);

@@ -18,6 +18,9 @@
 package com.thatkawaiiguy.meleehandbook.fragment.main;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
@@ -26,9 +29,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
 import com.thatkawaiiguy.meleehandbook.R;
+import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
 import com.thatkawaiiguy.meleehandbook.adapter.TermAdapter;
+import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
+import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.turingtechnologies.materialscrollbar.MaterialScrollBar;
 
 public class TermFragment extends Fragment {
@@ -52,10 +60,24 @@ public class TermFragment extends Fragment {
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
-        mRecyclerView.scrollToPosition(0);
 
-        TermAdapter adapter = new TermAdapter(terms, getActivity());
-        mRecyclerView.setAdapter(adapter);
+        if(!Preferences.hideAds(getActivity())) {
+            AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
+                    AvocarrotInstreamRecyclerView(
+                    new TermAdapter(terms, getActivity()),
+                    getActivity(),                   /* reference to your Activity */
+                    getResources().getString(R.string.avocarrot_app_id), /* Avocarrot API Key */
+                    getResources().getString(R.string.native_on_main_placement)/*Placement key*/
+            );
+
+            avocarrotInstreamRecyclerView.setSandbox(true);
+            avocarrotInstreamRecyclerView.setFrequency(2, 7);
+            avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+
+            mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+        } else
+            mRecyclerView.setAdapter(new TermAdapter(terms, getActivity()));
+
         mRecyclerView.hasFixedSize();
 
         new MaterialScrollBar(getActivity(), mRecyclerView, true).setBarThickness(12).

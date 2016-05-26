@@ -18,7 +18,9 @@
 package com.thatkawaiiguy.meleehandbook.fragment.main;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -26,12 +28,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterFrameActivity;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterActivity;
+import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
 import com.thatkawaiiguy.meleehandbook.adapter.IconAdapter;
+import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
 import com.thatkawaiiguy.meleehandbook.R;
+import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 public class CharacterFragment extends Fragment {
 
@@ -56,25 +62,60 @@ public class CharacterFragment extends Fragment {
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        if(!Preferences.hideAds(getActivity())) {
+            AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
+                    AvocarrotInstreamRecyclerView(
+                    new IconAdapter(characters),
+                    getActivity(),
+                    getResources().getString(R.string.avocarrot_app_id), /* Avocarrot API Key */
+                    getResources().getString(R.string.native_on_main_placement)/*Placement key*/
+            );
 
-        mRecyclerView.setAdapter(new IconAdapter(characters));
+            avocarrotInstreamRecyclerView.setSandbox(true);
+            avocarrotInstreamRecyclerView.setFrequency(3, 10);
+            avocarrotInstreamRecyclerView.setLogger(true, "ALL");
 
-        ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
-                .OnItemClickListener() {
-            @Override
-            public void onItemClicked(int position) {
-                if(canStart) {
-                    Intent mIntent;
-                    if(hasFrame(position))
-                        mIntent = new Intent(getActivity(), CharacterFrameActivity.class);
-                    else
-                        mIntent = new Intent(getActivity(), CharacterActivity.class);
-                    mIntent.putExtra("option", characters[position]);
-                    startActivity(mIntent);
-                    canStart = false;
+            mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+
+            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                    .OnItemClickListener() {
+                @Override
+                public void onItemClicked(int position) {
+                    if(((ConnectivityManager) getActivity().getSystemService(Context.
+                            CONNECTIVITY_SERVICE)).getActiveNetworkInfo().isConnectedOrConnecting())
+                        if(!TextAdapter.isPosAd(position))
+                            if(canStart) {
+                                Intent mIntent;
+                                if(hasFrame(position))
+                                    mIntent = new Intent(getActivity(), CharacterFrameActivity.class);
+                                else
+                                    mIntent = new Intent(getActivity(), CharacterActivity.class);
+                                mIntent.putExtra("option", characters[position]);
+                                startActivity(mIntent);
+                                canStart = false;
+                            }
                 }
-            }
-        });
+            });
+        } else {
+            mRecyclerView.setAdapter(new IconAdapter(characters));
+
+            ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                    .OnItemClickListener() {
+                @Override
+                public void onItemClicked(int position) {
+                    if(canStart) {
+                        Intent mIntent;
+                        if(hasFrame(position))
+                            mIntent = new Intent(getActivity(), CharacterFrameActivity.class);
+                        else
+                            mIntent = new Intent(getActivity(), CharacterActivity.class);
+                        mIntent.putExtra("option", characters[position]);
+                        startActivity(mIntent);
+                        canStart = false;
+                    }
+                }
+            });
+        }
         mRecyclerView.setHasFixedSize(true);
 
         return rootView;
