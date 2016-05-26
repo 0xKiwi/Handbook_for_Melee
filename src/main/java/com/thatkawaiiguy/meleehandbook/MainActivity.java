@@ -40,7 +40,6 @@ import android.widget.Toast;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
-import com.mopub.mobileads.MoPubView;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.CharacterFragment;
@@ -65,8 +64,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     private CharSequence mTitle;
 
-    private MoPubView mAdView;
-
     private BillingProcessor bp;
 
     @Override
@@ -89,9 +86,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
-        if(Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this)) {
+        if(Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this))
             nvDrawer.getMenu().findItem(R.id.remove).setTitle("Support the Dev");
-        }
 
         NavigationMenuView navigationMenuView = (NavigationMenuView) nvDrawer.getChildAt(0);
         if(navigationMenuView != null) {
@@ -368,9 +364,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         if(bp != null)
             bp.release();
-
-        if(mAdView != null)
-            mAdView.destroy();
     }
 
     @Override

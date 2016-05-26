@@ -28,13 +28,10 @@ import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.util.TypedValue;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
-import com.mopub.common.MoPub;
-import com.mopub.mobileads.MoPubView;
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
@@ -48,10 +45,6 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
 
     private MutedVideoView infoVid;
 
-    private BillingProcessor bp;
-
-    private MoPubView mAdView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if(getIntent().hasExtra("bundle") && savedInstanceState == null)
@@ -60,19 +53,6 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
         super.onCreate(savedInstanceState);
         setContentView(R.layout.collapsing_video_layout);
         Slidr.attach(this);
-
-        bp = new BillingProcessor(this, getResources().getString(R.string.licensekey), this);
-        bp.loadOwnedPurchasesFromGoogle();
-
-        mAdView = (MoPubView) findViewById(R.id.adView);
-        if(!Preferences.hideAds(this)) {
-            MoPub.setLocationAwareness(MoPub.LocationAwareness.DISABLED);
-            mAdView.setAdUnitId(getResources().getString(R.string.tech_banner_ad_unit_id));
-            mAdView.loadAd();
-            mAdView.setAutorefreshEnabled(true);
-            mAdView.setVisibility(View.VISIBLE);
-        } else
-            mAdView.setVisibility(View.GONE);
 
         Bundle mainData = getIntent().getExtras();
         if(mainData == null)
@@ -405,18 +385,6 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
         super.onRestoreInstanceState(savedInstanceState);
 
         optionPicked = savedInstanceState.getString("option");
-    }
-
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-
-        if(bp != null)
-            bp.release();
-
-        if(mAdView != null)
-            mAdView.destroy();
     }
 
     private int getStatusBarHeight() {

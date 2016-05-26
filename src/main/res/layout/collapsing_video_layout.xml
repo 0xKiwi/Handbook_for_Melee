@@ -60,17 +60,8 @@
         android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <com.mopub.mobileads.MoPubView
-            android:id="@+id/adView"
-            android:layout_width="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center_horizontal|bottom"
-            android:visibility="visible"
-            android:layout_height="50dp"/>
-
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/video_scrollView"
-            android:layout_above="@id/adView"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
