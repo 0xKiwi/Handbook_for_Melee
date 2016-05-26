@@ -26,6 +26,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
@@ -77,9 +78,20 @@ public class UniqueFragment extends Fragment {
             mRecyclerView.setAdapter(mExpandableAdapter);
             mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         } else {
-            TextAdapter adapter = new TextAdapter(uniqueTechs);
-            mRecyclerView.setAdapter(adapter);
+            AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
+                    AvocarrotInstreamRecyclerView(
+                    new TextAdapter(uniqueTechs, getActivity()),
+                    getActivity(),                   /* reference to your Activity */
+                    getResources().getString(R.string.avocarrot_app_id), /* this is your Avocarrot API Key */
+                    getResources().getString(R.string.native_on_main_placement)  /* this is your Avocarrot Placement
+                Key */
+            );
+
+            avocarrotInstreamRecyclerView.setSandbox(true);
+            avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+
             mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+            mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
 
             ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
                     .OnItemClickListener() {

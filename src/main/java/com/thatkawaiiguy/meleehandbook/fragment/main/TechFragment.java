@@ -26,7 +26,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
 import com.google.android.gms.ads.MobileAds;
+import com.thatkawaiiguy.meleehandbook.MainActivity;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
@@ -59,15 +61,29 @@ public class TechFragment extends Fragment {
 
         mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
+                AvocarrotInstreamRecyclerView(
+                new TextAdapter(techs, getActivity()),
+                getActivity(),                   /* reference to your Activity */
+                getResources().getString(R.string.avocarrot_app_id), /* this is your Avocarrot API Key */
+                getResources().getString(R.string.native_on_main_placement)  /* this is your Avocarrot Placement
+                Key */
+        );
 
-        mRecyclerView.setAdapter(new TextAdapter(techs));
-        ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+        avocarrotInstreamRecyclerView.setSandbox(true);
+        avocarrotInstreamRecyclerView.setFrequency(3, 7);
+        avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerView.setAdapter(avocarrotInstreamRecyclerView);
+
+        ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport
+                .OnItemClickListener() {
             @Override
             public void onItemClicked(int position) {
-                if (canStart) {
+                if(canStart) {
                     Intent mIntent;
-                    if (techs[position].equals("Wall jump") ||
+                    if(techs[position].equals("Wall jump") ||
                             techs[position].equals("Directional Influence") ||
                             techs[position].equals("Shield dropping"))
                         mIntent = new Intent(getActivity(), TechTabActivity.class);

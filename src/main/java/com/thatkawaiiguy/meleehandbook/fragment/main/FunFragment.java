@@ -59,7 +59,7 @@ public class FunFragment extends Fragment {
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        mRecyclerView.setAdapter(new TextAdapter(funs));
+        mRecyclerView.setAdapter(new TextAdapter(funs, getActivity()));
         ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
             @Override
             public void onItemClicked(int position) {
