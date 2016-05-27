@@ -64,6 +64,8 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
         <activity android:name="com.avocarrot.androidsdk.VideoActivity" />
+        <activity android:name="com.avocarrot.androidsdk.RedirectActivity" />
+
     </application>
 
 </manifest>

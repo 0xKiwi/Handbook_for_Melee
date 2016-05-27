@@ -79,8 +79,9 @@ public class StageFragment extends Fragment {
                 public void onItemClicked(int position) {
                     if(((ConnectivityManager) getActivity().getSystemService(Context.
                             CONNECTIVITY_SERVICE)).getActiveNetworkInfo().isConnectedOrConnecting())
-                        if(!TextAdapter.isPosAd(position))
+                        if(!TextAdapter.isPosAd(position, 3, 9))
                             if(canStart) {
+                                position = TextAdapter.getProperPos(position, 3, 9);
                                 startActivity(new Intent(getActivity(),
                                         StageActivity.class).putExtra("option", stages[position]));
                                 canStart = false;

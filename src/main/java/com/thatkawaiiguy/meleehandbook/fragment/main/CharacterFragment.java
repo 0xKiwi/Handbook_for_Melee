@@ -81,8 +81,9 @@ public class CharacterFragment extends Fragment {
                 public void onItemClicked(int position) {
                     if(((ConnectivityManager) getActivity().getSystemService(Context.
                             CONNECTIVITY_SERVICE)).getActiveNetworkInfo().isConnectedOrConnecting())
-                        if(!TextAdapter.isPosAd(position))
+                        if(!TextAdapter.isPosAd(position, 3, 10))
                             if(canStart) {
+                                position = TextAdapter.getProperPos(position, 3, 10);
                                 Intent mIntent;
                                 if(hasFrame(position))
                                     mIntent = new Intent(getActivity(), CharacterFrameActivity.class);

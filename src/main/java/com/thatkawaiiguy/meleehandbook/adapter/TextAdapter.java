@@ -48,8 +48,8 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-            return new ViewHolder(LayoutInflater.from(viewGroup.getContext())
-                    .inflate(R.layout.custom_text_row, viewGroup, false));
+        return new ViewHolder(LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.custom_text_row, viewGroup, false));
     }
 
     @Override
@@ -57,8 +57,18 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         ((ViewHolder) viewHolder).getTextView().setText(mDataSet[position]);
     }
 
-    public static boolean isPosAd(int pos){
-        return pos == 3 || ((pos - 3) % 8 == 0);
+    public static boolean isPosAd(int pos, int start, int repeat) {
+        return pos == start || (pos % (repeat + start + (pos / repeat)) == 0);
+    }
+
+    public static int getProperPos(int pos, int start, int repeat) {
+        int add = pos;
+        if(pos > start) {
+            add--;
+            if(pos > repeat + start)
+                add -= pos / (repeat + start);
+        }
+        return add;
     }
 
     @Override

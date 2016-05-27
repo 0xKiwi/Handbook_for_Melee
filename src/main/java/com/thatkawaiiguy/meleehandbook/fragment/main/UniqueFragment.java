@@ -103,8 +103,9 @@ public class UniqueFragment extends Fragment {
                         if(((ConnectivityManager) getActivity().getSystemService(Context.
                                 CONNECTIVITY_SERVICE)).getActiveNetworkInfo()
                                 .isConnectedOrConnecting())
-                            if(!TextAdapter.isPosAd(position))
+                            if(!TextAdapter.isPosAd(position, 3, 8))
                                 if(canStart) {
+                                    position = TextAdapter.getProperPos(position, 3, 8);
                                     startActivity(new Intent(getActivity(), FunActivity.class)
                                             .putExtra
                                                     ("option", uniqueTechs[position]));
@@ -150,8 +151,9 @@ public class UniqueFragment extends Fragment {
                         if(((ConnectivityManager) getActivity().getSystemService(Context.
                                 CONNECTIVITY_SERVICE)).getActiveNetworkInfo()
                                 .isConnectedOrConnecting())
-                            if(!TextAdapter.isPosAd(position))
+                            if(!TextAdapter.isPosAd(position, 3, 11))
                                 if(canStart) {
+                                    position = TextAdapter.getProperPos(position, 3, 11);
                                     Intent mIntent;
                                     if(uniqueTechs[position].equals("Super wavedash & SDWD") ||
                                             uniqueTechs[position].equals("Extended & homing " +

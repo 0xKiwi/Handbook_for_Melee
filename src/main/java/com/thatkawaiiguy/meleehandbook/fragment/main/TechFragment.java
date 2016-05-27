@@ -74,7 +74,18 @@ public class TechFragment extends Fragment {
                 Key */
             );
 
-            avocarrotInstreamRecyclerView.setSandbox(false);
+            /*avocarrotInstreamRecyclerView.setLayout(
+                    R.layout.native_layout,
+                    R.id.avo_container,
+                    R.id.avo_ad_headline,
+                    R.id.avo_ad_description,
+                    R.id.avo_ad_icon,
+                    R.id.avo_ad_icon,
+                    R.id.avo_ad_button,
+                    R.id.avo_ad_choices
+            );*/
+
+            avocarrotInstreamRecyclerView.setSandbox(true);
             avocarrotInstreamRecyclerView.setFrequency(3, 11);
             avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
@@ -86,8 +97,9 @@ public class TechFragment extends Fragment {
                 public void onItemClicked(int position) {
                     if(((ConnectivityManager) getActivity().getSystemService(Context.
                             CONNECTIVITY_SERVICE)).getActiveNetworkInfo().isConnectedOrConnecting())
-                        if(!TextAdapter.isPosAd(position))
+                        if(!TextAdapter.isPosAd(position, 3, 11))
                             if(canStart) {
+                                position = TextAdapter.getProperPos(position, 3, 11);
                                 Intent mIntent;
                                 if(techs[position].equals("Wall jump") ||
                                         techs[position].equals("Directional Influence") ||
