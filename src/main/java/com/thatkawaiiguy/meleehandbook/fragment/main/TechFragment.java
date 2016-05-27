@@ -85,7 +85,7 @@ public class TechFragment extends Fragment {
                     R.id.avo_ad_choices
             );*/
 
-            avocarrotInstreamRecyclerView.setSandbox(true);
+            avocarrotInstreamRecyclerView.setSandbox(false);
             avocarrotInstreamRecyclerView.setFrequency(3, 11);
             avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
