@@ -58,6 +58,8 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     public static boolean isPosAd(int pos, int start, int repeat) {
+        if(pos == 0)
+            return false;
         return pos == start || (pos % (repeat + start + (pos / repeat)) == 0);
     }
 
