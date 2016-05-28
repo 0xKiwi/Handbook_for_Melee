@@ -42,11 +42,11 @@ import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
+import com.thatkawaiiguy.meleehandbook.fragment.main.MatchupFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.CharacterFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.FunFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.HealthyFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.StageFragment;
-import com.thatkawaiiguy.meleehandbook.fragment.main.MatchupFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.TechFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.TermFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.UniqueFragment;
@@ -254,7 +254,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     public void onPurchaseHistoryRestored() {
         if(bp.isPurchased(getString(R.string.adproductid)))
             Preferences.setHideAds(this, true);
-        else if(!bp.isPurchased(getString(R.string.adproductid)))
+        else
             Preferences.setHideAds(this, false);
         recreate();
     }

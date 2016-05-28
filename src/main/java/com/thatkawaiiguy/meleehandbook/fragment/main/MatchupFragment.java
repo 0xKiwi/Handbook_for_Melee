@@ -1,20 +1,3 @@
-/*
-    This file is part of Handbook for Melee.
-
-    Handbook for Melee is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    Handbook for Melee is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with Handbook for Melee.  If not, see <http://www.gnu.org/licenses/>
- */
-
 package com.thatkawaiiguy.meleehandbook.fragment.main;
 
 import android.app.Fragment;
@@ -53,6 +36,9 @@ public class MatchupFragment extends Fragment {
     private ImageButton muImgLeft;
     private ImageButton muImgRight;
 
+    TextView muInfoLeft;
+    TextView muInfoRight;
+
     private Button shineBottom;
     private Button shineTop;
 
@@ -75,9 +61,9 @@ public class MatchupFragment extends Fragment {
         leftView = view.findViewById(R.id.viewleft);
         rightView = view.findViewById(R.id.viewright);
         infoLeft = (TextView) view.findViewById(R.id.muTextLeft);
-        TextView muInfoLeft = (TextView) view.findViewById(R.id.muInfoLeft);
+        muInfoLeft = (TextView) view.findViewById(R.id.muInfoLeft);
         infoRight = (TextView) view.findViewById(R.id.muTextRight);
-        TextView muInfoRight = (TextView) view.findViewById(R.id.muInfoRight);
+        muInfoRight = (TextView) view.findViewById(R.id.muInfoRight);
         spinnerLeft = (Spinner) view.findViewById(R.id.spinnerLeft);
         spinnerRight = (Spinner) view.findViewById(R.id.spinnerRight);
         muImgRight = (ImageButton) view.findViewById(R.id.muImgRight);
@@ -1957,7 +1943,7 @@ public class MatchupFragment extends Fragment {
         }
         return "uhh";
     }
-/*
+
     private String getInfo(String left, String right) {
         switch(left) {
             case "Fox": {
@@ -1996,7 +1982,7 @@ public class MatchupFragment extends Fragment {
                     case "Marth":
                         return "Stopping power, but poor recovery";
                     case "Princess Peach":
-                        return "Strong attacks, but poor recovery";
+                        return "Combo ability, but poor recovery";
                     case "Captain Falcon":
                         return "Stopping power, dair priority";
                     case "Ice Climbers":
@@ -2075,7 +2061,7 @@ public class MatchupFragment extends Fragment {
                     case "Fox":
                         return "Can be gimped";
                     case "Falco":
-                        return "Easily gimps";
+                        return "Easily gimps and down smash";
                     case "Sheik":
                         return "Easily comboed";
                     case "Marth":
@@ -2289,7 +2275,7 @@ public class MatchupFragment extends Fragment {
         }
         return "";
     }
-*/
+
     private void setMatchupsView() {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R
                 .layout.simple_spinner_item, ArrayHelper.getCharacterArray(getActivity(), false));
@@ -2368,9 +2354,9 @@ public class MatchupFragment extends Fragment {
                 un20XX();
         } else {
             un20XX();
-            //muInfoLeft.setText(getInfo(characterLeft, characterRight));
+            muInfoLeft.setText(getInfo(characterLeft, characterRight));
             infoLeft.setText(getLeftPercent(characterLeft, characterRight) + "%");
-            //muInfoRight.setText(getInfo(characterRight, characterLeft));
+            muInfoRight.setText(getInfo(characterRight, characterLeft));
             infoRight.setText(getRightPercent(characterLeft, characterRight) + "%");
         }
     }

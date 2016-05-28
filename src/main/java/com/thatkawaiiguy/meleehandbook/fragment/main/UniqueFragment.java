@@ -18,9 +18,6 @@
 package com.thatkawaiiguy.meleehandbook.fragment.main;
 
 import android.app.Fragment;
-import android.content.Context;
-import android.content.Intent;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,16 +27,12 @@ import android.view.ViewGroup;
 
 import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
-import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
-import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
-import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
 import com.thatkawaiiguy.meleehandbook.adapter.ExpandableAdapter;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomParentObject;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 import java.util.ArrayList;
@@ -48,13 +41,12 @@ public class UniqueFragment extends Fragment {
     private String[] parentList;
 
     private ExpandableAdapter mExpandableAdapter;
+    private TextAdapter adapter;
 
     private final String djc = "Double jump cancel";
-    private final String upbturn = "Up-B turnaround";
+    final String upbturn = "Up-B turnaround";
     private final String jumprefresh = "Double jump refresh";
     private final String psspike = "Princess/Swordsman spiking";
-
-    private boolean canStart = true;
 
     private final String[] uniqueTechs = ArrayHelper.getUniqueArray();
 
@@ -75,64 +67,16 @@ public class UniqueFragment extends Fragment {
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        mExpandableAdapter = new ExpandableAdapter(getActivity(), setUpData(), false);
-
         if(Preferences.groupByCharacterEnabled(getActivity())) {
-            if(!Preferences.hideAds(getActivity())) {
-                AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
-                        AvocarrotInstreamRecyclerView(
-                        mExpandableAdapter,
-                        getActivity(),                   /* reference to your Activity */
-                        getResources().getString(R.string.avocarrot_app_id), /* this is your
-                        Avocarrot API Key */
-                        getResources().getString(R.string.native_on_main_placement)  /* this is
-                        your Avocarrot Placement
-                Key */
-                );
-
-                avocarrotInstreamRecyclerView.setSandbox(false);
-                avocarrotInstreamRecyclerView.setFrequency(3, 8);
-                avocarrotInstreamRecyclerView.setLogger(false, "ALL");
-
-                recyclerView.setAdapter(avocarrotInstreamRecyclerView);
-
-                ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
-                        .OnItemClickListener() {
-                    @Override
-                    public void onItemClicked(int position) {
-                        if(((ConnectivityManager) getActivity().getSystemService(Context.
-                                CONNECTIVITY_SERVICE)).getActiveNetworkInfo()
-                                .isConnectedOrConnecting())
-                            if(!TextAdapter.isPosAd(position, 3, 8))
-                                if(canStart) {
-                                    position = TextAdapter.getProperPos(position, 3, 8);
-                                    startActivity(new Intent(getActivity(), FunActivity.class)
-                                            .putExtra
-                                                    ("option", uniqueTechs[position]));
-                                    canStart = false;
-                                }
-                    }
-                });
-            } else {
-                recyclerView.setAdapter(new ExpandableAdapter(getActivity(), setUpData(), false));
-
-                ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
-                        .OnItemClickListener() {
-                    @Override
-                    public void onItemClicked(int position) {
-                        if(canStart) {
-                            startActivity(new Intent(getActivity(), FunActivity.class).putExtra
-                                    ("option", uniqueTechs[position]));
-                            canStart = false;
-                        }
-                    }
-                });
-            }
+            mExpandableAdapter = new ExpandableAdapter(getActivity(), setUpData(), false);
+            recyclerView.setAdapter(mExpandableAdapter);
+            recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         } else {
+            adapter = new TextAdapter(uniqueTechs, getActivity(), true);
             if(!Preferences.hideAds(getActivity())) {
                 AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
                         AvocarrotInstreamRecyclerView(
-                        new TextAdapter(uniqueTechs),
+                        adapter,
                         getActivity(),                   /* reference to your Activity */
                         getResources().getString(R.string.avocarrot_app_id), /* Avocarrot API Key */
                         getResources().getString(R.string.native_on_main_placement)/*Placement key*/
@@ -143,51 +87,8 @@ public class UniqueFragment extends Fragment {
                 avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
                 recyclerView.setAdapter(avocarrotInstreamRecyclerView);
-
-                ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
-                        .OnItemClickListener() {
-                    @Override
-                    public void onItemClicked(int position) {
-                        if(((ConnectivityManager) getActivity().getSystemService(Context.
-                                CONNECTIVITY_SERVICE)).getActiveNetworkInfo()
-                                .isConnectedOrConnecting())
-                            if(!TextAdapter.isPosAd(position, 3, 11))
-                                if(canStart) {
-                                    position = TextAdapter.getProperPos(position, 3, 11);
-                                    Intent mIntent;
-                                    if(uniqueTechs[position].equals("Super wavedash & SDWD") ||
-                                            uniqueTechs[position].equals("Extended & homing " +
-                                                    "grapple"))
-                                        mIntent = new Intent(getActivity(), TechTabActivity.class);
-                                    else
-                                        mIntent = new Intent(getActivity(), VideoInfoActivity
-                                                .class);
-                                    mIntent.putExtra("option", uniqueTechs[position]);
-                                    startActivity(mIntent);
-                                    canStart = false;
-                                }
-                    }
-                });
             } else {
-                recyclerView.setAdapter(new TextAdapter(uniqueTechs));
-
-                ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
-                        .OnItemClickListener() {
-                    @Override
-                    public void onItemClicked(int position) {
-                        if(canStart) {
-                            Intent mIntent;
-                            if(uniqueTechs[position].equals("Super wavedash & SDWD") ||
-                                    uniqueTechs[position].equals("Extended & homing grapple"))
-                                mIntent = new Intent(getActivity(), TechTabActivity.class);
-                            else
-                                mIntent = new Intent(getActivity(), VideoInfoActivity.class);
-                            mIntent.putExtra("option", uniqueTechs[position]);
-                            startActivity(mIntent);
-                            canStart = false;
-                        }
-                    }
-                });
+                recyclerView.setAdapter(adapter);
             }
         }
 
@@ -205,7 +106,6 @@ public class UniqueFragment extends Fragment {
             switch(parentList[i]) {
                 case "Ganondorf":
                 case "Captain Falcon": {
-                    String jumprefresh = "Double jump refresh";
                     customChildObject.setChildText(jumprefresh);
                     childObjectList.add(customChildObject);
                 }
@@ -355,8 +255,10 @@ public class UniqueFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        canStart = true;
+
         if(Preferences.groupByCharacterEnabled(getActivity()) && mExpandableAdapter != null)
             mExpandableAdapter.setCanStart();
+        else if(adapter != null)
+            adapter.setCanStart(true);
     }
 }

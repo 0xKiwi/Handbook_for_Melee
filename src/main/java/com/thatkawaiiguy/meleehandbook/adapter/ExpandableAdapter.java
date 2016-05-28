@@ -45,7 +45,7 @@ public class ExpandableAdapter extends ExpandableRecyclerAdapter<CustomParentVie
 
     private boolean canStart = true;
 
-    private boolean healthy;
+    private final boolean healthy;
 
     public ExpandableAdapter(Context context, List<ParentObject> parentItemList, boolean healthy) {
         super(context, parentItemList);

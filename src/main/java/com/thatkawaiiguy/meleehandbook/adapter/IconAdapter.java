@@ -17,6 +17,8 @@
 
 package com.thatkawaiiguy.meleehandbook.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,19 +27,28 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.thatkawaiiguy.meleehandbook.R;
+import com.thatkawaiiguy.meleehandbook.activity.CharacterActivity;
+import com.thatkawaiiguy.meleehandbook.activity.CharacterFrameActivity;
+import com.thatkawaiiguy.meleehandbook.activity.StageActivity;
 
 public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
 
     private final String[] mDataSet;
+    private final Context mContext;
+
+    private final boolean isCharacter;
+    boolean canStart = true;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView menuText;
         private final ImageView menuImage;
+        public final View view;
 
         public ViewHolder(View v) {
             super(v);
             menuText = (TextView) v.findViewById(R.id.menuTitle);
             menuImage = (ImageView) v.findViewById(R.id.menuImage);
+            view = v;
         }
 
         public TextView getTextView() {
@@ -49,21 +60,50 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
         }
     }
 
-    public IconAdapter(String[] mDataSet) {
+    public IconAdapter(String[] mDataSet, Context context, boolean character) {
         this.mDataSet = mDataSet;
+        mContext = context;
+        isCharacter = character;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.custom_image_row, viewGroup, false);
-
-        return new ViewHolder(v);
+        return new ViewHolder(LayoutInflater.from(viewGroup.getContext())
+                .inflate(R.layout.custom_image_row, viewGroup, false));
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+        final int pos = position;
         viewHolder.getTextView().setText(mDataSet[position]);
+        if(isCharacter) {
+            viewHolder.view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(canStart) {
+                        Intent mIntent;
+                        if(hasFrame(pos))
+                            mIntent = new Intent(mContext, CharacterFrameActivity.class);
+                        else
+                            mIntent = new Intent(mContext, CharacterActivity.class);
+                        mIntent.putExtra("option", mDataSet[pos]);
+                        mContext.startActivity(mIntent);
+                        canStart = false;
+                    }
+                }
+            });
+        } else {
+            viewHolder.view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(canStart) {
+                        mContext.startActivity(new Intent(mContext,
+                                StageActivity.class).putExtra("option", mDataSet[pos]));
+                        canStart = false;
+                    }
+                }
+            });
+        }
 
         switch(mDataSet[position]) {
             case "Bowser":
@@ -173,5 +213,44 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
     @Override
     public int getItemCount() {
         return mDataSet.length;
+    }
+
+    private boolean hasFrame(int position) {
+        switch(mDataSet[position]) {
+            case "Captain Falcon":
+                return true;
+            case "Ganondorf":
+                return true;
+            case "Falco":
+                return true;
+            case "Fox":
+                return true;
+            case "Ice Climbers":
+                return true;
+            case "Jigglypuff":
+                return true;
+            case "Marth":
+                return true;
+            case "Pikachu":
+                return true;
+            case "Samus Aran":
+                return true;
+            case "Sheik":
+                return true;
+            case "Yoshi":
+                return true;
+            case "Dr. Mario":
+                return true;
+            case "Princess Peach":
+                return true;
+            case "Luigi":
+                return true;
+            default:
+                return false;
+        }
+    }
+
+    public void setCanStart(boolean start) {
+        canStart = start;
     }
 }

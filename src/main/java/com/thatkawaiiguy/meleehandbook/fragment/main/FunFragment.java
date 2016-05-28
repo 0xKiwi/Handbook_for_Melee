@@ -18,9 +18,6 @@
 package com.thatkawaiiguy.meleehandbook.fragment.main;
 
 import android.app.Fragment;
-import android.content.Context;
-import android.content.Intent;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -29,9 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
-import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
-import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
@@ -42,7 +37,7 @@ public class FunFragment extends Fragment {
 
     private final String[] funs = ArrayHelper.getFunArray();
 
-    private boolean canStart = true;
+    private TextAdapter adapter;
 
     public static FunFragment newInstance() {
         Bundle args = new Bundle();
@@ -59,11 +54,12 @@ public class FunFragment extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        adapter = new TextAdapter(funs, getActivity(), false);
 
         if(!Preferences.hideAds(getActivity())) {
             AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
                     AvocarrotInstreamRecyclerView(
-                    new TextAdapter(funs),
+                    adapter,
                     getActivity(),
                     getResources().getString(R.string.avocarrot_app_id), /* Avocarrot API Key */
                     getResources().getString(R.string.native_on_main_placement)/*Placement key*/
@@ -75,33 +71,9 @@ public class FunFragment extends Fragment {
 
             recyclerView.setAdapter(avocarrotInstreamRecyclerView);
 
-            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
-                    .OnItemClickListener() {
-                @Override
-                public void onItemClicked(int position) {
-                    if(((ConnectivityManager) getActivity().getSystemService(Context.
-                            CONNECTIVITY_SERVICE)).getActiveNetworkInfo().isConnectedOrConnecting())
-                        if(!TextAdapter.isPosAd(position, 3, 9))
-                            if(canStart) {
-                                position = TextAdapter.getProperPos(position, 3, 9);
-                                startActivity(new Intent(getActivity(), FunActivity.class).putExtra("option", funs[position]));
-                                canStart = false;
-                            }
-                }
-            });
-        } else {
-            recyclerView.setAdapter(new TextAdapter(funs));
 
-            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
-                    .OnItemClickListener() {
-                @Override
-                public void onItemClicked(int position) {
-                    if(canStart) {
-                        startActivity(new Intent(getActivity(), FunActivity.class).putExtra("option", funs[position]));
-                        canStart = false;
-                    }
-                }
-            });
+        } else {
+            recyclerView.setAdapter(adapter);
         }
 
         recyclerView.setHasFixedSize(true);
@@ -111,7 +83,7 @@ public class FunFragment extends Fragment {
 
     @Override
     public void onResume() {
-        canStart = true;
+        adapter.setCanStart(true);
         super.onResume();
     }
 }

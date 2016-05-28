@@ -18,9 +18,6 @@
 package com.thatkawaiiguy.meleehandbook.fragment.main;
 
 import android.app.Fragment;
-import android.content.Context;
-import android.content.Intent;
-import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -30,16 +27,13 @@ import android.view.ViewGroup;
 
 import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
 import com.thatkawaiiguy.meleehandbook.adapter.IconAdapter;
-import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
-import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
-import com.thatkawaiiguy.meleehandbook.activity.StageActivity;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 public class StageFragment extends Fragment {
 
-    private boolean canStart = true;
+    private IconAdapter adapter;
 
     private final String[] stages = ArrayHelper.getMapArray();
 
@@ -57,51 +51,24 @@ public class StageFragment extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        adapter = new IconAdapter(stages, getActivity(), false);
 
         if(!Preferences.hideAds(getActivity())) {
             AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
                     AvocarrotInstreamRecyclerView(
-                    new IconAdapter(stages),
+                    adapter,
                     getActivity(),
                     getResources().getString(R.string.avocarrot_app_id), /* Avocarrot API Key */
                     getResources().getString(R.string.native_on_main_placement)/*Placement key*/
             );
 
-            avocarrotInstreamRecyclerView.setSandbox(true);
+            avocarrotInstreamRecyclerView.setSandbox(false);
             avocarrotInstreamRecyclerView.setFrequency(3, 9);
-            avocarrotInstreamRecyclerView.setLogger(true, "ALL");
+            avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
             recyclerView.setAdapter(avocarrotInstreamRecyclerView);
-
-            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
-                    .OnItemClickListener() {
-                @Override
-                public void onItemClicked(int position) {
-                    if(((ConnectivityManager) getActivity().getSystemService(Context.
-                            CONNECTIVITY_SERVICE)).getActiveNetworkInfo().isConnectedOrConnecting())
-                        if(!TextAdapter.isPosAd(position, 3, 9))
-                            if(canStart) {
-                                position = TextAdapter.getProperPos(position, 3, 9);
-                                startActivity(new Intent(getActivity(),
-                                        StageActivity.class).putExtra("option", stages[position]));
-                                canStart = false;
-                            }
-                }
-            });
         } else {
-            recyclerView.setAdapter(new IconAdapter(stages));
-
-            ItemClickSupport.addTo(recyclerView).setOnItemClickListener(new ItemClickSupport
-                    .OnItemClickListener() {
-                @Override
-                public void onItemClicked(int position) {
-                    if(canStart) {
-                        startActivity(new Intent(getActivity(),
-                                StageActivity.class).putExtra("option", stages[position]));
-                        canStart = false;
-                    }
-                }
-            });
+            recyclerView.setAdapter(adapter);
         }
 
         recyclerView.setHasFixedSize(true);
@@ -111,7 +78,7 @@ public class StageFragment extends Fragment {
 
     @Override
     public void onResume() {
-        canStart = true;
+        adapter.setCanStart(true);
         super.onResume();
     }
 }
