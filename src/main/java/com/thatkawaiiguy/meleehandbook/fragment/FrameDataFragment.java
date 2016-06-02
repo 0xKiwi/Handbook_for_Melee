@@ -79,167 +79,99 @@ public class FrameDataFragment extends Fragment {
         ArrayList<ParentObject> parentObjectList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             ArrayList<Object> childObjectList = new ArrayList<>();
-            CustomChildObject customChildObject = new CustomChildObject();
-            CustomChildObject customChildObject2 = new CustomChildObject();
-            CustomChildObject customChildObject3 = new CustomChildObject();
 
             switch (i) {
                 case 0: {
-                    customChildObject.setChildText(tiltList[0]);
-                    customChildObject2.setChildText(tiltList[1]);
-                    customChildObject3.setChildText(tiltList[2]);
-                    childObjectList.add(customChildObject);
-                    childObjectList.add(customChildObject2);
-                    childObjectList.add(customChildObject3);
+                    childObjectList.add(new CustomChildObject().setChildText(tiltList[0]));
+                    childObjectList.add(new CustomChildObject().setChildText(tiltList[1]));
+                    childObjectList.add(new CustomChildObject().setChildText(tiltList[2]));
                     if (actionBarTitle.equals("Marth") || actionBarTitle.equals("Sheik") ||
                             actionBarTitle.equals("Yoshi") || actionBarTitle.equals("Princess Peach"))
                         break;
-                    CustomChildObject customChildObject4 = new CustomChildObject();
-                    CustomChildObject customChildObject5 = new CustomChildObject();
-                    customChildObject4.setChildText(tiltList[3]);
-                    customChildObject5.setChildText(tiltList[4]);
-                    childObjectList.add(customChildObject4);
-                    childObjectList.add(customChildObject5);
+                    childObjectList.add(new CustomChildObject().setChildText(tiltList[3]));
+                    childObjectList.add(new CustomChildObject().setChildText(tiltList[4]));
                 }
                 break;
                 case 1: {
-                    CustomChildObject customChildObject4 = new CustomChildObject();
-                    CustomChildObject customChildObject5 = new CustomChildObject();
-                    customChildObject.setChildText(aerialList[0]);
-                    customChildObject2.setChildText(aerialList[1]);
-                    customChildObject3.setChildText(aerialList[2]);
-                    customChildObject4.setChildText(aerialList[3]);
-                    customChildObject5.setChildText(aerialList[4]);
-                    childObjectList.add(customChildObject);
-                    childObjectList.add(customChildObject2);
-                    childObjectList.add(customChildObject3);
-                    childObjectList.add(customChildObject4);
-                    childObjectList.add(customChildObject5);
+                    childObjectList.add(new CustomChildObject().setChildText(aerialList[0]));
+                    childObjectList.add(new CustomChildObject().setChildText(aerialList[1]));
+                    childObjectList.add(new CustomChildObject().setChildText(aerialList[2]));
+                    childObjectList.add(new CustomChildObject().setChildText(aerialList[3]));
+                    childObjectList.add(new CustomChildObject().setChildText(aerialList[4]));
                 }
                 break;
                 case 2: {
-                    customChildObject.setChildText(smashList[0]);
-                    customChildObject2.setChildText(smashList[1]);
-                    customChildObject3.setChildText(smashList[2]);
-                    childObjectList.add(customChildObject);
-                    childObjectList.add(customChildObject2);
-                    childObjectList.add(customChildObject3);
+                    childObjectList.add(new CustomChildObject().setChildText(smashList[0]));
+                    childObjectList.add(new CustomChildObject().setChildText(smashList[1]));
+                    childObjectList.add(new CustomChildObject().setChildText(smashList[2]));
                 }
                 break;
                 case 3: {
-                    CustomChildObject customChildObject4 = new CustomChildObject();
-                    CustomChildObject customChildObject5 = new CustomChildObject();
-                    CustomChildObject customChildObject6 = new CustomChildObject();
-                    CustomChildObject customChildObject7 = new CustomChildObject();
-                    customChildObject.setChildText(normalList[0]);
-                    childObjectList.add(customChildObject);
+                    childObjectList.add(new CustomChildObject().setChildText(normalList[0]));
                     switch(actionBarTitle) {
                         case "Marth":
                         case "Jigglypuff":
                         case "Samus Aran":
                         case "Ice Climbers":
                         case "Yoshi":
-                            customChildObject2.setChildText(normalList[1]);
-                            customChildObject4.setChildText(normalList[3]);
-                            customChildObject5.setChildText(normalList[4]);
-                            customChildObject6.setChildText(normalList[5]);
-                            childObjectList.add(customChildObject2);
-                            childObjectList.add(customChildObject4);
-                            childObjectList.add(customChildObject5);
-                            childObjectList.add(customChildObject6);
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[1]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[3]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[4]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[5]));
                             break;
                         case "Captain Falcon":
-                            customChildObject2.setChildText(normalList[1]);
-                            customChildObject3.setChildText(normalList[6]);
-                            customChildObject4.setChildText(normalList[2]);
-                            customChildObject5.setChildText(normalList[3]);
-                            customChildObject6.setChildText(normalList[4]);
-                            customChildObject7.setChildText(normalList[5]);
-                            childObjectList.add(customChildObject2);
-                            childObjectList.add(customChildObject3);
-                            childObjectList.add(customChildObject4);
-                            childObjectList.add(customChildObject5);
-                            childObjectList.add(customChildObject6);
-                            childObjectList.add(customChildObject7);
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[1]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[6]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[2]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[3]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[4]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[5]));
                             break;
                         case "Luigi":
                         case "Dr. Mario":
-                            customChildObject2.setChildText(normalList[1]);
-                            customChildObject3.setChildText(normalList[6]);
-                            customChildObject5.setChildText(normalList[3]);
-                            customChildObject6.setChildText(normalList[4]);
-                            customChildObject7.setChildText(normalList[5]);
-                            childObjectList.add(customChildObject2);
-                            childObjectList.add(customChildObject3);
-                            childObjectList.add(customChildObject5);
-                            childObjectList.add(customChildObject6);
-                            childObjectList.add(customChildObject7);
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[1]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[6]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[3]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[4]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[5]));
                             break;
                         case "Ganondorf":
                         case "Pikachu":
-                            customChildObject6.setChildText(normalList[5]);
-                            childObjectList.add(customChildObject6);
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[5]));
                             break;
                         default:
-                            customChildObject2.setChildText(normalList[1]);
-                            customChildObject3.setChildText(normalList[2]);
-                            customChildObject4.setChildText(normalList[3]);
-                            customChildObject5.setChildText(normalList[4]);
-                            customChildObject6.setChildText(normalList[5]);
-                            childObjectList.add(customChildObject2);
-                            childObjectList.add(customChildObject3);
-                            childObjectList.add(customChildObject4);
-                            childObjectList.add(customChildObject5);
-                            childObjectList.add(customChildObject6);
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[1]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[2]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[3]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[4]));
+                            childObjectList.add(new CustomChildObject().setChildText(normalList[5]));
                             break;
                     }
                 }
                 break;
                 case 4: {
-                    CustomChildObject customChildObject4 = new CustomChildObject();
-                    customChildObject.setChildText(specialList[0]);
+                    childObjectList.add(new CustomChildObject().setChildText(specialList[0]));
                     if (!actionBarTitle.equals("Marth")) {
-                        customChildObject2.setChildText(specialList[1]);
-                        customChildObject3.setChildText(specialList[2]);
-                        customChildObject4.setChildText(specialList[3]);
-                        childObjectList.add(customChildObject);
+                        childObjectList.add(new CustomChildObject().setChildText(specialList[1]));
+                        childObjectList.add(new CustomChildObject().setChildText(specialList[2]));
+                        childObjectList.add(new CustomChildObject().setChildText(specialList[3]));
                         if(!actionBarTitle.equals("Yoshi"))
-                            childObjectList.add(customChildObject2);
-                        childObjectList.add(customChildObject3);
+                            childObjectList.add(new CustomChildObject().setChildText(specialList[1]));
+                        childObjectList.add(new CustomChildObject().setChildText(specialList[2]));
                         if(!actionBarTitle.equals("Dr. Mario"))
-                            childObjectList.add(customChildObject4);
+                            childObjectList.add(new CustomChildObject().setChildText(specialList[3]));
                     } else {
-                        CustomChildObject customChildObject5 = new CustomChildObject();
-                        CustomChildObject customChildObject6 = new CustomChildObject();
-                        CustomChildObject customChildObject7 = new CustomChildObject();
-                        CustomChildObject customChildObject8 = new CustomChildObject();
-                        CustomChildObject customChildObject9 = new CustomChildObject();
-                        CustomChildObject customChildObject10 = new CustomChildObject();
-                        CustomChildObject customChildObject11 = new CustomChildObject();
-                        CustomChildObject customChildObject12 = new CustomChildObject();
-                        customChildObject2.setChildText(marthSpecialList[0]);
-                        customChildObject3.setChildText(marthSpecialList[1]);
-                        customChildObject4.setChildText(marthSpecialList[2]);
-                        customChildObject5.setChildText(marthSpecialList[3]);
-                        customChildObject6.setChildText(marthSpecialList[4]);
-                        customChildObject7.setChildText(marthSpecialList[5]);
-                        customChildObject8.setChildText(marthSpecialList[6]);
-                        customChildObject9.setChildText(marthSpecialList[7]);
-                        customChildObject10.setChildText(marthSpecialList[8]);
-                        customChildObject11.setChildText(specialList[2]);
-                        customChildObject12.setChildText(specialList[3]);
-                        childObjectList.add(customChildObject);
-                        childObjectList.add(customChildObject2);
-                        childObjectList.add(customChildObject3);
-                        childObjectList.add(customChildObject4);
-                        childObjectList.add(customChildObject5);
-                        childObjectList.add(customChildObject6);
-                        childObjectList.add(customChildObject7);
-                        childObjectList.add(customChildObject8);
-                        childObjectList.add(customChildObject9);
-                        childObjectList.add(customChildObject10);
-                        childObjectList.add(customChildObject11);
-                        childObjectList.add(customChildObject12);
+                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[0]));
+                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[1]));
+                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[2]));
+                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[3]));
+                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[4]));
+                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[5]));
+                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[6]));
+                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[7]));
+                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[8]));
+                        childObjectList.add(new CustomChildObject().setChildText(specialList[2]));
+                        childObjectList.add(new CustomChildObject().setChildText(specialList[3]));
                     }
                 }
             }

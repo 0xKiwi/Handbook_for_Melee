@@ -72,14 +72,14 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize
                 (this)));
 
-        final int oldStatusColor = getWindow().getStatusBarColor();
-        getWindow().setStatusBarColor(0x00000000);
-
-        final VideoInfoActivity activity = this;
-        final int vidHeight = infoVid.getHeight();
-        final int abheight = getActionBarHeight();
-
         if(Build.VERSION.SDK_INT >= 21) {
+            final int oldStatusColor = getWindow().getStatusBarColor();
+            getWindow().setStatusBarColor(0x00000000);
+
+            final VideoInfoActivity activity = this;
+            final int vidHeight = infoVid.getHeight();
+            final int abheight = getActionBarHeight();
+
             ((NestedScrollView) findViewById(R.id.video_scrollView))
                     .setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
                         @Override
@@ -124,6 +124,10 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
             case "Frozen turnip glitch":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.frozenturnip));
+                break;
+            case "Gentleman":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
+                        .raw.gentleman));
                 break;
             case "Double jump cancel":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
@@ -396,13 +400,13 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
         return result;
     }
 
-    private int getActionBarHeight(){
+    private int getActionBarHeight() {
         int actionBarHeight = 0;
 
         TypedValue tv = new TypedValue();
-        if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true))
-        {
-            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data,getResources().getDisplayMetrics());
+        if(getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, getResources()
+                    .getDisplayMetrics());
         }
         return actionBarHeight;
     }

@@ -49,7 +49,7 @@
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="gplus">G+</string>
-    <string name="about_text">\t\t\tHandbook for Melee v1.4.11
+    <string name="about_text">\t\t\tHandbook for Melee v1.4.14
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
@@ -291,7 +291,7 @@
         <br>The FCAN Peach is also using a technique that allows her to instantly float by holding down
         on the control stick and a jump button, known as Auto-floating.
     ]]></string>
-    <string name="frozenturnip_info_text"><![CDATA[big><b>Frozen turnip glitch</b></big>
+    <string name="frozenturnip_info_text"><![CDATA[<big><b>Frozen turnip glitch</b></big>
         <br>The frozen turnip glitch is a glitch on the 1.00 NTSC version of Melee that
         will cause a turnip to not travel any distance when thrown and will remain frozen
         in air with the hitbox still active. The turnip will stay in place indefinitely
@@ -322,6 +322,17 @@
         <br><b>Step 3:</b> Have fun.
         <br>
         <br>Full explanation: http://bit.ly/1PjNVR3
+    ]]></string>
+    <string name="gentleman_info_text"><![CDATA[<big><b>Gentleman</b></big>
+        <br>The Gentleman is a jab technique that Captain Falcon uses to end his jab on the third hit,
+        where he uses his knee. If a Falcon were to jab normally, he would do the rapid jab, which
+        renders Falcon stuck in an animation for a whole second, thus allowing opponents to easily punish.
+        <br>The Gentleman knee also deals more damage, and has more knockback when compared to the Rapid Jab.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>To properly perform the Gentleman, one must delay the third neutral jab. This can be done by
+        either pressing the A button 3 times slowly, allowing each move to finish its animation. Another
+        method is to tap the A button 3 times fast, and then hold the A button till the Gentleman is complete.
     ]]></string>
     <string name="hominggrapple_info_text"><![CDATA[Example: http://gfycat.com/HeftyTenderCalf
         <br>

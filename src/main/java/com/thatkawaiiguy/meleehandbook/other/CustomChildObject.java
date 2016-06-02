@@ -26,7 +26,8 @@ public class CustomChildObject {
         return mChildText;
     }
 
-    public void setChildText(String childText) {
+    public CustomChildObject setChildText(String childText) {
         mChildText = childText;
+        return this;
     }
 }

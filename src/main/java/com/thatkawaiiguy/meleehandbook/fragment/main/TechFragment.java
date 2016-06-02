@@ -64,15 +64,12 @@ public class TechFragment extends Fragment {
             AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
                     AvocarrotInstreamRecyclerView(
                     adapter,
-                    getActivity(),                   /* reference to your Activity */
-                    getResources().getString(R.string.avocarrot_app_id), /* this is your
-                    Avocarrot API Key */
-                    getResources().getString(R.string.native_on_main_placement)  /* this is your
-                    Avocarrot Placement
-                Key */
+                    getActivity(),
+                    getResources().getString(R.string.avocarrot_app_id),
+                    getResources().getString(R.string.native_on_main_placement)
             );
 
-            /*avocarrotInstreamRecyclerView.setLayout(
+            avocarrotInstreamRecyclerView.setLayout(
                     R.layout.native_layout,
                     R.id.avo_container,
                     R.id.avo_ad_headline,
@@ -81,10 +78,10 @@ public class TechFragment extends Fragment {
                     R.id.avo_ad_icon,
                     R.id.avo_ad_button,
                     R.id.avo_ad_choices
-            );*/
+            );
 
             avocarrotInstreamRecyclerView.setSandbox(false);
-            avocarrotInstreamRecyclerView.setFrequency(3, 11);
+            avocarrotInstreamRecyclerView.setFrequency(4, 17);
             avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
             recyclerView.setAdapter(avocarrotInstreamRecyclerView);

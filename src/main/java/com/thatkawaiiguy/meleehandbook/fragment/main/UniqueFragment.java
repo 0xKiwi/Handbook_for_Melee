@@ -82,8 +82,19 @@ public class UniqueFragment extends Fragment {
                         getResources().getString(R.string.native_on_main_placement)/*Placement key*/
                 );
 
+                avocarrotInstreamRecyclerView.setLayout(
+                        R.layout.native_layout,
+                        R.id.avo_container,
+                        R.id.avo_ad_headline,
+                        R.id.avo_ad_description,
+                        R.id.avo_ad_icon,
+                        R.id.avo_ad_icon,
+                        R.id.avo_ad_button,
+                        R.id.avo_ad_choices
+                );
+
                 avocarrotInstreamRecyclerView.setSandbox(false);
-                avocarrotInstreamRecyclerView.setFrequency(3, 11);
+                avocarrotInstreamRecyclerView.setFrequency(4, 14);
                 avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
                 recyclerView.setAdapter(avocarrotInstreamRecyclerView);
@@ -101,145 +112,96 @@ public class UniqueFragment extends Fragment {
         ArrayList<ParentObject> parentObjectList = new ArrayList<>();
         for(int i = 0; i < parentList.length; i++) {
             ArrayList<Object> childObjectList = new ArrayList<>();
-            CustomChildObject customChildObject = new CustomChildObject();
 
             switch(parentList[i]) {
-                case "Ganondorf":
+                case "Ganondorf": {
+                    childObjectList.add(new CustomChildObject().setChildText(jumprefresh));
+                }
+                break;
                 case "Captain Falcon": {
-                    customChildObject.setChildText(jumprefresh);
-                    childObjectList.add(customChildObject);
+                    childObjectList.add(new CustomChildObject().setChildText(jumprefresh));
+                    childObjectList.add(new CustomChildObject().setChildText("Gentleman"));
                 }
                 break;
                 case "Dr. Mario": {
-                    customChildObject.setChildText("Up-B cancel");
-                    childObjectList.add(customChildObject);
+                    childObjectList.add(new CustomChildObject().setChildText("Up-B cancel"));
                 }
                 break;
                 case "Fox":
                 case "Falco": {
-                    CustomChildObject customChildObject2 = new CustomChildObject();
-                    CustomChildObject customChildObject3 = new CustomChildObject();
-                    CustomChildObject customChildObject4 = new CustomChildObject();
-                    CustomChildObject customChildObject5 = new CustomChildObject();
-                    CustomChildObject customChildObject6 = new CustomChildObject();
-                    CustomChildObject customChildObject7 = new CustomChildObject();
-                    CustomChildObject customChildObject8 = new CustomChildObject();
-                    customChildObject.setChildText("Chillin dash");
-                    customChildObject2.setChildText("Ledgehop double laser");
-                    customChildObject3.setChildText("Multishine");
-                    customChildObject4.setChildText("Pillaring");
-                    customChildObject5.setChildText("Short hop laser");
-                    customChildObject6.setChildText("Side-B shorten");
-                    customChildObject7.setChildText("Shine mine");
-                    customChildObject8.setChildText("Waveshine");
-                    childObjectList.add(customChildObject);
-                    childObjectList.add(customChildObject2);
-                    childObjectList.add(customChildObject3);
-                    childObjectList.add(customChildObject4);
-                    childObjectList.add(customChildObject5);
-                    childObjectList.add(customChildObject6);
-                    childObjectList.add(customChildObject7);
-                    childObjectList.add(customChildObject8);
+                    childObjectList.add(new CustomChildObject().setChildText("Chillin dash"));
+                    childObjectList.add(new CustomChildObject().setChildText("Ledgehop double " +
+                            "laser"));
+                    childObjectList.add(new CustomChildObject().setChildText("Multishine"));
+                    childObjectList.add(new CustomChildObject().setChildText("Pillaring"));
+                    childObjectList.add(new CustomChildObject().setChildText("Short hop laser"));
+                    childObjectList.add(new CustomChildObject().setChildText("Side-B shorten"));
+                    childObjectList.add(new CustomChildObject().setChildText("Shine mine"));
+                    childObjectList.add(new CustomChildObject().setChildText("Waveshine"));
                 }
                 break;
                 case "Ice Climbers": {
-                    CustomChildObject customChildObject2 = new CustomChildObject();
-                    customChildObject.setChildText("Desynching");
-                    customChildObject2.setChildText("Wobbling");
-                    childObjectList.add(customChildObject);
-                    childObjectList.add(customChildObject2);
+                    childObjectList.add(new CustomChildObject().setChildText("Desynching"));
+                    childObjectList.add(new CustomChildObject().setChildText("Wobbling"));
                 }
                 break;
                 case "Jigglypuff": {
-                    customChildObject.setChildText("Rising pound");
-                    childObjectList.add(customChildObject);
+                    childObjectList.add(new CustomChildObject().setChildText("Rising pound"));
                 }
                 break;
                 case "Young Link":
                 case "Link": {
-                    customChildObject.setChildText("Boomerang superjump");
-                    childObjectList.add(customChildObject);
+                    childObjectList.add(new CustomChildObject().setChildText("Boomerang superjump"));
                 }
                 break;
                 case "Luigi": {
-                    customChildObject.setChildText("Vududash");
-                    childObjectList.add(customChildObject);
+                    childObjectList.add(new CustomChildObject().setChildText("Vududash"));
                 }
                 break;
                 case "Mario": {
-                    customChildObject.setChildText("Up-B walljump");
-                    childObjectList.add(customChildObject);
+                    childObjectList.add(new CustomChildObject().setChildText("Up-B walljump"));
                 }
                 break;
                 case "Pichu":
                 case "Pikachu":
                 case "Princess Zelda": {
-                    customChildObject.setChildText(upbturn);
-                    childObjectList.add(customChildObject);
+                    childObjectList.add(new CustomChildObject().setChildText(upbturn));
                 }
                 break;
                 case "Mewtwo": {
-                    CustomChildObject customChildObject2 = new CustomChildObject();
-                    customChildObject.setChildText(djc);
-                    customChildObject2.setChildText(upbturn);
-                    childObjectList.add(customChildObject);
-                    childObjectList.add(customChildObject2);
+                    childObjectList.add(new CustomChildObject().setChildText(djc));
+                    childObjectList.add(new CustomChildObject().setChildText(upbturn));
                 }
                 break;
                 case "Princess Peach": {
-                    CustomChildObject customChildObject2 = new CustomChildObject();
-                    CustomChildObject customChildObject3 = new CustomChildObject();
-                    CustomChildObject customChildObject4 = new CustomChildObject();
-                    customChildObject.setChildText(djc);
-                    customChildObject2.setChildText("Float cancel");
-                    customChildObject3.setChildText("Frozen turnip glitch");
-                    customChildObject4.setChildText(psspike);
-                    childObjectList.add(customChildObject);
-                    childObjectList.add(customChildObject2);
-                    childObjectList.add(customChildObject3);
-                    childObjectList.add(customChildObject4);
+                    childObjectList.add(new CustomChildObject().setChildText(djc));
+                    childObjectList.add(new CustomChildObject().setChildText("Float cancel"));
+                    childObjectList.add(new CustomChildObject().setChildText("Frozen turnip glitch"));
+                    childObjectList.add(new CustomChildObject().setChildText(psspike));
                 }
                 break;
                 case "Ness": {
-                    CustomChildObject customChildObject2 = new CustomChildObject();
-                    customChildObject.setChildText(djc);
-                    customChildObject2.setChildText("Yo-yo glitch");
-                    childObjectList.add(customChildObject);
-                    childObjectList.add(customChildObject2);
+                    childObjectList.add(new CustomChildObject().setChildText(djc));
+                    childObjectList.add(new CustomChildObject().setChildText("Yo-yo glitch"));
                 }
                 break;
                 case "Marth":
                 case "Roy": {
-                    customChildObject.setChildText(psspike);
-                    childObjectList.add(customChildObject);
+                    childObjectList.add(new CustomChildObject().setChildText(psspike));
                 }
                 break;
                 case "Samus Aran": {
-                    CustomChildObject customChildObject2 = new CustomChildObject();
-                    CustomChildObject customChildObject3 = new CustomChildObject();
-                    CustomChildObject customChildObject4 = new CustomChildObject();
-                    customChildObject.setChildText("Extended & homing grapple");
-                    customChildObject2.setChildText("RI grapple cancel");
-                    customChildObject3.setChildText("SHFF missiles");
-                    customChildObject4.setChildText("Super wavedash & SDWD");
-                    childObjectList.add(customChildObject);
-                    childObjectList.add(customChildObject2);
-                    childObjectList.add(customChildObject3);
-                    childObjectList.add(customChildObject4);
+                    childObjectList.add(new CustomChildObject().setChildText("Extended & homing grapple"));
+                    childObjectList.add(new CustomChildObject().setChildText("RI grapple cancel"));
+                    childObjectList.add(new CustomChildObject().setChildText("SHFF missiles"));
+                    childObjectList.add(new CustomChildObject().setChildText("Super wavedash & SDWD"));
                 }
                 break;
                 case "Yoshi": {
-                    CustomChildObject customChildObject2 = new CustomChildObject();
-                    CustomChildObject customChildObject3 = new CustomChildObject();
-                    CustomChildObject customChildObject4 = new CustomChildObject();
-                    customChildObject.setChildText(djc);
-                    customChildObject2.setChildText("DJ knockback armor");
-                    customChildObject3.setChildText("Edge canceled eggs");
-                    customChildObject4.setChildText("Parry");
-                    childObjectList.add(customChildObject);
-                    childObjectList.add(customChildObject2);
-                    childObjectList.add(customChildObject3);
-                    childObjectList.add(customChildObject4);
+                    childObjectList.add(new CustomChildObject().setChildText(djc));
+                    childObjectList.add(new CustomChildObject().setChildText("DJ knockback armor"));
+                    childObjectList.add(new CustomChildObject().setChildText("Edge canceled eggs"));
+                    childObjectList.add(new CustomChildObject().setChildText("Parry"));
                 }
                 break;
             }

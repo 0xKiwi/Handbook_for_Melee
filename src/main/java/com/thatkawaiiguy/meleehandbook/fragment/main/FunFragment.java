@@ -66,12 +66,21 @@ public class FunFragment extends Fragment {
             );
 
             avocarrotInstreamRecyclerView.setSandbox(false);
-            avocarrotInstreamRecyclerView.setFrequency(3, 9);
+            avocarrotInstreamRecyclerView.setFrequency(4, 11);
             avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
+            avocarrotInstreamRecyclerView.setLayout(
+                    R.layout.native_layout,
+                    R.id.avo_container,
+                    R.id.avo_ad_headline,
+                    R.id.avo_ad_description,
+                    R.id.avo_ad_icon,
+                    R.id.avo_ad_icon,
+                    R.id.avo_ad_button,
+                    R.id.avo_ad_choices
+            );
+
             recyclerView.setAdapter(avocarrotInstreamRecyclerView);
-
-
         } else {
             recyclerView.setAdapter(adapter);
         }

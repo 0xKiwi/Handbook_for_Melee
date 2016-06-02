@@ -168,10 +168,11 @@ public class ArrayHelper {
     }
 
     public static String[] getUniqueArray() {
-        return new String[]{"Boomerang superjump", "Desynching",
-                "Double jump cancel",
+        return new String[]{"Boomerang superjump", "Chillin dash",
+                "Desynching", "Double jump cancel",
                 "DJ knockback armor", "Double jump refresh", "Edge canceled eggs",
                 "Extended & homing grapple", "Float cancel", "Frozen turnip glitch",
+                "Gentleman",
                 "Ledgehop double laser", "Multishine", "Parry", "Pillaring",
                 "Princess/Swordsman spiking", "RI grapple cancel",
                 "Rising pound", "SHFF missiles",
@@ -636,6 +637,8 @@ public class ArrayHelper {
                 return res.getString(R.string.fcancel_info_text);
             case "Frozen turnip glitch":
                 return res.getString(R.string.frozenturnip_info_text);
+            case "Gentleman":
+                return res.getString(R.string.gentleman_info_text);
             case "Ledgehop double laser":
                 return res.getString(R.string.lhdl_info_text);
             case "Multishine":

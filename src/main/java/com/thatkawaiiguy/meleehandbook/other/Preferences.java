@@ -184,6 +184,6 @@ public class Preferences {
 
     private static boolean groupByCharacter(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context)
-                .getBoolean(context.getString(R.string.pref_uniquegroup), false);
+                .getBoolean(context.getString(R.string.pref_uniquegroup), true);
     }
 }

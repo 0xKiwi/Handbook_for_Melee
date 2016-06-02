@@ -62,8 +62,19 @@ public class StageFragment extends Fragment {
                     getResources().getString(R.string.native_on_main_placement)/*Placement key*/
             );
 
+            avocarrotInstreamRecyclerView.setLayout(
+                    R.layout.native_layout,
+                    R.id.avo_container,
+                    R.id.avo_ad_headline,
+                    R.id.avo_ad_description,
+                    R.id.avo_ad_icon,
+                    R.id.avo_ad_icon,
+                    R.id.avo_ad_button,
+                    R.id.avo_ad_choices
+            );
+
             avocarrotInstreamRecyclerView.setSandbox(false);
-            avocarrotInstreamRecyclerView.setFrequency(3, 9);
+            avocarrotInstreamRecyclerView.setFrequency(4, 9);
             avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
             recyclerView.setAdapter(avocarrotInstreamRecyclerView);
