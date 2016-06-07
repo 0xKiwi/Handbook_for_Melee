@@ -100,10 +100,9 @@ public class UniqueFragment extends Fragment {
                 recyclerView.setAdapter(avocarrotInstreamRecyclerView);
             } else {
                 recyclerView.setAdapter(adapter);
+                recyclerView.setHasFixedSize(true);
             }
         }
-
-        recyclerView.setHasFixedSize(true);
 
         return rootView;
     }

@@ -77,10 +77,10 @@ public class TermFragment extends Fragment {
             avocarrotInstreamRecyclerView.setLogger(false, "ALL");
 
             recyclerView.setAdapter(avocarrotInstreamRecyclerView);
-        } else
+        } else {
             recyclerView.setAdapter(new TermAdapter(terms, getActivity()));
-
-        recyclerView.hasFixedSize();
+            recyclerView.hasFixedSize();
+        }
 
         new MaterialScrollBar(getActivity(), recyclerView, true).setBarThickness(12).
                 setAutoHide(false).setBarColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color)).

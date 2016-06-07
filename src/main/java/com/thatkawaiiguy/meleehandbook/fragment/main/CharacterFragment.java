@@ -80,8 +80,8 @@ public class CharacterFragment extends Fragment {
             recyclerView.setAdapter(avocarrotInstreamRecyclerView);
         } else {
             recyclerView.setAdapter(adapter);
+            recyclerView.setHasFixedSize(true);
         }
-        recyclerView.setHasFixedSize(true);
 
         return rootView;
     }

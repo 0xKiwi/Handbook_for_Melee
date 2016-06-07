@@ -59,6 +59,7 @@ public class TechFragment extends Fragment {
         adapter = new TextAdapter(techs, getActivity(), true);
 
         AvocarrotUser.setGender(AvocarrotUser.Gender.MALE);
+        AvocarrotUser.setAge(20);
 
         if(!Preferences.hideAds(getActivity())) {
             AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
@@ -87,9 +88,8 @@ public class TechFragment extends Fragment {
             recyclerView.setAdapter(avocarrotInstreamRecyclerView);
         } else {
             recyclerView.setAdapter(adapter);
+            recyclerView.setHasFixedSize(true);
         }
-
-        recyclerView.setHasFixedSize(true);
 
         return rootView;
     }
