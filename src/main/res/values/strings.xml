@@ -1247,6 +1247,13 @@
         There is a 12.5&#37; chance where Luigi\'s Green Missile (Side-B) can misfire,
         causing his speed and horizontal distance covered to increase dramatically.
     </string>
+    <string name="mtc_term_info">
+        The act of getting recognition in Smash, purposely losing to a
+        selected opponent that is formidable in a less important tournament and
+        then waiting for their match analysis of them defeating you because
+        they felt good, followed by you studying that match analysis in order to
+        destroy them in a more major tournament. Discovered by HugS https://youtu.be/qCKaD7i-zNk
+    </string>
     <string name="myb_term_info">
         A shortened version of \"My bad\". Used by Chillindude. https://youtu.be/1TO7MdV5qZo
     </string>

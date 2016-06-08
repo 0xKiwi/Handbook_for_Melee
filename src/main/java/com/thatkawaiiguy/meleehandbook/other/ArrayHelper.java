@@ -140,7 +140,7 @@ public class ArrayHelper {
                 "Lean drop", "Legalize PokeFloats", "lol m2k", "Love tap", "MacD", "Mangle",
                 "Mashedpotato Samurai", "Matchups", "Metagame",
                 "Meteor cancel", "Meteor", "Mike Haze", "Mindgames",
-                "Misfire", "My b", "Nerf", "Neutral game", "OOS",
+                "Misfire", "Multi tournament conditioning", "My b", "Nerf", "Neutral game", "OOS",
                 "Overpowered", "PC drop", "People's elbow", "Phantom hit", "Pine sol",
                 "Pivot", "Pop a balloon",
                 "Pop off", "Port priority", "Priority", "Pummel", "Punish",
@@ -366,6 +366,8 @@ public class ArrayHelper {
                 return res.getString(R.string.mikehaze_term_info);
             case "Misfire":
                 return res.getString(R.string.misfire_term_info);
+            case "Multi tournament conditioning":
+                return res.getString(R.string.mtc_term_info);
             case "My b":
                 return res.getString(R.string.myb_term_info);
             case "Nerf":

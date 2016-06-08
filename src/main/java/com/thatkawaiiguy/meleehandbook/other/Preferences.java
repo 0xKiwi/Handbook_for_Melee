@@ -158,7 +158,7 @@ public class Preferences {
     }
 
     public static boolean hideAds(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context).getBoolean
+        return !PreferenceManager.getDefaultSharedPreferences(context).getBoolean
                 (context.getString(R.string.pref_ads), false);
     }
 

@@ -71,6 +71,7 @@ public class UniqueFragment extends Fragment {
             recyclerView.setAdapter(mExpandableAdapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         } else {
+            adapter = new TextAdapter(uniqueTechs, getActivity(), true);
             recyclerView.setAdapter(adapter);
             recyclerView.setHasFixedSize(true);
         }
