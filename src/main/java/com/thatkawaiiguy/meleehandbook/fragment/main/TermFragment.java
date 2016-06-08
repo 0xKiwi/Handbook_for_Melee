@@ -26,11 +26,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.TermAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
-import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.turingtechnologies.materialscrollbar.MaterialScrollBar;
 
 public class TermFragment extends Fragment {
@@ -52,39 +50,13 @@ public class TermFragment extends Fragment {
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
 
-        if(!Preferences.hideAds(getActivity())) {
-            AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
-                    AvocarrotInstreamRecyclerView(
-                    new TermAdapter(terms, getActivity()),
-                    getActivity(),                   /* reference to your Activity */
-                    getResources().getString(R.string.avocarrot_app_id), /* Avocarrot API Key */
-                    getResources().getString(R.string.native_on_main_placement)/*Placement key*/
-            );
-
-            avocarrotInstreamRecyclerView.setLayout(
-                    R.layout.native_layout,
-                    R.id.avo_container,
-                    R.id.avo_ad_headline,
-                    R.id.avo_ad_description,
-                    R.id.avo_ad_icon,
-                    R.id.avo_ad_icon,
-                    R.id.avo_ad_button,
-                    R.id.avo_ad_choices
-            );
-
-            avocarrotInstreamRecyclerView.setSandbox(false);
-            avocarrotInstreamRecyclerView.setFrequency(5, 12);
-            avocarrotInstreamRecyclerView.setLogger(false, "ALL");
-
-            recyclerView.setAdapter(avocarrotInstreamRecyclerView);
-        } else {
-            recyclerView.setAdapter(new TermAdapter(terms, getActivity()));
-            recyclerView.hasFixedSize();
-        }
+        recyclerView.setAdapter(new TermAdapter(terms, getActivity()));
+        recyclerView.hasFixedSize();
 
         new MaterialScrollBar(getActivity(), recyclerView, true).setBarThickness(12).
-                setAutoHide(false).setBarColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color)).
-        setHandleColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color));
+                setAutoHide(false).setBarColour(ContextCompat.getColor(getActivity(), R.color
+                .overscroll_color)).
+                setHandleColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color));
         return rootView;
     }
 }

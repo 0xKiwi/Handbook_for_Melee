@@ -25,12 +25,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
-import com.avocarrot.androidsdk.AvocarrotUser;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
-import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 public class TechFragment extends Fragment {
 
@@ -58,38 +55,8 @@ public class TechFragment extends Fragment {
 
         adapter = new TextAdapter(techs, getActivity(), true);
 
-        AvocarrotUser.setGender(AvocarrotUser.Gender.MALE);
-        AvocarrotUser.setAge(20);
-
-        if(!Preferences.hideAds(getActivity())) {
-            AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
-                    AvocarrotInstreamRecyclerView(
-                    adapter,
-                    getActivity(),
-                    getResources().getString(R.string.avocarrot_app_id),
-                    getResources().getString(R.string.native_on_main_placement)
-            );
-
-            avocarrotInstreamRecyclerView.setLayout(
-                    R.layout.native_layout,
-                    R.id.avo_container,
-                    R.id.avo_ad_headline,
-                    R.id.avo_ad_description,
-                    R.id.avo_ad_icon,
-                    R.id.avo_ad_icon,
-                    R.id.avo_ad_button,
-                    R.id.avo_ad_choices
-            );
-
-            avocarrotInstreamRecyclerView.setSandbox(false);
-            avocarrotInstreamRecyclerView.setFrequency(4, 17);
-            avocarrotInstreamRecyclerView.setLogger(false, "ALL");
-
-            recyclerView.setAdapter(avocarrotInstreamRecyclerView);
-        } else {
-            recyclerView.setAdapter(adapter);
-            recyclerView.setHasFixedSize(true);
-        }
+        recyclerView.setAdapter(adapter);
+        recyclerView.setHasFixedSize(true);
 
         return rootView;
     }

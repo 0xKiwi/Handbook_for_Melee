@@ -25,7 +25,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.avocarrot.androidsdk.AvocarrotInstreamRecyclerView;
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
 import com.thatkawaiiguy.meleehandbook.adapter.ExpandableAdapter;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
@@ -72,36 +71,8 @@ public class UniqueFragment extends Fragment {
             recyclerView.setAdapter(mExpandableAdapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         } else {
-            adapter = new TextAdapter(uniqueTechs, getActivity(), true);
-            if(!Preferences.hideAds(getActivity())) {
-                AvocarrotInstreamRecyclerView avocarrotInstreamRecyclerView = new
-                        AvocarrotInstreamRecyclerView(
-                        adapter,
-                        getActivity(),                   /* reference to your Activity */
-                        getResources().getString(R.string.avocarrot_app_id), /* Avocarrot API Key */
-                        getResources().getString(R.string.native_on_main_placement)/*Placement key*/
-                );
-
-                avocarrotInstreamRecyclerView.setLayout(
-                        R.layout.native_layout,
-                        R.id.avo_container,
-                        R.id.avo_ad_headline,
-                        R.id.avo_ad_description,
-                        R.id.avo_ad_icon,
-                        R.id.avo_ad_icon,
-                        R.id.avo_ad_button,
-                        R.id.avo_ad_choices
-                );
-
-                avocarrotInstreamRecyclerView.setSandbox(false);
-                avocarrotInstreamRecyclerView.setFrequency(4, 14);
-                avocarrotInstreamRecyclerView.setLogger(false, "ALL");
-
-                recyclerView.setAdapter(avocarrotInstreamRecyclerView);
-            } else {
-                recyclerView.setAdapter(adapter);
-                recyclerView.setHasFixedSize(true);
-            }
+            recyclerView.setAdapter(adapter);
+            recyclerView.setHasFixedSize(true);
         }
 
         return rootView;
@@ -150,7 +121,8 @@ public class UniqueFragment extends Fragment {
                 break;
                 case "Young Link":
                 case "Link": {
-                    childObjectList.add(new CustomChildObject().setChildText("Boomerang superjump"));
+                    childObjectList.add(new CustomChildObject().setChildText("Boomerang " +
+                            "superjump"));
                 }
                 break;
                 case "Luigi": {
@@ -175,7 +147,8 @@ public class UniqueFragment extends Fragment {
                 case "Princess Peach": {
                     childObjectList.add(new CustomChildObject().setChildText(djc));
                     childObjectList.add(new CustomChildObject().setChildText("Float cancel"));
-                    childObjectList.add(new CustomChildObject().setChildText("Frozen turnip glitch"));
+                    childObjectList.add(new CustomChildObject().setChildText("Frozen turnip " +
+                            "glitch"));
                     childObjectList.add(new CustomChildObject().setChildText(psspike));
                 }
                 break;
@@ -190,10 +163,12 @@ public class UniqueFragment extends Fragment {
                 }
                 break;
                 case "Samus Aran": {
-                    childObjectList.add(new CustomChildObject().setChildText("Extended & homing grapple"));
+                    childObjectList.add(new CustomChildObject().setChildText("Extended & homing " +
+                            "grapple"));
                     childObjectList.add(new CustomChildObject().setChildText("RI grapple cancel"));
                     childObjectList.add(new CustomChildObject().setChildText("SHFF missiles"));
-                    childObjectList.add(new CustomChildObject().setChildText("Super wavedash & SDWD"));
+                    childObjectList.add(new CustomChildObject().setChildText("Super wavedash & " +
+                            "SDWD"));
                 }
                 break;
                 case "Yoshi": {

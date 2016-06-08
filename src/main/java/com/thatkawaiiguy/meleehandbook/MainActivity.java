@@ -36,7 +36,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
+import com.facebook.ads.*;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
@@ -66,6 +68,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     private BillingProcessor bp;
 
+    private AdView adView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Preferences.applySettingsTheme(this);
@@ -81,6 +85,16 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         setSupportActionBar(toolbar);
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        if(!Preferences.hideAds(this)){
+            RelativeLayout adViewContainer = (RelativeLayout) findViewById(R.id.adViewContainer);
+
+            AdSettings.addTestDevice("0254569fc70d3a60c3d6f516b5457940");
+            AdSettings.addTestDevice("c5cfa7328b1b7e73642aab85d1f8d2d7");
+            adView = new AdView(this, getResources().getString(R.string.facebook_banner_on_main), AdSize.BANNER_320_50);
+            adViewContainer.addView(adView);
+            adView.loadAd();
+        }
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -364,6 +378,9 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         if(bp != null)
             bp.release();
+
+        if(adView != null)
+            adView.destroy();
     }
 
     @Override
