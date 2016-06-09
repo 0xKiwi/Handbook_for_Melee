@@ -33,6 +33,7 @@ import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 public class ImageInfoActivity extends AppCompatActivity {
+
     String optionPicked = "";
 
     ImageView infoImage;

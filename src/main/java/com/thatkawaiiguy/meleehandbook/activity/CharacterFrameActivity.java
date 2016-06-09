@@ -26,11 +26,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
-import com.facebook.ads.AdSettings;
-import com.facebook.ads.AdSize;
-import com.facebook.ads.AdView;
 import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
@@ -38,8 +34,6 @@ import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.fragment.CharacterFragmentAdapter;
 
 public class CharacterFrameActivity extends AppCompatActivity {
-
-    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,17 +50,6 @@ public class CharacterFrameActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             getWindow().setStatusBarColor(ContextCompat.getColor(this, android.R.color.transparent));
-
-        if(!Preferences.hideAds(this)){
-            RelativeLayout adViewContainer = (RelativeLayout) findViewById(R.id.adViewContainer);
-
-            AdSettings.addTestDevice("0254569fc70d3a60c3d6f516b5457940");
-            AdSettings.addTestDevice("c5cfa7328b1b7e73642aab85d1f8d2d7");
-            adView = new AdView(this, getResources().getString(R.string.facebook_banner_on_tech),
-                    AdSize.BANNER_320_50);
-            adViewContainer.addView(adView);
-            adView.loadAd();
-        }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(charPicked);
@@ -161,13 +144,5 @@ public class CharacterFrameActivity extends AppCompatActivity {
     public String getSupportActionBarTitle(){
         assert getSupportActionBar() != null;
         return (String)getSupportActionBar().getTitle();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        if(adView != null)
-            adView.destroy();
     }
 }

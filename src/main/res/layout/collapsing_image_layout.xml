@@ -19,6 +19,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_above="@id/adView"
     android:background="?customWindowBG"
     android:fitsSystemWindows="true">
 
@@ -33,17 +34,17 @@
             android:id="@+id/collapsing_toolbar"
             style="@style/CollapsingBar">
 
-                <ImageView
-                    android:id="@+id/infoImage"
-                    style="@style/ImageStyle"/>
+            <ImageView
+                android:id="@+id/infoImage"
+                style="@style/ImageStyle"/>
 
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="?attr/actionBarSize"
-                    app:layout_collapseMode="pin"
-                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
         </android.support.design.widget.CollapsingToolbarLayout>
 

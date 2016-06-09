@@ -18,7 +18,6 @@
 package com.thatkawaiiguy.meleehandbook.activity;
 
 import android.os.Bundle;
-
 import com.thatkawaiiguy.meleehandbook.R;
 
 public class CharacterActivity extends ImageInfoActivity {

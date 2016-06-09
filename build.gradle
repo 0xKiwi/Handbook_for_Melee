@@ -40,6 +40,12 @@ dependencies {
     compile 'com.r0adkll:slidableactivity:2.0.4'
     compile 'com.anjlab.android.iab.v3:library:1.0.31'
     compile 'com.facebook.android:audience-network-sdk:4.+'
+    compile 'com.android.support:support-annotations:23.2.1'
+    compile 'com.mopub.volley:mopub-volley:1.1.0'
+
+    compile('com.mopub:mopub-sdk:4.6.1@aar') {
+        transitive = true
+    }
 
     //compile files('libs/avocarrot-sdk-v.3.7.2.jar')
 }

@@ -42,6 +42,7 @@ import com.facebook.ads.*;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
+import com.mopub.mobileads.MoPubView;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.MatchupFragment;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     private BillingProcessor bp;
 
-    private AdView adView;
+    private MoPubView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,13 +88,9 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         if(!Preferences.hideAds(this)){
-            RelativeLayout adViewContainer = (RelativeLayout) findViewById(R.id.adViewContainer);
-
-            AdSettings.addTestDevice("0254569fc70d3a60c3d6f516b5457940");
-            AdSettings.addTestDevice("c5cfa7328b1b7e73642aab85d1f8d2d7");
-            adView = new AdView(this, getResources().getString(R.string.facebook_banner_on_main), AdSize.BANNER_320_50);
-            adViewContainer.addView(adView);
-            adView.loadAd();
+            mAdView = (MoPubView) findViewById(R.id.adView);
+            mAdView.setAdUnitId(getResources().getString(R.string.main_mopub_banner_ad_unit_id));
+            mAdView.loadAd();
         }
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -379,8 +376,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         if(bp != null)
             bp.release();
 
-        if(adView != null)
-            adView.destroy();
+        if(mAdView != null)
+            mAdView.destroy();
     }
 
     @Override

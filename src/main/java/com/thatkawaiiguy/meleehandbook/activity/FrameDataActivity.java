@@ -29,10 +29,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.facebook.ads.AdSize;
+import com.facebook.ads.AdView;
+import com.mopub.mobileads.MoPubView;
 import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.fragment.FrameInfoDialogFragment;
@@ -48,15 +51,16 @@ public class FrameDataActivity extends AppCompatActivity {
     private int frame = 0;
     private int mTotal = 0;
 
-    private Button nextBtn;
-    private Button firstBtn;
-    private Button backBtn;
-    private Button playBtn;
+    private ImageView nextBtn;
+    private ImageView backBtn;
+    private View playBtn;
 
     private SlidrInterface inter;
 
     private boolean paused = false;
     private boolean running = false;
+
+    private MoPubView adView;
 
     private InputStream is = null;
     private String[] filelist = {"#@#", "#@$@#"};
@@ -100,6 +104,15 @@ public class FrameDataActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(characterPickedTitle + "'s " + movePicked);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        if(!Preferences.hideAds(this)){
+            if(!Preferences.hideAds(this)){
+                adView = (MoPubView) findViewById(R.id.adView);
+                adView.setAdUnitId(getResources().getString(R.string.frame_banner_ad_unit_id));
+                adView.loadAd();
+            }
+
+        }
+
         frameNumber = (TextView) findViewById(R.id.frameNumber);
         totalFrame = (TextView) findViewById(R.id.totalFrame);
         landingLag = (TextView) findViewById(R.id.landinglagText);
@@ -107,10 +120,9 @@ public class FrameDataActivity extends AppCompatActivity {
 
         frameImage = (ImageView) findViewById(R.id.frameImage);
 
-        firstBtn = (Button) findViewById(R.id.firstBtn);
-        backBtn = (Button) findViewById(R.id.backBtn);
-        nextBtn = (Button) findViewById(R.id.nextBtn);
-        playBtn = (Button) findViewById(R.id.playBtn);
+        backBtn = (ImageView) findViewById(R.id.backBtn);
+        nextBtn = (ImageView) findViewById(R.id.nextBtn);
+        playBtn = findViewById(R.id.playBtn);
 
         switch(characterPickedTitle) {
             case "Dr. Mario":
@@ -210,7 +222,6 @@ public class FrameDataActivity extends AppCompatActivity {
                     setFrame();
                     running = true;
                 } else {
-                    playBtn.setBackgroundResource(R.drawable.playicon);
                     paused = false;
                     running = false;
                     playBtn.performClick();
@@ -222,17 +233,14 @@ public class FrameDataActivity extends AppCompatActivity {
         public void onClick(View v) {
             if(!running) {
                 if(paused) {
-                    playBtn.setBackgroundResource(R.drawable.pauseicon);
                     for(int i = frame; i < mTotal; i++)
-                        handler.postDelayed(runnable, 52 * (i - (frame - 1)));
+                        handler.postDelayed(runnable, 51 * (i - (frame - 1)));
                 } else {
                     frame = 0;
-                    playBtn.setBackgroundResource(R.drawable.pauseicon);
                     for(int i = frame; i < mTotal; i++)
-                        handler.postDelayed(runnable, 52 * (i - (frame - 1)));
+                        handler.postDelayed(runnable, 51 * (i - (frame - 1)));
                 }
             } else {
-                playBtn.setBackgroundResource(R.drawable.playicon);
                 interruptPlay();
                 paused = true;
             }
@@ -254,7 +262,6 @@ public class FrameDataActivity extends AppCompatActivity {
                     setFrame();
                     running = true;
                 } else {
-                    playBtn.setBackgroundResource(R.drawable.playicon);
                     paused = false;
                     running = false;
                     playBtn.performLongClick();
@@ -267,16 +274,13 @@ public class FrameDataActivity extends AppCompatActivity {
             if(!running) {
                 if(!paused) {
                     frame = 0;
-                    playBtn.setBackgroundResource(R.drawable.pauseicon);
                     for(int i = frame; i < mTotal; i++)
-                        handler.postDelayed(runnable, 21 * (i - (frame - 1)));
+                        handler.postDelayed(runnable, 17 * (i - (frame - 1)));
                 } else {
-                    playBtn.setBackgroundResource(R.drawable.pauseicon);
                     for(int i = frame; i < mTotal; i++)
-                        handler.postDelayed(runnable, 21 * (i - (frame - 1)));
+                        handler.postDelayed(runnable, 17 * (i - (frame - 1)));
                 }
             } else {
-                playBtn.setBackgroundResource(R.drawable.playicon);
                 interruptPlay();
                 paused = true;
             }
@@ -318,25 +322,10 @@ public class FrameDataActivity extends AppCompatActivity {
             landingLag.setText(landLag);
             iasa.setText(iasaString);
 
-            firstBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(!running) {
-                        playBtn.setBackgroundResource(R.drawable.playicon);
-                        frame = 0;
-                        setFrame();
-                    } else {
-                        interruptPlay();
-                        firstBtn.performClick();
-                    }
-                }
-            });
-
             backBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if(!running) {
-                        playBtn.setBackgroundResource(R.drawable.playicon);
                         if(frame > 0) {
                             frame--;
                             setFrame();
@@ -351,11 +340,8 @@ public class FrameDataActivity extends AppCompatActivity {
                 @Override
                 public boolean onLongClick(View v) {
                     if(!running) {
-                        playBtn.setBackgroundResource(R.drawable.playicon);
-                        if(frame >= 10) {
-                            frame -= 10;
-                            setFrame();
-                        }
+                        frame = 0;
+                        setFrame();
                     } else {
                         interruptPlay();
                         backBtn.performLongClick();
@@ -368,7 +354,6 @@ public class FrameDataActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if(!running) {
-                        playBtn.setBackgroundResource(R.drawable.playicon);
                         if(frame < Integer.parseInt((String) totalFrame.getText()) - 1) {
                             frame++;
                             setFrame();
@@ -383,7 +368,6 @@ public class FrameDataActivity extends AppCompatActivity {
                 @Override
                 public boolean onLongClick(View v) {
                     if(!running) {
-                        playBtn.setBackgroundResource(R.drawable.playicon);
                         if(frame <= Integer.parseInt((String) totalFrame.getText()) - 11) {
                             frame += 10;
                             setFrame();
@@ -402,5 +386,13 @@ public class FrameDataActivity extends AppCompatActivity {
             playBtn.setOnClickListener(listener);
             playBtn.setOnLongClickListener(longListener);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if(adView != null)
+            adView.destroy();
     }
 }

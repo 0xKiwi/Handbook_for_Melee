@@ -14,20 +14,68 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <RelativeLayout
+        android:id="@+id/imagelayout"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/frameImage"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ness"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|left|center_vertical"
+                android:layout_weight="1"
+                android:foregroundGravity="left"
+                android:src="@drawable/backarrow"/>
+
+            <View
+                android:id="@+id/playBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/nextBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|right|center_vertical"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/nextarrow"/>
+        </LinearLayout>
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/frameNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@id/imagelayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="17dp"
         android:gravity="top"
         android:text="1"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="20sp"
-        android:layout_above="@+id/frameImage"
-        android:layout_marginBottom="50dp"/>
+        android:textColor="?android:textColorSecondary"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/textView2"
@@ -43,6 +91,7 @@
         android:layout_toRightOf="@+id/frameNumber"
         android:gravity="top"
         android:text="/"
+        android:textColor="?android:textColorSecondary"
         android:textSize="20sp"/>
 
     <TextView
@@ -58,6 +107,7 @@
         android:layout_toRightOf="@+id/textView2"
         android:gravity="top"
         android:text="5"
+        android:textColor="?android:textColorSecondary"
         android:textIsSelectable="false"
         android:textSize="20sp"/>
 
@@ -68,94 +118,26 @@
         android:layout_alignTop="@+id/totalFrame"
         android:layout_centerHorizontal="true"
         android:text="   "
+        android:textColor="?android:textColorSecondary"
         android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/iasaText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="   "
-        android:textSize="20sp"
-        android:layout_below="@+id/textView2"
         android:layout_alignLeft="@+id/frameNumber"
         android:layout_alignStart="@+id/frameNumber"
-        android:layout_marginTop="8dp"/>
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="8dp"
+        android:text="   "
+        android:textColor="?android:textColorSecondary"
+        android:textSize="20sp"/>
 
-    <ImageView
-        android:id="@+id/frameImage"
+    <com.mopub.mobileads.MoPubView
+        android:id="@+id/adView"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:scaleType="fitCenter"/>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/view"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="5dp"
-        card_view:cardBackgroundColor="?cardViewBackground"
-        card_view:cardCornerRadius="2dp"
-        card_view:cardElevation="2dp"
-        card_view:cardUseCompatPadding="true">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/playBtn"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/playicon"/>
-
-            <Button
-                android:id="@+id/backBtn"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_toRightOf="@+id/firstBtn"
-                android:background="@drawable/backarrow"/>
-
-            <Button
-                android:id="@+id/firstBtn"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/skiparrow"/>
-
-            <Button
-                android:id="@+id/nextBtn"
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_toLeftOf="@+id/playBtn"
-                android:layout_toStartOf="@+id/playBtn"
-                android:background="@drawable/nextarrow"/>
-
-        </RelativeLayout>
-    </android.support.v7.widget.CardView>
-
+        android:layout_gravity="center_horizontal|bottom"
+        android:visibility="visible"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
