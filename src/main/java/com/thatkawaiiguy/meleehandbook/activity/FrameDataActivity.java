@@ -304,11 +304,9 @@ public class FrameDataActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            mTotal = filelist.length;
-
-            landLag= FrameDataHelper.getLandLag(characterPickedTitle, movePicked);
-            iasaString = FrameDataHelper.getIASA(characterPickedTitle, movePicked);
             bitmap = BitmapFactory.decodeStream(is);
+
+            mTotal = filelist.length;
             return null;
         }
 
@@ -319,8 +317,8 @@ public class FrameDataActivity extends AppCompatActivity {
 
             frameImage.setImageBitmap(bitmap);
 
-            landingLag.setText(landLag);
-            iasa.setText(iasaString);
+            landingLag.setText(FrameDataHelper.getLandLag(characterPickedTitle, movePicked));
+            iasa.setText(FrameDataHelper.getIASA(characterPickedTitle, movePicked));
 
             backBtn.setOnClickListener(new View.OnClickListener() {
                 @Override

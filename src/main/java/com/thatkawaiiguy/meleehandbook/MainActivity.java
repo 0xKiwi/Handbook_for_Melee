@@ -83,7 +83,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         Preferences.applySettingsTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MMSDK.initialize(this);
 
         bp = new BillingProcessor(this, getResources().getString(R.string.licensekey), this);
         bp.loadOwnedPurchasesFromGoogle();
@@ -146,6 +145,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         mDrawerToggle.syncState();
 
         if(savedInstanceState == null) {
+            init();
             setTitle(Preferences.defaultListItem(this));
             mTitle = getTitle();
             addFragment();
