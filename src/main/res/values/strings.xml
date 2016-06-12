@@ -49,6 +49,11 @@
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="gplus">G+</string>
+    <string name="version">v1.4.14</string>
+    <string name="changes">Rework of frame data layout - click the sides to advance and the center to play. Long press for alternate functions.
+    \nChanged all the ads back to banner ads. Sorry for all the changes!
+    \nAdd Gentleman
+    \nAdd changelog</string>
     <string name="about_text">\t\t\tHandbook for Melee v1.4.14
     \n
     \n\t\t\tBased on information from:
