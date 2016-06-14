@@ -40,13 +40,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.support.v4.widget.DrawerLayout;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
-import com.facebook.ads.*;
+
+import com.appodeal.ads.Appodeal;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
-import com.mopub.mobileads.MoPubView;
+import com.appodeal.ads.UserSettings;
+import com.google.android.gms.ads.AdRequest;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.MatchupFragment;
@@ -73,8 +74,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     private BillingProcessor bp;
 
-    private MoPubView mAdView;
-
     private static final String PRIVATE_PREF = "myapp";
     private static final String VERSION_KEY = "version_number";
 
@@ -94,10 +93,24 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        UserSettings userSettings = Appodeal.getUserSettings(this);
+        userSettings.setGender(UserSettings.Gender.MALE);
+        userSettings.setInterests("games, movies, shows, esports");
+        userSettings.setAge(17);
+        userSettings.setOccupation(UserSettings.Occupation.SCHOOL);
+        userSettings.setRelation(UserSettings.Relation.SINGLE);
+        userSettings.setAlcohol(UserSettings.Alcohol.NEGATIVE);
+        userSettings.setSmoking(UserSettings.Smoking.NEGATIVE);
+
+        Appodeal.disableLocationPermissionCheck();
+        Appodeal.disableWriteExternalStoragePermissionCheck();
+        Appodeal.setBannerViewId(R.id.adView);
+        Appodeal.disableNetwork(this, "avocarrot");
+        Appodeal.disableNetwork(this, "vungle");
+        Appodeal.initialize(this, getResources().getString(R.string.appodeal_id), Appodeal.BANNER);
+
         if(!Preferences.hideAds(this)){
-            mAdView = (MoPubView) findViewById(R.id.adView);
-            mAdView.setAdUnitId(getResources().getString(R.string.main_mopub_banner_ad_unit_id));
-            mAdView.loadAd();
+            Appodeal.show(this, Appodeal.BANNER_VIEW);
         }
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -154,6 +167,11 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             if(Preferences.openNavLaunchEnabled(this))
                 mDrawer.openDrawer(Gravity.LEFT);
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 
     private void selectDrawerItem(MenuItem menuItem) {
@@ -271,9 +289,10 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public void onPurchaseHistoryRestored() {
-        if(bp.isPurchased(getString(R.string.adproductid)))
+        if(bp.isPurchased(getString(R.string.adproductid))) {
             Preferences.setHideAds(this, true);
-        else
+            Appodeal.trackInAppPurchase(this, 0.99, "USD");
+        } else
             Preferences.setHideAds(this, false);
         recreate();
     }
@@ -383,9 +402,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         if(bp != null)
             bp.release();
-
-        if(mAdView != null)
-            mAdView.destroy();
     }
 
     private void init() {

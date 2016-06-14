@@ -139,7 +139,7 @@
         android:textColor="?android:textColorSecondary"
         android:textSize="20sp"/>
 
-    <com.mopub.mobileads.MoPubView
+    <com.appodeal.ads.BannerView
         android:id="@+id/adView"
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"

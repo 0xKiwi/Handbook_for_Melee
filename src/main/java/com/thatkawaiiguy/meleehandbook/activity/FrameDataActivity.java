@@ -30,12 +30,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.facebook.ads.AdSize;
-import com.facebook.ads.AdView;
-import com.mopub.mobileads.MoPubView;
+import com.appodeal.ads.Appodeal;
 import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.fragment.FrameInfoDialogFragment;
@@ -60,15 +57,10 @@ public class FrameDataActivity extends AppCompatActivity {
     private boolean paused = false;
     private boolean running = false;
 
-    private MoPubView adView;
-
     private InputStream is = null;
     private String[] filelist = {"#@#", "#@$@#"};
 
     private Bitmap bitmap;
-
-    private String landLag = "";
-    private String iasaString = "";
 
     private String movePicked = "";
     private String characterPicked = "";
@@ -86,7 +78,7 @@ public class FrameDataActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (getIntent().hasExtra("bundle") && savedInstanceState == null)
+        if(getIntent().hasExtra("bundle") && savedInstanceState == null)
             savedInstanceState = getIntent().getExtras().getBundle("bundle");
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
@@ -104,13 +96,9 @@ public class FrameDataActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(characterPickedTitle + "'s " + movePicked);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        if(!Preferences.hideAds(this)){
-            if(!Preferences.hideAds(this)){
-                adView = (MoPubView) findViewById(R.id.adView);
-                adView.setAdUnitId(getResources().getString(R.string.frame_banner_ad_unit_id));
-                adView.loadAd();
-            }
-
+        if(!Preferences.hideAds(this)) {
+            Appodeal.setBannerViewId(R.id.adView);
+            Appodeal.show(this, Appodeal.BANNER_VIEW);
         }
 
         frameNumber = (TextView) findViewById(R.id.frameNumber);
@@ -292,7 +280,7 @@ public class FrameDataActivity extends AppCompatActivity {
         public Runnable getRunnable() {return runnable;}
     }
 
-    private class ASyncTask extends AsyncTask<Void, Void, Void>{
+    private class ASyncTask extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... params) {
             try {
@@ -387,10 +375,8 @@ public class FrameDataActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        if(adView != null)
-            adView.destroy();
+    public void onResume() {
+        super.onResume();
+        Appodeal.onResume(this, Appodeal.BANNER);
     }
 }
