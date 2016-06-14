@@ -18,8 +18,9 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <!--This meta-data tag is required to use Google Play Services.-->
-        <!--<meta-data android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />-->
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <meta-data android:name="com.appodeal.framework" android:value="android" />
         <receiver android:name="com.appodeal.ads.AppodealPackageAddedReceiver" android:exported="true" android:enabled="true">
             <intent-filter>
@@ -43,13 +44,6 @@
 
         <activity android:name="com.google.android.gms.ads.AdActivity"
                   android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-                  android:theme="@android:style/Theme.Translucent" />
-
-        <activity android:name="com.chartboost.sdk.CBImpressionActivity" android:excludeFromRecents="true"
-                  android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-                  android:configChanges="keyboardHidden|orientation|screenSize" />
-
-        <activity android:name="com.applovin.adview.AppLovinInterstitialActivity"
                   android:theme="@android:style/Theme.Translucent" />
 
         <activity android:name="com.mopub.mobileads.MoPubActivity"

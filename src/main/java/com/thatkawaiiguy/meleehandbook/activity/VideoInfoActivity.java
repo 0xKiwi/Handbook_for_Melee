@@ -39,8 +39,7 @@ import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.MutedVideoView;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
-public class VideoInfoActivity extends AppCompatActivity implements BillingProcessor
-        .IBillingHandler {
+public class VideoInfoActivity extends AppCompatActivity {
 
     private String optionPicked = "";
 
@@ -346,7 +345,7 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
     protected void onResume() {
         super.onResume();
         setVideo();
-        Appodeal.onResume(this, Appodeal.BANNER);
+        Appodeal.onResume(this, Appodeal.BANNER_VIEW);
     }
 
     @Override
@@ -358,34 +357,6 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
-
-    @Override
-    public void onBillingError(int errorCode, Throwable error) {
-
-    }
-
-    @Override
-    public void onProductPurchased(String productId, TransactionDetails details) {
-
-    }
-
-    @Override
-    public void onPurchaseHistoryRestored() {
-
-    }
-
-    @Override
-    public void onBillingInitialized() {
-
-    }
-
-    public int adjustAlpha(int color, float factor) {
-        int alpha = Math.round(Color.alpha(color) * factor);
-        int red = Color.red(color);
-        int green = Color.green(color);
-        int blue = Color.blue(color);
-        return Color.argb(alpha, red, green, blue);
     }
 
     @Override

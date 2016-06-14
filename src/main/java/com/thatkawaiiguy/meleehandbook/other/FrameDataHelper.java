@@ -298,9 +298,9 @@ public class FrameDataHelper {
             case "bair":
                 return "IASA: 35";
             case "jabone":
-                return "IASA: 26";
+                return "IASA: 19";
             case "jabtwo":
-                return "IASA: 27";
+                return "IASA: 20";
             case "dash":
                 return "IASA: 40";
             case "utilt":

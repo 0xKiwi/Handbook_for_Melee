@@ -46,8 +46,10 @@ import com.appodeal.ads.Appodeal;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
+import com.appodeal.ads.BannerCallbacks;
 import com.appodeal.ads.UserSettings;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.MatchupFragment;
@@ -105,9 +107,9 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         Appodeal.disableLocationPermissionCheck();
         Appodeal.disableWriteExternalStoragePermissionCheck();
         Appodeal.setBannerViewId(R.id.adView);
-        Appodeal.disableNetwork(this, "avocarrot");
-        Appodeal.disableNetwork(this, "vungle");
         Appodeal.initialize(this, getResources().getString(R.string.appodeal_id), Appodeal.BANNER);
+
+        MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.google_app_id));
 
         if(!Preferences.hideAds(this)){
             Appodeal.show(this, Appodeal.BANNER_VIEW);
@@ -157,10 +159,11 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         mDrawerToggle.syncState();
 
+        setTitle(Preferences.defaultListItem(this));
+        mTitle = getTitle();
+
         if(savedInstanceState == null) {
             init();
-            setTitle(Preferences.defaultListItem(this));
-            mTitle = getTitle();
             addFragment();
             nvDrawer.getMenu().getItem(listdefault).setChecked(true);
             AppRater.app_launched(this);
@@ -172,6 +175,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     @Override
     public void onResume() {
         super.onResume();
+        Appodeal.onResume(this, Appodeal.BANNER_VIEW);
     }
 
     private void selectDrawerItem(MenuItem menuItem) {

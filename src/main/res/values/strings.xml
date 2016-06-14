@@ -1442,7 +1442,7 @@
         Sometimes referred to as spacie animals or spacies.
     </string>
     <string name="spike_term_info">
-        A type of attack that sends an opponent downward until hitstun ends. https://gfycat.com/AllSpiritedGangesdolphinm
+        A type of attack that sends an opponent downward until hitstun ends. https://gfycat.com/AllSpiritedGangesdolphin
         (Falco dair spikes)
     </string>
     <string name="stagehump_term_info">Not only the fastest way
@@ -1936,7 +1936,7 @@
         vertically or use any form of trajectory DI on them when on the ground.
         <br>If DownDamage ends while on the ground, however, you change actions to DownWait
         if you were still in hitstun or directly into DownStand if you were not.
-        The former is what I would call an Option Tap Reset, and the latter an
+        The former is what is called an Option Tap Reset, and the latter an
         Optionless Tap Reset. If you are in DownWait you are forced to get up when
         hitstun ends, but you are also able to interrupt the animation with either a
         getup stand/roll/attack at any time before then.
@@ -2124,7 +2124,7 @@
         <br>*You don\'t have to double jump. You can also use a Special attack, so long as you make sure that you
         are touching the wall on the way to the ledge.
     ]]></string>
-    <string name="marthkiller_info_text"><![CDATA[<big><b>Marth killerb</b></big>
+    <string name="marthkiller_info_text"><![CDATA[<big><b>Marth killer</b></big>
         <br>The Marth killer is a technique used to edgeguard linear recoveries, the usual victim
         being Marth. By lightshielding by the ledge with your character facing inwards the stage, and
         tilting your shield behind you, when the opponent attempts to recover and hits your
@@ -2140,7 +2140,7 @@
         are moved onto the ledge. If the Marth performs higher than expected you\'ll usually be able to punish the
         Marth if you\'re quick enough.
         <br>
-        <br><big><b>How to perform</b></big>z
+        <br><big><b>How to perform</b></big>
         <br>To perfrom a Marth Killer you:
         <br><b>Step 1.</b> Roll all the way to the ledge, make sure you\'re facing away from the ledge.
         <br><b>Step 2.</b> Hold Z while you roll, this will have you bring up your lightshield as fast as possible.
@@ -4213,7 +4213,7 @@
         <br>
         <br>Roy is currently ranked 20th on the tier list, in the F tier. Roy\'s upsides include a good approach due to one of the best SHFFLs in the game, as well
         as a good grab game, and among the best reaches in the game. However, Roy\'s flaws are significant, including poor flexibility in his comboing
-        game, attacks that are difficult ito properly land, generally possessing significantly laggy attacks, possessing few moves that can KO and only
+        game, attacks that are difficult to properly land, generally possessing significantly laggy attacks, possessing few moves that can KO and only
         one of which (forward smash) that is an adequate finisher, and among the worst recoveries in the game while being a light character that is
         heavily susceptible to combos; as a result, Roy has significant KOing problems while being easy to KO himself, leading to numerous matchups
         hard countering him, especially against those who are higher-tiered than him.]]></string>

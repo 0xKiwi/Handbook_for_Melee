@@ -30,9 +30,6 @@ import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 
 public class TechFragment extends Fragment {
-
-    private static final String TAG = "TechFragment";
-
     private final String[] techs = ArrayHelper.getTechArray();
 
     private TextAdapter adapter;
@@ -48,7 +45,6 @@ public class TechFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
-        rootView.setTag(TAG);
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

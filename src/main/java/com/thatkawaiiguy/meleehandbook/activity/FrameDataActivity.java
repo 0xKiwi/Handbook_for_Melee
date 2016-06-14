@@ -377,6 +377,6 @@ public class FrameDataActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        Appodeal.onResume(this, Appodeal.BANNER);
+        Appodeal.onResume(this, Appodeal.BANNER_VIEW);
     }
 }
