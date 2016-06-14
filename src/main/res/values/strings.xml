@@ -49,11 +49,11 @@
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="gplus">G+</string>
-    <string name="version">v1.4.21</string>
-    <string name="changes">Rework of frame data layout - click the sides to advance and the center to play. Long press for alternate functions.
-    \nChanged all the ads back to banner ads. Sorry for all the changes!
-    \nAdd changelog</string>
-    <string name="about_text">\t\t\tHandbook for Melee v1.4.21
+    <string name="version">v1.4.25</string>
+    <string name="changes">Added Marth Killer - an excellent technique against Marth
+        \nImproved some of the matchup info for Top 8
+        \nFixed some typos</string>
+    <string name="about_text">\t\t\tHandbook for Melee v1.4.25
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
