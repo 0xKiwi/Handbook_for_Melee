@@ -32,7 +32,7 @@ import android.widget.TextView;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
-import com.mopub.mobileads.MoPubView;
+import com.appodeal.ads.Appodeal;
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
@@ -45,8 +45,6 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
     private String optionPicked = "";
 
     private MutedVideoView infoVid;
-
-    private MoPubView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +60,9 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
             return;
         optionPicked = mainData.getString("option");
 
-        if(!Preferences.hideAds(this)) {
-            adView = (MoPubView) findViewById(R.id.adView);
-            adView.setAdUnitId(getResources().getString(R.string.video_banner_ad_unit_id));
-            adView.loadAd();
+        if(!Preferences.hideAds(this)){
+            Appodeal.setBannerViewId(R.id.adView);
+            Appodeal.show(this, Appodeal.BANNER_VIEW);
         }
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
@@ -273,6 +270,10 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.ledgecancel));
                 break;
+            case "Marth killer":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
+                        .raw.marthkiller));
+                break;
             case "Moonwalk":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.moonwalk));
@@ -345,6 +346,7 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
     protected void onResume() {
         super.onResume();
         setVideo();
+        Appodeal.onResume(this, Appodeal.BANNER);
     }
 
     @Override
@@ -418,14 +420,5 @@ public class VideoInfoActivity extends AppCompatActivity implements BillingProce
                     .getDisplayMetrics());
         }
         return actionBarHeight;
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        if(adView != null) {
-            adView.destroy();
-        }
     }
 }

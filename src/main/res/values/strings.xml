@@ -49,12 +49,11 @@
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="gplus">G+</string>
-    <string name="version">v1.4.20</string>
-    <string name="changes">\t\t\tRework of frame data layout - click the sides to advance and the center to play. Long press for alternate functions.
-    \n\t\t\tChanged all the ads back to banner ads. Sorry for all the changes!
-    \n\t\t\tAdd Gentleman
-    \n\t\t\tAdd changelog</string>
-    <string name="about_text">\t\t\tHandbook for Melee v1.4.20
+    <string name="version">v1.4.21</string>
+    <string name="changes">Rework of frame data layout - click the sides to advance and the center to play. Long press for alternate functions.
+    \nChanged all the ads back to banner ads. Sorry for all the changes!
+    \nAdd changelog</string>
+    <string name="about_text">\t\t\tHandbook for Melee v1.4.21
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
@@ -2124,6 +2123,34 @@
         <br>
         <br>*You don\'t have to double jump. You can also use a Special attack, so long as you make sure that you
         are touching the wall on the way to the ledge.
+    ]]></string>
+    <string name="marthkiller_info_text"><![CDATA[<big><b>Marth killerb</b></big>
+        <br>The Marth killer is a technique used to edgeguard linear recoveries, the usual victim
+        being Marth. By lightshielding by the ledge with your character facing inwards the stage, and
+        tilting your shield behind you, when the opponent attempts to recover and hits your
+        shield you are pushed back, taking control of the ledge, either denying the opponent trying to
+        recover or forcing them onto the stage with an easy punish opportunity.
+        <br>The best way for you (as the victim) to avoid the punish of a Marth Killer is to recovery
+        higher so the opponent has to go through more trouble to get to you.
+        <br>
+        <br><big><b>How to use</b></big>
+        <br>The Marth Killer is an excellent tool to edgeguard Marth (and some other characters with linear recoveries).
+        Marth Killer is best used when your opponent attempts a low recovery, or you know he/she has to recover
+        with the Up-B move. If performed successfully, the Marth will fall past the ledge and lose their stock since you
+        are moved onto the ledge. If the Marth performs higher than expected you\'ll usually be able to punish the
+        Marth if you\'re quick enough.
+        <br>
+        <br><big><b>How to perform</b></big>z
+        <br>To perfrom a Marth Killer you:
+        <br><b>Step 1.</b> Roll all the way to the ledge, make sure you\'re facing away from the ledge.
+        <br><b>Step 2.</b> Hold Z while you roll, this will have you bring up your lightshield as fast as possible.
+        <br><b>Step 3.</b> Carefully bring your control stick to your backside and slightly downward.
+        Too fast and you\'ll roll.
+        <br><b>Step 4.</b> If you are using a character that falls fast, like Fox or Falco, there is
+        no need to angle it downward. Just behind you.
+        <br><b>Step 5.</b> Wait for the approach, the opponent will either fall past the ledge that you
+        take control of, or land close to the ledge, where if you\'re fast enough you may punish,
+
     ]]></string>
     <string name="moonwalk_info_text"><![CDATA[<big><b>Moonwalk</b></big>
         <br>This is a technique that involves

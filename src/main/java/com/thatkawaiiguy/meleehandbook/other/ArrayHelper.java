@@ -106,7 +106,7 @@ public class ArrayHelper {
                 "Directional Influence", "Fast falling", "Fox-trot",
                 "Jab reset", "Jump-canceled grab", "L-canceling",
                 "Ledge-canceling", "Ledgedash",
-                "Ledge stall", "Moonwalk",
+                "Ledge stall", "Marth killer", "Moonwalk",
                 "No-impact landing", "Platform cancel", "Platform warp",
                 "Powershield", "Shield pressure", "Shield dropping",
                 "SHFFL", "Short hop", "Team wobble", "Tech",
@@ -587,6 +587,8 @@ public class ArrayHelper {
                 return res.getString(R.string.ledgecancel_info_text);
             case "Moonwalk":
                 return res.getString(R.string.moonwalk_info_text);
+            case "Marth killer":
+                return res.getString(R.string.marthkiller_info_text);
             case "No-impact landing":
                 return res.getString(R.string.noimpact_info_text);
             case "Platform cancel":
