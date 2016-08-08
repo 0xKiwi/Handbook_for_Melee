@@ -46,9 +46,7 @@ import com.appodeal.ads.Appodeal;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
-import com.appodeal.ads.BannerCallbacks;
 import com.appodeal.ads.UserSettings;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
@@ -83,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     protected void onCreate(Bundle savedInstanceState) {
         Preferences.applySettingsTheme(this);
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         bp = new BillingProcessor(this, getResources().getString(R.string.licensekey), this);
@@ -100,7 +99,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         userSettings.setInterests("games, movies, shows, esports");
         userSettings.setAge(17);
         userSettings.setOccupation(UserSettings.Occupation.SCHOOL);
-        userSettings.setRelation(UserSettings.Relation.SINGLE);
         userSettings.setAlcohol(UserSettings.Alcohol.NEGATIVE);
         userSettings.setSmoking(UserSettings.Smoking.NEGATIVE);
 
