@@ -103,14 +103,14 @@ public class ArrayHelper {
     public static String[] getTechArray() {
         return new String[]{"Aerial interrupt", "Chain grab",
                 "Crouch cancel", "Dash-dance",
-                "Directional Influence", "Fast falling", "Fox-trot",
-                "Jab reset", "Jump-canceled grab", "L-canceling",
-                "Ledge-canceling", "Ledgedash",
-                "Ledge stall", "Marth killer", "Moonwalk",
-                "No-impact landing", "Platform cancel", "Platform warp",
+                "Directional Influence", "Fast fall", "Fox-trot",
+                "Jab reset", "Jump-canceled grab", "L-cancel",
+                "Ledge-cancel", "Ledgedash", "Ledge dropping",
+                "Ledge stalling", "Marth killer", "Moonwalk",
+                "No-impact land", "Platform cancel", "Platform warp",
                 "Powershield", "Shield pressure", "Shield dropping",
                 "SHFFL", "Short hop", "Team wobble", "Tech",
-                "Tech-chasing", "Wall jump", "Wavedash", "V-canceling"};
+                "Tech-chase", "Wall jumping", "Wavedash", "V-cancel"};
     }
 
     public static String[] getTermArray() {
@@ -122,7 +122,7 @@ public class ArrayHelper {
                 "Cave of life", "Circus music",
                 "Clone", "Cory in the house", "Counter",
                 "Counterpick", "Crew battle", "Dash-grab", "Dashing",
-                "Dave's stupid rule", "Dee dah",
+                "Dave's stupid rule", "DBZ", "Dee dah",
                 "Did he just walk up slowly and down smash?",
                 "Disjointed hitbox", "Disrespect", "Ditto", "Dong",
                 "Doormat", "Doubles", "Double dip", "Dumpster",
@@ -130,7 +130,7 @@ public class ArrayHelper {
                 "Edge hogging", "Electric slide", "Falcoville",
                 "Flub or scrub", "Forbidden ledge guard", "Frame",
                 "Freeze frames", "Friendlies", "Fun-canceling", "Gimp",
-                "Go to the doctor", "God", "Going ham", "Grab", "Helicopter crash",
+                "Go to the doctor", "God", "Going ham", "Grab", "Hallelujah", "Helicopter crash",
                 "Helpless", "Hitbox", "Hitlag", "Hitstun", "IASA frames",
                 "Infinite", "Input lag", "Invisible ceiling glitch",
                 "Ironman", "It's not safe", "JV3/JV4 stock", "Janky",
@@ -142,7 +142,7 @@ public class ArrayHelper {
                 "Meteor cancel", "Meteor", "Mike Haze", "Mindgames",
                 "Misfire", "Multi tournament conditioning", "My b", "Nerf", "Neutral game", "OOS",
                 "Overpowered", "PC drop", "People's elbow", "Phantom hit", "Pine sol",
-                "Pivot", "Pop a balloon",
+                "Pinnappled", "Pivot", "Pop a balloon",
                 "Pop off", "Port priority", "Priority", "Pummel", "Punish",
                 "RNG", "Ramen noodle edge steal", "Randall the Cloud",
                 "Recovery", "Respect your elders", "Rolling",
@@ -150,7 +150,7 @@ public class ArrayHelper {
                 "Sakurai combo", "Salty runback",
                 "Salty", "Scar jump", "Screen KO", "Self-destruct",
                 "Semiclone", "Set", "Sex kick", "Shakespeare theory",
-                "Shield break",
+                "Shameless shield break", "Shield break",
                 "Shield grabbing", "Shieldhitstun", "Shielding",
                 "Shieldstun", "Shine/Reflector", "Shine drop", "Sidestepping",
                 "Silent john", "Singles", "Smash attacks", "Smash inflation",
@@ -238,6 +238,8 @@ public class ArrayHelper {
                 return res.getString(R.string.dashgrab_term_info);
             case "Dave's stupid rule":
                 return res.getString(R.string.dave_term_info);
+            case "DBZ":
+                return res.getString(R.string.dbz_term_info);
             case "Dee dah":
                 return res.getString(R.string.deedah_term_info);
             case "Disjointed hitbox":
@@ -292,6 +294,8 @@ public class ArrayHelper {
                 return res.getString(R.string.goingham_term_info);
             case "Go to the doctor":
                 return res.getString(R.string.gotothedoctor_term_info);
+            case "Hallelujah":
+                return res.getString(R.string.hallelujah_term_info);
             case "Helpless":
                 return res.getString(R.string.helpless_term_info);
             case "Hitlag":
@@ -388,6 +392,8 @@ public class ArrayHelper {
                 return res.getString(R.string.pivot_term_info);
             case "Pine sol":
                 return res.getString(R.string.pinesol_term_info);
+            case "Pinnappled":
+                return res.getString(R.string.pinnappled_term_info);
             case "Pop a balloon":
                 return res.getString(R.string.popballoon_term_info);
             case "Pop off":
@@ -436,6 +442,8 @@ public class ArrayHelper {
                 return res.getString(R.string.skick_term_info);
             case "Shakespeare theory":
                 return res.getString(R.string.shaketheory_term_info);
+            case "Shameless shield break":
+                return res.getString(R.string.shamelessshield_term_info);
             case "Shield break":
                 return res.getString(R.string.shieldbreak_info_text);
             case "Shieldhitstun":
@@ -569,7 +577,7 @@ public class ArrayHelper {
                 return res.getString(R.string.diangles_info_text);
             case "Directional Influence":
                 return res.getString(R.string.di_info_text);
-            case "Fast falling":
+            case "Fast fall":
                 return res.getString(R.string.ffall_info_text);
             case "Fox-trot":
                 return res.getString(R.string.ftrot_info_text);
@@ -577,19 +585,21 @@ public class ArrayHelper {
                 return res.getString(R.string.jabreset_info_text);
             case "Jump-canceled grab":
                 return res.getString(R.string.jcgrab_info_text);
-            case "L-canceling":
+            case "L-cancel":
                 return res.getString(R.string.lcancel_info_text);
             case "Ledgedash":
                 return res.getString(R.string.ledgedash_info_text);
-            case "Ledge stall":
+            case "Ledge stalling":
                 return res.getString(R.string.ledgestall_info_text);
-            case "Ledge-canceling":
+            case "Ledge-cancel":
                 return res.getString(R.string.ledgecancel_info_text);
+            case "Ledge dropping":
+                return res.getString(R.string.ledgedropping_info_text);
             case "Moonwalk":
                 return res.getString(R.string.moonwalk_info_text);
             case "Marth killer":
                 return res.getString(R.string.marthkiller_info_text);
-            case "No-impact landing":
+            case "No-impact land":
                 return res.getString(R.string.noimpact_info_text);
             case "Platform cancel":
                 return res.getString(R.string.platformcancel_info_text);
@@ -609,15 +619,15 @@ public class ArrayHelper {
                 return res.getString(R.string.sdi_info_text);
             case "Tech":
                 return res.getString(R.string.tech_info_text);
-            case "Tech-chasing":
+            case "Tech-chase":
                 return res.getString(R.string.techchase_info_text);
             case "Team wobble":
                 return res.getString(R.string.twobble_info_text);
-            case "Wall jump":
+            case "Wall jumping":
                 return res.getString(R.string.walljump_info_text);
             case "Wavedash":
                 return res.getString(R.string.wavedash_info_text);
-            case "V-canceling":
+            case "V-cancel":
                 return res.getString(R.string.vcancel_info_text);
 
             //UNIQUE

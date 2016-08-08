@@ -929,7 +929,6 @@
         advantage for certain characters such as infinites, stalling,
         or lethal environments.
     </string>
-
     <string name="beef_term_info">
         A grudge held against another person.
     </string>
@@ -1007,6 +1006,10 @@
         A rule that no stage that has already been won on in a set may be picked by the
         winner for another game in the same set. It was named after the smasher Scamp.
     </string>
+    <string name="dbz_term_info">
+        A moment when 2 players hit each other at the same time and fly offstage in opposite directions,
+        and KO at nearly the same time. https://www.youtube.com/watch?v=3MiydNxcUh8
+    </string>
     <string name="deedah_term_info">
         A nickname for the Falcon Punch, originating from when Mango\'s son said the phrase while using the move on stream. http://oddshot.tv/shot/mang0-2016030804425983
     </string>
@@ -1022,7 +1025,7 @@
         A match where both players choose the same character. Also known as a mirror match.
     </string>
     <string name="dong_term_info">
-        A shortened version of \"Donkey Kong\", usually spoken as \"Expand dong\".
+        A shortened version of \"Donkey Kong\", used mostly in \"Expand dong\".
     </string>
     <string name="doormat_term_info">
         When a player gets stomped (dair\'d) on by Captain Falcon or Ganondorf 3 or more
@@ -1084,6 +1087,9 @@
     </string>
     <string name="funcanceling_term_info">
         Similar to wavecheating, this is a comical term used to make fun of L-canceling.
+    </string>
+    <string name="hallelujah_term_info">
+        A comical name for when a Donkey Kong combos a Down-air into a charged Up-smash. https://www.gfycat.com/PertinentThatAffenpinscher
     </string>
     <string name="helpless_term_info">
         A state in which characters are unable to take any action, with the exception of grabbing a ledge, maneuvering left/right, fastfalling, or climbing a ladder, until they land on the ground.
@@ -1288,6 +1294,10 @@
     <string name="pinesol_term_info">
         When your moonwalk is so smooth it\'s like you just cleaned the floor, coined by my boy Juan (CREED_).
     </string>
+    <string name="pinnappled_term_info">
+        When you try to recover below Dreamland but get stuck, similar to what happens when you
+        recover towards the bottom of Battlefield.
+    </string>
     <string name="pivot_term_info">
         When you quickly turn around to perform an action, can be done with any move.
     </string>
@@ -1379,6 +1389,10 @@
     </string>
     <string name="shaketheory_term_info">
         When you make plays (moments where you make good decisions in your play). Coined by Prince Abu.
+    </string>
+    <string name="shamelessshield_term_info">
+        When an opponent breaks your shield and you input jab on their controller, so they don\'t have a chance
+        to punish the shield break.
     </string>
     <string name="shieldhitstun_term_info">The frames during which
         you can\'t do anything after hitting a shield.
@@ -2047,7 +2061,37 @@
         <br>This video may help: https://youtu.be/7L2L7vyCc6c
         <br>Setups: https://www.youtube.com/playlist?list=PLKPEgSVjggtCm3IT9uYBlNgEcv3Qw9jaw
     ]]></string>
-    <string name="ledgestall_info_text"><![CDATA[<big><b>Ledgestall</b></big>
+    <string name="ledgedropping_info_text"><![CDATA[<big><b>Ledge drop</b></big>
+        <br>A ledge drop (also known as ledge grab) is a technique used to quickly access the ledge
+        of a stage.
+        <br>An advantage to using an advanced method of one of the core game mechanics is that
+        it allows the player to reach the ledge quickly and in time for whatever reason they are
+        heading to the ledge for. While there are several ways of getting to the ledge, some are incredibly
+        difficult to perform, and save only a few frames compared to the easier methods.
+        <br>
+        <br><big><b>Application</b></big>
+        <br>Ledge drops allow for a quick and relatively easy way to get to the ledge. So if you need to
+        perform a quick edgeguard, or want to hog the edge before the opponent gets to it to take their
+        stock, using advanced ledge drops will allow you to quickly get there to give your self room
+        to perform what you plan on doing.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br><b>There are several different kinds of ledge drops, but only two will be covered
+        in this app:</b>
+        <br>
+        <br><big><b>Wavedash ledge drop</b></big>
+        <br>This method involves the player facing away from the ledge and wavedashing backwards (towards it)
+        and for lighter characters fast falling. This is the easiest way and can be done in different styles, some
+        include turning around from a dash and wavedashing back or using the shine to turnaround and then wavedashing back.
+        <br>
+        <br><big><b>PC drop</b></big>
+        <br>This is the method performed in the video above. It can only be performed from a walk and requires
+        consistent precision. PC dropping allows for good mixups and a easy way to get to the ledge from a walk.
+        <br>To PC drop you walk towards the ledge of the stage and when you\'re somewhat close to the ledge perform a
+        walk turnaround. Your characters traction will keep you moving and you will fall onto the ledge and grab it.
+        <br>To learn how to perform, watch this video from MikeHaze: https://youtu.be/yw9pfO9UORU.
+    ]]></string>
+    <string name="ledgestall_info_text"><![CDATA[<big><b>Ledge stalling</b></big>
         <br>Ledgestalling allows a character to refresh the ledge intangibility
         infinitely. There are three different ways to do this, not all of them work with every character.
         <br>
@@ -2055,12 +2099,14 @@
         <br>As soon as a character grabs the ledge, he goes into the CliffCatch animation that lasts 7 frames
         (3 for Link) and has complete intangibility that lasts 30 frames longer than the CliffCatch animation.
         On the last frame of CliffCatch, the player can perform all ledge options except letting go (ledge attack,
-        ledge roll, ledge climb, ledge jump). If the player doesn\'t perform any of these, he/she enters the CliffWait
+        ledge roll, ledge climb, ledge jump).
+        <br>If the player doesn\'t perform any of these, he/she enters the CliffWait
         animation during which he/she can also let go of the ledge. The player now has 29 frames of intangibility left
         that he/she can use freely. As soon as Link drops from the ledge, the Disabled Regrab Period countdown-timer
         starts at 29. Thus, maintaining continuous invincibility requires dropping from the ledge on the first
         frame it is possible – otherwise, there would be at least one frame without intangibility on which the
-        DRP timer was still active. Exceptions from this rule are Sheik’s and Mewtwo’s Up-B ledgestalls – their
+        DRP timer was still active.
+        <br>Exceptions from this rule are Sheik’s and Mewtwo’s Up-B ledgestalls – their
         up special moves have intangibility early on so they don’t depend on the ledge intangibility as much.
         <br>
         <br><big><b>Up-B ledgestall</b></big>
@@ -2141,14 +2187,14 @@
         Marth if you\'re quick enough.
         <br>
         <br><big><b>How to perform</b></big>
-        <br>To perfrom a Marth Killer you:
-        <br><b>Step 1.</b> Roll all the way to the ledge, make sure you\'re facing away from the ledge.
-        <br><b>Step 2.</b> Hold Z while you roll, this will have you bring up your lightshield as fast as possible.
-        <br><b>Step 3.</b> Carefully bring your control stick to your backside and slightly downward.
+        <br>To perform a Marth Killer you:
+        <br><b>Step 1:</b> Roll all the way to the ledge, make sure you\'re facing away from the ledge.
+        <br><b>Step 2:</b> Hold Z while you roll, this will have you bring up your lightshield as fast as possible.
+        <br><b>Step 3:</b> Carefully bring your control stick to your backside and slightly downward.
         Too fast and you\'ll roll.
-        <br><b>Step 4.</b> If you are using a character that falls fast, like Fox or Falco, there is
+        <br><b>Step 4:</b> If you are using a character that falls fast, like Fox or Falco, there is
         no need to angle it downward. Just behind you.
-        <br><b>Step 5.</b> Wait for the approach, the opponent will either fall past the ledge that you
+        <br><b>Step 5:</b> Wait for the approach, the opponent will either fall past the ledge that you
         take control of, or land close to the ledge, where if you\'re fast enough you may punish,
 
     ]]></string>

@@ -269,6 +269,10 @@ public class VideoInfoActivity extends AppCompatActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.ledgecancel));
                 break;
+            case "Ledge dropping":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
+                        .raw.pcdrop));
+                break;
             case "Marth killer":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.marthkiller));
