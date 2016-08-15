@@ -49,11 +49,12 @@
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="gplus">G+</string>
-    <string name="version">v1.4.25</string>
-    <string name="changes">Added Marth Killer - an excellent technique against Marth
-        \nImproved some of the matchup info for Top 8
+    <string name="version">v1.4.50</string>
+    <string name="changes">Added Ledge Droping - Wavedash drops and PC Drops
+        \nFixed several issues and bugs, especiallly in matchups
+        \nAdded several more terms
         \nFixed some typos</string>
-    <string name="about_text">\t\t\tHandbook for Melee v1.4.25
+    <string name="about_text">\t\t\tHandbook for Melee v1.4.50
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
@@ -1194,6 +1195,9 @@
         A JV3 stock is when you win with 2 stocks and 0&#37; damage, same for JV4
         but with 3 stocks instead. Basically a 4 stock but you died
         from the last hit you took. Popularized by smasher JV3x3.
+    </string>
+    <string name="kitchensink_term_info">
+        A waveshine followed by a shine offstage. https://youtu.be/yJmx3v27olQ?t=3m4s
     </string>
     <string name="lag_term_info">
        The downtime period the occurs before or after performing certain attacks or actions.

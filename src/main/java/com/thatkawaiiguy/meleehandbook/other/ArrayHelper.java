@@ -136,7 +136,7 @@ public class ArrayHelper {
                 "Ironman", "It's not safe", "JV3/JV4 stock", "Janky",
                 "Johnny stock", "Johns", "Juggling", "Jump cancel",
                 "Junco combo",
-                "Kappa", "Ken combo", "Kreygasm", "Lag", "Landing lag",
+                "Kappa", "Ken combo", "Kitchen sink", "Kreygasm", "Lag", "Landing lag",
                 "Lean drop", "Legalize PokeFloats", "lol m2k", "Love tap", "MacD", "Mangle",
                 "Mashedpotato Samurai", "Matchups", "Metagame",
                 "Meteor cancel", "Meteor", "Mike Haze", "Mindgames",
@@ -336,6 +336,8 @@ public class ArrayHelper {
                 return res.getString(R.string.kappa_term_info);
             case "Ken combo":
                 return res.getString(R.string.ken_term_info);
+            case "Kitchen sink":
+                return res.getString(R.string.kitchensink_term_info);
             case "Kreygasm":
                 return res.getString(R.string.kreygasm_term_info);
             case "Lag":

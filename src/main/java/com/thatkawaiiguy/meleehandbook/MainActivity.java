@@ -105,9 +105,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         Appodeal.disableLocationPermissionCheck();
         Appodeal.disableWriteExternalStoragePermissionCheck();
         Appodeal.setBannerViewId(R.id.adView);
+        Appodeal.disableNetwork(this, "cheetah");
         Appodeal.initialize(this, getResources().getString(R.string.appodeal_id), Appodeal.BANNER);
-
-        MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.google_app_id));
 
         if(!Preferences.hideAds(this)){
             Appodeal.show(this, Appodeal.BANNER_VIEW);

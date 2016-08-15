@@ -131,7 +131,8 @@
         android:textColor="?android:textColorPrimary"
         android:layout_below="@+id/muTextLeft"
         android:layout_marginTop="16dp"
-        android:layout_alignRight="@+id/spinnerLeft"/>
+        android:layout_alignRight="@+id/spinnerLeft"
+        android:layout_marginLeft="16dp" />
 
     <TextView
         android:id="@+id/muInfoRight"
@@ -144,6 +145,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@+id/spinnerRight"
         android:layout_below="@+id/muTextRight"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp" />
 </RelativeLayout>
 

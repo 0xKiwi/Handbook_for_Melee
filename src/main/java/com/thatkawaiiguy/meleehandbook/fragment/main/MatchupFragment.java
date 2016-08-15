@@ -2,6 +2,8 @@ package com.thatkawaiiguy.meleehandbook.fragment.main;
 
 import android.app.Fragment;
 import android.content.res.AssetFileDescriptor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -2035,9 +2037,9 @@ public class MatchupFragment extends Fragment {
             case "Princess Peach": {
                 switch(right) {
                     case "Fox":
-                        return "Can be gimped";
+                        return "Zoning power";
                     case "Falco":
-                        return "Easily gimps and down smash";
+                        return "Easily gimps, down smash";
                     case "Sheik":
                         return "Easily comboed";
                     case "Marth":
@@ -2213,6 +2215,8 @@ public class MatchupFragment extends Fragment {
         if(getLeftPercent(characterLeft, characterRight).equals("Mirror")) {
             infoLeft.setText("Mirror");
             infoRight.setText("Mirror");
+            muInfoLeft.setText("");
+            muInfoRight.setText("");
             if(characterLeft.equals("Fox") && characterRight.equals("Fox"))
                 to20XX();
             else
@@ -2238,85 +2242,95 @@ public class MatchupFragment extends Fragment {
         return index;
     }
 
+    private Bitmap downscaleBitmapUsingDensities(final int sampleSize,final int imageResId) {
+        final BitmapFactory.Options bitmapOptions=new BitmapFactory.Options();
+        bitmapOptions.inDensity=sampleSize;
+        bitmapOptions.inTargetDensity=1;
+        final Bitmap scaledBitmap=BitmapFactory.decodeResource(getResources(),imageResId,bitmapOptions);
+        scaledBitmap.setDensity(Bitmap.DENSITY_NONE);
+        return scaledBitmap;
+    }
+
+
     private void setMatchupImage(String picked, ImageButton imgView) {
         switch(picked) {
             case "Fox":
-                imgView.setImageResource(R.drawable.fox);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.fox));
                 break;
             case "Falco":
-                imgView.setImageResource(R.drawable.falco);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.falco));
                 break;
             case "Sheik":
-                imgView.setImageResource(R.drawable.sheik);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.sheik));
                 break;
             case "Marth":
-                imgView.setImageResource(R.drawable.marth);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.marth));
                 break;
             case "Princess Peach":
-                imgView.setImageResource(R.drawable.peach);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.peach));
                 break;
             case "Captain Falcon":
-                imgView.setImageResource(R.drawable.falcon);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.falcon));
                 break;
             case "Ice Climbers":
-                imgView.setImageResource(R.drawable.iceclimbers);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.iceclimbers));
                 break;
             case "Samus Aran":
-                imgView.setImageResource(R.drawable.samus);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.samus));
                 break;
             case "Dr. Mario":
-                imgView.setImageResource(R.drawable.drmario);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.drmario));
                 break;
             case "Jigglypuff":
-                imgView.setImageResource(R.drawable.jiggs);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.jiggs));
                 break;
             case "Mario":
-                imgView.setImageResource(R.drawable.mario);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.mario));
                 break;
             case "Ganondorf":
-                imgView.setImageResource(R.drawable.ganondorf);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.ganondorf));
                 break;
             case "Link":
-                imgView.setImageResource(R.drawable.link);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.link));
                 break;
             case "Luigi":
-                imgView.setImageResource(R.drawable.luigi);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.luigi));
                 break;
             case "Donkey Kong":
-                imgView.setImageResource(R.drawable.dong);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.dong));
                 break;
             case "Roy":
-                imgView.setImageResource(R.drawable.roy);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.roy));
                 break;
             case "Young Link":
-                imgView.setImageResource(R.drawable.ylink);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.ylink));
                 break;
             case "Pikachu":
-                imgView.setImageResource(R.drawable.pikachu);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.pikachu));
                 break;
             case "Yoshi":
-                imgView.setImageResource(R.drawable.yoshi);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.yoshi));
                 break;
             case "Princess Zelda":
-                imgView.setImageResource(R.drawable.zelda);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.zelda));
                 break;
             case "Mr. Game & Watch":
-                imgView.setImageResource(R.drawable.mrgandw);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.mrgandw));
                 break;
             case "Ness":
-                imgView.setImageResource(R.drawable.ness);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.ness));
                 break;
             case "Bowser":
-                imgView.setImageResource(R.drawable.bowser);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.bowser));
                 break;
             case "Kirby":
-                imgView.setImageResource(R.drawable.kirby);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.kirby));
                 break;
             case "Pichu":
-                imgView.setImageResource(R.drawable.pichu);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.pichu));
                 break;
             case "Mewtwo":
-                imgView.setImageResource(R.drawable.mewtwo);
+                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.mewtwo));
                 break;
         }
     }
