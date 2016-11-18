@@ -47,12 +47,12 @@ public class AboutDialogFragment extends DialogFragment {
 
         return new AlertDialog.Builder(getActivity())
                 .setTitle(R.string.action_about)
-                .setNeutralButton(R.string.gplus,
+                .setNeutralButton(R.string.twitter,
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int id) {
                                 startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse
-                                        ("https://plus.google.com/+IvanMartinezxda")));
+                                        ("https://twitter.com/ThatKawaiiGuy")));
                             }
                         })
                 .setPositiveButton(R.string.close,

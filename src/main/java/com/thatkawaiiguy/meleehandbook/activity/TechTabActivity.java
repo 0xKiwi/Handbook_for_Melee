@@ -67,7 +67,7 @@ public class TechTabActivity extends AppCompatActivity {
 
         assert techPicked != null;
         switch(techPicked) {
-            case "Wall jump":
+            case "Wall jumping":
                 viewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),
                         new String[]{"Wall Jump", "Ledge Wall Jump", "Reverse Wall Jump"}));
                 tabLayout.setupWithViewPager(viewPager);
@@ -105,7 +105,7 @@ public class TechTabActivity extends AppCompatActivity {
                 break;
             case "Directional Influence":
                 viewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),
-                        new String[]{"Directional Influence", "Smash DI", "DI Angles"}));
+                        new String[]{"DI", "Smash DI", "DSDI", "DI Angles"}));
                 tabLayout.setupWithViewPager(viewPager);
 
                 tabImage.setImageResource(R.drawable.di);
@@ -124,6 +124,10 @@ public class TechTabActivity extends AppCompatActivity {
                                 slidrInterface.lock();
                                 break;
                             case 2:
+                                tabImage.setImageResource(R.drawable.dsdi);
+                                slidrInterface.lock();
+                                break;
+                            case 3:
                                 tabImage.setImageResource(R.drawable.diangles);
                                 slidrInterface.lock();
                                 break;

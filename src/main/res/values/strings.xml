@@ -48,13 +48,17 @@
     <string name="action_about">About</string>
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
-    <string name="gplus">G+</string>
-    <string name="version">v1.4.50</string>
-    <string name="changes">Added Ledge Droping - Wavedash drops and PC Drops
-        \nFixed several issues and bugs, especiallly in matchups
+    <string name="twitter">Twitter</string>
+    <string name="version">v2.0.0</string>
+    <string name="changes"><b>Anniversary update! Thank you everyone for your support for a whole year!</b>
+        \nAdded intangible ledgedash frame stats in character info
+        \nBattery drain reduced when viewing techniques
+        \nAdded Needle turnaround cancel for Sheik
+        \nAdded Double Stick DI to DI tech page
         \nAdded several more terms
-        \nFixed some typos</string>
-    <string name="about_text">\t\t\tHandbook for Melee v1.4.50
+        \nFixed some typos
+        \nFixed some gifs</string>
+    <string name="about_text">\t\t\tHandbook for Melee v2.0.0
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
@@ -419,6 +423,24 @@
         <br>
         <br>Fox can shine every 8 frames.
     ]]></string>
+    <string name="needleturnaround_info_text"><![CDATA[https://www.youtube.com/watch?v=MBD8au4jQbg
+        <br>
+        <br><big><b>Needle turnaround cancel</b></big>
+        <br>Needle turnaround cancels are an advanced technique used by Sheik players to change their direction
+        in the air. While most characters can use their neutral special to turnaround, Sheik is the only character
+        who can cancel her special. Once mastered it can be an extremely useful and quick option to mixup and use against
+        your opponent. They are used mainly to edge guard with bair, or to change direction whenever
+        needed like to grab the ledge or space yourself out from opponents with a back air.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>To perform a Needle turnaround cancel one must be in the air, and then input the opposite direction
+        immediately followed by B, and then R/L or Z. The opposite direction followed by B is the
+        turnaround special to change your direction and the immediate press of R/Z or Z cancels
+        the needles so you can perform other actions.
+        <br>Be careful not to let go of B until the cancel or else you will let the needles, and
+        if you shoot the needles instead of the cancel you are pressing R too early. and make sure
+        not to hold R or else you may input shield.
+    ]]></string>
     <string name="parry_info_text"><![CDATA[Example: https://youtu.be/dVLRJ4jCBeI
         <br>
         <br><big><b>Parry</b></big>
@@ -429,7 +451,8 @@
         and then jumping or grabbing to avoid the lengthy unshielding animation.
         <br>You can also crouch and pivot parry.  Crouch parry allows you to cancel whatever you were doing (or
         respond to an attack by crouch canceling and responding with a parry into attack) to enter the shield in
-        order to parry.
+        order to parry. The most obvious benefit of parrying is the ability to jump out of the shield, which Yoshi
+        cannot do normally.
         <br>
         <br><big><b>How to perform</b></big>
         <br>Parry can be performed by shielding (full press, not light shielding), and then
@@ -957,6 +980,9 @@
     <string name="buster_term_info">
         A fraud; someone who didn\'t meet expectaions.
     </string>
+    <string name="buildabear_term_info">
+        A combo that involves several unorthodox moves to try to \"build\" a combo. https://clips.twitch.tv/srkevo1/FrailCoyoteMcaT
+    </string>
     <string name="butter_term_info">
         When a character charges a smash attack, they turn yellow like butter.
         \"He put a lot of butter into that one\"
@@ -1126,6 +1152,9 @@
         proper stretching or treatment, causing hand and finger pains. Make sure you stretch with
         the information provided in this app before, during, and after playing. https://youtu.be/9JTqydWaioc
     </string>
+    <string name="harold_term_info">
+        A more formal name for Randall the Cloud. https://clips.twitch.tv/beyondthesummit/LivelyMonkeyKreygasm
+    </string>
     <string name="helicrash_term_info">
         When a Fox or Falco SD\'s by falling off the stage and using their fair. The term\'s name is due to
         the move looking like a helicopter.
@@ -1197,7 +1226,7 @@
         from the last hit you took. Popularized by smasher JV3x3.
     </string>
     <string name="kitchensink_term_info">
-        A waveshine followed by a shine offstage. https://youtu.be/yJmx3v27olQ?t=3m4s
+        A waveshine followed by a instant shine offstage. https://youtu.be/yJmx3v27olQ?t=3m4s
     </string>
     <string name="lag_term_info">
        The downtime period the occurs before or after performing certain attacks or actions.
@@ -1236,6 +1265,10 @@
     <string name="mangle_term_info">
         A mangle is when a player (usually a Fox or Falco) gets back onto the stage using their Up-B in an
         odd or unexpected angle, somehow avoiding an attack from the person guarding the edge.
+    </string>
+    <string name="mangogotarrested_term_info">
+        A meme in the Smash Bros. community where if a player isn\'t playing in a tournament
+        it means he\'s in prison. https://clips.twitch.tv/beyondthesummit/ExcitedWolfOSsloth
     </string>
     <string name="meteor_term_info">
         A move that sends someone downward, and is designated by the game as a special.
@@ -1449,6 +1482,9 @@
     <string name="sour_term_info">
         A hitbox that is usually weaker and deals less knockback than its stronger counterpart,
         the sweetspot hitbox. One example is the sourspot Zelda\'s F-air and B-air.
+    </string>
+    <string name="stairway_term_info">
+        When a Fox up-airs a lightweight character to the ceiling of the map to KO. https://clips.twitch.tv/srkevo1/PlainLarkVaultBoy
     </string>
     <string name="style_term_info">
         To play for looks, usually spoken as \"Style out\". Meaning to perform in a way that is
@@ -1738,8 +1774,8 @@
         <br><b>Donkey Kong:</b> can chain throw Fox, Falco and Falcon with the up throw at low to mid percentages. Donkey Kong can
         also chain throw Fox, Falco, and Captain Falcon with forward throw, then while carrying them, up throw.]]>
     </string>
-    <string name="crouchcancel_info_text"><![CDATA[<b>Note:</b> Peach is CC\'ing in order to take advantage
-        of the reduced knockback to punish the Fox with a down smash.
+    <string name="crouchcancel_info_text"><![CDATA[<b>Note:</b> Sheik is CC\'ing in order to take advantage
+        of the reduced knockback to survive an Up Smash.
         <br>
         <br><b>Useful video for learning to CC:</b> https://youtu.be/IA-ROZiZJqY
         <br>
@@ -1789,7 +1825,7 @@
         <br>
     ]]></string>
     <string name="di_info_text"><![CDATA[<big><b>Directional influence</b></big>
-        <br>Often abbreviated as DI, this is the control the receiver of an attack
+        <br>Often abbreviated as DI or TDI (Trajectory DI), this is the control the receiver of an attack
         has over his or her trajectory. Each attack sends its target in a particular direction, depending on the
         attack itself and on the target\'s weight and falling speed; DI can be used to alter, but not completely change,
         this original trajectory. This change can be vital to surviving high-power attacks such as Fox\'s up smash, and
@@ -1865,6 +1901,28 @@
         <br>Here is a nice visual display of it: http://i.imgur.com/BIDsld8.gif
         <br>One more: http://www.gfycat.com/MarvelousFavorableIndianjackal
     ]]></string>
+    <string name="dsdi_info_text"><![CDATA[Useful video: https://youtu.be/ZkdPVUlrSOo?t=6m30s
+        <br>
+        <br><big><b>Double Stick Smash DI</b></big>
+        <br>Double Stick Smash DI (DSDI) is a special type of Smash DI that involves using both the
+        Control Stick and the C-Stick to Smash DI attacks. While Smash DI is DI that slightly shifts
+        your location during freeze frames, DSDI is using the Control Stick to TDI or SDI and the C-Stick
+        SDI. This results in either a very strong shift of location (if both are SDI), or a very strong
+        trajectory change and a slight shift in location. It can be used to tech strong attacks while
+        grounded if the angle is low enough, and can be used to tech off of a platform like in the example gif.
+        <br>
+        <br><big><b>How to properly perform</b></big>
+        <br>In order to perform DSDI, one must predict when to do it (like any other DI), a player must
+        move the stick towards the desired DI direction, and move the C-Stick to the desired SDI shift trajectory.
+        <br>If you wish to fully perform the SDI part of DSDI, you must shift the control stick as SDI requires
+        along with the C-Stick. If you wish to SDI make sure you remember that if you hold the stick
+        in the same direction after the attack, you will DI with that direction inputted.
+        <br>
+        <br><b>This works extremely well with:</b>
+        <br>\tMarth\'s up-air on platforms
+        <br>\tFox\'s down-air
+        <br>\tAny attack that can be survived with strong SDI or DI.
+    ]]></string>
     <string name="ffall_info_text"><![CDATA[<big><b>Fast falling</b></big>
         <br>Fast falling is the act of falling quicker than usual in mid-air.
         <br>It is performed by tapping down on the control stick while falling. The character will continue
@@ -1914,6 +1972,8 @@
         these characters are able to run faster with the use of fox-trotting. Fox trotting is predominately
         used in Super Smash Bros. Melee, and characters with which the technique is most commonly executed
         are Fox, Captain Falcon, Roy, and Marth.
+        <br>
+        <br><big><b>How to perform</b></big>
         <br>One way of performing a fox-trot is by flicking or tapping the control stick sideways to perform
         an initial dash, returning the stick to a neutral position to cancel the onset of the full dash,
         and then tapping the stick sideways again to perform another initial dash. This sequence can be
@@ -2037,8 +2097,8 @@
         of moves that can be performed while in the air.
     ]]></string>
     <string name="ledgedash_info_text"><![CDATA[http://gfycat.com/SphericalQueasyGoshawk
-        <br>http://gfycat.com/SmugOilyAmericanquarterhorse
         <br>http://gfycat.com/GracefulMiniatureHousefly
+        <br>Setups: https://www.youtube.com/playlist?list=PLKPEgSVjggtCm3IT9uYBlNgEcv3Qw9jaw
         <br>
         <br><big><b>Ledgedash</b></big>
         <br>Ledgedashing is a technique where one takes advantage of the 29 frames of invincibility
@@ -2063,7 +2123,6 @@
         been invincible for a good chunk of the ledgedash. This technique is good to use to get out of a sticky spot.
         <br>
         <br>This video may help: https://youtu.be/7L2L7vyCc6c
-        <br>Setups: https://www.youtube.com/playlist?list=PLKPEgSVjggtCm3IT9uYBlNgEcv3Qw9jaw
     ]]></string>
     <string name="ledgedropping_info_text"><![CDATA[<big><b>Ledge drop</b></big>
         <br>A ledge drop (also known as ledge grab) is a technique used to quickly access the ledge
@@ -2932,7 +2991,7 @@
         <br><b>Singles:</b> Neutral
         <br><b>Doubles:</b> Neutral
         <br>
-        <br><b>Characters with an advantage:</b> Campers, Jugglers, Heavy characters, Bad recoveries, Far recoveries
+        <br><b>Characters with an advantage:</b> Campers, jugglers, light characters, bad recoveries
         <br>
         <br><big><b>Dream Land</b></big>
         <br>This is a simple stage, similar to other stages like Super Smash Bros. Melee\'s Battlefield and Fountain of Dreams where
@@ -3161,6 +3220,7 @@
         <br><b>100&#37;+ ledge roll:</b> 10th longest
         <br><b>0-99&#37; ledge attack range:</b> 4th farthest
         <br><b>100&#37;+ ledge attack range:</b> 18th farthest
+        <br><b>Intangible ledgedash (Optimal/Perfect):</b> 14/15 frames
         <br>
         <br><b>Notable players:</b> MaNgo, Westballz, Zhu, GimR, PPMD, Axe
         <br>
@@ -3222,8 +3282,9 @@
         <br><b>100&#37;+ ledge roll:</b> 3rd longest
         <br><b>0-99&#37; ledge attack range:</b> 6th farthest
         <br><b>100+&#37; ledge attack range:</b> 7th farthest
+        <br><b>Intangible ledgedash (Optimal/Perfect):</b> 10/17 frames
         <br>
-        <br><b>Notable players:</b> Hax, Wizzrobe, Lord, Scar, S2J, Westballz
+        <br><b>Notable players:</b> Hax, Wizzrobe, Scar, S2J, Westballz, Isai, Lord
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/captain-falcon.66/
         <br>
@@ -3273,6 +3334,7 @@
         <br><b>100&#37;+ ledge roll:</b> 19th longest
         <br><b>0-99&#37; ledge attack range:</b> 4th farthest
         <br><b>100&#37;+ ledge attack range:</b> 18th farthest
+        <br><b>Intangible ledgedash (Optimal/Perfect):</b> 15/16 frames
         <br>
         <br><b>Notable players:</b> Leffen, MaNgo, Chillindude, Hax, Lucky, Mew2King, SFAT, Silent Wolf, Fiction, Armada
         <br>
@@ -3328,6 +3390,7 @@
         <br><b>100&#37;+ ledge roll:</b> 2nd farthest
         <br><b>0-99&#37; ledge attack range:</b> 5th farthest
         <br><b>100+&#37; ledge attack range:</b> 4th farthest
+        <br><b>Intangible ledgedash (Optimal/Perfect):</b> 4/18 frames
         <br>
         <br><b>Notable players:</b> Bizzarro Flame, Kage, Eikelmann
         <br>
@@ -3359,7 +3422,7 @@
         <br>
         <br><b><u>Movement stats</u></b>
         <br><b>Walking Speed:</b> 6-10th fastest
-        <br><b>Turning Speed:</b> 1-3th fastest
+        <br><b>Turning Speed:</b> 1-3rd fastest
         <br><b>Running Speed:</b> 3-5th fastest
         <br>
         <br><b><u>Aerial stats</u></b>
@@ -3378,6 +3441,7 @@
         <br><b>100&#37;+ ledge roll:</b> 19th longest
         <br><b>0-99&#37; ledge attack range:</b> 9th longest
         <br><b>100+&#37; ledge attack range:</b> 22nd longest
+        <br><b>Intangible ledgedash (Optimal/Perfect):</b> 8/12 frames
         <br>
         <br><b>Notable players:</b> Shroomed, Plup, Mew2King, Android, Overtriforce, DruggedFox, KirbyKaze
         <br>
@@ -3424,6 +3488,7 @@
         <br><b>100&#37;+ ledge roll:</b> 21-22nd longest
         <br><b>0-99&#37; ledge attack range:</b> 18-19th farthest
         <br><b>100+&#37; ledge attack range:</b> 19-20th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 13 frames
         <br>
         <br><b>Notable players:</b> Green Mario, Wobbles
         <br>
@@ -3464,6 +3529,7 @@
         <br><b>100&#37;+ ledge roll:</b> 11th farthest
         <br><b>0-99&#37; ledge attack range:</b> 15th farthest
         <br><b>100+&#37; ledge attack range:</b>  3rd farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 4 frames
         <br>
         <br><b>Notable players:</b> PPMD, Mew2King, Ken, Azen, PewPewU
         <br>
@@ -3522,6 +3588,7 @@
         <br><b>100&#37;+ ledge roll:</b> 26th longest
         <br><b>0-99&#37; ledge attack range:</b> 26th longest
         <br><b>100+&#37; ledge attack range:</b> 26th longest
+        <br><b>Intangible ledgedash (Optimal/Perfect):</b> 15/16 frames
         <br>
         <br><b>Notable players:</b> Mew2King
         <br>
@@ -3567,6 +3634,7 @@
         <br><b>100&#37;+ ledge roll:</b> 7th farthest
         <br><b>0-99&#37; ledge attack range:</b> 22-24th farthest
         <br><b>100+&#37; ledge attack range:</b> 9-10th farthest
+        <br><b>Intangible ledgedash:</b> N/A
         <br>
         <br><b>Notable players:</b> Armada, MacD, VaNz, Epsilon
         <br>
@@ -3612,6 +3680,7 @@
         <br><b>100&#37;+ ledge roll:</b> 8th farthest
         <br><b>0-99&#37; ledge attack range:</b> 22-24th farthest
         <br><b>100+&#37; ledge attack range:</b> 25th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 4 frames
         <br>
         <br><b>Notable players:</b> Simna Ibn Sind, HungryBox, Vrud, Kahnu
         <br>
@@ -3651,6 +3720,7 @@
         <br><b>100&#37;+ ledge roll:</b> 16th farthest
         <br><b>0-99&#37; ledge attack range:</b> 11th farthest
         <br><b>100+&#37; ledge attack range:</b> 11th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 12 frames
         <br>
         <br><b>Notable players:</b> Triple R, Cereal Rabbit
         <br>
@@ -3690,6 +3760,7 @@
         <br><b>100&#37;+ ledge roll:</b> 6th farthest
         <br><b>0-99&#37; ledge attack range:</b> 8th farthest
         <br><b>100+&#37; ledge attack range:</b> 5th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 1 frames
         <br>
         <br><b>Notable players:</b> Zoma, Mew2King, Taj
         <br>
@@ -3730,6 +3801,7 @@
         <br><b>100&#37;+ ledge roll:</b> 12th farthest
         <br><b>0-99&#37; ledge attack range:</b> 13th farthest
         <br><b>100+&#37; ledge attack range:</b> 2nd farthest
+        <br><b>Intangible ledgedash (Optimal/Perfect):</b> 9/12 frames
         <br>
         <br><b>Notable players:</b> The GERM, Aether
         <br>
@@ -3772,6 +3844,7 @@
         <br><b>100&#37;+ ledge roll:</b> 3rd shortest
         <br><b>0-99&#37; ledge attack range:</b> 22nd farthest
         <br><b>100+&#37; ledge attack range:</b>  16th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 12 frames
         <br>
         <br><b>Notable players:</b> Axe, ChuDat, Laijin
         <br>
@@ -3813,6 +3886,7 @@
         <br><b>100&#37;+ ledge roll:</b> 4th farthest
         <br><b>0-99&#37; ledge attack range:</b> 10th farthest
         <br><b>100+&#37; ledge attack range:</b> 15th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 2 frames
         <br>
         <br><b>Notable players:</b> The Lake
         <br>
@@ -3853,6 +3927,7 @@
         <br><b>100&#37;+ ledge roll:</b> 9th farthest
         <br><b>0-99&#37; ledge attack range:</b> 1st farthest
         <br><b>100+&#37; ledge attack range:</b> 18th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 8 frames
         <br>
         <br><b>Notable players:</b> DJ Nintendo
         <br>
@@ -3893,6 +3968,7 @@
         <br><b>100&#37;+ ledge roll:</b> 14th longest
         <br><b>0-99&#37; ledge attack range:</b> 16th farthest
         <br><b>100+&#37; ledge attack range:</b> 9-10th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 9 frames
         <br>
         <br><b>Notable players:</b> Hungrybox, MaNgo, Idea, Darc, s0ft
         <br>
@@ -3945,6 +4021,7 @@
         <br><b>100&#37;+ ledge roll:</b> 25th farthest
         <br><b>0-99&#37; ledge attack range:</b> 25th farthest
         <br><b>100+&#37; ledge attack range:</b> 24th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 9 frames
         <br>
         <br><b>Notable players:</b> GimR, j00t, Qerb
         <br>
@@ -3986,6 +4063,7 @@
         <br><b>100&#37;+ ledge roll:</b> 1st farthest
         <br><b>0-99&#37; ledge attack range:</b> 2nd farthest
         <br><b>100+&#37; ledge attack range:</b> 1st farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 7 frames
         <br>
         <br><b>Notable players:</b> WestBallz, Green Ranger, NJzFinest, Phish-It, Chandy
         <br>
@@ -4025,6 +4103,7 @@
         <br><b>100&#37;+ ledge roll:</b> 21-22nd longest
         <br><b>0-99&#37; ledge attack range:</b> 18-19th farthest
         <br><b>100+&#37; ledge attack range:</b> 19-20th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 14 frames
         <br>
         <br><b>Notable players:</b> OTG, Velocity, Shroomed
         <br>
@@ -4065,6 +4144,7 @@
         <br><b>100&#37;+ ledge roll:</b> 18th farthest
         <br><b>0-99&#37; ledge attack range:</b> 20th farthest
         <br><b>100+&#37; ledge attack range:</b> 12th farthest
+        <br><b>Intangible ledgedash (Optimal):</b> 13 frames
         <br>
         <br><b>Notable players:</b> Wobbles, ChuDat, Fly Amanita, Nintendude, Frio
         <br>
@@ -4108,6 +4188,7 @@
         <br><b>100&#37;+ ledge roll:</b> 5th longest
         <br><b>0-99&#37; ledge attack range:</b> 12th farthest
         <br><b>100+&#37; ledge attack range:</b> 8th farthest
+        <br><b>Intangible ledgedash (Optimal/Perfect):</b> 4/11 frames
         <br>
         <br><b>Notable players:</b> Plup, Duck, HugS, quiKsilver, ESAM
         <br>
@@ -4117,10 +4198,6 @@
         <br><b>Samus vs. Fox matchup:</b> https://youtu.be/la9-P29TdR8
         <br>http://smashboards.com/threads/the-samus-index-thread-updated-3-9-13.333011/
         <br><b>Neutral game:</b> https://youtu.be/is0DOA5lYuw
-        <br>
-        <br>Samus Aran is a starter character in Super Smash Bros. Melee. Returning as a veteran from the
-        previous game, Samus, similarly to Link, reprises her role as a short-ranged fighter with numerous ranged options. In addition, she received some
-        powerful buffs, causing her to improve from a bottom-tiered character in Super Smash Bros. to a high-mid tiered character in Melee.
         <br>
         <br>Samus is currently ranked 10th on the current tier list, placing her in C tier. This is mainly due to her numerous and effective projectiles
         , which adds to her KOing power and her approach on the ground. She also has a good air game, complimented with a powerful back aerial. Samus
@@ -4160,6 +4237,7 @@
         <br><b>100&#37;+ ledge roll:</b> 13th longest
         <br><b>0-99&#37; ledge attack range:</b> 14th farthest
         <br><b>100+&#37; ledge attack range:</b> 14th farthest
+        <br><b>Intangible ledgedash Optimal:</b> 13 frames
         <br>
         <br><b>Notable players:</b> Blea Gelo, Abate, Eddy Mexico, Vudujin
         <br>
@@ -4209,6 +4287,7 @@
         <br><b>100&#37;+ ledge roll:</b> 15th farthest
         <br><b>0-99&#37; ledge attack range:</b> 22-24th farthest
         <br><b>100+&#37; ledge attack range:</b> 23rd farthest
+        <br><b>Intangible ledgedash Optimal:</b> 13 frames
         <br>
         <br><b>Notable players:</b> Axe, PikaChad
         <br>
@@ -4241,7 +4320,7 @@
         <br><b>Short Hop:</b> 18-23rd highest
         <br><b>Aerial Speed:</b> 12th-14th fastest
         <br><b>First Jump Height:</b> 19-20th highest
-        <br><b>Second Jump Height:</b> 24rth highest
+        <br><b>Second Jump Height:</b> 24th highest
         <br><b>Total jump height:</b> 20-21st highest
         <br><b>Average Fall Speed:</b> 4-5th fastest
         <br><b>Fast falling speed:</b> 8th fastest
@@ -4252,14 +4331,11 @@
         <br><b>100&#37;+ ledge roll:</b> 17th farthest
         <br><b>0-99&#37; ledge attack range:</b> 17th farthest
         <br><b>100+&#37; ledge attack range:</b> 6th farthest
+        <br><b>Intangible ledgedash Optimal:</b> 5 frames
         <br>
         <br><b>Notable players:</b> LSDX, Sethlon, NJzFinest
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/roy.114/
-        <br>
-        <br>Roy is a secret character in Super Smash Bros. Melee. Roy is a clone of Marth, with all of their moves having
-        the same animations and most having similar functioning, although they do also have their differences in their fighting styles (primarily in the
-        location of their sweet and sourspots). Like Marth, he is a hidden character, making Roy the only clone of an unlockable character.
         <br>
         <br>Roy is currently ranked 20th on the tier list, in the F tier. Roy\'s upsides include a good approach due to one of the best SHFFLs in the game, as well
         as a good grab game, and among the best reaches in the game. However, Roy\'s flaws are significant, including poor flexibility in his comboing
@@ -4296,6 +4372,7 @@
         <br><b>100&#37;+ ledge roll:</b> 23rd farthest
         <br><b>0-99&#37; ledge attack range:</b> 7th farthest
         <br><b>100+&#37; ledge attack range:</b> 5th farthest
+        <br><b>Intangible ledgedash (Optimal/Perfect):</b> 2/8 frames
         <br>
         <br><b>Notable players:</b> aMSa, Mind Trick, V3ctorman, Leffen
         <br>

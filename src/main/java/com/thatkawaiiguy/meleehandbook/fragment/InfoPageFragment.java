@@ -20,6 +20,7 @@ package com.thatkawaiiguy.meleehandbook.fragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,6 +56,7 @@ public class InfoPageFragment extends Fragment {
 
         TextView text = (TextView) view.findViewById(R.id.infoText);
         text.setText(Html.fromHtml(ArrayHelper.getInfoString(characterPicked, getActivity())));
+        text.setMovementMethod(LinkMovementMethod.getInstance());
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize(getActivity())));
 
         return view;

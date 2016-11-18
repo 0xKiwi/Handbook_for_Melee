@@ -44,6 +44,8 @@ public class TabFragmentAdapter extends FragmentPagerAdapter {
             return TechInfoFragment.newInstance(1);
         else if(position == 2)
             return TechInfoFragment.newInstance(2);
+        else if(position == 3)
+            return TechInfoFragment.newInstance(3);
         return TechInfoFragment.newInstance(position + 1);
     }
 

@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         Appodeal.disableWriteExternalStoragePermissionCheck();
         Appodeal.setBannerViewId(R.id.adView);
         Appodeal.disableNetwork(this, "cheetah");
+        Appodeal.disableNetwork(this, "mailru");
         Appodeal.initialize(this, getResources().getString(R.string.appodeal_id), Appodeal.BANNER);
 
         if(!Preferences.hideAds(this)){
@@ -292,7 +293,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     public void onPurchaseHistoryRestored() {
         if(bp.isPurchased(getString(R.string.adproductid))) {
             Preferences.setHideAds(this, true);
-            Appodeal.trackInAppPurchase(this, 0.99, "USD");
         } else
             Preferences.setHideAds(this, false);
         recreate();

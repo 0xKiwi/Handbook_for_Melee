@@ -153,6 +153,10 @@ public class UniqueFragment extends Fragment {
                     childObjectList.add(new CustomChildObject().setChildText(psspike));
                 }
                 break;
+                case "Sheik": {
+                    childObjectList.add(new CustomChildObject().setChildText("Needle turnaround cancel"));
+                }
+                break;
                 case "Ness": {
                     childObjectList.add(new CustomChildObject().setChildText(djc));
                     childObjectList.add(new CustomChildObject().setChildText("Yo-yo glitch"));

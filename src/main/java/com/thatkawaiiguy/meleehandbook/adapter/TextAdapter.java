@@ -77,7 +77,7 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 public void onClick(View v) {
                     if(canStart) {
                         Intent mIntent;
-                        if(mDataSet[pos].equals("Wall jump") ||
+                        if(mDataSet[pos].equals("Wall jumping") ||
                                 mDataSet[pos].equals("Directional Influence") ||
                                 mDataSet[pos].equals("Shield dropping") ||
                                 mDataSet[pos].equals("Super wavedash & SDWD") ||

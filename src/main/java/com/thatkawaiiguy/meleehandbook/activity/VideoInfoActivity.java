@@ -17,21 +17,18 @@
 
 package com.thatkawaiiguy.meleehandbook.activity;
 
-import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.widget.NestedScrollView;
+import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.anjlab.android.iab.v3.BillingProcessor;
-import com.anjlab.android.iab.v3.TransactionDetails;
 import com.appodeal.ads.Appodeal;
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
@@ -47,7 +44,7 @@ public class VideoInfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if(getIntent().hasExtra("bundle") && savedInstanceState == null)
+        if (getIntent().hasExtra("bundle") && savedInstanceState == null)
             savedInstanceState = getIntent().getExtras().getBundle("bundle");
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
@@ -55,53 +52,61 @@ public class VideoInfoActivity extends AppCompatActivity {
         Slidr.attach(this);
 
         Bundle mainData = getIntent().getExtras();
-        if(mainData == null)
+        if (mainData == null)
             return;
         optionPicked = mainData.getString("option");
-
-        if(!Preferences.hideAds(this)){
-            Appodeal.setBannerViewId(R.id.adView);
-            Appodeal.show(this, Appodeal.BANNER_VIEW);
-        }
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(optionPicked);
 
-        infoVid = (MutedVideoView) findViewById(R.id.infoVid);
-        setVideo();
-
         TextView text = (TextView) findViewById(R.id.infoText);
+        text.setMovementMethod(LinkMovementMethod.getInstance());
         text.setText(Html.fromHtml(ArrayHelper.getInfoString(optionPicked, this)));
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize
                 (this)));
 
-        if(Build.VERSION.SDK_INT >= 21) {
-            final int oldStatusColor = getWindow().getStatusBarColor();
+        infoVid = (MutedVideoView) findViewById(R.id.infoVid);
+        setVideo();
+
+        /*if (Build.VERSION.SDK_INT >= 21) {
+            oldStatusColor = getWindow().getStatusBarColor();
             getWindow().setStatusBarColor(0x00000000);
+        }
 
-            final VideoInfoActivity activity = this;
-            final int vidHeight = infoVid.getHeight();
-            final int abheight = getActionBarHeight();
+        final Window activity = getWindow();
+*/
+        final AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar_layout);
+        if (appBarLayout != null) {
+            appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+                @Override
+                public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                    if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
+                        //if (Build.VERSION.SDK_INT >= 21)
+                        //    activity.setStatusBarColor(oldStatusColor);
+                        if (infoVid.isPlaying())
+                            infoVid.pause();
+                    } else {
+                        //if (Build.VERSION.SDK_INT >= 21)
+                        //    activity.setStatusBarColor(0x00000000);
+                        if (!infoVid.isPlaying())
+                            infoVid.start();
+                    }
+                }
+            });
+        }
 
-            ((NestedScrollView) findViewById(R.id.video_scrollView))
-                    .setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
-                        @Override
-                        public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int
-                                oldScrollX, int oldScrollY) {
-                            if(scrollY < vidHeight - activity
-                                    .getStatusBarHeight() - abheight)
-                                activity.getWindow().setStatusBarColor(0x00000000);
-                            else
-                                activity.getWindow().setStatusBarColor(oldStatusColor);
-                        }
-                    });
+        if (!Preferences.hideAds(this)) {
+            Appodeal.setBannerViewId(R.id.adView);
+            Appodeal.show(this, Appodeal.BANNER_VIEW);
         }
     }
 
+
+
     private void setVideo() {
-        switch(optionPicked) {
+        switch (optionPicked) {
             case "Boomerang superjump":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.boomjump));
@@ -149,6 +154,10 @@ public class VideoInfoActivity extends AppCompatActivity {
             case "Multishine":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.multishine));
+                break;
+            case "Needle turnaround cancel":
+                infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
+                        .raw.needlecancel));
                 break;
             case "Parry":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
@@ -237,7 +246,7 @@ public class VideoInfoActivity extends AppCompatActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.dashdance));
                 break;
-            case "Fast falling":
+            case "Fast fall":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.ffall));
                 break;
@@ -253,7 +262,7 @@ public class VideoInfoActivity extends AppCompatActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.jcgrab));
                 break;
-            case "L-canceling":
+            case "L-cancel":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.lcancel));
                 break;
@@ -261,11 +270,11 @@ public class VideoInfoActivity extends AppCompatActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.ledgedash));
                 break;
-            case "Ledge stall":
+            case "Ledge stalling":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.ledgestall));
                 break;
-            case "Ledge-canceling":
+            case "Ledge-cancel":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.ledgecancel));
                 break;
@@ -281,7 +290,7 @@ public class VideoInfoActivity extends AppCompatActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.moonwalk));
                 break;
-            case "No-impact landing":
+            case "No-impact land":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.noimpact));
                 break;
@@ -317,7 +326,7 @@ public class VideoInfoActivity extends AppCompatActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.tech));
                 break;
-            case "Tech-chasing":
+            case "Tech-chase":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.techchase));
                 break;
@@ -329,7 +338,7 @@ public class VideoInfoActivity extends AppCompatActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.wavedash));
                 break;
-            case "V-canceling":
+            case "V-cancel":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.vcancel));
                 break;
@@ -354,7 +363,7 @@ public class VideoInfoActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
                 return true;
@@ -380,7 +389,7 @@ public class VideoInfoActivity extends AppCompatActivity {
     private int getStatusBarHeight() {
         int result = 0;
         int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if(resourceId > 0) {
+        if (resourceId > 0) {
             result = getResources().getDimensionPixelSize(resourceId);
         }
         return result;
@@ -390,7 +399,7 @@ public class VideoInfoActivity extends AppCompatActivity {
         int actionBarHeight = 0;
 
         TypedValue tv = new TypedValue();
-        if(getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+        if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
             actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, getResources()
                     .getDisplayMetrics());
         }

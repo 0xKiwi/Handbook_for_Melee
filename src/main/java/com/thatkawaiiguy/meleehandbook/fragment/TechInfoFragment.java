@@ -20,6 +20,7 @@ package com.thatkawaiiguy.meleehandbook.fragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,12 +64,15 @@ public class TechInfoFragment extends Fragment {
                         techSelectedInfo.setText(Html.fromHtml(getString(R.string.sdi_info_text)));
                         break;
                     case 2:
+                        techSelectedInfo.setText(Html.fromHtml(getString(R.string.dsdi_info_text)));
+                        break;
+                    case 3:
                         techSelectedInfo.setText(Html.fromHtml(getString(R.string
                                 .diangles_info_text)));
                         break;
                 }
                 break;
-            case "Wall jump":
+            case "Wall jumping":
                 switch(getArguments().getInt(ARG_PAGE)) {
                     case 0:
                         techSelectedInfo.setText(Html.fromHtml(getString(R.string
@@ -115,6 +119,8 @@ public class TechInfoFragment extends Fragment {
                 }
                 break;
         }
+
+        techSelectedInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         return view;
     }

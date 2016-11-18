@@ -16,7 +16,6 @@
         android:maxLines="1500"
         android:autoLink="web"
         android:linksClickable="true"
-        android:textIsSelectable="true"
         android:text="@string/debug_text"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="?android:textColorSecondary"

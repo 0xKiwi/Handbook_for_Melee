@@ -21,6 +21,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.appodeal.ads.BannerView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:visibility="visible"
+        android:layout_height="wrap_content"/>
+
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/coordinator"
         android:layout_width="match_parent"
@@ -78,12 +86,4 @@
             </android.support.v4.widget.NestedScrollView>
         </RelativeLayout>
     </android.support.design.widget.CoordinatorLayout>
-
-    <com.appodeal.ads.BannerView
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center_horizontal|bottom"
-        android:visibility="visible"
-        android:layout_height="wrap_content"/>
 </RelativeLayout>

@@ -63,7 +63,7 @@ public class ArrayHelper {
         boolean sortByTier = Preferences.sortByTierEnabled(context);
         if(sortByTier) {
             chars = new ArrayList<>(Arrays.asList(new String[]{"Fox", "Falco", "Marth",
-                    "Jigglypuff", "Princess Peach",
+                    "Sheik", "Jigglypuff", "Princess Peach",
                     "Ice Climbers", "Captain Falcon", "Pikachu", "Samus Aran",
                     "Dr. Mario", "Yoshi", "Luigi", "Ganondorf",
                     "Mario", "Young Link", "Link", "Roy",
@@ -72,7 +72,7 @@ public class ArrayHelper {
             chars = new ArrayList<>(Arrays.asList(new String[]{"Captain Falcon", "Dr. Mario",
                     "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Link",
                     "Luigi", "Mario", "Marth", "Mewtwo", "Ness", "Pichu",
-                    "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran",
+                    "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran", "Sheik",
                     "Yoshi", "Young Link"}));
         }
 
@@ -118,7 +118,7 @@ public class ArrayHelper {
                 "Anti-ground infinite combo physics", "BYOC", "Baby pop off",
                 "Banned stage", "Beef", "Blastzone", "Blender", "Bombsoldier combo",
                 "Boost grab",
-                "Brackets", "Buff", "Buster", "Butter", "Camera box", "Cancel",
+                "Brackets", "Buff", "Build-a-bear combo", "Buster", "Butter", "Camera box", "Cancel",
                 "Cave of life", "Circus music",
                 "Clone", "Cory in the house", "Counter",
                 "Counterpick", "Crew battle", "Dash-grab", "Dashing",
@@ -138,6 +138,7 @@ public class ArrayHelper {
                 "Junco combo",
                 "Kappa", "Ken combo", "Kitchen sink", "Kreygasm", "Lag", "Landing lag",
                 "Lean drop", "Legalize PokeFloats", "lol m2k", "Love tap", "MacD", "Mangle",
+                "Mango got arrested",
                 "Mashedpotato Samurai", "Matchups", "Metagame",
                 "Meteor cancel", "Meteor", "Mike Haze", "Mindgames",
                 "Misfire", "Multi tournament conditioning", "My b", "Nerf", "Neutral game", "OOS",
@@ -155,7 +156,7 @@ public class ArrayHelper {
                 "Shieldstun", "Shine/Reflector", "Shine drop", "Sidestepping",
                 "Silent john", "Singles", "Smash attacks", "Smash inflation",
                 "Smashfest", "Sourspot", "Space animal", "Spike",
-                "Stage humping", "Stage spike", "Stale moves", "Star KO",
+                "Stage humping", "Stage spike", "Stairway to heaven", "Stale moves", "Star KO",
                 "Stitch", "Stock canceling", "Stomp", "Style", "Swanton bomb",
                 "Sweetspot attack", "Sweetspot ledge",
                 "TAS", "Taunt cancel", "Tech trap", "The Zhu", "The king is back",
@@ -173,7 +174,7 @@ public class ArrayHelper {
                 "DJ knockback armor", "Double jump refresh", "Edge canceled eggs",
                 "Extended & homing grapple", "Float cancel", "Frozen turnip glitch",
                 "Gentleman",
-                "Ledgehop double laser", "Multishine", "Parry", "Pillaring",
+                "Ledgehop double laser", "Multishine", "Needle turnaround cancel", "Parry", "Pillaring",
                 "Princess/Swordsman spiking", "RI grapple cancel",
                 "Rising pound", "SHFF missiles",
                 "Short hop laser", "Side-B shorten", "Shine mine", "Super wavedash & SDWD",
@@ -212,6 +213,8 @@ public class ArrayHelper {
                 return res.getString(R.string.buster_term_info);
             case "Butter":
                 return res.getString(R.string.butter_term_info);
+            case "Build-a-bear combo":
+                return res.getString(R.string.buildabear_term_info);
             case "BYOC":
                 return res.getString(R.string.byoc_term_info);
             case "Camera box":
@@ -360,6 +363,8 @@ public class ArrayHelper {
                 return res.getString(R.string.matchups_term_info);
             case "Mangle":
                 return res.getString(R.string.mangle_term_info);
+            case "Mango got arrested":
+                return res.getString(R.string.mangogotarrested_term_info);
             case "Meteor":
                 return res.getString(R.string.meteor_term_info);
             case "Meteor cancel":
@@ -482,6 +487,8 @@ public class ArrayHelper {
                 return res.getString(R.string.stagehump_term_info);
             case "Stage spike":
                 return res.getString(R.string.stagespike_term_info);
+            case "Stairway to heaven":
+                return res.getString(R.string.stairway_term_info);
             case "Stale moves":
                 return res.getString(R.string.stale_term_info);
             case "Star KO":
@@ -577,8 +584,12 @@ public class ArrayHelper {
                 return res.getString(R.string.ddance_info_text);
             case "DI angles":
                 return res.getString(R.string.diangles_info_text);
+            case "DI":
+                return res.getString(R.string.di_info_text);
             case "Directional Influence":
                 return res.getString(R.string.di_info_text);
+            case "DSDI":
+                return res.getString(R.string.dsdi_info_text);
             case "Fast fall":
                 return res.getString(R.string.ffall_info_text);
             case "Fox-trot":
@@ -659,6 +670,8 @@ public class ArrayHelper {
                 return res.getString(R.string.lhdl_info_text);
             case "Multishine":
                 return res.getString(R.string.multishine_info_text);
+            case "Needle turnaround cancel":
+                return res.getString(R.string.needleturnaround_info_text);
             case "Parry":
                 return res.getString(R.string.parry_info_text);
             case "Pillaring":
