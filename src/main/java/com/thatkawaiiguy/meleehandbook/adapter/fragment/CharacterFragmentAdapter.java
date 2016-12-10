@@ -26,7 +26,7 @@ import com.thatkawaiiguy.meleehandbook.fragment.InfoPageFragment;
 
 public class CharacterFragmentAdapter extends FragmentPagerAdapter{
 
-    private final String[] tabTitles = new String[]{"Info", "Frame Data"};
+    private final String[] tabTitles = new String[]{"Info", "Hitboxes"};
 
     public CharacterFragmentAdapter(FragmentManager fm) {
         super(fm);

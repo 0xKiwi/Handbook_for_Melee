@@ -30,7 +30,7 @@ import com.thatkawaiiguy.meleehandbook.activity.CharacterFrameActivity;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomParentObject;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.adapter.FrameDataAdapter;
+import com.thatkawaiiguy.meleehandbook.adapter.HitboxesAdapter;
 
 import java.util.ArrayList;
 
@@ -48,7 +48,7 @@ public class FrameDataFragment extends Fragment {
 
     private String actionBarTitle = "";
 
-    private FrameDataAdapter mExpandableAdapter;
+    private HitboxesAdapter mExpandableAdapter;
 
     public static FrameDataFragment newInstance() {
         Bundle args = new Bundle();
@@ -69,7 +69,7 @@ public class FrameDataFragment extends Fragment {
         View view = inflater.inflate(R.layout.list_layout, container, false);
 
         RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
-        mExpandableAdapter = new FrameDataAdapter(getActivity(), setUpData(), actionBarTitle);
+        mExpandableAdapter = new HitboxesAdapter(getActivity(), setUpData(), actionBarTitle);
         mRecyclerView.setAdapter(mExpandableAdapter);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return view;
@@ -152,9 +152,6 @@ public class FrameDataFragment extends Fragment {
                 case 4: {
                     childObjectList.add(new CustomChildObject().setChildText(specialList[0]));
                     if (!actionBarTitle.equals("Marth")) {
-                        childObjectList.add(new CustomChildObject().setChildText(specialList[1]));
-                        childObjectList.add(new CustomChildObject().setChildText(specialList[2]));
-                        childObjectList.add(new CustomChildObject().setChildText(specialList[3]));
                         if(!actionBarTitle.equals("Yoshi"))
                             childObjectList.add(new CustomChildObject().setChildText(specialList[1]));
                         childObjectList.add(new CustomChildObject().setChildText(specialList[2]));
@@ -174,6 +171,7 @@ public class FrameDataFragment extends Fragment {
                         childObjectList.add(new CustomChildObject().setChildText(specialList[3]));
                     }
                 }
+                break;
             }
 
             CustomParentObject customParentObject = new CustomParentObject();

@@ -151,7 +151,7 @@
         <activity
             android:name=".activity.AppSettingsActivity"/>
         <activity
-            android:name=".activity.FrameDataActivity"/>
+            android:name=".activity.HitBoxesActivity"/>
         <activity
             android:name=".activity.HealthyActivity"/>
         <activity

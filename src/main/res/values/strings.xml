@@ -49,16 +49,16 @@
     <string name="close">CLOSE</string>
     <string name="support">Support the dev</string>
     <string name="twitter">Twitter</string>
-    <string name="version">v2.0.0</string>
-    <string name="changes"><b>Anniversary update! Thank you everyone for your support for a whole year!</b>
-        \nAdded intangible ledgedash frame stats in character info
-        \nBattery drain reduced when viewing techniques
-        \nAdded Needle turnaround cancel for Sheik
-        \nAdded Double Stick DI to DI tech page
-        \nAdded several more terms
-        \nFixed some typos
-        \nFixed some gifs</string>
-    <string name="about_text">\t\t\tHandbook for Melee v2.0.0
+    <string name="version">v2.1.5</string>
+    <string name="changes"><b>Post Anniversary update! Thank you everyone for your support for a whole year!</b>
+        \nI plan on doing a major rewrite soon, so I\'m fixing some issues since the rewrite will take long
+        \nNew icon! I made this one, I hope you all like it! It\'s material! :D
+        \nFix the issues regarding hitbox move listing (special moves)
+        \nFixed some issues with the video in techniques
+        \nAdded Lunchables to notable Roy players
+        \nRename Frame Data to Hitboxes
+        \nMinor fixes here and there</string>
+    <string name="about_text">\t\t\tHandbook for Melee v2.1.5
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
@@ -78,7 +78,6 @@
     \n\t\t\t\tschmooblidon
     \n\t\t\t\t/u/DigitalAge98
     \n\t\t\t\tsupersmashwikia
-    \n\t\t\t\tValeria Boikova (icon)
     \n\t\t\t\tMy friends and testers
     \n\t\t\t\tTristan, Tyler, Luis and Juan
     \n\t\t\t\tStratocaster\'s Hitbox System
@@ -4237,7 +4236,7 @@
         <br><b>100&#37;+ ledge roll:</b> 13th longest
         <br><b>0-99&#37; ledge attack range:</b> 14th farthest
         <br><b>100+&#37; ledge attack range:</b> 14th farthest
-        <br><b>Intangible ledgedash Optimal:</b> 13 frames
+        <br><b>Intangible ledgedash (Optimal):</b> 13 frames
         <br>
         <br><b>Notable players:</b> Blea Gelo, Abate, Eddy Mexico, Vudujin
         <br>
@@ -4287,7 +4286,7 @@
         <br><b>100&#37;+ ledge roll:</b> 15th farthest
         <br><b>0-99&#37; ledge attack range:</b> 22-24th farthest
         <br><b>100+&#37; ledge attack range:</b> 23rd farthest
-        <br><b>Intangible ledgedash Optimal:</b> 13 frames
+        <br><b>Intangible ledgedash (Optimal):</b> 13 frames
         <br>
         <br><b>Notable players:</b> Axe, PikaChad
         <br>
@@ -4331,9 +4330,9 @@
         <br><b>100&#37;+ ledge roll:</b> 17th farthest
         <br><b>0-99&#37; ledge attack range:</b> 17th farthest
         <br><b>100+&#37; ledge attack range:</b> 6th farthest
-        <br><b>Intangible ledgedash Optimal:</b> 5 frames
+        <br><b>Intangible ledgedash (Optimal):</b> 5 frames
         <br>
-        <br><b>Notable players:</b> LSDX, Sethlon, NJzFinest
+        <br><b>Notable players:</b> Sethlon, Lunchables, LSDX, NJzFinest
         <br>
         <br><b>Smashboard forum</b> http://smashboards.com/forums/roy.114/
         <br>

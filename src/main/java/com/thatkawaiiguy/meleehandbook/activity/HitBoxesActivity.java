@@ -36,7 +36,7 @@ import com.appodeal.ads.Appodeal;
 import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.fragment.FrameInfoDialogFragment;
-import com.thatkawaiiguy.meleehandbook.other.FrameDataHelper;
+import com.thatkawaiiguy.meleehandbook.other.HitboxesHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.thatkawaiiguy.meleehandbook.R;
 
@@ -44,7 +44,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class FrameDataActivity extends AppCompatActivity {
+public class HitBoxesActivity extends AppCompatActivity {
     private int frame = 0;
     private int mTotal = 0;
 
@@ -132,7 +132,7 @@ public class FrameDataActivity extends AppCompatActivity {
                 characterPicked = characterPickedTitle.toLowerCase();
         }
 
-        movePicked = FrameDataHelper.setShortMovePicked(movePicked);
+        movePicked = HitboxesHelper.setShortMovePicked(movePicked);
         doStuff();
     }
 
@@ -173,7 +173,7 @@ public class FrameDataActivity extends AppCompatActivity {
             case R.id.action_info:
                 interruptPlay();
                 DialogFragment newFragment = new FrameInfoDialogFragment();
-                newFragment.show(getFragmentManager(), "Frame Data info");
+                newFragment.show(getFragmentManager(), "Hitbox info");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -305,8 +305,8 @@ public class FrameDataActivity extends AppCompatActivity {
 
             frameImage.setImageBitmap(bitmap);
 
-            landingLag.setText(FrameDataHelper.getLandLag(characterPickedTitle, movePicked));
-            iasa.setText(FrameDataHelper.getIASA(characterPickedTitle, movePicked));
+            landingLag.setText(HitboxesHelper.getLandLag(characterPickedTitle, movePicked));
+            iasa.setText(HitboxesHelper.getIASA(characterPickedTitle, movePicked));
 
             backBtn.setOnClickListener(new View.OnClickListener() {
                 @Override

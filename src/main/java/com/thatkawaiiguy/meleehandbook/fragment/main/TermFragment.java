@@ -51,7 +51,7 @@ public class TermFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
 
         recyclerView.setAdapter(new TermAdapter(terms, getActivity()));
-        recyclerView.hasFixedSize();
+        recyclerView.setHasFixedSize(true);
 
         new MaterialScrollBar(getActivity(), recyclerView, true).setBarThickness(12).
                 setAutoHide(false).setBarColour(ContextCompat.getColor(getActivity(), R.color

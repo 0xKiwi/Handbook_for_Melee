@@ -17,7 +17,7 @@
 
 package com.thatkawaiiguy.meleehandbook.other;
 
-public class FrameDataHelper {
+public class HitboxesHelper {
     public static String setShortMovePicked(String move) {
         switch(move) {
             case "Down Aerial":

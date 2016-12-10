@@ -69,10 +69,11 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
         final int pos = position;
-        ((ViewHolder) viewHolder).getTextView().setText(mDataSet[position]);
+        ViewHolder viewHolder1 = ((ViewHolder) viewHolder);
+        viewHolder1.getTextView().setText(mDataSet[position]);
 
         if(video) {
-            ((ViewHolder) viewHolder).view.setOnClickListener(new View.OnClickListener() {
+            viewHolder1.view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if(canStart) {
@@ -92,7 +93,7 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 }
             });
         } else {
-            ((ViewHolder) viewHolder).view.setOnClickListener(new View.OnClickListener() {
+            viewHolder1.view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if(canStart) {

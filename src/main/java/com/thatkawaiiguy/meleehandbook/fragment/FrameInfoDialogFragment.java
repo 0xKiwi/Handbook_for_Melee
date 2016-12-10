@@ -44,7 +44,7 @@ public class FrameInfoDialogFragment extends DialogFragment {
         message.setTextSize(18);
 
         return new AlertDialog.Builder(getActivity())
-                .setTitle("Frame Data info")
+                .setTitle("Hitbox info")
                 .setNegativeButton(R.string.close,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {

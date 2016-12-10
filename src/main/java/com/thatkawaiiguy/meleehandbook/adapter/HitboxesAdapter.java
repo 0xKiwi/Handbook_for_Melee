@@ -30,11 +30,11 @@ import com.thatkawaiiguy.meleehandbook.other.CustomChildViewHolder;
 import com.thatkawaiiguy.meleehandbook.other.CustomParentObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomParentViewHolder;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.activity.FrameDataActivity;
+import com.thatkawaiiguy.meleehandbook.activity.HitBoxesActivity;
 
 import java.util.List;
 
-public class FrameDataAdapter extends ExpandableRecyclerAdapter<CustomParentViewHolder, CustomChildViewHolder> {
+public class HitboxesAdapter extends ExpandableRecyclerAdapter<CustomParentViewHolder, CustomChildViewHolder> {
 
     private final LayoutInflater mInflater;
 
@@ -44,7 +44,7 @@ public class FrameDataAdapter extends ExpandableRecyclerAdapter<CustomParentView
 
     private boolean canStart = true;
 
-    public FrameDataAdapter(Context context, List<ParentObject> parentItemList, String character) {
+    public HitboxesAdapter(Context context, List<ParentObject> parentItemList, String character) {
         super(context, parentItemList);
         this.context = context;
         characterPicked = character;
@@ -79,7 +79,7 @@ public class FrameDataAdapter extends ExpandableRecyclerAdapter<CustomParentView
             public void onClick(View v) {
                 if(canStart) {
                     context.startActivity(
-                            new Intent(context, FrameDataActivity.class)
+                            new Intent(context, HitBoxesActivity.class)
                             .putExtra("option", characterPicked)
                             .putExtra("frame", childViewHolder.dataText.getText()));
                     canStart = false;

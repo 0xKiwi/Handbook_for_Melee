@@ -29,7 +29,7 @@ public class AppRater {
     private final static String APP_PNAME = "com.thatkawaiiguy.meleehandbook";// Package Name
 
     private final static int DAYS_UNTIL_PROMPT = 5;//Min number of days
-    private final static int LAUNCHES_UNTIL_PROMPT = 7;//Min number of launches
+    private final static int LAUNCHES_UNTIL_PROMPT = 10;//Min number of launches
 
     public static void app_launched(Context mContext) {
         SharedPreferences prefs = mContext.getSharedPreferences("apprater", 0);
