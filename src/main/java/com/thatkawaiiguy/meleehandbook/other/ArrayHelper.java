@@ -22,6 +22,8 @@ import android.content.res.Resources;
 
 import com.thatkawaiiguy.meleehandbook.R;
 
+import org.xmlpull.v1.XmlPullParser;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 

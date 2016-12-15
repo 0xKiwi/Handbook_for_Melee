@@ -33,6 +33,7 @@ import com.thatkawaiiguy.meleehandbook.other.CustomChildObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomParentObject;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
+import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 import java.util.ArrayList;
 
@@ -66,15 +67,15 @@ public class UniqueFragment extends Fragment {
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        if(Preferences.groupByCharacterEnabled(getActivity())) {
+        /*if(Preferences.groupByCharacterEnabled(getActivity())) {
             mExpandableAdapter = new ExpandableAdapter(getActivity(), setUpData(), false);
             recyclerView.setAdapter(mExpandableAdapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        } else {
-            adapter = new TextAdapter(uniqueTechs, getActivity(), true);
+        } else {*/
+            adapter = new TextAdapter(getActivity(), true, R.xml.uniquetech);
             recyclerView.setAdapter(adapter);
             recyclerView.setHasFixedSize(true);
-        }
+        //}
 
         return rootView;
     }

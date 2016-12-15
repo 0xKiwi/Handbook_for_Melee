@@ -30,6 +30,7 @@ import android.widget.TextView;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
+import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 public class InfoPageFragment extends Fragment {
 
@@ -55,7 +56,10 @@ public class InfoPageFragment extends Fragment {
         String characterPicked = mainData.getString("option");
 
         TextView text = (TextView) view.findViewById(R.id.infoText);
-        text.setText(Html.fromHtml(ArrayHelper.getInfoString(characterPicked, getActivity())));
+
+        text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(R.xml.characters,
+                characterPicked, getActivity().getResources())));
+
         text.setMovementMethod(LinkMovementMethod.getInstance());
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize(getActivity())));
 

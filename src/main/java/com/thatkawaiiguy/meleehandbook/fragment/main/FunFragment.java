@@ -48,12 +48,12 @@ public class FunFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
-        rootView.setTag(TAG);
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        adapter = new TextAdapter(funs, getActivity(), false);
+        adapter = new TextAdapter(getActivity(), true, R.xml.fundamentals);
+
         recyclerView.setAdapter(adapter);
 
         recyclerView.setHasFixedSize(true);

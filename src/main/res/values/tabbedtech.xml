@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="di_info_text"><![CDATA[<big><b>Directional influence</b></big>
+        <br>Often abbreviated as DI or TDI (Trajectory DI), this is the control the receiver of an attack
+        has over his or her trajectory. Each attack sends its target in a particular direction, depending on the
+        attack itself and on the target\'s weight and falling speed; DI can be used to alter, but not completely change,
+        this original trajectory. This change can be vital to surviving high-power attacks such as Fox\'s up smash, and
+        for escaping combos such as Jigglypuff\'s up-throw to rest combo on fast-fallers (see the space animal slayer).
+        Perhaps one of DI\'s most useful applications is the ability to make the character move in a path that is as
+        long as possible before crossing the blast line.
+        <br>
+        <br><big><b>How to properly DI</b></big>
+        <br>To make sure you DI well you have to anticipate what move your opponent is going to land on you
+        and DI in a way that\'ll save you. If a Falco dairs you, DI towards the stage so you\'ll go into
+        the stage and be able to tech, rather than get spiked past the stage and die. Another example is if a Fox
+        side smashes you, to DI whichever way extends the distance traveled to reach the side blastzones. As his
+        side smash is usually a NE/NW angle, it\'s best if you DI upwards so the arch you travel needs to cover more
+        distance to reach the blastzone.
+        <br>"Good DI" usually occurs when a character is sent in a
+        trajectory that creates the greatest distance between the character and the blast line. In most situations,
+        angling towards the upper-left or upper-right corners will grant the greatest chance of surviving a
+        high-knockback attack.
+        <br>Conversely, \"poor DI\" occurs when the shortest distance between the character
+        and the blastzone is created, or the angle sends the player into a position they cannot recover from
+        when they would normally easily recover from, such as down and away from the stage. Bad DI that results
+        in a death commonly occurs near the sides of the stage, when a character is hit diagonally while holding
+        the Control Stick downward (commonly as a result of intentional fastfalling), which sends them on a more
+        horizontal trajectory, towards the closest blast line.
+        <br>The player can DI by pressing the control stick in any direction during or just after being hit by an attack.
+        There are three types of directional influence: trajectory DI (almost always referred to as just \"DI\"),
+        Smash DI, and Automatic Smash DI. These last two function much differently from trajectory DI, and
+        should not be confused with it.
+        <br>
+        <br><big><b>Types of DI</b></big>
+        <br>
+        <br><b>Survival DI</b>
+        <br>Survival DI alters the knockback direction towards the upper corners of the screen so that blast zones
+        are escaped, preventing a kill provided that the knockback wasn\'t too high.
+        <br>
+        <br><b>Combo DI</b>
+        <br>Because of the high amount of hitstun in Melee compared to Brawl (or, more accurately, the lack of the ability
+        to negate hitstun), it is often possible to hit the opponent with another attack while they are still in hitstun.
+        By DIing away from the attacker, the victim can increase the distance the attacker needs to travel and thus make
+        it harder for the attacker to reach them in time to continue the combo.
+        <br>Most of the time, combo DI is as simple as holding left or right in the knockback direction. Against characters
+        like Captain Falcon who have aerials with high knockback and low ending lag, it is often hard to decide between
+        survival DI and combo DI. While combo DI might escape a consecutive hit, it might also be enough to pass the
+        horizontal blast zones and die. Survival DI ensures that doesn\'t happen, but it will make it easy for Captain
+        Falcon to land another aerial.
+        <br>
+        <br><big><b>Mechanics</b></big>
+        <br>To determine the effective trajectory, the position of the control stick is read on the last frame of hitlag.
+        ASDI is usually triggered by this as well. The highest deviation of trajectory is produced by directions
+        perpendicular to the original knockback angle of the hitbox and amounts to approximately 18°. Holding directions
+        that are parallel to the original angle will produce no survival DI at all. Because the possible DI angles are
+        not distributed equally (see diagram in DI Angles), knockback angles within 17° of vertical or horizontal can
+        be trajectory DI\'d to a lesser degree, as no true correspondent perpendicular angle is available.
+    ]]></string>
+    <string name="sdi_info_text"><![CDATA[Useful video: https://youtu.be/CO7YD9KqNhY
+        <br>
+        <br><big><b>Smash DI</b></big>
+        <br>Often shortened to SDI is a mechanic that allows players to slightly alter their position during
+        the freeze frames of being hit by an attack. Tapping the control stick or C-Stick in any direction (rapidly, like
+        how you rapidly tap the C-Stick when performing an aerial or smash attack), during freeze frames will slightly
+        move their character in that direction, allowing them to potentially escape multi-hit moves or certain combos.
+        <br>SDI can also be used to move into a wall or ceiling in order to tech near-instantly (and is also possible with
+        floors if the character starts in the air) or to (very minimally) increase the distance from the blast line
+        that the attack is about to send them towards.
+        <br>Despite its near-identical name, SDI is not the same thing as directional influence.
+        The major difference is that, while DI changes
+        the trajectory a character is launched in while SDI changes a character\'s position before launch.
+        <br>The mechanics of SDI operate by shifting the character in the given direction.
+        As a result, repeatedly tapping in one direction will move the character
+        much farther than simply holding the stick in that direction. This results in a technique
+        called quarter-circle DI, which involves quickly rotating the stick between two \"notches\" for
+        increased distance. Quarter-circle DI was introduced to the United States by smasher Captain Jack and was once
+        known as Japanese DI.
+        <br>As the C-Stick can also be used for SDI, even \stronger\" forms of SDI exist. So-called double-stick DI
+        utilizes the C-Stick\'s ability to override the control stick by holding one of the sticks in one direction
+        and utilizing quarter-stick DI with the other. This is often used when a player wants to SDI one way, and DI the other.
+        <br>
+        <br><big><b>How to properly perform</b></big>
+        <br>What you do to SDI is simply jam the control stick the exact instant you are hit. This isn\'t done on reaction,
+        you must be expecting the hit. This is mostly done to survive combos where you know a certain move must be
+        used at a certain time. Because it is anticipated, you can actually throw people off by hitting them with a
+        different move than they expect or changing the timing. For example, as Fox if they are SDIing your uair
+        you can bair and they will have bad DI.
+        <br>
+        <br><b>Automatic smash directional influence</b>
+        <br>ASDI is a weaker variant of SDI which uses the C-Stick. Once a character\'s freeze frames are
+        over, they shift slightly in whatever direction the C-Stick is currently held, slightly less than
+        one SDI input. If the C-Stick is also being held in a direction, it will override the control stick\'s input,
+        allowing the player to DI in another direction simultaneously. To perform simply hold the C-Stick the direcion you want
+        to SDI, this method is efficient for multi-hit attacks.
+        <br>
+        <br><big><b>Shield DI</b></big>
+        <br>If you are in a shield and someone attacks it, rapidly tapping the control stick or C-Stick similar to SDI
+        will cause you to move your character in the direction where you are SDI\ing.
+        <br>
+        <br><b>This works extremely well with:</b>
+        <br>\tMultiple hitting d-smashes (e.g. Peach, Sheik, Pikachu)
+        <br>\tRapid jabs
+        <br>\tShield pressure from Fox and Falco
+        <br>\tThe lightshield edgehog vs Marth
+        <br>\tOther multihit moves on shield
+        <br>\tFalcon\'s raptor boost on shield
+        <br>\tStrong attacks on shield that may seem unpunishable (like certain spacings of Falco\'s f-smash or d-tilt)
+        <br>
+        <br>Video on Shield DI: https://youtu.be/53t9fDzdCyw
+    ]]></string>
+    <string name="dsdi_info_text"><![CDATA[Useful video: https://youtu.be/ZkdPVUlrSOo?t=6m30s
+        <br>
+        <br><big><b>Double Stick Smash DI</b></big>
+        <br>Double Stick Smash DI (DSDI) is a special type of Smash DI that involves using both the
+        Control Stick and the C-Stick to Smash DI attacks. While Smash DI is DI that slightly shifts
+        your location during freeze frames, DSDI is using the Control Stick to TDI or SDI and the C-Stick
+        SDI. This results in either a very strong shift of location (if both are SDI), or a very strong
+        trajectory change and a slight shift in location. It can be used to tech strong attacks while
+        grounded if the angle is low enough, and can be used to tech off of a platform like in the example gif.
+        <br>
+        <br><big><b>How to properly perform</b></big>
+        <br>In order to perform DSDI, one must predict when to do it (like any other DI), a player must
+        move the stick towards the desired DI direction, and move the C-Stick to the desired SDI shift trajectory.
+        <br>If you wish to fully perform the SDI part of DSDI, you must shift the control stick as SDI requires
+        along with the C-Stick. If you wish to SDI make sure you remember that if you hold the stick
+        in the same direction after the attack, you will DI with that direction inputted.
+        <br>
+        <br><b>This works extremely well with:</b>
+        <br>\tMarth\'s up-air on platforms
+        <br>\tFox\'s down-air
+        <br>\tAny attack that can be survived with strong SDI or DI.
+    ]]></string>
+    <string name="diangles_info_text"><![CDATA[These are the possible angles which you can DI and angle certain moves.
+        <br>Any Up-B move which lets you change your aim in a circular manner (like Falco\'s or Zelda\'s)
+        has as many angles as in this diagram.
+        <br>This diagram also shows the angles it\'s possible to DI towards.
+        <br>
+        <br><b>Quick facts</b>
+        <br>&#8226;There are a total of 352 possible angles.
+        <br>
+        <br>&#8226;Within about ±17° from every right angle, the closest right angle will be used instead.
+        <br>
+        <br>&#8226;In other areas the angles are spaced on average 0.65° from each other.
+        <br>
+        <br>&#8226;The angle-differences fluctuate pretty evenly between 0.3° and 1.0° and are seemingly located randomly.
+        <br>
+        <br>&#8226;The same pattern is repeated (and mirrored) for every 45-degree sector.
+        <br>
+        <br>&#8226;Smash DI can be shortened down to 70% of its full length, with the number of intermediate lengths only limited by the control stick.
+        <br>
+        <br>Here is a nice visual display of it: http://i.imgur.com/BIDsld8.gif
+        <br>One more: http://www.gfycat.com/MarvelousFavorableIndianjackal
+    ]]></string>
+
+    <string name="walljump_info_text" title="Wall jump"><![CDATA[<big><b>Wall Jump</b></big>
+        <br>This is a technique some characters may use in which one momentarily
+        clings to the wall, turns away, and then jumps back. It is performed by touching a wall and then pressing
+        the control stick or d-pad in the direction opposite the wall.
+        <br>A wall jumping character experiences a short period of
+        invincibility at the moment he or she kicks off the wall. One cannot wall jump forever, as the height one
+        gains from each successive wall jump decreases until they actually lose height.
+        <br>Additionally, all characters can perform a wall jump directly after wall teching. This technique is
+        often used by players recovering against an edge-guarder.
+        <br>
+        <br><big><b>Characters who can wall jump</b></big>
+        <br>\tCaptain Falcon
+        <br>\tFalco
+        <br>\tFox
+        <br>\tMario
+        <br>\tPichu
+        <br>\tSamus
+        <br>\tSheik
+        <br>\tYoung Link
+        <br>
+        <br><big><b>Wall jump stalling</b></big>
+        <br>A few characters can still stall for quite some time if they continue to wall jump
+        off the same wall over and over again.
+        <br>
+        <br>Young Link (and Captain Falcon) can perform this technique like so: as soon as you leave the wall,
+        input Back-Air and hold back towards the wall. As soon as you touch the wall, tap away again and
+        repeat the process. This technique works because performing an aerial will interrupt the preset
+        arc that your character would normally jump in. Once the Aerial begins, you have control over your
+        character, and can pull them back towards the stage. Because you can\'t wall jump during an attack,
+        you want to use your shortest Aerial. Both Back-Air and Neutral-Air last 40 frames for YL, but
+        Back-Air is significantly easier to execute, since you can just smash both sticks towards the stage.
+    ]]></string>
+    <string name="ledgewalljump_info_text" title="Ledge wall jump"><![CDATA[http://i.imgur.com/QxxmkgL.gifv
+        <br>
+        <br><big><b>Ledge Wall Jumping</b></big>
+        <br>Ledge wall jumping is wall jumping instantly from a
+        ledge you\'re holding on without using your second jump.
+        <br>
+        <br>Ledge wall jumping is done solely by smashing the stick away from the stage while you\'re holding to an edge.
+        <br>
+        <br>How to perform</b></big>
+        <br>Grab the ledge, let go (with or without fastfalling), double jump towards the wall so that at one point you\'ll
+        be sliding along it (this is important), and so that you catch the ledge again as soon as possible in your double
+        jump (thus you have to double jump at a certain height, and you have to take the risk to double jump too low and miss the edge)
+        <br>While grabbing the ledge, smash away with the control stick (It isn\'t always necessary but if you don\'t do it, it might not work).
+        <br>Then, you\'re ready to ledge wall jump : you have to smash the stick away in 1 frame to wall jump (if not, it\'ll start
+        registering it as a tilt and you\'ll let go of the edge normally)
+        <br>
+        <br>This is not the only way to get a ledgewall jump, It\'s been done FD\'s ledge after grabbing the ledge with a Firefox.
+        <br>It\'s also possible to ledge wall jump, shine, turn around, fall a bit, double jump, grab the edge, ledge wall jump again.
+        <br>
+        <br>Possible with all the characters that can wall jump
+        <br>
+        <br><big><b>Detailed instructions</b></big>
+        <br><b>Step 1:</b> Grab the ledge
+        <br><b>Step 2:</b> Drop from the ledge
+        <br><b>Step 3:</b> Double jump* back to the ledge, making sure that you rub up against the wall as you do so.
+        <br><b>Step 4:</b> While hanging from the ledge, quick tap away.
+        <br>
+        <br>*You don\'t have to double jump. You can also use a Special attack, so long as you make sure that you
+        are touching the wall on the way to the ledge.
+    ]]></string>
+    <string name="reversewalljump_info_text" title="Reverse wall jump"><![CDATA[<big><b>Reverse wall jumping</b></big>
+        <br>It is actually possible to perform a reverse wall jump with
+        any character capable of wall jumping on tournament legal stages. This glitch is similar to the ledge wall jump
+        which stores the wall jump from riding up Final Destination\'s ledge when you grab the ledge and when
+        you press away it instantly activates the wall jump.
+        <br>
+        <br><big><b>How it works</big></b>
+        <br>By manipulating the way the game detects wall jumps, the player can \"trick\" the game into thinking
+        the player is wall jumping from an opposite facing wall. This is done by storing wall jumps through methods
+        stated below. By performing a wall jump stored from the opposite wall you are currently on the game still gives
+        you the same wall jump which would normally send you away from the stage but will now send you towards the stage.
+        <br>Details on this here: http://pastebin.com/wHhscGty
+        <br>This is why Fox is capable of doing a reverse wallump on his target test stage as seen in this
+        video (https://youtu.be/rAN3SejRi3w) from 2009. Fox jumps and hugs the
+        left wall until he touches the ground. Once on the ground the game stops updating if he is touching a wall.
+        Since he walks up to the right wall before jumping when he goes airborne he is still hugging a wall and can
+        activate the wall jump intended to be done off the left wall letting him perform a reverse wall jump.
+        <br>
+        <br><b>Ways of storing wall jumps</b>
+        <br>
+        <br>1. Use a grounded special including an Up-B\ (with the exception of Mario)against a wall. Even
+        though Up-B\'s put you airborne and then into freefall this is considered a separate state called
+        SpecialFall and the game does not update if you are hugging a wall in this state.
+        <br>
+        <br>2. Start a jump and on the frame before you go airborne enter an aerial or special
+        move. With a frame perfect input your character will go from jumpsquat directly into an attack avoiding
+        the freefall state. You can perform a 2nd aerial or special on the exact frame it ends to continue
+        avoiding freefall, or use one of your characters aerials that can be interrupted during certain ending
+        frames to make the timing much easier (You can only jump, attack, or grapple during IASA frames).
+        <br>
+        <br>3. Walk or wavedash off a ledge or platform. If you enter freefall in this way you
+        can be airborne for exactly one frame before the game will update if you should still be capable of
+        wall jumping. This allows Mario to wavedash backwards off a stage and input a frame perfect airdodge
+        up so that he will drop and grab the ledge since he cannot use his Up-B to grab the ledge from on stage.
+        <br>These new tricks to go airborne and keep a stored wall jump allow any character to jump into one
+        side of the stages wall and use an Up-B or airdodge to return to the stage and navigate to
+        the opposite wall or ledge. If you enter freefall while hugging a wall with a wall jump stored
+        from the opposite wall you can reverse wall jump by letting the analog stick rest in neutral
+        for one frame and pressing it into the wall on the next frame.
+        <br>
+        <br>It is also possible for Fox, Falco, Young Link, and Mario to perform a reverse wall jump
+        from Final Destination\'s ledge by dropping from the ledge by inputting down or away
+        on the control and the next frame pressing analog into the wall. Mario is also
+        capable of performing this on FoD and Pokemon Stadium.
+        <br>
+        <br><b>More info</b>
+        <br>For a much more detailed version of this with exact frame data and several gifs, go to this smashboards post by
+        Vesne: http://smashboards.com/threads/new-tech-reverse-walljumping.417240/
+        ]]>
+    </string>
+
+    <string name="shielddrop_info_text" title="Shield drop"><![CDATA[<br><big><b>Shield dropping</b></big>
+        <br>Shield platform dropping is dropping through
+        a soft platform while shielding. This allows a player to quickly escape situations
+        or mix-up their approaches.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>There are two ways to perform a shield drop:
+        <br><b>1.</b> Open up your shield, and tilt the control stick the correct amount downwards rapidly (approximately one
+        notch on the GC remote)
+        <br><b>2.</b> Move the control stick towards the side, and then bringing it down one notch.
+        Although this method is slower and is easily readable, it is easier to perform.
+        <br>
+        <br>For more help on how to shield drop consistently,
+        check out this video by Victra: https://youtu.be/hsl03HJ_LTU
+    ]]></string>
+    <string name="shaidrop_info_text" title="Shai drop"><![CDATA[<big><b>Shai drop</b></big>
+        <br>Shai dropping (also called running shield drop) is a technique for consistently doing frame perfect shield drops from a dash.
+        <br>Shai drops allow the player to quickly shield drop from a dash and lets the player keep their momentum
+        from the dash. They are also usually the fastest way to drop through a platform.
+        <br>
+        <br><big><b>Uses</b></big>
+        <br>Shai drops can be useful in a situation where you\'d usually drop through the platform and NAir or FAir,
+        but instead you can dash back, shai drop, and BAir (which is usually stronger). It can also be
+        used for mix-ups and mindgames since you can quickly drop through platforms without any foretelling.
+        <br>
+        <br><big><b>Execution</b></big>
+        <br><b>Method 1:</b> Dash, hold diagonal down in the direction of your dash/run
+        (45°), and shield. not simultaneously, but one after another with just a small
+        moment apart from positioning the stick down and shielding.
+        <br>This method is more lenient and
+        potentially faster than the aforementioned stick down method since
+        you don\'t need to worry spot dodging if you press the shield too soon after the stick is positioned.
+        <br>The downside of this method is that you must have a decently precise joystick in
+        order for it to be at all possible.
+        <br>
+        <br><b>Method 2:</b> Dash, hold straight down instead, and shield. Not simultaneously,
+        but one after another with just a small moment apart (2-frame window) from positioning the stick down and shielding.
+        <br>Shielding to early will result in a spot dodge and shielding too late will result in a normal shield.
+    ]]></string>
+</resources>

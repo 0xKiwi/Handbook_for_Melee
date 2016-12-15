@@ -35,6 +35,9 @@ import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.MutedVideoView;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
+import com.thatkawaiiguy.meleehandbook.other.XMLParser;
+
+import org.xmlpull.v1.XmlPullParser;
 
 public class VideoInfoActivity extends AppCompatActivity {
 
@@ -55,6 +58,7 @@ public class VideoInfoActivity extends AppCompatActivity {
         if (mainData == null)
             return;
         optionPicked = mainData.getString("option");
+        int id = mainData.getInt("xml");
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         assert getSupportActionBar() != null;
@@ -63,7 +67,8 @@ public class VideoInfoActivity extends AppCompatActivity {
 
         TextView text = (TextView) findViewById(R.id.infoText);
         text.setMovementMethod(LinkMovementMethod.getInstance());
-        text.setText(Html.fromHtml(ArrayHelper.getInfoString(optionPicked, this)));
+
+        text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(id, optionPicked, getResources())));
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize
                 (this)));
 
@@ -102,7 +107,6 @@ public class VideoInfoActivity extends AppCompatActivity {
             Appodeal.show(this, Appodeal.BANNER_VIEW);
         }
     }
-
 
 
     private void setVideo() {

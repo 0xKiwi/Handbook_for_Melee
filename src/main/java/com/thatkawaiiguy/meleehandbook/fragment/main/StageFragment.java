@@ -26,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.thatkawaiiguy.meleehandbook.adapter.IconAdapter;
+import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.R;
 
@@ -49,6 +50,7 @@ public class StageFragment extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
         adapter = new IconAdapter(stages, getActivity(), false);
 
         recyclerView.setAdapter(adapter);

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="posture_info_text">Thanks to thespymachine for this info
+        \n
+        \nSit as far back in the chair as possible,
+        with your back straight and shoulders back and relaxed.
+        \n
+        \nDistribute your weight on your hips evenly.
+        \n
+        \nKeep your knees at a 90 degree angle; your knees should be even with
+        or slightly higher than your hips (try not to cross your legs).
+        \n
+        \nTry not to sit in the same position for more than 30 minutes.
+        \n
+        \nWhen getting out of the chair, don\'t use your waist or back to get
+        up, use your legs. It helps to slide forward in the chair first.
+        \n
+        \nWith all that said, most people don\'t sit with correct posture
+        (I\'m working on my posture) so implementing this for the first time
+        at a tournament may not be a good idea.
+        \n
+        \nPractice good sitting posture when on the computer, practicing
+        Melee, or whenever you\'re sitting. Doing so will get the correct
+        muscles strong enough so it becomes comfortable.
+        \n
+        \nWhenever you\'re uncomfortable with your sitting position, change
+        it. If your legs, back, neck, or shoulders are bothering you after
+        a tournament, you should fix your posture.
+    </string>
+    <string name="mental_info_text">Thanks to thespymachine for this info
+        \n
+        \n<big><b>Mental Exercise</b></big>
+        \nMake and keep your mind quick and buff - by using it! Puzzles,
+        thought-provoking movies, reading, board games, practicing
+        remembering/visualizing things, and other video games are good ways
+        to exercise the brain. Plus, there are tons of \'brain power\' games
+        and sites these days (Luminosity is a popular site)
+        \n
+        \nA daily meditation habit has been shown to improve attention and
+        focus, both very important for competitive play [Here are some guided
+        meditations to help you out]
+        \n
+        \n<big><b>Physical Exercise</b></big>
+        \nHaving good cardiovascular fitness will help blood flow to the
+        brain, thus more \'mind power\' - helps improve memory and maybe even
+        decision making abilities. You don\'t have to become a bodybuilder
+        or tri-athlete, you just need to keep good cardiovascular and heart
+        fitness. Aerobic exercises like running, biking, swimming, and even
+        walking keep the heart happy. Anaerobic exercises are great too, as
+        long as you keep your heart-rate up. Tip: If/when you\'re practicing
+        techskill by yourself (vs a CPU or whatever), every stock you lose
+        during your practice session is how many pushups/pullups/situps you
+        do throughout the day (or right after practicing); or, for every
+        stock that\'s how many minutes you\'re going to walk today or run/swim
+        throughout the week. (Also, be sure to check out the SWF Gym thread
+        to get in contact of other Smasher who want/like to exercise)​
+        Rest your mind
+        \n
+        \nSometimes, you just need to stop thinking. On a day to day basis,
+        and to rest from thought-heavy situations.
+        \nA tournament can be hard on your mental capacities, so finding
+        things to remove your thoughts from the stress, commotion, yomi,
+        and whatever else your thoughts are on will be helpful in being a
+        ble to focus throughout a tournament.​
+        \nMusic in a pair of headphones helps \'remove\' yourself from the
+        environment and give yourself a break.
+        \nMeditation, though takes practice, can be invaluable to a competitor
+        since it can help remove distractions at the tournament (or in your
+        life), and help you focus.
+        Any activity that takes your mind off things and doesn\'t require
+        much (new) thinking: Juggling, tetris, drawing, sleeping, taking a
+        walk, etc. Whatever works for you.
+        \nIf you\'re feeling tired, try to take a nap. Even naps that are
+        around 10 minutes can improve your alertness and performance (at
+        least for a little while) - but don\'t sleep for longer than 30
+        minutes.
+        \nWhen trying to learn new techniques (or characters), it\'s good
+        to rest your mind after the practice and learning - it\'s makes
+        the learning more effective
+        \n
+        \n<big><b>Fuel your brain</b></big>
+        \nYour brain LOVES glucose, and uses a bunch of it. So to make sure
+        your mind has enough fuel, snack up on carbs during a tournament.​
+        \nComplex Carbs: These are the long-lasting, time-releasing carbs.
+        Whole grains, fruits, and veggies provide these. Recommended for
+        your \'bigger\' meals when you have a good amount of down time.
+        \nSimple Carbs: The short-term, instant-boost type of carbs.
+        Basically anything that is artificially sweetened with sugar
+        and corn syrup: candy, soda, chocolate, jam; and even fruits and
+        juices. Recommended for the mini-snack in between/before matches.
+        \nHunger Affects Decision-Making and Perception of Risk: Eat and
+        think well.
+    </string>
+    <string name="dozer_info_text">Sit in neutral position. Inhale.
+        Exhale and let your eyes close gently. Keep your eyes closed
+        for ten seconds, continuing to breathe. Open your eyes. Repeat.
+        \nThis ergocise relaxes and moistens the eyes, helps prevent
+        eye fatigue.
+        \n
+        \nGood for before/in between/after matches, after you\'ve been
+        KO\'d, or any other time you don\'t need to look at a tv.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="upstairs_info_text">Sit in neutral position. Inhale.
+        Exhale. Keeping your head still, raise your eyes upwards and
+        focus on something in that line of vision. Hold for a couple
+        of seconds. Drop your eyes down, focusing on something in that
+        line of vision. Repeat.
+        \nThis ergocise stretches the muscles of the eyes, increases
+        circulation and helps prevent eye fatigue.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="kingleer_info_text">Sit in neutral position. Inhale.
+        Exhale. Keeping your head still, move your eyes to the right,
+        focusing on something in that line of vision. Hold for a couple
+        of seconds. Move your eyes to the left, focusing on something
+        in that line of vision. Repeat.
+        \nThis ergocise stretches the muscles of the eyes, increases circulation
+        and helps prevent eye fatigue.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="sidewatcher_info_text">Sit in neutral position. Inhale. Exhale.
+        Keeping your head still, move your eyes to the upper right hand
+        diagonal corner. Hold for a couple of seconds. Lower your eyes to the
+        lower left hand diagonal corner. Close your eyes briefly. Repeat, going
+        to the upper left hand diagonal corner and then to the lower right hand
+        diagonal corner.
+        \nThis ergocise stretches the muscles of the eyes, increases circulation
+        and helps prevent eye fatigue.
+        \n
+        \n- Another good stretch is alternating rolling your eyes clockwise and
+        counterclockwise a few times.
+        \n
+        \nStretches are good for before and after matches.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="near_info_text">Sit in neutral position, facing a window or
+        something far away. Inhale. Exhale. Focus your eyes on something close
+        to you, such as your computer screen or your desk. Focus on something
+        far away from you, such as the horizon or a person across the room.
+        \nThis ergocise strengthens and relaxes the muscles of the eye and
+        helps prevent eye fatigue.
+        \n
+        \nYou can do this in between sets when you have down time. Especially
+        if you can go outside and get some sunlight into your eyes and focus
+        on things at a greater distance.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="handshake_info_text">Sit in neutral position.
+        Raise your hands and forearms in front of your chest.
+        Inhale. Exhale and shake your hands from the wrist,
+        as though you are shaking water off of your hands.
+        Shake for ten seconds, continuing to breathe. Relax
+        your arms by your sides. Repeat.
+        \nThis ergocise increases
+        circulation in wrists, hands and arms, relieves the stress
+        and tension of computer work, and helps prevent
+        Carpal Tunnel Syndrome.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="thumbsweep_info_text">Sit in neutral position.
+        Place your forearms on your armrests, palms facing up.
+        Point each thumb out to the side. Inhale. Exhale and
+        sweep your thumb across your palm towards your pinkie
+        finger. Sweep your thumb back out to the side. Repeat
+        ten times with both hands.
+        \nThis ergocise increases circulation in thumb and hand,
+        helps prevent DeQuervain\'s Disease.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="cuticlecheck_info_text">Sit in neutral position.
+        Place your forearms on your armrests and let your hands
+        hang down over the edge of the armrests. Inhale. Exhale
+        and slowly lift your hands up as far as they will comfortably
+        go. Inhale. Exhale and slowly lower your hands down as
+        far as they will comfortably go. Repeat ten times in each
+        direction, continuing to breathe.
+        \nThis ergocise increases circulation in hands, relieves tension and
+        stress in wrists and hands, flushes out waste products
+        from the carpal tunnel region and the hand, and helps
+        prevent Carpal Tunnel Syndrome.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="wristcircles_info_text">Sit in neutral position
+        with your arms resting on your armrests. Slide your forearms
+        forward slightly and make loose fists with both hands. Inhale.
+        Exhale and slowly rotate both wrists outwards, letting your
+        forearms follow the movement. Rotate outwards ten times,
+        continuing to breathe. Keeping your hands in loose fists,
+        rotate inwards ten times, continuing to breathe. You should
+        feel a slight stretch in your wrists during the rotations.
+        Increase the range of the circles slightly if you don\'t feel
+        a stretch.
+        \nThis ergocise stretches the wrist muscles, increases
+        circulation in wrists, and helps prevent Carpal Tunnel Syndrome.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="break_info_text">Sit in neutral position. Extend
+        your right arm in front of you at shoulder height, palm down.
+        Bend your right wrist down, fingers pointing toward the floor.
+        Inhale. Exhale. Using your left hand, gently push the fingers
+        of your right hand towards you, bending your wrist slightly
+        further. Hold for ten seconds, continuing to breathe. Repeat
+        five times. Repeat five times with your left arm, assisting
+        with your right hand.
+        \nThis ergocise stretches the wrist extensors and finger
+        extensors (muscles at the top of wrist), which work during
+        typing or using a mouse, increases circulation in wrists
+        and hands, reduces the stress placed on wrists from working
+        at a computer, and helps prevent Tennis Elbow and Carpal
+        Tunnel Syndrome.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="stop_info_text">Sit in neutral position. Straighten
+        your right arm in front of you at shoulder height, palm down.
+        Bend your right wrist back, fingers pointing to the ceiling.
+        Inhale. Exhale and, with your left hand, gently pull back your
+        right fingers, stretching your wrist. Hold for ten seconds,
+        continuing to breathe. Repeat five times. Repeat five times
+        with your left wrist, assisting with your right hand.
+        \nThis ergocise stretches the wrist flexors and finger flexors
+        (muscles that run through the carpal tunnel and insert into
+        the palm), increases circulation in wrists and hands, and
+        helps prevent Carpal Tunnel Syndrome.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="underhand_info_text">Sit in neutral position.
+        Straighten your right arm in front of you at shoulder
+        height, palm up. Bend your right wrist down, fingers
+        pointing to the floor. Inhale. Exhale and, with your
+        left hand, gently push your right fingers toward you,
+        stretching your wrist. Hold for ten seconds, continuing
+        to breathe. Repeat five times. Repeat five times with
+        your left wrist, assisting with your right hand.
+        \nThis ergocise stretches the wrist flexors and finger flexors
+        (muscles that run through the carpal tunnel and insert
+        into the palm), increases circulation in wrists and hands,
+        and helps prevent Carpal Tunnel Syndrome.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="block_info_text">Sit in neutral position, at
+        least arms length away from your monitor. Interlace your
+        fingers in your lap. Inhale. Exhale and push your hands
+        out to shoulder level, turning your palms away from you.
+        Straighten your elbows. Hold for ten seconds, continuing
+        to breathe. Inhale and lower your hands to your lap,
+        turning them in. Repeat five times.
+        \nThis ergocise stretches the wrist flexors and finger
+        flexors (muscles that run through the carpal tunnel
+        and insert into the palm), increases circulation in
+        wrists and hands, and helps prevent Carpal Tunnel Syndrome.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="thumbpush_info_text">Sit in neutral position. Place
+        your forearms on your armrests. Make a fist with your right
+        hand. Point your right thumb toward the ceiling. Inhale.
+        Exhale and gently pull back on your right thumb with your
+        left hand. Resist and don\'t let your right thumb move.
+        Hold for five seconds, continuing to breathe. Repeat ten
+        times. Repeat ten times with your left thumb, assisting
+        with your right hand.
+        \nThis ergocise strengthens the thumb adductors and
+        flexors (muscles that run along the inside of your thumb)
+        and helps prevent DeQuervain\'s Disease.
+        \n
+        \nThanks to ergonomics
+    </string>
+    <string name="thumbpull_info_text">Sit in neutral position.
+        Place your forearms on your armrests. Make a fist with
+        your right hand. Point your right thumb toward the ceiling.
+        Inhale. Exhale and gently push forward on your right
+        thumb using your left hand. Resist and don\'t let your right
+        thumb move. Hold for five seconds, continuing to breathe.
+        Repeat ten times. Repeat ten times with your left thumb,
+        assisting with your right hand.
+        \nThis ergocise strengthens the thumb adductors and flexors
+        (muscles that run along the inside of your thumb) and helps
+        prevent DeQuervain\'s Disease.
+        \n
+        \nThanks to ergonomics
+    </string>
+</resources>
