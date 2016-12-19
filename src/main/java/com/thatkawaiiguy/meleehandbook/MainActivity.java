@@ -222,7 +222,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                 if(bp.isPurchased(getResources().getString(R.string.adproductid)))
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://bit" +
                             ".ly/1NXCD2o")));
-
                 else if(BillingProcessor.isIabServiceAvailable(this)) {
                     bp.purchase(this, getResources().getString(R.string.adproductid));
                 } else {
@@ -282,49 +281,35 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         switch((String) title) {
             case "Advanced Techniques":
                 fg2 = TechFragment.newInstance();
-                if(!fg.equals(fg2))
-                    fg = fg2;
                 break;
             case "Characters":
                 fg2 = CharacterFragment.newInstance();
-                if(!fg.equals(fg2))
-                    fg = fg2;
                 break;
             case "Fundamentals":
                 fg2 = FunFragment.newInstance();
-                if(!fg.equals(fg2))
-                    fg = fg2;
                 break;
             case "Stages":
                 fg2 = StageFragment.newInstance();
-                if(!fg.equals(fg2))
-                    fg = fg2;
                 break;
             case "Matchups":
                 fg2 = MatchupFragment.newInstance();
-                if(!fg.equals(fg2))
-                    fg = fg2;
                 break;
             case "Terminology":
                 fg2 = TermFragment.newInstance();
-                if(!fg.equals(fg2))
-                    fg = fg2;
                 break;
             case "Unique Techniques":
                 fg2 = UniqueFragment.newInstance();
-                if(!fg.equals(fg2))
-                    fg = fg2;
                 break;
             case "Staying Healthy":
                 fg2 = HealthyFragment.newInstance();
-                if(!fg.equals(fg2))
-                    fg = fg2;
+                break;
             default:
                 fg2 = HealthyFragment.newInstance();
-                if(fg != fg2)
-                    fg = fg2;
         }
-        getFragmentManager().beginTransaction().replace(R.id.fragmentLayout, fg).commit();
+        if(!fg.equals(fg2)) {
+            fg = fg2;
+            getFragmentManager().beginTransaction().replace(R.id.fragmentLayout, fg).commit();
+        }
     }
 
     private void sendToast() {

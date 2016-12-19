@@ -56,10 +56,9 @@ public class XMLParser {
                     if (xpp.getEventType() == XmlPullParser.START_TAG) {
                         if (xpp.getName().contains("string")) {
                             String[] chars2 = xpp.getAttributeValue(2).split("/");
-                            for (String characters : chars2) {
+                            for (String characters : chars2)
                                 if (character.equals(characters))
                                     techs.add(xpp.getAttributeValue(1));
-                            }
                         }
                     }
                     xpp.next();
@@ -75,12 +74,10 @@ public class XMLParser {
             XmlPullParser xpp = resources.getXml(xmlid);
 
             while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
-                if (xpp.getEventType() == XmlPullParser.START_TAG) {
-                    if (xpp.getName().equals("string")) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG)
+                    if (xpp.getName().equals("string"))
                         if (xpp.getAttributeValue(1).equals(title))
                             return getInnerXml(xpp);
-                    }
-                }
 
                 xpp.next();
             }
@@ -97,11 +94,9 @@ public class XMLParser {
             XmlPullParser xpp = resources.getXml(id);
 
             while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
-                if (xpp.getEventType() == XmlPullParser.START_TAG) {
-                    if (xpp.getName().contains("string")) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG)
+                    if (xpp.getName().contains("string"))
                         list.add(xpp.getAttributeValue(1));
-                    }
-                }
 
                 xpp.next();
             }
@@ -119,11 +114,9 @@ public class XMLParser {
             XmlPullParser xpp = resources.getXml(id);
 
             while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
-                if (xpp.getEventType() == XmlPullParser.START_TAG) {
-                    if (xpp.getName().equals("string")) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG)
+                    if (xpp.getName().equals("string"))
                         list.add(xpp.getAttributeValue(1));
-                    }
-                }
 
                 xpp.next();
             }
@@ -141,11 +134,9 @@ public class XMLParser {
             XmlPullParser xpp = resources.getXml(id);
 
             while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
-                if (xpp.getEventType() == XmlPullParser.START_TAG) {
-                    if (xpp.getName().equals("string")) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG)
+                    if (xpp.getName().equals("string"))
                         list.add(getInnerXml(xpp).replaceAll("\\s+", " ").trim());
-                    }
-                }
 
                 xpp.next();
             }
@@ -163,11 +154,9 @@ public class XMLParser {
             XmlPullParser xpp = resources.getXml(id);
 
             while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
-                if (xpp.getEventType() == XmlPullParser.START_TAG) {
-                    if (xpp.getName().equals("string")) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG)
+                    if (xpp.getName().equals("string"))
                         list.add(getInnerXml(xpp).replaceAll("\\s+", " ").trim());
-                    }
-                }
 
                 xpp.next();
             }

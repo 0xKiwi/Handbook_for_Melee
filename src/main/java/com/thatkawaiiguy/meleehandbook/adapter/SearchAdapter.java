@@ -65,12 +65,11 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        String string = Html.fromHtml(mDataSet[position].getDesc()).toString();
         highlight(query, mDataSet[position].getTitle(), ((TermAdapter.ViewHolder) holder).getTextView());
         if(ifTerm(position)){
             highlight(query, mDataSet[position].getDesc(), ((TermAdapter.ViewHolder) holder).getTermTextView());
         } else {
-            highlightAndCut(query, string, ((TermAdapter.ViewHolder) holder).getTermTextView());
+            highlightAndCut(query, mDataSet[position].getDesc(), ((TermAdapter.ViewHolder) holder).getTermTextView());
         }
     }
 
@@ -86,43 +85,44 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     yellowColor, null);
 
             spannable.setSpan(highlightSpan, startPos, endPos, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            textView.setText(Html.toHtml(spannable));
+            textView.setText(spannable);
         } else {
-            textView.setText(Html.toHtml(new SpannableString(originalText)));
+            textView.setText(originalText);
         }
     }
 
     private void highlightAndCut(String search, String originalText, TextView textView) {
-        int startPos = originalText.toLowerCase().indexOf(search);
+        String string = Html.fromHtml(originalText).toString();
+        int startPos = string.toLowerCase().indexOf(search);
         int endPos = startPos + search.length();
 
-        int wholeStart = originalText.toLowerCase().indexOf(" ", startPos - 100);
+        int wholeStart = string.toLowerCase().indexOf(" ", startPos - 100);
         if(wholeStart == -1) wholeStart = 0;
 
-        if(originalText.substring(wholeStart, wholeStart + 1).equals(",")) wholeStart += 1;
+        if(string.substring(wholeStart, wholeStart + 1).equals(",")) wholeStart += 1;
 
-        int wholeEnd = originalText.toLowerCase().indexOf(" ", endPos + 100 < originalText.length
+        int wholeEnd = string.toLowerCase().indexOf(" ", endPos + 100 < string.length
                 () - 1 ? endPos + 100 : endPos - search.length() - 1);
 
         if(wholeEnd == -1)
             wholeEnd = endPos;
 
-        originalText = originalText.substring(wholeStart, wholeEnd).trim() + " (Click for more)";
+        string = string.substring(wholeStart, wholeEnd).trim() + " (Click for more)";
 
-        startPos = originalText.toLowerCase().indexOf(search);
+        startPos = string.toLowerCase().indexOf(search);
         endPos = startPos + search.length();
         // This should always be true, just a sanity check
         if(startPos != -1) {
-            Spannable spannable = new SpannableString(originalText);
+            Spannable spannable = new SpannableString(string);
             ColorStateList yellowColor = new ColorStateList(new int[][]{new int[]{}}, new
                     int[]{ContextCompat.getColor(mContext, R.color.overscroll_color)});
             TextAppearanceSpan highlightSpan = new TextAppearanceSpan(null, Typeface.BOLD, -1,
                     yellowColor, null);
 
             spannable.setSpan(highlightSpan, startPos, endPos, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            textView.setText(Html.toHtml(spannable));
+            textView.setText(spannable);
         } else
-            textView.setText(Html.toHtml(new SpannedString(originalText)));
+            textView.setText(string);
     }
 
     @Override

@@ -189,7 +189,6 @@ public class HitboxesHelper {
             case "jabthree":
                 return "IASA: 23";
             case "dash":
-                return "IASA: 38";
             case "utilt":
                 return "IASA: 38";
             case "dtilt":
@@ -212,7 +211,6 @@ public class HitboxesHelper {
             case "fair":
                 return "Landing lag: 19";
             case "nair":
-                return "Landing lag: 15";
             case "uair":
                 return "Landing lag: 15";
             case "bair":
@@ -225,19 +223,17 @@ public class HitboxesHelper {
     private static String getFalcoLandLag(String move) {
         switch(move) {
             case "dair":
+            case "uair":
                 return "Landing lag: 18";
             case "fair":
                 return "Landing lag: 22";
             case "nair":
                 return "Landing lag: 15";
-            case "uair":
-                return "Landing lag: 18";
             case "bair":
+            case "sideb":
                 return "Landing lag: 20";
             case "upb":
                 return "Landing lag: 6";
-            case "sideb":
-                return "Landing lag: 20";
             case "downb":
                 return "Landing lag: 45";
             default:
@@ -277,9 +273,7 @@ public class HitboxesHelper {
             case "dair":
                 return "Landing lag: 32";
             case "fair":
-                return "Landing lag: 15";
             case "nair":
-                return "Landing lag: 15";
             case "uair":
                 return "Landing lag: 15";
             case "bair":
@@ -322,14 +316,12 @@ public class HitboxesHelper {
         switch(move) {
             case "dair":
                 return "Landing lag: 20";
+            case "bair":
             case "fair":
-                return "Landing lag: 16";
             case "nair":
                 return "Landing lag: 16";
             case "uair":
                 return "Landing lag: 24";
-            case "bair":
-                return "Landing lag: 16";
             case "upb":
                 return "Landing lag: 30";
             default:
@@ -356,9 +348,7 @@ public class HitboxesHelper {
             case "ftilt":
                 return "IASA: 27";
             case "fsmash":
-                return "IASA: 46";
             case "usmash":
-                return "IASA: 46";
             case "dsmash":
                 return "IASA: 46";
             default:
@@ -371,13 +361,11 @@ public class HitboxesHelper {
             case "dair":
                 return "Landing lag: 25";
             case "fair":
-                return "Landing lag: 20";
             case "nair":
+            case "bair":
                 return "Landing lag: 20";
             case "uair":
                 return "Landing lag: 32";
-            case "bair":
-                return "Landing lag: 20";
             case "upb":
                 return "Landing lag: 25";
             case "sideb":
@@ -429,11 +417,8 @@ public class HitboxesHelper {
             case "dair":
                 return "Landing lag: 30";
             case "fair":
-                return "Landing lag: 20";
             case "nair":
-                return "Landing lag: 20";
             case "uair":
-                return "Landing lag: 20";
             case "bair":
                 return "Landing lag: 20";
             default:
@@ -469,13 +454,9 @@ public class HitboxesHelper {
     private static String getSamusLandLag(String move) {
         switch(move) {
             case "dair":
-                return "Landing lag: 15";
             case "fair":
-                return "Landing lag: 15";
             case "nair":
-                return "Landing lag: 15";
             case "uair":
-                return "Landing lag: 15";
             case "bair":
                 return "Landing lag: 15";
             case "upb":
@@ -500,9 +481,7 @@ public class HitboxesHelper {
             case "utilt":
                 return "IASA: 35";
             case "ftilt":
-                return "IASA: 30";
             case "ftiltup":
-                return "IASA: 30";
             case "ftiltdown":
                 return "IASA: 30";
             case "usmash":
@@ -519,13 +498,10 @@ public class HitboxesHelper {
             case "dair":
                 return "Landing lag: 38";
             case "fair":
-                return "Landing lag: 25";
             case "nair":
-                return "Landing lag: 25";
-            case "uair":
-                return "Landing lag: 30";
             case "bair":
                 return "Landing lag: 25";
+            case "uair":
             case "upb":
                 return "Landing lag: 30";
             case "sideb":
@@ -641,9 +617,7 @@ public class HitboxesHelper {
             case "fair":
                 return "Landing lag: 25";
             case "nair":
-                return "Landing lag: 18";
             case "uair":
-                return "Landing lag: 18";
             case "bair":
                 return "Landing lag: 18";
             case "upb":
@@ -677,7 +651,6 @@ public class HitboxesHelper {
             case "nair":
                 return "Landing lag: 17";
             case "uair":
-                return "Landing lag: 15";
             case "bair":
                 return "Landing lag: 15";
             case "upb":
@@ -727,9 +700,7 @@ public class HitboxesHelper {
             case "fair":
                 return "Landing lag: 25";
             case "nair":
-                return "Landing lag: 15";
             case "uair":
-                return "Landing lag: 15";
             case "bair":
                 return "Landing lag: 15";
             case "upb":

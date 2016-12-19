@@ -47,7 +47,7 @@ public class TermFragment extends Fragment {
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
 
-        recyclerView.setAdapter(new TermAdapter(R.xml.terms, getActivity().getResources()));
+        recyclerView.setAdapter(new TermAdapter(getActivity().getResources()));
         recyclerView.setHasFixedSize(true);
 
         new MaterialScrollBar(getActivity(), recyclerView, true).setBarThickness(12).

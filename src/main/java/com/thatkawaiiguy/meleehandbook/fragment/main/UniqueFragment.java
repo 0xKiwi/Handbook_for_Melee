@@ -93,7 +93,7 @@ public class UniqueFragment extends Fragment {
     }
 
     private ArrayList<String> getTechsForCharacter(String character) {
-        return XMLParser.getGroupedUniqueTech(R.xml.uniquetech, getActivity().getResources(), character);
+        return XMLParser.getGroupedUniqueTech(getActivity().getResources(), character);
     }
 
     @Override
