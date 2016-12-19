@@ -51,9 +51,9 @@ public class TermAdapter extends RecyclerView.Adapter<TermAdapter.ViewHolder> {
         }
     }
 
-    public TermAdapter(int id, Resources res) {
-        mTitles = XMLParser.addAllTitlesToArray(res, id);
-        mContent = XMLParser.addAllContentToArray(res, id);
+    public TermAdapter(Resources res) {
+        mTitles = XMLParser.addAllTitlesToArray(res, R.xml.terms);
+        mContent = XMLParser.addAllContentToArray(res, R.xml.terms);
     }
 
     @Override

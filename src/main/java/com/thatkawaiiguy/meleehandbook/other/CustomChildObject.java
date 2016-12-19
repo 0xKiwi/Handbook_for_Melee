@@ -18,7 +18,7 @@
 package com.thatkawaiiguy.meleehandbook.other;
 
 public class CustomChildObject {
-    private String mChildText;
+    private final String mChildText;
 
     public CustomChildObject(String text) {
         mChildText = text;

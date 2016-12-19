@@ -21,7 +21,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.TypedValue;
 import android.view.MenuItem;
@@ -30,7 +29,6 @@ import android.widget.TextView;
 
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 public class ImageInfoActivity extends AppCompatActivity {
@@ -38,6 +36,7 @@ public class ImageInfoActivity extends AppCompatActivity {
     String optionPicked = "";
 
     ImageView infoImage;
+    TextView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +62,7 @@ public class ImageInfoActivity extends AppCompatActivity {
 
         infoImage = (ImageView) findViewById(R.id.infoImage);
 
-        TextView text = (TextView) findViewById(R.id.infoText);
-        text.setText(Html.fromHtml(ArrayHelper.getInfoString(optionPicked, this)));
+        text = (TextView) findViewById(R.id.infoText);
         text.setMovementMethod(LinkMovementMethod.getInstance());
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize(this)));
     }

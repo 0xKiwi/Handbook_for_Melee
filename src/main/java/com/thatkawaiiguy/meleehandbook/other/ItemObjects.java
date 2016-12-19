@@ -5,8 +5,8 @@ package com.thatkawaiiguy.meleehandbook.other;
  */
 
 public class ItemObjects {
-    String title;
-    String desc;
+    private String title;
+    private String desc;
 
     public ItemObjects(String title, String desc) {
         this.title = title;

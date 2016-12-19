@@ -33,12 +33,9 @@ import android.widget.TextView;
 import com.appodeal.ads.Appodeal;
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.MutedVideoView;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.thatkawaiiguy.meleehandbook.other.XMLParser;
-
-import org.xmlpull.v1.XmlPullParser;
 
 public class VideoInfoActivity extends AppCompatActivity {
 

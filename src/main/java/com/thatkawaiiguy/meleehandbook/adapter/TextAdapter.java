@@ -38,7 +38,7 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private int id = 0;
 
-    private boolean video;
+    private final boolean video;
     private boolean canStart = true;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

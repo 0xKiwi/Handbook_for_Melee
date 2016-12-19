@@ -74,19 +74,19 @@ public class SearchResultsActivity extends AppCompatActivity {
 
     private final ArrayList<ItemObjects> queries = new ArrayList<>();
 
-    String[] term;
-    String[] tech;
-    String[] unique;
-    String[] fun;
-    String[] character;
-    String[] map;
+    private String[] term;
+    private String[] tech;
+    private String[] unique;
+    private String[] fun;
+    private String[] character;
+    private String[] map;
 
-    String[] termInfo;
-    String[] techInfo;
-    String[] uniqueInfo;
-    String[] funInfo;
-    String[] characterInfo;
-    String[] mapInfo;
+    private String[] termInfo;
+    private String[] techInfo;
+    private String[] uniqueInfo;
+    private String[] funInfo;
+    private String[] characterInfo;
+    private String[] mapInfo;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -441,7 +441,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         for (String tech : this.tech) {
             if (tech.toLowerCase().contains(query) && !"fox".contains(query)) {
                 if (tech.equals("Wall jumping") || tech.equals("Directional Influence") || tech.equals("Shield dropping"))
-                    return new Intent(context, TechTabActivity.class).putExtra("option", tech);
+                    return new Intent(context, TechTabActivity.class).putExtra("option", tech).putExtra("xml", R.xml.standardtech);
                 else
                     return new Intent(context, VideoInfoActivity.class).putExtra("option", tech).putExtra("xml", R.xml.standardtech);
             }

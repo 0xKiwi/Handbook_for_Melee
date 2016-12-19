@@ -47,7 +47,6 @@ import com.appodeal.ads.Appodeal;
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
 import com.appodeal.ads.UserSettings;
-import com.google.android.gms.ads.MobileAds;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.MatchupFragment;
@@ -87,31 +86,15 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         bp = new BillingProcessor(this, getResources().getString(R.string.licensekey), this);
         bp.loadOwnedPurchasesFromGoogle();
 
-        //if(bp.isPurchased(getResources().getString(R.string.adproductid)))
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        UserSettings userSettings = Appodeal.getUserSettings(this);
-        userSettings.setGender(UserSettings.Gender.MALE);
-        userSettings.setInterests("games, movies, shows, esports");
-        userSettings.setAge(17);
-        userSettings.setOccupation(UserSettings.Occupation.SCHOOL);
-        userSettings.setAlcohol(UserSettings.Alcohol.NEGATIVE);
-        userSettings.setSmoking(UserSettings.Smoking.NEGATIVE);
+        prepareAdmob();
 
-        Appodeal.disableLocationPermissionCheck();
-        Appodeal.disableWriteExternalStoragePermissionCheck();
-        Appodeal.setBannerViewId(R.id.adView);
-        Appodeal.disableNetwork(this, "cheetah");
-        Appodeal.disableNetwork(this, "mailru");
-        Appodeal.initialize(this, getResources().getString(R.string.appodeal_id), Appodeal.BANNER);
-
-        if(!Preferences.hideAds(this)){
+        if(!Preferences.hideAds(this))
             Appodeal.show(this, Appodeal.BANNER_VIEW);
-        }
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -121,9 +104,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             nvDrawer.getMenu().findItem(R.id.remove).setTitle("Support the Dev");
 
         NavigationMenuView navigationMenuView = (NavigationMenuView) nvDrawer.getChildAt(0);
-        if(navigationMenuView != null) {
+        if(navigationMenuView != null)
             navigationMenuView.setVerticalScrollBarEnabled(false);
-        }
 
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(
                 this, mDrawer, toolbar,
@@ -233,7 +215,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                 mTitle = getString(R.string.title_healthy);
                 assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
-                changeFragment(getString(R.string.title_healthy));
+                changeFragment(mTitle);
                 menuItem.setChecked(true);
                 break;
             case R.id.remove:
@@ -247,19 +229,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://bit" +
                             ".ly/1NXCD2o")));
                 }
-                /*Bundle buyIntentBundle = mService.getBuyIntent(3, getPackageName(),
-                        sku, "inapp", "bGoa+V7g/yqDXvKRqq+JTFn4uQZbPiQJo4pf9RzJ");
-                PendingIntent pendingIntent = buyIntentBundle.getParcelable("BUY_INTENT");
-                startIntentSenderForResult(pendingIntent.getIntentSender(),
-                        1001, new Intent(), Integer.valueOf(0), Integer.valueOf(0),
-                        Integer.valueOf(0));
-                */
-
-                /*Intent serviceIntent =
-                        new Intent("com.android.vending.billing.InAppBillingService.BIND");
-                serviceIntent.setPackage("com.android.vending");
-                bindService(serviceIntent, mServiceConn, Context.BIND_AUTO_CREATE);
-                */
                 break;
             case R.id.settings:
                 startActivity(new Intent(this, AppSettingsActivity.class));
@@ -309,41 +278,51 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     private void changeFragment(CharSequence title) {
+        Fragment fg2;
         switch((String) title) {
             case "Advanced Techniques":
-                if(!fg.equals(TechFragment.newInstance()))
-                    fg = TechFragment.newInstance();
+                fg2 = TechFragment.newInstance();
+                if(!fg.equals(fg2))
+                    fg = fg2;
                 break;
             case "Characters":
-                if(!fg.equals(CharacterFragment.newInstance()))
-                    fg = CharacterFragment.newInstance();
+                fg2 = CharacterFragment.newInstance();
+                if(!fg.equals(fg2))
+                    fg = fg2;
                 break;
             case "Fundamentals":
-                if(!fg.equals(FunFragment.newInstance()))
-                    fg = FunFragment.newInstance();
+                fg2 = FunFragment.newInstance();
+                if(!fg.equals(fg2))
+                    fg = fg2;
                 break;
             case "Stages":
-                if(!fg.equals(StageFragment.newInstance()))
-                    fg = StageFragment.newInstance();
+                fg2 = StageFragment.newInstance();
+                if(!fg.equals(fg2))
+                    fg = fg2;
                 break;
             case "Matchups":
-                if(!fg.equals(MatchupFragment.newInstance()))
-                    fg = MatchupFragment.newInstance();
+                fg2 = MatchupFragment.newInstance();
+                if(!fg.equals(fg2))
+                    fg = fg2;
                 break;
             case "Terminology":
-                if(!fg.equals(TermFragment.newInstance()))
-                    fg = TermFragment.newInstance();
+                fg2 = TermFragment.newInstance();
+                if(!fg.equals(fg2))
+                    fg = fg2;
                 break;
             case "Unique Techniques":
-                if(!fg.equals(UniqueFragment.newInstance()))
-                    fg = UniqueFragment.newInstance();
+                fg2 = UniqueFragment.newInstance();
+                if(!fg.equals(fg2))
+                    fg = fg2;
                 break;
             case "Staying Healthy":
-                if(!fg.equals(HealthyFragment.newInstance()))
-                    fg = HealthyFragment.newInstance();
+                fg2 = HealthyFragment.newInstance();
+                if(!fg.equals(fg2))
+                    fg = fg2;
             default:
-                if(fg != HealthyFragment.newInstance())
-                    fg = HealthyFragment.newInstance();
+                fg2 = HealthyFragment.newInstance();
+                if(fg != fg2)
+                    fg = fg2;
         }
         getFragmentManager().beginTransaction().replace(R.id.fragmentLayout, fg).commit();
     }
@@ -414,7 +393,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         try {
             PackageInfo pi = getPackageManager().getPackageInfo(getPackageName(), 0);
             currentVersionNumber = pi.versionCode;
-        } catch (Exception e) {}
+        } catch (Exception ignored) {}
 
         if (currentVersionNumber > savedVersionNumber) {
             showWhatsNewDialog();
@@ -424,6 +403,24 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             editor.putInt(VERSION_KEY, currentVersionNumber);
             editor.commit();
         }
+    }
+
+    private void prepareAdmob(){
+        UserSettings userSettings = Appodeal.getUserSettings(this);
+        userSettings.setGender(UserSettings.Gender.MALE);
+        userSettings.setInterests("games, movies, shows, esports");
+        userSettings.setAge(17);
+        userSettings.setOccupation(UserSettings.Occupation.SCHOOL);
+        userSettings.setAlcohol(UserSettings.Alcohol.NEGATIVE);
+        userSettings.setSmoking(UserSettings.Smoking.NEGATIVE);
+
+        Appodeal.disableLocationPermissionCheck();
+        Appodeal.disableWriteExternalStoragePermissionCheck();
+        Appodeal.setBannerViewId(R.id.adView);
+        Appodeal.disableNetwork(this, "cheetah");
+        Appodeal.disableNetwork(this, "mailru");
+        Appodeal.initialize(this, getResources().getString(R.string.appodeal_id), Appodeal.BANNER);
+
     }
 
     private void showWhatsNewDialog() {

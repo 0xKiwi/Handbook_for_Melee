@@ -38,8 +38,8 @@ public class MatchupFragment extends Fragment {
     private ImageButton muImgLeft;
     private ImageButton muImgRight;
 
-    TextView muInfoLeft;
-    TextView muInfoRight;
+    private TextView muInfoLeft;
+    private TextView muInfoRight;
 
     private Button shineBottom;
     private Button shineTop;

@@ -37,7 +37,7 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
     private final Context mContext;
 
     private final boolean isCharacter;
-    boolean canStart = true;
+    private boolean canStart = true;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView menuText;
@@ -87,6 +87,7 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
                         else
                             mIntent = new Intent(mContext, CharacterActivity.class);
                         mIntent.putExtra("option", mDataSet[pos]);
+                        mIntent.putExtra("xml", R.xml.characters);
                         mContext.startActivity(mIntent);
                         canStart = false;
                     }
@@ -98,7 +99,7 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
                 public void onClick(View v) {
                     if(canStart) {
                         mContext.startActivity(new Intent(mContext,
-                                StageActivity.class).putExtra("option", mDataSet[pos]));
+                                StageActivity.class).putExtra("option", mDataSet[pos]).putExtra("xml", R.xml.stages));
                         canStart = false;
                     }
                 }
@@ -107,16 +108,16 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
 
         switch(mDataSet[position]) {
             case "Bowser":
+            case "Dr. Mario":
+            case "Mario":
                 viewHolder.getImageView().setImageResource(R.drawable.marioicon);
                 break;
             case "Captain Falcon":
                 viewHolder.getImageView().setImageResource(R.drawable.fzeroicon);
                 break;
+            case "Kongo Jungle (SSB)":
             case "Donkey Kong":
                 viewHolder.getImageView().setImageResource(R.drawable.dkicon);
-                break;
-            case "Dr. Mario":
-                viewHolder.getImageView().setImageResource(R.drawable.marioicon);
                 break;
             case "Falco":
                 viewHolder.getImageView().setImageResource(R.drawable.falcoicon);
@@ -133,14 +134,14 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
             case "Jigglypuff":
                 viewHolder.getImageView().setImageResource(R.drawable.jiggsicon);
                 break;
+            case "Dream Land":
+            case "Fountain of Dreams":
             case "Kirby":
                 viewHolder.getImageView().setImageResource(R.drawable.kirbyicon);
                 break;
             case "Link":
+            case "Young Link":
                 viewHolder.getImageView().setImageResource(R.drawable.linkicon);
-                break;
-            case "Mario":
-                viewHolder.getImageView().setImageResource(R.drawable.marioicon);
                 break;
             case "Luigi":
                 viewHolder.getImageView().setImageResource(R.drawable.luigiicon);
@@ -148,6 +149,7 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
             case "Marth":
                 viewHolder.getImageView().setImageResource(R.drawable.marthicon);
                 break;
+            case "Pokemon Stadium":
             case "Mewtwo":
                 viewHolder.getImageView().setImageResource(R.drawable.pokemonicon);
                 break;
@@ -158,8 +160,6 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
                 viewHolder.getImageView().setImageResource(R.drawable.ebicon);
                 break;
             case "Pichu":
-                viewHolder.getImageView().setImageResource(R.drawable.pikaicon);
-                break;
             case "Pikachu":
                 viewHolder.getImageView().setImageResource(R.drawable.pikaicon);
                 break;
@@ -178,34 +178,15 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
             case "Sheik":
                 viewHolder.getImageView().setImageResource(R.drawable.zeldaicon);
                 break;
+            case "Yoshi's Story":
             case "Yoshi":
                 viewHolder.getImageView().setImageResource(R.drawable.yoshiicon);
-                break;
-            case "Young Link":
-                viewHolder.getImageView().setImageResource(R.drawable.linkicon);
                 break;
 
             //STAGEs
             case "Battlefield":
-                viewHolder.getImageView().setImageResource(R.drawable.smashicon);
-                break;
-            case "Dream Land":
-                viewHolder.getImageView().setImageResource(R.drawable.kirbyicon);
-                break;
             case "Final Destination":
                 viewHolder.getImageView().setImageResource(R.drawable.smashicon);
-                break;
-            case "Fountain of Dreams":
-                viewHolder.getImageView().setImageResource(R.drawable.kirbyicon);
-                break;
-            case "Kongo Jungle (SSB)":
-                viewHolder.getImageView().setImageResource(R.drawable.dkicon);
-                break;
-            case "Pokemon Stadium":
-                viewHolder.getImageView().setImageResource(R.drawable.pokemonicon);
-                break;
-            case "Yoshi's Story":
-                viewHolder.getImageView().setImageResource(R.drawable.yoshiicon);
                 break;
         }
     }
@@ -218,31 +199,18 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
     private boolean hasFrame(int position) {
         switch(mDataSet[position]) {
             case "Captain Falcon":
-                return true;
             case "Ganondorf":
-                return true;
             case "Falco":
-                return true;
             case "Fox":
-                return true;
             case "Ice Climbers":
-                return true;
             case "Jigglypuff":
-                return true;
             case "Marth":
-                return true;
             case "Pikachu":
-                return true;
             case "Samus Aran":
-                return true;
             case "Sheik":
-                return true;
             case "Yoshi":
-                return true;
             case "Dr. Mario":
-                return true;
             case "Princess Peach":
-                return true;
             case "Luigi":
                 return true;
             default:

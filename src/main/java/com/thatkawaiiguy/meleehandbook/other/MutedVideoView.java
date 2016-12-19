@@ -30,7 +30,7 @@ import java.util.Vector;
  */
 public class MutedVideoView extends SurfaceView
         implements MediaController.MediaPlayerControl {
-    private String TAG = "VideoView";
+    private final String TAG = "VideoView";
     // settable by the client
     private Uri mUri;
     private Map<String, String> mHeaders;
@@ -181,7 +181,7 @@ public class MutedVideoView extends SurfaceView
         setFocusable(true);
         setFocusableInTouchMode(true);
         requestFocus();
-        mPendingSubtitleTracks = new Vector<Pair<InputStream, MediaFormat>>();
+        mPendingSubtitleTracks = new Vector<>();
         mCurrentState = STATE_IDLE;
         mTargetState  = STATE_IDLE;
     }
@@ -273,12 +273,7 @@ public class MutedVideoView extends SurfaceView
             // target state that was there before.
             mCurrentState = STATE_PREPARING;
             attachMediaController();
-        } catch (IOException ex) {
-            Log.w(TAG, "Unable to open content: " + mUri, ex);
-            mCurrentState = STATE_ERROR;
-            mTargetState = STATE_ERROR;
-            mErrorListener.onError(mMediaPlayer, MediaPlayer.MEDIA_ERROR_UNKNOWN, 0);
-        } catch (IllegalArgumentException ex) {
+        } catch (IOException | IllegalArgumentException ex) {
             Log.w(TAG, "Unable to open content: " + mUri, ex);
             mCurrentState = STATE_ERROR;
             mTargetState = STATE_ERROR;
@@ -306,7 +301,7 @@ public class MutedVideoView extends SurfaceView
         }
     }
 
-    private MediaPlayer.OnVideoSizeChangedListener mSizeChangedListener =
+    private final MediaPlayer.OnVideoSizeChangedListener mSizeChangedListener =
             new MediaPlayer.OnVideoSizeChangedListener() {
                 public void onVideoSizeChanged(MediaPlayer mp, int width, int height) {
                     mVideoWidth = mp.getVideoWidth();
@@ -318,7 +313,7 @@ public class MutedVideoView extends SurfaceView
                 }
             };
 
-    private MediaPlayer.OnPreparedListener mPreparedListener = new MediaPlayer.OnPreparedListener() {
+    private final MediaPlayer.OnPreparedListener mPreparedListener = new MediaPlayer.OnPreparedListener() {
         public void onPrepared(MediaPlayer mp) {
             mCurrentState = STATE_PREPARED;
 
@@ -380,7 +375,7 @@ public class MutedVideoView extends SurfaceView
         }
     };
 
-    private MediaPlayer.OnCompletionListener mCompletionListener =
+    private final MediaPlayer.OnCompletionListener mCompletionListener =
             new MediaPlayer.OnCompletionListener() {
                 public void onCompletion(MediaPlayer mp) {
                     mCurrentState = STATE_PLAYBACK_COMPLETED;
@@ -394,7 +389,7 @@ public class MutedVideoView extends SurfaceView
                 }
             };
 
-    private MediaPlayer.OnInfoListener mInfoListener =
+    private final MediaPlayer.OnInfoListener mInfoListener =
             new MediaPlayer.OnInfoListener() {
                 public  boolean onInfo(MediaPlayer mp, int arg1, int arg2) {
                     if (mOnInfoListener != null) {
@@ -404,7 +399,7 @@ public class MutedVideoView extends SurfaceView
                 }
             };
 
-    private MediaPlayer.OnErrorListener mErrorListener =
+    private final MediaPlayer.OnErrorListener mErrorListener =
             new MediaPlayer.OnErrorListener() {
                 public boolean onError(MediaPlayer mp, int framework_err, int impl_err) {
                     Log.d(TAG, "Error: " + framework_err + "," + impl_err);
@@ -456,7 +451,7 @@ public class MutedVideoView extends SurfaceView
                 }
             };
 
-    private MediaPlayer.OnBufferingUpdateListener mBufferingUpdateListener =
+    private final MediaPlayer.OnBufferingUpdateListener mBufferingUpdateListener =
             new MediaPlayer.OnBufferingUpdateListener() {
                 public void onBufferingUpdate(MediaPlayer mp, int percent) {
                     mCurrentBufferPercentage = percent;
@@ -508,7 +503,7 @@ public class MutedVideoView extends SurfaceView
         mOnInfoListener = l;
     }
 
-    private SurfaceHolder.Callback mSHCallback = new SurfaceHolder.Callback()
+    private final SurfaceHolder.Callback mSHCallback = new SurfaceHolder.Callback()
     {
         public void surfaceChanged(SurfaceHolder holder, int format,
                                    int w, int h)
@@ -722,42 +717,4 @@ public class MutedVideoView extends SurfaceView
         return mAudioSession;
     }
 
-    @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-
-//      if (mSubtitleWidget != null) {
-//         mSubtitleWidget.onAttachedToWindow();
-//      }
-    }
-
-    @Override
-    protected void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-
-//      if (mSubtitleWidget != null) {
-//         mSubtitleWidget.onDetachedFromWindow();
-//      }
-    }
-
-    @Override
-    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
-        super.onLayout(changed, left, top, right, bottom);
-
-//      if (mSubtitleWidget != null) {
-//         measureAndLayoutSubtitleWidget();
-//      }
-    }
-
-    @Override
-    public void draw(Canvas canvas) {
-        super.draw(canvas);
-
-//      if (mSubtitleWidget != null) {
-//         final int saveCount = canvas.save();
-//         canvas.translate(getPaddingLeft(), getPaddingTop());
-//         mSubtitleWidget.draw(canvas);
-//         canvas.restoreToCount(saveCount);
-//      }
-    }
 }

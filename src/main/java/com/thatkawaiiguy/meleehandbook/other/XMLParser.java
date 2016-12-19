@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class XMLParser {
 
-    public static String getInnerXml(XmlPullParser parser)
+    private static String getInnerXml(XmlPullParser parser)
             throws XmlPullParserException, IOException {
         StringBuilder sb = new StringBuilder();
         int depth = 1;
@@ -45,12 +45,12 @@ public class XMLParser {
         return sb.toString();
     }
 
-    public static ArrayList<String> getGroupedUniqueTech(int xmlid, Resources resources, String character) {
+    public static ArrayList<String> getGroupedUniqueTech(Resources resources, String character) {
 
         ArrayList<String> techs = new ArrayList<>();
 
             try {
-                XmlPullParser xpp = resources.getXml(xmlid);
+                XmlPullParser xpp = resources.getXml(R.xml.uniquetech);
 
                 while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
                     if (xpp.getEventType() == XmlPullParser.START_TAG) {
@@ -64,7 +64,7 @@ public class XMLParser {
                     }
                     xpp.next();
                 }
-            } catch (Throwable t) {
+            } catch (Throwable ignored) {
             }
 
         return techs;
@@ -84,7 +84,7 @@ public class XMLParser {
 
                 xpp.next();
             }
-        } catch (Throwable t) {
+        } catch (Throwable ignored) {
         }
         return resources.getString(R.string.debug_text);
     }
@@ -105,7 +105,7 @@ public class XMLParser {
 
                 xpp.next();
             }
-        } catch (Throwable t) {
+        } catch (Throwable ignored) {
         }
 
         return list.toArray(new String[list.size()]);
@@ -127,7 +127,7 @@ public class XMLParser {
 
                 xpp.next();
             }
-        } catch (Throwable t) {
+        } catch (Throwable ignored) {
         }
 
         return list.toArray(new String[list.size()]);
@@ -149,7 +149,7 @@ public class XMLParser {
 
                 xpp.next();
             }
-        } catch (Throwable t) {
+        } catch (Throwable ignored) {
         }
 
         return list.toArray(new String[list.size()]);
@@ -171,7 +171,7 @@ public class XMLParser {
 
                 xpp.next();
             }
-        } catch (Throwable t) {
+        } catch (Throwable ignored) {
         }
 
         return list.toArray(new String[list.size()]);
@@ -218,7 +218,7 @@ public class XMLParser {
                 }
                 eventType = xpp.next();
             }
-        } catch (Throwable t) {
+        } catch (Throwable ignored) {
         }
 
         return list.toArray(new String[list.size()]);

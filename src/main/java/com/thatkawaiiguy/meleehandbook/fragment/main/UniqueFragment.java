@@ -32,12 +32,10 @@ import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomParentObject;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.GroupedUniqueTech;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class UniqueFragment extends Fragment {
 
@@ -78,9 +76,9 @@ public class UniqueFragment extends Fragment {
 
     private ArrayList<ParentObject> setUpData() {
         ArrayList<ParentObject> parentObjectList = new ArrayList<>();
-        for (int i = 0; i < parentList.length; i++) {
+        for (String aParentList : parentList) {
             ArrayList<Object> childObjectList = new ArrayList<>();
-            ArrayList<String> selected = getTechsForCharacter(parentList[i]);
+            ArrayList<String> selected = getTechsForCharacter(aParentList);
 
             for (int r = 0; r < selected.size(); r++) {
                 childObjectList.add(new CustomChildObject(selected.get(r)));
@@ -88,7 +86,7 @@ public class UniqueFragment extends Fragment {
 
             CustomParentObject customParentObject = new CustomParentObject();
             customParentObject.setChildObjectList(childObjectList);
-            customParentObject.setParentText(parentList[i]);
+            customParentObject.setParentText(aParentList);
             parentObjectList.add(customParentObject);
         }
         return parentObjectList;

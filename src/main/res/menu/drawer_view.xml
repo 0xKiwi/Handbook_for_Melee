@@ -1,6 +1,5 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:id="@+id/numberone"
-        android:checkableBehavior="single">
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/advancedtech"
             android:icon="@drawable/advanced"
@@ -34,8 +33,7 @@
             android:icon="@drawable/health"
             android:title="@string/action_healthy" />
     </group>
-    <group android:id="@+id/numbertwo"
-        android:checkableBehavior="none">
+    <group android:checkableBehavior="none">
         <item
             android:id="@+id/remove"
             android:icon="@drawable/ic_gift_white_36dp"

@@ -17,8 +17,6 @@
 -->
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
 
     <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
          https://developer.android.com/design/patterns/navigation-drawer.html -->
@@ -27,29 +25,5 @@
     <dimen name="actionBarSize">56dp</dimen>
 
     <!-- Action Bar auto-hide-on-scroll behavior parameters -->
-    <dimen name="margin_standard">16dp</dimen>
-    <dimen name="margin_short">8dp</dimen>
-    <dimen name="margin_extra_short">4dp</dimen>
 
-    <dimen name="toolbar_elevation">4dp</dimen>
-
-    <dimen name="toolbar_margin_start">72dp</dimen>
-    <dimen name="flexible_space_height">72dp</dimen>
-
-    <dimen name="parallax_image_height_dim">180dp</dimen>
-    <dimen name="parallax_image_height">180dp</dimen>
-    <dimen name="first_keyline_margin">16dp</dimen>
-    <dimen name="second_keyline_margin">72dp</dimen>
-
-    <dimen name="card_margin">20dp</dimen>
-    <dimen name="card_height">90dp</dimen>
-
-    <dimen name="spacing_xsmall">2dp</dimen>
-    <dimen name="spacing_medium">8dp</dimen>
-    <dimen name="spacing_large">16dp</dimen>
-    <dimen name="spacing_xlarge">32dp</dimen>
-
-    <dimen name="elevation_low">9dp</dimen>
-    <dimen name="elevation_high">12dp</dimen>
-    <dimen name="status_bar_height">25dp</dimen>
 </resources>
