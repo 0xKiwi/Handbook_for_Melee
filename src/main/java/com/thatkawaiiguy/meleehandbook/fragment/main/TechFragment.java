@@ -24,13 +24,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 
 public class TechFragment extends Fragment {
-    private final String[] techs = ArrayHelper.getTechArray();
 
     private TextAdapter adapter;
 
@@ -42,14 +39,13 @@ public class TechFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle instanceState) {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        adapter = new TextAdapter(techs, getActivity(), true);
+        adapter = new TextAdapter(getActivity(), true, R.xml.standardtech);
 
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);

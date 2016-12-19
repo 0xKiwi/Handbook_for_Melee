@@ -44,6 +44,7 @@ public class CharacterFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
+
         String[] characters = ArrayHelper.getCharacterArray(getActivity(), true);
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);

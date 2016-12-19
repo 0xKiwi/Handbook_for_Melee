@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battlefield_info_text" title="Battlefield"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
+        and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>
+        <br><b>Singles:</b> Neutral
+        <br><b>Doubles:</b> Neutral
+        <br>
+        <br><b>Characters with an advantage:</b> Characters with quick attack options for above opponents
+        <br>
+        <br><big><b>Battlefield</b></big>
+        <br>This is a special stage in Super Smash Bros. Melee that is
+        unlocked by clearing All-Star Mode on any difficulty, with any character. The
+        fields main part is flat, just like Final Destination, but not
+        as long. Three smaller platforms are suspended in a pyramid pattern above the main platform.
+        Because of its simple layout, it is a tournament legal stage. It shares cosmetic similarities
+        to Final Destination that the background is abstract and changes shape and color constantly.
+        <br>
+        <br><big><b>Wonky sides</b></big>
+        <br>Recovery on this stage is considered difficult for many characters due to the very thin edges on either end. If a player
+        misses the edge with an aimed up special move, they will end up underneath or away the stage, and suffer a possible
+        KO or SD. It is more difficult to sweet spot the edge using characters such as Marth and Fox on this stage compared to other
+        similar stages.
+        <br>Although Fox and Falco can survive if they end up under Battlefield with proper spacing, as seen here:
+        https://www.reddit.com/r/SSBM/comments/3sy8b6/fox_can_grab_battlefield_ledge_from_under_the/
+        <br>
+        <br><big><b>Advantages and Disadvantages</b></big>
+        <br>This stage gives advantages to characters who move horizontally during their recoveries, such as Falcon or
+        Peach. The wonky ledges cause recoveries to not properly sweetspot or grab the ledge when they complete,
+        characters like Falco and Fox usually take the biggest hit from this.
+        <br>The stage offers wide horizontal blastzones, and smaller vertical blastzones. While vertical knockback
+        still matters here, it doesn't matter as much when compared to FoD or Yoshi's Story.
+    ]]></string>
+    <string name="dreamland_info_text" title="Dream Land"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
+        and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>
+        <br><b>Singles:</b> Neutral
+        <br><b>Doubles:</b> Neutral
+        <br>
+        <br><b>Characters with an advantage:</b> Campers, jugglers, light characters, bad recoveries
+        <br>
+        <br><big><b>Dream Land</b></big>
+        <br>This is a simple stage, similar to other stages like Super Smash Bros. Melee's Battlefield and Fountain of Dreams where
+        it has 3 platforms floating over a main one. Whispy Woods, a recurring boss in the Kirby series, is also in the middle of the
+        stage, facing left. He will blow toward one side of the stage every so often to mess up the battle. His wind seems a little
+        more powerful here than it is on Melees similar stage, Green Greens, likely because that he blows more often there. This
+        stage is legal in SSB competitive play. Bronto Burts and King Dedede can also be seen flying in the far background.
+        <br>
+        <br>Dream Land is Kirbys home stage, and it is also the stage where Ness is fought while being unlocked (this could be
+        because both characters come from games developed by SSB developer HAL Laboratory).
+        <br>
+        <br><big><b>Advantages and Disadvantages</b></big>
+        <br>This stage has very large blastzones, with mainly the vertical ones being noticeable, this stage gives an advantage
+        to characters that have to \"go in for the kill\", like Fox and Peach to take their opponent out with a Down-B or aerial.
+        <br>The stage has platforms, giving more options to characters who's recoveries are usually predictable.
+    ]]></string>
+    <string name="fd_info_text" title="Final Destination"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
+        and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>
+        <br><b>Singles:</b> Neutral
+        <br><b>Doubles:</b> Neutral
+        <br>
+        <br><b>Characters with an advantage:</b> Tech-chasers, Chain grabbers, Falco, Campers
+        <br>
+        <br><big><b>Final Destination</b></big>
+        <br>Sometimes abbreviated as FD or Final D, Final Destination is a neutral stage in Super Smash
+        Bros. Melee that players often use in tournament battles. It is unlocked by clearing every event match.
+        <br>
+        <br>In Classic Mode, the player fights Master Hand and Crazy Hand on this stage; in Adventure Mode, Bowser and Giga Bowser;
+        in All-Star Mode, Roy and any of his teammates, and two All-Star Matches, Mewtwo and Ganondorf. Some event matches are also
+        played here. In Classic Mode, every time the player lowers Master and Crazy Hands stamina, the background changes.
+        <br>
+        <br><big><b>Appearance</b></big>
+        <br>Final Destination is a flat, medium sized stage. It is octagonal in shape, with a purple outline. There is a floating
+        orb under the platform. While having no effect on gameplay, the background of the stage changes as the platform \"flies\"
+        through space. The stage starts out in space, but as match progresses, it reaches other areas that have different styles
+        of background. The entire cycle lasts about 216 seconds.
+        <br>
+        <br><big><b>Advantages</b></big>
+        <br>The stage's platformless style gives benefits to chain grabbers and tech-chasers.
+        Falco also benefits from the flat form of the stage, as it let's Falco successfully SHL and stop
+        his opponents in their actions.
+        <br>
+        <br><big><b>Disadvantages</b></big>
+        <br>Characters who usually have several options to recover are held back in this stage, as there are no other platforms
+        to recover onto and the opponent can easily cover most of their options.
+    ]]></string>
+    <string name="fod_info_text" title="Fountain of Dreams"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
+        and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>
+        <br><b>Singles:</b> Neutral
+        <br><b>Doubles:</b> Banned
+        <br>
+        <br><b>Characters that have an advantage:</b> Marth, Peach, Samus, Sheik, Link, Young Link
+        <br>
+        <br><big><b>Fountain of Dreams</b></big>
+        <br>Announced at E3 2001, FoD is a starter stage in Melee.
+        It is a very popular stage for quite a few reasons. One of them is because its a very basic stage. It resembles
+        the Battlefield stage in the fact that it has a large lower platform and three elevated ones. The bottom main platform
+        is flat the whole way through without any obstacles in the way. The left lower platform and the right lower platform are
+        the same length. They both, over time, move up and down in no particular correspondence. They can rise to be as high as
+        just under the highest platform, or drop to the point where they sink through the level, thereby making them impossible
+        to stand on. The fourth platform is at the very top and is the same length as the other aforementioned elevated platforms.
+        The top platform does not move in any direction. Interestingly, this stage is a tournament neutral stage for one-on-one
+        tournaments, but is often banned in team tournaments, due to its small size and lagging.
+        <br>
+        <br><big><b>Advantages and disadvantages</b></big>
+        <br>The stage's most standing out features are its small blastzones over the top, left and right, and its long, spacious
+        bottom blastzone which gives characters who can wall jump and tether grab an advantage.
+        <br>The stage's style also gives characters with strong horizontal knockback moves (peach and sheik) an advantage, while
+        giving light characters a disadvantage.
+        <br>
+        <br>The music for this stage is an orchestral arrangement of the main Gourmet Race music from Kirby Super Star.
+    ]]></string>
+    <string name="kongo_info_text" title="Kongo Jungle (SSB)"><![CDATA[<b>Singles:</b> Banned
+        <br><b>Doubles:</b> Counterpick
+        <br>
+        <br><b>Characters that have an advantage:</b> Mainly equal, long horizontal recoveries benefit
+        <br>
+        <br>Kongo Jungle is a stage in Melee, and is one of Donkey Kong's home stages. The stage is based on various
+        levels from Donkey Kong Country, with pre-rendered backgrounds, environmental themes and tracks, and,
+        most notable in a battle, use of a Barrel Cannon for transportation (usually for a vertical recovery).
+        <br>
+        <br><big><b>Description</b></big>
+        <br>This stage appears as a starter stage in Super Smash Bros. This stage is made up of a big
+        platform with four small platforms above it. Two small stationary platforms are above the left
+        and right sections of the stage, and between them are two smaller platforms that circulate clockwise.
+        The main platform can be passed through from below, but not from above. Under the stage there is a
+        Barrel Cannon that can greatly aid many characters' recovery.
+        <br>A player that gets into the barrel can
+        exit either by pressing a button or waiting for a certain period of time. In either case, they will
+        be shot in the direction that the arrow on the barrel is currently pointing. There can only be one
+        character at the time in the barrel.
+        <br>
+        <br><big><b>Competitive play</b></big>
+        <Br>the stage was usually regarded at first to be a counterpick. Although it had a relatively
+        non-obtrusive stage design, it had a large size, which gave an advantage to faster characters and
+        characters with projectiles, as well as a high ceiling, giving a slightly larger reliance on horizontal
+        finishers.
+        <br>However, the stage is currently banned in singles, since characters such as Peach and Jigglypuff
+        were found to be very powerful on the stage due to the layout allowing easy circle camping. A match between
+        Pink Shinobi and RockCrock at GENESIS is particularly infamous, and commonly regarded as one of the primary
+        reasons why the stage was banned. However, the stage remains a counterpick in doubles due to the 4-character
+        gameplay removing the camping disadvantages, but the stage is seldom picked in tournaments, so much so that
+        it is being fazed out of stage selection for doubles tournaments altogether.
+    ]]></string>
+    <string name="pokestadium_info_text" title="Pokemon Stadium"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
+        and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>
+        <br><b>Singles:</b> Counterpick
+        <br><b>Doubles:</b> Starter/Counterpick
+        <br>
+        <br><b>Characters with an advantage:</b> Fox, characters who can infinite
+        <br>
+        <br><big><b>Pokémon Stadium</b></big>
+        <br>Announced at E3 2001, this stage debuted in Super Smash Bros. Melee.
+        <br>The basic stage is symmetrical and consists of one large main platform at the bottom and two smaller overhanging soft ones.
+        However, after a varying period of time the basic stage transforms into one of four random variations, turning back to the basic
+        version after a while. The same variation can appear twice in a row, with the basic version always in between. In all variation,
+        under the main platform there is an impassable pillar.
+        <br>
+        <br>On the background there is a large screen which can display the battle itself, a symbol representing the upcoming variation
+        during a stage transition, or the current standing of players.
+        <br>
+        <br><big><b>Grass Variation</b></big>
+        <br>The Grass variation takes place in some kind of forest or park. The main platform has slightly elevated plateaus on both sides.
+        A small stream separates the left plateau and the central area, causing a slight depression. A wooden structure with two platforms,
+        one above the other, occupies the middle-left part of the stage, while in the right part there is a tree whose
+        branches form a third platform.
+        <br>
+        <br><big><b>Water Variation</b></big>
+        <br>The Water variation takes place near a pond or lake. The whole right side is occupied by a flat pond, while on the left there is
+        a small elevated pier which slopes down on both its sides. Over the pond, two soft platforms are suspended by water spouts, the right one higher than the left one.
+        <br>On the left side there is a windmill: its arms spin slowly and can be stood upon, but players on the current lowest arm fall.
+        <br>This windmill can provide safe options for characters like Fox or Falco on choosing how to recovery onto the stage.
+        <br>
+        <br><big><b>Fire Variation</b></big>
+        <br>The Fire variation takes place in a burning forest. The center of the main platform is occupied by a small depression. On the
+        left side there is a ruined tree: players can stand on top of it, but, due to its height, often need double jumping to reach its
+        top. From the left side of the tree stems a branch which supports a soft floating platform.
+        <br>On the right side there is a burning shack, the roof of whose porch acts as another soft platform. Note that the fire in the
+        background is purely aesthetical and has no gameplay effect.
+        <br>This variant is known to give opportunities for infitites with shines and down tilts (Pichu or Pikachu), and allows for spacies
+        to camp in the small part inside the tree.
+        <br>
+        <br><big><b>Rock Variation</b></big>
+        <br>The Rock variation takes place in a canyon near a mine. Its terrain is the most uneven of all versions. The right part is
+        flat and empty, while in the middle there are three soft platforms one above the other, of which the bottom one touches
+        the ground and can be walked up from it.
+        <br>The left side is occupied by a large solid mountain, on whose right side stem two more soft platforms. The walls it
+        creates can cause infinites and caves of life. The top of the mountain itself acts as a solid platform. The mountains
+        left side is almost vertical and ends almost at the right edge of the stage, leaving however a small walkable space.
+    ]]></string>
+    <string name="ystory_info_text" title="Yoshi's Story"><![CDATA[<b>Note:</b> The blue inner box is the camera box (limits that the camera goes
+        and the outer yellow box is the blastzone (where the character dies if they pass it)
+        <br>
+        <br><b>Singles:</b> Neutral
+        <br><b>Doubles:</b> Neutral
+        <br>
+        <br><b>Characters with an advantage:</b> Wall jumpers, Captain Falcon, Samus
+        <br>
+        <br><big><b>Yoshi's Story</b></big>
+        <br>Announced at E3 2001, this is a stage in Super Smash Bros. Melee.
+        <br>It is a very basic, neutral
+        stage, similar in structure to Battlefield. The bottom part is primarily flat with the left and right side sloped down at a minor
+        angle. There are three platforms that float above the bottom platform: A low left one, a high middle one, and a low right one.
+        The main platform has walls which continue to the bottom of the stage, unlike Battlefield, so that characters cannot become stuck
+        on the bottom trying to recover. The lack of intrusive stage elements aside from the moving cloud makes this a neutral stage for
+        tournaments.
+        <br>
+        <br>The stage also features a small floating cloud, colloquially dubbed \"Randall\" (see below). Additionally, there are Shy Guys
+        which fly around in groups of 1-6 in a line. If items are enabled, specifically food, the Shy Guys will be holding food
+        which they release onto the stage when hit. Even when food is not present, Shy Guys can affect gameplay: they will interfere
+        with projectiles, and moves such as Green Missile and Raptor Boost, and they are useful for countering stale-move negation,
+        through hitting them with attacks not commonly used.
+        <br>Pak E. Derm can be seen pacing back and forth in the background.
+        <br>
+        <br><big><b>Advantages and Disadvantages</b></big>
+        <br>This stage has small blastzones all over along with high platforms, giving characters that have moves with high vertical
+        knockback (Fox) an advantage, and characters with a spike that has plenty of hitstun (Falcon, Falco) an advantage.
+        <br>Peach gets a slight advantage on this stage due to her ability to wallbomb in order to recover. Although her lighter weight
+        does not fair her well on this stage, as lighter characters are easier to knock out in stages with smaller blastzones.
+        <br>
+        <br><big><b>Randall the Cloud</b></big>
+        <br><b>Randall the Cloud</b> is a nickname for the Lakitus Cloud featured on this stage. It moves in a rectangle through the bottom
+        of the stage. It is possible to hang/stand/edgeguard on the cloud until it goes back into the stage. It is often used to
+        assist the recovery process. The term derived originally from Canadian smasher FastFox, and it has since taken off as a norm
+        on SmashBoards.
+        <br>It is also mentioned commonly in competitive Melee matches, usually when a player chooses to land on it instead
+        of aiming for the edge while recovering, or when it comes out and saves a recovering player who otherwise wouldve been edgehogged.
+        <br>Randall does not appear for the opening ten seconds of a given battle and emerges on the right-hand side of Yoshis Story immediately
+        thereafter, completing a trip through the stage and out the other side in 20 seconds. This means that the position of the cloud
+        is consistent and predictable, not random. Through paying particular attention to the countdown in a timed match, a prudent smasher
+        can use this knowledge to effectively stall a recovery and land on Randall instead of falling.
+        <br>Randall the Cloud can also be used for taunt canceling.
+    ]]></string>
+</resources>

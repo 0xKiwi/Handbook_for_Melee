@@ -18,13 +18,18 @@
 package com.thatkawaiiguy.meleehandbook.activity;
 
 import android.os.Bundle;
+import android.text.Html;
+
 import com.thatkawaiiguy.meleehandbook.R;
+import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 public class CharacterActivity extends ImageInfoActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(R.xml.characters, optionPicked, getResources())));
 
         switch (optionPicked) {
             case "Bowser":

@@ -29,9 +29,7 @@
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar"
-            style="@style/CollapsingBar">
+        <android.support.design.widget.CollapsingToolbarLayout style="@style/CollapsingBar">
 
                 <pl.droidsonroids.gif.GifImageView
                     android:id="@+id/infoGif"

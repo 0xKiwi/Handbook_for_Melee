@@ -99,24 +99,24 @@ public class HealthyFragment extends Fragment {
 
             switch (i) {
                 case 0: {
-                    childObjectList.add(new CustomChildObject().setChildText(eyeList[0]));
-                    childObjectList.add(new CustomChildObject().setChildText(eyeList[1]));
-                    childObjectList.add(new CustomChildObject().setChildText(eyeList[2]));
-                    childObjectList.add(new CustomChildObject().setChildText(eyeList[3]));
-                    childObjectList.add(new CustomChildObject().setChildText(eyeList[4]));
+                    childObjectList.add(new CustomChildObject(eyeList[0]));
+                    childObjectList.add(new CustomChildObject(eyeList[1]));
+                    childObjectList.add(new CustomChildObject(eyeList[2]));
+                    childObjectList.add(new CustomChildObject(eyeList[3]));
+                    childObjectList.add(new CustomChildObject(eyeList[4]));
                 }
                 break;
                 case 1: {
-                    childObjectList.add(new CustomChildObject().setChildText(handList[0]));
-                    childObjectList.add(new CustomChildObject().setChildText(handList[1]));
-                    childObjectList.add(new CustomChildObject().setChildText(handList[2]));
-                    childObjectList.add(new CustomChildObject().setChildText(handList[3]));
-                    childObjectList.add(new CustomChildObject().setChildText(handList[4]));
-                    childObjectList.add(new CustomChildObject().setChildText(handList[5]));
-                    childObjectList.add(new CustomChildObject().setChildText(handList[6]));
-                    childObjectList.add(new CustomChildObject().setChildText(handList[7]));
-                    childObjectList.add(new CustomChildObject().setChildText(handList[8]));
-                    childObjectList.add(new CustomChildObject().setChildText(handList[9]));
+                    childObjectList.add(new CustomChildObject(handList[0]));
+                    childObjectList.add(new CustomChildObject(handList[1]));
+                    childObjectList.add(new CustomChildObject(handList[2]));
+                    childObjectList.add(new CustomChildObject(handList[3]));
+                    childObjectList.add(new CustomChildObject(handList[4]));
+                    childObjectList.add(new CustomChildObject(handList[5]));
+                    childObjectList.add(new CustomChildObject(handList[6]));
+                    childObjectList.add(new CustomChildObject(handList[7]));
+                    childObjectList.add(new CustomChildObject(handList[8]));
+                    childObjectList.add(new CustomChildObject(handList[9]));
                 }
                 break;
             }

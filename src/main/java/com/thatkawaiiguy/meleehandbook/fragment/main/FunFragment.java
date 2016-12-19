@@ -25,15 +25,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
 
 public class FunFragment extends Fragment {
-
-    private static final String TAG = "TechFragment";
-
-    private final String[] funs = ArrayHelper.getFunArray();
 
     private TextAdapter adapter;
 
@@ -48,14 +43,13 @@ public class FunFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.list_layout, container, false);
-        rootView.setTag(TAG);
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        adapter = new TextAdapter(funs, getActivity(), false);
-        recyclerView.setAdapter(adapter);
+        adapter = new TextAdapter(getActivity(), false, R.xml.fundamentals);
 
+        recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
 
         return rootView;

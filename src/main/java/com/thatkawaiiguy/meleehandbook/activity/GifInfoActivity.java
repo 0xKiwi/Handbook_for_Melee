@@ -21,14 +21,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -63,7 +61,6 @@ public class GifInfoActivity extends AppCompatActivity {
         infoGif = (GifImageView) findViewById(R.id.infoGif);
 
         TextView text = (TextView) findViewById(R.id.infoText);
-        text.setText(Html.fromHtml(ArrayHelper.getInfoString(optionPicked, this)));
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Float.parseFloat(Preferences.getTextSize(this)));
     }
 

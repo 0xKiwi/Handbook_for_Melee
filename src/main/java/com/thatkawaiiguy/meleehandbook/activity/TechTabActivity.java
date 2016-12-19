@@ -31,6 +31,7 @@ import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.fragment.TabFragmentAdapter;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
+import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 import pl.droidsonroids.gif.GifImageView;
 
@@ -50,6 +51,7 @@ public class TechTabActivity extends AppCompatActivity {
         if (getIntent().getExtras() == null)
             return;
         techPicked = getIntent().getExtras().getString("option");
+        int id = getIntent().getExtras().getInt("xml");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             getWindow().setStatusBarColor(0x00000000);
@@ -66,12 +68,14 @@ public class TechTabActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
         assert techPicked != null;
+        assert viewPager != null;
+
+        viewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),
+                XMLParser.getTabs(getResources(), techPicked, id)));
+        tabLayout.setupWithViewPager(viewPager);
+
         switch(techPicked) {
             case "Wall jumping":
-                viewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),
-                        new String[]{"Wall Jump", "Ledge Wall Jump", "Reverse Wall Jump"}));
-                tabLayout.setupWithViewPager(viewPager);
-
                 tabImage.setImageResource(R.drawable.walljump);
                 tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                     @Override
@@ -104,10 +108,6 @@ public class TechTabActivity extends AppCompatActivity {
                 });
                 break;
             case "Directional Influence":
-                viewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),
-                        new String[]{"DI", "Smash DI", "DSDI", "DI Angles"}));
-                tabLayout.setupWithViewPager(viewPager);
-
                 tabImage.setImageResource(R.drawable.di);
                 tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                     @Override
@@ -142,10 +142,6 @@ public class TechTabActivity extends AppCompatActivity {
                 });
                 break;
             case "Super wavedash & SDWD":
-                viewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),
-                        new String[]{"Super Wavedash", "Super Duper Wavedash"}));
-
-                tabLayout.setupWithViewPager(viewPager);
                 tabImage.setImageResource(R.drawable.swd);
                 tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                     @Override
@@ -172,10 +168,6 @@ public class TechTabActivity extends AppCompatActivity {
                 });
                 break;
             case "Extended & homing grapple":
-                viewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),
-                        new String[]{"Extended grapple", "Homing grapple"}));
-                tabLayout.setupWithViewPager(viewPager);
-
                 tabImage.setImageResource(R.drawable.egrapple);
                 tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                     @Override
@@ -202,10 +194,6 @@ public class TechTabActivity extends AppCompatActivity {
                 });
                 break;
             case "Shield dropping":
-                viewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),
-                        new String[]{"Shield dropping", "Shai dropping"}));
-                tabLayout.setupWithViewPager(viewPager);
-
                 tabImage.setImageResource(R.drawable.shielddrop);
                 tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                     @Override

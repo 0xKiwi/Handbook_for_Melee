@@ -49,6 +49,7 @@ public class StageFragment extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
         adapter = new IconAdapter(stages, getActivity(), false);
 
         recyclerView.setAdapter(adapter);

@@ -39,9 +39,10 @@ import android.widget.ListView;
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.SearchAdapter;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
+import com.thatkawaiiguy.meleehandbook.other.ItemObjects;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
+import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 import java.util.ArrayList;
 
@@ -71,11 +72,25 @@ public class SearchResultsActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
 
-    private final ArrayList<String> queries = new ArrayList<>();
+    private final ArrayList<ItemObjects> queries = new ArrayList<>();
+
+    private String[] term;
+    private String[] tech;
+    private String[] unique;
+    private String[] fun;
+    private String[] character;
+    private String[] map;
+
+    private String[] termInfo;
+    private String[] techInfo;
+    private String[] uniqueInfo;
+    private String[] funInfo;
+    private String[] characterInfo;
+    private String[] mapInfo;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        if(getIntent().hasExtra("bundle") && savedInstanceState == null)
+        if (getIntent().hasExtra("bundle") && savedInstanceState == null)
             savedInstanceState = getIntent().getExtras().getBundle("bundle");
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
@@ -94,10 +109,12 @@ public class SearchResultsActivity extends AppCompatActivity {
 
         handleIntent(getIntent());
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        new AsyncCallerLoad().execute();
     }
 
     private void handleIntent(Intent intent) {
-        if(Intent.ACTION_SEARCH.equals(intent.getAction())) {
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             query = intent.getStringExtra(SearchManager.QUERY).replaceAll("\\s+$", "")
                     .toLowerCase();
             queries.clear();
@@ -124,7 +141,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
                 return true;
@@ -150,7 +167,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
         searchView.onActionViewExpanded();
 
-        if(Intent.ACTION_SEARCH.equals(getIntent().getAction())) {
+        if (Intent.ACTION_SEARCH.equals(getIntent().getAction())) {
             searchView.setQuery(getIntent().getStringExtra(SearchManager.QUERY)
                     .replaceAll("\\s+$", ""), false);
             searchView.setSearchableInfo(searchManager.getSearchableInfo(cn));
@@ -160,7 +177,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                if(!query.equals(""))
+                if (!query.equals(""))
                     search(query);
                 searchView.clearFocus();
                 return false;
@@ -168,7 +185,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                if(!newText.equals(""))
+                if (!newText.equals(""))
                     search(newText);
                 return false;
             }
@@ -206,7 +223,7 @@ public class SearchResultsActivity extends AppCompatActivity {
                         AlertDialog d = (AlertDialog) dialog;
                         ListView v = d.getListView();
                         int i = 0;
-                        while(i < checked.length) {
+                        while (i < checked.length) {
                             v.setItemChecked(i, checked[i]);
                             i++;
                         }
@@ -247,121 +264,122 @@ public class SearchResultsActivity extends AppCompatActivity {
         super.onResume();
     }
 
+    private class AsyncCallerLoad extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            term = XMLParser.addAllTitlesToArraySearch(getResources(), R.xml.terms);
+            tech = XMLParser.addAllTitlesToArraySearch(getResources(), R.xml.standardtech);
+            unique = XMLParser.addAllTitlesToArraySearch(getResources(), R.xml.uniquetech);
+            fun = XMLParser.addAllTitlesToArraySearch(getResources(), R.xml.fundamentals);
+            character = XMLParser.addAllTitlesToArraySearch(getResources(), R.xml.characters);
+            map = XMLParser.addAllTitlesToArraySearch(getResources(), R.xml.stages);
+
+            termInfo = XMLParser.addAllContentToArraySearch(getResources(), R.xml.terms);
+            techInfo = XMLParser.addAllContentToArraySearch(getResources(), R.xml.standardtech);
+            uniqueInfo = XMLParser.addAllContentToArraySearch(getResources(), R.xml.uniquetech);
+            funInfo = XMLParser.addAllContentToArraySearch(getResources(), R.xml.fundamentals);
+            characterInfo = XMLParser.addAllContentToArraySearch(getResources(), R.xml.characters);
+            mapInfo = XMLParser.addAllContentToArraySearch(getResources(), R.xml.stages);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+        }
+
+    }
     private class AsyncCaller extends AsyncTask<Void, Void, Void> {
 
         @Override
         protected Void doInBackground(Void... params) {
-            String[] term = ArrayHelper.getTermArray();
-            String[] termInfo = ArrayHelper.getLCTermInfoArray(context);
-
-            String[] tech = ArrayHelper.getTechArray();
-            String[] techInfo = ArrayHelper.getLCTechInfoArray(context);
-
-            String[] unique = ArrayHelper.getUniqueArray();
-            String[] uniqueInfo = ArrayHelper.getLCUniqueInfoArray(context);
-
-            String[] fun = ArrayHelper.getFunArray();
-            String[] funInfo = ArrayHelper.getLCFunInfoArray(context);
-
-            String[] character = ArrayHelper.getCharacterArray(context, true);
-            String[] characterInfo = ArrayHelper.getLCCharacterInfoArray(context);
-
-            String[] map = ArrayHelper.getMapArray();
-            String[] mapInfo = ArrayHelper.getLCMapInfoArray(context);
-
-            if(prefs.getBoolean(TERM_KEY, true))
-                for(String aTerm : term) {
-                    if(aTerm.toLowerCase().contains(query)) {
-                        queries.add(aTerm);
+            if (prefs.getBoolean(TERM_KEY, true))
+                for (int i = 0; i < term.length; i++)
+                    if (term[i].toLowerCase().contains(query)) {
+                        queries.add(new ItemObjects(term[i], termInfo[i]));
                         titleTermNum++;
                     }
-                }
 
-            if(prefs.getBoolean(TECH_KEY, true))
-                for(String aTech : tech) {
-                    if(aTech.toLowerCase().contains(query)) {
-                        queries.add(aTech);
+            if (prefs.getBoolean(TECH_KEY, true))
+                for (int i = 0; i < tech.length; i++)
+                    if (tech[i].toLowerCase().contains(query)) {
+                        queries.add(new ItemObjects(tech[i], techInfo[i]));
                         titleNum++;
                     }
-                }
 
-            if(prefs.getBoolean(UNIQUE_KEY, true))
-                for(String anUnique : unique) {
-                    if(anUnique.toLowerCase().contains(query)) {
-                        queries.add(anUnique);
+            if (prefs.getBoolean(UNIQUE_KEY, true))
+                for (int i = 0; i < unique.length; i++)
+                    if (unique[i].toLowerCase().contains(query)) {
+                        queries.add(new ItemObjects(unique[i], uniqueInfo[i]));
                         titleNum++;
                     }
-                }
 
-            if(prefs.getBoolean(FUN_KEY, true))
-                for(int i = 0; i < fun.length; i++) {
-                    if(fun[i].toLowerCase().contains(query)) {
-                        queries.add(ArrayHelper.getFunArray()[i]);
+            if (prefs.getBoolean(FUN_KEY, true))
+                for (int i = 0; i < fun.length; i++)
+                    if (fun[i].toLowerCase().contains(query)) {
+                        queries.add(new ItemObjects(fun[i], funInfo[i]));
                         titleNum++;
                     }
-                }
 
-            if(prefs.getBoolean(CHAR_KEY, true))
-                for(String aCharacter : character) {
-                    if(aCharacter.toLowerCase().contains(query)) {
-                        queries.add(aCharacter);
+            if (prefs.getBoolean(CHAR_KEY, true))
+                for (int i = 0; i < character.length; i++)
+                    if (character[i].toLowerCase().contains(query)) {
+                        queries.add(new ItemObjects(character[i], characterInfo[i]));
                         titleNum++;
                     }
-                }
 
-            if(prefs.getBoolean(MAP_KEY, true))
-                for(String aMap : map) {
-                    if(aMap.toLowerCase().contains(query)) {
-                        queries.add(aMap);
+            if (prefs.getBoolean(MAP_KEY, true))
+                for (int i = 0; i < map.length; i++)
+                    if (map[i].toLowerCase().contains(query)) {
+                        queries.add(new ItemObjects(map[i], mapInfo[i]));
                         titleNum++;
                     }
+
+            if (prefs.getBoolean(TERM_KEY, true))
+                for (int i = 0; i < term.length; i++)
+                    if (!term[i].toLowerCase().contains(query))
+                        if (termInfo[i].toLowerCase().contains(query)) {
+                            termNum++;
+                            queries.add(new ItemObjects(term[i], termInfo[i]));
+                        }
+
+            if (prefs.getBoolean(TECH_KEY, true))
+                for (int i = 0; i < tech.length; i++) {
+                    if (!tech[i].toLowerCase().contains(query))
+                        if (techInfo[i].toLowerCase().contains(query))
+                            queries.add(new ItemObjects(tech[i], techInfo[i]));
                 }
 
-            if(prefs.getBoolean(TERM_KEY, true))
-                for(int i = 0; i < term.length; i++) {
-                    if(!term[i].toLowerCase().contains(query))
-                        if(termInfo[i].contains(query)) {
-                        termNum++;
-                        queries.add(ArrayHelper.getTermArray()[i]);
-                    }
+            if (prefs.getBoolean(UNIQUE_KEY, true))
+                for (int i = 0; i < unique.length; i++) {
+                    if (!unique[i].toLowerCase().contains(query))
+                        if (uniqueInfo[i].toLowerCase().contains(query))
+                            queries.add(new ItemObjects(unique[i], uniqueInfo[i]));
                 }
 
-            if(prefs.getBoolean(TECH_KEY, true))
-                for(int i = 0; i < tech.length; i++) {
-                    if(!tech[i].toLowerCase().contains(query))
-                        if(techInfo[i].contains(query))
-                        queries.add(tech[i]);
+            if (prefs.getBoolean(FUN_KEY, true))
+                for (int i = 0; i < fun.length; i++) {
+                    if (!fun[i].toLowerCase().contains(query))
+                        if (funInfo[i].toLowerCase().contains(query))
+                            queries.add(new ItemObjects(fun[i], funInfo[i]));
                 }
 
-            if(prefs.getBoolean(UNIQUE_KEY, true))
-                for(int i = 0; i < unique.length; i++) {
-                    if(!unique[i].toLowerCase().contains(query))
-                        if(uniqueInfo[i].contains(query))
-                        queries.add(unique[i]);
+            if (prefs.getBoolean(CHAR_KEY, true))
+                for (int i = 0; i < character.length; i++) {
+                    if (!character[i].toLowerCase().contains(query))
+                        if (characterInfo[i].toLowerCase().contains(query))
+                            queries.add(new ItemObjects(character[i], characterInfo[i]));
                 }
 
-            if(prefs.getBoolean(FUN_KEY, true))
-                for(int i = 0; i < fun.length; i++) {
-                    if(!fun[i].toLowerCase().contains(query))
-                        if((funInfo[i].contains(query)))
-                        queries.add(fun[i]);
+            if (prefs.getBoolean(MAP_KEY, true))
+                for (int i = 0; i < map.length; i++) {
+                    if (!map[i].toLowerCase().contains(query))
+                        if (mapInfo[i].toLowerCase().contains(query))
+                            queries.add(new ItemObjects(map[i], mapInfo[i]));
                 }
 
-            if(prefs.getBoolean(CHAR_KEY, true))
-                for(int i = 0; i < character.length; i++) {
-                    if(!character[i].toLowerCase().contains(query))
-                        if((characterInfo[i].contains(query)))
-                        queries.add(character[i]);
-                }
-
-            if(prefs.getBoolean(MAP_KEY, true))
-                for(int i = 0; i < map.length; i++) {
-                    if(!map[i].toLowerCase().contains(query))
-                        if(mapInfo[i].contains(query))
-                            queries.add(map[i]);
-                }
-
-            mAdapter = new SearchAdapter(queries.toArray(new String[queries.size()]),
+            mAdapter = new SearchAdapter(queries.toArray(new ItemObjects[queries.size()]),
                     titleNum, titleTermNum, termNum, context, query);
             return null;
         }
@@ -376,12 +394,12 @@ public class SearchResultsActivity extends AppCompatActivity {
                     new ItemClickSupport.OnItemClickListener() {
                         @Override
                         public void onItemClicked(int position) {
-                            if((position < titleTermNum || (position
+                            if ((position < titleTermNum || (position
                                     < titleTermNum + titleNum + termNum && position >= titleNum +
                                     titleTermNum)))
                                 return;
-                            if(canStart) {
-                                startActivity(selectRightIntent(queries.get(position).toLowerCase()));
+                            if (canStart) {
+                                startActivity(selectRightIntent(queries.get(position).getTitle().toLowerCase()));
                                 canStart = false;
                             }
                         }
@@ -390,31 +408,29 @@ public class SearchResultsActivity extends AppCompatActivity {
 
     }
 
-    private Intent selectRightIntent(String searchQuery){
+    private Intent selectRightIntent(String searchQuery) {
         Intent mIntent = selectTechActivity(searchQuery, context);
-        if(mIntent == null)
+        if (mIntent == null)
             mIntent = selectUniqueActivity(searchQuery, context);
-        if(mIntent == null)
+        if (mIntent == null)
             mIntent = selectFunActivity(searchQuery, context);
-        if(mIntent == null)
+        if (mIntent == null)
             mIntent = selectMapActivity(searchQuery, context);
-        if(mIntent == null)
+        if (mIntent == null)
             mIntent = selectCharacterActivity(searchQuery, context);
         return mIntent;
     }
 
     private Intent selectUniqueActivity(String query, Context context) {
-        String[] uniqueTechs = ArrayHelper.getUniqueArray();
-
-        for(String uniqueTech : uniqueTechs) {
-            if(uniqueTech.toLowerCase().contains(query)) {
-                if(uniqueTech.toLowerCase().equals("super wavedash & sdwd") ||
+        for (String uniqueTech : unique) {
+            if (uniqueTech.toLowerCase().contains(query)) {
+                if (uniqueTech.toLowerCase().equals("super wavedash & sdwd") ||
                         uniqueTech.toLowerCase().equals("extended & homing grapple"))
                     return new Intent(context, TechTabActivity.class)
-                            .putExtra("option", uniqueTech);
+                            .putExtra("option", uniqueTech).putExtra("xml", R.xml.uniquetech);
                 else
                     return new Intent(context, VideoInfoActivity.class)
-                            .putExtra("option", uniqueTech);
+                            .putExtra("option", uniqueTech).putExtra("xml", R.xml.uniquetech);
             }
         }
 
@@ -422,27 +438,23 @@ public class SearchResultsActivity extends AppCompatActivity {
     }
 
     private Intent selectTechActivity(String query, Context context) {
-        String[] techs = ArrayHelper.getTechArray();
-
-        for(String tech : techs) {
-            if(tech.toLowerCase().contains(query) && !"fox".contains(query)) {
-                if(tech.equals("Wall jumping") || tech.equals("Directional Influence") || tech.equals("Shield dropping"))
-                    return new Intent(context, TechTabActivity.class).putExtra("option", tech);
+        for (String tech : this.tech) {
+            if (tech.toLowerCase().contains(query) && !"fox".contains(query)) {
+                if (tech.equals("Wall jumping") || tech.equals("Directional Influence") || tech.equals("Shield dropping"))
+                    return new Intent(context, TechTabActivity.class).putExtra("option", tech).putExtra("xml", R.xml.standardtech);
                 else
-                    return new Intent(context, VideoInfoActivity.class).putExtra("option", tech);
+                    return new Intent(context, VideoInfoActivity.class).putExtra("option", tech).putExtra("xml", R.xml.standardtech);
             }
         }
         return null;
     }
 
     private Intent selectCharacterActivity(String query, Context context) {
-        String[] characters = ArrayHelper.getCharacterArray(context, true);
-
         boolean hasFrame;
 
-        for(String character : characters) {
-            if(character.toLowerCase().contains(query)) {
-                switch(character) {
+        for (String character : this.character) {
+            if (character.toLowerCase().contains(query)) {
+                switch (character) {
                     case "Captain Falcon":
                         hasFrame = true;
                         break;
@@ -486,36 +498,32 @@ public class SearchResultsActivity extends AppCompatActivity {
                         hasFrame = false;
                         break;
                 }
-                if("falco".contains(query))
+                if ("falco".contains(query))
                     return new Intent(context, CharacterFrameActivity.class).putExtra
-                            ("option", "Falco");
-                else if(hasFrame) {
+                            ("option", "Falco").putExtra("xml", R.xml.characters);
+                else if (hasFrame) {
                     return new Intent(context, CharacterFrameActivity.class).putExtra("option",
-                            character);
+                            character).putExtra("xml", R.xml.characters);
                 } else
                     return new Intent(context, CharacterActivity.class).putExtra("option",
-                            character);
+                            character).putExtra("xml", R.xml.characters);
             }
         }
         return null;
     }
 
     private Intent selectFunActivity(String query, Context context) {
-        String[] funs = ArrayHelper.getFunArray();
-
-        for(String fun : funs) {
-            if(fun.toLowerCase().contains(query))
-                return new Intent(context, FunActivity.class).putExtra("option", fun);
+        for (String fun : this.fun) {
+            if (fun.toLowerCase().contains(query))
+                return new Intent(context, FunActivity.class).putExtra("option", fun).putExtra("xml", R.xml.fundamentals);
         }
         return null;
     }
 
     private Intent selectMapActivity(String query, Context context) {
-        String[] maps = ArrayHelper.getMapArray();
-
-        for(String map : maps) {
-            if(map.toLowerCase().contains(query) && !"yoshi".contains(query))
-                return new Intent(context, StageActivity.class).putExtra("option", map);
+        for (String map : this.map) {
+            if (map.toLowerCase().contains(query) && !"yoshi".contains(query))
+                return new Intent(context, StageActivity.class).putExtra("option", map).putExtra("xml", R.xml.stages);
         }
         return null;
     }

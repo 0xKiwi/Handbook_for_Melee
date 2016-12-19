@@ -29,14 +29,16 @@ import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
+import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private final String[] mDataSet;
     private final Context mContext;
 
-    private boolean video;
+    private int id = 0;
 
+    private final boolean video;
     private boolean canStart = true;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -54,10 +56,11 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-    public TextAdapter(String[] mDataSet, Context context, boolean doVideo) {
-        this.mDataSet = mDataSet;
+    public TextAdapter(Context context, boolean doVideo, int id) {
+        mDataSet = XMLParser.addAllTitlesToArray(context.getResources(), id);
         mContext = context;
         video = doVideo;
+        this.id = id;
     }
 
     @Override
@@ -87,6 +90,7 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         else
                             mIntent = new Intent(mContext, VideoInfoActivity.class);
                         mIntent.putExtra("option", mDataSet[pos]);
+                        mIntent.putExtra("xml", id);
                         mContext.startActivity(mIntent);
                         canStart = false;
                     }
@@ -97,7 +101,8 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 @Override
                 public void onClick(View v) {
                     if(canStart) {
-                        mContext.startActivity(new Intent(mContext, FunActivity.class).putExtra("option", mDataSet[pos]));
+                        mContext.startActivity(new Intent(mContext, FunActivity.class)
+                                .putExtra("xml", R.xml.fundamentals).putExtra("option", mDataSet[pos]));
                         canStart = false;
                     }
                 }

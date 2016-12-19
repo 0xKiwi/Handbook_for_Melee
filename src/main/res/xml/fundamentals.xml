@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bait_info_text" title="Baiting"><![CDATA[<big><b>Baiting</b></big>
+        <br>Baiting is practically using your knowledge of your characters weaknesses and your opponent's reactions
+        to trick your opponent into putting themselves into a weak spot or vulnerable point.
+        <br>This is done by recognizing and remembering an opponent's reaction to a particular situation and inducing
+        that situation in order to punish their reaction. In other words, this is punishing a player's habits.
+        <br>An example of baiting commonly seen in competitive play is punishing laser habits from Falco with powershielding.
+        In Melee, many Falco mains fire lasers recklessly, or only fire lasers from a specific distance. By memorizing the
+        timing and spacing a Falco player fires lasers at frequently, one can move to that spot, read the laser, and prepare
+        to powershield the laser and follow it up with a grab or an aerial.
+        <br>
+        <br>It's best to bait when you notice your opponent's patterns and you are in the position to
+        exploit their flaws. Only bait when you're sure you have room to act before getting punished, or else
+        you'll take more damage than it is worth.
+        <br>Make sure you don't bait your opponent the same way several times or else they'll learn to stop
+        making the same mistakes.
+    ]]></string>
+    <string name="commonerrors_info_text" title="Common errors"><![CDATA[&#8226;Jumping into a crouch cancel bait.
+        <br>
+        <br>&#8226;Not being aware of what moves your character has that can be crouch canceled and at what percentages.
+        <br>
+        <br>&#8226;Doing an aerial when coming off the edge to an opponent that is prepared to shield/counter.
+        <br>
+        <br>&#8226;Jumping after getting hit by an opponent.
+        <br>
+        <br>&#8226;Jumping immediately after a grab or using a stall move [Marth's Side B].
+        <br>
+        <br>&#8226;Flubbing recovery by inputting commands while still in hitstun.
+        <br>
+        <br>&#8226;Shield grabbing aerials on shield against opponents with good pressure such as shines.
+        <br>
+        <br>&#8226;Failure to tech moves.
+        <br>
+        <br>&#8226;Always teching in the same direction, usually the way they are DIing.
+        <br>
+        <br>&#8226;DIing into Combos. Great for Captain Falcon, horrible for you.
+        <br>
+        <br>&#8226;Always trying to do survival DI against nonkill moves.
+        <br>
+        <br>&#8226;Having poor options out of shield such as only grabbing or jumping.
+        <br>
+        <br>&#8226;Not refreshing invincibility on the edge before returning to the level or edge guarding.
+        <br>
+        <br>&#8226;Always inputting forward when initiating your Dash dance.
+        <br>
+        <br>&#8226;Edge guarding with a smash attack instead of a quick move to read a reaction.
+        <br>
+        <br>&#8226;Trying to implement new tech while in tournament matches. If you cannot shield drop in practice, don't attempt it in tournament.
+        <br>
+        <br>&#8226;Swinging for the fences with Smash attacks or combo starters.
+        <br>
+        <br>&#8226;Mistaking player knowledge for match up knowledge.
+        <br>
+        <br>&#8226;Rushing.
+    ]]></string>
+    <string name="control_info_text" title="Control"><![CDATA[<big><b>Control</b></big>
+        <br>Control is practically being able to control the stage, approaching opponents
+        in a way that they are not able to escape a stick spot, like edgeguarding against a Falcon, as his recovery is easy
+        to predict.
+        <br>
+        <br><big><b>Why you should control</b></big>
+        <br>Why is the ground so important? The ground is important because it's generally
+        where a player has the most options and the safest options.
+        <br>First, the ground is where you have the most mobility. When you're on the
+        ground, you can dash, wavedash, walk, and basically go anywhere, as opposed to
+        being airborne, where you are limited to the relatively short arc of your jump.
+        To visualize this, let's think about the threat that Marth poses to you on the
+        ground vs in the air. Whenever Marth is on the ground, you have to worry about the
+        long range he controls with his tilts and his other ground moves, and you essentially
+        have to respect a much larger area because he has a lot of freedom to go wherever
+        he wants. Whenever he is in the air, his effective range becomes much shorter,
+        limited to the max distance of his jump. Whenever he is airborne, not only is his
+        effective range shorter, but he has much less freedom to control where his character
+        goes (he's limited to how far he can drift his own character along with his double
+        jump). Double-jumping is a cool mechanic that gives you a little more
+        maneuverability when you're in the air, but ground control is still king.
+        <br>
+        <br><big><b>How to stop being controlled</b></big>
+        <br>Once you know the problems associated with your bad situation and why they are bad, you can begin to analyze these
+        problems and/or solve them as well as possible. When having less movement options, you might be concerned
+        about remaining unpredictable. So, this means you must know and abuse every single movement option you have in order to be
+        unpredictable and not killed here. Economic dash dances(not excessive movement, but enough to feign an approach and varies
+        widely in speed), very precise wavedashes, jumping. Use the options you have to their max potential, break out of
+        that control your opponent has on you by analyzing the situation.
+        <br>
+        <br><big><b>Gaining control</b></big>
+        <br>In order to control the stage, you have to be aware of your weaknesses and
+        best positions, some characters like Falco work the best from the center of the stage, due to his short recovery.
+        But Marth for example works best at the edges, has he has no ranged options and is extremely proficient at edge guarding when
+        handled properly
+        <br>One example is a Fox vs. Falcon. If they go on to Final Destination, the Falcon won't have too many options at the edge,
+        Fox has the ability to block almost every option Falcon has. If you're the Fox, make sure you cover as many options as possible,
+        like going for the ledge and then takign advantage of the invincibility to go in for a quick shine or some other punish.
+    ]]></string>
+    <string name="edgeguard_info_text" title="Edge guarding"><![CDATA[<big><b>Edge guarding</b></big>
+        <br>The most important thing to remember about edge guarding is, against the
+        majority of the cast IT IS NOT A GUESSING GAME.
+        <br>
+        <br><b>Here's my simple 5 step edge guarding guide for beginners:</b>
+        <br><b>Step 1:</b> Hit them off the stage.
+        <br><b>Step 2:</b> Hit them again if they are still close to the stage. (Don't let a Falco Up-B really close to the ledge.)
+        <br><b>Step 3:</b> Grab the ledge. You may need to regrab the ledge for invincibility
+        depending on who you are edge guarding, ie: Marth. Overall it's a
+        good habit to get into. http://www.youtube.com/watch?v=8d95uCpFeYQ&feature=player_detailpage#t=48s
+        <br><b>Step 4:</b> Stay on the ledge and WAIT!
+        <br><b>Step 5:</b> Did they make it back onto the stage? If so, hit them back off. If not just roll.
+        <br>
+        <br>Edge guarding revolves around taking away your opponent's \"sweetspot the ledge\" option. Once you have taken
+        their ability to sweetspot, they have no safe option to get back onto the stage.
+        Here are some of the most blatant example of the effectiveness of taking away your opponent's sweetspot option:
+        <br>
+        <br>http://www.youtube.com/watch?feature=player_detailpage&v=vphTto5RzLc#t=30s
+        <br>
+        <br>http://www.youtube.com/watch?feature=player_detailpage&v=OqLFffh4Z-g#t=30s
+        <br>
+        <br><big><b>Character specific info</b></big>
+        <br>Here are some other character specific examples of the different ways you can take away your opponent's option to sweetspot:
+        <br>http://www.youtube.com/watch?feature=player_detailpage&v=FLcYHYTr-Vk#t=47s
+        <br>
+        <br>Mew2King takes away Amsah's sweetspot option with a dtilt and forces him on the stage. Nevermind
+        the fact that he did not punish him as hard as he could have when he landed on the platform. Don't have
+        results oriented thinking. Recognize that he took away Amsah's best option. Leave it at that.
+        <br>
+        <br>http://www.youtube.com/watch?feature=player_detailpage&v=1lxMKNyKuRU#t=76s
+        <br>Armada knocks Zhu off stage and throws a turnip. Look where he threw it though, right in the spot
+        where Zhu could have Side-B sweet spotted the ledge. This forced Zhu to upB to avoid the turnip and
+        allow Armada an easy bair edgeguard. Peach's turnips are the way she covers options for edgeguarding.
+        <br>
+        <br>[There are a lot of character/matchup specific ways to edge guard on reaction. Learn the ways in which your
+        character can take away sweetspot options against other characters and land easy edge guards! Ie: Falcon
+        players will grab or regrab the ledge against spacies right when they see them start to charge their upB.
+        His ledge invincibility will last long enough to take away their sweetspot option]
+        <br>
+        <br>Source: http://smashboards.com/threads/10-000-words-of-power.295524/
+        <br>
+        <br>This may help: https://www.reddit.com/r/SSBM/comments/313rvt/my_falco_vs_spacie_edgeguarding_flowchart/
+    ]]></string>
+    <string name="usefullinks_info_text" title="Useful links"><![CDATA[<big><b>Must reads</b></big>
+        <br><b>These are links to pages I suggest you read through or watch, others are just useful things.</b>
+        <br>
+        <br><b>Huge collection of everything</b>
+        <br>www.tinyurl.com/meleelibrary
+        <br>
+        <br><b>20XX TE, a GC compatible hack pack</b>
+        <br>http://www.20xx.me/
+        <br>
+        <br><b>Smash Database, a stash of gfycats/oddshots</b>
+        <br>http://smashdatabase.com/?cat=7
+        <br>
+        <br><b>Best of Smashboards #1</b>
+        <br>https://badmelee.wordpress.com/2015/11/16/the-best-of-smashboards-1/
+        <br>
+        <br><b>Best of Smashboards #2</b>
+        <br>http://badmelee.com/2015/11/23/the-best-of-smashboards-2/
+        <br>
+        <br><big><b>Reddit</b></big>
+        <br>
+        <br><b>/r/SmashBros</b>
+        <br>https://www.reddit.com/r/smashbros
+        <br>
+        <br><big><b>Videos</b></big>
+        <br>
+        <br><b>Super Smash Academy</b>
+        <br>https://www.youtube.com/user/supersmashacademy
+        <br>
+        <br><b>Melee It On Me YouTube channel</b>
+        <br>https://www.youtube.com/user/MeleeItOnMe/playlists
+        <br>
+        <br><b>Smash Practice, helpful words from Zhu and Cactuar</b>
+        <br>https://www.youtube.com/playlist?list=PL32VvbzXtv1Z5JqXR_gNCtUZI5h7TfOGR
+        <br>
+        <br><b>A playlist of all Smash God encounters</b>
+        <br>http://bit.ly/1Pq3wKh
+        <br>
+        <br><big><b>Streams</b></big>
+        <br>
+        <br><b>Smash Practice with Zhu and Cactuar</b>
+        <br>http://www.twitch.tv/smashpractice
+        <br>
+        <br><b>Melee It On Me</b>
+        <br>http://www.twitch.tv/meleeitonme
+    ]]></string>
+    <string name="improve_info_text" title="Improving"><![CDATA[<big><b>Words on improving from PPMD</b></big>
+        <br>Setting short term goals for friendlies is the easiest way
+        to start pathing towards improvement. It really and truly helps to have a
+        structured goal to work towards, even if it's relatively simple.
+        <br>It doesn't have to be anything complicated. Trying to set up specific situations
+        so you can test specific options is an easy way to start working towards this mindset.
+        <br>Example: \"I want to wavedash back when he jumps towards my shield\"
+        <br>That's a really simple goal that you can achieve with limited alteration to your
+        play. Once you start getting used to setting simple, short term goals, you can start
+        \"multi tasking\" and setting multiple goals that you can perform in a match as the
+        situations arise as opposed wholly focusing on a single setup. You can start having
+        \"branching goal paths\"
+        <br>Example: \"Okay, I can WD back on reaction now. I want to WD back on reaction to
+        my opponent coming in from specific distances.\"
+        <br>You can have a small short term goal for each distance for X character and so
+        on and so forth.
+        <br>
+        <br><big><b>Don't get competitive in friendlies</b></big>
+        <br>Too many people get "too competitive" when playing friendlies and focus hard on
+        \"winning\" or \"not getting bodied\" which tend to occupy their entire decision
+        making trees. Friendlies are basically an infinite resource. You can play as many
+        as you want (assuming no time constraints) so it's more than okay to lose a couple
+        matches and get bopped as long as you pull something out of it. I've gotten four
+        stocked by significantly worse players plenty of times because all I want to do is
+        test a certain option. I disregard neutral and stock count because I'd rather try
+        to do something than win this one friendly out of 100 that we played.
+        <br>
+        <br>Source: https://www.reddit.com/r/smashbros/comments/2e0qfn/improvement_mindset_part_2_short_term_goals/
+        <br>
+        <br>More info: http://smashboards.com/threads/drastic-improvement.311129/
+    ]]></string>
+    <string name="mindgames_info_text" title="Mindgames"><![CDATA[<big><b>Mindgames</b></big>
+        <br>Why are mindgames important? It's pretty obvious. If you are in your shield, and I know that you will
+        try to roll past me because you ALWAYS DO, then how easy is it for me to punish your roll? You roll every
+        time, and because you can't break your own patterns, I can exploit it. If you do the same thing in every
+        situation, then you are incredibly easy to beat. It's the reason why players can stomp all over CPUs;
+        they follow the same patterns, and then they lose.
+        <br>We run into a problem though: how can you incorporate mindgames into your game? If you aren't in the
+        habit of thinking while you play, how can you break that lethal habit?
+        <br>
+        <br><big><b>How to incorporate mindgames into your play</b></big>
+        <br><b>Step 1:</b> Record yourself playing, and then watch; try and guess what you're going to do. If you see
+        yourself do the same thing over and over again, then it should hit you like a ton of bricks that you
+        need some work. This should give you motivation.
+        <br>
+        <br><b>Step 2:</b> Play against predictable opponents. This should also help you realize, first hand, that a
+        player who never mixes up patterns is a player that loses constantly.
+        <br>
+        <br><b>Step 3:</b> Now you're actually ready to start incorporating. You need to start slowing down how you play.
+        Don't even worry about winning. In fact, it might help if you just play matches with infinite time limits
+        and no stocks against your training partner of choice. Start by trying to guess what your opponent is
+        going to do. Don't even really try to respond or retaliate. Just focus on calling your opponent's moves,
+        one after the other. Watch your opponent, and forget about yourself.
+        <br>Some people will probably complain right here: they will say, "you aren't supposed to think so hard
+        while you play. If you're busy consciously analyzing everything, you'll be slow and can't react and won't
+        even make decisions." That's correct. Absolutely true. But in order to integrate mental habits, they must
+        be conscious decisions first. If you don't think while you play, then you have to make yourself think. You
+        have to make it a conscious decision, all the time, while you play, until it becomes a habit. Once it
+        reaches the unconscious level and you're not auto-piloting, then you will know you've hit a good point.
+        <br>
+        <br><b>Step 4:</b> Focus on breaking your own patterns. Again, watching videos helps. Try doing different things
+        in the same situations. Adopt other people's techniques. If your friend always shield grabs, and another
+        friend jumps out of shield, and another friend rolls away, and another one spot dodges, try each tactic
+        out. Get yourself in the habit of breaking habits.
+    ]]></string>
+    <string name="mindset_info_text" title="Mindset"><![CDATA[<big><b>Mindset</b></big>
+        <br>Results oriented thinking is as it’s described, playing with the mindset of being focused on a result.
+        This is what makes a noob. Being a noob has nothing to do with how good or bad a player is. Being a
+        noob is having the aforementioned mindset.
+        <br>
+        <br>I go back to a conversation I had with Lance at the dining courts. After a whole bunch of B.S. about
+        how he thought I was carrying him in teams at a past SG tournament and me trying to convince him otherwise,
+        he brought up \“that one time we lost a match to cykofox and alcheato\”.
+        <br>I remember the look on his face when he asked me \“Where should we counterpick?\” after they took one
+        game from us. He had a look of slight distress, and I could tell the match got to him. However, for
+        me, at no point during that set did I \“lose\”. Mentally, I was in control. We held the momentum for
+        the whole set, so it put the team in danger for Lance to think we were somehow behind. That is results
+        oriented thinking. Some ask what is wrong with thinking like this. What is wrong with being focused on
+        results? That is what I’m after right? The answer is yes. Everyone wants to improve because everyone
+        wants results. The problem is the way in which you are going about trying to achieve those results.
+        <br>These things do not come overnight. They come through practice, and a mentality of \“playing to learn\”.
+        Success comes as a consequence to this.
+        <br>
+        <br><b>Follow this:</b> http://www.youtube.com/watch?v=DUqJ-IVTihI
+        <br>
+        <br>Watch the whole video. Lambchops explains to Mew2King his results oriented mindset of
+        always playing to win rather than playing to learn.
+        <br>
+        <br>Source: http://smashboards.com/threads/10-000-words-of-power.295524/
+        <br>
+        <br>More info: http://smashboards.com/threads/falco-discussion-thread.256826/page-434#post-14704270
+    ]]></string>
+    <string name="mixups_info_text" title="Mixing up"><![CDATA[<big><b>Mixing up</b></big>
+        <br>The mix-up game has been a part of traditional fighters going all the way back to the days of Street Fighter.
+        It is defined as a way of altering your patterns of attack in order to get past your opponents defense so you
+        can nail a combo, grab, special, etc. There are many kinds of mix-ups, and this will discuss the many
+        mix-ups that Smash has, as well as their usefulness and their application. Some of them will be
+        reminiscent of traditional fighters and others will be unique to SSBM. After reading this post you will
+        be further convinced of the depth behind Smash and you will see just how effective mix-ups really are.
+        <br>
+        <br><big><b>Purpose of mix-ups</b></big>
+        <br>The purpose of mix-ups is a simple one. They are used to get in damage, and remain unpredictable. If you
+        were unable to mix-up your attacks in a traditional fighter, it would be that much harder to get hits in and
+        win matches. This is where shields, attacks, and grabs come in. The developers foresaw that shielding would
+        be broken without some kind of flaw, so they created some. If you hold the shield too long, it will break.
+        Shields also shrink the longer you hold them, they get reduced as they take hits, they take time to
+        regenerate, and they can be shield stabbed.
+        <br>To help mitigate all these weaknesses, shields can be tilted for better coverage of a given area, or
+        they can be made lighter and wider for more coverage overall. It is also possible to roll or spot dodge
+        from a shield. With this formula the developers of SSBM set the stage for many creative mix-up games.
+        <br>
+        <br><big><b>Approach</b></big>
+        <br>Approaching an opponent adds a layer of depth in of itself. You can approach a number of ways. Dashing,
+        wave dashing, SHFFLING, come in with a projectile, empty SHFF, JC grab, JC attack, etc. Still it can all
+        be broken down into 3 different things. Attacking, grabbing, or shield stabbing. You grab if they like to
+        stay in their shield. You attack if you want to pressure them or you think they will attack and you want
+        to stuff their move.
+        <br>
+        <br><b>Shield stabbing example</b>
+        <br>Everyone has gotten a shield stab
+        off before. You probably just thought it was luck and you just went from there. But what if you started
+        actively looking for opportunities to shield stab? What if you take it to a level beyond that? What if
+        you try to pressure someone's shield to the point where you know you can get an easy shield stab?
+        <br>Let's say you are playing Captain Falcon. Your opponent is at 110&#37; damage. One knee will easily finish them off.
+        You want to get a knee off easily. You might say just go for a grab to d-throw to knee right? Well,
+        that is one route. But you could also pressure their shield with sweetspotted knees in order to whittle
+        down their shield. The knee has enough shield stun for Captain Falcon to get away unharmed so you could
+        repeatedly pressure them if your good enough. Then once their shield is low enough you can get an easy hit
+        on an exposed body part.
+        <br>Let's say you rush your opponent and they just know that you want to get that
+        knee off, so they angle their shield upwards. But then you just land harmlessly and then d-tilt hitting
+        their exposed lower body and finishing them off with a full hopped Uair. MINDGAMES!!!!!!
+        <br>
+        <br>Full post: http://smashboards.com/threads/understanding-the-depth-of-mix-up-games-in-ssbm.105433/
+    ]]></string>
+    <string name="mustreads_info_text" title="Must reads"><![CDATA[<big><b>Must reads</b></big>
+        <br><b>As there is just too much info to fit into this app, here are articles and
+        posts I highly suggest you read through, as they should help and inform you about several things.</b>
+        <br>
+        <br><b>Huge collection of everything</b>
+        <br>www.tinyurl.com/meleelibrary
+        <br>
+        <br><big><b>Smashboards</b></big>
+        <br>
+        <br><b>History of a Smasher by Chillindude</b></big>
+        <br>http://smashboards.com/threads/history-of-a-smasher.290961/
+        <br>
+        <br><b>The Four Aspects of Melee</b>
+        <br>http://smashboards.com/threads/the-four-aspects-of-melee.94597/
+        <br>
+        <br><b>10,000 Words of Power</b>
+        <br>http://smashboards.com/threads/10-000-words-of-power.295524/
+        <br>
+        <br><b>Confidence in Smash, from PPMD</b>
+        <br>http://smashboards.com/threads/falco-discussion-thread.256826/page-126#post-12281679
+        <br>
+        <br><b>Observation: The Key to Higher Level Play</b>
+        <br>http://smashboards.com/threads/observation-the-key-to-higher-level-smash-play.103017/
+        <br>
+        <br><b>An Analysis of Ascending to the Next Level</b>
+        <br>http://smashboards.com/threads/reaching-the-pantheon-an-analysis-of-ascending-to-the-next-level.96828/
+        <br>
+        <br><b>Approaching and Why Fox is good from PPMD</b>
+        <br>http://smashboards.com/threads/falco-discussion-thread.256826/page-265#post-13591750
+        <br>
+        <br><b>Advance, Attack, Avoid (Through the lens of Luigi)</b>
+        <br>http://smashboards.com/threads/advance-attack-avoid-through-the-lens-of-luigi.389684/
+        <br>
+        <br><big><b>Reddit</b></big>
+        <br>
+        <br><b>Mindset of Improvement</b>
+        <br>https://www.reddit.com/r/smashbros/comments/235klc/discussing_the_mindset_of_improvement/
+        <br>
+        <br><b>How to understand a character's options</b>
+        <br>https://www.reddit.com/r/SSBM/comments/3r5g2l/how_to_understand_a_characters_movement_the/
+        <br>
+        <br><big><b>Other</b></big>
+        <br>
+        <br><b>Complete Complete, Blog from Wobbles</b>
+        <br>http://www.compete-complete.com/
+        <br>
+        <br><b>Tai's Marth guide (Everyone can benefit from this)</b>
+        <br>http://www.meleeitonme.com/sharpening-your-sword-tais-marth-guide/
+        <br>
+        <br><b>Bad Melee, humorous and helpful blog</b>
+        <br>http://badmelee.com/
+        <br>
+        <br><big><b>Videos</b></big>
+        <br>
+        <br><b>The Smash Documentary</b>
+        <br>https://youtu.be/jX9hbbA-WP4
+        <br>
+        <br><b>The Smash Documentary Series (Remastered)</b>
+        <br>https://youtu.be/NSf2mgkRm7Q&list=PLoUHkRwnRH-IXbZfwlgiEN8eXmoj6DtKM
+        <br>
+        <br><b>Smash Practice, helpful words from Zhu and Cactuar</b>
+        <br>https://www.youtube.com/playlist?list=PL32VvbzXtv1Z5JqXR_gNCtUZI5h7TfOGR
+        <br>
+        <br><b>20GX, beginner fundamental discussion</b>
+        <br>https://youtu.be/qAUVzXOct4o
+        <br>
+        <br><b>Mindset talk with PPMD</b>
+        <br>https://youtu.be/l5UCDsBZtlk
+        <br>
+    ]]></string>
+    <string name="neutral_info_text" title="Neutral game"><![CDATA[<big><b>Neutral game</b></big>
+        <br>In the Neutral game, the balance of options each player can perform is at a relative equilibrium.
+        In this state, the Advance/Attack/Avoid paradigm is most prevalent and the players interact with
+        each other in this manner until a mismatch of the interactions occur or one player gains a
+        positional advantage.
+        <br>
+        <br><big><b>Mindset for neutral game</b></big>
+        <br>This is when you are actually starting to play Melee in a way comparable to respected players.
+        This is when you learn everything about every character. You learn their ranges, their recovery options,
+        their frame data, their positional weaknesses, etc. It's time to start theorycrafting and to truly
+        understand the utility of all your options. You've probably been watching videos for your whole Smash career,
+        but now is when you really learn to analyze them. Learn to understand why players choose to do what they do,
+        not just admire how sick their combos are. Watch videos with analysis by top players and make sure you
+        understand everything they say. You will now get hype over things that you didn't notice before, and
+        things you got hype over before will now seem standard. Though we have amazing resources like smash
+        labs, where Melee's elite have shared their insights going into their thought process, I find myself now
+        thinking that the neutral game has some ineffable quality to it that makes it difficult for me to give useful
+        advice at this stage. Once you have mastered control over your own character, and you have learned to watch
+        the other player, things will start to click.
+        <br>
+        <br>The beauty of the game doesn't really shine through until you are at this stage. There are a few things
+        that come to my mind that puzzled me for years. I always heard about stage control and about momentum of the
+        match. Yet it was difficult to see how control of the match influences decisions about when to attack and
+        when to evade. The lack of understanding of these concepts is obvious in new players because of how frequently
+        they throw out attacks from defensive situations. As your ability to understand other characters blossoms so willl
+        your ability to mindgame other people. After hearing "rolling is bad" for years, neutral game is when you should
+        finally have enough situational understanding to bait and punish them. Once you understand the options a
+        character has, the brilliance behind the decisions of top players becomes clear.
+        <br>
+        <br>Full post: https://www.reddit.com/r/SSBM/comments/2jc3gb/nmws_guide_to_getting_good_at_melee/
+        <br>
+        <br>This may help: https://www.reddit.com/r/smashbros/comments/3sqhfc/my_attempt_at_covering_the_neutral_in_a_flow_chart/
+    ]]></string>
+    <string name="reading_info_text" title="Reading"><![CDATA[<big><b>Reading</b></big>
+        <br>Reading is successfully knowing what your opponent will do next. If a player can read properly, he can exploit
+        several flaws of the other player and take several stocks from them just because of the players ability to know
+        how to respond to the prediction.
+        <br>There is a major difference between guessing and predicting. There are tons of different methods of fighting
+        that put you at really good positions, but there are also the ones that put you in bad positions. On your good
+        days, you do mostly the good ones; likewise for the bad. When you're guessing, you don't have any idea why
+        your style was working or wasn't working. While predicting, you can see where you messed up because of a wrong
+        option you took. Guessing is playing a chance game.
+        <br>I've tried to break these things up into easy-to-learn sections. Not knowing why I was have good and bad days
+        frustrated me enough to re-evaluate what was going on. These are all my opinion from my experiences, take them as you will.
+        <br>
+        <br><big><b>Learning to notice patterns in play habits</b></big>
+        <br>From where is your opponent is approaching(or camping from?)
+        <br>Is it usually an aerial approach?
+        <br>Is it a running shield approach?
+        <br>Is it a running grab approach? etc.
+        <br>
+        <br>What are their primary methods of approaching(or camping?)
+        <br>Shield, Dodge, Grab, Specials, Smashes, Tilts, Aerials, and Jabs are their options. Learn how they all work.
+        <br>
+        <br>What does the opponent do when they're under pressure? (being attacked/approached-even a simple run animation reflex)
+        Do they Shield-grab, Shield-OOS option, roll, spot dodge, jump, sit in their shield, or even attack are the majority of reflexes.
+        <br>When they're in the air, empty short hops are nice to bait air dodges into Fsmashes.
+        <br>
+        <br>These are the positions one should observe (while their playing or not) and try to figure out
+        what the playing habits are. Keep in mind, the
+        higher caliper player means more mix up and less predictability.
+        <br>
+        <br><big><b>Knowing the best option for the read</b></big>
+        <br>For example, if Falcon threw someone forward and that someone air dodged, Falcon gets a free grab
+        when predicted. Falcon also gets a short hop forward falcon punch in the same prediction(if it doesn't work,
+        pretend it does for the example.) Which option would you choose?
+        <br>Second example, as Falco, if you jab someone and predict them to shield after it, the best
+        option would be to grab them. You can't Fsmash them for that prediction because the shield they
+        were doing anyways would block it or you would get shield grabbed during the beginning animation of the Fsmash.
+        <br>
+        <br><big><b>Implementing this into your game</b></big>
+        <br>Learning to deal with the stress of making educated guesses all of the time is important for your
+        growth as a player. You're not always going to get it right, so have a back up strategy in case it
+        falls through. Try not to stray from smart options into easy options because you messed up a prediction.
+        <br>Learn what annoys the opponent and use it(in other words, your back-up strategy). It will make them more
+        predictable, making life for you a hell of a lot easier. If you've done everything else right, and this
+        prediction doesn't put you in an extremely bad position, then go for it.
+        <br>One should never be going for predictions all of the time. A player needs to stay back until they
+        see an opportunity. A player also needs to apply pressure when they're staying back. This strategy
+        should be safe for the most part until a prediction is made. Laser camping until their shield is low
+        is a good pressure strategy.
+        <br>Don't get me wrong. I don't mean camp until you see one opportunity, hit once, then run back
+        (unless you like that.) People are allowed to attack close ranged and throw in multiple predictions.
+        You don't need to hit the opponent either while distance pressuring.
+    ]]></string>
+    <string name="pressure_info_text" title="Pressure"><![CDATA[<big><b>Pressuring</b></big>
+        <br>Pressuring is the act of limiting an opponent's options in order to force them to
+        react. Like baiting, pressuring is used to lure out some sort of punishable
+        action, but the difference is the action is lured out more aggressively and the
+        opponent's habits are not necessarily taken into account. Pressuring can also
+        be stated as using your extra options to reduce your opponents options.
+        <br>
+        <br><big><b>How to pressure</b></big>
+        <br>In order to properly pressure, there are two things you need to analyze about your
+        opponent. Their play style (patterns, reactions, etc.) and their character's options.
+        <br>By using this information, look at your opponent and see possible ways you can pressure
+        them into doing an action. One example is a Fox vs. Falco, where the Falco is edge guarding
+        the Fox. As the Fox starts his Side-B to recover, Falco shoots a laser and brings him lower, this means
+        Fox cannot recover using the Side-B anymore, and is forced to use his Up-B, so this
+        means the Falco has less options to cover and can more easily take the kill.
+    ]]></string>
+    <string name="punish_info_text" title="Punish"><![CDATA[<big><b>Punishing</b></big>
+        <br>Punishing an opponent's mistakes is one of the most important things you can do. This is because
+        your opponents are going to keep on getting better and better, and they're going to make fewer
+        mistakes. If your enemy misses ONE L-cancel in the entire match, you had better be ready to
+        make him pay for it. But if you only get a free shield grab and then a small, 20 percent combo
+        that doesn't go anywhere, what use was it? You should have made him pay as much as you can.
+        <br>This, in fact, is one of the things that defines the current tier list. A character's ability
+        to take advantage of an opening defines just how good you have to be to win with that character.
+        <br>
+        <br><b>Let's look at it like this:</b>
+        <br>I make ten mistakes in a stock, and you only need to take advantage of ONE to KO me. So if
+        your punishment is even at 10 percent capacity, you can KO me easily.
+        <br>You make TWENTY mistakes in a stock and I need to take advantage of 10. I need to have at
+        least 50 percent consistency to successfully KO you.
+        <br>
+        <br>For every one mistake you exploit, I need to exploit ten to keep even. If I am WINNING, then
+        it means that I am exploiting your mistakes MUCH more than you are exploiting mine. This is why
+        if I'm beating your higher-tier character with a lower-tier, unless it's a really weird counterpick,
+        I'm probably a lot better than you. You have more openings and I consistently take advantage of
+        them better than you. Add to that fact that lower-tiers have a tougher time even starting
+        punishment (usually lack of range, speed, or priority), I look even better by comparison.
+    ]]></string>
+    <string name="recovery_info_text" title="Recovery"><![CDATA[<big><b>Recovery</b></big>
+        <br>Recovery is your ability to get back onto the stage. If your opponent knows where you're going to
+        aim and how you're going to recover, you're at a loss. You need to look at all your options,
+        and pick the best or least expected one in order to mix-up your game.
+        <br>Learn your character's tricks and figure out how to maximize your control over
+        yourself while trying to get back to the level.
+        <br>
+        <br><big><b>Mixing up</b></big>
+        <br>Most characters have some form of recovery mix-up.
+        With Fox and Falco, you can Side-B to the ledge or above it, or you can shorten their Side-B's
+        to trick an opponent into mistiming an attack. You can Up-B to sweetspot, or ride the ledge to maybe
+        get a ledgetech. Peach might float above you, on top of you with an attack, or parasol then
+        fastfall to the ledge. Samus has a fair amount of mobility while bomb jumping, and she might
+        use her grapple to sweetspot or she'll sweetspot the up-B. Most characters have a couple recovery
+        options, and it's your job to figure out what your opponent expects and do something else.
+        And, of course, you need to figure out how they want to edgeguard you so you can respond to that.
+        <br>
+        <br><big><b>Knowing your options</b></big>
+        <br>Know what moves will help your character survive. Know that holding down when you reach
+        the ledge makes you pass by it, and don't let that make you SD. You also need to know your opponent's
+        edgeguarding options and how to reduce their efforts at keeping you off the level.
+        <br>
+        <br><big><b>Spacing your recovery</b></big>
+        <br>With good spacing comes sweetspots. Your recovery needs to put you exactly where you want to
+        be, so you need to be familiar with the distance of your recovery moves. And it does you no good
+        to repeatedly Side-B beneath the level with Fox or Falco and SD, or air dodge too low and fail
+        to grab the level. Maybe you're Link, YL, or Samus and grapple too far away and miss the level, or
+        you grab it too closely and go into freefall. Learn to space it, don't kill yourself and
+        give the opponent a free stock.
+    ]]></string>
+    <string name="spacing_info_text" title="Spacing"><![CDATA[<b>Great spacing by Fox main Lucky:</b> http://gfycat.com/RepulsiveWarmheartedEider
+        <br>http://gfycat.com/ThatGrizzledBlackrhino
+        <br>
+        <br><big><b>Spacing</b></big>
+        <br>Spacing is easily one of the most important aspects of
+        Smash and fighting games in general. Everyone incorporates spacing into their game,
+        whether it be intentional or instinctual.
+        <br>The difference between a great player and
+        a good player is that a great player is constantly conscious of it. A good player may
+        play safe to an extent, but when they end up being out-played by a superior opponent
+        and every move they throw out gets punished, they may not be sure why it's happening
+        or what to do about it. The solution is to space more effectively. The reason you're
+        being out-played is because your opponent is reading your every move and taking
+        advantage of it. Back off, be more defensive, and disallow your opponent from reading
+        you. You need to observe your opponent, pick up on patterns, and take advantage of
+        all of their flaws.
+        <br>
+        <br><big><b>Getting started</b></big>
+        <br>How do you get started on developing your spacing? A good way is to try to
+        visualize it when you are playing the game. When you are playing, try to imagine your
+        opponent's quickest, safest options (for example, Fox's running SHFFL nair). The area
+        that the opponent can cover with that option is their effective range (effective ranges
+        vary depending on situation and matchup). Try to visualize this effective range, and
+        then try interacting with it. See what happens whenever you position yourself right
+        outside of it. See what happens when you go inside of it. Try to weave in, out, and
+        around this range, and observe. This guide can't give you a three-step lesson on how to space.
+        It can only point you in the right direction.
+        <br>
+        <br><big><b>Explanation</b></big>
+        <br>To put it simply, depending on where you and your opponent are positioned on the
+        screen, one of the players has the advantage. For an example, if Fox is on the
+        opposite side of Final Destination, and you're playing a character that can't attack
+        from that distance, then Fox has the advantage. He can laser you safely, because
+        there is nothing you can do to retaliate. This forces you to approach, which instantly
+        puts you at a disadvantage.
+        <br>The key to turning this specific situation around is to get
+        close enough to Fox that he is unable to safely continue shooting lasers. And when
+        I say close enough, I don't mean to run in and throw out an aimless aerial in
+        frustration, because this is what Fox wants you to do. What you want to do is get
+        close enough that you are still safe, but you impede Fox from continuing his onslaught
+        of lasers. Once you get into this position, you can then look for openings or try
+        to bait Fox into making a mistake that allows you to punish him.
+        <br>
+        <br><big><b>Using it to your advantage</b></big>
+        <br>Ideally, the only time you want to close the gap that you have created between
+        yourself and your opponent, is when your opponent is in a vulnerable state; such
+        as performing a laggy move, lying on the ground after a missed tech, or any other
+        action that you can take advantage of.
+        <br>After your opponent has been punished and
+        has escaped the pressure, go back to spacing properly until you can take advantage
+        of the next one or force your opponent into an unfavorable position. Isai wasn't
+        kidding when he said \"Don't get hit.\" If you space effectively, learn your
+        character's best positions on-screen, and quickly catch on to your opponent's
+        habits, you will greatly reduce the amount of punishment/damage you receive and
+        greatly increase the amount of punishment/damage that you can give.
+        <br>
+        <br>For every matchup, the spacing game can differ due to varying ranges and speed
+        that characters possess. Once you begin incorporating a good spacing game, your
+        overall game is sure to improve.
+    ]]></string>
+    <string name="techskill_info_text" title="Tech skill"><![CDATA[<br><big><b>Tech skill</b></big>
+        <br>Your technical skill is your ability to execute commands. The ability to L-cancel consistently is
+        part of your technical skill. The ability to short hop, wavedash, and move your character with
+        absolute control is the ability to interact with the game fluidly.
+        <br>
+        <br><big><b>Why tech skill is important</b></big>
+        <br>Technical skill is the first thing we generally see in a player. When you see somebody SHFFL'ing and waveshining
+        across the level, you assume good technical skill. Technical skill also implies that you are aware of the
+        higher levels of the game and that you are integrating advanced techniques.
+        <br>Why is technical skill important? It's pretty simple. If you want to do something, but always screw up and
+        kill yourself (or let the opponent do it for you), then you're in trouble, and won't be winning many matches.
+        <br>Also, without technical skill, sometimes you can't exploit openings that might win you a match. If Marth
+        forward smashes you and you shield it, if you can't wavedash from your shield consistently, he's free to smash
+        your shield all he wants. You can't punish him, and you have fewer options. If you can't ledgehop, then you
+        always have to stand up, attack, or roll onto the stage from the ledge, and that makes it a lot easier to
+        punish you.
+        <br>
+        <br><big><b>Questions you probably ask when trying to improve your technical skill:</b></big>
+        <br>
+        <br><b>Why didn't it work?</b>
+        <br>Well, the simple answer is this: you did it wrong. More specifically, you pushed or let go of something
+        too soon or too late, or you moved the joystick in the wrong direction. It's that simple. If you flub a
+        wavedash, it's because you air dodged early and jumped. Or maybe you air dodged horizontally. Maybe your
+        Falco's double ledge laser isn't accurate. You might be firing the laser too late after you ledge hop. If
+        something isn't working, you have to stop and figure out what you pressed and when you pressed it; compare
+        that to how the action is supposed to go, and then simply adjust.
+        <br>
+        <br><b>Why is it that when I play against a person I lose my ability?</b>
+        <br>One, you're probably nervous and want REALLY BADLY to show off your tech skill. So you're trying
+        too hard, and messing yourself up from within your own head. One solution to this is to start out slow
+        and work your way up. Or come up with a warmup routine that you can actually do mid-match; maybe it's a
+        movement pattern that gets your hands ready.
+        <br>And two, you're splitting your attention between focusing on the enemy and
+        focusing on your own actions. In training you focus on doing the combo, the execution, your fingers
+        and the buttons. In a real match, you're usually watching the characters. When the movements aren't
+        completely ingrained into your psyche, then you will lose focus on both halves of the match, and then
+        you'll fall apart. The answer is simply this: practice better. Not more, BETTER. Just rehearsing the
+        same combo won't work.
+        <br>
+        <br>While practicing tech skill, make sure you don't degrade in other fundamentals of smash.
+    ]]></string>
+    <string name="tips_info_text" title="Tips"><![CDATA[&#8226; Tech skill is step 1. Until then, don't worry about thinking and playing smart. You need to get your tech skill up the point
+        where you can use it consistently (Don't drop easy combos, etc), and then afterwards you should work on applying it (mental game).
+        <br>
+        <br>&#8226; If you're practicing by yourself, just practice tech skill and get it consistent (wavedash 100x in a row without messing up, etc).
+        <br>
+        <br>&#8226; You can't get better if your mindset sucks. Mindset is more important than anything in Melee. If you're playing poorly, take a break.
+        <br>
+        <br>&#8226; Use friendlies to learn, practice, and try new things. Don't play friendlies to win. Keep notes in
+        your head and take notes on what works and what you can improve.
+        <br>
+        <br>&#8226; Always think, even during friendlies! Don't autopilot! This is how you avoid hitting walls when trying to improve.
+        <br>
+        <br>&#8226; Between stocks, recall why you lost it. If you can't remember, you were autopiloting. It should be a quick
+        recollection. (did you mis-space? miss a tech? get read?). If you get hit, ask yourself why you got hit and how you can avoid it next time.
+        <br>
+        <br>&#8226; After an hour of friendlies, take a break and review what you have improved on specifically. Spend the next hour
+        improving another aspect that is lacking.
+        <br>
+        <br>&#8226; Every time you learn something, you need to play frequently enough that you make it a part of your game. Otherwise
+        you'll be relearning it over and over again.
+        <br>
+        <br>&#8226; Think about the game when you're not playing so you can collect your thoughts.
+        <br>
+        <br>&#8226; Don't over think in tournament. Focus on the match but apply everything you've learned up to that point.
+        <br>
+        <br>&#8226; Be balanced and work on everything. (edgeguarding, mindgames, combos, etc). Don't be good at just one thing.
+        <br>
+        <br>&#8226; Punish game is really important! (ex. Armada)
+        <br>
+        <br>&#8226; Don't be satisfied with your tournament placings. Be happy you got nth place, but the next day think about how you can get (n-1)th place.
+        <br>
+        <br>&#8226; In teams, look at everything. Don't focus on one thing at once. (Mango looks at the middle of the screen)
+        <br>
+        <br>&#8226; Every character is different. Try other characters and you might find a character that fits better with the
+        type of player you are. Your play style really shows your personality. Tires don exits
+    ]]></string>
+    <string name="tourney_info_text" title="Tournament rules"><![CDATA[<big><b>General Rules</b></big>
+        <br>\t<b>Game Settings:</b> 4 Stocks, 8 Minute Time Limit, No Items
+        <br>\tStalling, as in taking out too much time by avoiding action is banned.
+        <br>\tPerforming infinite techniques (wobbling, shines) over 300&#37; is also banned.
+        <br>\tGame breaking glitches are banned
+        <br>\tDave's stupid rule applies to all matches (see below)
+        <br>\tPause option is disabled. If left on, accidental pausing mid match forfeits a stock.
+        <br>\tA timeout winner is determined by most stocks, and then if still tied, by percentage. If percentage is tied, the match is fully replayed.
+        <br>
+        <br><big><b>Doubles Rules</b></big>
+        <br>\tFriendly Fire enabled
+        <br>\tLife stealing stocks from a teammate is allowed
+        <br>
+        <br><big><b>Stage List</b></big>
+        <br><b>Neutral (Starting) Stages</b>
+        <br>\tFinal Destination
+        <br>\tBattlefield
+        <br>\tYoshi's Story
+        <br>\tDream Land
+        <br>\tFountain of Dreams [Singles Only]
+        <br>\tPokemon Stadium [Doubles Only]
+        <br>
+        <br><b>Counter-Pick Stages</b>
+        <br>\tPokemon Stadium [Singles Only]
+        <br>\tKongo Jungle 64 [Doubles Only]
+        <br>
+        <br><big><b>Match Procedure</b></big>
+        <br>\t1. Players select their characters. Either player may choose to Blind Pick.
+        <br>\t2. Players play RPS, Winner chooses between selecting controller port or first Stage Strike
+        <br>\t3A. Players take turns removing stages from the Neutral Stages list.
+        <br>\t3B. The first player strikes 1 stage, the second player strikes 2, the first then chooses from the remaining 2 stages
+        <br>\t4. The players play the first match of the set.
+        <br>
+        <br>\t5. Winning player bans a stage from the full list of stages. Does not apply to Best of 5 sets.
+        <br>\t6. The player who lost picks a stage for the next match that isn't banned.
+        <br>\t7. The winning player may choose to change characters.
+        <br>\t8. The player who lost may choose to change characters.
+        <br>\t9. The player who lost may change their controller port.
+        <br>\t10. The next match is played
+        <br>
+        <br>Repeat Steps 5 through 10 for the rest of the matches.
+        <br>
+        <br>Note: Dave's stupid rule says that you may not choose any stage you have won
+        on during a set, unless agreed by both players.
+    ]]></string>
+</resources>

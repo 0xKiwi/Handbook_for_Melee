@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="egrapple_info_text"><![CDATA[Examples of the extended grapple: https://youtu.be/QanFnmIyqQI
+        <br>
+        <br><big><b>Extended grapple</b></big>
+        <br>Samus\' extended grapple is a technique that allows Samus to extend the length of her grab.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>Samus can extend the length of her Grapple Beam if the player presses Z, then up,
+        down, and up on the control pad (The D-Pad you use for taunts), then Z again.
+        This combo must be inputted between frames 8-39 of the grab (the part of the
+        grab before the grapple becomes visible). If successful,
+        the Grapple Beam will extend to approximately 3 times its normal length.
+        <br>
+        <br>This technique was removed in the PAL version of Melee.
+    ]]></string>
+    <string name="hominggrapple_info_text"><![CDATA[Example: http://gfycat.com/HeftyTenderCalf
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>To do the homing extended grapple, one must perform the extended grapple and press L as the
+        extended grapple beam pulls out. The beam will the move towards the nearest opponent; however,
+        unlike the normal Grapple Beam, one needs to press A or Z when the tip of the beam is over
+        the enemy in order to grab them.
+    ]]></string>
+    <string name="swd_info_text"><![CDATA[Examples of SWD: https://youtu.be/8YSeHeuiX8U
+        <br>
+        <br><big><b>Super wavedash</b></big>
+        <br>The super wavedash (sometimes abbreviated as SWD) is a frame-perfect
+        physics exploit in Super Smash Bros. Melee that can only be performed by Samus. If the player
+        performs it right, they will go a very far distance (about as long as Final Destination),
+        however, it is important to release the control stick after the player performs the move,
+        otherwise their distance will not be as far. They can also \"Bombhop\" by pressing the direction
+        they want to go right before the bomb explodes.
+        <br>
+        <br><big><b>Execution</b></big>
+        <br>The super wavedash is a very complicated maneuver and takes a lot of practice to pull
+        off. In order to do this, drop a bomb, and as Samus is hitting the ground, immediately
+        hit the opposite direction desired on the 41st frame (approximately when Samus lands
+        after dropping the bomb), then hit the direction desired on the 42nd frame. This will
+        result in Samus sliding across the level, as if in a normal wavedash, but she will go much farther.
+        <br>It is possible, with better timing to do a SWD falling from the air, but a bit harder since
+        the player does not have the ground to judge the timing as he or she may fall though the air
+        from different heights. It is also possible to cancel the SWD in order to avoid a self-destruct.
+        Doing any move with the exception of jumping, Sidestepping, using the Charge Shot or Smash
+        Attacks will stop the super wave dash.
+        <br>
+        <br><big><b>Detailed instructions</b></big>
+        <br><b>Step 1:</b> Down b
+        <br><b>Step 2:</b> Input the opposite direction you want to go just before Samus lands
+        <br><b>Step 3:</b> Instantly input the opposite direction (where you want to go) on the next frame
+        <br><b>Step 4:</b> Let go of the stick to go the full distance
+        <br>
+        <br><big><b>Crouched bomb</b></big>
+        <br>When crouching and laying a bomb, as opposed to laying a bomb without crouching, Samus will skip the
+        first 2 frames in the bomb animation. This means when performing the SWD, the player will hit the opposite
+        direction they want to go on the 39th frame, then hit the direction they want to go on the 40th frame.
+        In actuality, it still is the exact same position as the regular 41st frame and since they skipped the
+        first 2 frames, it can still be argued as being the 41st frame.
+    ]]></string>
+    <string name="sdwd_info_text"><![CDATA[http://i.imgur.com/hNroDRW.webm
+        <br>
+        <b>Applies to:</b> Samus
+        <br>
+        <br><big><b>Super duper wavedash</b></big>
+        <br>A variant of the Super Wave Dash is the \"Super Duper Wavedash." Execution is similar to
+        that of the Super Wave Dash, however it requires very precise timing to the point that it is only
+        practical in TAS runs or for the very daring Samus mains. It is performed by doing the Super Wave Dash as normal, however on frame 46
+        the player must hold down, shield on frame 47, and then immediately grab on frame 48. This causes the
+        player to slide a considerable distance further than the Super Wave Dash.
+        <br>
+        <br><big><b>Detailed instructions</b></big>
+        <br>Frame 1 - Bomb
+        <br>Frame 2 - you can start holding shield anywhere from now until frame 47
+        <br>
+        <br>Frame 41 hold left
+        <br>Frame 42 hold right
+        <br>Frame 43 you can start holding crouch anywhere from here to frame 46
+        <br>
+        <br>Frame 46 you will automatically crouch
+        <br>Frame 47 you will automatically shield
+        <br>Frame 48 press A or Z
+        <br>
+        <br>The bomb animation actually ends on 53, but you can cancel the bomb it by crouching
+        as early as frame 46. In order to retain the most momentum, you cancel bomb animation
+        with a crouch and then grab as soon as possible. You cannot press Z directly out of
+        crouch and grab, so you have to shield for at least one frame. You don\'t have to
+        actually move the control stick down on 46 and press shield on 47. You can buffer the inputs.
+    ]]></string>
+</resources>
