@@ -1,4 +1,4 @@
-<merge
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="?attr/actionBarSize"
     android:layout_width="match_parent" >
@@ -13,4 +13,4 @@
         android:minHeight="?attr/actionBarSize"
         android:popupTheme="@style/ThemeOverlay.AppCompat"
         android:theme="?customToolbarStyle" />
-</merge>
+</LinearLayout>

@@ -42,8 +42,32 @@ public class XMLParser {
                     break;
             }
         }
-        String content = sb.toString();
-        return content;
+        return sb.toString();
+    }
+
+    public static ArrayList<String> getGroupedUniqueTech(int xmlid, Resources resources, String character) {
+
+        ArrayList<String> techs = new ArrayList<>();
+
+            try {
+                XmlPullParser xpp = resources.getXml(xmlid);
+
+                while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
+                    if (xpp.getEventType() == XmlPullParser.START_TAG) {
+                        if (xpp.getName().contains("string")) {
+                            String[] chars2 = xpp.getAttributeValue(2).split("/");
+                            for (String characters : chars2) {
+                                if (character.equals(characters))
+                                    techs.add(xpp.getAttributeValue(1));
+                            }
+                        }
+                    }
+                    xpp.next();
+                }
+            } catch (Throwable t) {
+            }
+
+        return techs;
     }
 
     public static String getInnerXMLfromTitle(int xmlid, String title, Resources resources) {
@@ -65,35 +89,95 @@ public class XMLParser {
         return resources.getString(R.string.debug_text);
     }
 
-    public static String[] addAllTitlesToArray(Resources resources, int id){
+    public static String[] addAllTitlesToArray(Resources resources, int id) {
 
         ArrayList<String> list = new ArrayList<>();
 
         try {
             XmlPullParser xpp = resources.getXml(id);
 
-            while (xpp.getEventType()!=XmlPullParser.END_DOCUMENT) {
-                if (xpp.getEventType()== XmlPullParser.START_TAG) {
-                    if (xpp.getName().equals("string")) {
-                        list.add(xpp.getAttributeValue(1));
-                    }
-                    if (xpp.getName().equals("string-array")) {
+            while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG) {
+                    if (xpp.getName().contains("string")) {
                         list.add(xpp.getAttributeValue(1));
                     }
                 }
 
                 xpp.next();
             }
-        }
-        catch (Throwable t) {
+        } catch (Throwable t) {
         }
 
         return list.toArray(new String[list.size()]);
     }
 
+    public static String[] addAllTitlesToArraySearch(Resources resources, int id) {
 
+        ArrayList<String> list = new ArrayList<>();
 
-    public static String[] getTabs(Resources resources, String title, int id){
+        try {
+            XmlPullParser xpp = resources.getXml(id);
+
+            while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG) {
+                    if (xpp.getName().equals("string")) {
+                        list.add(xpp.getAttributeValue(1));
+                    }
+                }
+
+                xpp.next();
+            }
+        } catch (Throwable t) {
+        }
+
+        return list.toArray(new String[list.size()]);
+    }
+
+    public static String[] addAllContentToArray(Resources resources, int id) {
+
+        ArrayList<String> list = new ArrayList<>();
+
+        try {
+            XmlPullParser xpp = resources.getXml(id);
+
+            while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG) {
+                    if (xpp.getName().equals("string")) {
+                        list.add(getInnerXml(xpp).replaceAll("\\s+", " ").trim());
+                    }
+                }
+
+                xpp.next();
+            }
+        } catch (Throwable t) {
+        }
+
+        return list.toArray(new String[list.size()]);
+    }
+
+    public static String[] addAllContentToArraySearch(Resources resources, int id) {
+
+        ArrayList<String> list = new ArrayList<>();
+
+        try {
+            XmlPullParser xpp = resources.getXml(id);
+
+            while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG) {
+                    if (xpp.getName().equals("string")) {
+                        list.add(getInnerXml(xpp).replaceAll("\\s+", " ").trim());
+                    }
+                }
+
+                xpp.next();
+            }
+        } catch (Throwable t) {
+        }
+
+        return list.toArray(new String[list.size()]);
+    }
+
+    public static String[] getTabs(Resources resources, String title, int id) {
 
         ArrayList<String> list = new ArrayList<>();
 
@@ -111,7 +195,7 @@ public class XMLParser {
                                 int depth = Integer.valueOf(xpp.getAttributeValue(2));
                                 int eventType2 = xpp.next();
                                 int i = 0;
-                                while(i < depth) {
+                                while (i < depth) {
                                     String tagName2 = xpp.getName();
                                     switch (eventType2) {
                                         case XmlPullParser.START_TAG:
@@ -134,26 +218,9 @@ public class XMLParser {
                 }
                 eventType = xpp.next();
             }
-        } catch (Throwable t){
+        } catch (Throwable t) {
+        }
 
-        }
-/*
-            while (xpp.getEventType()!=XmlPullParser.END_DOCUMENT) {
-                if (xpp.getEventType()== XmlPullParser.START_TAG) {
-                    if (xpp.getName().equals("string-array")) {
-                        xpp.getAttributeValue(1).equals(title);
-                    }
-                    if (xpp.getName().equals("string-array")) {
-                        list.add(xpp.getAttributeValue(1));
-                    }
-                }
-
-                xpp.next();
-            }
-        }
-        catch (Throwable t) {
-        }
-*/
         return list.toArray(new String[list.size()]);
     }
 }

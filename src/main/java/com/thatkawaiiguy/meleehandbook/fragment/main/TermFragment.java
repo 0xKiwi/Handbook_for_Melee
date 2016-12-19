@@ -28,12 +28,9 @@ import android.view.ViewGroup;
 
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.TermAdapter;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.turingtechnologies.materialscrollbar.MaterialScrollBar;
 
 public class TermFragment extends Fragment {
-
-    private final String[] terms = ArrayHelper.getTermArray();
 
     public static TermFragment newInstance() {
         Bundle args = new Bundle();
@@ -50,7 +47,7 @@ public class TermFragment extends Fragment {
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
 
-        recyclerView.setAdapter(new TermAdapter(terms, getActivity()));
+        recyclerView.setAdapter(new TermAdapter(R.xml.terms, getActivity().getResources()));
         recyclerView.setHasFixedSize(true);
 
         new MaterialScrollBar(getActivity(), recyclerView, true).setBarThickness(12).

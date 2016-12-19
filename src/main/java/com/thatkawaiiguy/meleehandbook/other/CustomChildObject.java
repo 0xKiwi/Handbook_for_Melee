@@ -20,14 +20,11 @@ package com.thatkawaiiguy.meleehandbook.other;
 public class CustomChildObject {
     private String mChildText;
 
-    public CustomChildObject() {}
+    public CustomChildObject(String text) {
+        mChildText = text;
+    }
 
     public String getChildText() {
         return mChildText;
-    }
-
-    public CustomChildObject setChildText(String childText) {
-        mChildText = childText;
-        return this;
     }
 }

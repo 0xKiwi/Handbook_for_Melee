@@ -17,7 +17,7 @@
 
 package com.thatkawaiiguy.meleehandbook.adapter;
 
-import android.content.Context;
+import android.content.res.Resources;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,12 +25,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 public class TermAdapter extends RecyclerView.Adapter<TermAdapter.ViewHolder> {
 
-    private final String[] mDataSet;
-    private final Context mContext;
+    private final String[] mTitles;
+    private final String[] mContent;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView menuText;
@@ -51,9 +51,9 @@ public class TermAdapter extends RecyclerView.Adapter<TermAdapter.ViewHolder> {
         }
     }
 
-    public TermAdapter(String[] mDataSet, Context context) {
-        this.mDataSet = mDataSet;
-        mContext = context;
+    public TermAdapter(int id, Resources res) {
+        mTitles = XMLParser.addAllTitlesToArray(res, id);
+        mContent = XMLParser.addAllContentToArray(res, id);
     }
 
     @Override
@@ -65,13 +65,13 @@ public class TermAdapter extends RecyclerView.Adapter<TermAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        viewHolder.getTextView().setText(mDataSet[position]);
-        viewHolder.getTermTextView().setText(ArrayHelper.getTermInfoArray(mContext)[position]);
+    public void onBindViewHolder(ViewHolder viewHolder, int position) {
+        viewHolder.getTextView().setText(mTitles[position]);
+        viewHolder.getTermTextView().setText(mContent[position]);
     }
 
     @Override
     public int getItemCount() {
-        return mDataSet.length;
+        return mTitles.length;
     }
 }

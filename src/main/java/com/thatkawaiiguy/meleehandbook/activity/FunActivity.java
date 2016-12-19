@@ -30,6 +30,7 @@ import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
+import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 public class FunActivity extends AppCompatActivity {
 
@@ -53,7 +54,7 @@ public class FunActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(optionPicked);
 
         TextView text = (TextView) findViewById(R.id.infoText);
-        text.setText(Html.fromHtml(ArrayHelper.getInfoString(optionPicked, this)));
+        text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(R.xml.fundamentals, optionPicked, getResources())));
         text.setMovementMethod(LinkMovementMethod.getInstance());
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize(this)));
     }

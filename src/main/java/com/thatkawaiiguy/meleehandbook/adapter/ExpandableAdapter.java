@@ -92,6 +92,7 @@ public class ExpandableAdapter extends ExpandableRecyclerAdapter<CustomParentVie
                         mIntent = new Intent(context, healthy ? HealthyActivity.class
                                 : VideoInfoActivity.class);
                     mIntent.putExtra("option", childViewHolder.dataText.getText());
+                    mIntent.putExtra("xml", R.xml.uniquetech);
                     context.startActivity(mIntent);
                     canStart = false;
                 }

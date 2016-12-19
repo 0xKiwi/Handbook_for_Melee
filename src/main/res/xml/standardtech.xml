@@ -14,7 +14,7 @@
         <br><big><b>How it works</b></big>
         <br>This technique uses a similar property as the no-impact landing, where the characters ECB is
         changed during a certain action to that it is placed right above a platform when the characters downward
-        velocity is very low, but instead of only jumping, this technique uses an attack to change the ECB\'s
+        velocity is very low, but instead of only jumping, this technique uses an attack to change the ECB's
         orientation and size so that the ECB would be placed slightly above the platform the character wishes to
         land on.
         <br>An aerial interrupt has 4 frames (or as many auto cancel frames the aerial has)
@@ -35,7 +35,7 @@
         <br>
         <br><b>Aerial Interrupt Attack</b>
         <br>Abbreviated as AIA, this is practically a AI with a hitbox. This is performed almost exactly the same as an AI, but
-        the move that is used does not have it\'s ECB align properly to AI until the moves hitbox comes out, one example is Dr. Mario\'s
+        the move that is used does not have it's ECB align properly to AI until the moves hitbox comes out, one example is Dr. Mario's
         uair, since the attack has Dr. turn upside down on the second frame of the hitbox, his ECB is adjusted at that position and time
         and he can AI with a hitbox coming out. Unlike AI, it is required to L-cancel an AIA to properly perform it. This can be used to
         punish extremely quickly, and to lead to more follow ups. Characters like Mario, Dr. Mario
@@ -45,10 +45,10 @@
         downward with certain moves, so that you land on the first frame of the move performed, rather than a frame after 1.
         <br>
         <br><b>Lifting AI</b>
-        <br>Similar to instant AI, except you\'re using an aerial that moves your ECB upwards, higher than your character is, so it
-        would reach it\'s position as if you were normally AI, and seemingly lift you (albeit slightly) to whatever platform you\'re
+        <br>Similar to instant AI, except you're using an aerial that moves your ECB upwards, higher than your character is, so it
+        would reach it's position as if you were normally AI, and seemingly lift you (albeit slightly) to whatever platform you're
         attempting to AI onto. One quick way to perform this is to try to shorthop onto the middle platform from the left or right one
-        on Yoshi\'s Story as Falco, and dair at the point where Falco reaches the apex of his jump. The dair will move Falco\'s
+        on Yoshi's Story as Falco, and dair at the point where Falco reaches the apex of his jump. The dair will move Falco's
         ECB upwards, just enough to AI onto the top play form.
         <br>
         <br>Aerial interrupt example: https://youtu.be/NWGVkGz_kE8
@@ -65,15 +65,15 @@
         <br>
         <br><big><b>Characters who can chain grab</b></big>
         <br>
-        <br><b>Note:</b> Don\'t take these too seriously, all chain grabs depend largely on weight, percent, and DI.
+        <br><b>Note:</b> Don't take these too seriously, all chain grabs depend largely on weight, percent, and DI.
         <br>
         <br><b>Sheik:</b> can chain most characters (Bowser, Yoshi, Donkey Kong, Pikachu, Ganondorf, Pichu, Roy, Young Link,
         Mr. Game &amp; Watch, Link, Ness, and Sheik) with her down throw from as little as 0&#37; up to as high as 90&#37;. On
-        other characters it can reliably tech chase to high percents. This however doesn\'t work in the PAL version
+        other characters it can reliably tech chase to high percents. This however doesn't work in the PAL version
         of Melee due to her down throw sending her opponents too far forward to grab again.
         <br>
-        <br><b>Marth and Roy:</b> Marth and Roy\'s up throw can chain throw Fox and Falco from 0&#37; to about 90&#37;. However, Roy
-        has to turn to chain throw upward but Marth doesn\'t have to always turn to chain throw upward.
+        <br><b>Marth and Roy:</b> Marth and Roy's up throw can chain throw Fox and Falco from 0&#37; to about 90&#37;. However, Roy
+        has to turn to chain throw upward but Marth doesn't have to always turn to chain throw upward.
         <br>
         <br><b>Ice Climbers:</b> Against the
         Fast fallers and Roy, Popo can down throw while Nana immediately uses a down air them to force the players
@@ -85,10 +85,10 @@
         <br>
         <br><b>Captain Falcon:</b> can pseudo chain throw with down throw against Marth, Sheik, and Roy from 0&#37; to about 20&#37;. It can
         easily be escaped with good DI. Up throw can also chain throw Fox/Falco/Falcon from about 50&#37; to about 80&#37;
-        if they don\'t DI away.
+        if they don't DI away.
         <br>
         <br><b>Ganondorf</b>: can chain throw a variety of characters with his down and up throws. Up throw works similar to Captain
-        Falcon\'s, but at lower percentages. Down throw can chain throw characters with moderate falling speeds
+        Falcon's, but at lower percentages. Down throw can chain throw characters with moderate falling speeds
         (such as Pikachu and Link) at low percentages and chain throws fast-fallers at high percentages.
         <br>
         <br><b>Luigi</b>: can chain throw Fox, Falco, Ganondorf (from 0&#37; to about 30&#37;) and Falcon with up throws and can chain throw
@@ -111,7 +111,7 @@
         <br><b>Donkey Kong:</b> can chain throw Fox, Falco and Falcon with the up throw at low to mid percentages. Donkey Kong can
         also chain throw Fox, Falco, and Captain Falcon with forward throw, then while carrying them, up throw.]]>
     </string>
-    <string name="crouchcancel_info_text" title="Crouch cancel"><![CDATA[<b>Note:</b> Sheik is CC\'ing in order to take advantage
+    <string name="crouchcancel_info_text" title="Crouch cancel"><![CDATA[<b>Note:</b> Sheik is CC'ing in order to take advantage
         of the reduced knockback to survive an Up Smash.
         <br>
         <br><b>Useful video for learning to CC:</b> https://youtu.be/IA-ROZiZJqY
@@ -119,14 +119,14 @@
         <br><big><b>Crouch Canceling</b></big>
         <br>Abbreviated as CC, Crouch canceling is the act of crouching when being hit by an attack in
         order to reduce your knockback and damage taken. Most players suggest you should always crouch
-        cancel, with the exception to some moves such as Peach\'s down smash as CC\'ing it will
+        cancel, with the exception to some moves such as Peach's down smash as CC'ing it will
         cause you to get \"sucked\" in, and take more damage. Keep in mind sometimes CC is not very effective after
         around 50&#37;.
         <br>
         <br><big><b>How to perform</b></big>
         <br>To crouch cancel, simply crouch right before an enemy attacks, if done properly,
         you should have taken very little knockback and less damage would have been dealt compared to a
-        non CC\'d attack.
+        non CC'd attack.
     ]]></string>
     <string name="ddance_info_text" title="Dash-dance"><![CDATA[Example of dash dancing: https://youtu.be/mk09c6iLLdU
         <br>
@@ -146,7 +146,7 @@
         <br>
         <br><big><b>In competitive play</b></big>
         <br>An application of dash-dancing in competitive Melee; S2J, as Captain Falcon, constantly uses
-        dash-dances in order to quickly pursue Fox out of Falcon\'s throws, allowing for tech-chasing.
+        dash-dances in order to quickly pursue Fox out of Falcon's throws, allowing for tech-chasing.
         <br>While dash-dancing can be performed in all four games, it derives most of its use in Melee.
         <br>In Melee, dash dancing is used primarily to play spacing mindgames with the opponent. By
         continuously switching directions, the player can confuse opponents in regards to their approach,
@@ -165,18 +165,18 @@
         <item name="di_info_text" title="DI"><![CDATA[<big><b>Directional influence</b></big>
             <br>Often abbreviated as DI or TDI (Trajectory DI), this is the control the receiver of an attack
             has over his or her trajectory. Each attack sends its target in a particular direction, depending on the
-            attack itself and on the target\'s weight and falling speed; DI can be used to alter, but not completely change,
-            this original trajectory. This change can be vital to surviving high-power attacks such as Fox\'s up smash, and
-            for escaping combos such as Jigglypuff\'s up-throw to rest combo on fast-fallers (see the space animal slayer).
-            Perhaps one of DI\'s most useful applications is the ability to make the character move in a path that is as
+            attack itself and on the target's weight and falling speed; DI can be used to alter, but not completely change,
+            this original trajectory. This change can be vital to surviving high-power attacks such as Fox's up smash, and
+            for escaping combos such as Jigglypuff's up-throw to rest combo on fast-fallers (see the space animal slayer).
+            Perhaps one of DI's most useful applications is the ability to make the character move in a path that is as
             long as possible before crossing the blast line.
             <br>
             <br><big><b>How to properly DI</b></big>
             <br>To make sure you DI well you have to anticipate what move your opponent is going to land on you
-            and DI in a way that\'ll save you. If a Falco dairs you, DI towards the stage so you\'ll go into
+            and DI in a way that'll save you. If a Falco dairs you, DI towards the stage so you'll go into
             the stage and be able to tech, rather than get spiked past the stage and die. Another example is if a Fox
             side smashes you, to DI whichever way extends the distance traveled to reach the side blastzones. As his
-            side smash is usually a NE/NW angle, it\'s best if you DI upwards so the arch you travel needs to cover more
+            side smash is usually a NE/NW angle, it's best if you DI upwards so the arch you travel needs to cover more
             distance to reach the blastzone.
             <br>"Good DI" usually occurs when a character is sent in a
             trajectory that creates the greatest distance between the character and the blast line. In most situations,
@@ -197,7 +197,7 @@
             <br>
             <br><b>Survival DI</b>
             <br>Survival DI alters the knockback direction towards the upper corners of the screen so that blast zones
-            are escaped, preventing a kill provided that the knockback wasn\'t too high.
+            are escaped, preventing a kill provided that the knockback wasn't too high.
             <br>
             <br><b>Combo DI</b>
             <br>Because of the high amount of hitstun in Melee compared to Brawl (or, more accurately, the lack of the ability
@@ -207,7 +207,7 @@
             <br>Most of the time, combo DI is as simple as holding left or right in the knockback direction. Against characters
             like Captain Falcon who have aerials with high knockback and low ending lag, it is often hard to decide between
             survival DI and combo DI. While combo DI might escape a consecutive hit, it might also be enough to pass the
-            horizontal blast zones and die. Survival DI ensures that doesn\'t happen, but it will make it easy for Captain
+            horizontal blast zones and die. Survival DI ensures that doesn't happen, but it will make it easy for Captain
             Falcon to land another aerial.
             <br>
             <br><big><b>Mechanics</b></big>
@@ -216,7 +216,7 @@
             perpendicular to the original knockback angle of the hitbox and amounts to approximately 18°. Holding directions
             that are parallel to the original angle will produce no survival DI at all. Because the possible DI angles are
             not distributed equally (see diagram in DI Angles), knockback angles within 17° of vertical or horizontal can
-            be trajectory DI\'d to a lesser degree, as no true correspondent perpendicular angle is available.
+            be trajectory DI'd to a lesser degree, as no true correspondent perpendicular angle is available.
         ]]></item>
         <item name="sdi_info_text" title="SDI"><![CDATA[Useful video: https://youtu.be/CO7YD9KqNhY
             <br>
@@ -230,7 +230,7 @@
             that the attack is about to send them towards.
             <br>Despite its near-identical name, SDI is not the same thing as directional influence.
             The major difference is that, while DI changes
-            the trajectory a character is launched in while SDI changes a character\'s position before launch.
+            the trajectory a character is launched in while SDI changes a character's position before launch.
             <br>The mechanics of SDI operate by shifting the character in the given direction.
             As a result, repeatedly tapping in one direction will move the character
             much farther than simply holding the stick in that direction. This results in a technique
@@ -238,20 +238,20 @@
             increased distance. Quarter-circle DI was introduced to the United States by smasher Captain Jack and was once
             known as Japanese DI.
             <br>As the C-Stick can also be used for SDI, even \stronger\" forms of SDI exist. So-called double-stick DI
-            utilizes the C-Stick\'s ability to override the control stick by holding one of the sticks in one direction
+            utilizes the C-Stick's ability to override the control stick by holding one of the sticks in one direction
             and utilizing quarter-stick DI with the other. This is often used when a player wants to SDI one way, and DI the other.
             <br>
             <br><big><b>How to properly perform</b></big>
-            <br>What you do to SDI is simply jam the control stick the exact instant you are hit. This isn\'t done on reaction,
+            <br>What you do to SDI is simply jam the control stick the exact instant you are hit. This isn't done on reaction,
             you must be expecting the hit. This is mostly done to survive combos where you know a certain move must be
             used at a certain time. Because it is anticipated, you can actually throw people off by hitting them with a
             different move than they expect or changing the timing. For example, as Fox if they are SDIing your uair
             you can bair and they will have bad DI.
             <br>
             <br><b>Automatic smash directional influence</b>
-            <br>ASDI is a weaker variant of SDI which uses the C-Stick. Once a character\'s freeze frames are
+            <br>ASDI is a weaker variant of SDI which uses the C-Stick. Once a character's freeze frames are
             over, they shift slightly in whatever direction the C-Stick is currently held, slightly less than
-            one SDI input. If the C-Stick is also being held in a direction, it will override the control stick\'s input,
+            one SDI input. If the C-Stick is also being held in a direction, it will override the control stick's input,
             allowing the player to DI in another direction simultaneously. To perform simply hold the C-Stick the direcion you want
             to SDI, this method is efficient for multi-hit attacks.
             <br>
@@ -265,8 +265,8 @@
             <br>\tShield pressure from Fox and Falco
             <br>\tThe lightshield edgehog vs Marth
             <br>\tOther multihit moves on shield
-            <br>\tFalcon\'s raptor boost on shield
-            <br>\tStrong attacks on shield that may seem unpunishable (like certain spacings of Falco\'s f-smash or d-tilt)
+            <br>\tFalcon's raptor boost on shield
+            <br>\tStrong attacks on shield that may seem unpunishable (like certain spacings of Falco's f-smash or d-tilt)
             <br>
             <br>Video on Shield DI: https://youtu.be/53t9fDzdCyw
         ]]></item>
@@ -288,14 +288,14 @@
             in the same direction after the attack, you will DI with that direction inputted.
             <br>
             <br><b>This works extremely well with:</b>
-            <br>\tMarth\'s up-air on platforms
-            <br>\tFox\'s down-air
+            <br>\tMarth's up-air on platforms
+            <br>\tFox's down-air
             <br>\tAny attack that can be survived with strong SDI or DI.
         ]]></item>
         <item name="diangles_info_text" title="Angles"><![CDATA[These are the possible angles which you can DI and angle certain moves.
-            <br>Any Up-B move which lets you change your aim in a circular manner (like Falco\'s or Zelda\'s)
+            <br>Any Up-B move which lets you change your aim in a circular manner (like Falco's or Zelda's)
             has as many angles as in this diagram.
-            <br>This diagram also shows the angles it\'s possible to DI towards.
+            <br>This diagram also shows the angles it's possible to DI towards.
             <br>
             <br><b>Quick facts</b>
             <br>&#8226;There are a total of 352 possible angles.
@@ -319,15 +319,15 @@
         <br>Fast falling is the act of falling quicker than usual in mid-air.
         <br>It is performed by tapping down on the control stick while falling. The character will continue
         to fast fall until landing on the platform or taking a hit. Gravity is ignored once a fast fall
-        is begun; the character\'s downward velocity is simply set to their fast falling speed without
-        accelerating. Fast falling is a technique commonly used to speed up a character\'s game, especially
-        after a short hop. It is a part of SHFFL\'ing, an advanced technique.
+        is begun; the character's downward velocity is simply set to their fast falling speed without
+        accelerating. Fast falling is a technique commonly used to speed up a character's game, especially
+        after a short hop. It is a part of SHFFL'ing, an advanced technique.
         <br>Stall-then-fall aerials have an effect similar to fastfalling, though the move is an attack,
         and most of the time cannot be stopped or slowed.
         <br>If players press down while hanging from a ledge, their character will begin to fast fall,
         whereas if pressed in the opposite direction of the ledge, the character will merely let go
         of the ledge. This also works with down + B attacks, except for ones that slow down falling
-        or gain height. (An example is Fox\'s Reflector or Luigi\'s Luigi Cyclone.)
+        or gain height. (An example is Fox's Reflector or Luigi's Luigi Cyclone.)
         <br>
         <br><big><b>Fast falling speeds in Melee</b></big>
         <br>\t1. Falco
@@ -359,8 +359,8 @@
     ]]></string>
     <string name="ftrot_info_text" title="Fox-trot" ><![CDATA[<big><b>Fox-trot</b></big>
         <br>Fox-trotting is the technique that consists of moving along the
-        ground by repeatedly executing characters\' initial dash animation, as opposed to using their
-        full dash. Since some characters\' initial dash animations move them faster than their full dash,
+        ground by repeatedly executing characters' initial dash animation, as opposed to using their
+        full dash. Since some characters' initial dash animations move them faster than their full dash,
         these characters are able to run faster with the use of fox-trotting. Fox trotting is predominately
         used in Super Smash Bros. Melee, and characters with which the technique is most commonly executed
         are Fox, Captain Falcon, Roy, and Marth.
@@ -369,7 +369,7 @@
         <br>One way of performing a fox-trot is by flicking or tapping the control stick sideways to perform
         an initial dash, returning the stick to a neutral position to cancel the onset of the full dash,
         and then tapping the stick sideways again to perform another initial dash. This sequence can be
-        repeated to move the character along the ground, and the timing of each character\'s fox-trot is
+        repeated to move the character along the ground, and the timing of each character's fox-trot is
         different.
         <br>Fox-trotting can also be performed by jump-canceling a dash into a
         wavedash, then dashing again, or by dash-canceling a full dash into another dash.
@@ -380,7 +380,7 @@
         the opponent can then hit them with almost any move they desire, which is usually utilised to land a
         KO move.
         <br>This only works with extremely weak set knockback attacks, or attacks with extremely low base
-        knockback at very low percentages, such as the first hit in most jabs, or Falco\'s laser.
+        knockback at very low percentages, such as the first hit in most jabs, or Falco's laser.
         This is because higher knockback attacks will force the opponent into knockback. Unlike a
         normal getup from knockdown, a jab reset induced getup does not have any invincibility frames.
         Jab resets can also be used to continue a combo on an opponent even after a knockdown.
@@ -402,7 +402,7 @@
         <br>A/S/DI upwards will help you get higher from the knockback and can be used
         to keep you in the air long enough for the animation to complete before landing
         and escape a reset. For whatever reason, you are allowed to A/S/DI non-tumble KBs
-        with angles 0° or lower normally while in DownDamage. You normally can\'t A/SDI
+        with angles 0° or lower normally while in DownDamage. You normally can't A/SDI
         vertically or use any form of trajectory DI on them when on the ground.
         <br>If DownDamage ends while on the ground, however, you change actions to DownWait
         if you were still in hitstun or directly into DownStand if you were not.
@@ -411,14 +411,14 @@
         hitstun ends, but you are also able to interrupt the animation with either a
         getup stand/roll/attack at any time before then.
         <br>
-        <br>For example, Fox\'s shine, Falco\'s laser, and Peach\'s jab 1 all have no
-        knockback growth. The shine\'s KB is strong enough to stun all characters for
+        <br>For example, Fox's shine, Falco's laser, and Peach's jab 1 all have no
+        knockback growth. The shine's KB is strong enough to stun all characters for
         13+ frames, and so a reset will always be an OTR on all characters. The laser
         causes 12 or less stun on all characters and so the reset is always an OLTR.
-        The jab causes 13+ stun for everyone that is Falco\'s weight or lighter and is
+        The jab causes 13+ stun for everyone that is Falco's weight or lighter and is
         an OTR on them, but 12 or less on everyone heavier and is an OLTR on those
-        characters. For ones with KBG, Sheik\'s jab 1 and needles are an OLTR until
-        they\'re around 40 or so depending on weight, and Jiggs\' jab 1 is an OLTR
+        characters. For ones with KBG, Sheik's jab 1 and needles are an OLTR until
+        they're around 40 or so depending on weight, and Jiggs' jab 1 is an OLTR
         until near 100.
     ]]></string>
     <string name="jcgrab_info_text" title="Jump-canceled grab"><![CDATA[<big><b>Jump-canceled grab</b></big>
@@ -441,7 +441,7 @@
         by pressing the shield button 1 to 7 frames before landing in Melee.
         <br>Only regular aerial attacks can be L-canceled; special moves that have landing lag cannot. If an
         attack is auto-canceled then L-canceling has no effect. All aerials can be canceled except
-        Mr. Game &amp; Watch\'s nair, bair and uair.
+        Mr. Game &amp; Watch's nair, bair and uair.
         <br>
         <br><big><b>Performing</b></big>
         <br>L-canceling in Melee is performed by pressing L, R or Z up to 7 frames before landing.
@@ -461,7 +461,7 @@
         and for extremely fast followups using attacks that do not normally have combo potential. While all
         aerial attacks can be ledge-canceled, not all aerial special attacks can be. Attempting to cancel
         one of these specials will usually result in the character remaining on the stage for the rest of
-        the lag of the attack. Some special moves, like Link\'s Spin Attack can be ledge-canceled without
+        the lag of the attack. Some special moves, like Link's Spin Attack can be ledge-canceled without
         ever leaving the ground simply by running at the edge and performing the special move with good timing.
         <br>
         <br><big><b>Performing the technique</b></big>
@@ -542,7 +542,7 @@
         <br><big><b>PC drop</b></big>
         <br>This is the method performed in the video above. It can only be performed from a walk and requires
         consistent precision. PC dropping allows for good mixups and a easy way to get to the ledge from a walk.
-        <br>To PC drop you walk towards the ledge of the stage and when you\'re somewhat close to the ledge perform a
+        <br>To PC drop you walk towards the ledge of the stage and when you're somewhat close to the ledge perform a
         walk turnaround. Your characters traction will keep you moving and you will fall onto the ledge and grab it.
         <br>To learn how to perform, watch this video from MikeHaze: https://youtu.be/yw9pfO9UORU.
     ]]></string>
@@ -555,7 +555,7 @@
         (3 for Link) and has complete intangibility that lasts 30 frames longer than the CliffCatch animation.
         On the last frame of CliffCatch, the player can perform all ledge options except letting go (ledge attack,
         ledge roll, ledge climb, ledge jump).
-        <br>If the player doesn\'t perform any of these, he/she enters the CliffWait
+        <br>If the player doesn't perform any of these, he/she enters the CliffWait
         animation during which he/she can also let go of the ledge. The player now has 29 frames of intangibility left
         that he/she can use freely. As soon as Link drops from the ledge, the Disabled Regrab Period countdown-timer
         starts at 29. Thus, maintaining continuous invincibility requires dropping from the ledge on the first
@@ -567,17 +567,17 @@
         <br><big><b>Up-B ledgestall</b></big>
         <br>Up-B ledgestall
         <br>Zelda, Sheik, Fox, Falco, Mewtwo and Pikachu (possibly others as well?) can ledgestall with their up
-        specials. Sheik\'s \"Shino Stall\", named after Japanese Sheik player Shino, is by far the easiest and
+        specials. Sheik's \"Shino Stall\", named after Japanese Sheik player Shino, is by far the easiest and
         most useful as her up special has innate intangibility, a strong hitbox and many movement options.
         <br>
         <br><b>How to perform</b>
         <br>This technique can be performed by putting the control stick back, so you ledge drop, then jumping and
-        using your Up-B right when you\'re at the ledge.
+        using your Up-B right when you're at the ledge.
         <br>For Fox and Falco it is possible to skip jumping and just Up-B if you do the proper timing.
         <br>
         <br><big><b>Ledgehopstall</b></big>
         <br>This ledgestall is only possible with Captain Falcon, Ganondorf, Link, Roy and Bowser. (While
-        it is possible to do with most characters, it\'ll take longer than 29 frames so they would no longer be intangible.)
+        it is possible to do with most characters, it'll take longer than 29 frames so they would no longer be intangible.)
         <br>By dropping from the ledge and immediately holding down to fastfall, these characters can abuse
         their high falling acceleration and low second jump height to reach the ledge and start falling
         again within 29 frames after having dropped from the ledge.
@@ -592,7 +592,7 @@
         <br>By letting go of the ledge, jumping towards it and wavelanding away from it, the ledgegrab box
         overlaps the ledge again just when the ledge intangibility has ended for most of the cast. Some characters,
         like Marth, need to fastfall in order to get down far enough in time before the intangibility has run
-        out while others, like Captain Falcon need to waste a few frames so they don\'t fall below the
+        out while others, like Captain Falcon need to waste a few frames so they don't fall below the
         stage before the intangibility ends.
     ]]></string>
     <string name="marthkiller_info_text" title="Marth killer"><![CDATA[<big><b>Marth killer</b></big>
@@ -608,19 +608,19 @@
         <br>The Marth Killer is an excellent tool to edgeguard Marth (and some other characters with linear recoveries).
         Marth Killer is best used when your opponent attempts a low recovery, or you know he/she has to recover
         with the Up-B move. If performed successfully, the Marth will fall past the ledge and lose their stock since you
-        are moved onto the ledge. If the Marth performs higher than expected you\'ll usually be able to punish the
-        Marth if you\'re quick enough.
+        are moved onto the ledge. If the Marth performs higher than expected you'll usually be able to punish the
+        Marth if you're quick enough.
         <br>
         <br><big><b>How to perform</b></big>
         <br>To perform a Marth Killer you:
-        <br><b>Step 1:</b> Roll all the way to the ledge, make sure you\'re facing away from the ledge.
+        <br><b>Step 1:</b> Roll all the way to the ledge, make sure you're facing away from the ledge.
         <br><b>Step 2:</b> Hold Z while you roll, this will have you bring up your lightshield as fast as possible.
         <br><b>Step 3:</b> Carefully bring your control stick to your backside and slightly downward.
-        Too fast and you\'ll roll.
+        Too fast and you'll roll.
         <br><b>Step 4:</b> If you are using a character that falls fast, like Fox or Falco, there is
         no need to angle it downward. Just behind you.
         <br><b>Step 5:</b> Wait for the approach, the opponent will either fall past the ledge that you
-        take control of, or land close to the ledge, where if you\'re fast enough you may punish,
+        take control of, or land close to the ledge, where if you're fast enough you may punish,
 
     ]]></string>
     <string name="moonwalk_info_text" title="Moonwalk"><![CDATA[<big><b>Moonwalk</b></big>
@@ -638,7 +638,7 @@
         shape instead of a semicircular shape. This should result in the user doing a backwards slide, but
         in a state more similar to dashing than to wavedashing.
         <br>Alternatively, its possible to moonwalk by very quickly smashing the control stick backwards after
-        the first frame of a dash, fast enough that the game doesn\'t detect the stick in the neutral position.
+        the first frame of a dash, fast enough that the game doesn't detect the stick in the neutral position.
         This variation yields slightly longer moonwalks and is thus considered a perfect moonwalk, but the
         sub-frame precision required is exceptionally difficult, and so outside of TAS scenarios it is never
         seen in practice.
@@ -689,12 +689,12 @@
         <br>Often abbreviated as NIL, no-impact landing occurs when a character lands on any platform at the apex of their jump.
         The no-impact land is lagless and lacks the 4 frame crouch animation that typically occurs after landing from the
         air. This allows characters to immediately attack, shield, etc. from the platform.
-        <br>Due to Ganondorf\'s doublejump height, he can easily do invincible attacks from the ledge. If done perfectly,
+        <br>Due to Ganondorf's doublejump height, he can easily do invincible attacks from the ledge. If done perfectly,
         there are 8 frames of invincibility to work with, so jab and grab can both be done with full invincibility.
-        If they\'re trying to space on the ledge, ftilt can also catch them, although you will become vulnerable on the
+        If they're trying to space on the ledge, ftilt can also catch them, although you will become vulnerable on the
         frame that the hitbox comes out which could result in a trade. NIL Jab is a good option since it has decent
         range for a jab, has a 5 frame margin of error, and is just a generally good \"get outta here\" move.
-        <br>Every character can do no impact lands. It\'s very easy to see the technique demonstrated if you take Falco
+        <br>Every character can do no impact lands. It's very easy to see the technique demonstrated if you take Falco
         to battlefield and fullhop to the top platform since the top platform is exactly the same as his fullhop height.
         <br>Floaty characters are the easiest to do No Impact Lands with since they hover at the apex of their jump for a
         longer time.
@@ -706,13 +706,13 @@
         will immediately land, experiencing only 1 frame of landing lag, rather than the extra time needed to fall back down
         onto the platform, and the 4 frames of landing lag that occur when you land normally.
         <br>It can be performed from the ledge for some characters (and provide a few frames of extra invincibility from
-        ledge hoping or can be performed onto a pass through platform, such as the platforms in Battlefield or Yoshi\'s
+        ledge hoping or can be performed onto a pass through platform, such as the platforms in Battlefield or Yoshi's
         Story.
         <br>
         <br><big><b>How to perform</b></big>
-        <br>To perform this technique, jump in whatever way allows the jump to reach it\'s apex (the highest point),
+        <br>To perform this technique, jump in whatever way allows the jump to reach it's apex (the highest point),
         right above the platform. Easy ways to witness a no-impact landing are to full hop with Falco onto the top platform
-        in Battlefield, and to hop backwards with Falcon onto the top platform in Yoshi\'s Story.
+        in Battlefield, and to hop backwards with Falcon onto the top platform in Yoshi's Story.
         <br>
         <br><b>More info</b>
         <br>For more info, check out this video from PewPewU: https://youtu.be/XhujDoRBXeY
@@ -735,7 +735,7 @@
         <br><big><b>How to perform</b></big>
         <br>Drop through a platform that the character is standing on.
         Exactly one frame afterwards, use any aerial attack, land it on an opponent, and L-cancel.
-        <br>If done correctly, a platform cancel will occur, your character would\'ve performed an
+        <br>If done correctly, a platform cancel will occur, your character would've performed an
         aerial (and landed it) all while staying on top of the platform.
         <br>
         <br><big><b>Applicable attacks in Melee</b></big>
@@ -824,19 +824,19 @@
         <br>Powershielding is done by quickly and fully depressing a shield button four frames before an attack connects. If done correctly,
         there will be a significant flash on the shield and a distinctive \"chlink\" sound. Because it is technically a shield, it is
         ineffective against grabs.
-        <br>CPU players, especially level 9s, use this technique a lot. Human players don\'t use it as much simply because of the reaction
+        <br>CPU players, especially level 9s, use this technique a lot. Human players don't use it as much simply because of the reaction
         times and precision usually required. As such, it often comes as a surprise and can momentarily disrupt a match. At high level
-        play, powershielding can be used to reflect a wave of incoming projectiles such as Falco\'s laser, to punish camping.
+        play, powershielding can be used to reflect a wave of incoming projectiles such as Falco's laser, to punish camping.
         Powershielding can reflect projectiles during the first two frames.
         <br>
         <br><big><b>Explanation</b></big>
         <br>Power shielding is accomplished by fully pressing L or R such that the shield appears
-        just before the incoming attack would hit you. More specifically, the full shield bubble\'s inner reflection hitbox
+        just before the incoming attack would hit you. More specifically, the full shield bubble's inner reflection hitbox
         must connect with the hitbox of the incoming attack within 4 frames of activating the shield. Should a projectile
         hit on frames 1 or 2 of the powershield,
         the technique will reflect projectiles at half the original damage. Though the technique is difficult to perform
         consistently, powershielding is extremely valuable in competitive play, as it allows players to punish moves with
-        low ending lag such as Fox\'s neutral aerial. Its ability to reflect projectiles is even more valuable as it allows
+        low ending lag such as Fox's neutral aerial. Its ability to reflect projectiles is even more valuable as it allows
         players to punish otherwise safe, predictable projectile spam, particularly in the Falco matchup, whose lasers can
         shut off many options and leave a player completely helpless if not dealt with properly.
         <br>Though difficult, powershielding projectiles is still humanly possible to perform consistently. Players
@@ -847,10 +847,10 @@
         <br>Powershield follow-up is also distance dependent. A laser is considered safe if fired when Falco and his opponent
         are standing a distance X between each other, where X is the max horizontal distance Falco can jump in 1 short hop.
         At this distance, powershielding the lasers yield no follow ups and attempting to move around them by jumping,
-        rolling, or going under them with attacks that lower hurtboxes (like Marth\'s dash attack) put the opponent in
+        rolling, or going under them with attacks that lower hurtboxes (like Marth's dash attack) put the opponent in
         positions Falco has an easier time winning neutral in. However, if the laser is fired too far away, for example at
         distance 1.5X, the laser is not safe, as powershielding does yield follow-ups such as a grab.
-        <br>Yoshi\'s shield sometimes powershields attacks even when the shield is already up.
+        <br>Yoshi's shield sometimes powershields attacks even when the shield is already up.
     ]]></string>
     <string-array name="shielddrop_group" title="Shield dropping" amount="2">
         <item name="shielddrop_info_text" title="Shield drop"><![CDATA[<br><big><b>Shield dropping</b></big>
@@ -874,7 +874,7 @@
             from the dash. They are also usually the fastest way to drop through a platform.
             <br>
             <br><big><b>Uses</b></big>
-            <br>Shai drops can be useful in a situation where you\'d usually drop through the platform and NAir or FAir,
+            <br>Shai drops can be useful in a situation where you'd usually drop through the platform and NAir or FAir,
             but instead you can dash back, shai drop, and BAir (which is usually stronger). It can also be
             used for mix-ups and mindgames since you can quickly drop through platforms without any foretelling.
             <br>
@@ -884,7 +884,7 @@
             moment apart from positioning the stick down and shielding.
             <br>This method is more lenient and
             potentially faster than the aforementioned stick down method since
-            you don\'t need to worry spot dodging if you press the shield too soon after the stick is positioned.
+            you don't need to worry spot dodging if you press the shield too soon after the stick is positioned.
             <br>The downside of this method is that you must have a decently precise joystick in
             order for it to be at all possible.
             <br>
@@ -912,20 +912,20 @@
         <br>\tL, R, or Z
         <br>
         <br>The last one can be skipped for certain aerials if the aerial is performed very early and has reached
-        its auto-cancel frames or ended completely upon landing. For example, Marth\'s neutral aerial and
+        its auto-cancel frames or ended completely upon landing. For example, Marth's neutral aerial and
         forward aerial do not have a very long duration, so Marth will hit the ground after his aerial is over.
         This can be tested by using a short hop fast fall (without the L-cancel) with the aforementioned moves.
         The player should land without the usual special effects and minor lag. This phenomenon is known as an
-        \"Autocanceled aerial\" or an \"Early SHFFL\", and in Marth\'s case, an \"AC Nair.\"
+        \"Autocanceled aerial\" or an \"Early SHFFL\", and in Marth's case, an \"AC Nair.\"
     ]]></string>
     <string name="shieldpress_info_text" title="Shield pressure"><![CDATA[<big><b>Shield pressure</b></big>
         <br>Shield pressure is a combination of attacks that enables a
-        character to break an opponent\'s shield without the opponent having to hold down shield for the
+        character to break an opponent's shield without the opponent having to hold down shield for the
         duration of the combo.
         <br>
         <br><big><b>How it works</b></big>
         <br>Normally, when one is shielding and then lets go of the shield button, the shield disappears.
-        This does not happen when the shield is under attack. If one lets go of shield while the opponent\'s
+        This does not happen when the shield is under attack. If one lets go of shield while the opponent's
         attacks are making contact with the shield, the shield will stay until the attacks stop for a
         certain amount of time (this is called shield stun). As the attacks make contact, the shield
         gradually shrinks. If the shield size decreases too much, the shield will break, causing the
@@ -940,7 +940,7 @@
         else the shielder will be shield jabbed. Therefore, a large hitbox is required to hit the increasingly diminutive shield.
         <br>
         <br><b>Examples</b>
-        <br>\tFox\'s Shine cancel chain
+        <br>\tFox's Shine cancel chain
         <br>
         <br><big><b>Variants, special situations</b></big>
         <br>There exist combos that are not always called \"true shield break combos,\" but nevertheless can be
@@ -950,13 +950,13 @@
         <br>
         <br><b>Examples</b>
         <br>\tPillaring with Falco
-        <br>\tPeach\'s down smash
-        <br>\tYoshi\'s down aerial
+        <br>\tPeach's down smash
+        <br>\tYoshi's down aerial
         <br>\tA low-cooldown attack into a multi-hit attack is often considered a shield break combo
     ]]></string>
     <string name="shop_info_text" title="Short hop"><![CDATA[<big><b>Short hop</b></big>
         <br>Performed by pressing the jump button or pushing the control stick
-        upward (easier if control stick isn\'t pushed all the way) and letting go before the character leaves the ground,
+        upward (easier if control stick isn't pushed all the way) and letting go before the character leaves the ground,
         this will results in a jump that is lower than a normal jump.
         <br>
         <br><big><b>Usage in play</b></big>
@@ -975,18 +975,18 @@
     ]]></string>
     <string name="twobble_info_text" title="Team wobble"><![CDATA[<big><b>Team Wobble</b></big>
         <br>This is a group technique, performed by two players on a team continuously grabbing a single opponent
-        just as they escape from the other\'s grab (or throw). Two players stand on each side of their target,
+        just as they escape from the other's grab (or throw). Two players stand on each side of their target,
         with one grabbing and pummelling, the other waiting to catch the opponent when they manage to escape;
         they then trade duties and repeat.
         <br>The team wobble can also be performed with throws delivering low
         knockback; performing it with throws makes it impossible to escape out of using an air release and does
-        not require prediction of the opponent\'s escape like the grab release version does. As long as both players
+        not require prediction of the opponent's escape like the grab release version does. As long as both players
         grab correctly, this is a team infinite. Although all characters can perform this, those with fast and long
         grabs (such as Marth) are better at team wobbles than those with slow or short grabs (such as Bowser
         <br>It is possible to escape or at least disrupt a team wobble by forcing an air release via timely
         jump inputs.
         <br>This technique can be performed with two players on a team, or two opposing players working
-        together (although they must be sure not to get hit by each others\' pummels).
+        together (although they must be sure not to get hit by each others' pummels).
         <bt>Because of stale-move negation,
         this strategy takes a large amount of time to build up notable damage, so is mostly use for stalling the game,
         or annoying the target player.
@@ -994,9 +994,9 @@
     <string name="tech_info_text" title="Tech"><![CDATA[How to tech: https://youtu.be/1R0yC4ztGPI
         <br>
         <br><big><b>Tech</b></big>
-        <br>A tech is an action that can be performed when the player\'s character hits the
+        <br>A tech is an action that can be performed when the player's character hits the
         ground, a wall, or a ceiling while tumbling or in hitstun. To tech, the user must press the shield button
-        20 frames or fewer before hitting the surface; after that, a player won\'t be able to tech for 40 frames.
+        20 frames or fewer before hitting the surface; after that, a player won't be able to tech for 40 frames.
         Additional button or control stick input can cause different types of techs.
         <br>The word \"tech\" is borrowed from the competitive communities of other fighting games and traces its origin
         back to technical bonuses awarded in Capcom games for performing special maneuvers to escape grab attacks
@@ -1016,32 +1016,32 @@
         techroll, is a ground-based tech performed by tilting the control stick left or right when teching. The
         character will bounce from the ground into a roll-like animation during which the character moves left or
         right while invincible. This can allow characters to roll away from their impact point to complicate tech
-        chasing, but rolling against an edge will halt the roll\'s sideways movement.
+        chasing, but rolling against an edge will halt the roll's sideways movement.
         <br>
         <br><b>Wall tech</b>
         <br>A wall tech (or PassiveWall) is a tech against a wall. To wall tech, the player must press a shield button
         20 frames or fewer before hitting the wall while tumbling, reeling, or in hitstun. 20 frames after each press
-        is a 40 frame downtime window where a wall tech cannot be done, so button mashing reduces the player\'s likelihood
+        is a 40 frame downtime window where a wall tech cannot be done, so button mashing reduces the player's likelihood
         of teching. As with normal techs, the wall teching character experiences a few invincibility frames, and the
-        tech absorbs the player\'s momentum.
+        tech absorbs the player's momentum.
         <br>
         <br><b>Ledge tech</b>
         <br>A recovering character can use a form of wall tech to survive an edge-guarder. If the recovering character is
         hit with an attack very near to the ledge, he or she can smash DI towards the ledge and wall tech to absorb all
-        the knockback of the enemy\'s attack. This is usually performed by pressing the shield button to wall tech before
+        the knockback of the enemy's attack. This is usually performed by pressing the shield button to wall tech before
         pressing the control stick to DI, because of the 20 frame window in which the player can input the tech before
         hitting the wall.
         <br>
         <br><b>Wall tech jump/Wall jump tech</b>
         <br>If a jump input is active when a wall tech is performed (such as holding Up or pressing a jump button), then
         the teching character will wall jump. This is known as a wall tech jump. Every character can wall tech jump,
-        even those who cannot wall jump normally. A skilled player can survive a meteor smash (such as the Ice Climbers\'
+        even those who cannot wall jump normally. A skilled player can survive a meteor smash (such as the Ice Climbers'
         forward aerial that often ends their chaingrabs) by wall tech jumping.
         <br>
         <br><b>Ceiling tech</b>
         <br>A ceiling tech (or PassiveCeil) is a tech against a ceiling. To ceiling tech, the player must press the shield
         button 20 frames or fewer before hitting the ceiling, while in hitstun. 20 frames after each press is a 40 frame
-        downtime window where a ceiling tech cannot be done, so mashing buttons reduces the player\'s likelihood of teching.
+        downtime window where a ceiling tech cannot be done, so mashing buttons reduces the player's likelihood of teching.
         As with normal techs, the ceiling teching character experiences a few invincibility frames, and the tech absorbs
         most of the momentum. There are few situations where there is a ceiling for a player to tech off of, but
         it can happen quite frequently in the caves of life in some stages.
@@ -1055,16 +1055,16 @@
         of the stage can survive to very high damage and can immediately retaliate from otherwise-deadly blows. This unusual
         longevity is one reason Temple and similar stages are banned from tournaments.
         <br>The standing and rolling techs can be performed in more situations, such as allowing a character to avoid continued
-        assault after being knocked back. However, an opponent can frequently predict a player\'s tech patterns and strike him
+        assault after being knocked back. However, an opponent can frequently predict a player's tech patterns and strike him
         or her again after knocking him or her down; deliberately setting up such situations is known as \"tech-chasing\".
         <br>Edge-teching helps keep the character on the stage, or at least making it possible to recover to the stage.
     ]]></string>
     <string name="techchase_info_text" title="Tech-chase"><![CDATA[<big><b>Tech-chasing</b></big>
-        <br>Tech-chasing is the act of following or predicting an opponent\'s tech or
-        floor recovery in order to attack them before they can respond. Because a character\'s tech animations have
+        <br>Tech-chasing is the act of following or predicting an opponent's tech or
+        floor recovery in order to attack them before they can respond. Because a character's tech animations have
         small windows of vulnerability before ending and allowing action, it is possible to read the direction of a
-        player\'s tech and punish them. Characters with fast movement speeds like Captain Falcon are very good at
-        tech-chasing as they can reach the opponent\'s destination faster, though those with long-reaching attacks
+        player's tech and punish them. Characters with fast movement speeds like Captain Falcon are very good at
+        tech-chasing as they can reach the opponent's destination faster, though those with long-reaching attacks
         like Marth can do similarly well. With characters like Sheik placing extremely well at tourneys due to
         their ability to tech chase Fox.
         <br>Projectiles can also do a good job of tech-chasing when timed correctly.
@@ -1074,7 +1074,7 @@
         roll direction is predicted, or the defender is against an edge or a wall and ends up rolling towards it,
         therefore not moving. Teching in place (without rolling) can also allow this.
         <br>Some characters are able to incorporate tech-chasing into a chain grab sequence. A classic example is
-        Captain Falcon\'s up throw against fast-fallers in Melee. After he throws, Captain Falcon can gain another
+        Captain Falcon's up throw against fast-fallers in Melee. After he throws, Captain Falcon can gain another
         grab by successfully tech-chasing his enemy.
     ]]></string>
     <string-array name="walljump_group" title="Wall jumping" amount="3">
@@ -1106,7 +1106,7 @@
         input Back-Air and hold back towards the wall. As soon as you touch the wall, tap away again and
         repeat the process. This technique works because performing an aerial will interrupt the preset
         arc that your character would normally jump in. Once the Aerial begins, you have control over your
-        character, and can pull them back towards the stage. Because you can\'t wall jump during an attack,
+        character, and can pull them back towards the stage. Because you can't wall jump during an attack,
         you want to use your shortest Aerial. Both Back-Air and Neutral-Air last 40 frames for YL, but
         Back-Air is significantly easier to execute, since you can just smash both sticks towards the stage.
     ]]></item>
@@ -1114,20 +1114,20 @@
         <br>
         <br><big><b>Ledge Wall Jumping</b></big>
         <br>Ledge wall jumping is wall jumping instantly from a
-        ledge you\'re holding on without using your second jump.
+        ledge you're holding on without using your second jump.
         <br>
-        <br>Ledge wall jumping is done solely by smashing the stick away from the stage while you\'re holding to an edge.
+        <br>Ledge wall jumping is done solely by smashing the stick away from the stage while you're holding to an edge.
         <br>
         <br>How to perform</b></big>
-        <br>Grab the ledge, let go (with or without fastfalling), double jump towards the wall so that at one point you\'ll
+        <br>Grab the ledge, let go (with or without fastfalling), double jump towards the wall so that at one point you'll
         be sliding along it (this is important), and so that you catch the ledge again as soon as possible in your double
         jump (thus you have to double jump at a certain height, and you have to take the risk to double jump too low and miss the edge)
-        <br>While grabbing the ledge, smash away with the control stick (It isn\'t always necessary but if you don\'t do it, it might not work).
-        <br>Then, you\'re ready to ledge wall jump : you have to smash the stick away in 1 frame to wall jump (if not, it\'ll start
-        registering it as a tilt and you\'ll let go of the edge normally)
+        <br>While grabbing the ledge, smash away with the control stick (It isn't always necessary but if you don't do it, it might not work).
+        <br>Then, you're ready to ledge wall jump : you have to smash the stick away in 1 frame to wall jump (if not, it'll start
+        registering it as a tilt and you'll let go of the edge normally)
         <br>
-        <br>This is not the only way to get a ledgewall jump, It\'s been done FD\'s ledge after grabbing the ledge with a Firefox.
-        <br>It\'s also possible to ledge wall jump, shine, turn around, fall a bit, double jump, grab the edge, ledge wall jump again.
+        <br>This is not the only way to get a ledgewall jump, It's been done FD's ledge after grabbing the ledge with a Firefox.
+        <br>It's also possible to ledge wall jump, shine, turn around, fall a bit, double jump, grab the edge, ledge wall jump again.
         <br>
         <br>Possible with all the characters that can wall jump
         <br>
@@ -1137,13 +1137,13 @@
         <br><b>Step 3:</b> Double jump* back to the ledge, making sure that you rub up against the wall as you do so.
         <br><b>Step 4:</b> While hanging from the ledge, quick tap away.
         <br>
-        <br>*You don\'t have to double jump. You can also use a Special attack, so long as you make sure that you
+        <br>*You don't have to double jump. You can also use a Special attack, so long as you make sure that you
         are touching the wall on the way to the ledge.
     ]]></item>
         <item name="reversewalljump_info_text" title="Reverse wall jump"><![CDATA[<big><b>Reverse wall jumping</b></big>
         <br>It is actually possible to perform a reverse wall jump with
         any character capable of wall jumping on tournament legal stages. This glitch is similar to the ledge wall jump
-        which stores the wall jump from riding up Final Destination\'s ledge when you grab the ledge and when
+        which stores the wall jump from riding up Final Destination's ledge when you grab the ledge and when
         you press away it instantly activates the wall jump.
         <br>
         <br><big><b>How it works</big></b>
@@ -1161,7 +1161,7 @@
         <br><b>Ways of storing wall jumps</b>
         <br>
         <br>1. Use a grounded special including an Up-B\ (with the exception of Mario)against a wall. Even
-        though Up-B\'s put you airborne and then into freefall this is considered a separate state called
+        though Up-B's put you airborne and then into freefall this is considered a separate state called
         SpecialFall and the game does not update if you are hugging a wall in this state.
         <br>
         <br>2. Start a jump and on the frame before you go airborne enter an aerial or special
@@ -1181,7 +1181,7 @@
         for one frame and pressing it into the wall on the next frame.
         <br>
         <br>It is also possible for Fox, Falco, Young Link, and Mario to perform a reverse wall jump
-        from Final Destination\'s ledge by dropping from the ledge by inputting down or away
+        from Final Destination's ledge by dropping from the ledge by inputting down or away
         on the control and the next frame pressing analog into the wall. Mario is also
         capable of performing this on FoD and Pokemon Stadium.
         <br>
@@ -1206,12 +1206,12 @@
         sharp angle into the ground. The length a character slides in their wavedash is determined by a number
         of factors: by the angle at which they air dodged (low angles yield long wavedashes), how close to
         ground they were before air dodging (the closer the character, the longer the wavedash), and the
-        character\'s traction. Low traction yields long wavedashes, while high traction yields short
+        character's traction. Low traction yields long wavedashes, while high traction yields short
         wavedashes. Thus characters like Luigi, Ice Climbers, and Marth have long wavedashes, while Peach
         and Zelda have short wavedashes. Both long and short wavedashes have their own advantages and
         disadvantages; while long wavedashes are generally better for approaching and wavesmashing, shorter
         wavedashes are better for comboing and positioning.
-        <br>As the length of a wavedash is dependent on the character\'s traction, surfaces which reduce
+        <br>As the length of a wavedash is dependent on the character's traction, surfaces which reduce
         traction can significantly increase the lengths of wavedashes for all characters, such as the UFO
         on Fourside and the oil slick on Flat Zone. However, none of the tournament legal stages for
         Melee feature such surfaces.
@@ -1253,7 +1253,7 @@
         to wavedash only by pressing the two buttons (jump and air dodge) instead of timing a
         control stick movement as well. This method of wavedashing, however, is slow and not
         optimal for battle.
-        <br>The speed of a character\'s jump also impacts the timing of their wavedash - the
+        <br>The speed of a character's jump also impacts the timing of their wavedash - the
         time interval between the jump and the air dodge is greater for characters with slow
         jumps (like Bowser and Link) and smaller for characters with fast jumps (like Fox and
         Pikachu). That said, during a match, one must compensate for startup lag in a wavedash,
@@ -1264,7 +1264,7 @@
         they can perform any ground attacks that could normally be performed from a standing
         position, such as smashes, standing grabs and jabs. The character also retains all of
         their standing defensive maneuvers such as sidestepping and shielding. With this extra
-        utility, wavedashing enables a moving versatility dashing can\'t match.
+        utility, wavedashing enables a moving versatility dashing can't match.
         <br>Another advantage lies in the ability to wavedash backwards while facing forwards,
         which allows characters to perform standing attacks while moving both backwards and
         forwards. This is helpful for mindgames, especially with characters with longer
@@ -1293,7 +1293,7 @@
         <br>
         <br>Note: You cannot spam L/R for this.
         <br>
-        <br>/u/achilles1515 discovered this tech while reverse engineering some of Melee\'s code.
+        <br>/u/achilles1515 discovered this tech while reverse engineering some of Melee's code.
         <br>
         <br>Video about V-canceling: https://youtu.be/J0je2cwI2eQ
     ]]></string>

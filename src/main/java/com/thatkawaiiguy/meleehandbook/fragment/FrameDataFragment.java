@@ -82,93 +82,93 @@ public class FrameDataFragment extends Fragment {
 
             switch (i) {
                 case 0: {
-                    childObjectList.add(new CustomChildObject().setChildText(tiltList[0]));
-                    childObjectList.add(new CustomChildObject().setChildText(tiltList[1]));
-                    childObjectList.add(new CustomChildObject().setChildText(tiltList[2]));
+                    childObjectList.add(new CustomChildObject(tiltList[0]));
+                    childObjectList.add(new CustomChildObject(tiltList[1]));
+                    childObjectList.add(new CustomChildObject(tiltList[2]));
                     if (actionBarTitle.equals("Marth") || actionBarTitle.equals("Sheik") ||
                             actionBarTitle.equals("Yoshi") || actionBarTitle.equals("Princess Peach"))
                         break;
-                    childObjectList.add(new CustomChildObject().setChildText(tiltList[3]));
-                    childObjectList.add(new CustomChildObject().setChildText(tiltList[4]));
+                    childObjectList.add(new CustomChildObject(tiltList[3]));
+                    childObjectList.add(new CustomChildObject(tiltList[4]));
                 }
                 break;
                 case 1: {
-                    childObjectList.add(new CustomChildObject().setChildText(aerialList[0]));
-                    childObjectList.add(new CustomChildObject().setChildText(aerialList[1]));
-                    childObjectList.add(new CustomChildObject().setChildText(aerialList[2]));
-                    childObjectList.add(new CustomChildObject().setChildText(aerialList[3]));
-                    childObjectList.add(new CustomChildObject().setChildText(aerialList[4]));
+                    childObjectList.add(new CustomChildObject(aerialList[0]));
+                    childObjectList.add(new CustomChildObject(aerialList[1]));
+                    childObjectList.add(new CustomChildObject(aerialList[2]));
+                    childObjectList.add(new CustomChildObject(aerialList[3]));
+                    childObjectList.add(new CustomChildObject(aerialList[4]));
                 }
                 break;
                 case 2: {
-                    childObjectList.add(new CustomChildObject().setChildText(smashList[0]));
-                    childObjectList.add(new CustomChildObject().setChildText(smashList[1]));
-                    childObjectList.add(new CustomChildObject().setChildText(smashList[2]));
+                    childObjectList.add(new CustomChildObject(smashList[0]));
+                    childObjectList.add(new CustomChildObject(smashList[1]));
+                    childObjectList.add(new CustomChildObject(smashList[2]));
                 }
                 break;
                 case 3: {
-                    childObjectList.add(new CustomChildObject().setChildText(normalList[0]));
+                    childObjectList.add(new CustomChildObject(normalList[0]));
                     switch(actionBarTitle) {
                         case "Marth":
                         case "Jigglypuff":
                         case "Samus Aran":
                         case "Ice Climbers":
                         case "Yoshi":
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[1]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[3]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[4]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[5]));
+                            childObjectList.add(new CustomChildObject(normalList[1]));
+                            childObjectList.add(new CustomChildObject(normalList[3]));
+                            childObjectList.add(new CustomChildObject(normalList[4]));
+                            childObjectList.add(new CustomChildObject(normalList[5]));
                             break;
                         case "Captain Falcon":
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[1]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[6]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[2]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[3]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[4]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[5]));
+                            childObjectList.add(new CustomChildObject(normalList[1]));
+                            childObjectList.add(new CustomChildObject(normalList[6]));
+                            childObjectList.add(new CustomChildObject(normalList[2]));
+                            childObjectList.add(new CustomChildObject(normalList[3]));
+                            childObjectList.add(new CustomChildObject(normalList[4]));
+                            childObjectList.add(new CustomChildObject(normalList[5]));
                             break;
                         case "Luigi":
                         case "Dr. Mario":
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[1]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[6]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[3]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[4]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[5]));
+                            childObjectList.add(new CustomChildObject(normalList[1]));
+                            childObjectList.add(new CustomChildObject(normalList[6]));
+                            childObjectList.add(new CustomChildObject(normalList[3]));
+                            childObjectList.add(new CustomChildObject(normalList[4]));
+                            childObjectList.add(new CustomChildObject(normalList[5]));
                             break;
                         case "Ganondorf":
                         case "Pikachu":
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[5]));
+                            childObjectList.add(new CustomChildObject(normalList[5]));
                             break;
                         default:
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[1]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[2]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[3]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[4]));
-                            childObjectList.add(new CustomChildObject().setChildText(normalList[5]));
+                            childObjectList.add(new CustomChildObject(normalList[1]));
+                            childObjectList.add(new CustomChildObject(normalList[2]));
+                            childObjectList.add(new CustomChildObject(normalList[3]));
+                            childObjectList.add(new CustomChildObject(normalList[4]));
+                            childObjectList.add(new CustomChildObject(normalList[5]));
                             break;
                     }
                 }
                 break;
                 case 4: {
-                    childObjectList.add(new CustomChildObject().setChildText(specialList[0]));
+                    childObjectList.add(new CustomChildObject(specialList[0]));
                     if (!actionBarTitle.equals("Marth")) {
                         if(!actionBarTitle.equals("Yoshi"))
-                            childObjectList.add(new CustomChildObject().setChildText(specialList[1]));
-                        childObjectList.add(new CustomChildObject().setChildText(specialList[2]));
+                            childObjectList.add(new CustomChildObject(specialList[1]));
+                        childObjectList.add(new CustomChildObject(specialList[2]));
                         if(!actionBarTitle.equals("Dr. Mario"))
-                            childObjectList.add(new CustomChildObject().setChildText(specialList[3]));
+                            childObjectList.add(new CustomChildObject(specialList[3]));
                     } else {
-                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[0]));
-                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[1]));
-                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[2]));
-                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[3]));
-                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[4]));
-                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[5]));
-                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[6]));
-                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[7]));
-                        childObjectList.add(new CustomChildObject().setChildText(marthSpecialList[8]));
-                        childObjectList.add(new CustomChildObject().setChildText(specialList[2]));
-                        childObjectList.add(new CustomChildObject().setChildText(specialList[3]));
+                        childObjectList.add(new CustomChildObject(marthSpecialList[0]));
+                        childObjectList.add(new CustomChildObject(marthSpecialList[1]));
+                        childObjectList.add(new CustomChildObject(marthSpecialList[2]));
+                        childObjectList.add(new CustomChildObject(marthSpecialList[3]));
+                        childObjectList.add(new CustomChildObject(marthSpecialList[4]));
+                        childObjectList.add(new CustomChildObject(marthSpecialList[5]));
+                        childObjectList.add(new CustomChildObject(marthSpecialList[6]));
+                        childObjectList.add(new CustomChildObject(marthSpecialList[7]));
+                        childObjectList.add(new CustomChildObject(marthSpecialList[8]));
+                        childObjectList.add(new CustomChildObject(specialList[2]));
+                        childObjectList.add(new CustomChildObject(specialList[3]));
                     }
                 }
                 break;

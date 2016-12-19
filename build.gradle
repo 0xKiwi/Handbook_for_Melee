@@ -39,4 +39,6 @@ dependencies {
     compile 'com.bignerdranch.android:expandablerecyclerview:1.0.3'
     compile 'com.r0adkll:slidableactivity:2.0.4'
     compile 'com.anjlab.android.iab.v3:library:1.0.+'
+    compile 'com.tickaroo.tikxml:annotation:0.8.9-SNAPSHOT'
+    compile 'com.tickaroo.tikxml:core:0.8.9-SNAPSHOT'
 }

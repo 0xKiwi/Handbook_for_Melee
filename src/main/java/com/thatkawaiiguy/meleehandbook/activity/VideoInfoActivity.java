@@ -25,6 +25,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -68,6 +69,7 @@ public class VideoInfoActivity extends AppCompatActivity {
         TextView text = (TextView) findViewById(R.id.infoText);
         text.setMovementMethod(LinkMovementMethod.getInstance());
 
+        Log.d("MEME", optionPicked + id);
         text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(id, optionPicked, getResources())));
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize
                 (this)));
@@ -75,26 +77,15 @@ public class VideoInfoActivity extends AppCompatActivity {
         infoVid = (MutedVideoView) findViewById(R.id.infoVid);
         setVideo();
 
-        /*if (Build.VERSION.SDK_INT >= 21) {
-            oldStatusColor = getWindow().getStatusBarColor();
-            getWindow().setStatusBarColor(0x00000000);
-        }
-
-        final Window activity = getWindow();
-*/
         final AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar_layout);
         if (appBarLayout != null) {
             appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
                 @Override
                 public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                     if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
-                        //if (Build.VERSION.SDK_INT >= 21)
-                        //    activity.setStatusBarColor(oldStatusColor);
                         if (infoVid.isPlaying())
                             infoVid.pause();
                     } else {
-                        //if (Build.VERSION.SDK_INT >= 21)
-                        //    activity.setStatusBarColor(0x00000000);
                         if (!infoVid.isPlaying())
                             infoVid.start();
                     }

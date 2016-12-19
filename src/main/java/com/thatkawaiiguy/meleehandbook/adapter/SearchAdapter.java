@@ -25,6 +25,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.SpannedString;
 import android.text.style.TextAppearanceSpan;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,13 +33,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.other.ItemObjects;
 
 import java.util.Locale;
 
 public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private final String[] mDataSet;
+    private final ItemObjects[] mDataSet;
 
     private int termAmount = 0;
     private int titleTermAmount = 0;
@@ -48,7 +49,7 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     private String query = "";
 
-    public SearchAdapter(String[] data, int titleNum, int titleTerms, int terms, Context context, String query) {
+    public SearchAdapter(ItemObjects[] data, int titleNum, int titleTerms, int terms, Context context, String query) {
         mDataSet = data;
         titleAmount = titleNum;
         titleTermAmount = titleTerms;
@@ -64,14 +65,11 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        String string = Html.fromHtml(ArrayHelper.getInfoString(mDataSet[position], mContext))
-                .toString();
+        String string = Html.fromHtml(mDataSet[position].getDesc()).toString();
+        highlight(query, mDataSet[position].getTitle(), ((TermAdapter.ViewHolder) holder).getTextView());
         if(ifTerm(position)){
-            highlight(query, mDataSet[position], ((TermAdapter.ViewHolder) holder).getTextView());
-            highlight(query, ArrayHelper.getTermInfoString(mDataSet[position], mContext),
-                    ((TermAdapter.ViewHolder) holder).getTermTextView());
+            highlight(query, mDataSet[position].getDesc(), ((TermAdapter.ViewHolder) holder).getTermTextView());
         } else {
-            highlight(query, mDataSet[position], ((TermAdapter.ViewHolder) holder).getTextView());
             highlightAndCut(query, string, ((TermAdapter.ViewHolder) holder).getTermTextView());
         }
     }
@@ -88,9 +86,10 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     yellowColor, null);
 
             spannable.setSpan(highlightSpan, startPos, endPos, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            textView.setText(spannable);
-        } else
-            textView.setText(originalText);
+            textView.setText(Html.toHtml(spannable));
+        } else {
+            textView.setText(Html.toHtml(new SpannableString(originalText)));
+        }
     }
 
     private void highlightAndCut(String search, String originalText, TextView textView) {
@@ -105,7 +104,8 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         int wholeEnd = originalText.toLowerCase().indexOf(" ", endPos + 100 < originalText.length
                 () - 1 ? endPos + 100 : endPos - search.length() - 1);
 
-        if(wholeEnd == -1) wholeEnd = endPos;
+        if(wholeEnd == -1)
+            wholeEnd = endPos;
 
         originalText = originalText.substring(wholeStart, wholeEnd).trim() + " (Click for more)";
 
@@ -120,9 +120,9 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                     yellowColor, null);
 
             spannable.setSpan(highlightSpan, startPos, endPos, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-            textView.setText(spannable);
+            textView.setText(Html.toHtml(spannable));
         } else
-            textView.setText(originalText);
+            textView.setText(Html.toHtml(new SpannedString(originalText)));
     }
 
     @Override
