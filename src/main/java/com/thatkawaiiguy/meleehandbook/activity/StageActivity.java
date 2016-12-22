@@ -29,7 +29,7 @@ public class StageActivity extends ImageInfoActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(R.xml.characters, optionPicked, getResources())));
+        text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(R.xml.stages, optionPicked, getResources())));
 
         switch (optionPicked) {
             case "Battlefield":

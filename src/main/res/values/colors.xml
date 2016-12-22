@@ -27,7 +27,7 @@
     <color name="dark_info_text_color">#eeffffff</color>
     <color name="info_text_color">#ff37474F</color>
     <color name="pressed_color">#70D4AE61</color>
-    <color name="activated_color">#95fdd835</color>
+    <color name="activated_color">#90fdd835</color>
     <color name="dark_bg_color">#ff212121</color>
     <color name="light_bg_color">#ffECEFF1</color>
     <color name="divider_color">#12212121</color>

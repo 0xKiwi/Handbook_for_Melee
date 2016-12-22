@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="xx_term_info" title="20XX">
-        A hypothetical future popularized by Hax where everyone plays Fox frame-perfectly. Since the only thing determining the winner of a match is port priority, the Rock-Paper-Scissors metagame has evolved \"to ridiculous levels\" and has become the only remaining factor to decide the outcome of matches. The 20XX Hack Pack and 20XX Tournament Edition are also popular mods for Melee.
+        A hypothetical future popularized by Hax where everyone plays Fox frame-perfectly. Since the only thing determining the winner of a match is port priority, the Rock-Paper-Scissors metagame has evolved "to ridiculous levels" and has become the only remaining factor to decide the outcome of matches. The 20XX Hack Pack and 20XX Tournament Edition are also popular mods for Melee.
     </string>
   <string name="airdodge_term_info" title="Air dodge">
        A technique performed by full presing the L or R button in the air. Air dodging halts momentum, gives intangibility frames to the user, and it can be angled using the control stick to give a small boost in a direction. It leaves the user in the helpless state after use.
@@ -45,14 +45,14 @@
        An improvement in a character or a certain aspect of a character, usually through an update.
     </string>
   <string name="buildabear_term_info" title="Build-a-bear combo">
-        A combo that involves several unorthodox moves to try to \"build\" a combo. https://clips.twitch.tv/srkevo1/FrailCoyoteMcaT
+        A combo that involves several unorthodox moves to try to "build" a combo. https://clips.twitch.tv/srkevo1/FrailCoyoteMcaT
     </string>
   <string name="buster_term_info" title="Buster">
         A fraud; someone who didn't meet expectaions.
     </string>
   <string name="butter_term_info" title="Butter">
         When a character charges a smash attack, they turn yellow like butter.
-        \"He put a lot of butter into that one\"
+        "He put a lot of butter into that one"
     </string>
   <string name="byoc_term_info" title="BYOC">
         Bring Your Own Controller to tournaments. They won't supply controllers.
@@ -124,7 +124,7 @@
         A match where both players choose the same character. Also known as a mirror match.
     </string>
   <string name="dong_term_info" title="Dong">
-        A shortened version of \"Donkey Kong\", used mostly in \"Expand dong\".
+        A shortened version of "Donkey Kong", used mostly in "Expand dong".
     </string>
   <string name="doormat_term_info" title="Doormat">
         When a player gets stomped (dair'd) on by Captain Falcon or Ganondorf 3 or more
@@ -145,11 +145,11 @@
     </string>
   <string name="easymoney_term_info" title="Easy money">
         Quote from smasher Bizzarro Flame at Apex 2015, when asked what he thought when
-        Ganon main Eikelmann would be going against him, Bizzarro replied \"EASY MONEY!\".
+        Ganon main Eikelmann would be going against him, Bizzarro replied "EASY MONEY!".
         https://youtu.be/97fQoffpJiM
     </string>
   <string name="ecb_term_info" title="ECB">
-        Stands for Environmental Collision Box, and is the \"bones\" of a character model in Melee.
+        Stands for Environmental Collision Box, and is the "bones" of a character model in Melee.
         The orientation and size changes of the ECB in certain moves allow for techniques like aerial interrupting
         and no-impact landing to occur.
     </string>

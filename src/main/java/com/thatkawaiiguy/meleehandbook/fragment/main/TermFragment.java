@@ -50,9 +50,9 @@ public class TermFragment extends Fragment {
         recyclerView.setAdapter(new TermAdapter(getActivity().getResources()));
         recyclerView.setHasFixedSize(true);
 
-        new MaterialScrollBar(getActivity(), recyclerView, true).setBarThickness(12).
-                setAutoHide(false).setBarColour(ContextCompat.getColor(getActivity(), R.color
-                .overscroll_color)).
+        MaterialScrollBar scrollBar = new MaterialScrollBar(getActivity(), recyclerView, true);
+        scrollBar.setBarThickness(12).setAutoHide(false)
+                .setBarColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color)).
                 setHandleColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color));
         return rootView;
     }

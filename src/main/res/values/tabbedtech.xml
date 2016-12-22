@@ -20,14 +20,14 @@
         trajectory that creates the greatest distance between the character and the blast line. In most situations,
         angling towards the upper-left or upper-right corners will grant the greatest chance of surviving a
         high-knockback attack.
-        <br>Conversely, \"poor DI\" occurs when the shortest distance between the character
+        <br>Conversely, "poor DI" occurs when the shortest distance between the character
         and the blastzone is created, or the angle sends the player into a position they cannot recover from
         when they would normally easily recover from, such as down and away from the stage. Bad DI that results
         in a death commonly occurs near the sides of the stage, when a character is hit diagonally while holding
         the Control Stick downward (commonly as a result of intentional fastfalling), which sends them on a more
         horizontal trajectory, towards the closest blast line.
         <br>The player can DI by pressing the control stick in any direction during or just after being hit by an attack.
-        There are three types of directional influence: trajectory DI (almost always referred to as just \"DI\"),
+        There are three types of directional influence: trajectory DI (almost always referred to as just "DI"),
         Smash DI, and Automatic Smash DI. These last two function much differently from trajectory DI, and
         should not be confused with it.
         <br>
@@ -72,10 +72,10 @@
         <br>The mechanics of SDI operate by shifting the character in the given direction.
         As a result, repeatedly tapping in one direction will move the character
         much farther than simply holding the stick in that direction. This results in a technique
-        called quarter-circle DI, which involves quickly rotating the stick between two \"notches\" for
+        called quarter-circle DI, which involves quickly rotating the stick between two "notches" for
         increased distance. Quarter-circle DI was introduced to the United States by smasher Captain Jack and was once
         known as Japanese DI.
-        <br>As the C-Stick can also be used for SDI, even \stronger\" forms of SDI exist. So-called double-stick DI
+        <br>As the C-Stick can also be used for SDI, even \stronger" forms of SDI exist. So-called double-stick DI
         utilizes the C-Stick\'s ability to override the control stick by holding one of the sticks in one direction
         and utilizing quarter-stick DI with the other. This is often used when a player wants to SDI one way, and DI the other.
         <br>
@@ -221,7 +221,7 @@
         you press away it instantly activates the wall jump.
         <br>
         <br><big><b>How it works</big></b>
-        <br>By manipulating the way the game detects wall jumps, the player can \"trick\" the game into thinking
+        <br>By manipulating the way the game detects wall jumps, the player can "trick" the game into thinking
         the player is wall jumping from an opposite facing wall. This is done by storing wall jumps through methods
         stated below. By performing a wall jump stored from the opposite wall you are currently on the game still gives
         you the same wall jump which would normally send you away from the stage but will now send you towards the stage.

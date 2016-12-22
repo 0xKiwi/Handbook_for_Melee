@@ -71,7 +71,7 @@ public class TechTabActivity extends AppCompatActivity {
         assert viewPager != null;
 
         viewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),
-                XMLParser.getTabs(getResources(), techPicked, id)));
+                XMLParser.getTabs(getResources(), techPicked, id, id == R.xml.standardtech ? 2 : 3)));
         tabLayout.setupWithViewPager(viewPager);
 
         switch(techPicked) {

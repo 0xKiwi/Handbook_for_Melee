@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="boomjump_info_text" title="Boomerang superjump" character="Link"><![CDATA[Examples: http://gfycat.com/GlaringFoolhardyHake
+    <string name="boomjump_info_text" title="Boomerang superjump" character="Link/Young Link"><![CDATA[Examples: http://gfycat.com/GlaringFoolhardyHake
         <br>http://gfycat.com/ForkedBruisedIberianmole
         <br>
         <br><big><b>Boomerang superjump</b></big>
@@ -54,7 +54,7 @@
         timing and maintaining a continuous string of attacks, the in-combat potential of this
         approach is clearly substantial, but largely untapped.
     ]]></string>
-    <string name="djc_info_text" title="Double jump cancel" character="Ness/Princess Peach/Yoshi"><![CDATA[Examples of DJC: https://youtu.be/O2Oa60lfkyo
+    <string name="djc_info_text" title="Double jump cancel" character="Ness/Princess Peach/Princess Zelda/Yoshi"><![CDATA[Examples of DJC: https://youtu.be/O2Oa60lfkyo
         <br>https://youtu.be/hBTgDxEqHw0
         <br>
         <br><big><b>Double jump cancel</b></big>
@@ -73,7 +73,7 @@
         canceling being significantly quicker and more useful.
         <br>
         <br><b>Yoshi</b>
-        <br>Yoshi has the ability to \"block the knockback\" of attacks because of his
+        <br>Yoshi has the ability to "block the knockback" of attacks because of his
         double jump's unique knockback armor, and is often used to catch the opponent offguard with an aerial.
         <br>One downside of this is the lack of a standard recovery, so messing up and being taken offstage
         limits Yoshi's recovery options to a directional air dodge.
@@ -83,24 +83,24 @@
         Mewtwo is speeding up its forward aerial, though it can be used to assist its up aerial and back aerial as well.
         <br>
         <br><big><b>DJC physics</b></big>
-        <br>Since the affected characters' double jumps are of the \"delayed\" type (where they do not rise immediately), interrupting
+        <br>Since the affected characters' double jumps are of the "delayed" type (where they do not rise immediately), interrupting
         the action with an attack will cause the scheduled upwards force to not take place.
         A similar mechanic can cause superjumps.
         <br>
         <br><big><b>Double jump cancel fast fall L-cancel</b></big>
-        <br>Double jump cancel fast fall L-cancel (abbreviated as \"DJCFFL") is a tactic that is simply a quicker application of the
+        <br>Double jump cancel fast fall L-cancel (abbreviated as "DJCFFL") is a tactic that is simply a quicker application of the
         double jump cancel, and is most often used by Ness, Mewtwo, and Yoshi in Melee. It allows the character in question to
         attack aerially even faster than with a SHFFL'd aerial.
         <br>
         <br><big><b>Instant double jump cancel</b></big>
         <br>Double Jump Canceling works by allowing the user to perform an air attack while remaining close to the ground (most aerial
         attacks are performed at a short hop's distance from the ground). However, if the user performs a DJC with frame-perfect
-        precision (known as an \"Instant Double Jump Cancel\" or IDJC), they will actually hit the ground before the hitbox from their
+        precision (known as an "Instant Double Jump Cancel" or IDJC), they will actually hit the ground before the hitbox from their
         air attack comes out. This is true of every attack for every character who can DJC.
         <br>
         <br><big><b>Execution</b></big>
         <br>To perform this technique, the player must perform their first jump, then double jump just as they leave the ground, and
-        perform an aerial around the start of the \"rising\" in the double jump. The player's double jump will be canceled and they will do the attack and immediately fall. The player may fast
+        perform an aerial around the start of the "rising" in the double jump. The player's double jump will be canceled and they will do the attack and immediately fall. The player may fast
         fall almost immediately. The result will cause the character using this technique
         to attack extremely quickly.
     ]]></string>
@@ -143,7 +143,7 @@
         <br>https://youtu.be/p82iyfl-yKo
         <br>
         <br><big><b>Edge-canceled eggs</b></big>
-        <br>Edge-canceled eggs (abbreviated \"ECE\") is a
+        <br>Edge-canceled eggs (abbreviated "ECE") is a
         technique for Yoshi that is performed by releasing from the edge, pressing
         down or away from the edge, double jumping, and then throwing an egg.
         After the egg is thrown, the player can grab onto the edge, canceling
@@ -275,7 +275,7 @@
         <br>Frame 12-13 The Reflector can be jump-canceled, but Falco is still in the air.
         <br>Frame 14    Beginning at this frame, Falco is grounded.
         <br>Frame 15	  Earliest frame the jump can start.
-        <br>Frame 20	  Shine 3. From here it loops to the point marked \"Shine 2\".
+        <br>Frame 20	  Shine 3. From here it loops to the point marked "Shine 2".
         <br>
         <br>Falco can shine every 11 frames.
         <br>
@@ -286,7 +286,7 @@
         <br>Frame 10	 The Reflector can be jump-canceled, but Fox is still in the air.
         <br>Frame 11	 Beginning at this frame, Fox/Falco is grounded.
         <br>Frame 12	 Earliest frame the jump can start.
-        <br>Frame 15	 Shine 3. From here the technique loops to the point marked \"Shine 2\".
+        <br>Frame 15	 Shine 3. From here the technique loops to the point marked "Shine 2".
         <br>
         <br>Fox can shine every 8 frames.
     ]]></string>
@@ -312,7 +312,7 @@
         <br>
         <br><big><b>Parry</b></big>
         <br>Also called supershielding, parrying is a technique used by Yoshi players that takes advantage of the
-        invincibility during \"guard on\" (the 6 frames of invincibility at the start of the shield)
+        invincibility during "guard on" (the 6 frames of invincibility at the start of the shield)
         as well as the ability to jump during this time. Instead of blocking attacks
         with his powershield, parrying involves blocking attacks with Yoshi's invincible body, most often his head,
         and then jumping or grabbing to avoid the lengthy unshielding animation.
@@ -338,7 +338,7 @@
         <br><big><b>Pillaring</b></big>
         <br>Pillaring refers to pressuring an opponent's shield by utilizing a combination of techniques
         (SHFFLs, aerials, and shines) performed by Fox and Falco.
-        <br>The term can also be used for a Falco shine to dair combo as the characters go up and down together, like \"pillars\".
+        <br>The term can also be used for a Falco shine to dair combo as the characters go up and down together, like "pillars".
         <br>Pillaring can lead to a defending player rolling out of their shield and being chased or having their shield broken,
         although the latter is rare in high-level play. Pressure from pillaring is usually relieved by a successfully performed
         shield grab or out-of-shield option, such as Samus's Screw Attack, Bowser's Whirling Fortress, or even Fox's shine.
@@ -349,7 +349,7 @@
         SHFFL'd down aerial, and the cycle continues. Grabs and other aerials can also be canceled into in place of the down
         aerial. This technique is sometimes used in tandem with waveshines and waveshine infinites and followed up with jabs or down tilts.
     ]]></string>
-    <string name="psspike_info_text" title="Princess/Swordsman spike" character="Marth/Princess Peach"><![CDATA[<big><b>Princess/Swordsman spiking</b></big>
+    <string name="psspike_info_text" title="Princess/Swordsman spike" character="Marth/Princess Peach/Roy"><![CDATA[<big><b>Princess/Swordsman spiking</b></big>
         <br>Princess/Swordsman spiking is done by using Peach, Marth, and Roy's counter to
         intentionally setup an invisible ceiling glitch on your opponent. For Peach
         Toad will send them in the same trajectory as normal while it will cause Marth
@@ -451,7 +451,7 @@
         three lasers respectively are shot during the short hop and no fastfall is performed.
         <br>Kirby can also perform some of these techniques by copying Fox and Falco's blaster abilities using Inhale.
         <br>
-        <br>Fox can short hop laser and short hop double laser. Both techniques are used to camp and \"tack on\" small amounts
+        <br>Fox can short hop laser and short hop double laser. Both techniques are used to camp and "tack on" small amounts
         of damage, but are much less effective at stopping approaches due to the lack of hitstun that Fox's lasers deal. Fox's
         short hop laser and short hop double laser are considered more safe and flexible than shooting lasers from the ground,
         for a number of reasons. Short hops can be maneuvered toward or away from the opponent, and the lag caused by landing
@@ -526,7 +526,7 @@
             physics exploit in Super Smash Bros. Melee that can only be performed by Samus. If the player
             performs it right, they will go a very far distance (about as long as Final Destination),
             however, it is important to release the control stick after the player performs the move,
-            otherwise their distance will not be as far. They can also \"Bombhop\" by pressing the direction
+            otherwise their distance will not be as far. They can also "Bombhop" by pressing the direction
             they want to go right before the bomb explodes.
             <br>
             <br><big><b>Execution</b></big>
@@ -559,7 +559,7 @@
             <b>Applies to:</b> Samus
             <br>
             <br><big><b>Super duper wavedash</b></big>
-            <br>A variant of the Super Wave Dash is the \"Super Duper Wavedash." Execution is similar to
+            <br>A variant of the Super Wave Dash is the "Super Duper Wavedash." Execution is similar to
             that of the Super Wave Dash, however it requires very precise timing to the point that it is only
             practical in TAS runs or for the very daring Samus mains. It is performed by doing the Super Wave Dash as normal, however on frame 46
             the player must hold down, shield on frame 47, and then immediately grab on frame 48. This causes the
@@ -714,8 +714,8 @@
         <br>The waveshine is generally used for combos with Fox. However, some characters fall over when shined. This
         presents a problem, and generally these characters are immune to waveshine combos. Note that if these
         characters crouch-cancel the shine, they will not fall over and can be treated as normal waveshine. Also,
-        using an attack after the wavedash can cause a character who has fallen over to be \"forced\" to stand up
-        (a jab reset). This is referred to as \"Thunder's Combo.\"
+        using an attack after the wavedash can cause a character who has fallen over to be "forced" to stand up
+        (a jab reset). This is referred to as "Thunder's Combo."
         <br>A waveshine can be followed up by many attacks. The choice of attacks depends on how far the opponent is
         pushed away. For example, Peach is not pushed away very far at all, but Luigi is pushed very far away. As
         such, Fox's choice of move following a waveshine against Luigi is more limited.

@@ -115,7 +115,7 @@ public class VideoInfoActivity extends AppCompatActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.jumprefresh));
                 break;
-            case "Edge canceled eggs":
+            case "Edge-canceled eggs":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.ece));
                 break;
@@ -159,11 +159,11 @@ public class VideoInfoActivity extends AppCompatActivity {
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.pillar));
                 break;
-            case "Princess/Swordsman spiking":
+            case "Princess/Swordsman spike":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.psspiking));
                 break;
-            case "RI grapple cancel":
+            case "RIG cancel":
                 infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R
                         .raw.rigc));
                 break;

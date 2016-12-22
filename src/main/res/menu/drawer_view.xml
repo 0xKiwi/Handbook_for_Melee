@@ -33,7 +33,9 @@
             android:icon="@drawable/health"
             android:title="@string/action_healthy" />
     </group>
-    <group android:checkableBehavior="none">
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
         <item
             android:id="@+id/remove"
             android:icon="@drawable/ic_gift_white_36dp"

@@ -166,7 +166,7 @@ public class XMLParser {
         return list.toArray(new String[list.size()]);
     }
 
-    public static String[] getTabs(Resources resources, String title, int id) {
+    public static String[] getTabs(Resources resources, String title, int id, int attribute) {
 
         ArrayList<String> list = new ArrayList<>();
 
@@ -181,7 +181,7 @@ public class XMLParser {
                     case XmlPullParser.START_TAG:
                         if (tagName.equalsIgnoreCase("string-array")) {
                             if (xpp.getAttributeValue(1).equalsIgnoreCase(title)) {
-                                int depth = Integer.valueOf(xpp.getAttributeValue(2));
+                                int depth = Integer.valueOf(xpp.getAttributeValue(attribute));
                                 int eventType2 = xpp.next();
                                 int i = 0;
                                 while (i < depth) {
