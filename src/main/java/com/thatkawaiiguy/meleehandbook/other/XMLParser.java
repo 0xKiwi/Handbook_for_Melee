@@ -156,7 +156,7 @@ public class XMLParser {
             while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
                 if (xpp.getEventType() == XmlPullParser.START_TAG)
                     if (xpp.getName().equals("string"))
-                        list.add(getInnerXml(xpp).replaceAll("\\s+", " ").trim());
+                        list.add(getInnerXml(xpp).replaceAll("\\s+", " ").replace("\\t","").trim());
 
                 xpp.next();
             }
