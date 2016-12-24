@@ -2,7 +2,6 @@ package com.thatkawaiiguy.meleehandbook.other;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.graphics.Canvas;
 import android.media.AudioManager;
 import android.media.MediaFormat;
 import android.media.MediaPlayer;
@@ -25,9 +24,6 @@ import java.io.InputStream;
 import java.util.Map;
 import java.util.Vector;
 
-/**
- * Created by vishna on 22/07/15.
- */
 public class MutedVideoView extends SurfaceView
         implements MediaController.MediaPlayerControl {
     private final String TAG = "VideoView";
@@ -181,7 +177,6 @@ public class MutedVideoView extends SurfaceView
         setFocusable(true);
         setFocusableInTouchMode(true);
         requestFocus();
-        mPendingSubtitleTracks = new Vector<>();
         mCurrentState = STATE_IDLE;
         mTargetState  = STATE_IDLE;
     }
@@ -222,8 +217,6 @@ public class MutedVideoView extends SurfaceView
         requestLayout();
         invalidate();
     }
-
-    private Vector<Pair<InputStream, MediaFormat>> mPendingSubtitleTracks;
 
     public void stopPlayback() {
         if (mMediaPlayer != null) {
@@ -278,8 +271,6 @@ public class MutedVideoView extends SurfaceView
             mCurrentState = STATE_ERROR;
             mTargetState = STATE_ERROR;
             mErrorListener.onError(mMediaPlayer, MediaPlayer.MEDIA_ERROR_UNKNOWN, 0);
-        } finally {
-            mPendingSubtitleTracks.clear();
         }
     }
 
@@ -543,7 +534,6 @@ public class MutedVideoView extends SurfaceView
             mMediaPlayer.reset();
             mMediaPlayer.release();
             mMediaPlayer = null;
-            mPendingSubtitleTracks.clear();
             mCurrentState = STATE_IDLE;
             if (cleartargetstate) {
                 mTargetState  = STATE_IDLE;

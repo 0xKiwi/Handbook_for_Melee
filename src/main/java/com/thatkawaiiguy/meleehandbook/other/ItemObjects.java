@@ -1,9 +1,5 @@
 package com.thatkawaiiguy.meleehandbook.other;
 
-/**
- * Created by Ivan Martinez on 12/17/2016.
- */
-
 public class ItemObjects {
     private String title;
     private String desc;

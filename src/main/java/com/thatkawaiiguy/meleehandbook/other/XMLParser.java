@@ -10,10 +10,6 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- * Created by Ivan Martinez on 12/12/2016.
- */
-
 public class XMLParser {
 
     private static String getInnerXml(XmlPullParser parser)
@@ -157,7 +153,6 @@ public class XMLParser {
                 if (xpp.getEventType() == XmlPullParser.START_TAG)
                     if (xpp.getName().equals("string"))
                         list.add(getInnerXml(xpp).replaceAll("\\s+", " ").replace("\\t","").trim());
-
                 xpp.next();
             }
         } catch (Throwable ignored) {
