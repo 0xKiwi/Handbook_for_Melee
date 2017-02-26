@@ -3,6 +3,15 @@ This an android app for Super Smash Bros. Melee
 
 It has features such as diferent themes, several options for the user to choose, beautiful Material Design, insane performance and is just darn helpful.
 
+# How to contribute
+To contribute is very easy :)
+Just email me or send a pull request of you adding a term or technique in this format:
+```
+<string name="technamehere_info_text" title="tech or term name here"><![CDATA[
+        Information here
+]]></string>
+```
+
 https://play.google.com/store/apps/details?id=com.thatkawaiiguy.meleehandbook&hl=en
 
 <blockquote class="imgur-embed-pub" lang="en" data-id="a/dMdtl"><a href="//imgur.com/a/dMdtl">Handbook for Melee for Android</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
