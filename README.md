@@ -5,7 +5,7 @@ It has features such as diferent themes, several options for the user to choose,
 
 # How to contribute
 To contribute is very easy :)
-Just email me or send a pull request of you adding a term or technique in this format:
+Just email me or send a pull request of you adding a term or technique in this format to the proper XML file:
 ```
 <string name="technamehere_info_text" title="tech or term name here"><![CDATA[
         Information here
