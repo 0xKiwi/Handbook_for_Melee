@@ -88,4 +88,9 @@ public class ArrayHelper {
         return new String[]{"Battlefield", "Dream Land", "Final Destination",
                 "Fountain of Dreams", "Kongo Jungle (SSB)", "Pokemon Stadium", "Yoshi's Story"};
     }
+
+    public static String getFileName(String title){
+        return title.toLowerCase().trim().replace(" ","").replace("-","").replace("/","")
+                .replace("&", "").replace("'","").replace(".","").replace("(","").replace(")","");
+    }
 }

@@ -16,7 +16,8 @@
         android:textColor="?android:textColorPrimary"
         android:textSize="20sp" />
 
-    <ImageView
+    <com.github.zagum.expandicon.ExpandIconView
+        android:id="@+id/expand"
         android:layout_width="42dp"
         android:layout_height="42dp"
         android:layout_gravity="right"
@@ -26,6 +27,7 @@
         android:layout_marginTop="14dp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        android:src="?arrowSelector" />
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:eiv_color="#FFF"/>
 
 </android.support.v7.widget.CardView>

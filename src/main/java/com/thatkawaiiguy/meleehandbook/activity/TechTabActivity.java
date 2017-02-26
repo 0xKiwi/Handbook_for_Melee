@@ -30,6 +30,7 @@ import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.fragment.TabFragmentAdapter;
+import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
@@ -114,24 +115,8 @@ public class TechTabActivity extends AppCompatActivity {
                     public void onTabSelected(TabLayout.Tab tab) {
                         viewPager.setCurrentItem(tab.getPosition());
                         appBar.setExpanded(true);
-                        switch(tab.getPosition()) {
-                            case 0:
-                                tabImage.setImageResource(R.drawable.di);
-                                slidrInterface.unlock();
-                                break;
-                            case 1:
-                                tabImage.setImageResource(R.drawable.sdi);
-                                slidrInterface.lock();
-                                break;
-                            case 2:
-                                tabImage.setImageResource(R.drawable.dsdi);
-                                slidrInterface.lock();
-                                break;
-                            case 3:
-                                tabImage.setImageResource(R.drawable.diangles);
-                                slidrInterface.lock();
-                                break;
-                        }
+                        tabImage.setImageResource(getResources().getIdentifier(ArrayHelper
+                                .getFileName(tab.getText().toString()), "drawable", getPackageName()));
                     }
 
                     @Override
@@ -148,6 +133,9 @@ public class TechTabActivity extends AppCompatActivity {
                     public void onTabSelected(TabLayout.Tab tab) {
                         viewPager.setCurrentItem(tab.getPosition());
                         appBar.setExpanded(true);
+
+                        tabImage.setImageResource(getResources().getIdentifier(ArrayHelper
+                                .getFileName(tab.getText().toString()), "drawable", getPackageName()));
                         switch(tab.getPosition()) {
                             case 0:
                                 tabImage.setImageResource(R.drawable.swd);
@@ -168,22 +156,14 @@ public class TechTabActivity extends AppCompatActivity {
                 });
                 break;
             case "Extended & homing grapple":
-                tabImage.setImageResource(R.drawable.egrapple);
+                tabImage.setImageResource(R.drawable.extendedgrapple);
                 tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                     @Override
                     public void onTabSelected(TabLayout.Tab tab) {
                         viewPager.setCurrentItem(tab.getPosition());
                         appBar.setExpanded(true);
-                        switch(tab.getPosition()) {
-                            case 0:
-                                tabImage.setImageResource(R.drawable.egrapple);
-                                slidrInterface.unlock();
-                                break;
-                            case 1:
-                                tabImage.setImageResource(R.drawable.hominggrapple);
-                                slidrInterface.lock();
-                                break;
-                        }
+                        tabImage.setImageResource(getResources().getIdentifier(ArrayHelper
+                                .getFileName(tab.getText().toString()), "drawable", getPackageName()));
                     }
 
                     @Override
@@ -200,16 +180,8 @@ public class TechTabActivity extends AppCompatActivity {
                     public void onTabSelected(TabLayout.Tab tab) {
                         viewPager.setCurrentItem(tab.getPosition());
                         appBar.setExpanded(true);
-                        switch(tab.getPosition()) {
-                            case 0:
-                                tabImage.setImageResource(R.drawable.shielddrop);
-                                slidrInterface.unlock();
-                                break;
-                            case 1:
-                                tabImage.setImageResource(R.drawable.shaidrop);
-                                slidrInterface.lock();
-                                break;
-                        }
+                        tabImage.setImageResource(getResources().getIdentifier(ArrayHelper
+                                .getFileName(tab.getText().toString()), "drawable", getPackageName()));
                     }
 
                     @Override

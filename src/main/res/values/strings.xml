@@ -47,16 +47,17 @@
     <string name="action_about">About</string>
     <string name="close">CLOSE</string>
     <string name="twitter">Twitter</string>
-    <string name="version">v2.1.5</string>
-    <string name="changes"><b>Post Anniversary update! Thank you everyone for your support for a whole year!</b>
-        \nI plan on doing a major rewrite soon, so I\'m fixing some issues since the rewrite will take long
-        \nNew icon! I made this one, I hope you all like it! It\'s material! :D
-        \nFix the issues regarding hitbox move listing (special moves)
-        \nFixed some issues with the video in techniques
-        \nAdded Lunchables to notable Roy players
-        \nRename Frame Data to Hitboxes
-        \nMinor fixes here and there</string>
-    <string name="about_text">\t\t\tHandbook for Melee v2.1.5
+    <string name="version">v2.5.0</string>
+    <string name="changes"><b>Just a rewrite update :)</b>
+        \nFinally added animations on the expandable lists!
+        \nFixed a good amount of info issues thanks to a contributor
+        \nAdded waveland as it\'s own technique
+        \nMade the entire app modular, if anyone wants to contribute it is much easier :)
+        \nFixed the scroll bar on terms
+        \nImproved icon a bit
+        \nI will now be focusing on the iOS port!
+    </string>
+    <string name="about_text">\t\t\tHandbook for Melee v2.5.0
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
@@ -72,6 +73,7 @@
     \n\t\t\t\tWobbles
     \n\t\t\t\tNintendo
     \n\t\t\t\tMew2King
+    \n\t\t\t\tSSBMKira
     \n\t\t\t\t/u/djloreddit
     \n\t\t\t\tschmooblidon
     \n\t\t\t\t/u/DigitalAge98
@@ -83,6 +85,7 @@
     \n\t\t\tLibraries used:
     \n\t\t\t\tslidr
     \n\t\t\t\tmaterialscrollbar
+    \n\t\t\t\tAndroid-ExpandIcon
     \n\t\t\t\tandroid-gif-drawable
     \n\t\t\t\texpandablerecyclerview
     </string>

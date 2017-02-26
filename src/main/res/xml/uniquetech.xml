@@ -675,7 +675,7 @@
         <br><big><b>How to perform</b></big>
         <br>To perform the technique, simply wavedash off a platform or stage, and press B right before sliding off.
     ]]></string>
-    <string name="wallbomb_info_text" title="Wallbombing" character="Princess Peach"><![CDATA[<big><b>Wallbombing</b></big>
+    <string name="wallbomb_info_text" title="Wallbomb" character="Princess Peach"><![CDATA[<big><b>Wallbombing</b></big>
         <br>If Peach uses her Side-B and runs into a wall, she will bounce off of it. She can
         then perform the move again 29-35 frames later, and because the beginning of the
         moves brings her slightly upwards, she will rise up the wall. It is important to note

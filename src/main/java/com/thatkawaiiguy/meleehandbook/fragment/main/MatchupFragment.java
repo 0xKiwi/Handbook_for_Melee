@@ -78,7 +78,7 @@ public class MatchupFragment extends Fragment {
         shineTop.setOnTouchListener(new View.OnTouchListener() {
                                         @Override
                                         public boolean onTouch(View v, MotionEvent event) {
-                                            if(characterLeft.equals(characterRight) &&
+                                            if (characterLeft.equals(characterRight) &&
                                                     characterLeft.equals("Fox")) {
                                                 try {
                                                     mp.reset();
@@ -89,7 +89,7 @@ public class MatchupFragment extends Fragment {
                                                             .getStartOffset(), afd.getLength());
                                                     mp.prepare();
                                                     mp.start();
-                                                } catch(IllegalStateException | IOException e) {
+                                                } catch (IllegalStateException | IOException e) {
                                                     e.printStackTrace();
                                                 }
                                                 return true;
@@ -101,7 +101,7 @@ public class MatchupFragment extends Fragment {
         shineBottom.setOnTouchListener(new View.OnTouchListener() {
                                            @Override
                                            public boolean onTouch(View v, MotionEvent event) {
-                                               if(characterLeft.equals(characterRight) &&
+                                               if (characterLeft.equals(characterRight) &&
                                                        characterLeft.equals("Fox")) {
                                                    try {
                                                        mp2.reset();
@@ -113,7 +113,7 @@ public class MatchupFragment extends Fragment {
                                                                        .getLength());
                                                        mp2.prepare();
                                                        mp2.start();
-                                                   } catch(IllegalStateException | IOException e) {
+                                                   } catch (IllegalStateException | IOException e) {
                                                        e.printStackTrace();
                                                    }
                                                    return true;
@@ -128,15 +128,15 @@ public class MatchupFragment extends Fragment {
     }
 
     private String getRightPercent(String left, String right) {
-        if(left.equals(right))
+        if (left.equals(right))
             return "Mirror";
         return getLeftPercent(right, left);
     }
 
     private String getLeftPercent(String left, String right) {
-        switch(left) {
+        switch (left) {
             case "Fox": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return "Mirror";
                     case "Falco":
@@ -193,7 +193,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Falco": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -251,7 +251,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Sheik": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -310,7 +310,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Marth": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -370,7 +370,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Princess Peach": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -431,7 +431,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Captain Falcon": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -493,7 +493,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Ice Climbers": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -556,7 +556,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Samus Aran": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -620,7 +620,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Dr. Mario": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -685,7 +685,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Jigglypuff": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -751,7 +751,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Mario": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -818,7 +818,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Ganondorf": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -886,7 +886,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Link": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -955,7 +955,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Luigi": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1025,7 +1025,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Donkey Kong": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1096,7 +1096,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Roy": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1168,7 +1168,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Young Link": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1241,7 +1241,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Pikachu": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1315,7 +1315,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Yoshi": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1390,7 +1390,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Princess Zelda": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1466,7 +1466,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Mr. Game & Watch": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1543,7 +1543,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Ness": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1621,7 +1621,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Bowser": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1700,7 +1700,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Kirby": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1780,7 +1780,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Pichu": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1861,7 +1861,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Mewtwo": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
                                 left)) - 100));
@@ -1947,9 +1947,9 @@ public class MatchupFragment extends Fragment {
     }
 
     private String getInfo(String left, String right) {
-        switch(left) {
+        switch (left) {
             case "Fox": {
-                switch(right) {
+                switch (right) {
                     case "Falco":
                         return "Better recovery and amazing neutral";
                     case "Sheik":
@@ -1970,7 +1970,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Falco": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return "Stopping power, but poor recovery";
                     case "Sheik":
@@ -1991,7 +1991,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Sheik": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return "Tech chase and gimping ability";
                     case "Falco":
@@ -2014,7 +2014,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Marth": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return "Can gimp, disjointed hitboxes";
                     case "Falco":
@@ -2035,7 +2035,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Princess Peach": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return "Zoning power";
                     case "Falco":
@@ -2056,7 +2056,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Captain Falcon": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return "Predictable recovery";
                     case "Falco":
@@ -2077,7 +2077,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Ice Climbers": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return "Can chain grab";
                     case "Falco":
@@ -2098,7 +2098,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Samus Aran": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return "Spam power";
                     case "Falco":
@@ -2119,7 +2119,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Jigglypuff": {
-                switch(right) {
+                switch (right) {
                     case "Fox":
                         return "Lightweight, can be punished by Up-Throw -> Up-Air";
                     case "Falco":
@@ -2202,7 +2202,7 @@ public class MatchupFragment extends Fragment {
         });
 
         String main = Preferences.getMainChar(getActivity());
-        if(!main.equals("None") && !main.equals("")){
+        if (!main.equals("None") && !main.equals("")) {
             setMatchupLeft(main);
             spinnerLeft.setSelection(getIndex(spinnerLeft, main));
             setMatchupImage(Preferences.getMainChar(getActivity()), muImgLeft);
@@ -2212,12 +2212,12 @@ public class MatchupFragment extends Fragment {
     }
 
     private void createMatchup() {
-        if(getLeftPercent(characterLeft, characterRight).equals("Mirror")) {
+        if (getLeftPercent(characterLeft, characterRight).equals("Mirror")) {
             infoLeft.setText("Mirror");
             infoRight.setText("Mirror");
             muInfoLeft.setText("");
             muInfoRight.setText("");
-            if(characterLeft.equals("Fox") && characterRight.equals("Fox"))
+            if (characterLeft.equals("Fox") && characterRight.equals("Fox"))
                 to20XX();
             else
                 un20XX();
@@ -2230,109 +2230,32 @@ public class MatchupFragment extends Fragment {
         }
     }
 
-    private int getIndex(Spinner spinner, String myString){
+    private int getIndex(Spinner spinner, String myString) {
 
         int index = 0;
 
-        for (int i=0;i<spinner.getCount();i++){
-            if (spinner.getItemAtPosition(i).equals(myString)){
+        for (int i = 0; i < spinner.getCount(); i++) {
+            if (spinner.getItemAtPosition(i).equals(myString)) {
                 index = i;
             }
         }
         return index;
     }
 
-    private Bitmap downscaleBitmapUsingDensities(final int sampleSize,final int imageResId) {
-        final BitmapFactory.Options bitmapOptions=new BitmapFactory.Options();
-        bitmapOptions.inDensity=sampleSize;
-        bitmapOptions.inTargetDensity=1;
-        final Bitmap scaledBitmap=BitmapFactory.decodeResource(getResources(),imageResId,bitmapOptions);
+    private Bitmap downscaleBitmapUsingDensities(final int sampleSize, final int imageResId) {
+        final BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
+        bitmapOptions.inDensity = sampleSize;
+        bitmapOptions.inTargetDensity = 1;
+        final Bitmap scaledBitmap = BitmapFactory.decodeResource(getResources(), imageResId, bitmapOptions);
         scaledBitmap.setDensity(Bitmap.DENSITY_NONE);
         return scaledBitmap;
     }
 
 
     private void setMatchupImage(String picked, ImageButton imgView) {
-        switch(picked) {
-            case "Fox":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.fox));
-                break;
-            case "Falco":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.falco));
-                break;
-            case "Sheik":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.sheik));
-                break;
-            case "Marth":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.marth));
-                break;
-            case "Princess Peach":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.peach));
-                break;
-            case "Captain Falcon":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.falcon));
-                break;
-            case "Ice Climbers":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.iceclimbers));
-                break;
-            case "Samus Aran":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.samus));
-                break;
-            case "Dr. Mario":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.drmario));
-                break;
-            case "Jigglypuff":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.jiggs));
-                break;
-            case "Mario":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.mario));
-                break;
-            case "Ganondorf":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.ganondorf));
-                break;
-            case "Link":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.link));
-                break;
-            case "Luigi":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.luigi));
-                break;
-            case "Donkey Kong":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.dong));
-                break;
-            case "Roy":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.roy));
-                break;
-            case "Young Link":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.ylink));
-                break;
-            case "Pikachu":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.pikachu));
-                break;
-            case "Yoshi":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.yoshi));
-                break;
-            case "Princess Zelda":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.zelda));
-                break;
-            case "Mr. Game & Watch":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.mrgandw));
-                break;
-            case "Ness":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.ness));
-                break;
-            case "Bowser":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.bowser));
-                break;
-            case "Kirby":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.kirby));
-                break;
-            case "Pichu":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.pichu));
-                break;
-            case "Mewtwo":
-                imgView.setImageBitmap(downscaleBitmapUsingDensities(3, R.drawable.mewtwo));
-                break;
-        }
+        imgView.setImageBitmap(downscaleBitmapUsingDensities(3,
+                getResources().getIdentifier(ArrayHelper.getFileName(picked),
+                        "drawable", getActivity().getPackageName())));
     }
 
     private void setMatchupLeft(String character) {

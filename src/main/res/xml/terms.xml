@@ -184,6 +184,9 @@
   <string name="friendlies_term_info" title="Friendlies">
         An match played with a competitive ruleset but is used for practice or just for fun in general.
     </string>
+    <string name="fullnoob_term_info" title="Full noob">
+        When a character uses a tactic only players new to the game use and it works.
+    </string>
   <string name="funcanceling_term_info" title="Fun-canceling">
         Similar to wavecheating, this is a comical term used to make fun of L-canceling.
     </string>

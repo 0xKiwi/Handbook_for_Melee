@@ -1,1 +1,7 @@
 /build
+src/main/res/values/ads.xml
+google-services.json
+libs/appodeal-1.15.9.jar
+libs/flurry-analytics-6.5.0.jar
+libs/my-target-4.5.10.jar
+libs/yandex-metrica-2.62.jar

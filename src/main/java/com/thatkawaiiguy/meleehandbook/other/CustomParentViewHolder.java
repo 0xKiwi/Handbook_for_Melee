@@ -21,14 +21,23 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.bignerdranch.expandablerecyclerview.ViewHolder.ParentViewHolder;
+import com.github.zagum.expandicon.ExpandIconView;
 import com.thatkawaiiguy.meleehandbook.R;
 
 public class CustomParentViewHolder extends ParentViewHolder {
 
     public final TextView dataText;
+    public final ExpandIconView image;
 
     public CustomParentViewHolder(View itemView) {
         super(itemView);
         dataText = (TextView) itemView.findViewById(R.id.recycler_item_text_parent);
+        image = (ExpandIconView) itemView.findViewById(R.id.expand);
+    }
+
+    @Override
+    public void onClick(View v) {
+        super.onClick(v);
+        image.switchState();
     }
 }

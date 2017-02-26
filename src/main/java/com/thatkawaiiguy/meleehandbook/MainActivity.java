@@ -47,6 +47,7 @@ import com.appodeal.ads.Appodeal;
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
 import com.appodeal.ads.UserSettings;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.MatchupFragment;
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     private CharSequence mTitle;
 
     private BillingProcessor bp;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     private static final String PRIVATE_PREF = "myapp";
     private static final String VERSION_KEY = "version_number";
@@ -80,8 +82,9 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     protected void onCreate(Bundle savedInstanceState) {
         Preferences.applySettingsTheme(this);
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
+
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         bp = new BillingProcessor(this, getResources().getString(R.string.licensekey), this);
         bp.loadOwnedPurchasesFromGoogle();

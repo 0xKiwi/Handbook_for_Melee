@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bignerdranch.expandablerecyclerview.Adapter.ExpandableRecyclerAdapter;
+import com.bignerdranch.expandablerecyclerview.ClickListeners.ParentItemClickListener;
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildViewHolder;
@@ -65,7 +66,7 @@ public class HitboxesAdapter extends ExpandableRecyclerAdapter<CustomParentViewH
     }
 
     @Override
-    public void onBindParentViewHolder(CustomParentViewHolder parentViewHolder, int position, Object parentObject) {
+    public void onBindParentViewHolder(final CustomParentViewHolder parentViewHolder, int position, final Object parentObject) {
         CustomParentObject customParentObject = (CustomParentObject) parentObject;
         parentViewHolder.dataText.setText(customParentObject.getParentText());
     }

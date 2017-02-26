@@ -19,8 +19,10 @@ package com.thatkawaiiguy.meleehandbook.activity;
 
 import android.os.Bundle;
 import android.text.Html;
+import android.widget.ImageView;
 
 import com.thatkawaiiguy.meleehandbook.R;
+import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 public class StageActivity extends ImageInfoActivity {
@@ -31,28 +33,7 @@ public class StageActivity extends ImageInfoActivity {
 
         text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(R.xml.stages, optionPicked, getResources())));
 
-        switch (optionPicked) {
-            case "Battlefield":
-                infoImage.setImageResource(R.drawable.battlefieldbox);
-                break;
-            case "Dream Land":
-                infoImage.setImageResource(R.drawable.dreamlandbox);
-                break;
-            case "Final Destination":
-                infoImage.setImageResource(R.drawable.fdbox);
-                break;
-            case "Fountain of Dreams":
-                infoImage.setImageResource(R.drawable.fodbox);
-                break;
-            case "Kongo Jungle (SSB)":
-                infoImage.setImageResource(R.drawable.kongo);
-                break;
-            case "Pokemon Stadium":
-                infoImage.setImageResource(R.drawable.pokestadiumbox);
-                break;
-            case "Yoshi's Story":
-                infoImage.setImageResource(R.drawable.ystorybox);
-                break;
-        }
+        infoImage.setImageResource(getResources().getIdentifier(ArrayHelper
+                .getFileName(optionPicked), "drawable", getPackageName()));
     }
 }

@@ -29,6 +29,7 @@ import android.widget.ImageView;
 
 import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrInterface;
+import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.fragment.CharacterFragmentAdapter;
@@ -77,57 +78,16 @@ public class CharacterFrameActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onTabUnselected(TabLayout.Tab tab) {}
+            public void onTabUnselected(TabLayout.Tab tab) {
+            }
 
             @Override
-            public void onTabReselected(TabLayout.Tab tab) {}
+            public void onTabReselected(TabLayout.Tab tab) {
+            }
         });
 
-        assert charPicked != null;
-        switch (charPicked) {
-            case "Captain Falcon":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.falcon);
-                break;
-            case "Ganondorf":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.ganondorf);
-                break;
-            case "Falco":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.falco);
-                break;
-            case "Fox":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.fox);
-                break;
-            case "Sheik":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.sheik);
-                break;
-            case "Luigi":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.luigi);
-                break;
-            case "Marth":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.marth);
-                break;
-            case "Ice Climbers":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.iceclimbers);
-                break;
-            case "Jigglypuff":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.jiggs);
-                break;
-            case "Pikachu":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.pikachu);
-                break;
-            case "Princess Peach":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.peach);
-                break;
-            case "Samus Aran":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.samus);
-                break;
-            case "Yoshi":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.yoshi);
-                break;
-            case "Dr. Mario":
-                ((ImageView) findViewById(R.id.infoImage)).setImageResource(R.drawable.drmario);
-                break;
-        }
+        ((ImageView) findViewById(R.id.infoImage)).setImageResource(getResources().getIdentifier(ArrayHelper
+                .getFileName(charPicked), "drawable", getPackageName()));
     }
 
     @Override
@@ -141,8 +101,8 @@ public class CharacterFrameActivity extends AppCompatActivity {
         }
     }
 
-    public String getSupportActionBarTitle(){
+    public String getSupportActionBarTitle() {
         assert getSupportActionBar() != null;
-        return (String)getSupportActionBar().getTitle();
+        return (String) getSupportActionBar().getTitle();
     }
 }

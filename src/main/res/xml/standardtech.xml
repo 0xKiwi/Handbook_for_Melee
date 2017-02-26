@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="aerialinterrupt_info_text" title="Aerial interrupt"><![CDATA[<b>Note:</b> This technique
-        cannot be performed in as many ways with DK, Jigglypuff or Kirby, as their ECB
+    <string name="aerialinterrupt_info_text" title="Aerial interrupt" ><![CDATA[<b>Note:</b> This technique
+        cannot be performed in as many ways with DK, Jigglypuff or Kirby, as the bottom of their ECB
         (Environmental Collision Box, the "bones" of the player model) is fixed and does not change orientation during attacks.
         <br>
         <br><big><b>Aerial Interrupt</b></big>
@@ -9,27 +9,28 @@
         a ledge hop with extra intangible frames. There are usually more options to AI when compared to no-impact landing, but AI comes
         with 3 more frames of landing lag. The main difference between an AI and a platform cancel is that AI implies the player used the aerial
         while their character got onto the platform. While platform canceling has the player stay on top of the platform, has much more strict
-        timing, and requires some sort of hitstun to occur.
+        timing, and requires some sort of hitlag to occur.
         <br>
         <br><big><b>How it works</b></big>
         <br>This technique uses a similar property as the no-impact landing, where the characters ECB is
-        changed during a certain action to that it is placed right above a platform when the characters downward
+        changed during a certain action so that it is placed right above a platform when the characters downward
         velocity is very low, but instead of only jumping, this technique uses an attack to change the ECB's
         orientation and size so that the ECB would be placed slightly above the platform the character wishes to
         land on.
         <br>An aerial interrupt has 4 frames (or as many auto cancel frames the aerial has)
-         of landing lag compared to the 1 frame of landing lag of a no-impact landing,
-        this is because the aerial attacks used for this technique are canceled in their auto cancelable moments. Meaning
-        there is less landing lag, and no L-canceling is needed.
+        of landing lag compared to the 1 frame of landing lag of a no-impact landing.
+        This is because the aerial attacks used for this technique are canceled in their auto cancelable moments. Meaning
+        there is less landing lag, and no L-canceling is needed. However, if the move performed results in an AI
+        where it is not auto canceled the Landing Lag is no different from normal lag.
         <br>
         <br><big><b>How to perform</b></big>
         <br>While most characters have an aerial interrupt, some have different timing and move usages.
         <br>As the information is quite extensive, look online for each of the different aerials each
         character can use.
         <br>Once you know which moves you can use, select the character and attempt to jump onto any platform
-        using any aerial attack that works, and make sure the moment where the characters ECB is oriented
+        using any aerial attack that works, and make sure the moment where the character's ECB is oriented
         in order to AI properly is performed with proper timing so it is placed right above the platform you wish to
-        land on and you are at the apex of your jump. You should then land and experience very little landing lag.
+        land on. You should then land and experience very little landing lag.
         <br>
         <br><big><b>Other types of AI</b></big>
         <br>
@@ -72,16 +73,14 @@
         other characters it can reliably tech chase to high percents. This however doesn't work in the PAL version
         of Melee due to her down throw sending her opponents too far forward to grab again.
         <br>
-        <br><b>Marth and Roy:</b> Marth and Roy's up throw can chain throw Fox and Falco from 0&#37; to about 90&#37;. However, Roy
-        has to turn to chain throw upward but Marth doesn't have to always turn to chain throw upward.
+        <br><b>Marth and Roy:</b> Marth and Roy's up throw can chain throw Fox and Falco from 0&#37; to about 90&#37;.
         <br>
         <br><b>Ice Climbers:</b> Against the
         Fast fallers and Roy, Popo can down throw while Nana immediately uses a down air them to force the players
         opponent to land standing up, where they are easily grabbed again. Even without Nana, Popo by himself can
         chain throw a handful of characters, such as Roy, Sheik, and Ganondorf with down throw until about 50&#37;.
         <br>
-        <br><b>Peach:</b> can chain throw fast fallers, floaty characters, and heavyweight at high percentage with her down throw. She
-        can also chain grab with her up throw against everyone at 0&#37; and fast fallers at 40&#37;.
+        <br><b>Peach:</b> can chain grab with her up throw against Fox, Falco, and Captain Falcon.
         <br>
         <br><b>Captain Falcon:</b> can pseudo chain throw with down throw against Marth, Sheik, and Roy from 0&#37; to about 20&#37;. It can
         easily be escaped with good DI. Up throw can also chain throw Fox/Falco/Falcon from about 50&#37; to about 80&#37;
@@ -98,15 +97,12 @@
         Fox, Falco, and Captain Falcon with up throws, and at 100&#37; Mr. Game &amp; Watch, and (at 150&#37;) Mario, Doctor Mario can chain
         throw the fast falling characters with down throws. Marth and Roy cannot chain throw Captain Falcon.
         <br>
-        <br><b>Link:</b> can pseudo chain throw opponents at very low percentages with his forward throw, however it is easy to DI out of.
+        <br><b>Link:</b> can chain grab on Sheik and Pikachu with down throw
         <br>
         <br><b>Falco:</b> can pseudo chain throw Fox at any percent with down throw. Its far from inescapable, however, since Fox can
-        Shine or Jab to interrupt Falco, and Falco can chain throw anyone with his back throw.
+        Shine or Jab to interrupt Falco.
         <br>
-        <br><b>Mewtwo:</b> can chain throw with its downthrow on large characters like Bowser from 0-50&#37;. Mewtwo can also chain throw
-        fast fallers like Fox, Falco, Sheik, Captain Falcon and sometimes Roy, giving him an advantage against
-        these characters. Ganondorf and DK are also vulnerable to its chain grab, but Mewtwo needs to run and
-        then grab to be able to grab again (though Ganondorf is easier to chain grab than DK)
+        <br><b>Mewtwo:</b> can chain throw with its down throw on fast fallers as long as they don't DI away.
         <br>
         <br><b>Donkey Kong:</b> can chain throw Fox, Falco and Falcon with the up throw at low to mid percentages. Donkey Kong can
         also chain throw Fox, Falco, and Captain Falcon with forward throw, then while carrying them, up throw.]]>
@@ -114,19 +110,27 @@
     <string name="crouchcancel_info_text" title="Crouch cancel"><![CDATA[<b>Note:</b> Sheik is CC'ing in order to take advantage
         of the reduced knockback to survive an Up Smash.
         <br>
-        <br><b>Useful video for learning to CC:</b> https://youtu.be/IA-ROZiZJqY
+        <br><b>Useful video for learning to CC:</b> https://youtu.be/72aidPrzScA
         <br>
         <br><big><b>Crouch Canceling</b></big>
-        <br>Abbreviated as CC, Crouch canceling is the act of crouching when being hit by an attack in
-        order to reduce your knockback and damage taken. Most players suggest you should always crouch
-        cancel, with the exception to some moves such as Peach's down smash as CC'ing it will
-        cause you to get "sucked" in, and take more damage. Keep in mind sometimes CC is not very effective after
-        around 50&#37;.
+        <br>Crouch canceling (often abbreviated as CC) is a technique that can be used to eliminate the effectiveness
+        of an enemy's move and allow for instant retaliation.
+        <br>Think of it as a combination of two different techniques: crouch armor and ASDI down.
+        Crouch armor occurs when your character is hit while in the crouching animation. It reduces
+        the knockback (and therefore hitstun) and hitlag on your character by 1/3.
+        <br>ASDI down is a result of holding your control stick down during the final frames of hitlag. It shifts your
+        character down on the first frame after hitlag, causing them to land on the ground instead of
+        go flying into the air. This cancels the hitstun and allows you to counterattack almost instantly.
         <br>
         <br><big><b>How to perform</b></big>
-        <br>To crouch cancel, simply crouch right before an enemy attacks, if done properly,
-        you should have taken very little knockback and less damage would have been dealt compared to a
-        non CC'd attack.
+        <br>To perform a crouch cancel, simply hold down before being hit and not during lag of
+        another move. Your character will stay mostly in place instead of being sent flying and you
+        can instantly attack with any grounded move.
+        <br>Crouch canceling can work until various percentages depending on the knockback properties
+        of the move you are hit with. For example, weak moves like jabs can be CC'd until very high
+        percents. Strong moves like Marth's fsmash cannot be CC'd after medium percents.
+        <br>Some moves are impervious to ASDI down and cannot be crouch canceled. Spikes, meteors,
+        and a few other specific moves, such as Fox's shine and Sheik's needles, cannot be CC'd."
     ]]></string>
     <string name="ddance_info_text" title="Dash-dance"><![CDATA[Example of dash dancing: https://youtu.be/mk09c6iLLdU
         <br>
@@ -140,7 +144,7 @@
         <br>
         <br>The maximum time a character can dash in one direction and still change direction by dash dancing is the
         same as the number of frames in their initial dash animation. After this animation is over, the
-        character will enter their regular dashing animation; at this point, tapping the analog stick in
+        character will enter their run animation; at this point, tapping the analog stick in
         the opposite direction will cause the character to enter their turnaround animation, during which
         no attacks can be performed.
         <br>
@@ -164,9 +168,9 @@
     <string-array name="directional_influence" title="Directional Influence" amount="4">
         <item name="di_info_text" title="DI"><![CDATA[<big><b>Directional influence</b></big>
             <br>Often abbreviated as DI or TDI (Trajectory DI), this is the control the receiver of an attack
-            has over his or her trajectory. Each attack sends its target in a particular direction, depending on the
-            attack itself and on the target's weight and falling speed; DI can be used to alter, but not completely change,
-            this original trajectory. This change can be vital to surviving high-power attacks such as Fox's up smash, and
+            has over his or her trajectory. Each attack sends its target in a particular direction;
+            DI can be used to alter, but not completely change, this original trajectory. This change
+            can be vital to surviving high-power attacks such as Fox's up smash, and
             for escaping combos such as Jigglypuff's up-throw to rest combo on fast-fallers (see the space animal slayer).
             Perhaps one of DI's most useful applications is the ability to make the character move in a path that is as
             long as possible before crossing the blast line.
@@ -180,15 +184,14 @@
             distance to reach the blastzone.
             <br>"Good DI" usually occurs when a character is sent in a
             trajectory that creates the greatest distance between the character and the blast line. In most situations,
-            angling towards the upper-left or upper-right corners will grant the greatest chance of surviving a
-            high-knockback attack.
+            angling towards the top or the NW or NE notch for most kill moves, although for vertically killing moves should be DI'd to the side.
             <br>Conversely, "poor DI" occurs when the shortest distance between the character
             and the blastzone is created, or the angle sends the player into a position they cannot recover from
             when they would normally easily recover from, such as down and away from the stage. Bad DI that results
             in a death commonly occurs near the sides of the stage, when a character is hit diagonally while holding
             the Control Stick downward (commonly as a result of intentional fastfalling), which sends them on a more
             horizontal trajectory, towards the closest blast line.
-            <br>The player can DI by pressing the control stick in any direction during or just after being hit by an attack.
+            <br>The player can DI by pressing the control stick in any direction during while being currently hit by an attack.
             There are three types of directional influence: trajectory DI (almost always referred to as just "DI"),
             Smash DI, and Automatic Smash DI. These last two function much differently from trajectory DI, and
             should not be confused with it.
@@ -222,7 +225,7 @@
             <br>
             <br><big><b>Smash DI</b></big>
             <br>Often shortened to SDI is a mechanic that allows players to slightly alter their position during
-            the freeze frames of being hit by an attack. Tapping the control stick or C-Stick in any direction (rapidly, like
+            the freeze frames of being hit by an attack. Tapping the control stick (rapidly, like
             how you rapidly tap the C-Stick when performing an aerial or smash attack), during freeze frames will slightly
             move their character in that direction, allowing them to potentially escape multi-hit moves or certain combos.
             <br>SDI can also be used to move into a wall or ceiling in order to tech near-instantly (and is also possible with
@@ -249,11 +252,11 @@
             you can bair and they will have bad DI.
             <br>
             <br><b>Automatic smash directional influence</b>
-            <br>ASDI is a weaker variant of SDI which uses the C-Stick. Once a character's freeze frames are
-            over, they shift slightly in whatever direction the C-Stick is currently held, slightly less than
+            <br>ASDI is a weaker variant of SDI which uses the C-Stick (Exactly 1/2 weaker). Once a character's freeze frames are
+            over, they shift slightly in whatever direction the C-Stick or Control stick is currently held, slightly less than
             one SDI input. If the C-Stick is also being held in a direction, it will override the control stick's input,
-            allowing the player to DI in another direction simultaneously. To perform simply hold the C-Stick the direcion you want
-            to SDI, this method is efficient for multi-hit attacks.
+            allowing the player to DI in another direction simultaneously. To perform simply hold the C-Stick the direction you want
+            to ASDI, this method is efficient for multi-hit attacks.
             <br>
             <br><big><b>Shield DI</b></big>
             <br>If you are in a shield and someone attacks it, rapidly tapping the control stick or C-Stick similar to SDI
@@ -274,22 +277,21 @@
             <br>
             <br><big><b>Double Stick Smash DI</b></big>
             <br>Double Stick Smash DI (DSDI) is a special type of Smash DI that involves using both the
-            Control Stick and the C-Stick to Smash DI attacks. While Smash DI is DI that slightly shifts
-            your location during freeze frames, DSDI is using the Control Stick to TDI or SDI and the C-Stick
-            SDI. This results in either a very strong shift of location (if both are SDI), or a very strong
-            trajectory change and a slight shift in location. It can be used to tech strong attacks while
+            Control Stick and the C-Stick to Trajectory DI and ASDI respectfully. While Smash DI is DI that slightly shifts
+            your location during freeze frames, DSDI is using the Control Stick to TDI and the C-Stick to
+            SDI. This results in either a very strong shift of location followed by a very strong
+            trajectory change. It can be used to tech strong attacks while
             grounded if the angle is low enough, and can be used to tech off of a platform like in the example gif.
             <br>
             <br><big><b>How to properly perform</b></big>
             <br>In order to perform DSDI, one must predict when to do it (like any other DI), a player must
-            move the stick towards the desired DI direction, and move the C-Stick to the desired SDI shift trajectory.
-            <br>If you wish to fully perform the SDI part of DSDI, you must shift the control stick as SDI requires
-            along with the C-Stick. If you wish to SDI make sure you remember that if you hold the stick
-            in the same direction after the attack, you will DI with that direction inputted.
+            move the stick towards the desired DI direction (Usually downwards and away), and move the C-Stick
+            to the desired ASDI shift trajectory (also usually downward).
+            <br>This technique is used to Amsah tech and most of the time the player being hit inputs R/L to
+            tech after their DSDI input.
             <br>
             <br><b>This works extremely well with:</b>
             <br>\tMarth's up-air on platforms
-            <br>\tFox's down-air
             <br>\tAny attack that can be survived with strong SDI or DI.
         ]]></item>
         <item name="diangles_info_text" title="Angles"><![CDATA[These are the possible angles which you can DI and angle certain moves.
@@ -1191,6 +1193,26 @@
         ]]>
         </item>
     </string-array>
+
+    <string name="waveland_info_text" title="Waveland"><![CDATA[<big><b>Waveland</b></big>
+        <br>A waveland is a technique similar to a wavedash but instead of wavedashing the
+        moment you jump you perform the wavedash onto another platform or after your jump has begun descending.
+        Wavelands are usually longer than wavedashes if performed correctly and can be performed on any land
+        the player can stand on.
+        <br>
+        <br><big><b>Uses</b></big>
+        <br>Wavelands have several uses, such as quickly landing onto platforms, increasing
+        movement speed on platforms when combined with shai drops and double jumping.
+        When mastered it can severely improve one's movement and ability to perform on the stage. If spaced and used
+        correctly they can also be used to get air movement momentum off of a platform and perform
+        an attack or to quickly jump between platforms and other landing positions.
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>Wavelands can be performed by air dodging at a wavedash-like angle onto land when descending from a jump
+        or when you jump over a platform. A player can also waveland onto the stage by dropping down from the ledge,
+        jumping and angling your wavedash onto the ground. This is known as ledge dashing. If you'd like to practice
+        wavelanding, Ganondorf is usually preferred when practicing them.
+    ]]></string>
 
     <string name="wavedash_info_text" title="Wavedash"><![CDATA[<big><b>Wavedash</b></big>
         <br>A wavedash is a technique

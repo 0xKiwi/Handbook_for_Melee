@@ -21,6 +21,7 @@ import android.os.Bundle;
 import android.text.Html;
 
 import com.thatkawaiiguy.meleehandbook.R;
+import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.XMLParser;
 
 public class CharacterActivity extends ImageInfoActivity {
@@ -30,47 +31,7 @@ public class CharacterActivity extends ImageInfoActivity {
         super.onCreate(savedInstanceState);
 
         text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(R.xml.characters, optionPicked, getResources())));
-
-        switch (optionPicked) {
-            case "Bowser":
-                infoImage.setImageResource(R.drawable.bowser);
-                break;
-            case "Donkey Kong":
-                infoImage.setImageResource(R.drawable.dong);
-                break;
-            case "Dr. Mario":
-                infoImage.setImageResource(R.drawable.drmario);
-                break;
-            case "Kirby":
-                infoImage.setImageResource(R.drawable.kirby);
-                break;
-            case "Link":
-                infoImage.setImageResource(R.drawable.link);
-                break;
-            case "Mario":
-                infoImage.setImageResource(R.drawable.mario);
-                break;
-            case "Mewtwo":
-                infoImage.setImageResource(R.drawable.mewtwo);
-                break;
-            case "Mr. Game & Watch":
-                infoImage.setImageResource(R.drawable.mrgandw);
-                break;
-            case "Ness":
-                infoImage.setImageResource(R.drawable.ness);
-                break;
-            case "Pichu":
-                infoImage.setImageResource(R.drawable.pichu);
-                break;
-            case "Princess Zelda":
-                infoImage.setImageResource(R.drawable.zelda);
-                break;
-            case "Roy":
-                infoImage.setImageResource(R.drawable.roy);
-                break;
-            case "Young Link":
-                infoImage.setImageResource(R.drawable.ylink);
-                break;
-        }
+        infoImage.setImageResource(getResources().getIdentifier(ArrayHelper
+                .getFileName(optionPicked), "drawable", getPackageName()));
     }
 }

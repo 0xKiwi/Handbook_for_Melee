@@ -28,7 +28,7 @@ import android.view.ViewGroup;
 
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.TermAdapter;
-import com.turingtechnologies.materialscrollbar.MaterialScrollBar;
+import com.turingtechnologies.materialscrollbar.TouchScrollBar;
 
 public class TermFragment extends Fragment {
 
@@ -42,16 +42,15 @@ public class TermFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.list_layout, container, false);
+        View rootView = inflater.inflate(R.layout.fast_list_layout, container, false);
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
 
         recyclerView.setAdapter(new TermAdapter(getActivity().getResources()));
-        recyclerView.setHasFixedSize(true);
 
-        MaterialScrollBar scrollBar = new MaterialScrollBar(getActivity(), recyclerView, true);
-        scrollBar.setBarThickness(12).setAutoHide(false)
+        TouchScrollBar scrollBar = new TouchScrollBar(getActivity(), recyclerView, true);
+        scrollBar.setBarThickness(36).setAutoHide(false)
                 .setBarColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color)).
                 setHandleColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color));
         return rootView;
