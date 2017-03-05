@@ -21,6 +21,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     private Fragment fg = TechFragment.newInstance();
 
     private DrawerLayout mDrawer;
+    private FragmentManager fragmentManager;
 
     private CharSequence mTitle;
 
@@ -84,6 +86,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        fragmentManager = getFragmentManager();
+
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         bp = new BillingProcessor(this, getResources().getString(R.string.licensekey), this);
@@ -96,18 +100,18 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         prepareAdmob();
 
-        if(!Preferences.hideAds(this))
+        if (!Preferences.hideAds(this))
             Appodeal.show(this, Appodeal.BANNER_VIEW);
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
-        if(Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this))
+        if (Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this))
             nvDrawer.getMenu().findItem(R.id.remove).setTitle("Support the Dev");
 
         NavigationMenuView navigationMenuView = (NavigationMenuView) nvDrawer.getChildAt(0);
-        if(navigationMenuView != null)
+        if (navigationMenuView != null)
             navigationMenuView.setVerticalScrollBarEnabled(false);
 
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(
@@ -119,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         mDrawer.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
-                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     slideOffset = 1.0f - slideOffset;
                     int a = Math.min(255, Math.max(0, (int) (slideOffset * 255))) << 24;
                     int rgb = 0x00ffffff & getWindow().getStatusBarColor();
@@ -145,12 +149,12 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         setTitle(Preferences.defaultListItem(this));
         mTitle = getTitle();
 
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             init();
             addFragment();
             nvDrawer.getMenu().getItem(listdefault).setChecked(true);
             AppRater.app_launched(this);
-            if(Preferences.openNavLaunchEnabled(this))
+            if (Preferences.openNavLaunchEnabled(this))
                 mDrawer.openDrawer(Gravity.LEFT);
         }
     }
@@ -162,70 +166,35 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     private void selectDrawerItem(MenuItem menuItem) {
-        switch(menuItem.getItemId()) {
+        switch (menuItem.getItemId()) {
             case R.id.advancedtech:
-                mTitle = getString(R.string.title_advancedtech);
+            case R.id.uniquetech:
+                mTitle = menuItem.getTitle();
                 assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
                 changeFragment(mTitle);
+
                 menuItem.setChecked(true);
                 sendToast();
                 break;
             case R.id.characters:
-                mTitle = getString(R.string.title_characters);
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setTitle(mTitle);
-                changeFragment(mTitle);
-                menuItem.setChecked(true);
-                break;
             case R.id.fundamentals:
-                mTitle = getString(R.string.title_fundamentals);
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setTitle(mTitle);
-                changeFragment(mTitle);
-                menuItem.setChecked(true);
-                break;
             case R.id.mu:
-                mTitle = getString(R.string.title_matchups);
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setTitle(mTitle);
-                changeFragment(mTitle);
-                menuItem.setChecked(true);
-                break;
             case R.id.stages:
-                mTitle = getString(R.string.title_stages);
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setTitle(mTitle);
-                changeFragment(mTitle);
-                menuItem.setChecked(true);
-                break;
             case R.id.term:
-                mTitle = getString(R.string.title_term);
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setTitle(mTitle);
-                changeFragment(mTitle);
-                menuItem.setChecked(true);
-                break;
-            case R.id.uniquetech:
-                mTitle = getString(R.string.title_uniquetech);
-                assert getSupportActionBar() != null;
-                getSupportActionBar().setTitle(mTitle);
-                changeFragment(mTitle);
-                menuItem.setChecked(true);
-                sendToast();
-                break;
             case R.id.healthy:
-                mTitle = getString(R.string.title_healthy);
+                mTitle = menuItem.getTitle();
                 assert getSupportActionBar() != null;
                 getSupportActionBar().setTitle(mTitle);
                 changeFragment(mTitle);
+
                 menuItem.setChecked(true);
                 break;
             case R.id.remove:
-                if(bp.isPurchased(getResources().getString(R.string.adproductid)))
+                if (bp.isPurchased(getResources().getString(R.string.adproductid)))
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://bit" +
                             ".ly/1NXCD2o")));
-                else if(BillingProcessor.isIabServiceAvailable(this)) {
+                else if (BillingProcessor.isIabServiceAvailable(this)) {
                     bp.purchase(this, getResources().getString(R.string.adproductid));
                 } else {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://bit" +
@@ -236,7 +205,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                 startActivity(new Intent(this, AppSettingsActivity.class));
                 break;
             case R.id.about:
-                new AboutDialogFragment().show(getFragmentManager(), "about");
+                new AboutDialogFragment().show(fragmentManager, "about");
                 break;
         }
         mDrawer.closeDrawers();
@@ -244,8 +213,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public void onBackPressed() {
-        if(Preferences.showExitDialog(this)) {
-            new ExitDialogFragment().show(getFragmentManager(), "exit");
+        if (Preferences.showExitDialog(this)) {
+            new ExitDialogFragment().show(fragmentManager, "exit");
         } else
             super.onBackPressed();
     }
@@ -262,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public void onPurchaseHistoryRestored() {
-        if(bp.isPurchased(getString(R.string.adproductid))) {
+        if (bp.isPurchased(getString(R.string.adproductid))) {
             Preferences.setHideAds(this, true);
         } else
             Preferences.setHideAds(this, false);
@@ -275,13 +244,13 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(!bp.handleActivityResult(requestCode, resultCode, data))
+        if (!bp.handleActivityResult(requestCode, resultCode, data))
             super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void changeFragment(CharSequence title) {
         Fragment fg2;
-        switch((String) title) {
+        switch ((String) title) {
             case "Advanced Techniques":
                 fg2 = TechFragment.newInstance();
                 break;
@@ -309,15 +278,15 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             default:
                 fg2 = HealthyFragment.newInstance();
         }
-        if(!fg.equals(fg2)) {
+        if (!fg.equals(fg2)) {
             fg = fg2;
-            getFragmentManager().beginTransaction().replace(R.id.fragmentLayout, fg).commit();
+            fragmentManager.beginTransaction().replace(R.id.fragmentLayout, fg).commit();
         }
     }
 
     private void sendToast() {
-        if(Preferences.showToast(this)) {
-            Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You "+
+        if (Preferences.showToast(this)) {
+            Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You " +
                             "don't want to have to go" +
                             " to the doctor.",
                     Toast.LENGTH_SHORT).show();
@@ -325,7 +294,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     private void addFragment() {
-        switch(Preferences.defaultListItem(this)) {
+        switch (Preferences.defaultListItem(this)) {
             case "Advanced Techniques":
                 listdefault = 0;
                 fg = TechFragment.newInstance();
@@ -361,39 +330,38 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             default:
                 fg = TechFragment.newInstance();
         }
-        getFragmentManager().beginTransaction().add(R.id.fragmentLayout, fg).commit();
+        fragmentManager.beginTransaction().add(R.id.fragmentLayout, fg).commit();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
 
-        if(bp != null)
+        if (bp != null)
             bp.release();
     }
 
     private void init() {
         SharedPreferences sharedPref = getSharedPreferences(PRIVATE_PREF, Context.MODE_PRIVATE);
         int currentVersionNumber = 0;
-
         int savedVersionNumber = sharedPref.getInt(VERSION_KEY, 0);
 
         try {
             PackageInfo pi = getPackageManager().getPackageInfo(getPackageName(), 0);
             currentVersionNumber = pi.versionCode;
-        } catch (Exception ignored) {}
+        } catch (Exception ignored) {
+        }
 
         if (currentVersionNumber > savedVersionNumber) {
             showWhatsNewDialog();
 
             SharedPreferences.Editor editor = sharedPref.edit();
-
             editor.putInt(VERSION_KEY, currentVersionNumber);
-            editor.commit();
+            editor.apply();
         }
     }
 
-    private void prepareAdmob(){
+    private void prepareAdmob() {
         UserSettings userSettings = Appodeal.getUserSettings(this);
         userSettings.setGender(UserSettings.Gender.MALE);
         userSettings.setInterests("games, movies, shows, esports");
@@ -431,7 +399,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.search) {
+        if (item.getItemId() == R.id.search) {
             startActivity(new Intent(this, SearchResultsActivity.class));
             overridePendingTransition(0, 0);
             return true;
@@ -450,7 +418,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        if(menuItem != null) {
+                        if (menuItem != null) {
                             selectDrawerItem(menuItem);
                             return true;
                         } else

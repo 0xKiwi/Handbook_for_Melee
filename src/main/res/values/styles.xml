@@ -140,7 +140,7 @@
     <style name="CollapsingBar" parent="Widget.Design.CollapsingToolbar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:fitsSystemWindows">false</item>
         <item name="android:minHeight">@dimen/actionBarSize</item>
         <item name="titleEnabled">false</item>
         <item name="contentScrim">?customColorPrimary</item>

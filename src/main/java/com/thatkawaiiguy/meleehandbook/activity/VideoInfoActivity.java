@@ -80,7 +80,7 @@ public class VideoInfoActivity extends AppCompatActivity {
             appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
                 @Override
                 public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                    if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
+                    if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange() - getStatusBarHeight()) {
                         if (infoVid.isPlaying())
                             infoVid.pause();
                     } else {

@@ -75,52 +75,54 @@ public class MatchupFragment extends Fragment {
 
         final MediaPlayer mp = new MediaPlayer();
         final MediaPlayer mp2 = new MediaPlayer();
-        shineTop.setOnTouchListener(new View.OnTouchListener() {
-                                        @Override
-                                        public boolean onTouch(View v, MotionEvent event) {
-                                            if (characterLeft.equals(characterRight) &&
-                                                    characterLeft.equals("Fox")) {
-                                                try {
-                                                    mp.reset();
-                                                    AssetFileDescriptor afd;
-                                                    afd = getResources().getAssets().openFd
-                                                            ("shine.wav");
-                                                    mp.setDataSource(afd.getFileDescriptor(), afd
-                                                            .getStartOffset(), afd.getLength());
-                                                    mp.prepare();
-                                                    mp.start();
-                                                } catch (IllegalStateException | IOException e) {
-                                                    e.printStackTrace();
-                                                }
-                                                return true;
-                                            }
-                                            return false;
-                                        }
-                                    }
+        shineTop.setOnTouchListener(
+                new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        if (characterLeft.equals(characterRight) &&
+                                characterLeft.equals("Fox")) {
+                            try {
+                                mp.reset();
+                                AssetFileDescriptor afd;
+                                afd = getResources().getAssets().openFd
+                                        ("shine.wav");
+                                mp.setDataSource(afd.getFileDescriptor(), afd
+                                        .getStartOffset(), afd.getLength());
+                                mp.prepare();
+                                mp.start();
+                            } catch (IllegalStateException | IOException e) {
+                                e.printStackTrace();
+                            }
+                            return true;
+                        }
+                        return false;
+                    }
+                }
         );
-        shineBottom.setOnTouchListener(new View.OnTouchListener() {
-                                           @Override
-                                           public boolean onTouch(View v, MotionEvent event) {
-                                               if (characterLeft.equals(characterRight) &&
-                                                       characterLeft.equals("Fox")) {
-                                                   try {
-                                                       mp2.reset();
-                                                       AssetFileDescriptor afd;
-                                                       afd = getResources().getAssets().openFd
-                                                               ("shine.wav");
-                                                       mp2.setDataSource(afd.getFileDescriptor(),
-                                                               afd.getStartOffset(), afd
-                                                                       .getLength());
-                                                       mp2.prepare();
-                                                       mp2.start();
-                                                   } catch (IllegalStateException | IOException e) {
-                                                       e.printStackTrace();
-                                                   }
-                                                   return true;
-                                               }
-                                               return false;
-                                           }
-                                       }
+        shineBottom.setOnTouchListener(
+                new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        if (characterLeft.equals(characterRight) &&
+                                characterLeft.equals("Fox")) {
+                            try {
+                                mp2.reset();
+                                AssetFileDescriptor afd;
+                                afd = getResources().getAssets().openFd
+                                        ("shine.wav");
+                                mp2.setDataSource(afd.getFileDescriptor(),
+                                        afd.getStartOffset(), afd
+                                                .getLength());
+                                mp2.prepare();
+                                mp2.start();
+                            } catch (IllegalStateException | IOException e) {
+                                e.printStackTrace();
+                            }
+                            return true;
+                        }
+                        return false;
+                    }
+                }
         );
 
         setMatchupsView();
@@ -195,8 +197,7 @@ public class MatchupFragment extends Fragment {
             case "Falco": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Falco":
                         return "Mirror";
                     case "Sheik":
@@ -253,11 +254,8 @@ public class MatchupFragment extends Fragment {
             case "Sheik": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Sheik":
                         return "Mirror";
                     case "Marth":
@@ -312,14 +310,9 @@ public class MatchupFragment extends Fragment {
             case "Marth": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Marth":
                         return "Mirror";
                     case "Princess Peach":
@@ -372,17 +365,10 @@ public class MatchupFragment extends Fragment {
             case "Princess Peach": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Princess Peach":
                         return "Mirror";
                     case "Captain Falcon":
@@ -433,20 +419,11 @@ public class MatchupFragment extends Fragment {
             case "Captain Falcon": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Captain Falcon":
                         return "Mirror";
                     case "Ice Climbers":
@@ -495,23 +472,12 @@ public class MatchupFragment extends Fragment {
             case "Ice Climbers": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Ice Climbers":
                         return "Mirror";
                     case "Samus Aran":
@@ -558,26 +524,13 @@ public class MatchupFragment extends Fragment {
             case "Samus Aran": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Samus Aran":
                         return "Mirror";
                     case "Dr. Mario":
@@ -622,29 +575,14 @@ public class MatchupFragment extends Fragment {
             case "Dr. Mario": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Dr. Mario":
                         return "Mirror";
                     case "Jigglypuff":
@@ -687,32 +625,15 @@ public class MatchupFragment extends Fragment {
             case "Jigglypuff": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Jigglypuff":
                         return "Mirror";
                     case "Mario":
@@ -753,35 +674,16 @@ public class MatchupFragment extends Fragment {
             case "Mario": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Mario":
                         return "Mirror";
                     case "Ganondorf":
@@ -820,38 +722,17 @@ public class MatchupFragment extends Fragment {
             case "Ganondorf": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Ganondorf":
                         return "Mirror";
                     case "Link":
@@ -888,41 +769,18 @@ public class MatchupFragment extends Fragment {
             case "Link": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Link":
                         return "Mirror";
                     case "Luigi":
@@ -957,44 +815,19 @@ public class MatchupFragment extends Fragment {
             case "Luigi": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Luigi":
                         return "Mirror";
                     case "Donkey Kong":
@@ -1027,47 +860,20 @@ public class MatchupFragment extends Fragment {
             case "Donkey Kong": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Donkey Kong":
                         return "Mirror";
                     case "Roy":
@@ -1098,50 +904,21 @@ public class MatchupFragment extends Fragment {
             case "Roy": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Roy":
                         return "Mirror";
                     case "Young Link":
@@ -1170,53 +947,22 @@ public class MatchupFragment extends Fragment {
             case "Young Link": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Roy":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Young Link":
                         return "Mirror";
                     case "Pikachu":
@@ -1243,56 +989,23 @@ public class MatchupFragment extends Fragment {
             case "Pikachu": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Roy":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Young Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Pikachu":
                         return "Mirror";
                     case "Yoshi":
@@ -1317,59 +1030,24 @@ public class MatchupFragment extends Fragment {
             case "Yoshi": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Roy":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Young Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Pikachu":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Yoshi":
                         return "Mirror";
                     case "Princess Zelda":
@@ -1392,62 +1070,25 @@ public class MatchupFragment extends Fragment {
             case "Princess Zelda": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Roy":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Young Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Pikachu":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Yoshi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Princess Zelda":
                         return "Mirror";
                     case "Mr. Game & Watch":
@@ -1468,65 +1109,26 @@ public class MatchupFragment extends Fragment {
             case "Mr. Game & Watch": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Roy":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Young Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Pikachu":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Yoshi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Zelda":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Mr. Game & Watch":
                         return "Mirror";
                     case "Ness":
@@ -1545,68 +1147,27 @@ public class MatchupFragment extends Fragment {
             case "Ness": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Roy":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Young Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Pikachu":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Yoshi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Zelda":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mr. Game & Watch":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Ness":
                         return "Mirror";
                     case "Bowser":
@@ -1623,71 +1184,28 @@ public class MatchupFragment extends Fragment {
             case "Bowser": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Roy":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Young Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Pikachu":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Yoshi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Zelda":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mr. Game & Watch":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ness":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Bowser":
                         return "Mirror";
                     case "Kirby":
@@ -1702,74 +1220,29 @@ public class MatchupFragment extends Fragment {
             case "Kirby": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Roy":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Young Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Pikachu":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Yoshi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Zelda":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mr. Game & Watch":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ness":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Bowser":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Kirby":
                         return "Mirror";
                     case "Pichu":
@@ -1782,77 +1255,30 @@ public class MatchupFragment extends Fragment {
             case "Pichu": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Roy":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Young Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Pikachu":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Yoshi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Zelda":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mr. Game & Watch":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ness":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Bowser":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Kirby":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Pichu":
                         return "Mirror";
                     case "Mewtwo":
@@ -1863,80 +1289,31 @@ public class MatchupFragment extends Fragment {
             case "Mewtwo": {
                 switch (right) {
                     case "Fox":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Falco":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Sheik":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Marth":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Peach":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Captain Falcon":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ice Climbers":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Samus Aran":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Dr. Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Jigglypuff":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mario":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ganondorf":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Luigi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Donkey Kong":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Roy":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Young Link":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Pikachu":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Yoshi":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Princess Zelda":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Mr. Game & Watch":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Ness":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Bowser":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Kirby":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
                     case "Pichu":
-                        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(right,
-                                left)) - 100));
+                        return getPercent(right, left);
                     case "Mewtwo":
                         return "Mirror";
                 }
@@ -2168,6 +1545,12 @@ public class MatchupFragment extends Fragment {
                 spinnerLeft.performClick();
             }
         });
+        muImgLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spinnerLeft.performClick();
+            }
+        });
 
         spinnerRight.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -2187,13 +1570,6 @@ public class MatchupFragment extends Fragment {
                 spinnerRight.performClick();
             }
         });
-
-        muImgLeft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spinnerLeft.performClick();
-            }
-        });
         muImgRight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -2208,7 +1584,6 @@ public class MatchupFragment extends Fragment {
             setMatchupImage(Preferences.getMainChar(getActivity()), muImgLeft);
             createMatchup();
         }
-
     }
 
     private void createMatchup() {
@@ -2230,8 +1605,11 @@ public class MatchupFragment extends Fragment {
         }
     }
 
-    private int getIndex(Spinner spinner, String myString) {
+    private String getPercent(String left, String right) {
+        return String.valueOf(Math.abs(Integer.parseInt(getLeftPercent(left, right)) - 100));
+    }
 
+    private int getIndex(Spinner spinner, String myString) {
         int index = 0;
 
         for (int i = 0; i < spinner.getCount(); i++) {

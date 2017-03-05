@@ -2,30 +2,30 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:background="?android:attr/selectableItemBackground">
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="horizontal">
 
     <ImageView
         android:id="@+id/menuImage"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="start|top"
-        android:scaleType="fitCenter"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/foxicon"
-        android:layout_marginRight="16dp"/>
+        android:scaleType="fitCenter"
+        android:src="@drawable/foxicon" />
 
     <TextView
         android:id="@+id/menuTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
         android:layout_marginTop="16dp"
         android:text="@string/debug_text"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="16sp"
         android:textColor="?android:textColorPrimary"
-        android:layout_marginBottom="18dp"/>
+        android:textSize="16sp" />
 </LinearLayout>

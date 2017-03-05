@@ -8,9 +8,9 @@
     <include
         layout="@layout/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
-    <RelativeLayout
+    <FrameLayout
         android:id="@+id/imagelayout"
         android:layout_width="match_parent"
         android:layout_height="280dp"
@@ -22,7 +22,7 @@
             android:id="@+id/frameImage"
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitCenter" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,18 +36,18 @@
                 android:layout_gravity="start|left|center_vertical"
                 android:layout_weight="1"
                 android:foregroundGravity="left"
-                android:paddingRight="70dp"
                 android:paddingBottom="110dp"
+                android:paddingRight="70dp"
                 android:paddingTop="110dp"
-                android:src="@drawable/backarrow"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/backarrow" />
 
             <View
                 android:id="@+id/playBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
 
             <ImageView
                 android:id="@+id/nextBtn"
@@ -55,13 +55,13 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="end|right|center_vertical"
                 android:layout_weight="1"
-                android:paddingLeft="70dp"
                 android:paddingBottom="110dp"
+                android:paddingLeft="70dp"
                 android:paddingTop="110dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/nextarrow"/>
+                android:src="@drawable/nextarrow" />
         </LinearLayout>
-    </RelativeLayout>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/frameNumber"
@@ -77,7 +77,7 @@
         android:text="1"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="?android:textColorSecondary"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView2"
@@ -85,25 +85,17 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/frameNumber"
         android:layout_alignBottom="@+id/frameNumber"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentStart="false"
         android:layout_toEndOf="@+id/frameNumber"
         android:layout_toRightOf="@+id/frameNumber"
         android:gravity="top"
         android:text="/"
         android:textColor="?android:textColorSecondary"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/totalFrame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentStart="false"
         android:layout_alignTop="@+id/textView2"
         android:layout_toEndOf="@+id/textView2"
         android:layout_toRightOf="@+id/textView2"
@@ -111,7 +103,7 @@
         android:text="5"
         android:textColor="?android:textColorSecondary"
         android:textIsSelectable="false"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/landinglagText"
@@ -121,7 +113,7 @@
         android:layout_centerHorizontal="true"
         android:text="   "
         android:textColor="?android:textColorSecondary"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/iasaText"
@@ -133,13 +125,13 @@
         android:layout_marginTop="8dp"
         android:text="   "
         android:textColor="?android:textColorSecondary"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <com.appodeal.ads.BannerView
         android:id="@+id/adView"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal|bottom"
-        android:visibility="visible"
-        android:layout_height="wrap_content"/>
+        android:visibility="visible" />
 </RelativeLayout>

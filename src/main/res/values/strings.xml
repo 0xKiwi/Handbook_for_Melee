@@ -47,17 +47,12 @@
     <string name="action_about">About</string>
     <string name="close">CLOSE</string>
     <string name="twitter">Twitter</string>
-    <string name="version">v2.5.0</string>
-    <string name="changes"><b>Just a rewrite update :)</b>
-        \nFinally added animations on the expandable lists!
-        \nFixed a good amount of info issues thanks to a contributor
-        \nAdded waveland as it\'s own technique
-        \nMade the entire app modular, if anyone wants to contribute it is much easier :)
-        \nFixed the scroll bar on terms
-        \nImproved icon a bit
+    <string name="version">v2.5.2</string>
+    <string name="changes">Finally updated the libraries to Nougat
+        \nOverall performance improvements
         \nI will now be focusing on the iOS port!
     </string>
-    <string name="about_text">\t\t\tHandbook for Melee v2.5.0
+    <string name="about_text">\t\t\tHandbook for Melee v2.5.2
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/

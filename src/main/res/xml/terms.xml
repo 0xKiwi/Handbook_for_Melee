@@ -391,9 +391,13 @@
   <string name="oos_term_info" title="OOS">
         Stands for Out Of Shield. Meaning to perform an action out of a shield, such as grab or Up-B.
     </string>
-  <string name="op_term_info" title="Overpowered">
+    <string name="op_term_info" title="Overpowered">
         When an aspect of a character is believed to be too powerful, sometimes shorted to OP and
         usually followed by a "pls nerf sakurai".
+    </string>
+    <string name="partyhat_term_info" title="Party hat pikachu">
+        The skin that Axe uses for Pikachu, he says that he performs better with party hat Pikachu because his opponents think
+        Pikachu is bigger due to his hat, when the size of Pikachu is the same as the normal skin.
     </string>
   <string name="pcdrop_term_info" title="PC drop">
         Also called ledge turn around grab, done by walking to the ledge and doing a slow turn around, followed by fast fall.
