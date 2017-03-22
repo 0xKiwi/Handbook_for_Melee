@@ -36,6 +36,7 @@ import com.appodeal.ads.Appodeal;
 import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.fragment.FrameInfoDialogFragment;
+import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.HitboxesHelper;
 import com.thatkawaiiguy.meleehandbook.other.Preferences;
 import com.thatkawaiiguy.meleehandbook.R;
@@ -112,25 +113,7 @@ public class HitBoxesActivity extends AppCompatActivity {
         nextBtn = (ImageView) findViewById(R.id.nextBtn);
         playBtn = findViewById(R.id.playBtn);
 
-        switch(characterPickedTitle) {
-            case "Dr. Mario":
-                characterPicked = "doctor";
-                break;
-            case "Captain Falcon":
-                characterPicked = "falcon";
-                break;
-            case "Ice Climbers":
-                characterPicked = "climbers";
-                break;
-            case "Samus Aran":
-                characterPicked = "samus";
-                break;
-            case "Princess Peach":
-                characterPicked = "peach";
-                break;
-            default:
-                characterPicked = characterPickedTitle.toLowerCase();
-        }
+        characterPicked = ArrayHelper.getFileName(characterPickedTitle);
 
         movePicked = HitboxesHelper.setShortMovePicked(movePicked);
         doStuff();

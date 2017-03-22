@@ -27,7 +27,6 @@ public class CustomParentObject implements ParentObject {
 
     private String mParentText;
 
-
     public CustomParentObject() {
     }
 
