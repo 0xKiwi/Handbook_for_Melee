@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
         if (Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this))
-            nvDrawer.getMenu().findItem(R.id.remove).setTitle("Support the Dev");
+            nvDrawer.getMenu().findItem(R.id.remove).setTitle("Thank you!!");
 
         NavigationMenuView navigationMenuView = (NavigationMenuView) nvDrawer.getChildAt(0);
         if (navigationMenuView != null)
@@ -192,8 +192,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                 break;
             case R.id.remove:
                 if (bp.isPurchased(getResources().getString(R.string.adproductid)))
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://bit" +
-                            ".ly/1NXCD2o")));
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://umad.com/img/2" +
+                            "015/10/happy-jigglypuff-pokemon-gif-536-593-hd-wallpapers.jpg")));
                 else if (BillingProcessor.isIabServiceAvailable(this)) {
                     bp.purchase(this, getResources().getString(R.string.adproductid));
                 } else {

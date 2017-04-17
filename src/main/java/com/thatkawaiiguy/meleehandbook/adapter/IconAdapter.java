@@ -30,6 +30,7 @@ import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterActivity;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterFrameActivity;
 import com.thatkawaiiguy.meleehandbook.activity.StageActivity;
+import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
 
 public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
 
@@ -82,7 +83,7 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
                 public void onClick(View v) {
                     if(canStart) {
                         Intent mIntent;
-                        if(hasFrame(pos))
+                        if(ArrayHelper.hasFrame(mDataSet[pos], mContext.getResources()))
                             mIntent = new Intent(mContext, CharacterFrameActivity.class);
                         else
                             mIntent = new Intent(mContext, CharacterActivity.class);

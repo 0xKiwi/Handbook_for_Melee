@@ -18,7 +18,12 @@
 package com.thatkawaiiguy.meleehandbook.other;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.BitmapFactory;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -91,6 +96,16 @@ public class ArrayHelper {
 
     public static String getFileName(String title){
         return title.toLowerCase().trim().replace(" ","").replace("-","").replace("/","")
-                .replace("&", "").replace("'","").replace(".","").replace("(","").replace(")","");
+                .replace("&", "").replace("'","").replace(".","").replace("(","").replace(")","").replace("-","");
+    }
+
+    public static boolean hasFrame(String character, Resources resources){
+        ArrayList<String> filelist = new ArrayList<>();
+        try {
+            filelist = new ArrayList<>(Arrays.asList(resources.getAssets().list(getFileName(character))));
+        } catch(IOException e) {
+        }
+
+        return filelist.size() > 0;
     }
 }

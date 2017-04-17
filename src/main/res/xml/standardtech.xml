@@ -263,13 +263,13 @@
             will cause you to move your character in the direction where you are SDIing.
             <br>
             <br><b>This works extremely well with:</b>
-            <br>\tMultiple hitting d-smashes (e.g. Peach, Sheik, Pikachu)
-            <br>\tRapid jabs
-            <br>\tShield pressure from Fox and Falco
-            <br>\tThe lightshield edgehog vs Marth
-            <br>\tOther multihit moves on shield
-            <br>\tFalcon's raptor boost on shield
-            <br>\tStrong attacks on shield that may seem unpunishable (like certain spacings of Falco's f-smash or d-tilt)
+            <br>Multiple hitting d-smashes (e.g. Peach, Sheik, Pikachu)
+            <br>Rapid jabs
+            <br>Shield pressure from Fox and Falco
+            <br>The lightshield edgehog vs Marth
+            <br>Other multihit moves on shield
+            <br>Falcon's raptor boost on shield
+            <br>Strong attacks on shield that may seem unpunishable (like certain spacings of Falco's f-smash or d-tilt)
             <br>
             <br>Video on Shield DI: https://youtu.be/53t9fDzdCyw
         ]]></item>
@@ -291,8 +291,8 @@
             tech after their DSDI input.
             <br>
             <br><b>This works extremely well with:</b>
-            <br>\tMarth's up-air on platforms
-            <br>\tAny attack that can be survived with strong SDI or DI.
+            <br>Marth's up-air on platforms
+            <br>Any attack that can be survived with strong SDI or DI.
         ]]></item>
         <item name="diangles_info_text" title="Angles"><![CDATA[These are the possible angles which you can DI and angle certain moves.
             <br>Any Up-B move which lets you change your aim in a circular manner (like Falco's or Zelda's)
@@ -332,32 +332,32 @@
         or gain height. (An example is Fox's Reflector or Luigi's Luigi Cyclone.)
         <br>
         <br><big><b>Fast falling speeds in Melee</b></big>
-        <br>\t1. Falco
-        <br>\t1. Captain Falcon
-        <br>\t3. Fox
-        <br>\t4. Link
-        <br>\t4. Sheik
-        <br>\t6. Donkey Kong
-        <br>\t7. Yoshi
-        <br>\t8. Roy
-        <br>\t9. Pikachu
-        <br>\t10. Ganondorf
-        <br>\t11. Pichu
-        <br>\t11. Marth
-        <br>\t13. Bowser
-        <br>\t14. Mario
-        <br>\t14. Dr. Mario
-        <br>\t14. Samus
-        <br>\t14. Mewtwo
-        <br>\t14. Mr. Game &amp; Watch
-        <br>\t19. Young Link
-        <br>\t19. Ness
-        <br>\t21. Luigi
-        <br>\t21. Peach
-        <br>\t21. Kirby
-        <br>\t21. Ice Climbers
-        <br>\t25. Zelda
-        <br>\t26. Jigglypuff
+        <br>1. Falco
+        <br>1. Captain Falcon
+        <br>3. Fox
+        <br>4. Link
+        <br>4. Sheik
+        <br>6. Donkey Kong
+        <br>7. Yoshi
+        <br>8. Roy
+        <br>9. Pikachu
+        <br>10. Ganondorf
+        <br>11. Pichu
+        <br>11. Marth
+        <br>13. Bowser
+        <br>14. Mario
+        <br>14. Dr. Mario
+        <br>14. Samus
+        <br>14. Mewtwo
+        <br>14. Mr. Game &amp; Watch
+        <br>19. Young Link
+        <br>19. Ness
+        <br>21. Luigi
+        <br>21. Peach
+        <br>21. Kirby
+        <br>21. Ice Climbers
+        <br>25. Zelda
+        <br>26. Jigglypuff
     ]]></string>
     <string name="ftrot_info_text" title="Fox-trot" ><![CDATA[<big><b>Fox-trot</b></big>
         <br>Fox-trotting is the technique that consists of moving along the
@@ -654,17 +654,17 @@
         also have rather noticeable moonwalks. The following characters can moonwalk without needing to
         walk in the opposite direction, ranked by distance:
         <br>
-        <br>\t1. Captain Falcon
-        <br>\t2. Link
-        <br>\t3. Young Link
-        <br>\t4. Mewtwo
-        <br>\t5. Yoshi
-        <br>\t6. Ganondorf
-        <br>\t7. Peach
-        <br>\t8. Zelda
-        <br>\t9. Bowser
-        <br>\t10. Samus
-        <br>\t11. Kirby
+        <br>1. Captain Falcon
+        <br>2. Link
+        <br>3. Young Link
+        <br>4. Mewtwo
+        <br>5. Yoshi
+        <br>6. Ganondorf
+        <br>7. Peach
+        <br>8. Zelda
+        <br>9. Bowser
+        <br>10. Samus
+        <br>11. Kirby
         <br>
         <br><big><b>Use in competitive play</b></big>
         <br>The moonwalk acts as a generally situational technique in the competitive metagame, owing to the
@@ -744,15 +744,15 @@
         <br>Unless noted, attacks have a one frame window. These apply to stationary platforms;
         for downward moving platforms, the window sizes may vary, and more attacks may be possible.
         <br>
-        <br>\t<b>Link</b> – nair (two frame window), uair
-        <br>\t<b>Luigi</b> – nair (two frame window), bair
-        <br>\t<b>Mario</b> – nair
-        <br>\t<b>Marth</b> – fair
-        <br>\t<b>Samus</b> – nair
-        <br>\t<b>Yoshi</b> – uair
-        <br>\t<b>Sheik</b> – nair
-        <br>\t<b>Falco</b> – bair
-        <br>\t<b>Young Link</b> – nair
+        <br><b>Link</b> – nair (two frame window), uair
+        <br><b>Luigi</b> – nair (two frame window), bair
+        <br><b>Mario</b> – nair
+        <br><b>Marth</b> – fair
+        <br><b>Samus</b> – nair
+        <br><b>Yoshi</b> – uair
+        <br><b>Sheik</b> – nair
+        <br><b>Falco</b> – bair
+        <br><b>Young Link</b> – nair
         <br>
         <br><big><b>Application</b></big>
         <br>When used with aerial attacks that have little lag, a platform-canceled aerial attack can lead
@@ -784,15 +784,15 @@
         then double jumping on the right frame.
         <br>
         <br><b>Other moves that can be used with platform warping include:</b>
-        <br>\tFox - nair, fair, dair
-        <br>\tSheik - all aerials except dair
-        <br>\tSamus - fair, uair (fullhop)
-        <br>\tGanon - nair, uair (fullhop) (also has a NIL)
-        <br>\tLink & Young Link - uair, nair
-        <br>\tMarth - fair, nair
-        <br>\tDr. Mario & Mario - nair, uair
-        <br>\tPikachu - uair
-        <br>\tLuigi - nair
+        <br>Fox - nair, fair, dair
+        <br>Sheik - all aerials except dair
+        <br>Samus - fair, uair (fullhop)
+        <br>Ganon - nair, uair (fullhop) (also has a NIL)
+        <br>Link & Young Link - uair, nair
+        <br>Marth - fair, nair
+        <br>Dr. Mario & Mario - nair, uair
+        <br>Pikachu - uair
+        <br>Luigi - nair
         <br>
         <br><b>Walljump platform warp</b>
         <br>It is also possible to perform a platform warp from a walljump, with the only discovered set ups (in legal stages)
@@ -855,7 +855,7 @@
         <br>Yoshi's shield sometimes powershields attacks even when the shield is already up.
     ]]></string>
     <string-array name="shielddrop_group" title="Shield dropping" amount="2">
-        <item name="shielddrop_info_text" title="Shield drop"><![CDATA[<br><big><b>Shield dropping</b></big>
+        <item name="shielddrop_info_text" title="Shield drop"><![CDATA[<big><b>Shield dropping</b></big>
             <br>Shield platform dropping is dropping through
             a soft platform while shielding. This allows a player to quickly escape situations
             or mix-up their approaches.
@@ -908,10 +908,10 @@
         players to use aerial attacks in tandem with ground moves.
         <br>
         <br><b>Chronological button input:</b>
-        <br>\tX/Y/up slightly
-        <br>\tA/A+direction/C/Z
-        <br>\tDown
-        <br>\tL, R, or Z
+        <br>X/Y/up slightly
+        <br>A/A+direction/C/Z
+        <br>Down
+        <br>L, R, or Z
         <br>
         <br>The last one can be skipped for certain aerials if the aerial is performed very early and has reached
         its auto-cancel frames or ended completely upon landing. For example, Marth's neutral aerial and
@@ -942,7 +942,7 @@
         else the shielder will be shield jabbed. Therefore, a large hitbox is required to hit the increasingly diminutive shield.
         <br>
         <br><b>Examples</b>
-        <br>\tFox's Shine cancel chain
+        <br>Fox's Shine cancel chain
         <br>
         <br><big><b>Variants, special situations</b></big>
         <br>There exist combos that are not always called "true shield break combos," but nevertheless can be
@@ -951,10 +951,10 @@
         locked in a fixed position during the combo due to a feature of the stage.
         <br>
         <br><b>Examples</b>
-        <br>\tPillaring with Falco
-        <br>\tPeach's down smash
-        <br>\tYoshi's down aerial
-        <br>\tA low-cooldown attack into a multi-hit attack is often considered a shield break combo
+        <br>Pillaring with Falco
+        <br>Peach's down smash
+        <br>Yoshi's down aerial
+        <br>A low-cooldown attack into a multi-hit attack is often considered a shield break combo
     ]]></string>
     <string name="shop_info_text" title="Short hop"><![CDATA[<big><b>Short hop</b></big>
         <br>Performed by pressing the jump button or pushing the control stick
@@ -1091,14 +1091,14 @@
         often used by players recovering against an edge-guarder.
         <br>
         <br><big><b>Characters who can wall jump</b></big>
-        <br>\tCaptain Falcon
-        <br>\tFalco
-        <br>\tFox
-        <br>\tMario
-        <br>\tPichu
-        <br>\tSamus
-        <br>\tSheik
-        <br>\tYoung Link
+        <br>Captain Falcon
+        <br>Falco
+        <br>Fox
+        <br>Mario
+        <br>Pichu
+        <br>Samus
+        <br>Sheik
+        <br>Young Link
         <br>
         <br><big><b>Wall jump stalling</b></big>
         <br>A few characters can still stall for quite some time if they continue to wall jump
@@ -1241,27 +1241,27 @@
         <br><big><b>Lengths</b></big>
         <br>
         <br><b>Wavedash lengths, in order from longest to shortest:</b>
-        <br>\t1. Luigi
-        <br>\t2. Ice Climbers
-        <br>\t3. Mewtwo
-        <br>\t4. Marth
-        <br>\t5. Yoshi
-        <br>\t6. Roy
-        <br>\t7. Dr. Mario / Mario / Mr. Game &amp; Watch
-        <br>\t10. Samus
-        <br>\t11. Ness
-        <br>\t12. Fox
-        <br>\t13. Bowser
-        <br>\t14. Falco
-        <br>\t15. Young Link
-        <br>\t16. Ganondorf
-        <br>\t17. Donkey Kong
-        <br>\t18. Pikachu / Sheik
-        <br>\t20. Captain Falcon / Kirby
-        <br>\t22. Pichu
-        <br>\t23. Jigglypuff
-        <br>\t24. Link
-        <br>\t25. Peach / Zelda
+        <br>1. Luigi
+        <br>2. Ice Climbers
+        <br>3. Mewtwo
+        <br>4. Marth
+        <br>5. Yoshi
+        <br>6. Roy
+        <br>7. Dr. Mario / Mario / Mr. Game &amp; Watch
+        <br>10. Samus
+        <br>11. Ness
+        <br>12. Fox
+        <br>13. Bowser
+        <br>14. Falco
+        <br>15. Young Link
+        <br>16. Ganondorf
+        <br>17. Donkey Kong
+        <br>18. Pikachu / Sheik
+        <br>20. Captain Falcon / Kirby
+        <br>22. Pichu
+        <br>23. Jigglypuff
+        <br>24. Link
+        <br>25. Peach / Zelda
         <br>
         <br><big><b>Performing the technique</b></big>
         <br>Traditionally, wavedashing is the technique-to-know for newer players, for
@@ -1308,10 +1308,10 @@
         it is acceptable to have your input be first processed on the 3rd frame, which happens before the collision check is executed.
         <br>
         <br><b>The player V-canceling must have all of the following criteria met:</b>
-        <br>\t1. Be airborne
-        <br>\t2. Not be in a attack animation
-        <br>\t3. Not be in hitstun
-        <br>\t4. Not have pressed L or R within the past 40 frames
+        <br>1. Be airborne
+        <br>2. Not be in a attack animation
+        <br>3. Not be in hitstun
+        <br>4. Not have pressed L or R within the past 40 frames
         <br>
         <br>Note: You cannot spam L/R for this.
         <br>

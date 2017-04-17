@@ -328,10 +328,10 @@
         other frames will cause shieldstun onto Yoshi.
         <br>
         <br><b>Parry followups include</b>
-        <br>\tGrabbing
-        <br>\tRoll or sidestep
-        <br>\tJump
-        <br>\tShield drop
+        <br>Grabbing
+        <br>Roll or sidestep
+        <br>Jump
+        <br>Shield drop
     ]]></string>
     <string name="pillar_info_text" title="Pillaring" character="Falco/Fox"><![CDATA[Example: https://youtu.be/kPahZCKxcGI
         <br>
@@ -506,17 +506,17 @@
         <br>Since Falco only travels for 4 frames, there are only 4 shortened Phantasm lengths, as opposed to Fox who has 5.
         <br>
         <br><big><b>Timing for Falco</b></big>
-        <br>\tFull length. don't cancel the attack
-        <br>\tMedium length. Press B again on frame 20
-        <br>\tShort. Press B again on frame 19
-        <br>\tFeint. Press B again on frame 17 or 18, you will barely move, and no hitbox will come out.
+        <br>Full length. don't cancel the attack
+        <br>Medium length. Press B again on frame 20
+        <br>Short. Press B again on frame 19
+        <br>Feint. Press B again on frame 17 or 18, you will barely move, and no hitbox will come out.
         <br>
         <br><big><b>Timing for Fox</b></big>
-        <br>\tFull length. don't cancel the attack
-        <br>\tAlmost full length. Press B again on frame 24
-        <br>\tMedium length. Press B again on frame 23
-        <br>\tShort. Press B again on frame 22
-        <br>\tFeint. Press B again on frame 20 or 21, you will barely move, and no hitbox will come out.
+        <br>Full length. don't cancel the attack
+        <br>Almost full length. Press B again on frame 24
+        <br>Medium length. Press B again on frame 23
+        <br>Short. Press B again on frame 22
+        <br>Feint. Press B again on frame 20 or 21, you will barely move, and no hitbox will come out.
     ]]></string>
     <string-array name="swd_group" title="Super wavedash &amp; SDWD" character="Samus Aran" amount="2">
         <item name="swd_info_text" title="Super wavedash"><![CDATA[Examples of SWD: https://youtu.be/8YSeHeuiX8U

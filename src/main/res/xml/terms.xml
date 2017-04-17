@@ -3,6 +3,10 @@
   <string name="xx_term_info" title="20XX">
         A hypothetical future popularized by Hax where everyone plays Fox frame-perfectly. Since the only thing determining the winner of a match is port priority, the Rock-Paper-Scissors metagame has evolved "to ridiculous levels" and has become the only remaining factor to decide the outcome of matches. The 20XX Hack Pack and 20XX Tournament Edition are also popular mods for Melee.
     </string>
+  <string name="20xxtimeline_term_info" title="20XX timeline">
+        A fictional timeline of the future of Melee from the year 2001 to 2800.
+        Part 1: http://i.imgur.com/gzJf5Hy.jpg?1 Part 2: http://i.imgur.com/5SVn8X8.jpg
+    </string>
   <string name="airdodge_term_info" title="Air dodge">
        A technique performed by full presing the L or R button in the air. Air dodging halts momentum, gives intangibility frames to the user, and it can be angled using the control stick to give a small boost in a direction. It leaves the user in the helpless state after use.
     </string>
@@ -321,8 +325,12 @@
   <string name="lolm2k_term_info" title="lol m2k">
         A twitch meme, now expanded to all of the smash community. Origin: http://pastebin.com/YZj6B2Wt
     </string>
-  <string name="lovetap_term_info" title="Love tap">
+    <string name="lovetap_term_info" title="Love tap">
         When a Captain Falcon hits an opponent with the later weak hitbox of his FAir (Knee).
+    </string>
+    <string name="m2kangle_term_info" title="M2K angle">
+        A M2K angle is when a player (Usually as Fox or Falco) Up-Bs to the ledge at a very odd angle so that
+        they slowly slide their way up to the ledge grab in order to survive an edge guard attempt. Done often by M2K.
     </string>
   <string name="macd_term_info" title="MacD">
         When a player unplugs something, named after MacD after being accused of sabotaging
@@ -449,9 +457,13 @@
         When a player steals the ledge from another player almost instantly, as if the player
         stealing the ledge got to it a frame before the other.
     </string>
-  <string name="randall_term_info" title="Randall">
+    <string name="randall_term_info" title="Randall">
         The cloud that flies around the stage in Yoshis Story.
-        Timing for Randall explained: http://oddshot.tv/shot/bleagel0-2015122203619419
+        Timing for Randall explained: https://gfycat.com/HandsomeLinedFish
+    </string>
+    <string name="randallslot_term_info" title="Randall's slot">
+        A slot in the wall of Yoshi's Story makes it possible to bounce to the far side rather than down
+        after bouncing into Randall's house: https://gfycat.com/DependentImperfectFoal
     </string>
   <string name="recovery_term_info" title="Recovery">
         The Up-B attack is usually referred to as the recovery since it is how most
