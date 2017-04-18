@@ -35,7 +35,7 @@ public class ArrayHelper {
         if(sortByTier) {
             chars = new ArrayList<>(Arrays.asList(new String[]{"Fox", "Falco", "Marth", "Sheik",
                     "Jigglypuff", "Princess Peach",
-                    "Ice Climbers", "Captain Falcon", "Pikachu", "Samus Aran",
+                    "Ice Climbers", "Captain Falcon", "Pikachu", "Samus",
                     "Dr. Mario", "Yoshi", "Luigi", "Ganondorf",
                     "Mario", "Young Link", "Donkey Kong", "Link", "Mr. Game & Watch", "Roy",
                     "Mewtwo", "Princess Zelda", "Ness", "Pichu", "Bowser", "Kirby"}));
@@ -44,7 +44,7 @@ public class ArrayHelper {
                     "Donkey Kong", "Dr. Mario",
                     "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Kirby", "Link",
                     "Luigi", "Mario", "Marth", "Mewtwo", "Mr. Game & Watch", "Ness", "Pichu",
-                    "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran", "Sheik",
+                    "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus", "Sheik",
                     "Yoshi", "Young Link"}));
         }
 
@@ -66,7 +66,7 @@ public class ArrayHelper {
         if(sortByTier) {
             chars = new ArrayList<>(Arrays.asList(new String[]{"Fox", "Falco", "Marth",
                     "Sheik", "Jigglypuff", "Princess Peach",
-                    "Ice Climbers", "Captain Falcon", "Pikachu", "Samus Aran",
+                    "Ice Climbers", "Captain Falcon", "Pikachu", "Samus",
                     "Dr. Mario", "Yoshi", "Luigi", "Ganondorf",
                     "Mario", "Young Link", "Link", "Roy",
                     "Mewtwo", "Princess Zelda", "Ness", "Pichu",}));
@@ -74,7 +74,7 @@ public class ArrayHelper {
             chars = new ArrayList<>(Arrays.asList(new String[]{"Captain Falcon", "Dr. Mario",
                     "Falco", "Fox", "Ganondorf", "Ice Climbers", "Jigglypuff", "Link",
                     "Luigi", "Mario", "Marth", "Mewtwo", "Ness", "Pichu",
-                    "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus Aran", "Sheik",
+                    "Pikachu", "Princess Peach", "Princess Zelda", "Roy", "Samus", "Sheik",
                     "Yoshi", "Young Link"}));
         }
 

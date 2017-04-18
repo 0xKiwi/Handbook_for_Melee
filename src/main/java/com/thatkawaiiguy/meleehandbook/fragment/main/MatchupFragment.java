@@ -153,7 +153,7 @@ public class MatchupFragment extends Fragment {
                         return "65";
                     case "Ice Climbers":
                         return "65";
-                    case "Samus Aran":
+                    case "Samus":
                         return "50";
                     case "Dr. Mario":
                         return "60";
@@ -210,7 +210,7 @@ public class MatchupFragment extends Fragment {
                         return "60";
                     case "Ice Climbers":
                         return "50";
-                    case "Samus Aran":
+                    case "Samus":
                         return "55";
                     case "Dr. Mario":
                         return "60";
@@ -266,7 +266,7 @@ public class MatchupFragment extends Fragment {
                         return "60";
                     case "Ice Climbers":
                         return "45";
-                    case "Samus Aran":
+                    case "Samus":
                         return "60";
                     case "Dr. Mario":
                         return "60";
@@ -321,7 +321,7 @@ public class MatchupFragment extends Fragment {
                         return "50";
                     case "Ice Climbers":
                         return "60";
-                    case "Samus Aran":
+                    case "Samus":
                         return "60";
                     case "Dr. Mario":
                         return "60";
@@ -375,7 +375,7 @@ public class MatchupFragment extends Fragment {
                         return "45";
                     case "Ice Climbers":
                         return "70";
-                    case "Samus Aran":
+                    case "Samus":
                         return "60";
                     case "Dr. Mario":
                         return "60";
@@ -428,7 +428,7 @@ public class MatchupFragment extends Fragment {
                         return "Mirror";
                     case "Ice Climbers":
                         return "60";
-                    case "Samus Aran":
+                    case "Samus":
                         return "60";
                     case "Dr. Mario":
                         return "60";
@@ -480,7 +480,7 @@ public class MatchupFragment extends Fragment {
                         return getPercent(right, left);
                     case "Ice Climbers":
                         return "Mirror";
-                    case "Samus Aran":
+                    case "Samus":
                         return "45";
                     case "Dr. Mario":
                         return "50";
@@ -521,7 +521,7 @@ public class MatchupFragment extends Fragment {
                 }
             }
             break;
-            case "Samus Aran": {
+            case "Samus": {
                 switch (right) {
                     case "Fox":
                     case "Falco":
@@ -531,7 +531,7 @@ public class MatchupFragment extends Fragment {
                     case "Captain Falcon":
                     case "Ice Climbers":
                         return getPercent(right, left);
-                    case "Samus Aran":
+                    case "Samus":
                         return "Mirror";
                     case "Dr. Mario":
                         return "60";
@@ -581,7 +581,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                         return getPercent(right, left);
                     case "Dr. Mario":
                         return "Mirror";
@@ -631,7 +631,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                         return getPercent(right, left);
                     case "Jigglypuff":
@@ -680,7 +680,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                         return getPercent(right, left);
@@ -728,7 +728,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -775,7 +775,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -821,7 +821,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -866,7 +866,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -910,7 +910,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -953,7 +953,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -995,7 +995,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -1036,7 +1036,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -1076,7 +1076,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -1115,7 +1115,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -1153,7 +1153,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -1190,7 +1190,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -1226,7 +1226,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -1261,7 +1261,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -1295,7 +1295,7 @@ public class MatchupFragment extends Fragment {
                     case "Princess Peach":
                     case "Captain Falcon":
                     case "Ice Climbers":
-                    case "Samus Aran":
+                    case "Samus":
                     case "Dr. Mario":
                     case "Jigglypuff":
                     case "Mario":
@@ -1339,7 +1339,7 @@ public class MatchupFragment extends Fragment {
                         return "Combo and gimping ability";
                     case "Ice Climbers":
                         return "Combo and gimping ability";
-                    case "Samus Aran":
+                    case "Samus":
                         return "Strong attacks";
                     case "Jigglypuff":
                         return "Rest combos";
@@ -1360,7 +1360,7 @@ public class MatchupFragment extends Fragment {
                         return "Stopping power, dair priority";
                     case "Ice Climbers":
                         return "Easily chaingrabbed";
-                    case "Samus Aran":
+                    case "Samus":
                         return "Stopping power";
                     case "Jigglypuff":
                         return "Strong attacks, but easily rested";
@@ -1383,7 +1383,7 @@ public class MatchupFragment extends Fragment {
                         return "Gimping ability";
                     case "Ice Climbers":
                         return "Can separate with B-Air but hard to camp";
-                    case "Samus Aran":
+                    case "Samus":
                         return "Floaty";
                     case "Jigglypuff":
                         return "Lightweight";
@@ -1404,7 +1404,7 @@ public class MatchupFragment extends Fragment {
                         return "Priority";
                     case "Ice Climbers":
                         return "Strong attacks";
-                    case "Samus Aran":
+                    case "Samus":
                         return "Priority, edge guard";
                     case "Jigglypuff":
                         return "Can space well";
@@ -1425,7 +1425,7 @@ public class MatchupFragment extends Fragment {
                         return "Lightweight";
                     case "Ice Climbers":
                         return "Can edgeguard";
-                    case "Samus Aran":
+                    case "Samus":
                         return "Can gimp";
                     case "Jigglypuff":
                         return "Lightweight";
@@ -1446,7 +1446,7 @@ public class MatchupFragment extends Fragment {
                         return "Trouble edgeguarding";
                     case "Ice Climbers":
                         return "Trouble separating";
-                    case "Samus Aran":
+                    case "Samus":
                         return "Strong attacks";
                     case "Jigglypuff":
                         return "Strong punish";
@@ -1467,14 +1467,14 @@ public class MatchupFragment extends Fragment {
                         return "Easily separates";
                     case "Captain Falcon":
                         return "Can wobble easily";
-                    case "Samus Aran":
+                    case "Samus":
                         return "Easily separated";
                     case "Jigglypuff":
                         return "Punishes hard";
                 }
             }
             break;
-            case "Samus Aran": {
+            case "Samus": {
                 switch (right) {
                     case "Fox":
                         return "Spam power";
@@ -1511,7 +1511,7 @@ public class MatchupFragment extends Fragment {
                         return "Floaty";
                     case "Ice Climbers":
                         return "Easy to edgeguard";
-                    case "Samus Aran":
+                    case "Samus":
                         return "Easy to avoid spam";
                 }
             }

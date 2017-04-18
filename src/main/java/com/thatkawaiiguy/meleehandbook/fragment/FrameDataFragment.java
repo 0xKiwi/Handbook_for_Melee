@@ -111,7 +111,7 @@ public class FrameDataFragment extends Fragment {
                     switch(actionBarTitle) {
                         case "Marth":
                         case "Jigglypuff":
-                        case "Samus Aran":
+                        case "Samus":
                         case "Ice Climbers":
                         case "Yoshi":
                             childObjectList.add(new CustomChildObject(normalList[1]));

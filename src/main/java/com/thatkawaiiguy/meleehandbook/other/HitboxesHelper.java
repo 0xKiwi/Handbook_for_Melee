@@ -122,7 +122,7 @@ public class HitboxesHelper {
                 return getClimbersLandLag(move);
             case "Jigglypuff":
                 return getJiggsLandLag(move);
-            case "Samus Aran":
+            case "Samus":
                 return getSamusLandLag(move);
             case "Ganondorf":
                 return getGanonLandLag(move);
@@ -157,7 +157,7 @@ public class HitboxesHelper {
                 return getClimbersIASA(move);
             case "Jigglypuff":
                 return getJiggsIASA(move);
-            case "Samus Aran":
+            case "Samus":
                 return getSamusIASA(move);
             case "Ganondorf":
                 return getGanonIASA(move);

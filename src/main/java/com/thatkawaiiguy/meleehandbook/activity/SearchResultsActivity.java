@@ -479,7 +479,7 @@ public class SearchResultsActivity extends AppCompatActivity {
                     case "Pikachu":
                         hasFrame = true;
                         break;
-                    case "Samus Aran":
+                    case "Samus":
                         hasFrame = true;
                         break;
                     case "Sheik":

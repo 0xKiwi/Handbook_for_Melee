@@ -1001,7 +1001,7 @@
         air game, and their floatiness causes them to be vulnerable to juggling and combos. Another vulnerability is that many of their benefits are lost if
         the second Climber is KOed.
     ]]></string>
-    <string name="samus_info_text" title="Samus Aran" formatted="false"><![CDATA[<b>Weight:</b> 3rd heaviest (4th in PAL)
+    <string name="samus_info_text" title="Samus" formatted="false"><![CDATA[<b>Weight:</b> 3rd heaviest (4th in PAL)
         <br>
         <br><b><u>Shield stats</u></b>
         <br><b>Roll Length:</b> 3rd longest

@@ -173,7 +173,7 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
             case "Roy":
                 viewHolder.getImageView().setImageResource(R.drawable.royicon);
                 break;
-            case "Samus Aran":
+            case "Samus":
                 viewHolder.getImageView().setImageResource(R.drawable.metroidicon);
                 break;
             case "Sheik":
@@ -207,7 +207,7 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
             case "Jigglypuff":
             case "Marth":
             case "Pikachu":
-            case "Samus Aran":
+            case "Samus":
             case "Sheik":
             case "Yoshi":
             case "Dr. Mario":
