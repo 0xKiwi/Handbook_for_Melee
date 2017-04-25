@@ -720,6 +720,27 @@
         <br>Set ups for Fox and Falco: http://bit.ly/1SjtJAG
         <br>
     ]]></string>
+    <item name="pivot_info_text" title="Pivot"><![CDATA[<big><b>Pivot</b></big>
+        <br>Pivoting is a technique that involves turning the character around quickly. It is used
+        extremely often due to its utility and the ability for it to be used for all ground moves. 
+        <br>Pivoting involves turning the opposite direction, and the quickly inputting a ground attack input. 
+        The technique takes advantage of the initial time frame during a dash that allows a character to input 
+        any ground move without the usual end lag of the dashing equivalent of the move.   
+        <br>
+        <br><big><b>Uses</b></big>
+        <br>Pivots allow for mix ups, follow ups for combos, chain grabs, and several other techniques. 
+        <br><b>Pivots can be used for:</b>
+        <br>Tilts
+        <br>Grabs
+        <br>Smash attacks
+        <br>
+        <br><big><b>How to perform</b></big>
+        <br>Pivots can be done by putting the control stick in the opposite direction and inputting as soon as the
+        character can turn around. A common use for this is chain grabbing a spacie as Marth or Fox, you grab, up throw, 
+        and based on their DI you would pivot grab the direction their heading. Jamming the stick isn't neccesary, 
+        if you are not dashing then just bringing the stick to the side will provide the proper input to pivot, 
+        since turning around while dashing will cause turn-around lag.
+    ]]></item>
     <string name="platformcancel_info_text" title="Platform cancel"><![CDATA[<big><b>Platform canceling</b></big>
         <br>While dropping down from a platform - one frame after the initial crouch animation - characters
         are considered to be in the air. Because of this, they are obviously allowed to use aerial attacks.
