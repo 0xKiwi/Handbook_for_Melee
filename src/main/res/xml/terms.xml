@@ -61,7 +61,12 @@
   <string name="byoc_term_info" title="BYOC">
         Bring Your Own Controller to tournaments. They won't supply controllers.
     </string>
-  <string name="cbox_term_info" title="Camera box">
+    <string name="capeglitch_term_info" title="Cape glitch">
+        Dr. Mario's cape is programmed to turn people around and while for some characters on some stages,
+        the game will "turn around" ledge attacks. Since turning around a ledge attack around means
+        finding a ledge in the other direction, it will teleport these characters to the other side of the stage. https://gfycat.com/FemaleSneakyCusimanse
+    </string>
+    <string name="cbox_term_info" title="Camera box">
         The box of a stage where the camera is watching. The blastzones are usually past or at this box.
         Can be viewed in the stages section.
     </string>

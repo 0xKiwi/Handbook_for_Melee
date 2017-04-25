@@ -622,8 +622,7 @@
         <br><b>Step 4:</b> If you are using a character that falls fast, like Fox or Falco, there is
         no need to angle it downward. Just behind you.
         <br><b>Step 5:</b> Wait for the approach, the opponent will either fall past the ledge that you
-        take control of, or land close to the ledge, where if you're fast enough you may punish,
-
+        take control of, or land close to the ledge, where if you're fast enough you may punish with an aerial attack.
     ]]></string>
     <string name="moonwalk_info_text" title="Moonwalk"><![CDATA[<big><b>Moonwalk</b></big>
         <br>This is a technique that involves
@@ -753,6 +752,15 @@
         <br><b>Sheik</b> – nair
         <br><b>Falco</b> – bair
         <br><b>Young Link</b> – nair
+        <br>
+        <br><big><b>Pseudo platform cancel</big></b>
+        <br>When sliding off a platform you start falling with lower velocity than
+        when dropping through a platform. This allows you to cancel many more aerials than a
+        regular platform cancel, because you effectively have more airtime.
+        <br>In the video Marth is hit in shield, and the shield DI is towards the edge, which
+        makes him slide off, then the knockback pushes them back on the platform.
+        These still require hitlag though, as hitlag allows the ECB to update (and thus become
+        above the platform).
         <br>
         <br><big><b>Application</b></big>
         <br>When used with aerial attacks that have little lag, a platform-canceled aerial attack can lead
@@ -984,7 +992,7 @@
         knockback; performing it with throws makes it impossible to escape out of using an air release and does
         not require prediction of the opponent's escape like the grab release version does. As long as both players
         grab correctly, this is a team infinite. Although all characters can perform this, those with fast and long
-        grabs (such as Marth) are better at team wobbles than those with slow or short grabs (such as Bowser
+        grabs (such as Marth) are better at team wobbles than those with slow or short grabs (such as Bowser)
         <br>It is possible to escape or at least disrupt a team wobble by forcing an air release via timely
         jump inputs.
         <br>This technique can be performed with two players on a team, or two opposing players working

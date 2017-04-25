@@ -47,14 +47,11 @@
     <string name="action_about">About</string>
     <string name="close">CLOSE</string>
     <string name="twitter">Twitter</string>
-    <string name="version">v2.5.6</string>
-    <string name="changes">Added support for 2:1 screens
-        \nAdded Plup as a notable main for Luigi
-        \nFixed some text issues
-        \nRenamed Samus Aran to Samus
-        \nAdded M2K Angle, 20XX Timeline and Randall slot to terms
+    <string name="version">v2.5.8</string>
+    <string name="changes">Added Pseudo Platform Cancel
+        \n
     </string>
-    <string name="about_text">\t\t\tHandbook for Melee v2.5.6
+    <string name="about_text">\t\t\tHandbook for Melee v2.5.8
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/
