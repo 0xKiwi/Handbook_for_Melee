@@ -602,7 +602,7 @@
         that characters possess. Once you begin incorporating a good spacing game, your
         overall game is sure to improve.
     ]]></string>
-    <string name="techskill_info_text" title="Tech skill"><![CDATA[<br><big><b>Tech skill</b></big>
+    <string name="techskill_info_text" title="Tech skill"><![CDATA[<big><b>Tech skill</b></big>
         <br>Your technical skill is your ability to execute commands. The ability to L-cancel consistently is
         part of your technical skill. The ability to short hop, wavedash, and move your character with
         absolute control is the ability to interact with the game fluidly.
@@ -680,44 +680,44 @@
         type of player you are. Your play style really shows your personality. Tires don exits
     ]]></string>
     <string name="tourney_info_text" title="Tournament rules"><![CDATA[<big><b>General Rules</b></big>
-        <br>\t<b>Game Settings:</b> 4 Stocks, 8 Minute Time Limit, No Items
-        <br>\tStalling, as in taking out too much time by avoiding action is banned.
-        <br>\tPerforming infinite techniques (wobbling, shines) over 300&#37; is also banned.
-        <br>\tGame breaking glitches are banned
-        <br>\tDave's stupid rule applies to all matches (see below)
-        <br>\tPause option is disabled. If left on, accidental pausing mid match forfeits a stock.
-        <br>\tA timeout winner is determined by most stocks, and then if still tied, by percentage. If percentage is tied, the match is fully replayed.
+        <br><b>Game Settings:</b> 4 Stocks, 8 Minute Time Limit, No Items
+        <br>Stalling, as in taking out too much time by avoiding action is banned.
+        <br>Performing infinite techniques (wobbling, shines) over 300&#37; is also banned.
+        <br>Game breaking glitches are banned
+        <br>Dave's stupid rule applies to all matches (see below)
+        <br>Pause option is disabled. If left on, accidental pausing mid match forfeits a stock.
+        <br>A timeout winner is determined by most stocks, and then if still tied, by percentage. If percentage is tied, the match is fully replayed.
         <br>
         <br><big><b>Doubles Rules</b></big>
-        <br>\tFriendly Fire enabled
-        <br>\tLife stealing stocks from a teammate is allowed
+        <br>Friendly Fire enabled
+        <br>Life stealing stocks from a teammate is allowed
         <br>
         <br><big><b>Stage List</b></big>
         <br><b>Neutral (Starting) Stages</b>
-        <br>\tFinal Destination
-        <br>\tBattlefield
-        <br>\tYoshi's Story
-        <br>\tDream Land
-        <br>\tFountain of Dreams [Singles Only]
-        <br>\tPokemon Stadium [Doubles Only]
+        <br>Final Destination
+        <br>Battlefield
+        <br>Yoshi's Story
+        <br>Dream Land
+        <br>Fountain of Dreams [Singles Only]
+        <br>Pokemon Stadium [Doubles Only]
         <br>
         <br><b>Counter-Pick Stages</b>
-        <br>\tPokemon Stadium [Singles Only]
-        <br>\tKongo Jungle 64 [Doubles Only]
+        <br>Pokemon Stadium [Singles Only]
+        <br>Kongo Jungle 64 [Doubles Only]
         <br>
         <br><big><b>Match Procedure</b></big>
-        <br>\t1. Players select their characters. Either player may choose to Blind Pick.
-        <br>\t2. Players play RPS, Winner chooses between selecting controller port or first Stage Strike
-        <br>\t3A. Players take turns removing stages from the Neutral Stages list.
-        <br>\t3B. The first player strikes 1 stage, the second player strikes 2, the first then chooses from the remaining 2 stages
-        <br>\t4. The players play the first match of the set.
+        <br>1. Players select their characters. Either player may choose to Blind Pick.
+        <br>2. Players play RPS, Winner chooses between selecting controller port or first Stage Strike
+        <br>3A. Players take turns removing stages from the Neutral Stages list.
+        <br>3B. The first player strikes 1 stage, the second player strikes 2, the first then chooses from the remaining 2 stages
+        <br>4. The players play the first match of the set.
         <br>
-        <br>\t5. Winning player bans a stage from the full list of stages. Does not apply to Best of 5 sets.
-        <br>\t6. The player who lost picks a stage for the next match that isn't banned.
-        <br>\t7. The winning player may choose to change characters.
-        <br>\t8. The player who lost may choose to change characters.
-        <br>\t9. The player who lost may change their controller port.
-        <br>\t10. The next match is played
+        <br>5. Winning player bans a stage from the full list of stages. Does not apply to Best of 5 sets.
+        <br>6. The player who lost picks a stage for the next match that isn't banned.
+        <br>7. The winning player may choose to change characters.
+        <br>8. The player who lost may choose to change characters.
+        <br>9. The player who lost may change their controller port.
+        <br>10. The next match is played
         <br>
         <br>Repeat Steps 5 through 10 for the rest of the matches.
         <br>

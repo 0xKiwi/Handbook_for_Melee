@@ -130,7 +130,7 @@
         of the move you are hit with. For example, weak moves like jabs can be CC'd until very high
         percents. Strong moves like Marth's fsmash cannot be CC'd after medium percents.
         <br>Some moves are impervious to ASDI down and cannot be crouch canceled. Spikes, meteors,
-        and a few other specific moves, such as Fox's shine and Sheik's needles, cannot be CC'd."
+        and a few other specific moves, such as Fox's shine and Sheik's needles, cannot be CC'd.
     ]]></string>
     <string name="ddance_info_text" title="Dash-dance"><![CDATA[Example of dash dancing: https://youtu.be/mk09c6iLLdU
         <br>
