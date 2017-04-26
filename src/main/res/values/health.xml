@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="posture_info_text">Thanks to thespymachine for this info
+    <string name="posture_info_text" title="Posture">Thanks to thespymachine for this info
         \n
         \nSit as far back in the chair as possible,
         with your back straight and shoulders back and relaxed.
@@ -27,7 +27,7 @@
         it. If your legs, back, neck, or shoulders are bothering you after
         a tournament, you should fix your posture.
     </string>
-    <string name="mental_info_text">Thanks to thespymachine for this info
+    <string name="mental_info_text" title="Mental health">Thanks to thespymachine for this info
         \n
         \n<big><b>Mental Exercise</b></big>
         \nMake and keep your mind quick and buff - by using it! Puzzles,
@@ -91,7 +91,7 @@
         \nHunger Affects Decision-Making and Perception of Risk: Eat and
         think well.
     </string>
-    <string name="dozer_info_text">Sit in neutral position. Inhale.
+    <string name="dozer_info_text" title="Dozer">Sit in neutral position. Inhale.
         Exhale and let your eyes close gently. Keep your eyes closed
         for ten seconds, continuing to breathe. Open your eyes. Repeat.
         \nThis ergocise relaxes and moistens the eyes, helps prevent
@@ -102,7 +102,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="upstairs_info_text">Sit in neutral position. Inhale.
+    <string name="upstairs_info_text" title="Upstairs, downstairs">Sit in neutral position. Inhale.
         Exhale. Keeping your head still, raise your eyes upwards and
         focus on something in that line of vision. Hold for a couple
         of seconds. Drop your eyes down, focusing on something in that
@@ -112,7 +112,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="kingleer_info_text">Sit in neutral position. Inhale.
+    <string name="kingleer_info_text" title="Kng leer">Sit in neutral position. Inhale.
         Exhale. Keeping your head still, move your eyes to the right,
         focusing on something in that line of vision. Hold for a couple
         of seconds. Move your eyes to the left, focusing on something
@@ -122,7 +122,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="sidewatcher_info_text">Sit in neutral position. Inhale. Exhale.
+    <string name="sidewatcher_info_text" title="Sidewatcher">Sit in neutral position. Inhale. Exhale.
         Keeping your head still, move your eyes to the upper right hand
         diagonal corner. Hold for a couple of seconds. Lower your eyes to the
         lower left hand diagonal corner. Close your eyes briefly. Repeat, going
@@ -138,7 +138,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="near_info_text">Sit in neutral position, facing a window or
+    <string name="near_info_text" title="Near, far">Sit in neutral position, facing a window or
         something far away. Inhale. Exhale. Focus your eyes on something close
         to you, such as your computer screen or your desk. Focus on something
         far away from you, such as the horizon or a person across the room.
@@ -151,7 +151,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="handshake_info_text">Sit in neutral position.
+    <string name="handshake_info_text" title="Handshake">Sit in neutral position.
         Raise your hands and forearms in front of your chest.
         Inhale. Exhale and shake your hands from the wrist,
         as though you are shaking water off of your hands.
@@ -164,7 +164,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="thumbsweep_info_text">Sit in neutral position.
+    <string name="thumbsweep_info_text" title="Thumb sweep">Sit in neutral position.
         Place your forearms on your armrests, palms facing up.
         Point each thumb out to the side. Inhale. Exhale and
         sweep your thumb across your palm towards your pinkie
@@ -175,7 +175,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="cuticlecheck_info_text">Sit in neutral position.
+    <string name="cuticlecheck_info_text" title="Cuticle check">Sit in neutral position.
         Place your forearms on your armrests and let your hands
         hang down over the edge of the armrests. Inhale. Exhale
         and slowly lift your hands up as far as they will comfortably
@@ -189,7 +189,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="wristcircles_info_text">Sit in neutral position
+    <string name="wristcircles_info_text" title="Wrist circles">Sit in neutral position
         with your arms resting on your armrests. Slide your forearms
         forward slightly and make loose fists with both hands. Inhale.
         Exhale and slowly rotate both wrists outwards, letting your
@@ -204,7 +204,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="break_info_text">Sit in neutral position. Extend
+    <string name="break_info_text" title="Break at the wrist">Sit in neutral position. Extend
         your right arm in front of you at shoulder height, palm down.
         Bend your right wrist down, fingers pointing toward the floor.
         Inhale. Exhale. Using your left hand, gently push the fingers
@@ -221,7 +221,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="stop_info_text">Sit in neutral position. Straighten
+    <string name="stop_info_text" title="Stop (in the name of love)">Sit in neutral position. Straighten
         your right arm in front of you at shoulder height, palm down.
         Bend your right wrist back, fingers pointing to the ceiling.
         Inhale. Exhale and, with your left hand, gently pull back your
@@ -235,7 +235,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="underhand_info_text">Sit in neutral position.
+    <string name="underhand_info_text" title="Underhanded stretch">Sit in neutral position.
         Straighten your right arm in front of you at shoulder
         height, palm up. Bend your right wrist down, fingers
         pointing to the floor. Inhale. Exhale and, with your
@@ -250,7 +250,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="block_info_text">Sit in neutral position, at
+    <string name="block_info_text" title="The block">Sit in neutral position, at
         least arms length away from your monitor. Interlace your
         fingers in your lap. Inhale. Exhale and push your hands
         out to shoulder level, turning your palms away from you.
@@ -264,7 +264,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="thumbpush_info_text">Sit in neutral position. Place
+    <string name="thumbpush_info_text" title="Thumb push">Sit in neutral position. Place
         your forearms on your armrests. Make a fist with your right
         hand. Point your right thumb toward the ceiling. Inhale.
         Exhale and gently pull back on your right thumb with your
@@ -278,7 +278,7 @@
         \n
         \nThanks to ergonomics
     </string>
-    <string name="thumbpull_info_text">Sit in neutral position.
+    <string name="thumbpull_info_text" title="Thumb pull">Sit in neutral position.
         Place your forearms on your armrests. Make a fist with
         your right hand. Point your right thumb toward the ceiling.
         Inhale. Exhale and gently push forward on your right
