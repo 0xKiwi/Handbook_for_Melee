@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="=D7_term_info" title="=D7">
+        An emoticon meant to resemble Chudat's YAYUZZ expression. https://youtu.be/7M6BtDfdM_I https://clips.twitch.tv/SleepyWiseLarkPastaThat
+    </string>
   <string name="xx_term_info" title="20XX">
         A hypothetical future popularized by Hax where everyone plays Fox frame-perfectly. Since the only thing determining the winner of a match is port priority, the Rock-Paper-Scissors metagame has evolved "to ridiculous levels" and has become the only remaining factor to decide the outcome of matches. The 20XX Hack Pack and 20XX Tournament Edition are also popular mods for Melee.
     </string>
@@ -430,9 +433,6 @@
   <string name="pinnappled_term_info" title="Pineapple'd">
         When you try to recover below Dreamland but get stuck, similar to what happens when you
         recover towards the bottom of Battlefield.
-    </string>
-  <string name="pivot_term_info" title="Pivot">
-        When you quickly turn around to perform an action, can be done with any move.
     </string>
   <string name="popballoon_term_info" title="Pop a balloon">
         When a Sheik unloads a full set of needles onto a Jigglypuff.

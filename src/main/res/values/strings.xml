@@ -47,11 +47,13 @@
     <string name="action_about">About</string>
     <string name="close">CLOSE</string>
     <string name="twitter">Twitter</string>
-    <string name="version">v2.5.8</string>
-    <string name="changes">Added Pseudo Platform Cancel
-        \n
+    <string name="version">v2.6.0</string>
+    <string name="changes"><b>The iOS version is now complete, tell your friends!</b>
+        \nAdded Pseudo Platform Cancel
+        \nAdded Pivot
+        \nAdded =D7
     </string>
-    <string name="about_text">\t\t\tHandbook for Melee v2.5.8
+    <string name="about_text">\t\t\tHandbook for Melee v2.6.0
     \n
     \n\t\t\tBased on information from:
     \n\t\t\t\twww.ssbwiki.com/

@@ -720,7 +720,11 @@
         <br>Set ups for Fox and Falco: http://bit.ly/1SjtJAG
         <br>
     ]]></string>
-    <item name="pivot_info_text" title="Pivot"><![CDATA[<big><b>Pivot</b></big>
+    <string name="pivot_info_text" title="Pivot"><![CDATA[<b>Note:</b> The pivot is the F-Tilt by Peach
+        <br>
+        <br><b>Useful tutorial:</b> https://youtu.be/J_aqH9sJnbU
+        <br>
+        <br><big><b>Pivot</b></big>
         <br>Pivoting is a technique that involves turning the character around quickly. It is used
         extremely often due to its utility and the ability for it to be used for all ground moves. 
         <br>Pivoting involves turning the opposite direction, and the quickly inputting a ground attack input. 
@@ -740,7 +744,7 @@
         and based on their DI you would pivot grab the direction their heading. Jamming the stick isn't neccesary, 
         if you are not dashing then just bringing the stick to the side will provide the proper input to pivot, 
         since turning around while dashing will cause turn-around lag.
-    ]]></item>
+    ]]></string>
     <string name="platformcancel_info_text" title="Platform cancel"><![CDATA[<big><b>Platform canceling</b></big>
         <br>While dropping down from a platform - one frame after the initial crouch animation - characters
         are considered to be in the air. Because of this, they are obviously allowed to use aerial attacks.
@@ -778,10 +782,10 @@
         <br>When sliding off a platform you start falling with lower velocity than
         when dropping through a platform. This allows you to cancel many more aerials than a
         regular platform cancel, because you effectively have more airtime.
-        <br>In the video Marth is hit in shield, and the shield DI is towards the edge, which
-        makes him slide off, then the knockback pushes them back on the platform.
+        <br>In the video Marth is hit while in shield, and the shield DI is towards the edge, which
+        makes him slide off, and then the knockback of the down air pushes him back on the platform.
         These still require hitlag though, as hitlag allows the ECB to update (and thus become
-        above the platform).
+        above the platform). It is possible to pseudo cancel with more moves, but doing so requires rather exact situations.
         <br>
         <br><big><b>Application</b></big>
         <br>When used with aerial attacks that have little lag, a platform-canceled aerial attack can lead
@@ -790,8 +794,6 @@
         20-30 frames from an aerial attack. However, platform canceling could easily be considered the most
         difficult to use advanced technique in the game, requiring frame-perfect technical skill to be
         used consistently and effectively.
-        <br>It is also possible to do this in Smash 64, as demonstrated through TAS style combos by Jpheal,
-        and it is similarly incredibly difficult. However, it is only possible on rising platforms/diagonal platforms.
         <br>
         <br><big><b>Advantages</b></big>
         <br>Erases the jumping and falling animations, replacing them with a one-frame crouching animation.
