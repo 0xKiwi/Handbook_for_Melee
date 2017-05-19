@@ -76,35 +76,29 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         viewHolder1.getTextView().setText(mDataSet[position]);
 
         if(video) {
-            viewHolder1.view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(canStart) {
-                        Intent mIntent;
-                        if(mDataSet[pos].equals("Wall jumping") ||
-                                mDataSet[pos].equals("Directional Influence") ||
-                                mDataSet[pos].equals("Shield dropping") ||
-                                mDataSet[pos].equals("Super wavedash & SDWD") ||
-                                mDataSet[pos].equals("Extended & homing grapple"))
-                            mIntent = new Intent(mContext, TechTabActivity.class);
-                        else
-                            mIntent = new Intent(mContext, VideoInfoActivity.class);
-                        mIntent.putExtra("option", mDataSet[pos]);
-                        mIntent.putExtra("xml", id);
-                        mContext.startActivity(mIntent);
-                        canStart = false;
-                    }
+            viewHolder1.view.setOnClickListener(v -> {
+                if(canStart) {
+                    Intent mIntent;
+                    if(mDataSet[pos].equals("Wall jumping") ||
+                            mDataSet[pos].equals("Directional Influence") ||
+                            mDataSet[pos].equals("Shield dropping") ||
+                            mDataSet[pos].equals("Super wavedash & SDWD") ||
+                            mDataSet[pos].equals("Extended & homing grapple"))
+                        mIntent = new Intent(mContext, TechTabActivity.class);
+                    else
+                        mIntent = new Intent(mContext, VideoInfoActivity.class);
+                    mIntent.putExtra("option", mDataSet[pos]);
+                    mIntent.putExtra("xml", id);
+                    mContext.startActivity(mIntent);
+                    canStart = false;
                 }
             });
         } else {
-            viewHolder1.view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(canStart) {
-                        mContext.startActivity(new Intent(mContext, FunActivity.class)
-                                .putExtra("xml", R.xml.fundamentals).putExtra("option", mDataSet[pos]));
-                        canStart = false;
-                    }
+            viewHolder1.view.setOnClickListener(v -> {
+                if(canStart) {
+                    mContext.startActivity(new Intent(mContext, FunActivity.class)
+                            .putExtra("xml", R.xml.fundamentals).putExtra("option", mDataSet[pos]));
+                    canStart = false;
                 }
             });
         }

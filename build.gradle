@@ -15,6 +15,10 @@ android {
         versionCode 34
         versionName "2.6.0"
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     buildTypes {
         release {
             minifyEnabled true
@@ -43,7 +47,8 @@ dependencies {
     compile 'com.bignerdranch.android:expandablerecyclerview:1.0.3'
     compile 'com.r0adkll:slidableactivity:2.0.5'
     compile 'com.anjlab.android.iab.v3:library:1.0.+'
-    compile 'com.github.zagum:Android-ExpandIcon:1.1.1'
+    compile 'com.github.zagum:Android-ExpandIcon:1.2.0'
     compile 'com.google.firebase:firebase-core:10.2.0'
 }
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'me.tatarka.retrolambda'

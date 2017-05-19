@@ -75,53 +75,45 @@ public class MatchupFragment extends Fragment {
 
         final MediaPlayer mp = new MediaPlayer();
         final MediaPlayer mp2 = new MediaPlayer();
-        shineTop.setOnTouchListener(
-                new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        if (characterLeft.equals(characterRight) &&
-                                characterLeft.equals("Fox")) {
-                            try {
-                                mp.reset();
-                                AssetFileDescriptor afd;
-                                afd = getResources().getAssets().openFd
-                                        ("shine.wav");
-                                mp.setDataSource(afd.getFileDescriptor(), afd
-                                        .getStartOffset(), afd.getLength());
-                                mp.prepare();
-                                mp.start();
-                            } catch (IllegalStateException | IOException e) {
-                                e.printStackTrace();
-                            }
-                            return true;
+        shineTop.setOnTouchListener((View v, MotionEvent event) -> {
+                    if(characterLeft.equals(characterRight) &&
+                            characterLeft.equals("Fox")) {
+                        try {
+                            mp.reset();
+                            AssetFileDescriptor afd;
+                            afd = getResources().getAssets().openFd
+                                    ("shine.wav");
+                            mp.setDataSource(afd.getFileDescriptor(), afd
+                                    .getStartOffset(), afd.getLength());
+                            mp.prepare();
+                            mp.start();
+                        } catch(IllegalStateException | IOException e) {
+                            e.printStackTrace();
                         }
-                        return false;
+                        return true;
                     }
+                    return false;
                 }
         );
-        shineBottom.setOnTouchListener(
-                new View.OnTouchListener() {
-                    @Override
-                    public boolean onTouch(View v, MotionEvent event) {
-                        if (characterLeft.equals(characterRight) &&
-                                characterLeft.equals("Fox")) {
-                            try {
-                                mp2.reset();
-                                AssetFileDescriptor afd;
-                                afd = getResources().getAssets().openFd
-                                        ("shine.wav");
-                                mp2.setDataSource(afd.getFileDescriptor(),
-                                        afd.getStartOffset(), afd
-                                                .getLength());
-                                mp2.prepare();
-                                mp2.start();
-                            } catch (IllegalStateException | IOException e) {
-                                e.printStackTrace();
-                            }
-                            return true;
+        shineBottom.setOnTouchListener((View v, MotionEvent event) -> {
+                    if(characterLeft.equals(characterRight) &&
+                            characterLeft.equals("Fox")) {
+                        try {
+                            mp2.reset();
+                            AssetFileDescriptor afd;
+                            afd = getResources().getAssets().openFd
+                                    ("shine.wav");
+                            mp2.setDataSource(afd.getFileDescriptor(),
+                                    afd.getStartOffset(), afd
+                                            .getLength());
+                            mp2.prepare();
+                            mp2.start();
+                        } catch(IllegalStateException | IOException e) {
+                            e.printStackTrace();
                         }
-                        return false;
+                        return true;
                     }
+                    return false;
                 }
         );
 
@@ -130,15 +122,15 @@ public class MatchupFragment extends Fragment {
     }
 
     private String getRightPercent(String left, String right) {
-        if (left.equals(right))
+        if(left.equals(right))
             return "Mirror";
         return getLeftPercent(right, left);
     }
 
     private String getLeftPercent(String left, String right) {
-        switch (left) {
+        switch(left) {
             case "Fox": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                         return "Mirror";
                     case "Falco":
@@ -195,7 +187,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Falco": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                         return getPercent(right, left);
                     case "Falco":
@@ -252,7 +244,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Sheik": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                         return getPercent(right, left);
@@ -308,7 +300,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Marth": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -363,7 +355,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Princess Peach": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -417,7 +409,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Captain Falcon": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -470,7 +462,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Ice Climbers": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -522,7 +514,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Samus": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -573,7 +565,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Dr. Mario": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -623,7 +615,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Jigglypuff": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -672,7 +664,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Mario": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -720,7 +712,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Ganondorf": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -767,7 +759,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Link": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -813,7 +805,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Luigi": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -858,7 +850,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Donkey Kong": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -902,7 +894,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Roy": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -945,7 +937,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Young Link": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -987,7 +979,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Pikachu": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -1028,7 +1020,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Yoshi": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -1068,7 +1060,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Princess Zelda": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -1107,7 +1099,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Mr. Game & Watch": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -1145,7 +1137,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Ness": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -1182,7 +1174,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Bowser": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -1218,7 +1210,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Kirby": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -1253,7 +1245,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Pichu": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -1287,7 +1279,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Mewtwo": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                     case "Falco":
                     case "Sheik":
@@ -1324,9 +1316,9 @@ public class MatchupFragment extends Fragment {
     }
 
     private String getInfo(String left, String right) {
-        switch (left) {
+        switch(left) {
             case "Fox": {
-                switch (right) {
+                switch(right) {
                     case "Falco":
                         return "Better recovery and amazing neutral";
                     case "Sheik":
@@ -1347,7 +1339,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Falco": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                         return "Stopping power, but poor recovery";
                     case "Sheik":
@@ -1368,7 +1360,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Sheik": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                         return "Tech chase and gimping ability";
                     case "Falco":
@@ -1391,7 +1383,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Marth": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                         return "Can gimp, disjointed hitboxes";
                     case "Falco":
@@ -1412,7 +1404,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Princess Peach": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                         return "Zoning power";
                     case "Falco":
@@ -1433,7 +1425,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Captain Falcon": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                         return "Predictable recovery";
                     case "Falco":
@@ -1454,7 +1446,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Ice Climbers": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                         return "Can chain grab";
                     case "Falco":
@@ -1475,7 +1467,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Samus": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                         return "Spam power";
                     case "Falco":
@@ -1496,7 +1488,7 @@ public class MatchupFragment extends Fragment {
             }
             break;
             case "Jigglypuff": {
-                switch (right) {
+                switch(right) {
                     case "Fox":
                         return "Lightweight, can be punished by Up-Throw -> Up-Air";
                     case "Falco":
@@ -1539,18 +1531,8 @@ public class MatchupFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-        leftView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spinnerLeft.performClick();
-            }
-        });
-        muImgLeft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spinnerLeft.performClick();
-            }
-        });
+        leftView.setOnClickListener(v -> spinnerLeft.performClick());
+        muImgLeft.setOnClickListener(v -> spinnerLeft.performClick());
 
         spinnerRight.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -1564,21 +1546,11 @@ public class MatchupFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-        rightView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spinnerRight.performClick();
-            }
-        });
-        muImgRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                spinnerRight.performClick();
-            }
-        });
+        rightView.setOnClickListener(v -> spinnerRight.performClick());
+        muImgRight.setOnClickListener(v -> spinnerRight.performClick());
 
         String main = Preferences.getMainChar(getActivity());
-        if (!main.equals("None") && !main.equals("")) {
+        if(!main.equals("None") && !main.equals("")) {
             setMatchupLeft(main);
             spinnerLeft.setSelection(getIndex(spinnerLeft, main));
             setMatchupImage(Preferences.getMainChar(getActivity()), muImgLeft);
@@ -1587,12 +1559,12 @@ public class MatchupFragment extends Fragment {
     }
 
     private void createMatchup() {
-        if (getLeftPercent(characterLeft, characterRight).equals("Mirror")) {
+        if(getLeftPercent(characterLeft, characterRight).equals("Mirror")) {
             infoLeft.setText("Mirror");
             infoRight.setText("Mirror");
             muInfoLeft.setText("");
             muInfoRight.setText("");
-            if (characterLeft.equals("Fox") && characterRight.equals("Fox"))
+            if(characterLeft.equals("Fox") && characterRight.equals("Fox"))
                 to20XX();
             else
                 un20XX();
@@ -1612,8 +1584,8 @@ public class MatchupFragment extends Fragment {
     private int getIndex(Spinner spinner, String myString) {
         int index = 0;
 
-        for (int i = 0; i < spinner.getCount(); i++) {
-            if (spinner.getItemAtPosition(i).equals(myString)) {
+        for(int i = 0; i < spinner.getCount(); i++) {
+            if(spinner.getItemAtPosition(i).equals(myString)) {
                 index = i;
             }
         }
@@ -1624,7 +1596,8 @@ public class MatchupFragment extends Fragment {
         final BitmapFactory.Options bitmapOptions = new BitmapFactory.Options();
         bitmapOptions.inDensity = sampleSize;
         bitmapOptions.inTargetDensity = 1;
-        final Bitmap scaledBitmap = BitmapFactory.decodeResource(getResources(), imageResId, bitmapOptions);
+        final Bitmap scaledBitmap = BitmapFactory.decodeResource(getResources(), imageResId,
+                bitmapOptions);
         scaledBitmap.setDensity(Bitmap.DENSITY_NONE);
         return scaledBitmap;
     }

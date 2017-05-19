@@ -19,7 +19,6 @@ package com.thatkawaiiguy.meleehandbook.activity;
 
 import android.os.Bundle;
 import android.text.Html;
-import android.widget.ImageView;
 
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;

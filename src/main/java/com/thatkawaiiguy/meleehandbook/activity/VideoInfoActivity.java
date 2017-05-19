@@ -46,7 +46,7 @@ public class VideoInfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        if (getIntent().hasExtra("bundle") && savedInstanceState == null)
+        if(getIntent().hasExtra("bundle") && savedInstanceState == null)
             savedInstanceState = getIntent().getExtras().getBundle("bundle");
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
@@ -54,7 +54,7 @@ public class VideoInfoActivity extends AppCompatActivity {
         Slidr.attach(this);
 
         Bundle mainData = getIntent().getExtras();
-        if (mainData == null)
+        if(mainData == null)
             return;
         optionPicked = mainData.getString("option");
         int id = mainData.getInt("xml");
@@ -68,7 +68,8 @@ public class VideoInfoActivity extends AppCompatActivity {
         text.setMovementMethod(LinkMovementMethod.getInstance());
 
         Log.d("MEME", optionPicked + id);
-        text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(id, optionPicked, getResources())));
+        text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(id, optionPicked, getResources
+                ())));
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize
                 (this)));
 
@@ -76,22 +77,19 @@ public class VideoInfoActivity extends AppCompatActivity {
         setVideo();
 
         final AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar_layout);
-        if (appBarLayout != null) {
-            appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-                @Override
-                public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                    if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange() - getStatusBarHeight()) {
-                        if (infoVid.isPlaying())
-                            infoVid.pause();
-                    } else {
-                        if (!infoVid.isPlaying())
-                            infoVid.start();
-                    }
+        if(appBarLayout != null) {
+            appBarLayout.addOnOffsetChangedListener((appBarLayout1, verticalOffset) -> {
+                if(Math.abs(verticalOffset) >= appBarLayout1.getTotalScrollRange() - getStatusBarHeight()) {
+                    if(infoVid.isPlaying())
+                        infoVid.pause();
+                } else {
+                    if(!infoVid.isPlaying())
+                        infoVid.start();
                 }
             });
         }
 
-        if (!Preferences.hideAds(this)) {
+        if(!Preferences.hideAds(this)) {
             Appodeal.setBannerViewId(R.id.adView);
             Appodeal.show(this, Appodeal.BANNER_VIEW);
         }
@@ -100,15 +98,13 @@ public class VideoInfoActivity extends AppCompatActivity {
 
     private void setVideo() {
         infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" +
-                getResources().getIdentifier(ArrayHelper.getFileName(optionPicked), "raw", getPackageName())));
+                getResources().getIdentifier(ArrayHelper.getFileName(optionPicked), "raw",
+                        getPackageName())));
 
-        infoVid.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setVolume(0, 0);
-                mp.setLooping(true);
-                mp.start();
-            }
+        infoVid.setOnPreparedListener(mp -> {
+            mp.setVolume(0, 0);
+            mp.setLooping(true);
+            mp.start();
         });
     }
 
@@ -121,7 +117,7 @@ public class VideoInfoActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+        switch(item.getItemId()) {
             case android.R.id.home:
                 this.finish();
                 return true;
@@ -147,7 +143,7 @@ public class VideoInfoActivity extends AppCompatActivity {
     private int getStatusBarHeight() {
         int result = 0;
         int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
+        if(resourceId > 0) {
             result = getResources().getDimensionPixelSize(resourceId);
         }
         return result;
@@ -157,7 +153,7 @@ public class VideoInfoActivity extends AppCompatActivity {
         int actionBarHeight = 0;
 
         TypedValue tv = new TypedValue();
-        if (getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
+        if(getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
             actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, getResources()
                     .getDisplayMetrics());
         }

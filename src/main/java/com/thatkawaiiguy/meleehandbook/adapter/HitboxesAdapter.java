@@ -35,7 +35,8 @@ import com.thatkawaiiguy.meleehandbook.activity.HitBoxesActivity;
 
 import java.util.List;
 
-public class HitboxesAdapter extends ExpandableRecyclerAdapter<CustomParentViewHolder, CustomChildViewHolder> {
+public class HitboxesAdapter extends ExpandableRecyclerAdapter<CustomParentViewHolder,
+CustomChildViewHolder> {
 
     private final LayoutInflater mInflater;
 
@@ -66,30 +67,29 @@ public class HitboxesAdapter extends ExpandableRecyclerAdapter<CustomParentViewH
     }
 
     @Override
-    public void onBindParentViewHolder(final CustomParentViewHolder parentViewHolder, int position, final Object parentObject) {
+    public void onBindParentViewHolder(final CustomParentViewHolder parentViewHolder, int
+            position, final Object parentObject) {
         CustomParentObject customParentObject = (CustomParentObject) parentObject;
         parentViewHolder.dataText.setText(customParentObject.getParentText());
     }
 
     @Override
-    public void onBindChildViewHolder(final CustomChildViewHolder childViewHolder, int position, Object childObject) {
+    public void onBindChildViewHolder(final CustomChildViewHolder childViewHolder, int position,
+                                      Object childObject) {
         CustomChildObject customChildObject = (CustomChildObject) childObject;
         childViewHolder.dataText.setText(customChildObject.getChildText());
-        childViewHolder.dataText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(canStart) {
-                    context.startActivity(
-                            new Intent(context, HitBoxesActivity.class)
-                            .putExtra("option", characterPicked)
-                            .putExtra("frame", childViewHolder.dataText.getText()));
-                    canStart = false;
-                }
+        childViewHolder.dataText.setOnClickListener(v -> {
+            if(canStart) {
+                context.startActivity(
+                        new Intent(context, HitBoxesActivity.class)
+                                .putExtra("option", characterPicked)
+                                .putExtra("frame", childViewHolder.dataText.getText()));
+                canStart = false;
             }
         });
     }
 
-    public void setCanStart(){
+    public void setCanStart() {
         canStart = true;
     }
 }

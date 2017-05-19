@@ -39,8 +39,10 @@ import java.util.ArrayList;
 public class HealthyFragment extends Fragment {
     private final String[] parentList = {"Eye stretches", "Hand stretches"};
 
-    private final String[] eyeList = {"Dozer", "Upstairs, downstairs", "King leer", "Sidewatcher", "Near, far"};
-    private final String[] handList = {"Handshake", "Thumb sweep", "Cuticle check", "Wrist circles", "Break at the wrist",
+    private final String[] eyeList = {"Dozer", "Upstairs, downstairs", "King leer",
+            "Sidewatcher", "Near, far"};
+    private final String[] handList = {"Handshake", "Thumb sweep", "Cuticle check", "Wrist " +
+            "circles", "Break at the wrist",
             "Stop (in the name of love)", "Underhanded stretch", "The block", "Thumb push",
             "Thumb pull"};
 
@@ -63,25 +65,19 @@ public class HealthyFragment extends Fragment {
         final TextView postureText = (TextView) view.findViewById(R.id.postureText);
         TextView mentalText = (TextView) view.findViewById(R.id.mentalText);
 
-        postureText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (canStart) {
-                    startActivity(new Intent(getActivity(),
-                            HealthyActivity.class).putExtra("option", "Posture"));
-                    canStart = false;
-                }
+        postureText.setOnClickListener(v -> {
+            if(canStart) {
+                startActivity(new Intent(getActivity(),
+                        HealthyActivity.class).putExtra("option", "Posture"));
+                canStart = false;
             }
         });
 
-        mentalText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (canStart) {
-                    startActivity(new Intent(getActivity(),
-                            HealthyActivity.class).putExtra("option", "Mental health"));
-                    canStart = false;
-                }
+        mentalText.setOnClickListener(v -> {
+            if(canStart) {
+                startActivity(new Intent(getActivity(),
+                        HealthyActivity.class).putExtra("option", "Mental health"));
+                canStart = false;
             }
         });
 
@@ -94,10 +90,10 @@ public class HealthyFragment extends Fragment {
 
     private ArrayList<ParentObject> setUpData() {
         ArrayList<ParentObject> parentObjectList = new ArrayList<>();
-        for (int i = 0; i < 2; i++) {
+        for(int i = 0; i < 2; i++) {
             ArrayList<Object> childObjectList = new ArrayList<>();
 
-            switch (i) {
+            switch(i) {
                 case 0: {
                     childObjectList.add(new CustomChildObject(eyeList[0]));
                     childObjectList.add(new CustomChildObject(eyeList[1]));

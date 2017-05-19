@@ -100,18 +100,18 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         prepareAdmob();
 
-        if (!Preferences.hideAds(this))
+        if(!Preferences.hideAds(this))
             Appodeal.show(this, Appodeal.BANNER_VIEW);
 
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
-        if (Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this))
+        if(Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this))
             nvDrawer.getMenu().findItem(R.id.remove).setTitle("Thank you!!");
 
         NavigationMenuView navigationMenuView = (NavigationMenuView) nvDrawer.getChildAt(0);
-        if (navigationMenuView != null)
+        if(navigationMenuView != null)
             navigationMenuView.setVerticalScrollBarEnabled(false);
 
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         mDrawer.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     slideOffset = 1.0f - slideOffset;
                     int a = Math.min(255, Math.max(0, (int) (slideOffset * 255))) << 24;
                     int rgb = 0x00ffffff & getWindow().getStatusBarColor();
@@ -149,12 +149,12 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         setTitle(Preferences.defaultListItem(this));
         mTitle = getTitle();
 
-        if (savedInstanceState == null) {
+        if(savedInstanceState == null) {
             init();
             addFragment();
             nvDrawer.getMenu().getItem(listdefault).setChecked(true);
             AppRater.app_launched(this);
-            if (Preferences.openNavLaunchEnabled(this))
+            if(Preferences.openNavLaunchEnabled(this))
                 mDrawer.openDrawer(Gravity.LEFT);
         }
     }
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     private void selectDrawerItem(MenuItem menuItem) {
-        switch (menuItem.getItemId()) {
+        switch(menuItem.getItemId()) {
             case R.id.advancedtech:
             case R.id.uniquetech:
                 mTitle = menuItem.getTitle();
@@ -191,10 +191,10 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
                 menuItem.setChecked(true);
                 break;
             case R.id.remove:
-                if (bp.isPurchased(getResources().getString(R.string.adproductid)))
+                if(bp.isPurchased(getResources().getString(R.string.adproductid)))
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://umad.com/img/2" +
                             "015/10/happy-jigglypuff-pokemon-gif-536-593-hd-wallpapers.jpg")));
-                else if (BillingProcessor.isIabServiceAvailable(this)) {
+                else if(BillingProcessor.isIabServiceAvailable(this)) {
                     bp.purchase(this, getResources().getString(R.string.adproductid));
                 } else {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://bit" +
@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public void onBackPressed() {
-        if (Preferences.showExitDialog(this)) {
+        if(Preferences.showExitDialog(this)) {
             new ExitDialogFragment().show(fragmentManager, "exit");
         } else
             super.onBackPressed();
@@ -231,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     public void onPurchaseHistoryRestored() {
-        if (bp.isPurchased(getString(R.string.adproductid))) {
+        if(bp.isPurchased(getString(R.string.adproductid))) {
             Preferences.setHideAds(this, true);
         } else
             Preferences.setHideAds(this, false);
@@ -244,13 +244,13 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (!bp.handleActivityResult(requestCode, resultCode, data))
+        if(!bp.handleActivityResult(requestCode, resultCode, data))
             super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void changeFragment(CharSequence title) {
         Fragment fg2;
-        switch ((String) title) {
+        switch((String) title) {
             case "Advanced Techniques":
                 fg2 = TechFragment.newInstance();
                 break;
@@ -278,15 +278,16 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             default:
                 fg2 = HealthyFragment.newInstance();
         }
-        if (!fg.equals(fg2)) {
+        if(!fg.equals(fg2)) {
             fg = fg2;
             fragmentManager.beginTransaction().replace(R.id.fragmentLayout, fg).commit();
         }
     }
 
     private void sendToast() {
-        if (Preferences.showToast(this)) {
-            Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You " +
+        if(Preferences.showToast(this)) {
+            Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You" +
+                            " " +
                             "don't want to have to go" +
                             " to the doctor.",
                     Toast.LENGTH_SHORT).show();
@@ -294,7 +295,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     private void addFragment() {
-        switch (Preferences.defaultListItem(this)) {
+        switch(Preferences.defaultListItem(this)) {
             case "Advanced Techniques":
                 listdefault = 0;
                 fg = TechFragment.newInstance();
@@ -337,7 +338,7 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     public void onDestroy() {
         super.onDestroy();
 
-        if (bp != null)
+        if(bp != null)
             bp.release();
     }
 
@@ -349,10 +350,10 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         try {
             PackageInfo pi = getPackageManager().getPackageInfo(getPackageName(), 0);
             currentVersionNumber = pi.versionCode;
-        } catch (Exception ignored) {
+        } catch(Exception ignored) {
         }
 
-        if (currentVersionNumber > savedVersionNumber) {
+        if(currentVersionNumber > savedVersionNumber) {
             showWhatsNewDialog();
 
             SharedPreferences.Editor editor = sharedPref.edit();
@@ -387,19 +388,14 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setView(view).setTitle("Whats New")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
+                .setPositiveButton("OK", (DialogInterface dialog, int which) -> dialog.dismiss());
 
         builder.create().show();
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.search) {
+        if(item.getItemId() == R.id.search) {
             startActivity(new Intent(this, SearchResultsActivity.class));
             overridePendingTransition(0, 0);
             return true;
@@ -414,17 +410,10 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
-        navigationView.setNavigationItemSelectedListener(
-                new NavigationView.OnNavigationItemSelectedListener() {
-                    @Override
-                    public boolean onNavigationItemSelected(MenuItem menuItem) {
-                        if (menuItem != null) {
-                            selectDrawerItem(menuItem);
-                            return true;
-                        } else
-                            return false;
-                    }
-                });
+        navigationView.setNavigationItemSelectedListener(menuItem -> {
+            selectDrawerItem(menuItem);
+            return true;
+        });
     }
 
     public static class ExitDialogFragment extends DialogFragment {
@@ -432,19 +421,13 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             return new AlertDialog.Builder(getActivity())
                     .setTitle("Are you sure you want to exit the app?")
-                    .setNegativeButton(R.string.no,
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.dismiss();
-                                }
-                            })
-                    .setPositiveButton(R.string.yes,
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    getActivity().finish();
-                                    System.exit(0);
-                                }
-                            })
+                    .setNegativeButton(R.string.no, (DialogInterface dialog, int id) -> {
+                        dialog.dismiss();
+                    })
+                    .setPositiveButton(R.string.yes, (DialogInterface dialog, int id) -> {
+                        getActivity().finish();
+                        System.exit(0);
+                    })
                     .show();
         }
     }

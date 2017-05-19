@@ -21,7 +21,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.bignerdranch.expandablerecyclerview.ViewHolder.ChildViewHolder;
-import com.github.zagum.expandicon.ExpandIconView;
 import com.thatkawaiiguy.meleehandbook.R;
 
 public class CustomChildViewHolder extends ChildViewHolder {

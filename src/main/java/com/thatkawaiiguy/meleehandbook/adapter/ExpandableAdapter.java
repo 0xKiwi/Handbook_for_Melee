@@ -80,23 +80,20 @@ public class ExpandableAdapter extends ExpandableRecyclerAdapter<CustomParentVie
                                       Object childObject) {
         CustomChildObject customChildObject = (CustomChildObject) childObject;
         childViewHolder.dataText.setText(customChildObject.getChildText());
-        childViewHolder.dataText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(canStart) {
-                    String term = childViewHolder.dataText.getText().toString();
-                    Intent mIntent;
-                    if(term.equals("Super wavedash & SDWD") ||
-                            term.equals("Extended & homing grapple"))
-                        mIntent = new Intent(context, TechTabActivity.class);
-                    else
-                        mIntent = new Intent(context, healthy ? HealthyActivity.class
-                                : VideoInfoActivity.class);
-                    mIntent.putExtra("option", childViewHolder.dataText.getText());
-                    mIntent.putExtra("xml", R.xml.uniquetech);
-                    context.startActivity(mIntent);
-                    canStart = false;
-                }
+        childViewHolder.dataText.setOnClickListener(v -> {
+            if(canStart) {
+                String term = childViewHolder.dataText.getText().toString();
+                Intent mIntent;
+                if(term.equals("Super wavedash & SDWD") ||
+                        term.equals("Extended & homing grapple"))
+                    mIntent = new Intent(context, TechTabActivity.class);
+                else
+                    mIntent = new Intent(context, healthy ? HealthyActivity.class
+                            : VideoInfoActivity.class);
+                mIntent.putExtra("option", childViewHolder.dataText.getText());
+                mIntent.putExtra("xml", R.xml.uniquetech);
+                context.startActivity(mIntent);
+                canStart = false;
             }
         });
     }
