@@ -291,65 +291,53 @@ public class HitBoxesActivity extends AppCompatActivity {
             landingLag.setText(HitboxesHelper.getLandLag(characterPickedTitle, movePicked));
             iasa.setText(HitboxesHelper.getIASA(characterPickedTitle, movePicked));
 
-            backBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(!running) {
-                        if(frame > 0) {
-                            frame--;
-                            setFrame();
-                        }
-                    } else {
-                        interruptPlay();
-                        backBtn.performClick();
+            backBtn.setOnClickListener(v -> {
+                if(!running) {
+                    if(frame > 0) {
+                        frame--;
+                        setFrame();
                     }
+                } else {
+                    interruptPlay();
+                    backBtn.performClick();
                 }
             });
-            backBtn.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    if(!running) {
-                        frame = 0;
-                        setFrame();
-                    } else {
-                        interruptPlay();
-                        backBtn.performLongClick();
-                    }
-                    return true;
+            backBtn.setOnLongClickListener(v -> {
+                if(!running) {
+                    frame = 0;
+                    setFrame();
+                } else {
+                    interruptPlay();
+                    backBtn.performLongClick();
                 }
+                return true;
             });
 
-            nextBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(!running) {
-                        if(frame < Integer.parseInt((String) totalFrame.getText()) - 1) {
-                            frame++;
-                            setFrame();
-                        }
-                    } else {
-                        interruptPlay();
-                        nextBtn.performClick();
+            nextBtn.setOnClickListener(v -> {
+                if(!running) {
+                    if(frame < Integer.parseInt((String) totalFrame.getText()) - 1) {
+                        frame++;
+                        setFrame();
                     }
+                } else {
+                    interruptPlay();
+                    nextBtn.performClick();
                 }
             });
-            nextBtn.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    if(!running) {
-                        if(frame <= Integer.parseInt((String) totalFrame.getText()) - 11) {
-                            frame += 10;
-                            setFrame();
-                        } else {
-                            frame = Integer.parseInt((String) totalFrame.getText()) - 1;
-                            setFrame();
-                        }
+            nextBtn.setOnLongClickListener(v -> {
+                if(!running) {
+                    if(frame <= Integer.parseInt((String) totalFrame.getText()) - 11) {
+                        frame += 10;
+                        setFrame();
                     } else {
-                        interruptPlay();
-                        nextBtn.performLongClick();
+                        frame = Integer.parseInt((String) totalFrame.getText()) - 1;
+                        setFrame();
                     }
-                    return true;
+                } else {
+                    interruptPlay();
+                    nextBtn.performLongClick();
                 }
+                return true;
             });
 
             playBtn.setOnClickListener(listener);

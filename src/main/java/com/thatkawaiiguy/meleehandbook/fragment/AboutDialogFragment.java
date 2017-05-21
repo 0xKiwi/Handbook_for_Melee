@@ -47,20 +47,10 @@ public class AboutDialogFragment extends DialogFragment {
 
         return new AlertDialog.Builder(getActivity())
                 .setTitle(R.string.action_about)
-                .setNeutralButton(R.string.twitter,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int id) {
-                                startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse
-                                        ("https://twitter.com/ThatKawaiiGuy")));
-                            }
-                        })
-                .setPositiveButton(R.string.close,
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.dismiss();
-                            }
-                        })
+                .setNeutralButton(R.string.twitter, (DialogInterface dialog, int id) ->
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
+                                ("https://twitter.com/ThatKawaiiGuy"))))
+                .setPositiveButton(R.string.close, (dialog, id) -> dialog.dismiss())
                 .setView(message).create();
     }
 }

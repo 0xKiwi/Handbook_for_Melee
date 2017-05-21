@@ -78,31 +78,26 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
         final int pos = position;
         viewHolder.getTextView().setText(mDataSet[position]);
         if(isCharacter) {
-            viewHolder.view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(canStart) {
-                        Intent mIntent;
-                        if(ArrayHelper.hasFrame(mDataSet[pos], mContext.getResources()))
-                            mIntent = new Intent(mContext, CharacterFrameActivity.class);
-                        else
-                            mIntent = new Intent(mContext, CharacterActivity.class);
-                        mIntent.putExtra("option", mDataSet[pos]);
-                        mIntent.putExtra("xml", R.xml.characters);
-                        mContext.startActivity(mIntent);
-                        canStart = false;
-                    }
+            viewHolder.view.setOnClickListener(v -> {
+                if(canStart) {
+                    Intent mIntent;
+                    if(ArrayHelper.hasFrame(mDataSet[pos], mContext.getResources()))
+                        mIntent = new Intent(mContext, CharacterFrameActivity.class);
+                    else
+                        mIntent = new Intent(mContext, CharacterActivity.class);
+                    mIntent.putExtra("option", mDataSet[pos]);
+                    mIntent.putExtra("xml", R.xml.characters);
+                    mContext.startActivity(mIntent);
+                    canStart = false;
                 }
             });
         } else {
-            viewHolder.view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(canStart) {
-                        mContext.startActivity(new Intent(mContext,
-                                StageActivity.class).putExtra("option", mDataSet[pos]).putExtra("xml", R.xml.stages));
-                        canStart = false;
-                    }
+            viewHolder.view.setOnClickListener(v -> {
+                if(canStart) {
+                    mContext.startActivity(new Intent(mContext,
+                            StageActivity.class).putExtra("option", mDataSet[pos]).putExtra
+                            ("xml", R.xml.stages));
+                    canStart = false;
                 }
             });
         }

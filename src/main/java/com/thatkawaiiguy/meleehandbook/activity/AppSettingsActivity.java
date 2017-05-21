@@ -51,28 +51,27 @@ public class AppSettingsActivity extends PreferenceActivity {
         getDelegate().installViewFactory();
         getDelegate().onCreate(savedInstanceState);
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_settings);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         getSupportActionBar().setTitle(R.string.action_settings);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         addPreferencesFromResource(R.xml.settings);
         Preferences.sync(getPreferenceManager());
-        mListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
-            @Override
-            public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-                Preferences.sync(getPreferenceManager(), key);
-                if(key.equals(getString(R.string.pref_theme))) {
-                    recreate();
-                    restart = true;
-                } else if(key.equals(getString(R.string.pref_ads)))
-                    restart = true;
-                else if(key.equals(getString(R.string.pref_tier)))
-                    restart = true;
-                else if(key.equals(getString(R.string.pref_uniquegroup)))
-                    restart = true;
-                else if(key.equals(getString(R.string.pref_main)))
-                    restart = true;
-            }
+        mListener = (SharedPreferences sharedPreferences, String key) -> {
+            Preferences.sync(getPreferenceManager(), key);
+            if(key.equals(getString(R.string.pref_theme))) {
+                recreate();
+                restart = true;
+            } else if(key.equals(getString(R.string.pref_ads)))
+                restart = true;
+            else if(key.equals(getString(R.string.pref_tier)))
+                restart = true;
+            else if(key.equals(getString(R.string.pref_uniquegroup)))
+                restart = true;
+            else if(key.equals(getString(R.string.pref_main)))
+                restart = true;
         };
     }
 

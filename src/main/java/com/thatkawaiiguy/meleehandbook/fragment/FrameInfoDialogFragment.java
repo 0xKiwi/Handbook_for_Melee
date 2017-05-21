@@ -45,12 +45,7 @@ public class FrameInfoDialogFragment extends DialogFragment {
 
         return new AlertDialog.Builder(getActivity())
                 .setTitle("Hitbox info")
-                .setNegativeButton(R.string.close,
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.dismiss();
-                            }
-                        })
+                .setNegativeButton(R.string.close, (dialog, id) -> dialog.dismiss())
                 .setView(message).create();
     }
 }

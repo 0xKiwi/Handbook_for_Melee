@@ -90,7 +90,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        if (getIntent().hasExtra("bundle") && savedInstanceState == null)
+        if(getIntent().hasExtra("bundle") && savedInstanceState == null)
             savedInstanceState = getIntent().getExtras().getBundle("bundle");
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
@@ -114,7 +114,7 @@ public class SearchResultsActivity extends AppCompatActivity {
     }
 
     private void handleIntent(Intent intent) {
-        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+        if(Intent.ACTION_SEARCH.equals(intent.getAction())) {
             query = intent.getStringExtra(SearchManager.QUERY).replaceAll("\\s+$", "")
                     .toLowerCase();
             queries.clear();
@@ -141,7 +141,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+        switch(item.getItemId()) {
             case android.R.id.home:
                 this.finish();
                 return true;
@@ -167,7 +167,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
         searchView.onActionViewExpanded();
 
-        if (Intent.ACTION_SEARCH.equals(getIntent().getAction())) {
+        if(Intent.ACTION_SEARCH.equals(getIntent().getAction())) {
             searchView.setQuery(getIntent().getStringExtra(SearchManager.QUERY)
                     .replaceAll("\\s+$", ""), false);
             searchView.setSearchableInfo(searchManager.getSearchableInfo(cn));
@@ -177,7 +177,7 @@ public class SearchResultsActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                if (!query.equals(""))
+                if(!query.equals(""))
                     search(query);
                 searchView.clearFocus();
                 return false;
@@ -185,7 +185,7 @@ public class SearchResultsActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                if (!newText.equals(""))
+                if(!newText.equals(""))
                     search(newText);
                 return false;
             }
@@ -216,35 +216,28 @@ public class SearchResultsActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Select which list items you want to appear");
         builder.setMultiChoiceItems(R.array.filter_options, checked,
-                new DialogInterface.OnMultiChoiceClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int indexSelected,
-                                        boolean isChecked) {
-                        AlertDialog d = (AlertDialog) dialog;
-                        ListView v = d.getListView();
-                        int i = 0;
-                        while (i < checked.length) {
-                            v.setItemChecked(i, checked[i]);
-                            i++;
-                        }
-                        checked[indexSelected] = isChecked;
+                (DialogInterface dialog1, int indexSelected, boolean isChecked) -> {
+                    AlertDialog d = (AlertDialog) dialog1;
+                    ListView v = d.getListView();
+                    int i = 0;
+                    while(i < checked.length) {
+                        v.setItemChecked(i, checked[i]);
+                        i++;
                     }
+                    checked[indexSelected] = isChecked;
                 })
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int id) {
-                        prefs.edit().putBoolean(TECH_KEY, checked[0]).apply();
-                        prefs.edit().putBoolean(CHAR_KEY, checked[1]).apply();
-                        prefs.edit().putBoolean(FUN_KEY, checked[2]).apply();
-                        prefs.edit().putBoolean(MAP_KEY, checked[3]).apply();
-                        prefs.edit().putBoolean(TERM_KEY, checked[4]).apply();
-                        prefs.edit().putBoolean(UNIQUE_KEY, checked[5]).apply();
-                        checked = new boolean[]{prefs.getBoolean(TECH_KEY, true), prefs
-                                .getBoolean(CHAR_KEY, true), prefs.getBoolean(FUN_KEY, true),
-                                prefs.getBoolean(MAP_KEY, true), prefs.getBoolean(TERM_KEY, true)
-                                , prefs.getBoolean(UNIQUE_KEY, true)};
-                        search(query);
-                    }
+                .setPositiveButton("OK", (DialogInterface dialog2, int id) -> {
+                    prefs.edit().putBoolean(TECH_KEY, checked[0]).apply();
+                    prefs.edit().putBoolean(CHAR_KEY, checked[1]).apply();
+                    prefs.edit().putBoolean(FUN_KEY, checked[2]).apply();
+                    prefs.edit().putBoolean(MAP_KEY, checked[3]).apply();
+                    prefs.edit().putBoolean(TERM_KEY, checked[4]).apply();
+                    prefs.edit().putBoolean(UNIQUE_KEY, checked[5]).apply();
+                    checked = new boolean[]{prefs.getBoolean(TECH_KEY, true), prefs
+                            .getBoolean(CHAR_KEY, true), prefs.getBoolean(FUN_KEY, true),
+                            prefs.getBoolean(MAP_KEY, true), prefs.getBoolean(TERM_KEY, true)
+                            , prefs.getBoolean(UNIQUE_KEY, true)};
+                    search(query);
                 })
                 .setNegativeButton("Cancel", null);
 
@@ -290,92 +283,93 @@ public class SearchResultsActivity extends AppCompatActivity {
         }
 
     }
+
     private class AsyncCaller extends AsyncTask<Void, Void, Void> {
 
         @Override
         protected Void doInBackground(Void... params) {
-            if (prefs.getBoolean(TERM_KEY, true))
-                for (int i = 0; i < term.length; i++)
-                    if (term[i].toLowerCase().contains(query)) {
+            if(prefs.getBoolean(TERM_KEY, true))
+                for(int i = 0; i < term.length; i++)
+                    if(term[i].toLowerCase().contains(query)) {
                         queries.add(new ItemObjects(term[i], termInfo[i]));
                         titleTermNum++;
                     }
 
-            if (prefs.getBoolean(TECH_KEY, true))
-                for (int i = 0; i < tech.length; i++)
-                    if (tech[i].toLowerCase().contains(query)) {
+            if(prefs.getBoolean(TECH_KEY, true))
+                for(int i = 0; i < tech.length; i++)
+                    if(tech[i].toLowerCase().contains(query)) {
                         queries.add(new ItemObjects(tech[i], techInfo[i]));
                         titleNum++;
                     }
 
-            if (prefs.getBoolean(UNIQUE_KEY, true))
-                for (int i = 0; i < unique.length; i++)
-                    if (unique[i].toLowerCase().contains(query)) {
+            if(prefs.getBoolean(UNIQUE_KEY, true))
+                for(int i = 0; i < unique.length; i++)
+                    if(unique[i].toLowerCase().contains(query)) {
                         queries.add(new ItemObjects(unique[i], uniqueInfo[i]));
                         titleNum++;
                     }
 
-            if (prefs.getBoolean(FUN_KEY, true))
-                for (int i = 0; i < fun.length; i++)
-                    if (fun[i].toLowerCase().contains(query)) {
+            if(prefs.getBoolean(FUN_KEY, true))
+                for(int i = 0; i < fun.length; i++)
+                    if(fun[i].toLowerCase().contains(query)) {
                         queries.add(new ItemObjects(fun[i], funInfo[i]));
                         titleNum++;
                     }
 
-            if (prefs.getBoolean(CHAR_KEY, true))
-                for (int i = 0; i < character.length; i++)
-                    if (character[i].toLowerCase().contains(query)) {
+            if(prefs.getBoolean(CHAR_KEY, true))
+                for(int i = 0; i < character.length; i++)
+                    if(character[i].toLowerCase().contains(query)) {
                         queries.add(new ItemObjects(character[i], characterInfo[i]));
                         titleNum++;
                     }
 
-            if (prefs.getBoolean(MAP_KEY, true))
-                for (int i = 0; i < map.length; i++)
-                    if (map[i].toLowerCase().contains(query)) {
+            if(prefs.getBoolean(MAP_KEY, true))
+                for(int i = 0; i < map.length; i++)
+                    if(map[i].toLowerCase().contains(query)) {
                         queries.add(new ItemObjects(map[i], mapInfo[i]));
                         titleNum++;
                     }
 
-            if (prefs.getBoolean(TERM_KEY, true))
-                for (int i = 0; i < term.length; i++)
-                    if (!term[i].toLowerCase().contains(query))
-                        if (termInfo[i].toLowerCase().contains(query)) {
+            if(prefs.getBoolean(TERM_KEY, true))
+                for(int i = 0; i < term.length; i++)
+                    if(!term[i].toLowerCase().contains(query))
+                        if(termInfo[i].toLowerCase().contains(query)) {
                             termNum++;
                             queries.add(new ItemObjects(term[i], termInfo[i]));
                         }
 
-            if (prefs.getBoolean(TECH_KEY, true))
-                for (int i = 0; i < tech.length; i++) {
-                    if (!tech[i].toLowerCase().contains(query))
-                        if (techInfo[i].toLowerCase().contains(query))
+            if(prefs.getBoolean(TECH_KEY, true))
+                for(int i = 0; i < tech.length; i++) {
+                    if(!tech[i].toLowerCase().contains(query))
+                        if(techInfo[i].toLowerCase().contains(query))
                             queries.add(new ItemObjects(tech[i], techInfo[i]));
                 }
 
-            if (prefs.getBoolean(UNIQUE_KEY, true))
-                for (int i = 0; i < unique.length; i++) {
-                    if (!unique[i].toLowerCase().contains(query))
-                        if (uniqueInfo[i].toLowerCase().contains(query))
+            if(prefs.getBoolean(UNIQUE_KEY, true))
+                for(int i = 0; i < unique.length; i++) {
+                    if(!unique[i].toLowerCase().contains(query))
+                        if(uniqueInfo[i].toLowerCase().contains(query))
                             queries.add(new ItemObjects(unique[i], uniqueInfo[i]));
                 }
 
-            if (prefs.getBoolean(FUN_KEY, true))
-                for (int i = 0; i < fun.length; i++) {
-                    if (!fun[i].toLowerCase().contains(query))
-                        if (funInfo[i].toLowerCase().contains(query))
+            if(prefs.getBoolean(FUN_KEY, true))
+                for(int i = 0; i < fun.length; i++) {
+                    if(!fun[i].toLowerCase().contains(query))
+                        if(funInfo[i].toLowerCase().contains(query))
                             queries.add(new ItemObjects(fun[i], funInfo[i]));
                 }
 
-            if (prefs.getBoolean(CHAR_KEY, true))
-                for (int i = 0; i < character.length; i++) {
-                    if (!character[i].toLowerCase().contains(query))
-                        if (characterInfo[i].toLowerCase().contains(query))
+            if(prefs.getBoolean(CHAR_KEY, true))
+                for(int i = 0; i < character.length; i++) {
+                    if(!character[i].toLowerCase().contains(query))
+                        if(characterInfo[i].toLowerCase().contains(query))
                             queries.add(new ItemObjects(character[i], characterInfo[i]));
                 }
 
-            if (prefs.getBoolean(MAP_KEY, true))
-                for (int i = 0; i < map.length; i++) {
-                    if (!map[i].toLowerCase().contains(query))
-                        if (mapInfo[i].toLowerCase().contains(query))
+            if(prefs.getBoolean(MAP_KEY, true))
+                for(int i = 0; i < map.length; i++) {
+                    if(!map[i].toLowerCase().contains(query))
+                        if(mapInfo[i].toLowerCase().contains(query))
                             queries.add(new ItemObjects(map[i], mapInfo[i]));
                 }
 
@@ -391,17 +385,15 @@ public class SearchResultsActivity extends AppCompatActivity {
             mRecyclerView.setAdapter(mAdapter);
 
             ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(
-                    new ItemClickSupport.OnItemClickListener() {
-                        @Override
-                        public void onItemClicked(int position) {
-                            if ((position < titleTermNum || (position
-                                    < titleTermNum + titleNum + termNum && position >= titleNum +
-                                    titleTermNum)))
-                                return;
-                            if (canStart) {
-                                startActivity(selectRightIntent(queries.get(position).getTitle().toLowerCase()));
-                                canStart = false;
-                            }
+                    position -> {
+                        if((position < titleTermNum || (position
+                                < titleTermNum + titleNum + termNum && position >= titleNum +
+                                titleTermNum)))
+                            return;
+                        if(canStart) {
+                            startActivity(selectRightIntent(queries.get(position).getTitle()
+                                    .toLowerCase()));
+                            canStart = false;
                         }
                     });
         }
@@ -410,21 +402,21 @@ public class SearchResultsActivity extends AppCompatActivity {
 
     private Intent selectRightIntent(String searchQuery) {
         Intent mIntent = selectTechActivity(searchQuery, context);
-        if (mIntent == null)
+        if(mIntent == null)
             mIntent = selectUniqueActivity(searchQuery, context);
-        if (mIntent == null)
+        if(mIntent == null)
             mIntent = selectFunActivity(searchQuery, context);
-        if (mIntent == null)
+        if(mIntent == null)
             mIntent = selectMapActivity(searchQuery, context);
-        if (mIntent == null)
+        if(mIntent == null)
             mIntent = selectCharacterActivity(searchQuery, context);
         return mIntent;
     }
 
     private Intent selectUniqueActivity(String query, Context context) {
-        for (String uniqueTech : unique) {
-            if (uniqueTech.toLowerCase().contains(query)) {
-                if (uniqueTech.toLowerCase().equals("super wavedash & sdwd") ||
+        for(String uniqueTech : unique) {
+            if(uniqueTech.toLowerCase().contains(query)) {
+                if(uniqueTech.toLowerCase().equals("super wavedash & sdwd") ||
                         uniqueTech.toLowerCase().equals("extended & homing grapple"))
                     return new Intent(context, TechTabActivity.class)
                             .putExtra("option", uniqueTech).putExtra("xml", R.xml.uniquetech);
@@ -438,12 +430,15 @@ public class SearchResultsActivity extends AppCompatActivity {
     }
 
     private Intent selectTechActivity(String query, Context context) {
-        for (String tech : this.tech) {
-            if (tech.toLowerCase().contains(query) && !"fox".contains(query)) {
-                if (tech.equals("Wall jumping") || tech.equals("Directional Influence") || tech.equals("Shield dropping"))
-                    return new Intent(context, TechTabActivity.class).putExtra("option", tech).putExtra("xml", R.xml.standardtech);
+        for(String tech : this.tech) {
+            if(tech.toLowerCase().contains(query) && !"fox".contains(query)) {
+                if(tech.equals("Wall jumping") || tech.equals("Directional Influence") || tech
+                        .equals("Shield dropping"))
+                    return new Intent(context, TechTabActivity.class).putExtra("option", tech)
+                            .putExtra("xml", R.xml.standardtech);
                 else
-                    return new Intent(context, VideoInfoActivity.class).putExtra("option", tech).putExtra("xml", R.xml.standardtech);
+                    return new Intent(context, VideoInfoActivity.class).putExtra("option", tech)
+                            .putExtra("xml", R.xml.standardtech);
             }
         }
         return null;
@@ -452,9 +447,9 @@ public class SearchResultsActivity extends AppCompatActivity {
     private Intent selectCharacterActivity(String query, Context context) {
         boolean hasFrame;
 
-        for (String character : this.character) {
-            if (character.toLowerCase().contains(query)) {
-                switch (character) {
+        for(String character : this.character) {
+            if(character.toLowerCase().contains(query)) {
+                switch(character) {
                     case "Captain Falcon":
                         hasFrame = true;
                         break;
@@ -498,10 +493,10 @@ public class SearchResultsActivity extends AppCompatActivity {
                         hasFrame = false;
                         break;
                 }
-                if ("falco".contains(query))
+                if("falco".contains(query))
                     return new Intent(context, CharacterFrameActivity.class).putExtra
                             ("option", "Falco").putExtra("xml", R.xml.characters);
-                else if (hasFrame) {
+                else if(hasFrame) {
                     return new Intent(context, CharacterFrameActivity.class).putExtra("option",
                             character).putExtra("xml", R.xml.characters);
                 } else
@@ -513,17 +508,19 @@ public class SearchResultsActivity extends AppCompatActivity {
     }
 
     private Intent selectFunActivity(String query, Context context) {
-        for (String fun : this.fun) {
-            if (fun.toLowerCase().contains(query))
-                return new Intent(context, FunActivity.class).putExtra("option", fun).putExtra("xml", R.xml.fundamentals);
+        for(String fun : this.fun) {
+            if(fun.toLowerCase().contains(query))
+                return new Intent(context, FunActivity.class).putExtra("option", fun).putExtra
+                        ("xml", R.xml.fundamentals);
         }
         return null;
     }
 
     private Intent selectMapActivity(String query, Context context) {
-        for (String map : this.map) {
-            if (map.toLowerCase().contains(query) && !"yoshi".contains(query))
-                return new Intent(context, StageActivity.class).putExtra("option", map).putExtra("xml", R.xml.stages);
+        for(String map : this.map) {
+            if(map.toLowerCase().contains(query) && !"yoshi".contains(query))
+                return new Intent(context, StageActivity.class).putExtra("option", map).putExtra
+                        ("xml", R.xml.stages);
         }
         return null;
     }
