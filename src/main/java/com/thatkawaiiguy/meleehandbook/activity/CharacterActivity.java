@@ -21,8 +21,8 @@ import android.os.Bundle;
 import android.text.Html;
 
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
-import com.thatkawaiiguy.meleehandbook.other.XMLParser;
+import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.utils.XMLParser;
 
 public class CharacterActivity extends ImageInfoActivity {
 

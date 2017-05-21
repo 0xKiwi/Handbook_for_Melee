@@ -1,4 +1,4 @@
-package com.thatkawaiiguy.meleehandbook.other;
+package com.thatkawaiiguy.meleehandbook.utils;
 
 import android.content.res.Resources;
 

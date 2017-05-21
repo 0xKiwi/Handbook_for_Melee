@@ -29,7 +29,7 @@ import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.activity.FunActivity;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
-import com.thatkawaiiguy.meleehandbook.other.XMLParser;
+import com.thatkawaiiguy.meleehandbook.utils.XMLParser;
 
 public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

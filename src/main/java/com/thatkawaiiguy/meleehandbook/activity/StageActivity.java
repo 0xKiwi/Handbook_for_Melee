@@ -19,11 +19,10 @@ package com.thatkawaiiguy.meleehandbook.activity;
 
 import android.os.Bundle;
 import android.text.Html;
-import android.widget.ImageView;
 
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
-import com.thatkawaiiguy.meleehandbook.other.XMLParser;
+import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.utils.XMLParser;
 
 public class StageActivity extends ImageInfoActivity {
 

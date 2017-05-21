@@ -60,7 +60,7 @@ import com.thatkawaiiguy.meleehandbook.fragment.main.TechFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.TermFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.UniqueFragment;
 import com.thatkawaiiguy.meleehandbook.other.AppRater;
-import com.thatkawaiiguy.meleehandbook.other.Preferences;
+import com.thatkawaiiguy.meleehandbook.utils.Preferences;
 import com.thatkawaiiguy.meleehandbook.activity.SearchResultsActivity;
 
 public class MainActivity extends AppCompatActivity implements BillingProcessor.IBillingHandler {

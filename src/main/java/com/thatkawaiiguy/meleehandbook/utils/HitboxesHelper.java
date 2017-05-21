@@ -15,7 +15,7 @@
     along with Handbook for Melee.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.thatkawaiiguy.meleehandbook.other;
+package com.thatkawaiiguy.meleehandbook.utils;
 
 public class HitboxesHelper {
     public static String setShortMovePicked(String move) {

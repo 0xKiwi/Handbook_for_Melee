@@ -29,8 +29,8 @@ import android.widget.ImageView;
 
 import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrInterface;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
-import com.thatkawaiiguy.meleehandbook.other.Preferences;
+import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.utils.Preferences;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.fragment.CharacterFragmentAdapter;
 

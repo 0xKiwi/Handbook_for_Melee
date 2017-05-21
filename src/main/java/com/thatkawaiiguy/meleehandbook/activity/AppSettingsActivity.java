@@ -34,7 +34,7 @@ import android.view.MenuItem;
 
 import com.thatkawaiiguy.meleehandbook.MainActivity;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.Preferences;
+import com.thatkawaiiguy.meleehandbook.utils.Preferences;
 
 public class AppSettingsActivity extends PreferenceActivity {
 

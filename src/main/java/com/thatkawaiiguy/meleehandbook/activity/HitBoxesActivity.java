@@ -36,9 +36,9 @@ import com.appodeal.ads.Appodeal;
 import com.r0adkll.slidr.Slidr;
 import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.fragment.FrameInfoDialogFragment;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
-import com.thatkawaiiguy.meleehandbook.other.HitboxesHelper;
-import com.thatkawaiiguy.meleehandbook.other.Preferences;
+import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.utils.HitboxesHelper;
+import com.thatkawaiiguy.meleehandbook.utils.Preferences;
 import com.thatkawaiiguy.meleehandbook.R;
 
 import java.io.File;

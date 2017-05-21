@@ -28,8 +28,8 @@ import android.widget.TextView;
 
 import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.Preferences;
-import com.thatkawaiiguy.meleehandbook.other.XMLParser;
+import com.thatkawaiiguy.meleehandbook.utils.Preferences;
+import com.thatkawaiiguy.meleehandbook.utils.XMLParser;
 
 public class FunActivity extends AppCompatActivity {
 

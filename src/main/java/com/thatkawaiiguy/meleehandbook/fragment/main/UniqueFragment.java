@@ -28,12 +28,12 @@ import android.view.ViewGroup;
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
 import com.thatkawaiiguy.meleehandbook.adapter.ExpandableAdapter;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomParentObject;
 import com.thatkawaiiguy.meleehandbook.R;
-import com.thatkawaiiguy.meleehandbook.other.Preferences;
-import com.thatkawaiiguy.meleehandbook.other.XMLParser;
+import com.thatkawaiiguy.meleehandbook.utils.Preferences;
+import com.thatkawaiiguy.meleehandbook.utils.XMLParser;
 
 import java.util.ArrayList;
 

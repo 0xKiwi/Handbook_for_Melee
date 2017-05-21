@@ -41,8 +41,8 @@ import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.SearchAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
 import com.thatkawaiiguy.meleehandbook.other.ItemObjects;
-import com.thatkawaiiguy.meleehandbook.other.Preferences;
-import com.thatkawaiiguy.meleehandbook.other.XMLParser;
+import com.thatkawaiiguy.meleehandbook.utils.Preferences;
+import com.thatkawaiiguy.meleehandbook.utils.XMLParser;
 
 import java.util.ArrayList;
 

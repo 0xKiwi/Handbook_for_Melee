@@ -15,15 +15,14 @@
     along with Handbook for Melee.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.thatkawaiiguy.meleehandbook.other;
+package com.thatkawaiiguy.meleehandbook.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.BitmapFactory;
 
-import java.io.File;
+import com.thatkawaiiguy.meleehandbook.utils.Preferences;
+
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 

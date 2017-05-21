@@ -30,7 +30,7 @@ import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterActivity;
 import com.thatkawaiiguy.meleehandbook.activity.CharacterFrameActivity;
 import com.thatkawaiiguy.meleehandbook.activity.StageActivity;
-import com.thatkawaiiguy.meleehandbook.other.ArrayHelper;
+import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
 
 public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
 

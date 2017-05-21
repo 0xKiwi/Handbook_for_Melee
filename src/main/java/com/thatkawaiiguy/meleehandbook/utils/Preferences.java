@@ -15,7 +15,7 @@
     along with Handbook for Melee.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.thatkawaiiguy.meleehandbook.other;
+package com.thatkawaiiguy.meleehandbook.utils;
 
 import android.content.Context;
 import android.preference.ListPreference;
