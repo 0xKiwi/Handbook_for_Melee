@@ -57,7 +57,7 @@ public class InfoPageFragment extends Fragment {
         TextView text = (TextView) view.findViewById(R.id.infoText);
 
         text.setText(Html.fromHtml(XMLParser.getInnerXMLfromTitle(R.xml.characters,
-                characterPicked, getActivity().getResources())));
+            characterPicked, getActivity().getResources())));
 
         text.setMovementMethod(LinkMovementMethod.getInstance());
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize(getActivity())));

@@ -17,14 +17,18 @@
 
 package com.thatkawaiiguy.meleehandbook.utils;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.content.res.Resources;
-
-import com.thatkawaiiguy.meleehandbook.utils.Preferences;
+import android.content.res.XmlResourceParser;
+import android.os.Build;
+import android.support.annotation.NonNull;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class ArrayHelper {
 
@@ -58,6 +62,13 @@ public class ArrayHelper {
         return chars.toArray(new String[chars.size()]);
     }
 
+    @NonNull
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+    public static XmlResourceParser getEngXML(Context context, int id) {
+        Configuration configuration = new Configuration(context.getResources().getConfiguration());
+        configuration.setLocale(new Locale("en"));
+        return context.createConfigurationContext(configuration).getResources().getXml(id);
+    }
 
     public static String[] getUniqueTechCharArray(Context context) {
         ArrayList<String> chars;

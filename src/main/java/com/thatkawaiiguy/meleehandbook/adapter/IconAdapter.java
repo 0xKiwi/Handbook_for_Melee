@@ -70,7 +70,7 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         return new ViewHolder(LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.custom_image_row, viewGroup, false));
+            .inflate(R.layout.custom_image_row, viewGroup, false));
     }
 
     @Override

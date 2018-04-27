@@ -3,13 +3,11 @@ package com.thatkawaiiguy.meleehandbook.other;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.media.AudioManager;
-import android.media.MediaFormat;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.util.Pair;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -20,9 +18,7 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.MediaController;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Map;
-import java.util.Vector;
 
 public class MutedVideoView extends SurfaceView
         implements MediaController.MediaPlayerControl {

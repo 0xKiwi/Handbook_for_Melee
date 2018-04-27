@@ -93,16 +93,30 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         bp = new BillingProcessor(this, getResources().getString(R.string.licensekey), this);
         bp.loadOwnedPurchasesFromGoogle();
 
+        prepareAdmob();
+
+        setupToolbar();
+
+        setupNavDrawer(savedInstanceState);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Appodeal.onResume(this, Appodeal.BANNER_VIEW);
+    }
+
+    private void setupToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        prepareAdmob();
+        setTitle(Preferences.defaultListItem(this));
+        mTitle = getTitle();
+    }
 
-        if(!Preferences.hideAds(this))
-            Appodeal.show(this, Appodeal.BANNER_VIEW);
-
+    private void setupNavDrawer(Bundle savedInstanceState) {
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
@@ -115,8 +129,8 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             navigationMenuView.setVerticalScrollBarEnabled(false);
 
         ActionBarDrawerToggle mDrawerToggle = new ActionBarDrawerToggle(
-                this, mDrawer, toolbar,
-                R.string.navigation_drawer_open, R.string.navigation_drawer_close
+            this, mDrawer, (Toolbar) findViewById(R.id.toolbar),
+            R.string.navigation_drawer_open, R.string.navigation_drawer_close
         );
 
         //mDrawer.setDrawerListener(mDrawerToggle);
@@ -146,9 +160,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         mDrawerToggle.syncState();
 
-        setTitle(Preferences.defaultListItem(this));
-        mTitle = getTitle();
-
         if(savedInstanceState == null) {
             init();
             addFragment();
@@ -157,12 +168,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             if(Preferences.openNavLaunchEnabled(this))
                 mDrawer.openDrawer(Gravity.LEFT);
         }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Appodeal.onResume(this, Appodeal.BANNER_VIEW);
     }
 
     private void selectDrawerItem(MenuItem menuItem) {
@@ -248,36 +253,30 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             super.onActivityResult(requestCode, resultCode, data);
     }
 
+    private Fragment getProperFragment(String title) {
+        if(title.equals(getString(R.string.title_advancedtech)))
+            return TechFragment.newInstance();
+        else if(title.equals(getString(R.string.title_characters)))
+            return CharacterFragment.newInstance();
+        else if(title.equals(getString(R.string.title_fundamentals)))
+            return FunFragment.newInstance();
+        else if(title.equals(getString(R.string.title_stages)))
+            return StageFragment.newInstance();
+        else if(title.equals(getString(R.string.title_matchups)))
+            return MatchupFragment.newInstance();
+        else if(title.equals(getString(R.string.title_term)))
+            return TermFragment.newInstance();
+        else if(title.equals(getString(R.string.title_uniquetech)))
+            return UniqueFragment.newInstance();
+        else if(title.equals(getString(R.string.title_healthy)))
+            return HealthyFragment.newInstance();
+        else
+            return HealthyFragment.newInstance();
+    }
+
     private void changeFragment(CharSequence title) {
-        Fragment fg2;
-        switch((String) title) {
-            case "Advanced Techniques":
-                fg2 = TechFragment.newInstance();
-                break;
-            case "Characters":
-                fg2 = CharacterFragment.newInstance();
-                break;
-            case "Fundamentals":
-                fg2 = FunFragment.newInstance();
-                break;
-            case "Stages":
-                fg2 = StageFragment.newInstance();
-                break;
-            case "Matchups":
-                fg2 = MatchupFragment.newInstance();
-                break;
-            case "Terminology":
-                fg2 = TermFragment.newInstance();
-                break;
-            case "Unique Techniques":
-                fg2 = UniqueFragment.newInstance();
-                break;
-            case "Staying Healthy":
-                fg2 = HealthyFragment.newInstance();
-                break;
-            default:
-                fg2 = HealthyFragment.newInstance();
-        }
+        Fragment fg2 = getProperFragment(title.toString());
+
         if(!fg.equals(fg2)) {
             fg = fg2;
             fragmentManager.beginTransaction().replace(R.id.fragmentLayout, fg).commit();
@@ -287,51 +286,36 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     private void sendToast() {
         if(Preferences.showToast(this)) {
             Toast.makeText(getApplicationContext(), "Don't forget to stretch and take breaks! You" +
-                            " " +
-                            "don't want to have to go" +
-                            " to the doctor.",
-                    Toast.LENGTH_SHORT).show();
+                " don't want to have to go to the doctor.", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void addFragment() {
-        switch(Preferences.defaultListItem(this)) {
-            case "Advanced Techniques":
-                listdefault = 0;
-                fg = TechFragment.newInstance();
-                break;
-            case "Characters":
-                listdefault = 1;
-                fg = CharacterFragment.newInstance();
-                break;
-            case "Fundamentals":
-                listdefault = 2;
-                fg = FunFragment.newInstance();
-                break;
-            case "Matchups":
-                listdefault = 3;
-                fg = MatchupFragment.newInstance();
-                break;
-            case "Stages":
-                listdefault = 4;
-                fg = StageFragment.newInstance();
-                break;
-            case "Terminology":
-                listdefault = 5;
-                fg = TermFragment.newInstance();
-                break;
-            case "Unique Techniques":
-                listdefault = 6;
-                fg = UniqueFragment.newInstance();
-                break;
-            case "Staying Healthy":
-                listdefault = 7;
-                fg = HealthyFragment.newInstance();
-                break;
-            default:
-                fg = TechFragment.newInstance();
-        }
+        String title = Preferences.defaultListItem(this);
+        fg = getProperFragment(title);
+        listdefault = getListPosition(title);
         fragmentManager.beginTransaction().add(R.id.fragmentLayout, fg).commit();
+    }
+
+    private int getListPosition(String title) {
+        if(title.equals(getString(R.string.title_advancedtech)))
+            return 0;
+        else if(title.equals(getString(R.string.title_characters)))
+            return 1;
+        else if(title.equals(getString(R.string.title_fundamentals)))
+            return 2;
+        else if(title.equals(getString(R.string.title_stages)))
+            return 3;
+        else if(title.equals(getString(R.string.title_matchups)))
+            return 4;
+        else if(title.equals(getString(R.string.title_term)))
+            return 5;
+        else if(title.equals(getString(R.string.title_uniquetech)))
+            return 6;
+        else if(title.equals(getString(R.string.title_healthy)))
+            return 7;
+        else
+            return 7;
     }
 
     @Override
@@ -365,28 +349,26 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     private void prepareAdmob() {
         UserSettings userSettings = Appodeal.getUserSettings(this);
         userSettings.setGender(UserSettings.Gender.MALE);
-        userSettings.setInterests("games, movies, shows, esports");
         userSettings.setAge(17);
-        userSettings.setOccupation(UserSettings.Occupation.SCHOOL);
-        userSettings.setAlcohol(UserSettings.Alcohol.NEGATIVE);
-        userSettings.setSmoking(UserSettings.Smoking.NEGATIVE);
 
         Appodeal.disableLocationPermissionCheck();
         Appodeal.disableWriteExternalStoragePermissionCheck();
         Appodeal.setBannerViewId(R.id.adView);
         Appodeal.disableNetwork(this, "cheetah");
         Appodeal.disableNetwork(this, "mailru");
+        Appodeal.disableNetwork(this, "facebook");
+        Appodeal.disableNetwork(this, "inmobi");
         Appodeal.initialize(this, getResources().getString(R.string.appodeal_id), Appodeal.BANNER);
 
+        if(!Preferences.hideAds(this))
+            Appodeal.show(this, Appodeal.BANNER_VIEW);
     }
 
     private void showWhatsNewDialog() {
         LayoutInflater inflater = LayoutInflater.from(this);
-
-        View view = inflater.inflate(R.layout.dialog_whatsnew, null);
-
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
+        View view = inflater.inflate(R.layout.dialog_whatsnew, null);
         builder.setView(view).setTitle("Whats New")
                 .setPositiveButton("OK", (DialogInterface dialog, int which) -> dialog.dismiss());
 
@@ -420,15 +402,15 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
         @Override
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             return new AlertDialog.Builder(getActivity())
-                    .setTitle("Are you sure you want to exit the app?")
-                    .setNegativeButton(R.string.no, (DialogInterface dialog, int id) -> {
-                        dialog.dismiss();
-                    })
-                    .setPositiveButton(R.string.yes, (DialogInterface dialog, int id) -> {
-                        getActivity().finish();
-                        System.exit(0);
-                    })
-                    .show();
+                .setTitle("Are you sure you want to exit the app?")
+                .setNegativeButton(R.string.no, (DialogInterface dialog, int id) -> {
+                    dialog.dismiss();
+                })
+                .setPositiveButton(R.string.yes, (DialogInterface dialog, int id) -> {
+                    getActivity().finish();
+                    System.exit(0);
+                })
+                .show();
         }
     }
 }

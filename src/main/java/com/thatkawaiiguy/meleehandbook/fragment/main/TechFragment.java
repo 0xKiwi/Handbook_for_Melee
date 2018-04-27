@@ -24,8 +24,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.TextAdapter;
+
+import java.util.Locale;
 
 public class TechFragment extends Fragment {
 

@@ -44,8 +44,8 @@ public class FrameInfoDialogFragment extends DialogFragment {
         message.setTextSize(18);
 
         return new AlertDialog.Builder(getActivity())
-                .setTitle("Hitbox info")
-                .setNegativeButton(R.string.close, (dialog, id) -> dialog.dismiss())
-                .setView(message).create();
+            .setTitle("Hitbox info")
+            .setNegativeButton(R.string.close, (dialog, id) -> dialog.dismiss())
+            .setView(message).create();
     }
 }

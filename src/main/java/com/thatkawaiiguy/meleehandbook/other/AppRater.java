@@ -62,22 +62,22 @@ public class AppRater {
     private static void onCreateDialog(final Context mContext, final SharedPreferences.Editor
             editor) {
         new AlertDialog.Builder(mContext)
-                .setTitle("Rate " + APP_TITLE)
-                .setMessage("If " + APP_TITLE + " is helping you out, please take a moment to " +
-                        "rate " +
-                        "it. Thanks for your support!")
-                .setPositiveButton("Rate", (DialogInterface dialog, int which) -> {
-                    mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
-                            ("market://details?id=" + APP_PNAME)));
-                    if(editor != null)
-                        editor.putBoolean("dontshowagain", true).commit();
-                    dialog.dismiss();
-                })
-                .setNeutralButton("Later", (DialogInterface dialog, int which) -> dialog.dismiss())
-                .setNegativeButton("Never", (DialogInterface dialog, int which) -> {
-                    if(editor != null)
-                        editor.putBoolean("dontshowagain", true).commit();
-                    dialog.dismiss();
-                }).show();
+            .setTitle("Rate " + APP_TITLE)
+            .setMessage("If " + APP_TITLE + " is helping you out, please take a moment to " +
+                    "rate " +
+                    "it. Thanks for your support!")
+            .setPositiveButton("Rate", (DialogInterface dialog, int which) -> {
+                mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse
+                        ("market://details?id=" + APP_PNAME)));
+                if(editor != null)
+                    editor.putBoolean("dontshowagain", true).commit();
+                dialog.dismiss();
+            })
+            .setNeutralButton("Later", (DialogInterface dialog, int which) -> dialog.dismiss())
+            .setNegativeButton("Never", (DialogInterface dialog, int which) -> {
+                if(editor != null)
+                    editor.putBoolean("dontshowagain", true).commit();
+                dialog.dismiss();
+            }).show();
     }
 }

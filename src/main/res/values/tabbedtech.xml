@@ -1,156 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="di_info_text"><![CDATA[<big><b>Directional influence</b></big>
-        <br>Often abbreviated as DI or TDI (Trajectory DI), this is the control the receiver of an attack
-        has over his or her trajectory. Each attack sends its target in a particular direction, depending on the
-        attack itself and on the target\'s weight and falling speed; DI can be used to alter, but not completely change,
-        this original trajectory. This change can be vital to surviving high-power attacks such as Fox\'s up smash, and
-        for escaping combos such as Jigglypuff\'s up-throw to rest combo on fast-fallers (see the space animal slayer).
-        Perhaps one of DI\'s most useful applications is the ability to make the character move in a path that is as
-        long as possible before crossing the blast line.
-        <br>
-        <br><big><b>How to properly DI</b></big>
-        <br>To make sure you DI well you have to anticipate what move your opponent is going to land on you
-        and DI in a way that\'ll save you. If a Falco dairs you, DI towards the stage so you\'ll go into
-        the stage and be able to tech, rather than get spiked past the stage and die. Another example is if a Fox
-        side smashes you, to DI whichever way extends the distance traveled to reach the side blastzones. As his
-        side smash is usually a NE/NW angle, it\'s best if you DI upwards so the arch you travel needs to cover more
-        distance to reach the blastzone.
-        <br>"Good DI" usually occurs when a character is sent in a
-        trajectory that creates the greatest distance between the character and the blast line. In most situations,
-        angling towards the upper-left or upper-right corners will grant the greatest chance of surviving a
-        high-knockback attack.
-        <br>Conversely, "poor DI" occurs when the shortest distance between the character
-        and the blastzone is created, or the angle sends the player into a position they cannot recover from
-        when they would normally easily recover from, such as down and away from the stage. Bad DI that results
-        in a death commonly occurs near the sides of the stage, when a character is hit diagonally while holding
-        the Control Stick downward (commonly as a result of intentional fastfalling), which sends them on a more
-        horizontal trajectory, towards the closest blast line.
-        <br>The player can DI by pressing the control stick in any direction during or just after being hit by an attack.
-        There are three types of directional influence: trajectory DI (almost always referred to as just "DI"),
-        Smash DI, and Automatic Smash DI. These last two function much differently from trajectory DI, and
-        should not be confused with it.
-        <br>
-        <br><big><b>Types of DI</b></big>
-        <br>
-        <br><b>Survival DI</b>
-        <br>Survival DI alters the knockback direction towards the upper corners of the screen so that blast zones
-        are escaped, preventing a kill provided that the knockback wasn\'t too high.
-        <br>
-        <br><b>Combo DI</b>
-        <br>Because of the high amount of hitstun in Melee compared to Brawl (or, more accurately, the lack of the ability
-        to negate hitstun), it is often possible to hit the opponent with another attack while they are still in hitstun.
-        By DIing away from the attacker, the victim can increase the distance the attacker needs to travel and thus make
-        it harder for the attacker to reach them in time to continue the combo.
-        <br>Most of the time, combo DI is as simple as holding left or right in the knockback direction. Against characters
-        like Captain Falcon who have aerials with high knockback and low ending lag, it is often hard to decide between
-        survival DI and combo DI. While combo DI might escape a consecutive hit, it might also be enough to pass the
-        horizontal blast zones and die. Survival DI ensures that doesn\'t happen, but it will make it easy for Captain
-        Falcon to land another aerial.
-        <br>
-        <br><big><b>Mechanics</b></big>
-        <br>To determine the effective trajectory, the position of the control stick is read on the last frame of hitlag.
-        ASDI is usually triggered by this as well. The highest deviation of trajectory is produced by directions
-        perpendicular to the original knockback angle of the hitbox and amounts to approximately 18°. Holding directions
-        that are parallel to the original angle will produce no survival DI at all. Because the possible DI angles are
-        not distributed equally (see diagram in DI Angles), knockback angles within 17° of vertical or horizontal can
-        be trajectory DI\'d to a lesser degree, as no true correspondent perpendicular angle is available.
-    ]]></string>
-    <string name="sdi_info_text"><![CDATA[Useful video: https://youtu.be/CO7YD9KqNhY
-        <br>
-        <br><big><b>Smash DI</b></big>
-        <br>Often shortened to SDI is a mechanic that allows players to slightly alter their position during
-        the freeze frames of being hit by an attack. Tapping the control stick or C-Stick in any direction (rapidly, like
-        how you rapidly tap the C-Stick when performing an aerial or smash attack), during freeze frames will slightly
-        move their character in that direction, allowing them to potentially escape multi-hit moves or certain combos.
-        <br>SDI can also be used to move into a wall or ceiling in order to tech near-instantly (and is also possible with
-        floors if the character starts in the air) or to (very minimally) increase the distance from the blast line
-        that the attack is about to send them towards.
-        <br>Despite its near-identical name, SDI is not the same thing as directional influence.
-        The major difference is that, while DI changes
-        the trajectory a character is launched in while SDI changes a character\'s position before launch.
-        <br>The mechanics of SDI operate by shifting the character in the given direction.
-        As a result, repeatedly tapping in one direction will move the character
-        much farther than simply holding the stick in that direction. This results in a technique
-        called quarter-circle DI, which involves quickly rotating the stick between two "notches" for
-        increased distance. Quarter-circle DI was introduced to the United States by smasher Captain Jack and was once
-        known as Japanese DI.
-        <br>As the C-Stick can also be used for SDI, even \stronger" forms of SDI exist. So-called double-stick DI
-        utilizes the C-Stick\'s ability to override the control stick by holding one of the sticks in one direction
-        and utilizing quarter-stick DI with the other. This is often used when a player wants to SDI one way, and DI the other.
-        <br>
-        <br><big><b>How to properly perform</b></big>
-        <br>What you do to SDI is simply jam the control stick the exact instant you are hit. This isn\'t done on reaction,
-        you must be expecting the hit. This is mostly done to survive combos where you know a certain move must be
-        used at a certain time. Because it is anticipated, you can actually throw people off by hitting them with a
-        different move than they expect or changing the timing. For example, as Fox if they are SDIing your uair
-        you can bair and they will have bad DI.
-        <br>
-        <br><b>Automatic smash directional influence</b>
-        <br>ASDI is a weaker variant of SDI which uses the C-Stick. Once a character\'s freeze frames are
-        over, they shift slightly in whatever direction the C-Stick is currently held, slightly less than
-        one SDI input. If the C-Stick is also being held in a direction, it will override the control stick\'s input,
-        allowing the player to DI in another direction simultaneously. To perform simply hold the C-Stick the direcion you want
-        to SDI, this method is efficient for multi-hit attacks.
-        <br>
-        <br><big><b>Shield DI</b></big>
-        <br>If you are in a shield and someone attacks it, rapidly tapping the control stick or C-Stick similar to SDI
-        will cause you to move your character in the direction where you are SDI\ing.
-        <br>
-        <br><b>This works extremely well with:</b>
-        <br>\tMultiple hitting d-smashes (e.g. Peach, Sheik, Pikachu)
-        <br>\tRapid jabs
-        <br>\tShield pressure from Fox and Falco
-        <br>\tThe lightshield edgehog vs Marth
-        <br>\tOther multihit moves on shield
-        <br>\tFalcon\'s raptor boost on shield
-        <br>\tStrong attacks on shield that may seem unpunishable (like certain spacings of Falco\'s f-smash or d-tilt)
-        <br>
-        <br>Video on Shield DI: https://youtu.be/53t9fDzdCyw
-    ]]></string>
-    <string name="dsdi_info_text"><![CDATA[Useful video: https://youtu.be/ZkdPVUlrSOo?t=6m30s
-        <br>
-        <br><big><b>Double Stick Smash DI</b></big>
-        <br>Double Stick Smash DI (DSDI) is a special type of Smash DI that involves using both the
-        Control Stick and the C-Stick to Smash DI attacks. While Smash DI is DI that slightly shifts
-        your location during freeze frames, DSDI is using the Control Stick to TDI or SDI and the C-Stick
-        SDI. This results in either a very strong shift of location (if both are SDI), or a very strong
-        trajectory change and a slight shift in location. It can be used to tech strong attacks while
-        grounded if the angle is low enough, and can be used to tech off of a platform like in the example gif.
-        <br>
-        <br><big><b>How to properly perform</b></big>
-        <br>In order to perform DSDI, one must predict when to do it (like any other DI), a player must
-        move the stick towards the desired DI direction, and move the C-Stick to the desired SDI shift trajectory.
-        <br>If you wish to fully perform the SDI part of DSDI, you must shift the control stick as SDI requires
-        along with the C-Stick. If you wish to SDI make sure you remember that if you hold the stick
-        in the same direction after the attack, you will DI with that direction inputted.
-        <br>
-        <br><b>This works extremely well with:</b>
-        <br>\tMarth\'s up-air on platforms
-        <br>\tFox\'s down-air
-        <br>\tAny attack that can be survived with strong SDI or DI.
-    ]]></string>
-    <string name="diangles_info_text"><![CDATA[These are the possible angles which you can DI and angle certain moves.
-        <br>Any Up-B move which lets you change your aim in a circular manner (like Falco\'s or Zelda\'s)
-        has as many angles as in this diagram.
-        <br>This diagram also shows the angles it\'s possible to DI towards.
-        <br>
-        <br><b>Quick facts</b>
-        <br>&#8226;There are a total of 352 possible angles.
-        <br>
-        <br>&#8226;Within about ±17° from every right angle, the closest right angle will be used instead.
-        <br>
-        <br>&#8226;In other areas the angles are spaced on average 0.65° from each other.
-        <br>
-        <br>&#8226;The angle-differences fluctuate pretty evenly between 0.3° and 1.0° and are seemingly located randomly.
-        <br>
-        <br>&#8226;The same pattern is repeated (and mirrored) for every 45-degree sector.
-        <br>
-        <br>&#8226;Smash DI can be shortened down to 70% of its full length, with the number of intermediate lengths only limited by the control stick.
-        <br>
-        <br>Here is a nice visual display of it: http://i.imgur.com/BIDsld8.gif
-        <br>One more: http://www.gfycat.com/MarvelousFavorableIndianjackal
-    ]]></string>
+    <string name="di_info_text" title="DI"><![CDATA[<big><b>ベクトル変更</b></big>
+            <br>しばしばDI(Directional Influence) ないしTDI (軌道的なDI) と表現されるこのテクニックは、攻撃を受けた側が自身の飛ばされる方向に対して行うコントロールのことです。各攻撃はそれを当てられた側を特定の方向へと飛ばします。ベクトル変更は、各攻撃がもともと持つこの方向を完璧に変えることはできませんが、変化を
+与えるために用いられます。この変化はフォックスの上スマッシュのような強力な攻撃や、落下のスピードの早いキャラクターに対するプリンの上投げからの眠るコンボ("The space animal slayer"で検索してみて下さい) でやられないための生命線になりえます。場合によっては、ベクトル変更の最も有用な使い方は、バーストラインを越えない可能な限り長い行路へとキャラクターを導く能力かもしれません。
+            <br>
+            <br><big><b>ベクトル変更の適切なやり方</b></big>
+            <br>上手なベクトル変更を確かなものにするためには、対戦相手のどの動きがあなたと接触するのかといったことや、あなたを助ける仕方でのベクトル変更がどの方向なのかといったことを予想しなくてはなりません。仮にファルコが空中下攻撃をあなたに当てた場合、ステージ内側にベクトル変更をすることで、ステージに戻れず裏メテオを食らい負けてしまうのではなく、ステージ上に落ち受け身をとることができます。他の例を挙げるとすれば、こうです。仮にフォックスが横スマッシュをあなたに当てた場合、どの方向にであれベクトル変更することは、バーストゾーンに触れてしまうまでの距離を伸ばします。通常フォックスの横スマッシュは北東か北西の角度になっているので、もしあなたが上側にベクトル変更すれば最良のベクトル変更になります。あなたが飛ばされるアーチ状の行路はバーストゾーンに届くまでの距離を延ばす必要があるのです。 
+            <br>「良いベクトル変更」は、キャラクターが自身とバーストゾーンの間に最も長い距離を作る軌道上に飛ばされているときに、通常生じています。かなり多くの状況において、上もしくは北西ないし北東に角度をつけることは、垂直方向への諸々の致命的な動きは横にベクトル変更されるべきですが、ほとんどの致命的な動きにとって機能します。
+            <br>反対に、「良くないベクトル変更」は、キャラクターとバーストゾーンの間の距離が最も短いときに、もしくは、ステージ外下のような通常簡単に復帰できたであろう場合に、プレイヤーがキャラクターを復帰できない場所に置いてしまうときに、通常生じてしまいます。ストックを失うことになる良くないベクトル変更は、コントローラーのスティックを下に向けている最中にキャラクターが対角線上の攻撃を食らったとき（意図的な速い落下の結果として）、ステージ端付近で生じます。このようなベクトル変更はキャラクターを最も近いバーストラインへと一直線に向かわせてしまうのです。
+            <br>プレイヤーは攻撃を受けている最中にコントローラーのスティックをどの方向に傾けてもベクトル変更することができます。ベクトル変更には3種類あります。「軌道に関するベクトル変更」（ほとんどの場合単に「ベクトル変更」と呼ばれます）、「ヒットストップずらし」、「オートヒットストップずらし」です。後2つは「軌道に関するベクトル変更」とは機能的にとても異なるので、内容的に混同しないように注意しましょう。
+            <br>
+            <br><big><b>種類別ベクトル変更</b></big>
+            <br>
+            <br><b>生き残るためのベクトル変更</b>
+            <br>この種のベクトル変更は、吹き飛ばされる方向を画面の上端へと変更することで、ふっ飛びの高度が高すぎなかったのであればバーストせずに済むため、ストックを失うことを免れることができます。
+            <br>
+            <br><b>コンボベクトル変更</b>
+            <br>スマブラDXにおける食らい硬直はスマブラXに比べて長いので(or, more accurately, the lack of the ability to negate hitstun)、対戦相手が硬直中に次の攻撃を食らわせることが頻繁に可能です。攻撃をしてきたキャラクターから離れるベクトル変更によって、攻撃を受けた側は攻撃をしてきたキャラクターから距離を取ることができ、これにより、攻撃をしてきた側がコンボ可能な早さで接近してくることを困難にすることができます。
+            <br>ほとんどの場合、コンボベクトル変更は、吹き飛ばされる方向に合わせて左ないし右にコントローラーのスティックを入力すればよいという程シンプルです。 長い食らい硬直と隙の少ない着地を備える諸々の空中攻撃技を持つキャプテン・ファルコンのようなキャラクターに対しては、生き残るためのベクトル変更にするかコンボベクトル変更にするかを判断することがしばしば困難です。コンボベクトル変更は連続攻撃を免れる可能性を与えてくれる一方で、一直線にバーストゾーンに入りストックを失う可能性を大部分で孕んでもいるのです。 生き残るためのベクトル変更が生じていないことが確かだとしても、キャプテン・ファルコンに他の空中攻撃を当てることを簡単にしてしまうことになるのです。
+            <br>
+            <br><big><b>諸技術</b></big>
+            <br>効力のある変更の決定にあたっては、食らい硬直の最後のフレーム(ゲーム内時間単位) におけるコントローラースティックの位置が読み込まれます。オートヒットストップずらしはこの仕方で同様に行われます。最も効果的な方向のずれは、当たり判定の持つ元々のふっ飛び角度に対して垂直に見た場合の方向に最大で18度作り出されます。元々のふっ飛び角度と平行になる方向にコントローラーのスティックを入力することは、生き残るためのベクトル変更として全く機能しません。可能なベクトル変更角度が平等に割り振られているわけではないので、垂直的ないし水平的な17度以内のふっ飛びは少ない程度で方向に関するベクトル変更されます。というのも、完全に一致するようなどんな垂直な角度もないからです。        ]]></string>
+    <string name="sdi_info_text" title="SDI"><![CDATA[Useful video: https://youtu.be/CO7YD9KqNhY
+            <br>
+            <br><big><b>ヒットストップずらし</b></big>
+            <br>しばしばSDI（Smash Directional Influence）と略されるこのヒットストップずらしは、攻撃を当てられている際に発生する静止フレーム（ゲーム内時間単位）中に、そのプレイヤーがキャラクターの位置を少しだけ変えることを可能とするテクニックです。静止フレームが少しだけキャラクターを一定の方向へと動かしている間に、コントロールスティックを（空中攻撃ないしスマッシュ攻撃を行う際にCスティックを入力するときと同様の素早さで）入力することで、キャラクターを連続攻撃ないし諸々の特定のコンボから潜在的に逃すことを可能になるのです。
+            <br>また、ヒットストップずらしは、ほぼ即座に受け身をとるために壁や天井に触れるように（またキャラクターが空中にいる場合であれば床に触れるように）使用するか、もしくは、攻撃がそれを当てられた側のストックを落とすバーストラインから（若干ですが）距離をとるように使用することもできます。
+            <br>そのうちに同じ名前が使われているにも関わらず、ヒットストップずらし（SDI）はベクトル変更（DI）とは異なるテクニックです。大きな違いは、ベクトル変更がキャラクターがふっ飛ぶ方向を変えるのに対して、ヒットストップずらしがキャラクターの位置をふっ飛ぶ前に変える点にあります。
+            <br>ヒットストップずらしは、与えられた方向においてキャラクターの位置をずらすことで実行されます。その結果として、一定の方向へと繰り返しスティックを入力することが、ずっとスティックを入力したままにした場合よりも、かなり遠くへとキャラクターを動かすことになるのです。かなりの程度でキャラクターを動かすこの結果は「半月ずらし」と呼ばれるテクニックで生じますが、このテクニックは距離を稼ぐために2つのスティック入力位置の間で素早くスティックを滑るように入力するものです。「半月ずらし」はスマブラプレイヤーであるCaptain Jackによってアメリカ合衆国に紹介され、また、かつて、「日本式DI」と呼ばれていました。
+            <br>Cスティックがヒットストップずらしにも使えるので、ヒットストップずらしのより強力な形が存在しもします。いわゆるダブルスティックDIという種類のヒットストップずらしは、一方のスティックをある方向に入力したままにして、他方のスティックで「半月ずらし」を行うことによって、Cスティックの機能を通常のスティックとともに活用するものです。これは、しばしば、ある方向にヒットストップずらしを行い、他の方向にベクトル変更を行いたい場合に用いられます。
+            <br>
+            <br><big><b>適切に行う方法How to properly perform</b></big>
+            <br>ヒットストップずらし時に行うことは、あなたが攻撃を受けた瞬間にコントローラーのスティックを入力するだけです。これは単なる反応として行われるのではなく、あなたは攻撃が当たることを予想していなくてはなりません。このテクニックは、特定の動きが特定の状況で使われることを知っている場合に、諸々のコンボから生き延びるために用いられるのです。予想が前もってされているため、タイミングを変えた場合に比べて、違う動きで攻撃することによって実際に相手を惑わすことができます。 たとえば、フォックスを例にとってみると、プレイヤーがあなたの繰り出した空中上攻撃をヒットストップずらしした場合、あなたは空中後攻撃をすることができるので、対戦相手は都合の悪いベクトル変更をしていることになります。
+            <br>
+            <br><b>オートヒットストップずらし</b>
+            <br>オートヒットストップずらしは、Cスティックを用いる若干異なるヒットストップずらしです。キャラクターの静止フレームが終わるやいなや、キャラクターはCスティックないしふつうのスティックがその時点で入力している方向へと若干動きますが、ヒットストップずらしに比べるとささいな変化です。Cスティックもある方向へと入力されている場合、その入力はコントローラーのスティックの入力よりも優先されることになりますが、プレイヤーに同時に他の方向へとベクトル変更をすることを可能とします。オートヒットストップずらしのためにあなたが望む方向にCスティックを入力するためのこの方法は連続で当たる攻撃に対して有効な対策となるでしょう。 
+            <br>
+            <br><big><b>シールドベクトル変更</b></big>
+            <br>あなたがシールドを出していて、かつ、相手がそこに攻撃をしてきた場合、すぐさまコントローラーのスティックかCスティックをヒットストップずらしのように入力することで、あなたがヒットストップずらしをしている方向へとキャラクター逃がすことができます。
+            <br>
+            <br><b>これは以下のものに対してとても効果的に機能します:</b>
+            <br>多段下スマッシュ攻撃 (ピーチ、シーク、ピカチューなどの)
+            <br>素早い弱攻撃
+            <br>フォックスやファルコのシールドプレッシャー
+            <br>対マルスの薄いシールド
+            <br>シールドに対する他の連続攻撃
+            <br>シールドに対するファルコンの横B攻撃
+            <br>ファルコの横スマッシュないし下強攻撃などの一見咎めることのできなそうな諸々の攻撃
+            <br>
+            <br>シールドベクトル変更に関する動画: https://youtu.be/53t9fDzdCyw        ]]></string>
+    <string name="dsdi_info_text" title="DSDI"><![CDATA[参考になる動画: https://youtu.be/ZkdPVUlrSOo?t=6m30s
+            <br>
+            <br><big><b>ダブルスティックヒットストップずらし（Double Stick SDI）</b></big>
+            <br>ダブルスティックヒットストップずらしは、方向に関するベクトル変更とオートヒットストップずらしのためにコントローラーのスティックとCスティックを使う特別な種類のヒットストップずらしです。ヒットストップずらしが静止フレーム（ゲーム内時間単位）中に自身のキャラクターの位置を少しだけずらすベクトル変更である一方で、ダブルスティックヒットストップずらしは、通常のベクトル変更のためにコントローラーのスティックを、また、ヒットストップずらしのためにCスティックを使うテクニックです。このテクニックはとても大きな方向に関する変更を伴ったとても大きなずらしを結果として生じさせます。これは地面に触れていさえいれば強力な攻撃に対して受け身をとるために用いられえますし、また、上に貼られたGIFが示すように、台から降りながら受け身をとるために用いられえもします。
+            <br>
+            <br><big><b>適切な行い方</b></big>
+            <br>ダブルスティックヒットストップずらしを行うためには、（他のベクトル変更と同じく）それを行うべきときを予測しなくてはなりません。プレイヤーは都合のよい方向にベクトル変更をするためにスティックを入力しなくてはなりませんし、また、都合のよい方向（たいていは下方向）にヒットストップずらしをするためにCスティックを入力しなくてはなりません。            <br>このテクニックはAmsah Techと呼ばれる受け身のテクニックに用いられますし、また、ほとんどの場合、プレイヤーたちはダブルスティックヒットストップずらしの後に受け身をとるためにRないしLボタンを入力しています。
+            <br>
+            <br><b>このテクニックは以下のことに対して効果的に機能します:</b>
+            <br>台上でのマルスの空中上攻撃
+            <br>ヒットストップずらしないしベクトル変更によって生き延びることのできるような攻撃        ]]></string>
+    <string name="diangles_info_text" title="Angles"><![CDATA[These are the possible angles which you can DI and angle certain moves.
+            <br>Any Up-B move which lets you change your aim in a circular manner (like Falco\'s or Zelda\'s)
+            has as many angles as in this diagram.
+            <br>This diagram also shows the angles it\'s possible to DI towards.
+            <br>
+            <br><b>Quick facts</b>
+            <br>&#8226;There are a total of 352 possible angles.
+            <br>
+            <br>&#8226;Within about ±17° from every right angle, the closest right angle will be used instead.
+            <br>
+            <br>&#8226;In other areas the angles are spaced on average 0.65° from each other.
+            <br>
+            <br>&#8226;The angle-differences fluctuate pretty evenly between 0.3° and 1.0° and are seemingly located randomly.
+            <br>
+            <br>&#8226;The same pattern is repeated (and mirrored) for every 45-degree sector.
+            <br>
+            <br>&#8226;Smash DI can be shortened down to 70% of its full length, with the number of intermediate lengths only limited by the control stick.
+            <br>
+            <br>Here is a nice visual display of it: http://i.imgur.com/BIDsld8.gif
+            <br>One more: http://www.gfycat.com/MarvelousFavorableIndianjackal
+        ]]></string>
 
     <string name="walljump_info_text" title="Wall jump"><![CDATA[<big><b>Wall Jump</b></big>
         <br>This is a technique some characters may use in which one momentarily

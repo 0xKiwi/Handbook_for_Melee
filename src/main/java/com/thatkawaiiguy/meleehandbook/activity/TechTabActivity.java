@@ -26,8 +26,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.r0adkll.slidr.Slidr;
-import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.fragment.TabFragmentAdapter;
 import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
@@ -47,12 +45,13 @@ public class TechTabActivity extends AppCompatActivity {
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.collapsing_tab_gif_layout);
-        final SlidrInterface slidrInterface = Slidr.attach(this);
 
         if (getIntent().getExtras() == null)
             return;
         techPicked = getIntent().getExtras().getString("option");
         int id = getIntent().getExtras().getInt("xml");
+        assert techPicked != null;
+        String videoID = getIntent().getExtras().getString("videoID");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             getWindow().setStatusBarColor(0x00000000);
@@ -68,14 +67,13 @@ public class TechTabActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 
-        assert techPicked != null;
         assert viewPager != null;
 
         viewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(),
                 XMLParser.getTabs(getResources(), techPicked, id, id == R.xml.standardtech ? 2 : 3)));
         tabLayout.setupWithViewPager(viewPager);
 
-        switch(techPicked) {
+        switch(videoID) {
             case "Wall jumping":
                 tabImage.setImageResource(R.drawable.walljump);
                 tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -86,15 +84,12 @@ public class TechTabActivity extends AppCompatActivity {
                         switch(tab.getPosition()) {
                             case 0:
                                 tabImage.setImageResource(R.drawable.walljump);
-                                slidrInterface.unlock();
                                 break;
                             case 1:
                                 tabImage.setImageResource(R.drawable.defaultpic);
-                                slidrInterface.lock();
                                 break;
                             case 2:
                                 tabImage.setImageResource(R.drawable.reversewalljump);
-                                slidrInterface.lock();
                                 break;
                         }
                     }
@@ -139,11 +134,9 @@ public class TechTabActivity extends AppCompatActivity {
                         switch(tab.getPosition()) {
                             case 0:
                                 tabImage.setImageResource(R.drawable.swd);
-                                slidrInterface.unlock();
                                 break;
                             case 1:
                                 tabImage.setImageResource(R.drawable.defaultpic);
-                                slidrInterface.lock();
                                 break;
                         }
                     }

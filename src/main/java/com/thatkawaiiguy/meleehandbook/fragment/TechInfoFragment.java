@@ -27,6 +27,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.thatkawaiiguy.meleehandbook.R;
+import com.thatkawaiiguy.meleehandbook.utils.XMLParser;
 
 public class TechInfoFragment extends Fragment {
 
@@ -48,8 +49,9 @@ public class TechInfoFragment extends Fragment {
         Bundle mainData = getActivity().getIntent().getExtras();
         if (mainData == null)
             return view;
+        int id = mainData.getInt("xml");
 
-        String techPicked = mainData.getString("option");
+        String techPicked = XMLParser.getDrawableFromTitle(id, mainData.getString("option"), getActivity());
 
         TextView techSelectedInfo = (TextView) view.findViewById(R.id.infoText);
 

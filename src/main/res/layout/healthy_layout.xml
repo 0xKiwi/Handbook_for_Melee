@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/postureText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Posture"
         android:textSize="16sp"
@@ -15,16 +17,23 @@
         android:paddingBottom="24dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:textColor="?android:textColorPrimary"
-        android:background="?android:attr/selectableItemBackground" />
+        android:background="?android:attr/selectableItemBackground"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp" />
 
     <TextView
         android:id="@+id/mentalText"
         android:text="Mental health"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:paddingTop="20dp"
@@ -32,19 +41,28 @@
         android:paddingBottom="24dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:layout_below="@+id/postureText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:textColor="?android:textColorPrimary"
-        android:background="?android:attr/selectableItemBackground" />
+        android:background="?android:attr/selectableItemBackground"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postureText"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentStart="false"
-        android:layout_below="@+id/mentalText" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/mentalText"
+        app:layout_constraintTop_toBottomOf="@+id/mentalText"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/mentalText" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

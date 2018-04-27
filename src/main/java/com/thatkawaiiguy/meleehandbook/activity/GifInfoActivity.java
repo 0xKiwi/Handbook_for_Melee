@@ -25,7 +25,6 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.utils.Preferences;
 
@@ -43,7 +42,6 @@ public class GifInfoActivity extends AppCompatActivity {
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.collapsing_gif_layout);
-        Slidr.attach(this);
 
         Bundle mainData = getIntent().getExtras();
         if (mainData == null)

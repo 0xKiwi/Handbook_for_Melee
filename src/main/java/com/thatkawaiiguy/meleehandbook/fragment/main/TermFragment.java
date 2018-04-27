@@ -50,7 +50,7 @@ public class TermFragment extends Fragment {
         recyclerView.setAdapter(new TermAdapter(getActivity().getResources()));
 
         TouchScrollBar scrollBar = new TouchScrollBar(getActivity(), recyclerView, true);
-        scrollBar.setBarThickness(36).setAutoHide(false)
+        scrollBar.setBarThickness(24).setAutoHide(false)
                 .setBarColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color)).
                 setHandleColour(ContextCompat.getColor(getActivity(), R.color.overscroll_color));
         return rootView;

@@ -33,8 +33,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.appodeal.ads.Appodeal;
-import com.r0adkll.slidr.Slidr;
-import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.fragment.FrameInfoDialogFragment;
 import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.utils.HitboxesHelper;
@@ -52,8 +50,6 @@ public class HitBoxesActivity extends AppCompatActivity {
     private ImageView nextBtn;
     private ImageView backBtn;
     private View playBtn;
-
-    private SlidrInterface inter;
 
     private boolean paused = false;
     private boolean running = false;
@@ -84,7 +80,6 @@ public class HitBoxesActivity extends AppCompatActivity {
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.framedata_layout);
-        inter = Slidr.attach(this);
 
         Bundle mainData = getIntent().getExtras();
         if(mainData == null)
@@ -129,17 +124,12 @@ public class HitBoxesActivity extends AppCompatActivity {
         }
         frameImage.setImageBitmap(BitmapFactory.decodeStream(is));
         frameNumber.setText(String.valueOf(frame + 1));
-        if(!running)
-            inter.unlock();
-        else
-            inter.lock();
     }
 
     private void interruptPlay() {
         listener.getHandler().removeCallbacks(listener.getRunnable());
         longListener.getHandler().removeCallbacks(longListener.getRunnable());
         running = false;
-        inter.unlock();
     }
 
     private void doStuff() {

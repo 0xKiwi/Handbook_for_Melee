@@ -79,9 +79,9 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         if(startPos != -1){
             Spannable spannable = new SpannableString(originalText);
             ColorStateList yellowColor = new ColorStateList(new int[][]{new int[]{}}, new
-                    int[]{ContextCompat.getColor(mContext, R.color.overscroll_color)});
+                int[]{ContextCompat.getColor(mContext, R.color.overscroll_color)});
             TextAppearanceSpan highlightSpan = new TextAppearanceSpan(null, Typeface.BOLD, -1,
-                    yellowColor, null);
+                yellowColor, null);
 
             spannable.setSpan(highlightSpan, startPos, endPos, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             textView.setText(spannable);
@@ -101,7 +101,7 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         if(string.substring(wholeStart, wholeStart + 1).equals(",")) wholeStart += 1;
 
         int wholeEnd = string.toLowerCase().indexOf(" ", endPos + 100 < string.length
-                () - 1 ? endPos + 100 : endPos - search.length() - 1);
+            () - 1 ? endPos + 100 : endPos - search.length() - 1);
 
         if(wholeEnd == -1)
             wholeEnd = endPos;
@@ -114,9 +114,9 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         if(startPos != -1) {
             Spannable spannable = new SpannableString(string);
             ColorStateList yellowColor = new ColorStateList(new int[][]{new int[]{}}, new
-                    int[]{ContextCompat.getColor(mContext, R.color.overscroll_color)});
+                int[]{ContextCompat.getColor(mContext, R.color.overscroll_color)});
             TextAppearanceSpan highlightSpan = new TextAppearanceSpan(null, Typeface.BOLD, -1,
-                    yellowColor, null);
+                yellowColor, null);
 
             spannable.setSpan(highlightSpan, startPos, endPos, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
             textView.setText(spannable);
@@ -134,19 +134,14 @@ public class SearchAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v;
         if(viewType == 0) {
-            View v = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.term_layout, parent, false);
-
-            return new TermAdapter.ViewHolder(v);
-        } else if(viewType == 1) {
-            View v = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.card_layout, parent, false);
-
-            return new TermAdapter.ViewHolder(v);
-        }
-        View v = LayoutInflater.from(parent.getContext())
+            v = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.term_layout, parent, false);
+        } else {
+            v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.card_layout, parent, false);
+        }
 
         return new TermAdapter.ViewHolder(v);
     }

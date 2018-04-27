@@ -17,6 +17,7 @@
 
 package com.thatkawaiiguy.meleehandbook.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -31,9 +32,10 @@ import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;
 import com.thatkawaiiguy.meleehandbook.utils.XMLParser;
 
+
 public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private final String[] mDataSet;
+    private String[] mDataSet;
     private final Context mContext;
 
     private int id = 0;
@@ -56,7 +58,7 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-    public TextAdapter(Context context, boolean doVideo, int id) {
+    public TextAdapter(Activity context, boolean doVideo, int id) {
         mDataSet = XMLParser.addAllTitlesToArray(context.getResources(), id);
         mContext = context;
         video = doVideo;
@@ -66,28 +68,30 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         return new ViewHolder(LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.custom_text_row, viewGroup, false));
+            .inflate(R.layout.custom_text_row, viewGroup, false));
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
-        final int pos = position;
+        final String title = mDataSet[position];
         ViewHolder viewHolder1 = ((ViewHolder) viewHolder);
         viewHolder1.getTextView().setText(mDataSet[position]);
 
         if(video) {
             viewHolder1.view.setOnClickListener(v -> {
+                String videoID = XMLParser.getDrawableFromTitle(id, title, mContext);
                 if(canStart) {
                     Intent mIntent;
-                    if(mDataSet[pos].equals("Wall jumping") ||
-                            mDataSet[pos].equals("Directional Influence") ||
-                            mDataSet[pos].equals("Shield dropping") ||
-                            mDataSet[pos].equals("Super wavedash & SDWD") ||
-                            mDataSet[pos].equals("Extended & homing grapple"))
+                    if(videoID.equals("Wall jumping") ||
+                        videoID.equals("Directional Influence") ||
+                        videoID.equals("Shield dropping") ||
+                        videoID.equals("Super wavedash & SDWD") ||
+                        videoID.equals("Extended & homing grapple"))
                         mIntent = new Intent(mContext, TechTabActivity.class);
                     else
                         mIntent = new Intent(mContext, VideoInfoActivity.class);
-                    mIntent.putExtra("option", mDataSet[pos]);
+                    mIntent.putExtra("option", title);
+                    mIntent.putExtra("videoID", videoID);
                     mIntent.putExtra("xml", id);
                     mContext.startActivity(mIntent);
                     canStart = false;
@@ -95,9 +99,12 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             });
         } else {
             viewHolder1.view.setOnClickListener(v -> {
+                String videoID = XMLParser.getDrawableFromTitle(id, title, mContext);
                 if(canStart) {
                     mContext.startActivity(new Intent(mContext, FunActivity.class)
-                            .putExtra("xml", R.xml.fundamentals).putExtra("option", mDataSet[pos]));
+                            .putExtra("xml", R.xml.fundamentals)
+                            .putExtra("option", title)
+                            .putExtra("videoID", videoID));
                     canStart = false;
                 }
             });

@@ -17,7 +17,6 @@
 
 package com.thatkawaiiguy.meleehandbook.activity;
 
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -29,9 +28,9 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.appodeal.ads.Appodeal;
-import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.MutedVideoView;
@@ -41,6 +40,7 @@ import com.thatkawaiiguy.meleehandbook.utils.XMLParser;
 public class VideoInfoActivity extends AppCompatActivity {
 
     private String optionPicked = "";
+    private String videoID = "";
 
     private MutedVideoView infoVid;
 
@@ -51,13 +51,14 @@ public class VideoInfoActivity extends AppCompatActivity {
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.collapsing_video_layout);
-        Slidr.attach(this);
 
         Bundle mainData = getIntent().getExtras();
         if(mainData == null)
             return;
         optionPicked = mainData.getString("option");
         int id = mainData.getInt("xml");
+        videoID = XMLParser.getDrawableFromTitle(id, optionPicked, this);
+        Toast.makeText(this, videoID, Toast.LENGTH_SHORT).show();
 
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         assert getSupportActionBar() != null;
@@ -98,7 +99,7 @@ public class VideoInfoActivity extends AppCompatActivity {
 
     private void setVideo() {
         infoVid.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" +
-                getResources().getIdentifier(ArrayHelper.getFileName(optionPicked), "raw",
+                getResources().getIdentifier(ArrayHelper.getFileName(videoID), "raw",
                         getPackageName())));
 
         infoVid.setOnPreparedListener(mp -> {
@@ -147,16 +148,5 @@ public class VideoInfoActivity extends AppCompatActivity {
             result = getResources().getDimensionPixelSize(resourceId);
         }
         return result;
-    }
-
-    private int getActionBarHeight() {
-        int actionBarHeight = 0;
-
-        TypedValue tv = new TypedValue();
-        if(getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-            actionBarHeight = TypedValue.complexToDimensionPixelSize(tv.data, getResources()
-                    .getDisplayMetrics());
-        }
-        return actionBarHeight;
     }
 }

@@ -36,7 +36,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-import com.r0adkll.slidr.Slidr;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.adapter.SearchAdapter;
 import com.thatkawaiiguy.meleehandbook.other.ItemClickSupport;
@@ -94,7 +93,6 @@ public class SearchResultsActivity extends AppCompatActivity {
             savedInstanceState = getIntent().getExtras().getBundle("bundle");
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
-        Slidr.attach(this);
         setContentView(R.layout.search_layout);
         prefs = getPreferences(MODE_PRIVATE);
 
@@ -147,9 +145,6 @@ public class SearchResultsActivity extends AppCompatActivity {
                 return true;
             case R.id.searchview:
                 onSearchRequested();
-                return true;
-            case R.id.filter:
-                showDialog();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -205,46 +200,6 @@ public class SearchResultsActivity extends AppCompatActivity {
         mRecyclerView.scrollToPosition(0);
     }
 
-    private void showDialog() {
-        AlertDialog dialog;
-
-        checked = new boolean[]{prefs.getBoolean(TECH_KEY, true), prefs.getBoolean(CHAR_KEY,
-                true), prefs.getBoolean(FUN_KEY, true),
-                prefs.getBoolean(MAP_KEY, true), prefs.getBoolean(TERM_KEY, true), prefs
-                .getBoolean(UNIQUE_KEY, true)};
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Select which list items you want to appear");
-        builder.setMultiChoiceItems(R.array.filter_options, checked,
-                (DialogInterface dialog1, int indexSelected, boolean isChecked) -> {
-                    AlertDialog d = (AlertDialog) dialog1;
-                    ListView v = d.getListView();
-                    int i = 0;
-                    while(i < checked.length) {
-                        v.setItemChecked(i, checked[i]);
-                        i++;
-                    }
-                    checked[indexSelected] = isChecked;
-                })
-                .setPositiveButton("OK", (DialogInterface dialog2, int id) -> {
-                    prefs.edit().putBoolean(TECH_KEY, checked[0]).apply();
-                    prefs.edit().putBoolean(CHAR_KEY, checked[1]).apply();
-                    prefs.edit().putBoolean(FUN_KEY, checked[2]).apply();
-                    prefs.edit().putBoolean(MAP_KEY, checked[3]).apply();
-                    prefs.edit().putBoolean(TERM_KEY, checked[4]).apply();
-                    prefs.edit().putBoolean(UNIQUE_KEY, checked[5]).apply();
-                    checked = new boolean[]{prefs.getBoolean(TECH_KEY, true), prefs
-                            .getBoolean(CHAR_KEY, true), prefs.getBoolean(FUN_KEY, true),
-                            prefs.getBoolean(MAP_KEY, true), prefs.getBoolean(TERM_KEY, true)
-                            , prefs.getBoolean(UNIQUE_KEY, true)};
-                    search(query);
-                })
-                .setNegativeButton("Cancel", null);
-
-        dialog = builder.create();//AlertDialog dialog; create like this outside onClick
-        dialog.show();
-    }
-
     @Override
     protected void onPause() {
         super.onPause();
@@ -288,90 +243,78 @@ public class SearchResultsActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... params) {
-            if(prefs.getBoolean(TERM_KEY, true))
-                for(int i = 0; i < term.length; i++)
-                    if(term[i].toLowerCase().contains(query)) {
+            for(int i = 0; i < term.length; i++)
+                if(term[i].toLowerCase().contains(query)) {
+                    queries.add(new ItemObjects(term[i], termInfo[i]));
+                    titleTermNum++;
+                }
+
+            for(int i = 0; i < tech.length; i++)
+                if(tech[i].toLowerCase().contains(query)) {
+                    queries.add(new ItemObjects(tech[i], techInfo[i]));
+                    titleNum++;
+                }
+
+            for(int i = 0; i < unique.length; i++)
+                if(unique[i].toLowerCase().contains(query)) {
+                    queries.add(new ItemObjects(unique[i], uniqueInfo[i]));
+                    titleNum++;
+                }
+
+            for(int i = 0; i < fun.length; i++)
+                if(fun[i].toLowerCase().contains(query)) {
+                    queries.add(new ItemObjects(fun[i], funInfo[i]));
+                    titleNum++;
+                }
+
+            for(int i = 0; i < character.length; i++)
+                if(character[i].toLowerCase().contains(query)) {
+                    queries.add(new ItemObjects(character[i], characterInfo[i]));
+                    titleNum++;
+                }
+
+            for(int i = 0; i < map.length; i++)
+                if(map[i].toLowerCase().contains(query)) {
+                    queries.add(new ItemObjects(map[i], mapInfo[i]));
+                    titleNum++;
+                }
+
+            for(int i = 0; i < term.length; i++)
+                if(!term[i].toLowerCase().contains(query))
+                    if(termInfo[i].toLowerCase().contains(query)) {
+                        termNum++;
                         queries.add(new ItemObjects(term[i], termInfo[i]));
-                        titleTermNum++;
                     }
 
-            if(prefs.getBoolean(TECH_KEY, true))
-                for(int i = 0; i < tech.length; i++)
-                    if(tech[i].toLowerCase().contains(query)) {
+            for(int i = 0; i < tech.length; i++) {
+                if(!tech[i].toLowerCase().contains(query))
+                    if(techInfo[i].toLowerCase().contains(query))
                         queries.add(new ItemObjects(tech[i], techInfo[i]));
-                        titleNum++;
-                    }
+            }
 
-            if(prefs.getBoolean(UNIQUE_KEY, true))
-                for(int i = 0; i < unique.length; i++)
-                    if(unique[i].toLowerCase().contains(query)) {
+            for(int i = 0; i < unique.length; i++) {
+                if(!unique[i].toLowerCase().contains(query))
+                    if(uniqueInfo[i].toLowerCase().contains(query))
                         queries.add(new ItemObjects(unique[i], uniqueInfo[i]));
-                        titleNum++;
-                    }
+            }
 
-            if(prefs.getBoolean(FUN_KEY, true))
-                for(int i = 0; i < fun.length; i++)
-                    if(fun[i].toLowerCase().contains(query)) {
+            for(int i = 0; i < fun.length; i++) {
+                if(!fun[i].toLowerCase().contains(query))
+                    if(funInfo[i].toLowerCase().contains(query))
                         queries.add(new ItemObjects(fun[i], funInfo[i]));
-                        titleNum++;
-                    }
+            }
 
-            if(prefs.getBoolean(CHAR_KEY, true))
-                for(int i = 0; i < character.length; i++)
-                    if(character[i].toLowerCase().contains(query)) {
+            for(int i = 0; i < character.length; i++) {
+                if(!character[i].toLowerCase().contains(query))
+                    if(characterInfo[i].toLowerCase().contains(query))
                         queries.add(new ItemObjects(character[i], characterInfo[i]));
-                        titleNum++;
-                    }
+            }
 
-            if(prefs.getBoolean(MAP_KEY, true))
-                for(int i = 0; i < map.length; i++)
-                    if(map[i].toLowerCase().contains(query)) {
+            for(int i = 0; i < map.length; i++) {
+                if(!map[i].toLowerCase().contains(query))
+                    if(mapInfo[i].toLowerCase().contains(query))
                         queries.add(new ItemObjects(map[i], mapInfo[i]));
-                        titleNum++;
-                    }
-
-            if(prefs.getBoolean(TERM_KEY, true))
-                for(int i = 0; i < term.length; i++)
-                    if(!term[i].toLowerCase().contains(query))
-                        if(termInfo[i].toLowerCase().contains(query)) {
-                            termNum++;
-                            queries.add(new ItemObjects(term[i], termInfo[i]));
-                        }
-
-            if(prefs.getBoolean(TECH_KEY, true))
-                for(int i = 0; i < tech.length; i++) {
-                    if(!tech[i].toLowerCase().contains(query))
-                        if(techInfo[i].toLowerCase().contains(query))
-                            queries.add(new ItemObjects(tech[i], techInfo[i]));
-                }
-
-            if(prefs.getBoolean(UNIQUE_KEY, true))
-                for(int i = 0; i < unique.length; i++) {
-                    if(!unique[i].toLowerCase().contains(query))
-                        if(uniqueInfo[i].toLowerCase().contains(query))
-                            queries.add(new ItemObjects(unique[i], uniqueInfo[i]));
-                }
-
-            if(prefs.getBoolean(FUN_KEY, true))
-                for(int i = 0; i < fun.length; i++) {
-                    if(!fun[i].toLowerCase().contains(query))
-                        if(funInfo[i].toLowerCase().contains(query))
-                            queries.add(new ItemObjects(fun[i], funInfo[i]));
-                }
-
-            if(prefs.getBoolean(CHAR_KEY, true))
-                for(int i = 0; i < character.length; i++) {
-                    if(!character[i].toLowerCase().contains(query))
-                        if(characterInfo[i].toLowerCase().contains(query))
-                            queries.add(new ItemObjects(character[i], characterInfo[i]));
-                }
-
-            if(prefs.getBoolean(MAP_KEY, true))
-                for(int i = 0; i < map.length; i++) {
-                    if(!map[i].toLowerCase().contains(query))
-                        if(mapInfo[i].toLowerCase().contains(query))
-                            queries.add(new ItemObjects(map[i], mapInfo[i]));
-                }
+            }
 
             mAdapter = new SearchAdapter(queries.toArray(new ItemObjects[queries.size()]),
                     titleNum, titleTermNum, termNum, context, query);
@@ -385,17 +328,17 @@ public class SearchResultsActivity extends AppCompatActivity {
             mRecyclerView.setAdapter(mAdapter);
 
             ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(
-                    position -> {
-                        if((position < titleTermNum || (position
-                                < titleTermNum + titleNum + termNum && position >= titleNum +
-                                titleTermNum)))
-                            return;
-                        if(canStart) {
-                            startActivity(selectRightIntent(queries.get(position).getTitle()
-                                    .toLowerCase()));
-                            canStart = false;
-                        }
-                    });
+                position -> {
+                    if((position < titleTermNum || (position
+                            < titleTermNum + titleNum + termNum && position >= titleNum +
+                            titleTermNum)))
+                        return;
+                    if(canStart) {
+                        startActivity(selectRightIntent(queries.get(position).getTitle()
+                                .toLowerCase()));
+                        canStart = false;
+                    }
+                });
         }
 
     }

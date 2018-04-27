@@ -24,7 +24,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bignerdranch.expandablerecyclerview.Adapter.ExpandableRecyclerAdapter;
-import com.bignerdranch.expandablerecyclerview.ClickListeners.ParentItemClickListener;
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
 import com.thatkawaiiguy.meleehandbook.activity.TechTabActivity;
 import com.thatkawaiiguy.meleehandbook.activity.VideoInfoActivity;

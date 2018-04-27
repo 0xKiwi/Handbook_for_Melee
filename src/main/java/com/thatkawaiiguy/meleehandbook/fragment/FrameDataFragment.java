@@ -60,6 +60,7 @@ public class FrameDataFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        assert getActivity() != null;
         actionBarTitle = ((CharacterFrameActivity) getActivity()).getSupportActionBarTitle();
     }
 

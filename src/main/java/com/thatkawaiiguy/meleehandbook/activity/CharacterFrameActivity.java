@@ -27,8 +27,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
-import com.r0adkll.slidr.Slidr;
-import com.r0adkll.slidr.model.SlidrInterface;
 import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.utils.Preferences;
 import com.thatkawaiiguy.meleehandbook.R;
@@ -43,7 +41,6 @@ public class CharacterFrameActivity extends AppCompatActivity {
         Preferences.applyTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.collapsing_tab_image_layout);
-        final SlidrInterface slidrInterface = Slidr.attach(this);
 
         if (getIntent().getExtras() == null)
             return;
@@ -63,28 +60,6 @@ public class CharacterFrameActivity extends AppCompatActivity {
 
         TabLayout tabs = ((TabLayout) findViewById(R.id.tabs));
         tabs.setupWithViewPager(viewPager);
-        tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-                switch (tab.getPosition()) {
-                    case 0:
-                        slidrInterface.unlock();
-                        break;
-                    case 1:
-                        slidrInterface.lock();
-                        break;
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-            }
-        });
 
         ((ImageView) findViewById(R.id.infoImage)).setImageResource(getResources().getIdentifier(ArrayHelper
                 .getFileName(charPicked), "drawable", getPackageName()));

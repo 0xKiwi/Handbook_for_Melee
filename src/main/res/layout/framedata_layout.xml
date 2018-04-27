@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?customWindowBG"
@@ -7,16 +9,31 @@
 
     <include
         layout="@layout/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:id="@+id/include" />
 
     <FrameLayout
         android:id="@+id/imagelayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="280dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true">
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/adView"
+        app:layout_constraintRight_toRightOf="@+id/adView"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="144dp"
+        app:layout_constraintLeft_toLeftOf="@+id/adView">
 
         <ImageView
             android:id="@+id/frameImage"
@@ -67,71 +84,91 @@
         android:id="@+id/frameNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/imagelayout"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="50dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="17dp"
         android:gravity="top"
         android:text="1"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="?android:textColorSecondary"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintRight_toLeftOf="@+id/textView2"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        tools:layout_constraintBaseline_creator="1" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/frameNumber"
-        android:layout_alignBottom="@+id/frameNumber"
-        android:layout_toEndOf="@+id/frameNumber"
-        android:layout_toRightOf="@+id/frameNumber"
         android:gravity="top"
         android:text="/"
         android:textColor="?android:textColorSecondary"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/iasaText"
+        app:layout_constraintRight_toRightOf="@+id/iasaText"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/iasaText" />
 
     <TextView
         android:id="@+id/totalFrame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
-        android:layout_toRightOf="@+id/textView2"
         android:gravity="top"
         android:text="5"
         android:textColor="?android:textColorSecondary"
         android:textIsSelectable="false"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/landinglagText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/totalFrame"
-        android:layout_centerHorizontal="true"
         android:text="   "
         android:textColor="?android:textColorSecondary"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/iasaText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/frameNumber"
-        android:layout_alignStart="@+id/frameNumber"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="8dp"
         android:text="   "
         android:textColor="?android:textColorSecondary"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/imagelayout"
+        android:layout_marginStart="16dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp" />
 
     <com.appodeal.ads.BannerView
         android:id="@+id/adView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="center_horizontal|bottom"
-        android:visibility="visible" />
-</RelativeLayout>
+        android:visibility="visible"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
+</android.support.constraint.ConstraintLayout>

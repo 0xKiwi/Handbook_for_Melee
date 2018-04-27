@@ -59,7 +59,7 @@ public class TermAdapter extends RecyclerView.Adapter<TermAdapter.ViewHolder> {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.term_layout, viewGroup, false);
+            .inflate(R.layout.term_layout, viewGroup, false);
 
         return new ViewHolder(v);
     }

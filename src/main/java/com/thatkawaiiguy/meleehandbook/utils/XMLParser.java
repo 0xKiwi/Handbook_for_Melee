@@ -1,5 +1,7 @@
 package com.thatkawaiiguy.meleehandbook.utils;
 
+import android.content.Context;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 
 import com.thatkawaiiguy.meleehandbook.R;
@@ -9,6 +11,7 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class XMLParser {
 
@@ -45,22 +48,22 @@ public class XMLParser {
 
         ArrayList<String> techs = new ArrayList<>();
 
-            try {
-                XmlPullParser xpp = resources.getXml(R.xml.uniquetech);
+        try {
+            XmlPullParser xpp = resources.getXml(R.xml.uniquetech);
 
-                while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
-                    if (xpp.getEventType() == XmlPullParser.START_TAG) {
-                        if (xpp.getName().contains("string")) {
-                            String[] chars2 = xpp.getAttributeValue(2).split("/");
-                            for (String characters : chars2)
-                                if (character.equals(characters))
-                                    techs.add(xpp.getAttributeValue(1));
-                        }
+            while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG) {
+                    if (xpp.getName().contains("string")) {
+                        String[] chars2 = xpp.getAttributeValue(2).split("/");
+                        for (String characters : chars2)
+                            if (character.equals(characters))
+                                techs.add(xpp.getAttributeValue(1));
                     }
-                    xpp.next();
                 }
-            } catch (Throwable ignored) {
+                xpp.next();
             }
+        } catch (Throwable ignored) {
+        }
 
         return techs;
     }
@@ -80,6 +83,33 @@ public class XMLParser {
         } catch (Throwable ignored) {
         }
         return resources.getString(R.string.debug_text);
+    }
+
+    public static String getDrawableFromTitle(int xmlid, String title, Context context) {
+        int next = 0;
+        try {
+            XmlPullParser xpp = context.getResources().getXml(xmlid);
+            Configuration conf = context.getResources().getConfiguration();
+            conf = new Configuration(conf);
+            conf.setLocale(new Locale("en"));
+            Context localizedContext = context.createConfigurationContext(conf);
+            XmlPullParser eng = localizedContext.getResources().getXml(xmlid);
+
+            while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
+                if (xpp.getEventType() == XmlPullParser.START_TAG)
+                    if (xpp.getName().equals("string") || xpp.getName().equals("string-array"))
+                        if (xpp.getAttributeValue(1).equals(title)) {
+                            for (int i = 0; i < next; i++)
+                                eng.next();
+                            return eng.getAttributeValue(1);
+                        }
+
+                next++;
+                xpp.next();
+            }
+        } catch (Throwable ignored) {
+        }
+        return context.getResources().getString(R.string.debug_text);
     }
 
     public static String[] addAllTitlesToArray(Resources resources, int id) {
@@ -152,7 +182,7 @@ public class XMLParser {
             while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
                 if (xpp.getEventType() == XmlPullParser.START_TAG)
                     if (xpp.getName().equals("string"))
-                        list.add(getInnerXml(xpp).replaceAll("\\s+", " ").replace("\\t","").trim());
+                        list.add(getInnerXml(xpp).replaceAll("\\s+", " ").replace("\\t", "").trim());
                 xpp.next();
             }
         } catch (Throwable ignored) {

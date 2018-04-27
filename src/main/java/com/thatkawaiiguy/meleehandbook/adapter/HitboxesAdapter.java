@@ -24,7 +24,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bignerdranch.expandablerecyclerview.Adapter.ExpandableRecyclerAdapter;
-import com.bignerdranch.expandablerecyclerview.ClickListeners.ParentItemClickListener;
 import com.bignerdranch.expandablerecyclerview.Model.ParentObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildObject;
 import com.thatkawaiiguy.meleehandbook.other.CustomChildViewHolder;
@@ -81,9 +80,9 @@ CustomChildViewHolder> {
         childViewHolder.dataText.setOnClickListener(v -> {
             if(canStart) {
                 context.startActivity(
-                        new Intent(context, HitBoxesActivity.class)
-                                .putExtra("option", characterPicked)
-                                .putExtra("frame", childViewHolder.dataText.getText()));
+                    new Intent(context, HitBoxesActivity.class)
+                        .putExtra("option", characterPicked)
+                        .putExtra("frame", childViewHolder.dataText.getText()));
                 canStart = false;
             }
         });
