@@ -30,7 +30,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.appodeal.ads.Appodeal;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.MutedVideoView;
@@ -89,11 +88,6 @@ public class VideoInfoActivity extends AppCompatActivity {
                 }
             });
         }
-
-        if(!Preferences.hideAds(this)) {
-            Appodeal.setBannerViewId(R.id.adView);
-            Appodeal.show(this, Appodeal.BANNER_VIEW);
-        }
     }
 
 
@@ -113,7 +107,6 @@ public class VideoInfoActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         setVideo();
-        Appodeal.onResume(this, Appodeal.BANNER_VIEW);
     }
 
     @Override

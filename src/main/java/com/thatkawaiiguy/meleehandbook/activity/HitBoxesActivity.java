@@ -32,7 +32,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.appodeal.ads.Appodeal;
 import com.thatkawaiiguy.meleehandbook.fragment.FrameInfoDialogFragment;
 import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.utils.HitboxesHelper;
@@ -91,11 +90,6 @@ public class HitBoxesActivity extends AppCompatActivity {
         assert getSupportActionBar() != null;
         getSupportActionBar().setTitle(characterPickedTitle + "'s " + movePicked);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        if(!Preferences.hideAds(this)) {
-            Appodeal.setBannerViewId(R.id.adView);
-            Appodeal.show(this, Appodeal.BANNER_VIEW);
-        }
 
         frameNumber = (TextView) findViewById(R.id.frameNumber);
         totalFrame = (TextView) findViewById(R.id.totalFrame);
@@ -333,11 +327,5 @@ public class HitBoxesActivity extends AppCompatActivity {
             playBtn.setOnClickListener(listener);
             playBtn.setOnLongClickListener(longListener);
         }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Appodeal.onResume(this, Appodeal.BANNER_VIEW);
     }
 }

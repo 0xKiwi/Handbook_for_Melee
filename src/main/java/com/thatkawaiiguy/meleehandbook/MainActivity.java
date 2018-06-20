@@ -43,12 +43,6 @@ import android.view.View;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.Toast;
 
-import com.appodeal.ads.Appodeal;
-
-import com.anjlab.android.iab.v3.BillingProcessor;
-import com.anjlab.android.iab.v3.TransactionDetails;
-import com.appodeal.ads.UserSettings;
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.thatkawaiiguy.meleehandbook.activity.AppSettingsActivity;
 import com.thatkawaiiguy.meleehandbook.fragment.AboutDialogFragment;
 import com.thatkawaiiguy.meleehandbook.fragment.main.MatchupFragment;
@@ -63,7 +57,7 @@ import com.thatkawaiiguy.meleehandbook.other.AppRater;
 import com.thatkawaiiguy.meleehandbook.utils.Preferences;
 import com.thatkawaiiguy.meleehandbook.activity.SearchResultsActivity;
 
-public class MainActivity extends AppCompatActivity implements BillingProcessor.IBillingHandler {
+public class MainActivity extends AppCompatActivity {
 
     private int listdefault = 0;
 
@@ -73,9 +67,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
     private FragmentManager fragmentManager;
 
     private CharSequence mTitle;
-
-    private BillingProcessor bp;
-    private FirebaseAnalytics mFirebaseAnalytics;
 
     private static final String PRIVATE_PREF = "myapp";
     private static final String VERSION_KEY = "version_number";
@@ -88,22 +79,9 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         fragmentManager = getFragmentManager();
 
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
-
-        bp = new BillingProcessor(this, getResources().getString(R.string.licensekey), this);
-        bp.loadOwnedPurchasesFromGoogle();
-
-        prepareAdmob();
-
         setupToolbar();
 
         setupNavDrawer(savedInstanceState);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Appodeal.onResume(this, Appodeal.BANNER_VIEW);
     }
 
     private void setupToolbar(){
@@ -121,8 +99,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
         NavigationView nvDrawer = (NavigationView) findViewById(R.id.nvView);
         setupDrawerContent(nvDrawer);
-        if(Preferences.hideAds(this) || !BillingProcessor.isIabServiceAvailable(this))
-            nvDrawer.getMenu().findItem(R.id.remove).setTitle("Thank you!!");
 
         NavigationMenuView navigationMenuView = (NavigationMenuView) nvDrawer.getChildAt(0);
         if(navigationMenuView != null)
@@ -195,17 +171,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
 
                 menuItem.setChecked(true);
                 break;
-            case R.id.remove:
-                if(bp.isPurchased(getResources().getString(R.string.adproductid)))
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://umad.com/img/2" +
-                            "015/10/happy-jigglypuff-pokemon-gif-536-593-hd-wallpapers.jpg")));
-                else if(BillingProcessor.isIabServiceAvailable(this)) {
-                    bp.purchase(this, getResources().getString(R.string.adproductid));
-                } else {
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://bit" +
-                            ".ly/1NXCD2o")));
-                }
-                break;
             case R.id.settings:
                 startActivity(new Intent(this, AppSettingsActivity.class));
                 break;
@@ -222,35 +187,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             new ExitDialogFragment().show(fragmentManager, "exit");
         } else
             super.onBackPressed();
-    }
-
-    @Override
-    public void onBillingError(int errorCode, Throwable error) {
-    }
-
-    @Override
-    public void onProductPurchased(String productId, TransactionDetails details) {
-        Preferences.setHideAds(this, true);
-        recreate();
-    }
-
-    @Override
-    public void onPurchaseHistoryRestored() {
-        if(bp.isPurchased(getString(R.string.adproductid))) {
-            Preferences.setHideAds(this, true);
-        } else
-            Preferences.setHideAds(this, false);
-        recreate();
-    }
-
-    @Override
-    public void onBillingInitialized() {
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(!bp.handleActivityResult(requestCode, resultCode, data))
-            super.onActivityResult(requestCode, resultCode, data);
     }
 
     private Fragment getProperFragment(String title) {
@@ -318,14 +254,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             return 7;
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-
-        if(bp != null)
-            bp.release();
-    }
-
     private void init() {
         SharedPreferences sharedPref = getSharedPreferences(PRIVATE_PREF, Context.MODE_PRIVATE);
         int currentVersionNumber = 0;
@@ -344,24 +272,6 @@ public class MainActivity extends AppCompatActivity implements BillingProcessor.
             editor.putInt(VERSION_KEY, currentVersionNumber);
             editor.apply();
         }
-    }
-
-    private void prepareAdmob() {
-        UserSettings userSettings = Appodeal.getUserSettings(this);
-        userSettings.setGender(UserSettings.Gender.MALE);
-        userSettings.setAge(17);
-
-        Appodeal.disableLocationPermissionCheck();
-        Appodeal.disableWriteExternalStoragePermissionCheck();
-        Appodeal.setBannerViewId(R.id.adView);
-        Appodeal.disableNetwork(this, "cheetah");
-        Appodeal.disableNetwork(this, "mailru");
-        Appodeal.disableNetwork(this, "facebook");
-        Appodeal.disableNetwork(this, "inmobi");
-        Appodeal.initialize(this, getResources().getString(R.string.appodeal_id), Appodeal.BANNER);
-
-        if(!Preferences.hideAds(this))
-            Appodeal.show(this, Appodeal.BANNER_VIEW);
     }
 
     private void showWhatsNewDialog() {

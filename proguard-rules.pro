@@ -31,24 +31,6 @@
 -keep class com.google.android.gms.** { *; }
 -dontwarn com.google.android.gms.
 
--keep class com.appodeal.** { *; }
-  -keep class com.amazon.** { *; }
-  -keep class com.mopub.** { *; }
-  -keep class com.facebook.** { *; }
-  -keep class org.nexage.** { *; }
-  -keep class com.applovin.** { *; }
-  -keep class com.chartboost.** { *; }
-  -keep class com.unity3d.ads.** { *; }
-  -keep class com.applifier.** { *; }
-  -keep class com.inmobi.** { *; }
-  -keep class com.yandex.** { *; }
-  -keep class com.startapp.** { *; }
-  -keep class com.flurry.** { *; }
-  -keep class com.avocarrot.** { *; }
-  -keep class com.jirbo.adcolony.** { *; }
-  -keep class com.vungle.** { *; }
-  -keep class ru.mail.android.mytarget.** { *; }
-  -keep class com.google.android.gms.ads.** { *; }
   -keep class com.google.android.gms.common.GooglePlayServicesUtil { *; }
 
   -keepattributes Signature
