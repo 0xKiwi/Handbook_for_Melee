@@ -32,7 +32,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.appodeal.ads.Appodeal;
 import com.thatkawaiiguy.meleehandbook.fragment.FrameInfoDialogFragment;
 import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.utils.HitboxesHelper;
@@ -92,20 +91,15 @@ public class HitBoxesActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(characterPickedTitle + "'s " + movePicked);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        if(!Preferences.hideAds(this)) {
-            Appodeal.setBannerViewId(R.id.adView);
-            Appodeal.show(this, Appodeal.BANNER_VIEW);
-        }
+        frameNumber = findViewById(R.id.frameNumber);
+        totalFrame = findViewById(R.id.totalFrame);
+        landingLag = findViewById(R.id.landinglagText);
+        iasa = findViewById(R.id.iasaText);
 
-        frameNumber = (TextView) findViewById(R.id.frameNumber);
-        totalFrame = (TextView) findViewById(R.id.totalFrame);
-        landingLag = (TextView) findViewById(R.id.landinglagText);
-        iasa = (TextView) findViewById(R.id.iasaText);
+        frameImage = findViewById(R.id.frameImage);
 
-        frameImage = (ImageView) findViewById(R.id.frameImage);
-
-        backBtn = (ImageView) findViewById(R.id.backBtn);
-        nextBtn = (ImageView) findViewById(R.id.nextBtn);
+        backBtn = findViewById(R.id.backBtn);
+        nextBtn = findViewById(R.id.nextBtn);
         playBtn = findViewById(R.id.playBtn);
 
         characterPicked = ArrayHelper.getFileName(characterPickedTitle);
@@ -333,11 +327,5 @@ public class HitBoxesActivity extends AppCompatActivity {
             playBtn.setOnClickListener(listener);
             playBtn.setOnLongClickListener(longListener);
         }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Appodeal.onResume(this, Appodeal.BANNER_VIEW);
     }
 }

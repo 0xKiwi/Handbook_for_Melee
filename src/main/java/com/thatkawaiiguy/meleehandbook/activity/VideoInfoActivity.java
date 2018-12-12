@@ -30,7 +30,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.appodeal.ads.Appodeal;
 import com.thatkawaiiguy.meleehandbook.R;
 import com.thatkawaiiguy.meleehandbook.utils.ArrayHelper;
 import com.thatkawaiiguy.meleehandbook.other.MutedVideoView;
@@ -60,12 +59,12 @@ public class VideoInfoActivity extends AppCompatActivity {
         videoID = XMLParser.getDrawableFromTitle(id, optionPicked, this);
         Toast.makeText(this, videoID, Toast.LENGTH_SHORT).show();
 
-        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
+        setSupportActionBar(findViewById(R.id.toolbar));
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(optionPicked);
 
-        TextView text = (TextView) findViewById(R.id.infoText);
+        TextView text = findViewById(R.id.infoText);
         text.setMovementMethod(LinkMovementMethod.getInstance());
 
         Log.d("MEME", optionPicked + id);
@@ -74,10 +73,10 @@ public class VideoInfoActivity extends AppCompatActivity {
         text.setTextSize(TypedValue.COMPLEX_UNIT_SP, Integer.parseInt(Preferences.getTextSize
                 (this)));
 
-        infoVid = (MutedVideoView) findViewById(R.id.infoVid);
+        infoVid = findViewById(R.id.infoVid);
         setVideo();
 
-        final AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.app_bar_layout);
+        final AppBarLayout appBarLayout = findViewById(R.id.app_bar_layout);
         if(appBarLayout != null) {
             appBarLayout.addOnOffsetChangedListener((appBarLayout1, verticalOffset) -> {
                 if(Math.abs(verticalOffset) >= appBarLayout1.getTotalScrollRange() - getStatusBarHeight()) {
@@ -88,11 +87,6 @@ public class VideoInfoActivity extends AppCompatActivity {
                         infoVid.start();
                 }
             });
-        }
-
-        if(!Preferences.hideAds(this)) {
-            Appodeal.setBannerViewId(R.id.adView);
-            Appodeal.show(this, Appodeal.BANNER_VIEW);
         }
     }
 
@@ -113,7 +107,6 @@ public class VideoInfoActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         setVideo();
-        Appodeal.onResume(this, Appodeal.BANNER_VIEW);
     }
 
     @Override

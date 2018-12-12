@@ -57,8 +57,7 @@
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/scroll"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@id/adView">
+            android:layout_height="match_parent">
 
             <include
                 layout="@layout/infotext"
@@ -66,13 +65,5 @@
                 android:layout_height="wrap_content" />
 
         </android.support.v4.widget.NestedScrollView>
-
-        <com.appodeal.ads.BannerView
-            android:id="@+id/adView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center_horizontal|bottom"
-            android:visibility="visible" />
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
