@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.2'
     useLibrary 'org.apache.http.legacy'
     dexOptions {
         maxProcessCount 4
@@ -10,10 +10,10 @@ android {
     }
     defaultConfig {
         applicationId "com.thatkawaiiguy.meleehandbook"
-        minSdkVersion 16
-        targetSdkVersion 25
-        versionCode 34
-        versionName "2.6.0"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 35
+        versionName "2.8.0"
     }
     compileOptions {
        sourceCompatibility JavaVersion.VERSION_1_8
@@ -46,6 +46,6 @@ dependencies {
     }
     compile 'com.bignerdranch.android:expandablerecyclerview:1.0.3'
     compile 'com.github.zagum:Android-ExpandIcon:1.2.0'
-    compile 'com.google.firebase:firebase-core:10.2.0'
+    compile 'com.google.firebase:firebase-core:16.0.5'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -49,7 +49,7 @@ public class TextAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         public ViewHolder(View v) {
             super(v);
-            menuText = (TextView) v.findViewById(R.id.menuTitle);
+            menuText = v.findViewById(R.id.menuTitle);
             view = v;
         }
 

@@ -54,7 +54,7 @@
         <br>
         <br>Aerial interrupt example: https://youtu.be/NWGVkGz_kE8
     ]]></string>
-    <string name="chaing_info_text" title="Chain grab" formatted="false"><![CDATA[<big><b>Chain grab</b></big>
+    <string name="chaing_info_text" title="Chain grab"><![CDATA[<big><b>Chain grab</b></big>
         <br>Chain grabs, also referred to as a chain throw or abbreviated as CG, refers to a series
         of grabs and throws that the victim cannot escape. Generally, a player throws the opponent
         a specific direction (most commonly down or forward), chases the opponents directional influence,

@@ -96,13 +96,21 @@ public class XMLParser {
             XmlPullParser eng = localizedContext.getResources().getXml(xmlid);
 
             while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
-                if (xpp.getEventType() == XmlPullParser.START_TAG)
-                    if (xpp.getName().equals("string") || xpp.getName().equals("string-array"))
+                if (xpp.getEventType() == XmlPullParser.START_TAG) {
+                    if (xpp.getName().equals("string")) {
                         if (xpp.getAttributeValue(1).equals(title)) {
                             for (int i = 0; i < next; i++)
                                 eng.next();
                             return eng.getAttributeValue(1);
                         }
+                    } else if (xpp.getName().equals("string-array")) {
+                        if (xpp.getAttributeValue(2).equals(title)) {
+                            for (int i = 0; i < next; i++)
+                                eng.next();
+                            return eng.getAttributeValue(2);
+                        }
+                    }
+                }
 
                 next++;
                 xpp.next();
@@ -121,8 +129,10 @@ public class XMLParser {
 
             while (xpp.getEventType() != XmlPullParser.END_DOCUMENT) {
                 if (xpp.getEventType() == XmlPullParser.START_TAG)
-                    if (xpp.getName().contains("string"))
+                    if (xpp.getName().equals("string"))
                         list.add(xpp.getAttributeValue(1));
+                    else if (xpp.getName().equals("string-array"))
+                        list.add(xpp.getAttributeValue(2));
 
                 xpp.next();
             }
